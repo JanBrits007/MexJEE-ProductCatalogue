@@ -1,0 +1,267 @@
+ {    "definitions": {
+        "AmountType": {
+            "properties": {
+                "amount": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "currency": {
+                    "type": "string"
+                }
+            }
+        },
+        "BasePriceType": {
+            "properties": {
+                "price": {
+                    "$ref": "#/definitions/AmountType"
+                },
+                "frequency": {
+                    "description": "Daily / Weekly / Monthly etc",
+                    "type": "string"
+                }
+            }
+        },
+        "FilterGroupsType": {
+            "properties": {
+                "filterGroupID": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "filterGroupName": {
+                    "type": "string"
+                },
+                "filterType": {
+                    "type": "string"
+                },
+                "filterItems": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FilterItemsType"
+                    }
+                }
+            }
+        },
+        "FilterItemsType": {
+            "properties": {
+                "filterID": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "filterDisplay": {
+                    "type": "string"
+                },
+                "productAttribute": {
+                    "type": "string"
+                },
+                "minValue": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "maxValue": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "GetProductHierarchyResponse": {
+            "$ref": "#/definitions/GetProductHierarchyResponseType"
+        },
+        "GetProductHierarchyResponseType": {
+            "properties": {
+                "resultSet": {
+                    "$ref": "#/definitions/resultSet"
+                },
+                "productCatalogue": {
+                    "$ref": "#/definitions/productCatalogue"
+                }
+            }
+        },
+        "GetProductResponse": {
+            "$ref": "#/definitions/GetProductResponseType"
+        },
+        "GetProductResponseType": {
+            "properties": {
+                "resultSet": {
+                    "$ref": "#/definitions/ResultSetType"
+                },
+                "product": {
+                    "$ref": "#/definitions/ProductType"
+                }
+            }
+        },
+        "ProductAttributesType": {
+            "properties": {
+                "attributeType": {
+                    "type": "string"
+                },
+                "attributeName": {
+                    "type": "string"
+                },
+                "isComparable": {
+                    "type": "string"
+                },
+                "minValue": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "maxValue": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "valueUnit": {
+                    "type": "string"
+                }
+            }
+        },
+        "ProductCatalogueType": {
+            "properties": {
+                "productFamilies": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ProductFamiliesType"
+                    }
+                }
+            }
+        },
+        "ProductCategoriesType": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "productLines": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ProductLinesType"
+                    }
+                }
+            }
+        },
+        "ProductFamiliesType": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "productCategories": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ProductCategoriesType"
+                    }
+                }
+            }
+        },
+        "ProductLinesType": {
+            "required": [
+                "product"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "filterGroups": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FilterGroupsType"
+                    }
+                },
+                "product": {
+                    "$ref": "#/definitions/product"
+                }
+            }
+        },
+        "ProductPricingType": {
+            "properties": {
+                "basePrice": {
+                    "$ref": "#/definitions/BasePriceType"
+                }
+            }
+        },
+        "ProductType": {
+            "required": [
+                "productIdentifier"
+            ],
+            "properties": {
+                "productIdentifier": {
+                    "$ref": "#/definitions/productIdentifier"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "shortDescription": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "productPricing": {
+                    "$ref": "#/definitions/ProductPricingType"
+                },
+                "salesHighlights": {
+                    "description": "Marketing features of the product on a higher level",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "productOnAPageWebURL": {
+                    "type": "string"
+                },
+                "productAttributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ProductAttributesType"
+                    }
+                }
+            }
+        },
+        "ResultSetType": {
+            "required": [
+                "resultCode"
+            ],
+            "properties": {
+                "resultCode": {
+                    "description": "A short code indicating the outcome of the operation. The list of codes will be defined per service.",
+                    "type": "string"
+                },
+                "resultDescription": {
+                    "description": "A detailed description explaining the outcome of the operation. It must be used to return messages that can help troubleshooting error scenarios.",
+                    "type": "string"
+                }
+            }
+        },
+        "RetrieveProductsResponse": {
+            "$ref": "#/definitions/RetrieveProductsResponseType"
+        },
+        "RetrieveProductsResponseType": {
+            "properties": {
+                "resultSet": {
+                    "$ref": "#/definitions/ResultSetType"
+                },
+                "productCatalogue": {
+                    "$ref": "#/definitions/ProductCatalogueType"
+                }
+            }
+        },
+        "product": {
+            "$ref": "#/definitions/ProductType"
+        },
+        "productCatalogue": {
+            "$ref": "#/definitions/ProductCatalogueType"
+        },
+        "productIdentifier": {
+            "type": "integer",
+            "format": "int32"
+        },
+        "resultSet": {
+            "$ref": "#/definitions/ResultSetType"
+        }
+    }
+}
