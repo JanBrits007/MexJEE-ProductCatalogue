@@ -4,10 +4,10 @@
    "shortDescription": "Unlock convenience and flexibility with your Nedbank Gold Credit Card, accepted at over 25 million stores in South Africa and internationally.",
    "productPricing": [   {
       "type": "AdminFee",
-      "amount": "32",
+      "amount": "30",
       "frequency": "monthly",
       "currency": "ZAR",
-      "description": "R 32 pm"
+      "description": "R 30 pm"
    }],
    "featuresAndBenefits": [   {
       "shortDescription": "",
@@ -34,27 +34,11 @@
             },
                         {
                "attributeType": "clientInformationRequirement",
-               "attributeName": "AdditionalPersonalInformation"
+               "attributeName": "IncomeBasicsCard"
             },
                         {
                "attributeType": "clientInformationRequirement",
-               "attributeName": "MaritalStatus"
-            },
-                        {
-               "attributeType": "clientInformationRequirement",
-               "attributeName": "EmploymentDetails"
-            },
-                        {
-               "attributeType": "clientInformationRequirement",
-               "attributeName": "IncomeBasic"
-            },
-                        {
-               "attributeType": "clientInformationRequirement",
-               "attributeName": "ExpensesBasic"
-            },
-                        {
-               "attributeType": "clientInformationRequirement",
-               "attributeName": "PreOfferFinePrint"
+               "attributeName": "ExpensesBasicCard"
             }
          ]
       },
@@ -107,19 +91,19 @@
          "productAttributes":          [
                         {
                "attributeType": "Evidence",
-               "attributeName": "ProofOfIdentificationClause",
+               "attributeName": "ProofOfBankAccountClauseCard",
                "isComparable": "false",
                "valueUnit": "bool"
             },
                         {
                "attributeType": "Evidence",
-               "attributeName": "ProofOfIncomeClause",
+               "attributeName": "ProofOfIdentificationClauseCard",
                "isComparable": "false",
                "valueUnit": "bool"
             },
                         {
                "attributeType": "Evidence",
-               "attributeName": "ProofOfBankAccountClause",
+               "attributeName": "ProofOfIncomeClauseCard",
                "isComparable": "false",
                "valueUnit": "bool"
             }
@@ -165,7 +149,7 @@
                "minValue": "3000",
                "maxValue": "99999999",
                "valueUnit": "ZAR",
-               "description": "earn a regular monthly income of at least R3 000 per month"
+               "description": "earn more than R350 000 annually."
             },
                         {
                "attributeType": "EligibilityRule",
@@ -248,19 +232,11 @@
          "productAttributes":          [
                         {
                "attributeType": "Compliance",
-               "attributeName": "MeetsMinimumProductEligibilityRequirements"
+               "attributeName": "NotUnderCreditAdministration"
             },
                         {
                "attributeType": "Compliance",
-               "attributeName": "NotUndaerCreditAdministration"
-            },
-                        {
-               "attributeType": "Compliance",
-               "attributeName": "BureauCheckConsent"
-            },
-                        {
-               "attributeType": "Compliance",
-               "attributeName": "CreditBureauMonitoring"
+               "attributeName": "BureauCheckConsentCard"
             }
          ]
       },
@@ -307,7 +283,7 @@
                         {
                "attributeType": "enum",
                "attributeName": "riskAnalysisMechanism",
-               "value": "automated"
+               "value": "skip"
             },
                         {
                "attributeType": "enum",
@@ -353,6 +329,11 @@
                "attributeType": "boolean",
                "attributeName": "requiresSecurityAndCollatoralManagement",
                "value": "false"
+            },
+			{
+               "attributeType": "string",
+               "attributeName": "CODEngine",
+               "value": "CreditCardCOD"
             }
          ]
       },
@@ -408,6 +389,14 @@
                "value": "250000"
             }
          ]
+      },
+            {
+         "attributeGroupName": "RoutingFlag",
+         "productAttributes": [         {
+            "attributeType": "string",
+            "attributeName": "routingFlag",
+            "value": "CreditCardDecisioning"
+         }]
       }
    ],
    "features":    [
