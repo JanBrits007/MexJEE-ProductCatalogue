@@ -20,27 +20,11 @@
                </productAttributes>
                <productAttributes>
                   <attributeType>clientInformationRequirement</attributeType>
-                  <attributeName>AdditionalPersonalInformation</attributeName>
+                  <attributeName>IncomeBasicCard</attributeName>
                </productAttributes>
                <productAttributes>
                   <attributeType>clientInformationRequirement</attributeType>
-                  <attributeName>MaritalStatus</attributeName>
-               </productAttributes>
-               <productAttributes>
-                  <attributeType>clientInformationRequirement</attributeType>
-                  <attributeName>EmploymentDetails</attributeName>
-               </productAttributes>
-               <productAttributes>
-                  <attributeType>clientInformationRequirement</attributeType>
-                  <attributeName>IncomeDetails</attributeName>
-               </productAttributes>
-               <productAttributes>
-                  <attributeType>clientInformationRequirement</attributeType>
-                  <attributeName>ExpensesBasic</attributeName>
-               </productAttributes>
-               <productAttributes>
-                  <attributeType>clientInformationRequirement</attributeType>
-                  <attributeName>PreOfferFinePrint</attributeName>
+                  <attributeName>ExpensesBasicCard</attributeName>
                </productAttributes>
             </productAttributeGroup>
             <productAttributeGroup>
@@ -81,19 +65,19 @@
                <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
                <productAttributes>
                   <attributeType>Evidence</attributeType>
-                  <attributeName>ProofOfIdentificationClause</attributeName>
+                  <attributeName>ProofOfBankAccountClauseCard</attributeName>
                   <isComparable>false</isComparable>
                   <valueUnit>bool</valueUnit>
                </productAttributes>
                <productAttributes>
                   <attributeType>Evidence</attributeType>
-                  <attributeName>ProofOfIncomeClause</attributeName>
+                  <attributeName>ProofOfIdentificationClauseCard</attributeName>
                   <isComparable>false</isComparable>
                   <valueUnit>bool</valueUnit>
                </productAttributes>
                <productAttributes>
                   <attributeType>Evidence</attributeType>
-                  <attributeName>ProofOfBankAccountClause</attributeName>
+                  <attributeName>ProofOfIncomeClauseCard</attributeName>
                   <isComparable>false</isComparable>
                   <valueUnit>bool</valueUnit>
                </productAttributes>
@@ -244,7 +228,7 @@
                   <minValue>3000</minValue>
                   <maxValue>99999999</maxValue>
                   <valueUnit>ZAR</valueUnit>
-                  <description>earn R60 000 or more annually.</description>
+                  <description>earn more than R350 000 annually.</description>
                </productAttributes>
                <productAttributes>
                   <attributeType>EligibilityRule</attributeType>
@@ -325,11 +309,7 @@
                </productAttributes>
                <productAttributes>
                   <attributeType>Compliance</attributeType>
-                  <attributeName>BureauCheckConsent</attributeName>
-               </productAttributes>
-               <productAttributes>
-                  <attributeType>Compliance</attributeType>
-                  <attributeName>CreditBureauMonitoring</attributeName>
+                  <attributeName>BureauCheckConsentCard</attributeName>
                </productAttributes>
             </productAttributeGroup>
             <productAttributeGroup>
@@ -418,6 +398,16 @@
                   <attributeType>boolean</attributeType>
                   <attributeName>requiresSecurityAndCollatoralManagement</attributeName>
                   <value>false</value>
+               </productAttributes>
+               <productAttributes>
+                  <attributeType>string</attributeType>
+                  <attributeName>frontOfficeIntentSequence</attributeName>
+                  <value>PrepareApplicant|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+               </productAttributes>
+			   <productAttributes>
+                  <attributeType>string</attributeType>
+                  <attributeName>CODEngine</attributeName>
+                  <value>CreditCardCOD</value>
                </productAttributes>
             </productAttributeGroup>
             <productAttributeGroup>
