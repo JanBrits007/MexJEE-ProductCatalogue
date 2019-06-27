@@ -1,14 +1,12 @@
 {
-    "product": [
-        {
+    "product": [{
             "productIdentifier": "1199",
             "name": "Just Invest",
             "shortDescription": "JustInvest is a money market investment account, offering competitive, tiered interest rates and access to your funds with 24 hours’ notice.",
             "productPricing": [],
             "featuresAndBenefits": [],
             "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html",            
-            "productAttributeGroup": [
-                {
+            "productAttributeGroup": [{
                     "attributeGroupName": "clientInformationRequirement_GenerateOffer",
                     "productAttributes": [
                         {
@@ -347,7 +345,38 @@
                             "allowedFrequency": []
                         }
                     ]
-                },                
+                }, 
+                {
+                    "attributeGroupName": "ProductFeatures",
+                    "productAttributes": [{
+                            "attributeType": "Feature",
+                            "attributeName": "minimumAmount",
+                            "minValue": 500,
+                            "valueUnit": "ZAR",
+                            "recurringMinValue": 100,
+                            "allowedTerms": [{
+                                "termDetails": [{
+                                    "term": 24,
+                                    "termLabel": "hours"
+                                }]
+                            }]
+                        },
+                        {
+                            "attributeType": "Feature",
+                            "attributeName": "paymentFrequency",
+                            "allowedFrequency": [{
+                                    "code": "W",
+                                    "name": "Weekly",
+                                    "value": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+                                },
+                                {
+                                    "code": "M",
+                                    "name": "Monthly"
+                                }
+                            ]
+                        }
+                    ]
+                },
                 {
                     "attributeGroupName": "RequiredCompliance",
                     "productAttributes": [
