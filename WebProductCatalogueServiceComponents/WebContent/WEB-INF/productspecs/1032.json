@@ -49,7 +49,21 @@
                ]
             },
             {
-               "attributeGroupName": "clientInformationRequirement_ActivateProducts"
+               "attributeGroupName": "clientInformationRequirement_ActivateProducts",
+               "productAttributes": [
+                  {
+                     "attributeType": "clientInformationRequirement",
+                     "attributeName": "AdditionalPersonalInformation"
+                  },
+                  {
+                     "attributeType": "clientInformationRequirement",
+                     "attributeName": "MaritalStatusCard"
+                  },
+                  {
+                     "attributeType": "clientInformationRequirement",
+                     "attributeName": "EmploymentDetails"
+                  }
+               ]
             },
             {
                "attributeGroupName": "clientInformationRequirement_GatherEvidence"
@@ -136,7 +150,7 @@
                "productAttributes": [
                   {
                      "attributeType": "productInformationRequirement",
-                     "attributeName": "LoanRepayment"
+                     "attributeName": "CreditRepayment"
                   }
                ]
             },
@@ -641,10 +655,10 @@
             },
             {
                "featureIdentifier": "1454",
-               "name": "Loyalty and Rewards programme",
+               "name": "Nedbank Greenbacks Rewards",
                "mandatory": "false",
                "preSelected": "true",
-               "shortDescription": "Nedbank Greenbacks Rewards membership",
+               "shortDescription": "By joining our Greenbacks Rewards Programme you will earn rewards when you use your credit card or one of our other transactional accounts.",
                "description": "Detailed description of feature",
                "featureGrouping": {
                   "featureGroupName": "Loyalty",
@@ -721,6 +735,193 @@
                         "maxValue": "2",
                         "valueUnit": "text",
                         "value": "some value"
+                     }
+                  }
+               ]
+            },
+            {
+               "featureIdentifier": "1400",
+               "name": "Affinity Rewards",
+               "mandatory": "false",
+               "preSelected": "false",
+               "shortDescription": "Through our programmes you can support the arts, environmental conservation initiatives or sports or help needy children, at no cost to you. You choose the affinity programme you'd like to support.",
+               "description": "Detailed description of feature",
+               "featureGrouping": {
+                  "featureGroupName": "Loyalty",
+                  "featureGroupRuleForProduct": "Optional"
+               },
+               "featureType": "BoltOn",
+               "referenceProductID": "1386",
+               "featurePricing": {
+                  "fee": [
+                     {
+                        "type": "AdminFee",
+                        "currency": "ZAR",
+                        "amount": "0",
+                        "frequency": "Monthly"
+                     }
+                  ]
+               },
+               "featureFulfilment": [
+                  {
+                     "channel": "selfServiceWeb",
+                     "fulfilmentType": "setting",
+                     "fulfilmentInputSetting1": "N/A",
+                     "fulfilmentInputSetting2": "N/A"
+                  },
+                  {
+                     "channel": "staffAssisted",
+                     "fulfilmentType": "setting",
+                     "fulfilmentInputSetting1": "N/A",
+                     "fulfilmentInputSetting2": "N/A"
+                  }
+               ],
+               "featureDisplayAdditionalInformationWidget": "No",
+               "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+               "featureDisplayPosition": "offer",
+               "featureAttributeGroup": [
+                  {
+                     "attributeGroupName": "SystemRelated",
+                     "featureAttributes": {
+                        "attributeType": "Flag",
+                        "attributeName": "StraightThroughProcess",
+                        "value": "True"
+                     }
+                  },
+                  {
+                     "attributeGroupName": "coreProvisioningParameters",
+                     "featureAttributes": [
+                        {
+                           "attributeType": "coreProvisioningParameter",
+                           "attributeName": "FeatureCode",
+                           "valueUnit": "string",
+                           "value": "ThisisthesFeaturecode"
+                        },
+                        {
+                           "attributeType": "coreProvisioningParameter",
+                           "attributeName": "provisionInBranch",
+                           "valueUnit": "boolean",
+                           "value": "false"
+                        },
+                        {
+                           "attributeType": "coreProvisioningParameter",
+                           "attributeName": "legacyProductID",
+                           "valueUnit": "string",
+                           "value": ""
+                        }
+                     ]
+                  },
+                  {
+                     "attributeGroupName": "placeholder-Fullstructure",
+                     "featureAttributes": {
+                        "attributeType": "type",
+                        "attributeName": "name",
+                        "minValue": "1",
+                        "maxValue": "2",
+                        "valueUnit": "text",
+                        "value": "some value"
+                     }
+                  }
+               ]
+            },
+            {
+               "featureIdentifier": "1099",
+               "name": "Balance Protection Plan",
+               "mandatory": "false",
+               "preSelected": "true",
+               "shortDescription": "Our Card Insurance",
+               "description": "Detailed description of feature",
+               "featureGrouping": {
+                  "featureGroupName": "Card Insurance",
+                  "featureGroupRuleForProduct": "OptionalIfAlternativeSelected"
+               },
+               "featureType": "BoltOn",
+               "referenceProductID": "-1",
+               "featurePricing": {
+                  "fee": [
+                     {
+                        "type": "InsurancePremium",
+                        "amount": "0",
+                        "frequency": "Monthly",
+                        "currency": "ZAR",
+                        "description": "Insurance Premium"
+                     },
+                     {
+                        "type": "InitiationFee",
+                        "amount": "10",
+                        "frequency": "OnceOff",
+                        "currency": "ZAR",
+                        "description": "Initiation Fee"
+                     }
+                  ]
+               },
+               "featureFulfilment": [
+                  {
+                     "channel": "selfServiceWeb",
+                     "fulfilmentType": "setting",
+                     "fulfilmentInputSetting1": "N/A",
+                     "fulfilmentInputSetting2": "N/A"
+                  },
+                  {
+                     "channel": "staffAssisted",
+                     "fulfilmentType": "setting",
+                     "fulfilmentInputSetting1": "N/A",
+                     "fulfilmentInputSetting2": "N/A"
+                  }
+               ],
+               "featureDisplayAdditionalInformationWidget": "No",
+               "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+               "featureDisplayPosition": "preOffer",
+               "featureAttributeGroup": [
+                  {
+                     "attributeGroupName": "placeholder-Fullstructure",
+                     "featureAttributes": {
+                        "attributeType": "type",
+                        "attributeName": "name",
+                        "minValue": "1",
+                        "maxValue": "2",
+                        "valueUnit": "test",
+                        "value": "some value"
+                     }
+                  },
+                  {
+                     "attributeGroupName": "SystemRelated",
+                     "featureAttributes": {
+                        "attributeType": "Flag",
+                        "attributeName": "StraightThroughProcess",
+                        "value": "true"
+                     }
+                  },
+                  {
+                     "attributeGroupName": "coreProvisioningParameters",
+                     "featureAttributes": [
+                        {
+                           "attributeType": "coreProvisioningParameter",
+                           "attributeName": "LoanGroupingCode",
+                           "valueUnit": "PER",
+                           "value": "PER"
+                        },
+                        {
+                           "attributeType": "coreProvisioningParameter",
+                           "attributeName": "provisionInBranch",
+                           "valueUnit": "boolean",
+                           "value": "true"
+                        },
+                        {
+                           "attributeType": "coreProvisioningParameter",
+                           "attributeName": "legacyProductID",
+                           "valueUnit": "string",
+                           "value": "1087"
+                        }
+                     ]
+                  },
+                  {
+                     "attributeGroupName": "coreProvisioningParameters",
+                     "featureAttributes": {
+                        "attributeType": "coreProvisioningParameter",
+                        "attributeName": "ClientSet",
+                        "valueUnit": "33",
+                        "value": "33"
                      }
                   }
                ]

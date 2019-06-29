@@ -56,7 +56,7 @@
     </productAttributes>
     <productAttributes>
       <attributeType>clientInformationRequirement</attributeType>
-      <attributeName>MaritalStatus</attributeName>
+      <attributeName>MaritalStatusCard</attributeName>
     </productAttributes>
     <productAttributes>
       <attributeType>clientInformationRequirement</attributeType>
@@ -74,7 +74,7 @@
     <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
     <productAttributes>
       <attributeType>productInformationRequirement</attributeType>
-      <attributeName>LoanRepayment</attributeName>
+      <attributeName>CreditRepayment</attributeName>
     </productAttributes>
   </productAttributeGroup>
   <productAttributeGroup>
@@ -94,7 +94,8 @@
     <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
     <productAttributes>
       <attributeType>DocumentDescription</attributeType>
-      <attributeName>Contract|CreditCardProductContract|ARRANGEMENT|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
+      <attributeName>Contract|CreditCardProductContract|ARRANGEMENT|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement
+				Contract</attributeName>
     </productAttributes>
     <productAttributes>
       <attributeType>AvailableAction</attributeType>
@@ -416,10 +417,10 @@
   </features>
   <features>
     <featureIdentifier>1454</featureIdentifier>
-    <name>Loyalty and Rewards programme</name>
+    <name>Nedbank Greenback Rewards</name>
     <mandatory>false</mandatory>
     <preSelected>true</preSelected>
-    <shortDescription>Nedbank Greenbacks Rewards membership</shortDescription>
+    <shortDescription>By joining our Greenbacks Rewards Programme you will earn rewards when you use your credit card or one of our other transactional accounts.</shortDescription>
     <description>Detailed description of feature</description>
     <featureGrouping>
       <featureGroupName>Loyalty</featureGroupName>
@@ -489,6 +490,103 @@
         <maxValue>2</maxValue>
         <valueUnit>text</valueUnit>
         <value>some value</value>
+      </featureAttributes>
+    </featureAttributeGroup>
+  </features>
+  <features>
+    <featureIdentifier>1400</featureIdentifier>
+    <name>Affinity Rewards</name>
+    <mandatory>false</mandatory>
+    <preSelected>false</preSelected>
+    <shortDescription>Through our programmes you can support the arts, environmental conservation initiatives or sports or help needy children, at no cost to you. You choose the affinity programme you'd like to support.</shortDescription>
+    <description>Detailed description of feature</description>
+    <featureGrouping>
+      <featureGroupName>Loyalty</featureGroupName>
+      <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
+    </featureGrouping>
+    <featureType>BoltOn</featureType>
+    <referenceProductID>-1</referenceProductID>
+    <featurePricing>
+      <fee>
+        <type>AdminFee</type>
+        <description />
+        <currency>ZAR</currency>
+        <amount>0</amount>
+        <frequency>Monthly</frequency>
+      </fee>
+    </featurePricing>
+    <featureFulfilment>
+      <channel>selfServiceWeb</channel>
+      <fulfilmentType>setting</fulfilmentType>
+      <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+      <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+    </featureFulfilment>
+    <featureFulfilment>
+      <channel>staffAssisted</channel>
+      <fulfilmentType>setting</fulfilmentType>
+      <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+      <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+    </featureFulfilment>
+    <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+    <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+    <featureDisplayPosition>summary</featureDisplayPosition>
+    <featureAttributeGroup>
+      <attributeGroupName>SystemRelated</attributeGroupName>
+      <featureAttributes>
+        <attributeType>Flag</attributeType>
+        <attributeName>StraightThroughProcess</attributeName>
+        <value>True</value>
+      </featureAttributes>
+    </featureAttributeGroup>
+    <featureAttributeGroup>
+      <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+      <featureAttributes>
+        <attributeType>coreProvisioningParameter</attributeType>
+        <attributeName>FeatureCode</attributeName>
+        <valueUnit>string</valueUnit>
+        <value>ThisisthesFeaturecode</value>
+      </featureAttributes>
+      <featureAttributes>
+        <attributeType>coreProvisioningParameter</attributeType>
+        <attributeName>provisionInBranch</attributeName>
+        <valueUnit>boolean</valueUnit>
+        <value>false</value>
+      </featureAttributes>
+      <featureAttributes>
+        <attributeType>coreProvisioningParameter</attributeType>
+        <attributeName>legacyProductID</attributeName>
+        <valueUnit>string</valueUnit>
+        <value />
+      </featureAttributes>
+    </featureAttributeGroup>
+    <featureAttributeGroup>
+      <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+      <featureAttributes>
+        <attributeType>type</attributeType>
+        <attributeName>name</attributeName>
+        <minValue>1</minValue>
+        <maxValue>2</maxValue>
+        <valueUnit>text</valueUnit>
+        <value>some value</value>
+      </featureAttributes>
+    </featureAttributeGroup>
+  </features>
+  <features>
+    <featureIdentifier>1099</featureIdentifier>
+    <name>Balance Protection Plan</name>
+    <featureAttributeGroup>
+      <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+      <featureAttributes>
+        <attributeType>coreProvisioningParameter</attributeType>
+        <attributeName>provisionInBranch</attributeName>
+        <valueUnit>boolean</valueUnit>
+        <value>true</value>
+      </featureAttributes>
+      <featureAttributes>
+        <attributeType>coreProvisioningParameter</attributeType>
+        <attributeName>legacyProductID</attributeName>
+        <valueUnit>string</valueUnit>
+        <value />
       </featureAttributes>
     </featureAttributeGroup>
   </features>
