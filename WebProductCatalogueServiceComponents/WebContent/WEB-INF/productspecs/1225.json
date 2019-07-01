@@ -1340,6 +1340,69 @@
               ]
             }
           ]
+        },
+        {
+          "featureIdentifier": "217",
+          "name": "Instant Black Cheque Card",
+          "mandatory": "false",
+          "preSelected": "false",
+          "shortDescription": "Short description of feature",
+          "description": "Detailed description of feature",
+          "featureDisplayAdditionalInformationWidget": "No",
+          "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+          "featureDisplayPosition": "preOffer",
+          "referenceProductID": "-1",
+          "featurePricing": {
+            "fee": [
+              {
+                "type": "AdminFee",
+                "description": "Available",
+                "currency": "ZAR",
+                "amount": "0",
+                "frequency": "Monthly"
+              }
+            ]
+          },
+          "featureAttributeGroup": [
+            {
+              "attributeGroupName": "SystemRelated",
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "true"
+              }
+            },
+            {
+              "attributeGroupName": "coreProvisioningParameters",
+              "featureAttributes": [
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "LoanGroupingCode",
+                  "valueUnit": "PER",
+                  "value": "PER"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "false"
+                }
+              ]
+            },
+            {
+              "attributeGroupName": "productInformationRequirement_ActivateProducts",
+              "featureAttributes": [
+                {
+                  "attributeType": "AvailableAction",
+                  "attributeName": "Card Collection"
+                },
+                {
+                  "attributeType": "AvailableAction",
+                  "attributeName": "Card Delivery"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
