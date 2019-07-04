@@ -30,7 +30,13 @@
         },
         {
           "shortDescription": "Unlock great lifestyle benefits with your Unlocked.me Student account. Choose any two of these five benefits monthly. Your benefits are guaranteed as long as you make five qualifying transactions on your account each month.Choose any two of these five benefits monthly:",
-          "benefits": ["100MD DATA", "R30 Food voucher", "R20 Café voucher" , "2-for-1 Nu Metro popcorn", "R20 Taxify voucher"]
+          "benefits": [
+            "100MD DATA",
+            "R30 Food voucher",
+            "R20 Café voucher",
+            "2-for-1 Nu Metro popcorn",
+            "R20 Taxify voucher"
+          ]
         }
       ],
       "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html",
@@ -92,7 +98,9 @@
             }
           ]
         },
-        { "attributeGroupName": "productEvidenceRequirement_GenerateOffer" },
+        {
+          "attributeGroupName": "productEvidenceRequirement_GenerateOffer"
+        },
         {
           "attributeGroupName": "productDocumentPresentation_ActivateProducts",
           "productAttributes": [
@@ -1279,132 +1287,240 @@
           ]
         },
         {
-          "featureIdentifier": "1386",
-          "name": "Gold Cheque Card",
-          "mandatory": "false",
-          "preSelected": "false",
-          "shortDescription": "Short description of feature",
-          "description": "Detailed description of feature",
-          "featureDisplayAdditionalInformationWidget": "No",
-          "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
-          "featureDisplayPosition": "preOffer",
-          "referenceProductID": "-1",
-          "featurePricing": {
-            "fee": [
+          {
+            "featureIdentifier": "217",
+            "name": "Instant Black Cheque Card",
+            "mandatory": "false",
+            "preSelected": "false",
+            "shortDescription": "Short description of feature",
+            "description": "Detailed description of feature",
+            "salesHighlights": [
               {
-                "type": "AdminFee",
-                "description": "Available",
-                "currency": "ZAR",
-                "amount": "0",
-                "frequency": "Monthly"
+                "question": "Is my card personalised?",
+                "answer": "No"
+              },
+              {
+                "question": "Can I use my card at toll gates?",
+                "answer": "Yes"
+              },
+              {
+                "question": "Can I earn Greenbacks Rewards?",
+                "answer": "Yes"
+              },
+              {
+                "question": "Can I do online transactions?",
+                "answer": "Yes, you can do local and international online transactions."
+              },
+              {
+                "question": "Will my card be delivered or do I need to collect it?",
+                "answer": "Collection"
+              },
+              {
+                "question": "When will my card be available?",
+                "answer": "Immediately"
+              }
+            ],
+            "featureDisplayAdditionalInformationWidget": "No",
+            "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+            "featureDisplayPosition": "preOffer",
+            "featurePricing": {
+              "fee": [
+                {
+                  "type": "AdminFee",
+                  "amount": "0",
+                  "frequency": "Annual",
+                  "currency": "ZAR",
+                  "description": "Free"
+                }
+              ]
+            },
+            "featureAttributeGroup": [
+              {
+                "attributeGroupName": "SystemRelated",
+                "featureAttributes": {
+                  "attributeType": "Flag",
+                  "attributeName": "StraightThroughProcess",
+                  "value": "true"
+                }
+              },
+              {
+                "attributeGroupName": "coreProvisioningParameters",
+                "featureAttributes": [
+                  {
+                    "attributeType": "coreProvisioningParameter",
+                    "attributeName": "LoanGroupingCode",
+                    "valueUnit": "PER",
+                    "value": "PER"
+                  },
+                  {
+                    "attributeType": "coreProvisioningParameter",
+                    "attributeName": "provisionInBranch",
+                    "valueUnit": "boolean",
+                    "value": "false"
+                  }
+                ]
+              },
+              {
+                "attributeGroupName": "productInformationRequirement_ActivateProducts",
+                "featureAttributes": {
+                  "attributeType": "AvailableAction",
+                  "attributeName": "Card Collection"
+                }
               }
             ]
           },
-          "featureAttributeGroup": [
-            {
-              "attributeGroupName": "SystemRelated",
-              "featureAttributes": {
-                "attributeType": "Flag",
-                "attributeName": "StraightThroughProcess",
-                "value": "true"
-              }
-            },
-            {
-              "attributeGroupName": "coreProvisioningParameters",
-              "featureAttributes": [
-                {
-                  "attributeType": "coreProvisioningParameter",
-                  "attributeName": "LoanGroupingCode",
-                  "valueUnit": "PER",
-                  "value": "PER"
-                },
-                {
-                  "attributeType": "coreProvisioningParameter",
-                  "attributeName": "provisionInBranch",
-                  "valueUnit": "boolean",
-                  "value": "false"
-                }
-              ]
-            },
-            {
-              "attributeGroupName": "productInformationRequirement_ActivateProducts",
-              "featureAttributes": [
-                {
-                  "attributeType": "AvailableAction",
-                  "attributeName": "Card Collection"
-                },
-                {
-                  "attributeType": "AvailableAction",
-                  "attributeName": "Card Delivery"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "featureIdentifier": "217",
-          "name": "Instant Black Cheque Card",
-          "mandatory": "false",
-          "preSelected": "false",
-          "shortDescription": "Short description of feature",
-          "description": "Detailed description of feature",
-          "featureDisplayAdditionalInformationWidget": "No",
-          "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
-          "featureDisplayPosition": "preOffer",
-          "referenceProductID": "-1",
-          "featurePricing": {
-            "fee": [
+          {
+            "featureIdentifier": "1386",
+            "name": "Gold Cheque Card",
+            "mandatory": "false",
+            "preSelected": "false",
+            "shortDescription": "Short description of feature",
+            "description": "Detailed description of feature",
+            "salesHighlights": [
               {
-                "type": "AdminFee",
-                "description": "Available",
-                "currency": "ZAR",
-                "amount": "0",
-                "frequency": "Monthly"
+                "question": "Is my card personalised?",
+                "answer": "Yes"
+              },
+              {
+                "question": "Can I use my card at toll gates?",
+                "answer": "Yes"
+              },
+              {
+                "question": "Can I earn Greenbacks Rewards?",
+                "answer": "Yes"
+              },
+              {
+                "question": "Can I do online transactions?",
+                "answer": "Yes, you can do local and international online transactions."
+              },
+              {
+                "question": "Will my card be delivered or do I need to collect it?",
+                "answer": "Either"
+              },
+              {
+                "question": "When will my card be available?",
+                "answer": "Within 3-4 working days"
+              }
+            ],
+            "featureDisplayAdditionalInformationWidget": "No",
+            "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+            "featureDisplayPosition": "preOffer",
+            "featurePricing": {
+              "fee": [
+                {
+                  "type": "AdminFee",
+                  "amount": "170.48",
+                  "frequency": "Annual",
+                  "currency": "ZAR",
+                  "description": "R170.48"
+                }
+              ]
+            },
+            "featureAttributeGroup": [
+              {
+                "attributeGroupName": "SystemRelated",
+                "featureAttributes": {
+                  "attributeType": "Flag",
+                  "attributeName": "StraightThroughProcess",
+                  "value": "true"
+                }
+              },
+              {
+                "attributeGroupName": "coreProvisioningParameters",
+                "featureAttributes": [
+                  {
+                    "attributeType": "coreProvisioningParameter",
+                    "attributeName": "LoanGroupingCode",
+                    "valueUnit": "PER",
+                    "value": "PER"
+                  },
+                  {
+                    "attributeType": "coreProvisioningParameter",
+                    "attributeName": "provisionInBranch",
+                    "valueUnit": "boolean",
+                    "value": "false"
+                  }
+                ]
+              },
+              {
+                "attributeGroupName": "productInformationRequirement_ActivateProducts",
+                "featureAttributes": [
+                  {
+                    "attributeType": "AvailableAction",
+                    "attributeName": "Card Collection"
+                  },
+                  {
+                    "attributeType": "AvailableAction",
+                    "attributeName": "Card Delivery"
+                  }
+                ]
               }
             ]
           },
-          "featureAttributeGroup": [
-            {
-              "attributeGroupName": "SystemRelated",
-              "featureAttributes": {
-                "attributeType": "Flag",
-                "attributeName": "StraightThroughProcess",
-                "value": "true"
+          {
+            "featureIdentifier": "217",
+            "name": "Instant Black Cheque Card",
+            "mandatory": "false",
+            "preSelected": "false",
+            "shortDescription": "Short description of feature",
+            "description": "Detailed description of feature",
+            "featureDisplayAdditionalInformationWidget": "No",
+            "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+            "featureDisplayPosition": "preOffer",
+            "referenceProductID": "-1",
+            "featurePricing": {
+              "fee": [
+                {
+                  "type": "AdminFee",
+                  "description": "Available",
+                  "currency": "ZAR",
+                  "amount": "0",
+                  "frequency": "Monthly"
+                }
+              ]
+            },
+            "featureAttributeGroup": [
+              {
+                "attributeGroupName": "SystemRelated",
+                "featureAttributes": {
+                  "attributeType": "Flag",
+                  "attributeName": "StraightThroughProcess",
+                  "value": "true"
+                }
+              },
+              {
+                "attributeGroupName": "coreProvisioningParameters",
+                "featureAttributes": [
+                  {
+                    "attributeType": "coreProvisioningParameter",
+                    "attributeName": "LoanGroupingCode",
+                    "valueUnit": "PER",
+                    "value": "PER"
+                  },
+                  {
+                    "attributeType": "coreProvisioningParameter",
+                    "attributeName": "provisionInBranch",
+                    "valueUnit": "boolean",
+                    "value": "false"
+                  }
+                ]
+              },
+              {
+                "attributeGroupName": "productInformationRequirement_ActivateProducts",
+                "featureAttributes": [
+                  {
+                    "attributeType": "AvailableAction",
+                    "attributeName": "Card Collection"
+                  },
+                  {
+                    "attributeType": "AvailableAction",
+                    "attributeName": "Card Delivery"
+                  }
+                ]
               }
-            },
-            {
-              "attributeGroupName": "coreProvisioningParameters",
-              "featureAttributes": [
-                {
-                  "attributeType": "coreProvisioningParameter",
-                  "attributeName": "LoanGroupingCode",
-                  "valueUnit": "PER",
-                  "value": "PER"
-                },
-                {
-                  "attributeType": "coreProvisioningParameter",
-                  "attributeName": "provisionInBranch",
-                  "valueUnit": "boolean",
-                  "value": "false"
-                }
-              ]
-            },
-            {
-              "attributeGroupName": "productInformationRequirement_ActivateProducts",
-              "featureAttributes": [
-                {
-                  "attributeType": "AvailableAction",
-                  "attributeName": "Card Collection"
-                },
-                {
-                  "attributeType": "AvailableAction",
-                  "attributeName": "Card Delivery"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+            ]
+          }
+        ]
+      }
+    ]
+  }
