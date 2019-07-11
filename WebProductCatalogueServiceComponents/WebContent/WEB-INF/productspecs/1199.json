@@ -1,12 +1,14 @@
 {
-    "product": [{
+    "product": [
+        {
             "productIdentifier": "1199",
             "name": "Just Invest",
             "shortDescription": "JustInvest is a money market investment account, offering competitive, tiered interest rates and access to your funds with 24 hours’ notice.",
             "productPricing": [],
             "featuresAndBenefits": [],
-            "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html",            
-            "productAttributeGroup": [{
+            "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html",
+            "productAttributeGroup": [
+                {
                     "attributeGroupName": "clientInformationRequirement_GenerateOffer",
                     "productAttributes": [
                         {
@@ -59,7 +61,7 @@
                 },
                 {
                     "attributeGroupName": "RequiredCompliance_PrepareApplicant",
-                    "productAttributes": [                        
+                    "productAttributes": [
                         {
                             "attributeType": "Compliance",
                             "attributeName": "ConsentProcessFaisDisclaimer"
@@ -328,12 +330,15 @@
                             "attributeName": "minimumAmount",
                             "minValue": 500,
                             "valueUnit": "ZAR",
-                            "allowedTerms": [
+                            "recurringMinValue": 100,
+                            "termNotice": [
                                 {
-                                    "termDetails": [
+                                    "details": [
                                         {
-                                            "term": 12,
-                                            "termLabel": "months"
+                                            "key": "notice",
+                                            "value": 1,
+                                            "label": "day",
+                                            "code": "D"
                                         }
                                     ]
                                 }
@@ -343,31 +348,22 @@
                             "attributeType": "Feature",
                             "attributeName": "interestFrequency",
                             "allowedFrequency": []
-                        }
-                    ]
-                }, 
-                {
-                    "attributeGroupName": "ProductFeatures",
-                    "productAttributes": [{
-                            "attributeType": "Feature",
-                            "attributeName": "minimumAmount",
-                            "minValue": 500,
-                            "valueUnit": "ZAR",
-                            "recurringMinValue": 100,
-                            "allowedTerms": [{
-                                "termDetails": [{
-                                    "term": 24,
-                                    "termLabel": "hours"
-                                }]
-                            }]
                         },
                         {
                             "attributeType": "Feature",
                             "attributeName": "paymentFrequency",
-                            "allowedFrequency": [{
+                            "allowedFrequency": [
+                                {
                                     "code": "W",
                                     "name": "Weekly",
-                                    "value": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+                                    "value": [
+                                        "Monday",
+                                        "Tuesday",
+                                        "Wednesday",
+                                        "Thursday",
+                                        "Friday",
+                                        "Saturday"
+                                    ]
                                 },
                                 {
                                     "code": "M",
