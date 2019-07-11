@@ -6,7 +6,7 @@
             "shortDescription": "Fixed deposits at highly competitive interest rates – exclusively for Professional Banking clients.",
             "productPricing": [],
             "featuresAndBenefits": [],
-            "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html",            
+            "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html",
             "productAttributeGroup": [
                 {
                     "attributeGroupName": "clientInformationRequirement_GenerateOffer",
@@ -61,7 +61,7 @@
                 },
                 {
                     "attributeGroupName": "RequiredCompliance_PrepareApplicant",
-                    "productAttributes": [                        
+                    "productAttributes": [
                         {
                             "attributeType": "Compliance",
                             "attributeName": "ConsentProcessFaisDisclaimer"
@@ -306,13 +306,15 @@
                             "minValue": 100000,
                             "valueUnit": "ZAR",
                             "minMonth": 1,
-                            "maxMonth": 60,
-                            "allowedTerms": [
+                            "maxMonth": 12,
+                            "termNotice": [
                                 {
-                                    "termDetails": [
+                                    "details": [
                                         {
-                                            "term": 12,
-                                            "termLabel": "months"
+                                            "key": "term",
+                                            "value": 12,
+                                            "label": "months",
+                                            "code": "M"
                                         }
                                     ]
                                 }
@@ -341,7 +343,7 @@
                             ]
                         }
                     ]
-                },                
+                },
                 {
                     "attributeGroupName": "RequiredCompliance",
                     "productAttributes": [
@@ -377,16 +379,6 @@
                             "attributeType": "string",
                             "attributeName": "NonStraightThroughEmail",
                             "value": "pietsewinkel@cresta.co.za"
-                        }
-                    ]
-                },
-                {
-                    "attributeGroupName": "RoutingFlag",
-                    "productAttributes": [
-                        {
-                            "attributeType": "string",
-                            "attributeName": "routingFlag",
-                            "value": "InvestmentDecisioning"
                         }
                     ]
                 }
