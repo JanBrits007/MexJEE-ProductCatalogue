@@ -1266,24 +1266,187 @@
                       ],
                       "valueAddedServices": [
                         {
-                          "Data": [
-                            "100 MB"
-                          ],
-                          "Food - R30 voucher (Select any one of the below)": [
-                            "Debonairs",
-                            "Burger King",
-                            "Nandos"
-                          ],
-                          "Cafés - R20 coffee voucher (Select any one of the below)": [
-                            "Vida e caffè",
-                            "Mugg & Bean"
-                          ],
-                          "Transport": [
-                            "R20 Taxify voucher"
-                          ],
-                          "Entertainment": [
-                            "2-for-1 Nu Metro popcorn"
-                          ]
+                          "Data": 
+                            ["100 MB"],
+                          "Food - R30 voucher (Select any one of the below)": 
+                            ["Debonairs","Burger King","Nandos"],	
+                          "Cafés - R20 coffee voucher (Select any one of the below)":
+                            ["Vida e caffè","Mugg & Bean"],
+                          "Transport":
+                            ["R20 Taxify voucher"],
+                          "Entertainment": 
+                            ["2-for-1 Nu Metro popcorn"]
+                          }
+                        ],
+                        "productFeatures": [
+                          {
+                            "name": "fee",
+                            "displayName": "Monthly Fee",
+                            "description": "R 0"
+                          },
+                          {
+                            "name": "Age",
+                            "displayName": "Age",
+                            "description": "16 - 26"
+                          },
+                          {
+                            "name": "Chequecard",
+                            "displayName": "Cheque Card",
+                            "description": "Unlocked.Me cheque card included"
+                          },
+                          {
+                            "name": "Nedbankatmwithdrawals",
+                            "displayName": "Nedbank ATM withdrawals",
+                            "description": "Pay as you use"
+                          },
+                          {
+                            "name": "Debitordersinternal",
+                            "displayName": "Debit orders (Internal)",
+                            "description": "Internal Debit orders included"
+                          },
+                          {
+                            "name": "Debitordersexternal",
+                            "displayName": "Debit orders (External)",
+                            "description": "1 free, thereafter pay as you use"
+                          },
+                          {
+                            "name": "Stoporders",
+                            "displayName": "Stop orders",
+                            "description": "Stop orders included"
+                          },
+                          {
+                            "name": "Cardswipes",
+                            "displayName": "Card swipes",
+                            "description": "Unlimited card swipes"
+                          },
+                          {
+                            "name": "Cashwithdrawalsatparticipatingretailers",
+                            "displayName": "Cash withdrawals",
+                            "description": "Pay as you use"
+                          },
+                          {
+                            "name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+                            "displayName": "Digital banking",
+                            "description": "Included"
+                          },
+                          {
+                            "name": "AirtimewithoutAirtime",
+                            "displayName": "Airtime without Airtime",
+                            "description": "Airtime without Airtime (purchase airtime without having airtime using *130*005)"
+                          },
+                          {
+                            "name": "SendiMali",
+                            "displayName": "Send i-Mali",
+                            "description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+                          },
+                          {
+                            "name": "Domesticairportloungeaccess",
+                            "displayName": "Domestic airport lounge",
+                            "description": "n/a"
+                          },
+                          {
+                            "name": "Income",
+                            "displayName": "Income",
+                            "description": "No minimum income required"
+                          },
+                          {
+                            "name": "RelationshipBanker",
+                            "displayName": "Relationship Banker",
+                            "description": "n/a"
+                          },
+                          {
+                            "name": "Creditcard",
+                            "displayName": "Credit card",
+                            "description": "n/a"
+                          },
+                          {
+                            "name": "Greenbacks",
+                            "displayName": "Greenbacks",
+                            "description": "n/a"
+                          },
+                          {
+                            "name": "Chargecard",
+                            "displayName": "Charge card",
+                            "description": "n/a"
+                          },
+                          {
+                            "name": "Electronicchannels",
+                            "displayName": "Electronic channels",
+                            "description": "Included"
+                          },
+                          {
+                            "name": "eNote",
+                            "displayName": "eNote",
+                            "description": "Optional"
+                          },
+                          {
+                            "name": "Nofundsalert",
+                            "displayName": "No-funds alert",
+                            "description": "Optional"
+                          },
+                          {
+                            "name": "Internationalairportloungeaccess",
+                            "displayName": "International airport lounge",
+                            "description": "n/a"
+                          },
+                          {
+                            "name": "Balanceenquiry",
+                            "displayName": "Balance enquiry",
+                            "description": "Included on Self Service channels"
+                          },
+                          {
+                            "name": "Forexdelivery",
+                            "displayName": "Forex delivery",
+                            "description": "n/a"
+                          },
+                          {
+                            "name": "Overdraft",
+                            "displayName": "Overdraft",
+                            "description": "n/a"
+                          },
+                          {
+                            "name": "Investment",
+                            "displayName": "Investment",
+                            "description": "n/a"
+                          },
+                          {
+                            "name": "Insurance",
+                            "displayName": "Insurance",
+                            "description": "n/a"
+                          },
+                          {
+                            "name": "Tailoredfinancing",
+                            "displayName": "Tailored financing",
+                            "description": "n/a"
+                          }
+                        ],
+                      "eligibilityRules": [
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "16",
+                          "maxValue": "26",
+                          "valueUnit": "year",
+                          "description": "From 16 to 26 years old"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "0",
+                          "maxValue": "9999999",
+                          "valueUnit": "ZAR",
+                          "description": "No minimum income"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Package",
+                          "value": "An account only",
+                          "valueUnit": "package"
+                        },
+                        {
+                          "attributeType": "ConcurrentApplicationLimitationGroup",
+                          "attributeName": "ConcurrentApplicationLimitation",
+                          "value": "1"
                         }
                       ],
                       "productFeatures": [
@@ -1295,7 +1458,7 @@
                         {
                           "name": "Age",
                           "displayName": "Age",
-                          "description": "18 - 26"
+                          "description": "16 - 26"
                         },
                         {
                           "name": "Chequecard",
@@ -1670,6 +1833,13 @@
                           "valueUnit": "package"
                         },
                         {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Education",
+                          "minValue": "4",
+                          "valueUnit": "year",
+                          "description": "Minimum 4 year degree or 3 years plus Honours (NQF level 8 equivalent)"
+                        },
+                        {
                           "attributeType": "ConcurrentApplicationLimitationGroup",
                           "attributeName": "ConcurrentApplicationLimitation",
                           "value": "1"
@@ -1751,7 +1921,12 @@
                           "description": "Optional"
                         },
                         {
-                          "name": "nedbankatmwithdrawals",
+                          "name": "Chequecard",
+                          "displayName": "Cheque card",
+                          "description": "Professional (Platinum Greenbacks) cheque card included"
+                        },
+                        {
+                          "name": "Nedbankatmwithdrawals",
                           "displayName": "Nedbank ATM withdrawals",
                           "description": "First four Nedbank withdrawals are included"
                         },
@@ -1843,8 +2018,14 @@
                         {
                           "name": "Internationalairportloungeaccess",
                           "displayName": "International airport lounge",
-                          "description": "n/a"
+                          "description": "Ten visits per annum. One guest per visit"
                         },
+                        {
+                          "name": "Domesticairportloungeaccess",
+                          "displayName": "Domestic airport lounge",
+                          "description": "Unlimited access to Bidvest domestic and international lounges"
+                        },
+                        
                         {
                           "name": "Balanceenquiry",
                           "displayName": "Balance enquiry",
@@ -1920,7 +2101,7 @@
                           "description": "R 170.00 pm"
                         }
                       ],
-                      "specialFeature": "UNDER 30 WITH A MIN 4 YEAR DEGREE",
+                      "specialFeature": "NO MINIMUM ENTRY CRITERIA. REBATES AVAILABLE FROM AGE 55 AND OVER",
                       "salesHighlights": [
                         "Relationship Banker for the entire household",
                         "Platinum Cheque and Credit card",
@@ -2089,6 +2270,21 @@
                           "description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
                         },
                         {
+                          "name": "Income",
+                          "displayName": "Income",
+                          "description": "No minimum income is required however, this offering is ideally suited to those earning over R750 000 per year."
+                        },
+                        {
+                          "name": "RelationshipBanker",
+                          "displayName": "Relationship Banker",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Chequecard",
+                          "displayName": "Cheque card",
+                          "description": "Professional (Platinum Greenbacks) cheque card included"
+                        },
+                        {
                           "name": "Creditcard",
                           "displayName": "Credit card",
                           "description": "Included"
@@ -2121,12 +2317,12 @@
                         {
                           "name": "Internationalairportloungeaccess",
                           "displayName": "International airport lounge",
-                          "description": "Included"
+                          "description": "Ten visits per annum. One guest per visit"
                         },
                         {
                           "name": "Domesticairportloungeaccess",
                           "displayName": "Domestic airport lounge",
-                          "description": "Unlimited access to Bidvest domestic departure lounges via your Professional Cheque or Credit Card"
+                          "description": "Unlimited access to Bidvest domestic and international lounges"
                         },
                         {
                           "name": "Balanceenquiry",
@@ -2339,7 +2535,7 @@
                         {
                           "name": "Chequecard",
                           "displayName": "Cheque card",
-                          "description": "Professional (Platinum Greenbacks) cheque card - contactless enabled"
+                          "description": "Professional (Platinum Greenbacks) cheque card included"
                         },
                         {
                           "name": "Creditcard",
@@ -2547,7 +2743,52 @@
                         {
                           "name": "Chequecard",
                           "displayName": "Cheque card",
-                          "description": "Professional (Platinum Greenbacks) cheque card - contactless enabled "
+                          "description": "Professional (Platinum Greenbacks) cheque card included"
+                        },
+                        {
+                          "name": "Nedbankatmwithdrawals",
+                          "displayName": "Nedbank ATM withdrawals",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Debitordersinternal",
+                          "displayName": "Debit orders (Internal)",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Debitordersexternal",
+                          "displayName": "Debit orders (External)",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Stoporders",
+                          "displayName": "Stop orders",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Cardswipes",
+                          "displayName": "Card swipes",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Cashwithdrawalsatparticipatingretailers",
+                          "displayName": "Cash withdrawals",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+                          "displayName": "Digital banking",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "AirtimewithoutAirtime",
+                          "displayName": "Airtime without Airtime",
+                          "description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+                        },
+                        {
+                          "name": "SendiMali",
+                          "displayName": "Send i-Mali",
+                          "description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
                         },
                         {
                           "name": "Creditcard",
@@ -2581,13 +2822,18 @@
                         },
                         {
                           "name": "Internationalairportloungeaccess",
-                          "displayName": "International airport lounge access",
-                          "description": "Unlimited access to Bidvest international departure lounges via Professional Cheque or Credit Card"
+                          "displayName": "International airport lounge",
+                          "description": "Ten visits per annum. One guest per visit"
                         },
                         {
                           "name": "Domesticairportloungeaccess",
-                          "displayName": "Domestic airport lounge access",
-                          "description": "Unlimited access to Bidvest domestic departure lounges via your Professional Cheque or Credit Card"
+                          "displayName": "Domestic airport lounge",
+                          "description": "Unlimited access to Bidvest domestic and international lounges"
+                        },
+                        {
+                          "name": "RelationshipBanker",
+                          "displayName": "Relationship Banker",
+                          "description": "Included"
                         },
                         {
                           "name": "Balanceenquiry",
