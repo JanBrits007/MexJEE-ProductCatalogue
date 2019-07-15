@@ -5529,7 +5529,7 @@
                           "filterID": 2,
                           "filterDisplay": "Between 1 and 12 months",
                           "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-                          "minValue": 1,
+                          "minValue": 2,
                           "maxValue": 12
                         },
                         {
@@ -5717,12 +5717,12 @@
                           "description": ""
                         },
                         {
-                          "attributeType": "EligibilityRule",
                           "attributeName": "Period",
-                          "minValue": "0",
-                          "maxValue": "1",
-                          "valueUnit": "Period",
-                          "description": ""
+                          "attributeType": "EligibilityRule",
+                          "description": "",
+                          "maxValue": "2",
+                          "minValue": "2",
+                          "valueUnit": "months"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE"
@@ -5874,12 +5874,12 @@
                           "value": "No"
                         },
                         {
-                          "attributeType": "EligibilityRule",
                           "attributeName": "Period",
-                          "minValue": "1",
-                          "maxValue": "17",
-                          "valueUnit": "Period",
-                          "description": ""
+                          "attributeType": "EligibilityRule",
+                          "description": "Between 1 and 60 months",
+                          "maxValue": "60",
+                          "minValue": "2",
+                          "valueUnit": "month"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE"
@@ -6506,10 +6506,10 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Period",
-                          "minValue": "1",
-                          "maxValue": "17",
-                          "valueUnit": "Period",
-                          "description": ""
+                          "minValue": "2",
+                          "maxValue": "60",
+                          "valueUnit": "months",
+                          "description": "Between 1 and 60 months"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE"
@@ -7772,6 +7772,14 @@
                           "maxValue": "99999999",
                           "valueUnit": "ZAR",
                           "description": ""
+                        },
+                        {
+                          "attributeName": "Period",
+                          "attributeType": "EligibilityRule",
+                          "description": "",
+                          "maxValue": "12",
+                          "minValue": "12",
+                          "valueUnit": "months"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE"
