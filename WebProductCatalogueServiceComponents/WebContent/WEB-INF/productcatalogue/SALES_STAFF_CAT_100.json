@@ -5502,13 +5502,19 @@
                       "filterGroupID": 3,
                       "filterGroupName": "InvestMonthly",
                       "filterDisplayName": "Would you want to make more deposits once the account is opened?",
-                      "filterType": "Text",
+                      "filterType": "YesNo",
                       "filterItems": [
                         {
                           "filterID": 1,
-                          "filterDisplay": "Monthly amount",
-                          "productAttribute": "productAttributes[?(@.attributeName==='InvestMonthly')]",
-                          "value": ""
+                          "filterDisplay": "Yes",
+                          "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
+                          "value": "yes"
+                        },
+                        {
+                          "filterID": 2,
+                          "filterDisplay": "No",
+                          "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
+                          "value": "no"
                         }
                       ]
                     },
