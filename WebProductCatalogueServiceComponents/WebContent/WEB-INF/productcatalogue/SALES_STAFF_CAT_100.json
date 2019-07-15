@@ -5529,7 +5529,7 @@
                           "filterID": 2,
                           "filterDisplay": "Between 1 and 12 months",
                           "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-                          "minValue": 1,
+                          "minValue": 2,
                           "maxValue": 12
                         },
                         {
@@ -5717,12 +5717,12 @@
                           "description": ""
                         },
                         {
-                          "attributeType": "EligibilityRule",
                           "attributeName": "Period",
-                          "minValue": "0",
-                          "maxValue": "1",
-                          "valueUnit": "Period",
-                          "description": ""
+                          "attributeType": "EligibilityRule",
+                          "description": "",
+                          "maxValue": "2",
+                          "minValue": "2",
+                          "valueUnit": "months"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE"
@@ -5874,12 +5874,12 @@
                           "value": "No"
                         },
                         {
-                          "attributeType": "EligibilityRule",
                           "attributeName": "Period",
-                          "minValue": "1",
-                          "maxValue": "17",
-                          "valueUnit": "Period",
-                          "description": ""
+                          "attributeType": "EligibilityRule",
+                          "description": "Between 1 and 60 months",
+                          "maxValue": "60",
+                          "minValue": "2",
+                          "valueUnit": "month"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE"
@@ -6506,10 +6506,10 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Period",
-                          "minValue": "1",
-                          "maxValue": "17",
-                          "valueUnit": "Period",
-                          "description": ""
+                          "minValue": "2",
+                          "maxValue": "60",
+                          "valueUnit": "months",
+                          "description": "Between 1 and 60 months"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE"
@@ -7772,6 +7772,14 @@
                           "maxValue": "99999999",
                           "valueUnit": "ZAR",
                           "description": ""
+                        },
+                        {
+                          "attributeName": "Period",
+                          "attributeType": "EligibilityRule",
+                          "description": "",
+                          "maxValue": "12",
+                          "minValue": "12",
+                          "valueUnit": "months"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE"
@@ -7790,6 +7798,17 @@
                   "name": "Travel",
                   "filterGroups": [],
                   "popularProducts": [],
+                  "productGroups":[
+                    {
+                      "groupIdentifier":"TRAVEL SOLUTIONS",
+                      "name":"TRAVEL SOLUTIONS",
+                      "products": [
+                        1464,
+                        1439,
+                        9999
+                      ]
+                    }
+                  ],
                   "products": [
                     {
                       "productIdentifier": "1464",
@@ -8450,18 +8469,7 @@
                           "type": "DETAIL",
                           "text": "Details"
                         }
-                      ],
-                      "actions": [
-                        {
-                          "type": "REDIRECT",
-                          "text": "Call me back",
-                          "value": "https://nedbank.co.za/content/nedbank-insurance/desktop/gt/en/info/contact-us.html"
-                        },
-                        {
-                          "type": "DETAIL",
-                          "text": "Details"
-                        }
-                      ],
+                      ],                    
                       "valueAddedServices": [
                         "tyre and rim insurance"
                       ],
@@ -8496,18 +8504,7 @@
                           "type": "DETAIL",
                           "text": "Details"
                         }
-                      ],
-                      "actions": [
-                        {
-                          "type": "REDIRECT",
-                          "text": "Call me back",
-                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceQuoteCMB.html?formType=quote&productType=Credit%20card%20insurance"
-                        },
-                        {
-                          "type": "DETAIL",
-                          "text": "Details"
-                        }
-                      ],
+                      ],                      
                       "valueAddedServices": [
                         "tyre and rim insurance"
                       ],
@@ -8542,18 +8539,7 @@
                           "type": "DETAIL",
                           "text": "Details"
                         }
-                      ],
-                      "actions": [
-                        {
-                          "type": "REDIRECT",
-                          "text": "Call me back",
-                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceQuoteCMB.html?formType=quote&productType=Overdraft%20insurance"
-                        },
-                        {
-                          "type": "DETAIL",
-                          "text": "Details"
-                        }
-                      ],
+                      ],                     
                       "valueAddedServices": [
                         "tyre and rim insurance"
                       ],
@@ -8583,17 +8569,6 @@
                         {
                           "type": "SELECT_EWCO",
                           "text": "Select"
-                        },
-                        {
-                          "type": "DETAIL",
-                          "text": "Details"
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": "REDIRECT",
-                          "text": "Call me back",
-                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceInformationCMB.html?formType=info&productType=Personal%20loan%20insurance"
                         },
                         {
                           "type": "DETAIL",
