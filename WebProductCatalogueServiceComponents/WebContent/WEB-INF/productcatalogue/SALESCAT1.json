@@ -6123,23 +6123,22 @@
                       "lifeCycleStatus": "AVAILABLE"
                     },
                     {
-                      "productIdentifier": 1405,
-                      "name": "Electronic Fixed Deposit",
+                      "productIdentifier": 1126,
+                      "name": "Fixed Deposit",
                       "shortDescription": "Looking for a lump sum, capital guaranteed investment option? Offering guaranteed interest rates for the term of your investment, the Nedbank Fixed Deposit may be the ideal short or medium term investment option for you.",
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 8.05,
-                          "description": "8.05% pa"
+                          "value": 8.00,
+                          "description": "8.00% pa"
                         }
                       ],
-                      "specialFeature": "1 - 60 Months",
+                      "specialFeature": "1-60 Months",
                       "salesHighlights": [
-                        "Minimum investment amount - R1000",
+                        "Minimum investment amount - R25 000",
                         "Minimum investment period - 1 month",
-                        "No monthly fees or commissions ",
+                        "No monthly fees or commissions",
                         "Capital guaranteed",
-                        "Exclusively available on a digital banking profile",
                         "No additional deposits allowed"
                       ],
                       "redirect": {
@@ -6148,9 +6147,8 @@
                       },
                       "actions": [
                         {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/personal/save-and-invest/investment-accounts/fixed-deposit-account1.html"
+                          "type": "SELECT_EWCO",
+                          "text": "Select"
                         },
                         {
                           "type": "DETAIL",
@@ -6165,7 +6163,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 8.05%"
+                          "description": "up to 8.00%"
                         },
                         {
                           "name": "Investmentterm",
@@ -6175,12 +6173,12 @@
                         {
                           "name": "MinimumInvestmentAmount",
                           "displayName": "Minimum Investment Amount",
-                          "description": "R 1000"
+                          "description": "R 25 000"
                         },
                         {
                           "name": "MinimumInvestmentPeriod",
                           "displayName": "Minimum Investment Period",
-                          "description": "1 Month"
+                          "description": "1 Months"
                         },
                         {
                           "name": "TermvsNotice",
@@ -6200,12 +6198,12 @@
                         {
                           "name": "AgeRestriction",
                           "displayName": "Age Restriction",
-                          "description": "< 55 years old. Only available digitally. Individual clients only"
+                          "description": "<55"
                         },
                         {
                           "name": "Interestpaymentfrequency",
                           "displayName": "Interest payment frequency",
-                          "description": "Monthly, quarterly, half-yearly, annually or on expiry"
+                          "description": "Monthly,Quarterly,Half-yearly,Annually,Expiry"
                         },
                         {
                           "name": "ElectronicAcces",
@@ -6235,28 +6233,20 @@
                         {
                           "name": "Withdrawals",
                           "displayName": "Withdrawals",
-                          "description": "None"
+                          "description": "N/A"
                         },
                         {
                           "name": "Additionaldeposits",
                           "displayName": "Additional deposits",
-                          "description": "No"
+                          "description": "N/A"
                         },
                         {
                           "name": "Fixedrate",
                           "displayName": "Fixed rate?",
-                          "description": "No"
+                          "description": "Yes"
                         }
                       ],
                       "eligibilityRules": [
-                        {
-                          "attributeName": "Period",
-                          "attributeType": "EligibilityRule",
-                          "description": "Between 1 and 60 months",
-                          "maxValue": "60",
-                          "minValue": "2",
-                          "valueUnit": "month"
-                        },
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
@@ -6269,31 +6259,43 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "InvestStart",
                           "minValue": "1000",
-                          "maxValue": "999999999",
+                          "maxValue": "-1",
                           "valueUnit": "ZAR",
                           "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "InvestMonthly",
+                          "value": "No"
+                        },
+                        {
+                          "attributeName": "Period",
+                          "attributeType": "EligibilityRule",
+                          "description": "Between 1 and 60 months",
+                          "maxValue": "60",
+                          "minValue": "2",
+                          "valueUnit": "month"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE"
                     },
                     {
-                      "productIdentifier": 1406,
-                      "name": "Electronic OptimumPlus",
-                      "shortDescription": "If you are aged 55 and older and want to invest a lump sum while enjoying captial security and a guaranteed tiered interest rate, then OptimumPlus is for you.",
+                      "productIdentifier": 1136,
+                      "name": "OptimumPlus",
+                      "shortDescription": "For clients 55 years and over who want to invest a lump sum while enjoying capital security and a guaranteed tiered interest rate.",
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 8.45,
-                          "description": "8.45% pa"
+                          "value": 8.40,
+                          "description": "8.40% pa"
                         }
                       ],
                       "specialFeature": "1 - 60 Months",
                       "salesHighlights": [
-                        "Minimum investment amount - R1000",
+                        "Minimum investment amount - R25 000",
                         "Minimum investment period - 1 month",
                         "No monthly fees or commissions",
                         "Capital guaranteed",
-                        "Exclusively available on a digital banking profile",
                         "No additional deposits allowed"
                       ],
                       "redirect": {
@@ -6302,9 +6304,8 @@
                       },
                       "actions": [
                         {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/personal/save-and-invest/investment-accounts/optimum-plus1.html"
+                          "type": "SELECT_EWCO",
+                          "text": "Select"
                         },
                         {
                           "type": "DETAIL",
@@ -6319,7 +6320,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 8.45%"
+                          "description": "up to 8.40%"
                         },
                         {
                           "name": "Investmentterm",
@@ -6329,12 +6330,12 @@
                         {
                           "name": "MinimumInvestmentAmount",
                           "displayName": "Minimum Investment Amount",
-                          "description": "R1 000"
+                          "description": "R 25 000"
                         },
                         {
                           "name": "MinimumInvestmentPeriod",
                           "displayName": "Minimum Investment Period",
-                          "description": "1 Month"
+                          "description": "1 Months"
                         },
                         {
                           "name": "TermvsNotice",
@@ -6354,12 +6355,12 @@
                         {
                           "name": "AgeRestriction",
                           "displayName": "Age Restriction",
-                          "description": "55 or older. Only available digitally. Individual clients only"
+                          "description": "55+"
                         },
                         {
                           "name": "Interestpaymentfrequency",
                           "displayName": "Interest payment frequency",
-                          "description": "Monthly, quarterly, half-yearly, annually or on expiry"
+                          "description": "Monthly,Quarterly,Half-yearly,Annually,Expiry"
                         },
                         {
                           "name": "ElectronicAcces",
@@ -6389,12 +6390,12 @@
                         {
                           "name": "Withdrawals",
                           "displayName": "Withdrawals",
-                          "description": "None"
+                          "description": "N/A"
                         },
                         {
                           "name": "Additionaldeposits",
                           "displayName": "Additional deposits",
-                          "description": "No"
+                          "description": "N/A"
                         },
                         {
                           "name": "Fixedrate",
@@ -6404,18 +6405,10 @@
                       ],
                       "eligibilityRules": [
                         {
-                          "attributeName": "Period",
-                          "attributeType": "EligibilityRule",
-                          "description": "Between 1 and 60 months",
-                          "maxValue": "60",
-                          "minValue": "2",
-                          "valueUnit": "months"
-                        },
-                        {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
                           "minValue": "55",
-                          "maxValue": "59",
+                          "maxValue": "-1",
                           "valueUnit": "year",
                           "description": "Only available to individuals who are 55 or older"
                         },
@@ -6423,31 +6416,42 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "InvestStart",
                           "minValue": "1000",
-                          "maxValue": "999999999",
+                          "maxValue": "-1",
                           "valueUnit": "ZAR",
-                          "description": ""
+                          "description": "Earn minimum R 1000 per annum"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "InvestMonthly",
+                          "value": "No"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Period",
+                          "minValue": "2",
+                          "maxValue": "60",
+                          "valueUnit": "months",
+                          "description": "Between 1 and 60 months"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE"
                     },
                     {
-                      "productIdentifier": 1128,
-                      "name": "Electronic 32Day Notice Deposit",
-                      "shortDescription": "The Nedbank 32Day Notice offers you a secure, attractive method of saving funds. You earn interest above the rates earned on the average 32-day Notice Deposit.",
+                      "productIdentifier": 1391,
+                      "name": "32-Day Notice Account",
+                      "shortDescription": "A secure, attractive method of saving funds. You earn interest above the average rate earned on 32-day notice deposits.",
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 7.25,
-                          "description": "7.25% pa"
+                          "value": 6.85,
+                          "description": "6.85% pa"
                         }
                       ],
-                      "specialFeature": "32 Days",
+                      "specialFeature": "Short Term",
                       "salesHighlights": [
                         "Minimum investment amount - R250",
-                        "Minimum investment period - 32 Days",
-                        "No monthly fees or commissions",
-                        "Initial capital fully guaranteed",
-                        "Exclusively available on a digital banking profile"
+                        "Minimum investment period - 32 days",
+                        "Notice"
                       ],
                       "redirect": {
                         "shouldRedirect": false,
@@ -6455,9 +6459,8 @@
                       },
                       "actions": [
                         {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/personal/save-and-invest/investment-accounts/optimum-plus1.html"
+                          "type": "SELECT_EWCO",
+                          "text": "Select"
                         },
                         {
                           "type": "DETAIL",
@@ -6472,7 +6475,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 7.25%"
+                          "description": "up to 6.85%"
                         },
                         {
                           "name": "Investmentterm",
@@ -6507,12 +6510,12 @@
                         {
                           "name": "AgeRestriction",
                           "displayName": "Age Restriction",
-                          "description": "N/A. Only available digitally"
+                          "description": "N/A"
                         },
                         {
                           "name": "Interestpaymentfrequency",
                           "displayName": "Interest payment frequency",
-                          "description": "Monthly (Interest is calculated daily and may be paid out or capitalised)"
+                          "description": "Monthly,Capitalised"
                         },
                         {
                           "name": "ElectronicAcces",
@@ -6542,7 +6545,7 @@
                         {
                           "name": "Withdrawals",
                           "displayName": "Withdrawals",
-                          "description": "32 days' notice required: minimum - R100"
+                          "description": "Minimum R100"
                         },
                         {
                           "name": "Additionaldeposits",
