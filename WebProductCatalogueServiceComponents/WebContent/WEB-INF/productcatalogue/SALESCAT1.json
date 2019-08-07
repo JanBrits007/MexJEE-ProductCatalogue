@@ -22,27 +22,41 @@
                       "filterDisplayName": "What is your age?",
                       "filterType": "Range",
                       "filterItems": [
+                      	{
+                          "filterID": 1,
+                          "filterDisplay": "All ages",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                          "minValue": 0,
+                          "maxValue": 999
+                        },
                         {
-                          "filterID": "1",
+                          "filterID": 2,
                           "filterDisplay": "Under 18",
                           "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
                           "minValue": 0,
                           "maxValue": 17
                         },
                         {
-                          "filterID": 1,
-                          "filterDisplay": "18 - 55",
+                          "filterID": 3,
+                          "filterDisplay": "18 - 25",
                           "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
                           "minValue": 18,
-                          "maxValue": 55
+                          "maxValue": 25
                         },
                         {
-                          "filterID": 2,
-                          "filterDisplay": "Over 55 years",
+                          "filterID": 4,
+                          "filterDisplay": "26 - 54",
                           "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-                          "minValue": 56,
+                          "minValue": 26,
+                          "maxValue": 54
+                        },
+                        {
+                          "filterID": 5,
+                          "filterDisplay": "Over 55",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                          "minValue": 55,
                           "maxValue": 999
-                        }
+                        }                        
                       ]
                     },
                     {
@@ -52,32 +66,46 @@
                       "filterType": "Range",
                       "filterItems": [
                         {
-                          "filterID": 4,
-                          "filterDisplay": "Less than R150 000",
+                          "filterID": 1,
+                          "filterDisplay": "All income",
                           "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
                           "minValue": 0,
-                          "maxValue": 149999
+                          "maxValue": 9999999
+                        },
+                        {
+                          "filterID": 2,
+                          "filterDisplay": "Student",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                          "minValue": 0,
+                          "maxValue": 0
+                        },
+                        {
+                          "filterID": 3,
+                          "filterDisplay": "Less than R120 000",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                          "minValue": 1,
+                          "maxValue": 119999
+                        },
+                        {
+                          "filterID": 4,
+                          "filterDisplay": "R120 000 - R300 000",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                          "minValue": 120000,
+                          "maxValue": 299999
                         },
                         {
                           "filterID": 5,
-                          "filterDisplay": "R150 000 - R 350 000",
+                          "filterDisplay": "R300 000 - R750 000",
                           "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
-                          "minValue": 150000,
-                          "maxValue": 349999
-                        },
-                        {
-                          "filterID": 6,
-                          "filterDisplay": "R350 000 - R 750 000",
-                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
-                          "minValue": 350000,
+                          "minValue": 300000,
                           "maxValue": 749999
                         },
                         {
-                          "filterID": 7,
+                          "filterID": 6,
                           "filterDisplay": "More than R750 000",
                           "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
                           "minValue": 750000,
-                          "maxValue": 999999999
+                          "maxValue": 9999999
                         }
                       ]
                     },
@@ -328,9 +356,25 @@
                         },
                         {
                           "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "26",
+                          "maxValue": "54",
+                          "valueUnit": "year",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
                           "attributeName": "Income",
-                          "minValue": "350000",
-                          "maxValue": "999999999",
+                          "minValue": "120000",
+                          "maxValue": "9999999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "300000",
+                          "maxValue": "749999",
                           "valueUnit": "ZAR",
                           "description": ""
                         },
@@ -549,15 +593,31 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
                           "minValue": "18",
-                          "maxValue": "55",
+                          "maxValue": "56",
                           "valueUnit": "year",
                           "description": "18 years and older"
                         },
                         {
                           "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "26",
+                          "maxValue": "54",
+                          "valueUnit": "year",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
                           "attributeName": "Income",
-                          "minValue": "150000",
+                          "minValue": "1",
                           "maxValue": "749999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "120000",
+                          "maxValue": "299999",
                           "valueUnit": "ZAR",
                           "description": ""
                         },
@@ -738,9 +798,25 @@
                         },
                         {
                           "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "26",
+                          "maxValue": "54",
+                          "valueUnit": "year",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
                           "attributeName": "Income",
-                          "minValue": "0",
-                          "maxValue": "999999999",
+                          "minValue": "1",
+                          "maxValue": "749999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "120000",
+                          "maxValue": "299999",
                           "valueUnit": "ZAR",
                           "description": ""
                         },
@@ -948,7 +1024,7 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
                           "minValue": "16",
-                          "maxValue": "26",
+                          "maxValue": "25",
                           "valueUnit": "year",
                           "description": "From 16 to 26 years old"
                         },
@@ -956,9 +1032,9 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "Income",
                           "minValue": "0",
-                          "maxValue": "999999999",
+                          "maxValue": "119999",
                           "valueUnit": "ZAR",
-                          "description": ""
+                          "description": "No minimum income"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -1178,7 +1254,7 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "Income",
                           "minValue": "0",
-                          "maxValue": "999999999",
+                          "maxValue": "0",
                           "valueUnit": "ZAR",
                           "description": ""
                         },
@@ -1268,8 +1344,16 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Income",
-                          "minValue": "150000",
-                          "maxValue": "999999999",
+                          "minValue": "0",
+                          "maxValue": "0",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "300000",
+                          "maxValue": "9999999",
                           "valueUnit": "ZAR",
                           "description": ""
                         },
@@ -1514,7 +1598,7 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
-                          "minValue": "18",
+                          "minValue": "26",
                           "maxValue": "999",
                           "valueUnit": "year",
                           "description": "18 years and older"
@@ -1522,8 +1606,8 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Income",
-                          "minValue": "350000",
-                          "maxValue": "999999999",
+                          "minValue": "300000",
+                          "maxValue": "9999999",
                           "valueUnit": "ZAR",
                           "description": ""
                         },
@@ -1769,15 +1853,15 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
-                          "minValue": "18",
-                          "maxValue": "55",
+                          "minValue": "26",
+                          "maxValue": "56",
                           "valueUnit": "year",
                           "description": "18 years and older"
                         },
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Income",
-                          "minValue": "350000",
+                          "minValue": "750000",
                           "maxValue": "999999999",
                           "valueUnit": "ZAR",
                           "description": ""
@@ -3279,8 +3363,8 @@
                       ],
                       "specialFeature": "Max loan: R250 000",
                       "salesHighlights": [
-                        "Loans available from R1 000 to R250 000*",
-                        "Flexible repayment periods of 12 to 60 months.",
+                        "Loans available from R2 000 to R250 000*",
+                        "Flexible repayment periods of 6 to 72 months.",
                         "Monthly repayments debited from your bank account.",
                         "The best possible interest rate that we can offer you.",
                         "Easy application process.",
@@ -5142,7 +5226,12 @@
                           "description": ""
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term": 0,
+                        "notice": 24,
+                        "productType": 31
+                      }
                     },
                     {
                       "productIdentifier": 1199,
@@ -5302,7 +5391,12 @@
                           "description": ""
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term": 0,
+                        "notice": 24,
+                        "productType": 32
+                     }
                     },
                     {
                       "productIdentifier": "1134",
@@ -5455,7 +5549,12 @@
                           "description": ""
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term": 12,
+                        "notice": 0,
+                        "productType": 17
+                     }
                     }, 
                     {
                       "productIdentifier": "1349",
@@ -5593,7 +5692,12 @@
                           "description": ""
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term": 12,
+                        "notice": 0,
+                        "productType": 17
+                     }
                     },                   
                     {
                       "productIdentifier": "1133",
@@ -5743,7 +5847,12 @@
                           "description": "Nedbank Professional clients only"
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term": 60,
+                        "notice": 0,
+                        "productType": 23
+                     }
                     },
                     {
                       "productIdentifier": "1139",
@@ -5908,7 +6017,13 @@
                           "description": "Nedbank Professional clients only"
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term": 0,
+                        "notice": 24,
+                        "productType": 30
+                     }
+
                     },
                     {
                       "productIdentifier": "1392",
@@ -6068,7 +6183,12 @@
                           "description": ""
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term": 0,
+                        "notice": 24,
+                        "productType": 49
+                     }
                     },
                     {
                       "productIdentifier": "1127",
@@ -6375,7 +6495,12 @@
                           "description": ""
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term": 60,
+                        "notice": 0,
+                        "productType": 51
+                     }
                     },
                     {
                       "productIdentifier": 1406,
@@ -6514,7 +6639,12 @@
                           "description": ""
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term": 17,
+                        "notice": 0,
+                        "productType": 52
+                     }
                     },
                     {
                       "productIdentifier": 1128,
@@ -6652,7 +6782,12 @@
                           "description": ""
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term": 0,
+                        "notice": 32 ,
+                        "productType":19 
+                     }
                     },
                     {
                       "productIdentifier": 1348,
@@ -6790,7 +6925,12 @@
                           "description": ""
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term":60,
+                        "notice": 0 ,
+                        "productType":43
+                     }
                     },
                     {
                       "productIdentifier": 1126,
@@ -6947,7 +7087,12 @@
                           "valueUnit": "month"
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term": 60,
+                        "notice": 0 ,
+                        "productType": 3
+                     }
                     },
                     {
                       "productIdentifier": 1136,
@@ -7104,7 +7249,12 @@
                           "description": "Between 1 and 60 months"
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term":60,
+                        "notice": 0 ,
+                        "productType":28
+                     }
                     },
                     {
                       "productIdentifier": 1391,
@@ -7262,7 +7412,12 @@
                           "valueUnit": "months"
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term":0,
+                        "notice": 32 ,
+                        "productType":50
+                     }
                     },
                     {
                       "productIdentifier": 1473,
@@ -7422,7 +7577,12 @@
                           "valueUnit": "months"
                         }
                       ],
-                      "lifeCycleStatus": "AVAILABLE"
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
+                        "term":12,
+                        "notice": 0 ,
+                        "productType":55
+                     }
                     }
                   ]
                 }
@@ -12215,7 +12375,8 @@
                       "productIdentifier": 1330,
                       "name": "Call Investment",
                       "dispalyName": "Call Investment",
-                      "shortDescription": "Your interest rate will be calculated during the application process. Depending on our clients' identified strategic investment goals and objectives, we offer a comprehensive range of solutions",
+					  "description": "A call deposit is an investment account that earns interest while still allowing you immediate access to your money. This is ideal for businesses that want to earn competitive interest while having immediate access to and full control of the funds in the account.",
+                      "shortDescription": "An investment product that allows for the immediate depositing and withdrawal of funds without notice",
                       "productPricing": [
                         {
                           "type": "",
@@ -12226,7 +12387,12 @@
                         }
                       ],
                       "salesHighlights": [
-                        "Call deposit account - an interest-bearing account that allows immediate deposits and withdrawals."
+                        "Competitive interest rate",
+						"Instant access",
+						"Capital guaranteed",
+						"No monthly or transactional fees",
+						"Deposit or withdraw any time",
+						"Dedicated investment specialist available for product advice"
                       ],
                       "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html",
                       "productFeatures": [
@@ -12367,6 +12533,16 @@
                           "attributeGroupName": "BusinessProcessExecutionConfiguration",
                           "productAttributes": [
                             {
+                              "attributeType": "string",
+                              "attributeName": "ProductApplicationStartLimit",
+                              "value": "0930"
+                            },
+                            {
+                              "attributeType": "string",
+                              "attributeName": "ProductApplicationEndLimit",
+                              "value": "1530"
+                            },		
+							{
                               "attributeType": "int",
                               "attributeName": "ApplicationCaptureExecutionTimeMinutes",
                               "value": "30"
@@ -12444,7 +12620,8 @@
                       "productIdentifier": 1480,
                       "name": "Term Investment",
                       "dispalyName": "Term Investment",
-                      "shortDescription": "Your interest rate will be calculated during the application process. Depending on our clients' identified strategic investment goals and objectives, we offer a comprehensive range of solutions",
+					  "description": "A term deposit is an investment account where you can deposit funds for a fixed term and both your capital and interest rate are fixed throughout the investment term. On maturity a new rate and investment term can be negotiated, allowing you to keep abreast of market changes. This is the perfect account for your business if you want to invest a lump sum and will not require access to it for a specific period.",
+                      "shortDescription": "A fixed investment product with a competitive interest rate. The investment period can range from 1 day to 60 months",
                       "productPricing": [
                         {
                           "type": "",
@@ -12455,7 +12632,11 @@
                         }
                       ],
                       "salesHighlights": [
-                        "Term deposit - a fixed- or variable-rate account that delivers higher rates than call accounts over predetermined, fixed terms."
+                        "Competitive interest rate",
+						"Select from 1 day to 60 Month",
+						"Capital and quoted interest rate guaranteed",
+						"No monthly or transactional fees",
+						"Dedicated investment specialist available for product advice"
                       ],
                       "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html",
                       "productFeatures": [
@@ -12596,6 +12777,16 @@
                           "attributeGroupName": "BusinessProcessExecutionConfiguration",
                           "productAttributes": [
                             {
+                              "attributeType": "string",
+                              "attributeName": "ProductApplicationStartLimit",
+                              "value": "0930"
+                            },
+                            {
+                              "attributeType": "string",
+                              "attributeName": "ProductApplicationEndLimit",
+                              "value": "1530"
+                            },		
+							{
                               "attributeType": "int",
                               "attributeName": "ApplicationCaptureExecutionTimeMinutes",
                               "value": "30"
@@ -15503,7 +15694,8 @@
                       "productIdentifier": 1330,
                       "name": "Call Investment",
                       "dispalyName": "Call Investment",
-                      "shortDescription": "Your interest rate will be calculated during the application process. Depending on our clients' identified strategic investment goals and objectives, we offer a comprehensive range of solutions",
+					  "description": "A call deposit is an investment account that earns interest while still allowing you immediate access to your money. This is ideal for businesses that want to earn competitive interest while having immediate access to and full control of the funds in the account.",
+                      "shortDescription": "An investment product that allows for the immediate depositing and withdrawal of funds without notice ",
                       "productPricing": [
                         {
                           "type": "",
@@ -15514,7 +15706,12 @@
                         }
                       ],
                       "salesHighlights": [
-                        "Call deposit account - an interest-bearing account that allows immediate deposits and withdrawals."
+                        "Competitive interest rate",
+						"Instant access",
+						"Capital guaranteed",
+						"No monthly or transactional fees",
+						"Deposit or withdraw any time",
+						"Dedicated investment specialist available for product advice"
                       ],
                       "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html",
                       "productFeatures": [
@@ -15655,6 +15852,16 @@
                           "attributeGroupName": "BusinessProcessExecutionConfiguration",
                           "productAttributes": [
                             {
+                              "attributeType": "string",
+                              "attributeName": "ProductApplicationStartLimit",
+                              "value": "0930"
+                            },
+                            {
+                              "attributeType": "string",
+                              "attributeName": "ProductApplicationEndLimit",
+                              "value": "1530"
+                            },		
+							{
                               "attributeType": "int",
                               "attributeName": "ApplicationCaptureExecutionTimeMinutes",
                               "value": "30"
@@ -15732,7 +15939,8 @@
                       "productIdentifier": 1480,
                       "name": "Term Investment",
                       "dispalyName": "Term Investment",
-                      "shortDescription": "Your interest rate will be calculated during the application process. Depending on our clients' identified strategic investment goals and objectives, we offer a comprehensive range of solutions",
+					  "description": "A term deposit is an investment account where you can deposit funds for a fixed term and both your capital and interest rate are fixed throughout the investment term. On maturity a new rate and investment term can be negotiated, allowing you to keep abreast of market changes. This is the perfect account for your business if you want to invest a lump sum and will not require access to it for a specific period.",
+                      "shortDescription": "A fixed investment product with a competitive interest rate. The investment period can range from 1 day to 60 months",
                       "productPricing": [
                         {
                           "type": "",
@@ -15743,7 +15951,11 @@
                         }
                       ],
                       "salesHighlights": [
-                        "Term deposit - a fixed- or variable-rate account that delivers higher rates than call accounts over predetermined, fixed terms."
+                        "Competitive interest rate",
+						"Select from 1 day to 60 Months",
+						"Capital and quoted interest rate guaranteed",
+						"No monthly or transactional fees",
+						"Dedicated investment specialist available for product advice"
                       ],
                       "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html",
                       "productFeatures": [
@@ -15883,7 +16095,17 @@
                         {
                           "attributeGroupName": "BusinessProcessExecutionConfiguration",
                           "productAttributes": [
+							{
+                              "attributeType": "string",
+                              "attributeName": "ProductApplicationStartLimit",
+                              "value": "0930"
+                            },
                             {
+                              "attributeType": "string",
+                              "attributeName": "ProductApplicationEndLimit",
+                              "value": "1530"
+                            },		
+							{
                               "attributeType": "int",
                               "attributeName": "ApplicationCaptureExecutionTimeMinutes",
                               "value": "30"
