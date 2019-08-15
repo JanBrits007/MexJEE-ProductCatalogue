@@ -221,7 +221,6 @@ public class ProductCataloguesDAO {
 					String jsonnew = vResultSet.getString("JSONDETAILS")
 							.toString();
 					String jsonid = vResultSet.getString("ID");
-					System.out.println("string of json is" + jsonnew);
 					arr.put(jsonid, jsonnew);
 				}
 				String mapString = convertToString(arr);

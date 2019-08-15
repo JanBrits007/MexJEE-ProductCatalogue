@@ -196,7 +196,6 @@ public class ProductSpecificationsDAO {
 				vPreparedStatement = vConnection
 						.prepareStatement("select XMLDETAILS from PRODUCTSPECS where ID = ?");
 				String id = pProductSpecificationID.replaceAll("xmlid","").trim(); 
-				System.out.println("productspecification id is"+id);
 				vPreparedStatement.setString(1,id);
 				vResultSet = vPreparedStatement.executeQuery();
 
@@ -402,7 +401,6 @@ public class ProductSpecificationsDAO {
 				    while(vResultSet.next()){
 						String jsonnew = vResultSet.getString("JSONDETAILS").toString();
 					  String jsonid = vResultSet.getString("ID");
-						System.out.println("string of json is"+jsonnew);
 						arr.put(jsonid,jsonnew);
 						}
 				   String mapString = convertToString(arr);
@@ -444,7 +442,6 @@ public class ProductSpecificationsDAO {
 				    while(vResultSet.next()){
 						String xmlnew = vResultSet.getString("XMLDETAILS").toString();
 					  String xmlid = vResultSet.getString("ID");
-						System.out.println("string of xml is"+xmlnew);
 						arr.put(xmlid,xmlnew);
 						}
 				   String mapString = convertToString(arr);

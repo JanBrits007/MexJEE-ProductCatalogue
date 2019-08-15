@@ -256,7 +256,6 @@ public class ProductSpecificationsServiceDAO {
 					try {
 						
 						String pProductSpecificationIDst = id.toString();
-						System.out.println("xml id is"+pProductSpecificationIDst);
 						 String xmlpath = "/WEB-INF/productspecs/"+pProductSpecificationIDst+".xml";
 							InputStream xmlobj = JSONObject.class.getResourceAsStream(xmlpath);
 							
@@ -264,9 +263,6 @@ public class ProductSpecificationsServiceDAO {
 							/*url  = getClass().getResource(xmlpath);
 							inputStream = url.openStream();*/
 							String xmlString  = IOUtils.toString(xmlobj);
-							
-							
-							System.out.println("xml string is"+xmlString);
 
 						JAXBContext jaxbContext = JAXBContext
 								.newInstance("za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1");
