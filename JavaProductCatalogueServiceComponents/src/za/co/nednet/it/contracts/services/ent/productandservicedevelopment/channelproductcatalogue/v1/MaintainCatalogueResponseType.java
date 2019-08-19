@@ -7,20 +7,21 @@ package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.chan
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for GetProductHierarchyType complex type.
+ * <p>Java class for MaintainCatalogueResponseType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="GetProductHierarchyType">
+ * &lt;complexType name="MaintainCatalogueResponseType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence minOccurs="0">
- *         &lt;element ref="{http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1}productCatalogueID"/>
+ *       &lt;sequence>
+ *         &lt;element name="responseString" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,35 +31,36 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GetProductHierarchyType", propOrder = {
-    "productCatalogueID"
+@XmlType(name = "MaintainCatalogueResponseType", propOrder = {
+    "responseString"
 })
-public class GetProductHierarchyType {
+public class MaintainCatalogueResponseType {
 
-    protected String productCatalogueID;
+    @XmlElement(required = true)
+    protected String responseString;
 
     /**
-     * Gets the value of the productCatalogueID property.
+     * Gets the value of the responseString property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getProductCatalogueID() {
-        return productCatalogueID;
+    public String getResponseString() {
+        return responseString;
     }
 
     /**
-     * Sets the value of the productCatalogueID property.
+     * Sets the value of the responseString property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setProductCatalogueID(String value) {
-        this.productCatalogueID = value;
+    public void setResponseString(String value) {
+        this.responseString = value;
     }
 
 }

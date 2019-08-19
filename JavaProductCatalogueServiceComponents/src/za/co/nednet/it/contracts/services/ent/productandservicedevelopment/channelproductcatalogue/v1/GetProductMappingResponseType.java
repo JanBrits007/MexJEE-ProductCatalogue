@@ -14,16 +14,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for GetProductType complex type.
+ * <p>Java class for GetProductMappingResponseType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="GetProductType">
+ * &lt;complexType name="GetProductMappingResponseType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1}productIdentifier" maxOccurs="unbounded"/>
+ *         &lt;element name="ProductMappingDetailsResp" type="{http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1}ProductMappingDetailsResp" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -33,41 +33,45 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GetProductType", propOrder = {
-    "productIdentifier"
+@XmlType(name = "GetProductMappingResponseType", propOrder = {
+    "productMappingDetailsResp"
 })
-public class GetProductType {
+public class GetProductMappingResponseType {
 
-    @XmlElement(type = Integer.class)
-    protected List<Integer> productIdentifier;
+    @XmlElement(name = "ProductMappingDetailsResp")
+    protected List<ProductMappingDetailsResp> productMappingDetailsResp;
 
     /**
-     * Concatenated key consisting of productFamily, ProductCategory, ProductLine and ProductName Gets the value of the productIdentifier property.
+     * Gets the value of the productMappingDetailsResp property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the productIdentifier property.
+     * This is why there is not a <CODE>set</CODE> method for the productMappingDetailsResp property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getProductIdentifier().add(newItem);
+     *    getProductMappingDetailsResp().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Integer }
+     * {@link ProductMappingDetailsResp }
      * 
      * 
      */
-    public List<Integer> getProductIdentifier() {
-        if (productIdentifier == null) {
-            productIdentifier = new ArrayList<Integer>();
+    public List<ProductMappingDetailsResp> getProductMappingDetailsResp() {
+        if (productMappingDetailsResp == null) {
+            productMappingDetailsResp = new ArrayList<ProductMappingDetailsResp>();
         }
-        return this.productIdentifier;
+        return this.productMappingDetailsResp;
+    }
+    
+    public void setProductMappingDetailsResp(List<ProductMappingDetailsResp> productMappingDetailsResp) {
+        this.productMappingDetailsResp = productMappingDetailsResp;
     }
 
 }

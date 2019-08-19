@@ -12,17 +12,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ResultSetType complex type.
+ * <p>Java class for ProductMappingDetailsResp complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ResultSetType">
+ * &lt;complexType name="ProductMappingDetailsResp">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="resultCode" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="resultDescription" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="enterpriseProductId" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="mappedProductId" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -32,62 +32,63 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ResultSetType", propOrder = {
-    "resultCode",
-    "resultDescription"
+@XmlType(name = "ProductMappingDetailsResp", propOrder = {
+    "enterpriseProductId",
+    "mappedProductId"
 })
-public class ResultSetType {
+public class ProductMappingDetailsResp {
 
     @XmlElement(required = true)
-    protected String resultCode;
-    protected String resultDescription;
+    protected String enterpriseProductId;
+    @XmlElement(required = true)
+    protected String mappedProductId;
 
     /**
-     * Gets the value of the resultCode property.
+     * Gets the value of the enterpriseProductId property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getResultCode() {
-        return resultCode;
+    public String getEnterpriseProductId() {
+        return enterpriseProductId;
     }
 
     /**
-     * Sets the value of the resultCode property.
+     * Sets the value of the enterpriseProductId property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setResultCode(String value) {
-        this.resultCode = value;
+    public void setEnterpriseProductId(String value) {
+        this.enterpriseProductId = value;
     }
 
     /**
-     * Gets the value of the resultDescription property.
+     * Gets the value of the mappedProductId property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getResultDescription() {
-        return resultDescription;
+    public String getMappedProductId() {
+        return mappedProductId;
     }
 
     /**
-     * Sets the value of the resultDescription property.
+     * Sets the value of the mappedProductId property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setResultDescription(String value) {
-        this.resultDescription = value;
+    public void setMappedProductId(String value) {
+        this.mappedProductId = value;
     }
 
 }
