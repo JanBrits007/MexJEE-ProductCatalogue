@@ -34,7 +34,7 @@ public class XMLValidation {
 	public boolean validateXMLSchema(String xmlString) {
 
 		try {
-			String schemaDir = "/META-INF/xsd/MySchema.xsd";
+			String schemaDir = "/WEB-INF/xsd/MySchema.xsd";
 			SchemaFactory factory = SchemaFactory
 					.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 			Schema schema = factory

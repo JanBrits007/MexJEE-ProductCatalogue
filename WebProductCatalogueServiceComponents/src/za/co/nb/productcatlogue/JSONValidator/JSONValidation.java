@@ -4,6 +4,15 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+
+
+
+
+//import org.codehaus.jackson.JsonParseException;
+
+
+
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.json.JSONObject;
@@ -18,6 +27,11 @@ import com.github.fge.jsonschema.main.JsonSchema;
 import com.github.fge.jsonschema.main.JsonSchemaFactory;
 
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.MaintainCatalogueRequestType;
+
+
+
+
+
 
 public class JSONValidation {
 
@@ -46,7 +60,7 @@ public class JSONValidation {
 		boolean isvalid = false;
 		try {
 
-			String jsonSchema = "/META-INF/json-schema/JSON-Schema.json";
+			String jsonSchema = "/WEB-INF/json-schema/JSON-Schema.json";
 			InputStream jsonobj = JSONObject.class.getResourceAsStream(jsonSchema);
 			
 			
