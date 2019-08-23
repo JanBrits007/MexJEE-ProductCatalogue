@@ -37,6 +37,15 @@
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>EligibilityRules</attributeGroupName>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>Age</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>18</minValue>
+            <maxValue>999</maxValue>
+            <valueUnit>year</valueUnit>
+            <description>be 18 years or older</description>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
@@ -141,7 +150,12 @@
             <attributeType>string</attributeType>
             <attributeName>CODEngine</attributeName>
             <value>InvestmentsCOD</value>
-        </productAttributes>         
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>existingToBankClientDataReConfirmationRequired</attributeName>
+            <value>false</value>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productCodeMappings</attributeGroupName>
@@ -234,20 +248,20 @@
             <value>INVESTMENTS</value>
         </productAttributes>
         <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>productType</attributeName>
-         <value>32</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>productCategoryLevel</attributeName>
-         <value>1</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>currency</attributeName>
-         <value>ZAR</value>
-      </productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>productType</attributeName>
+            <value>32</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>productCategoryLevel</attributeName>
+            <value>1</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>currency</attributeName>
+            <value>ZAR</value>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>RequiredCompliance</attributeGroupName>
