@@ -90,38 +90,43 @@ public class ChannelProductCatalogueSOAPBindingImpl {
 
 		try {
 
-			boolean isvalidxml = xmlValidation.validateMethod(maintainCatalogueRequest);
-			boolean isvalidjson = jsonvalidation.jsonValidateMethod(maintainCatalogueRequest);
-			if(maintainCatalogueRequest.getJsonData()!=null&&maintainCatalogueRequest.getJsonData().length()>0&&maintainCatalogueRequest.getXmlData()!=null&&maintainCatalogueRequest.getXmlData().length()>0){
-			if(!isvalidjson&&!isvalidxml){
-				response.setResponseString("invalid json and invalid xml");
-				return response;
-			}
-			else if(!isvalidxml){
-				response.setResponseString("invalid xml");
-				return response;
-			}
-			else if(!isvalidjson){
-				response.setResponseString("invalid json");
-				return response;
-			}}
-			else if(maintainCatalogueRequest.getJsonData()!=null&&maintainCatalogueRequest.getJsonData().length()>0&&maintainCatalogueRequest.getXmlData().length()<=0){
-				if(!isvalidjson){
+			boolean isvalidxml = xmlValidation
+					.validateMethod(maintainCatalogueRequest);
+			boolean isvalidjson = jsonvalidation
+					.jsonValidateMethod(maintainCatalogueRequest);
+			if (maintainCatalogueRequest.getJsonData() != null
+					&& maintainCatalogueRequest.getJsonData().length() > 0
+					&& maintainCatalogueRequest.getXmlData() != null
+					&& maintainCatalogueRequest.getXmlData().length() > 0) {
+				if (!isvalidjson && !isvalidxml) {
+					response.setResponseString("invalid json and invalid xml");
+					return response;
+				} else if (!isvalidxml) {
+					response.setResponseString("invalid xml");
+					return response;
+				} else if (!isvalidjson) {
 					response.setResponseString("invalid json");
 					return response;
 				}
-			}
-			else if(maintainCatalogueRequest.getXmlData()!=null&&maintainCatalogueRequest.getXmlData().length()>0&&maintainCatalogueRequest.getJsonData().length()<=0 ){
-				if(!isvalidxml){
+			} else if (maintainCatalogueRequest.getJsonData() != null
+					&& maintainCatalogueRequest.getJsonData().length() > 0
+					&& maintainCatalogueRequest.getXmlData().length() <= 0) {
+				if (!isvalidjson) {
+					response.setResponseString("invalid json");
+					return response;
+				}
+			} else if (maintainCatalogueRequest.getXmlData() != null
+					&& maintainCatalogueRequest.getXmlData().length() > 0
+					&& maintainCatalogueRequest.getJsonData().length() <= 0) {
+				if (!isvalidxml) {
 					response.setResponseString("invalid xml");
 					return response;
 				}
-			}
-			else if(maintainCatalogueRequest.getJsonData().length()<=0 && maintainCatalogueRequest.getXmlData().length()<=0)
-				{
+			} else if (maintainCatalogueRequest.getJsonData().length() <= 0
+					&& maintainCatalogueRequest.getXmlData().length() <= 0) {
 				response.setResponseString("invalid json and invalid xml");
 				return response;
-				}
+			}
 			response.setResponseString(getProductSpecificationsDAO()
 					.maintainCatalogueOperations(maintainCatalogueRequest));
 		} catch (Exception e) {
