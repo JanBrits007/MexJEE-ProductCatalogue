@@ -135,7 +135,18 @@
                     ]
                 },
                 {
-                    "attributeGroupName": "EligibilityRules"
+                    "attributeGroupName": "EligibilityRules",
+                    "productAttributes": [
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "isComparable": "false",
+                          "minValue": "18",
+                          "maxValue": "999",
+                          "valueUnit": "year",
+                          "description": "18 years and older"
+                        }
+                    ]
                 },
                 {
                     "attributeGroupName": "clientEvidenceRequirement_EnableClients"
@@ -224,6 +235,11 @@
                             "attributeType": "string",
                             "attributeName": "CODEngine",
                             "value": "InvestmentsCOD"
+                        },
+                        {
+                            "attributeType": "boolean",
+                            "attributeName": "existingToBankClientDataReConfirmationRequired",
+                            "value": false
                         }
                     ]
                 },
@@ -353,7 +369,8 @@
                                             "key": "notice",
                                             "value": 1,
                                             "label": "day",
-                                            "code": "D"
+                                            "code": "D",
+                                            "termPeriodMonth": 1
                                         }
                                     ]
                                 }

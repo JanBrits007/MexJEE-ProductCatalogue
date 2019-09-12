@@ -135,7 +135,18 @@
           ]
         },
         {
-          "attributeGroupName": "EligibilityRules"
+          "attributeGroupName": "EligibilityRules",
+          "productAttributes": [
+            {
+              "attributeType": "EligibilityRule",
+              "attributeName": "Age",
+              "isComparable": "false",
+              "minValue": "18",
+              "maxValue": "999",
+              "valueUnit": "year",
+              "description": "18 years and older"
+            }
+          ]
         },
         {
           "attributeGroupName": "clientEvidenceRequirement_EnableClients"
@@ -219,6 +230,11 @@
               "attributeType": "boolean",
               "attributeName": "requiresSecurityAndCollatoralManagement",
               "value": false
+            },
+            {
+              "attributeType": "boolean",
+              "attributeName": "existingToBankClientDataReConfirmationRequired",
+              "value": false
             }
           ]
         },
@@ -296,39 +312,39 @@
               "value": 1
             },
             {
-                "attributeType": "string",
-                "attributeName": "productIDType",
-                "value": "ChannelProductID"
+              "attributeType": "string",
+              "attributeName": "productIDType",
+              "value": "ChannelProductID"
             },
             {
-                "attributeType": "int",
-                "attributeName": "personIDTypeCode",
-                "value": 1041
+              "attributeType": "int",
+              "attributeName": "personIDTypeCode",
+              "value": 1041
             },
             {
-                "attributeType": "string",
-                "attributeName": "personIDTypeDescription",
-                "value": "Enterprise Party Number"
+              "attributeType": "string",
+              "attributeName": "personIDTypeDescription",
+              "value": "Enterprise Party Number"
             },
             {
-                "attributeType": "int",
-                "attributeName": "productCategoryID",
-                "value": 1011
+              "attributeType": "int",
+              "attributeName": "productCategoryID",
+              "value": 1011
             },
             {
-                "attributeType": "string",
-                "attributeName": "productCategoryName",
-                "value": "INVESTMENTS"
+              "attributeType": "string",
+              "attributeName": "productCategoryName",
+              "value": "INVESTMENTS"
             },
             {
-                "attributeType": "int",
-                "attributeName": "productCategoryLevel",
-                "value": 1
+              "attributeType": "int",
+              "attributeName": "productCategoryLevel",
+              "value": 1
             },
             {
-                "attributeType": "string",
-                "attributeName": "currency",
-                "value": "ZAR"
+              "attributeType": "string",
+              "attributeName": "currency",
+              "value": "ZAR"
             }
           ]
         },
@@ -349,7 +365,8 @@
                       "key": "notice",
                       "value": 1,
                       "label": "day",
-                      "code": "D"
+                      "code": "D",
+                      "termPeriodMonth": 1
                     }
                   ]
                 }

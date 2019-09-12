@@ -37,6 +37,15 @@
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>EligibilityRules</attributeGroupName>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>Age</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>18</minValue>
+            <maxValue>999</maxValue>
+            <valueUnit>year</valueUnit>
+            <description>be 18 years or older</description>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
@@ -141,6 +150,11 @@
             <attributeType>string</attributeType>
             <attributeName>CODEngine</attributeName>
             <value>InvestmentsCOD</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>existingToBankClientDataReConfirmationRequired</attributeName>
+            <value>false</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
