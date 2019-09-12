@@ -1,12 +1,12 @@
 {
     "product": [
         {
-            "productIdentifier": "1126",
-            "name": "Fixed Deposit",
-            "shortDescription": "Looking for a lump sum, capital guaranteed investment option? Offering guaranteed interest rates for the term of your investment, the Nedbank Fixed Deposit may be the ideal short or medium term investment option for you.",
+            "productIdentifier": "1092",
+            "name": "Unit Trusts",
+            "shortDescription": "Save for a specific goal or time period, but have easy access to your money. A diversified, professionally manged portfolio of assets by investing a modest amount of money.",
             "productPricing": [],
             "featuresAndBenefits": [],
-            "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html",
+            "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html",
             "productAttributeGroup": [
                 {
                     "attributeGroupName": "clientInformationRequirement_GenerateOffer",
@@ -25,7 +25,7 @@
                         },
                         {
                             "attributeType": "clientInformationRequirement",
-                            "attributeName": "IncomeBasic"
+                            "attributeName": "IncomeBasic~primarySourceOfFunds"
                         },
                         {
                             "attributeType": "clientInformationRequirement",
@@ -141,10 +141,10 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
                           "isComparable": "false",
-                          "minValue": "18",
-                          "maxValue": "999",
+                          "minValue": "0",
+                          "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": "18 years and older"
+                          "description": "No age restriction"
                         }
                     ]
                 },
@@ -164,7 +164,7 @@
                         {
                             "attributeType": "int",
                             "attributeName": "ApplicationCaptureExecutionTimeMinutes",
-                            "value": 5
+                            "value": 10
                         },
                         {
                             "attributeType": "int",
@@ -232,6 +232,11 @@
                             "value": false
                         },
                         {
+                            "attributeType": "string",
+                            "attributeName": "CODEngine",
+                            "value": "InvestmentsCOD"
+                        },
+                        {
                             "attributeType": "boolean",
                             "attributeName": "existingToBankClientDataReConfirmationRequired",
                             "value": false
@@ -277,6 +282,11 @@
                             "value": "false"
                         },
                         {
+                            "attributeType": "int",
+                            "attributeName": "productType",
+                            "value": 17
+                        },
+                        {
                             "attributeType": "string",
                             "attributeName": "productSystem",
                             "value": "INVEST"
@@ -305,11 +315,6 @@
                             "attributeType": "string",
                             "attributeName": "InterestOption",
                             "value": 1
-                        },
-                        {
-                            "attributeType": "int",
-                            "attributeName": "productType",
-                            "value": 3
                         },
                         {
                             "attributeType": "string",
@@ -364,19 +369,17 @@
                         {
                             "attributeType": "Feature",
                             "attributeName": "minimumAmount",
-                            "minValue": 25000,
-                            "minMonth": 1,
-                            "maxMonth": 60,
+                            "minValue": 5000,
                             "valueUnit": "ZAR",
                             "termNotice": [
                                 {
                                     "details": [
                                         {
-                                            "key": "term",
-                                            "value": 60,
-                                            "label": "months",
-                                            "code": "M",
-                                            "termPeriodMonth": 60
+                                            "key": "notice",
+                                            "value": 1,
+                                            "label": "day",
+                                            "code": "D",
+                                            "termPeriodMonth": 1
                                         }
                                     ]
                                 }
@@ -397,10 +400,6 @@
                                 {
                                     "code": "H",
                                     "name": "Half-yearly"
-                                },
-                                {
-                                    "code": "A",
-                                    "name": "Annually"
                                 },
                                 {
                                     "code": "E",
