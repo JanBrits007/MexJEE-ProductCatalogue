@@ -137,6 +137,10 @@
       <attributeType>productInformationRequirement</attributeType>
       <attributeName>CreditRepayment</attributeName>
     </productAttributes>
+	<productAttributes>
+      <attributeType>productInformationRequirement</attributeType>
+      <attributeName>ArrangementSubmissionSalesMilestone</attributeName>
+    </productAttributes>
   </productAttributeGroup>
   <productAttributeGroup>
     <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
@@ -166,25 +170,6 @@
     <productAttributes>
       <attributeType>AvailableAction</attributeType>
       <attributeName>ElectronicallySign</attributeName>
-    </productAttributes>
-  </productAttributeGroup>
-  <productAttributeGroup>
-    <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-    <productAttributes>
-      <attributeType>DocumentDescription</attributeType>
-      <attributeName>Rewards Terms and Conditions|CreditCardRewardsTermsAndConditions|N/A|N/A|N/A|N/A</attributeName>
-    </productAttributes>
-    <productAttributes>
-      <attributeType>AvailableAction</attributeType>
-      <attributeName>Download</attributeName>
-    </productAttributes>
-    <productAttributes>
-      <attributeType>AvailableAction</attributeType>
-      <attributeName>Email</attributeName>
-    </productAttributes>
-    <productAttributes>
-      <attributeType>DocTemplateName</attributeType>
-      <attributeName>CreditCardRewardsTermsAndConditions</attributeName>
     </productAttributes>
   </productAttributeGroup>
   <productAttributeGroup>
@@ -246,7 +231,7 @@
     <productAttributes>
       <attributeType>string</attributeType>
       <attributeName>frontOfficeIntentSequence</attributeName>
-      <value>PrepareApplicant|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+      <value>PrepareApplicant|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
     </productAttributes>
     <productAttributes>
        <attributeType>string</attributeType>
@@ -508,6 +493,25 @@
         <value>some value</value>
       </featureAttributes>
     </featureAttributeGroup>
+	<featureAttributeGroup>
+    <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+    <featureAttributes>
+      <attributeType>DocumentDescription</attributeType>
+      <attributeName>Rewards Terms and Conditions|CreditCardRewardsTermsAndConditions|N/A|N/A|N/A|N/A</attributeName>
+    </featureAttributes>
+    <featureAttributes>
+      <attributeType>AvailableAction</attributeType>
+      <attributeName>Download</attributeName>
+    </featureAttributes>
+    <featureAttributes>
+      <attributeType>AvailableAction</attributeType>
+      <attributeName>Email</attributeName>
+    </featureAttributes>
+    <featureAttributes>
+      <attributeType>DocTemplateName</attributeType>
+      <attributeName>CreditCardRewardsTermsAndConditions</attributeName>
+    </featureAttributes>
+  </featureAttributeGroup>
   </features>
   <features>
     <featureIdentifier>1400</featureIdentifier>
