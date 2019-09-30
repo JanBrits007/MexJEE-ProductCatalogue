@@ -42,7 +42,7 @@
       <minValue>18</minValue>
       <maxValue>999</maxValue>
       <valueUnit>year</valueUnit>
-      <description>be 18 years or older; and</description>
+      <description>be 18 years or older.</description>
     </productAttributes>
     <productAttributes>
       <attributeType>EligibilityRule</attributeType>
@@ -51,7 +51,7 @@
       <minValue>3000</minValue>
       <maxValue>99999999</maxValue>
       <valueUnit>ZAR</valueUnit>
-      <description>earn more than R100 000 annually.</description>
+      <description>earn more than R100 000 a year; and</description>
     </productAttributes>
     <productAttributes>
       <attributeType>EligibilityRule</attributeType>
@@ -81,6 +81,14 @@
       <value>true</value>
       <valueUnit>bool</valueUnit>
     </productAttributes>
+	<productAttributes>
+      <attributeType>EligibilityRule</attributeType>
+      <attributeName>SouthAfricanResident</attributeName>
+      <isComparable>false</isComparable>
+      <value>true</value>
+      <valueUnit>bool</valueUnit>
+	  <description> be a South African resident.</description>
+    </productAttributes>
   </productAttributeGroup>
   <productAttributeGroup>
     <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
@@ -90,7 +98,11 @@
     </productAttributes>
 	<productAttributes>
       <attributeType>clientInformationRequirement</attributeType>
-      <attributeName>MaritalStatusCard</attributeName>
+      <attributeName>AdditionalPersonalInformation</attributeName>
+    </productAttributes>
+	<productAttributes>
+      <attributeType>clientInformationRequirement</attributeType>
+      <attributeName>MaritalStatus</attributeName>
     </productAttributes>
     <productAttributes>
       <attributeType>clientInformationRequirement</attributeType>
@@ -104,13 +116,13 @@
       <attributeType>clientInformationRequirement</attributeType>
       <attributeName>ExpensesBasicCard</attributeName>
     </productAttributes>
+	<productAttributes>
+      <attributeType>clientInformationRequirement</attributeType>
+      <attributeName>PreOfferFinePrint</attributeName>
+    </productAttributes>
   </productAttributeGroup>
   <productAttributeGroup>
     <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
-    <productAttributes>
-      <attributeType>clientInformationRequirement</attributeType>
-      <attributeName>AdditionalPersonalInformation</attributeName>
-    </productAttributes>
   </productAttributeGroup>
   <productAttributeGroup>
     <attributeGroupName>clientInformationRequirement_EnableClients</attributeGroupName>
@@ -125,19 +137,13 @@
       <attributeType>productInformationRequirement</attributeType>
       <attributeName>CreditRepayment</attributeName>
     </productAttributes>
+	<productAttributes>
+      <attributeType>productInformationRequirement</attributeType>
+      <attributeName>ArrangementSubmissionSalesMilestone</attributeName>
+    </productAttributes>
   </productAttributeGroup>
   <productAttributeGroup>
     <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
-    <productAttributes>
-      <attributeType>Evidence</attributeType>
-      <attributeName>3 Months Bank Statements|N/A|CLIENT|PROOFOFINCOME|Statement|Bank Statement</attributeName>
-      <valueUnit>bool</valueUnit>
-    </productAttributes>
-    <productAttributes>
-      <attributeType>Evidence</attributeType>
-      <attributeName>1 Months Pay Slips|N/A|CLIENT|PROOFOFINCOME|Payslip|Payslip</attributeName>
-      <valueUnit>bool</valueUnit>
-    </productAttributes>
   </productAttributeGroup>
   <productAttributeGroup>
     <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
@@ -164,25 +170,6 @@
     <productAttributes>
       <attributeType>AvailableAction</attributeType>
       <attributeName>ElectronicallySign</attributeName>
-    </productAttributes>
-  </productAttributeGroup>
-  <productAttributeGroup>
-    <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-    <productAttributes>
-      <attributeType>DocumentDescription</attributeType>
-      <attributeName>Rewards Terms and Conditions|CreditCardRewardsTermsAndConditions|N/A|N/A|N/A|N/A</attributeName>
-    </productAttributes>
-    <productAttributes>
-      <attributeType>AvailableAction</attributeType>
-      <attributeName>Download</attributeName>
-    </productAttributes>
-    <productAttributes>
-      <attributeType>AvailableAction</attributeType>
-      <attributeName>Email</attributeName>
-    </productAttributes>
-    <productAttributes>
-      <attributeType>DocTemplateName</attributeType>
-      <attributeName>CreditCardRewardsTermsAndConditions</attributeName>
     </productAttributes>
   </productAttributeGroup>
   <productAttributeGroup>
@@ -244,7 +231,7 @@
     <productAttributes>
       <attributeType>string</attributeType>
       <attributeName>frontOfficeIntentSequence</attributeName>
-      <value>PrepareApplicant|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+      <value>PrepareApplicant|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
     </productAttributes>
     <productAttributes>
        <attributeType>string</attributeType>
@@ -255,6 +242,36 @@
       <attributeType>string</attributeType>
       <attributeName>CODEngine</attributeName>
       <value>CreditCardCOD</value>
+    </productAttributes>
+    <productAttributes>
+      <attributeType>string</attributeType>
+      <attributeName>SpecialisedLiaisonTeamName</attributeName>
+      <value>CreditCardInformationRetriever</value>
+	</productAttributes>
+  <productAttributes>
+      <attributeType>string</attributeType>
+      <attributeName>AvailableAppealActions</attributeName>
+      <value>Comment</value>
+  </productAttributes>
+  <productAttributes>
+      <attributeType>string</attributeType>
+      <attributeName>GatherDocumentsLiaisonTeam</attributeName>
+      <value>CR2LiaisonTeam</value>
+  </productAttributes>
+  </productAttributeGroup>
+  <productAttributeGroup>
+    <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+    <productAttributes>
+        <attributeType>productInformationRequirement</attributeType>
+        <attributeName>AccurateInformationProvidedConfirmation</attributeName>
+    </productAttributes>
+    <productAttributes>
+        <attributeType>productInformationRequirement</attributeType>
+        <attributeName>KeepingInTouch</attributeName>
+    </productAttributes>
+    <productAttributes>
+        <attributeType>productInformationRequirement</attributeType>
+        <attributeName>YoureDone</attributeName>
     </productAttributes>
   </productAttributeGroup>
   <productAttributeGroup>
@@ -501,6 +518,25 @@
         <value>some value</value>
       </featureAttributes>
     </featureAttributeGroup>
+	<featureAttributeGroup>
+    <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+    <featureAttributes>
+      <attributeType>DocumentDescription</attributeType>
+      <attributeName>Rewards Terms and Conditions|CreditCardRewardsTermsAndConditions|N/A|N/A|N/A|N/A</attributeName>
+    </featureAttributes>
+    <featureAttributes>
+      <attributeType>AvailableAction</attributeType>
+      <attributeName>Download</attributeName>
+    </featureAttributes>
+    <featureAttributes>
+      <attributeType>AvailableAction</attributeType>
+      <attributeName>Email</attributeName>
+    </featureAttributes>
+    <featureAttributes>
+      <attributeType>DocTemplateName</attributeType>
+      <attributeName>CreditCardRewardsTermsAndConditions</attributeName>
+    </featureAttributes>
+  </featureAttributeGroup>
   </features>
   <features>
     <featureIdentifier>1400</featureIdentifier>
@@ -582,7 +618,7 @@
   </features>
   <features>
     <featureIdentifier>1099</featureIdentifier>
-    <name>Balance Protection Plan</name>
+    <name>Credit card insurance</name>
     <featureAttributeGroup>
       <attributeGroupName>coreProvisioningParameters</attributeGroupName>
       <featureAttributes>
