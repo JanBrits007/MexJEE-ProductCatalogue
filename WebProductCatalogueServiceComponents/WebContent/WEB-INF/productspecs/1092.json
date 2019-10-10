@@ -138,13 +138,13 @@
                     "attributeGroupName": "EligibilityRules",
                     "productAttributes": [
                         {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "Age",
-                          "isComparable": "false",
-                          "minValue": "18",
-                          "maxValue": "999",
-                          "valueUnit": "year",
-                          "description": "18 years and older"
+                            "attributeType": "EligibilityRule",
+                            "attributeName": "Age",
+                            "isComparable": "false",
+                            "minValue": "18",
+                            "maxValue": "999",
+                            "valueUnit": "year",
+                            "description": "18 years and older"
                         }
                     ]
                 },
@@ -170,7 +170,7 @@
                             "attributeType": "int",
                             "attributeName": "ApplicationEndToEndExecutionTimeMinutes",
                             "value": 90
-                        },                        
+                        },
                         {
                             "attributeType": "string",
                             "attributeName": "ApplicationSubmissionTimeHours",
@@ -280,7 +280,7 @@
                             "attributeType": "int",
                             "attributeName": "costCode",
                             "value": 100
-                        },                        
+                        },
                         {
                             "attributeType": "int",
                             "attributeName": "productType",
@@ -368,43 +368,43 @@
                     "productAttributes": [
                         {
                             "attributeType": "Feature",
-                            "attributeName": "minimumAmount",
-                            "minValue": 5000,
-                            "valueUnit": "ZAR",
-                            "termNotice": [
+                            "attributeName": "escalation",
+                            "escalationList": [
                                 {
-                                    "details": [
-                                        {
-                                            "key": "notice",
-                                            "value": 1,
-                                            "label": "day",
-                                            "code": "D",
-                                            "termPeriodMonth": 1
-                                        }
-                                    ]
+                                    "value": "0",
+                                    "description": "0%"
+                                },
+                                {
+                                    "value": "5",
+                                    "description": "5%"
+                                },
+                                {
+                                    "value": "10",
+                                    "description": "10%"
+                                },
+                                {
+                                    "value": "15",
+                                    "description": "15%"
+                                },
+                                {
+                                    "value": "20",
+                                    "description": "20%"
                                 }
                             ]
                         },
                         {
                             "attributeType": "Feature",
-                            "attributeName": "interestFrequency",
-                            "allowedFrequency": [
-                                {
-                                    "code": "M",
-                                    "name": "Monthly"
-                                },
-                                {
-                                    "code": "Q",
-                                    "name": "Quarterly"
-                                },
-                                {
-                                    "code": "H",
-                                    "name": "Half-yearly"
-                                },
-                                {
-                                    "code": "E",
-                                    "name": "On Expiry"
-                                }
+                            "attributeName": "DocConfirmation",
+                            "confirmationText": [
+                                "I hereby confirm and certify that I am responsible for my investment decisions and have considered whether this investment is right for my needs.",
+                                "I hereby digitally sign this application and thereby confirm and certify that:"                               
+                            ],
+                            "termsandCondition": [                                
+                                "All information provided in this application is true and correct. I understand and agree that:",
+                                "I am responsible for my investment decisions and have considered whether this investment is right for my needs. All information provided in this application is true and correct.",
+                                "I understand and agree that this application will be governed by the relevant and latest Investment Agreement and have read and understood the Portfolio Characteristics - document and the Fund Fact Sheet that relates to the unit trust portfolios I am investing in.",
+                                "I have used the Effective Annual Cost calculator and I am aware of the charges that may be incurred.",
+                                "I authorise Nedgroup Investments to accept this application as submitted and agree that Nedgroup Investments will not be held liable for acting on this application.The information contained in this application may be reported to the South African tax authorities."
                             ]
                         }
                     ]
