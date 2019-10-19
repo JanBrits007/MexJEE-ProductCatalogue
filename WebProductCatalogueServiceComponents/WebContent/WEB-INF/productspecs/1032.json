@@ -23,7 +23,7 @@
                   "Quick and easy contactless payment functionality",
                   "Automatic basic travel insurance cover of up to R2 000 000",
                   "For ease and convenience we offer a budget facility for larger than normal purchases which clients can then pay off over 3, 6, 12, 24 or 36 months",
-                  "Optional Balance Protection Plan to ensure financial security and peace of mind in the event of death, disability, critical illness or retrenchment",
+                  "Optional Credit card insurance to ensure financial security and peace of mind in the event of death, disability, critical illness or retrenchment",
                   "Option to join the Greenbacks Rewards Programme",
                   "Option to join the Nedbank Affinity Programme"
                ]
@@ -40,7 +40,11 @@
                   },
 				  {
                      "attributeType": "clientInformationRequirement",
-                     "attributeName": "MaritalStatusCard"
+                     "attributeName": "AdditionalPersonalInformation"
+                  },
+				  {
+                     "attributeType": "clientInformationRequirement",
+                     "attributeName": "MaritalStatus"
                   },
                   {
                      "attributeType": "clientInformationRequirement",
@@ -53,17 +57,15 @@
                   {
                      "attributeType": "clientInformationRequirement",
                      "attributeName": "ExpensesBasicCard"
-                  }
+                  },
+				  {
+                     "attributeType": "clientInformationRequirement",
+                     "attributeName": "PreOfferFinePrint"
+                  }				  
                ]
             },
             {
-               "attributeGroupName": "clientInformationRequirement_ActivateProducts",
-               "productAttributes": [
-                  {
-                     "attributeType": "clientInformationRequirement",
-                     "attributeName": "AdditionalPersonalInformation"
-                  }
-               ]
+               "attributeGroupName": "clientInformationRequirement_ActivateProducts"
             },
             {
                "attributeGroupName": "clientInformationRequirement_GatherEvidence"
@@ -826,7 +828,7 @@
             },
             {
                "featureIdentifier": "1099",
-               "name": "Balance Protection Plan",
+               "name": "Credit card insurance",
                "mandatory": "false",
                "preSelected": "true",
                "shortDescription": "Our Card Insurance",
