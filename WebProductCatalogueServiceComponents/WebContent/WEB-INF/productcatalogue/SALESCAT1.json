@@ -4992,21 +4992,21 @@
                       "filterItems": [
                         {
                           "filterID": 1,
-                          "filterDisplay": "Within 24 hours",
+                          "filterDisplay": "After 24 hours",
                           "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
                           "minValue": 0,
                           "maxValue": 1
                         },
                         {
                           "filterID": 2,
-                          "filterDisplay": "Between 1 and 12 months",
+                          "filterDisplay": "After 32 days",
                           "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
                           "minValue": 2,
                           "maxValue": 12
                         },
                         {
                           "filterID": 3,
-                          "filterDisplay": "12 months or longer",
+                          "filterDisplay": "At the end of the term",
                           "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
                           "minValue": 12,
                           "maxValue": 999
@@ -7614,12 +7614,27 @@
                       ],
                       "eligibilityRules": [
                         {
+                          "attributeName": "Period",
+                          "attributeType": "EligibilityRule",                          
+                          "maxValue": "999999999",
+                          "minValue": "0",
+                          "valueUnit": "month"
+                        },
+                        {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
-                          "minValue": "18",
+                          "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
                           "description": "18 Years and older"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "InvestStart",
+                          "minValue": "1",
+                          "maxValue": "999999999",
+                          "valueUnit": "ZAR",
+                          "description": ""
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
@@ -7688,12 +7703,27 @@
                       ],
                       "eligibilityRules": [
                         {
+                          "attributeName": "Period",
+                          "attributeType": "EligibilityRule",                          
+                          "maxValue": "14",
+                          "minValue": "14",
+                          "valueUnit": "month"
+                        },
+                        {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
-                          "minValue": "18",
+                          "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
                           "description": "18 Years and older"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "InvestStart",
+                          "minValue": "1",
+                          "maxValue": "999999999",
+                          "valueUnit": "ZAR",
+                          "description": ""
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
@@ -7758,12 +7788,27 @@
                       ],
                       "eligibilityRules": [
                         {
+                          "attributeName": "Period",
+                          "attributeType": "EligibilityRule",                          
+                          "maxValue": "999999999",
+                          "minValue": "0",
+                          "valueUnit": "month"
+                        },
+                        {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
-                          "minValue": "18",
+                          "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
                           "description": "18 Years and older"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "InvestStart",
+                          "minValue": "1",
+                          "maxValue": "999999999",
+                          "valueUnit": "ZAR",
+                          "description": ""
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
