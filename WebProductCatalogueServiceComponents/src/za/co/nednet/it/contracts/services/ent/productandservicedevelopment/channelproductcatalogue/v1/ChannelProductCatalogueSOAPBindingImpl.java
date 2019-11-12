@@ -13,7 +13,6 @@ import org.apache.commons.logging.LogFactory;
 import za.co.nb.productcatalogue.dao.ProductSpecificationsServiceDAO;
 import za.co.nb.productcatlogue.JSONValidator.JSONValidation;
 import za.co.nb.productcatlogue.XMLValidator.XMLValidation;
-import za.co.nedbank.cr1.common.helper.CachedNameSpaceBindingHelper;
 import za.co.nedbank.cr1.common.helper.mLog;
 
 //@Stateless
@@ -82,64 +81,58 @@ public class ChannelProductCatalogueSOAPBindingImpl {
 
 	public MaintainCatalogueResponseType maintainCatalogue(
 			MaintainCatalogueRequestType maintainCatalogueRequest) {
+
 		MaintainCatalogueResponseType response = new MaintainCatalogueResponseType();
 
-		String pwd = CachedNameSpaceBindingHelper.getNameSpaceBinding("PC_PWD",
-				"PC_Pa55w0rd!");
-		if (pwd.equals(maintainCatalogueRequest.getPassword())) {
+		XMLValidation xmlValidation = new XMLValidation();
 
-			XMLValidation xmlValidation = new XMLValidation();
+		JSONValidation jsonvalidation = new JSONValidation();
 
-			JSONValidation jsonvalidation = new JSONValidation();
+		try {
 
-			try {
-
-				boolean isvalidxml = xmlValidation
-						.validateMethod(maintainCatalogueRequest);
-				boolean isvalidjson = jsonvalidation
-						.jsonValidateMethod(maintainCatalogueRequest);
-				if (maintainCatalogueRequest.getJsonData() != null
-						&& maintainCatalogueRequest.getJsonData().length() > 0
-						&& maintainCatalogueRequest.getXmlData() != null
-						&& maintainCatalogueRequest.getXmlData().length() > 0) {
-					if (!isvalidjson && !isvalidxml) {
-						response.setResponseString("invalid json and invalid xml");
-						return response;
-					} else if (!isvalidxml) {
-						response.setResponseString("invalid xml");
-						return response;
-					} else if (!isvalidjson) {
-						response.setResponseString("invalid json");
-						return response;
-					}
-				} else if (maintainCatalogueRequest.getJsonData() != null
-						&& maintainCatalogueRequest.getJsonData().length() > 0
-						&& maintainCatalogueRequest.getXmlData().length() <= 0) {
-					if (!isvalidjson) {
-						response.setResponseString("invalid json");
-						return response;
-					}
-				} else if (maintainCatalogueRequest.getXmlData() != null
-						&& maintainCatalogueRequest.getXmlData().length() > 0
-						&& maintainCatalogueRequest.getJsonData().length() <= 0) {
-					if (!isvalidxml) {
-						response.setResponseString("invalid xml");
-						return response;
-					}
-				} else if (maintainCatalogueRequest.getJsonData().length() <= 0
-						&& maintainCatalogueRequest.getXmlData().length() <= 0) {
+			boolean isvalidxml = xmlValidation
+					.validateMethod(maintainCatalogueRequest);
+			boolean isvalidjson = jsonvalidation
+					.jsonValidateMethod(maintainCatalogueRequest);
+			if (maintainCatalogueRequest.getJsonData() != null
+					&& maintainCatalogueRequest.getJsonData().length() > 0
+					&& maintainCatalogueRequest.getXmlData() != null
+					&& maintainCatalogueRequest.getXmlData().length() > 0) {
+				if (!isvalidjson && !isvalidxml) {
 					response.setResponseString("invalid json and invalid xml");
 					return response;
+				} else if (!isvalidxml) {
+					response.setResponseString("invalid xml");
+					return response;
+				} else if (!isvalidjson) {
+					response.setResponseString("invalid json");
+					return response;
 				}
-				response.setResponseString(getProductSpecificationsDAO()
-						.maintainCatalogueOperations(maintainCatalogueRequest));
-			} catch (Exception e) {
-				mLog.debug("exception thrown for new requirement ");
-				e.printStackTrace();
-				return null;
+			} else if (maintainCatalogueRequest.getJsonData() != null
+					&& maintainCatalogueRequest.getJsonData().length() > 0
+					&& maintainCatalogueRequest.getXmlData().length() <= 0) {
+				if (!isvalidjson) {
+					response.setResponseString("invalid json");
+					return response;
+				}
+			} else if (maintainCatalogueRequest.getXmlData() != null
+					&& maintainCatalogueRequest.getXmlData().length() > 0
+					&& maintainCatalogueRequest.getJsonData().length() <= 0) {
+				if (!isvalidxml) {
+					response.setResponseString("invalid xml");
+					return response;
+				}
+			} else if (maintainCatalogueRequest.getJsonData().length() <= 0
+					&& maintainCatalogueRequest.getXmlData().length() <= 0) {
+				response.setResponseString("invalid json and invalid xml");
+				return response;
 			}
-		} else {
-			response.setResponseString("Please contact CR1 JEE Team for assistance.");
+			response.setResponseString(getProductSpecificationsDAO()
+					.maintainCatalogueOperations(maintainCatalogueRequest));
+		} catch (Exception e) {
+			mLog.debug("exception thrown for new requirement ");
+			e.printStackTrace();
+			return null;
 		}
 		return response;
 	}

@@ -50,8 +50,6 @@ public class MaintainCatalogueRequestType {
     protected String tableName;
     @XmlElement(required = true)
     protected String productIdentifier;
-    @XmlElement(required = true)
-    protected String password;
     protected String xmlData;
     protected String jsonData;
 
@@ -125,30 +123,6 @@ public class MaintainCatalogueRequestType {
      */
     public void setProductIdentifier(String value) {
         this.productIdentifier = value;
-    }
-
-    /**
-     * Gets the value of the password property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPassword() {
-        return password;
-    }
-
-    /**
-     * Sets the value of the password property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPassword(String value) {
-        this.password = value;
     }
 
     /**
