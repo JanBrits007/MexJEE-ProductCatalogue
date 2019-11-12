@@ -13,6 +13,7 @@ import org.apache.commons.logging.LogFactory;
 import za.co.nb.productcatalogue.dao.ProductSpecificationsServiceDAO;
 import za.co.nb.productcatlogue.JSONValidator.JSONValidation;
 import za.co.nb.productcatlogue.XMLValidator.XMLValidation;
+import za.co.nedbank.cr1.common.helper.CachedNameSpaceBindingHelper;
 import za.co.nedbank.cr1.common.helper.mLog;
 
 //@Stateless
@@ -83,7 +84,9 @@ public class ChannelProductCatalogueSOAPBindingImpl {
 			MaintainCatalogueRequestType maintainCatalogueRequest) {
 
 		MaintainCatalogueResponseType response = new MaintainCatalogueResponseType();
-
+		
+		String pwd = CachedNameSpaceBindingHelper.getNameSpaceBinding("PC_PWD", "PC_Pa55w0rd!");
+		if(pwd.equals(maintainCatalogueRequest.getPassword())){
 		XMLValidation xmlValidation = new XMLValidation();
 
 		JSONValidation jsonvalidation = new JSONValidation();
@@ -133,6 +136,9 @@ public class ChannelProductCatalogueSOAPBindingImpl {
 			mLog.debug("exception thrown for new requirement ");
 			e.printStackTrace();
 			return null;
+		}
+		} else {
+			response.setResponseString("Please contact CR1 JEE team to assist");
 		}
 		return response;
 	}
