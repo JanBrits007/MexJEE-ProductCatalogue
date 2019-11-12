@@ -24,6 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="operationType" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="tableName" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="productIdentifier" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="password" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="xmlData" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="jsonData" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
@@ -39,6 +40,7 @@ import javax.xml.bind.annotation.XmlType;
     "operationType",
     "tableName",
     "productIdentifier",
+    "password",
     "xmlData",
     "jsonData"
 })
@@ -50,6 +52,7 @@ public class MaintainCatalogueRequestType {
     protected String tableName;
     @XmlElement(required = true)
     protected String productIdentifier;
+    protected String password;
     protected String xmlData;
     protected String jsonData;
 
@@ -125,6 +128,30 @@ public class MaintainCatalogueRequestType {
         this.productIdentifier = value;
     }
 
+    /**
+     * Gets the value of the password property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * Sets the value of the password property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPassword(String value) {
+        this.password = value;
+    }
+    
     /**
      * Gets the value of the xmlData property.
      * 
