@@ -27,6 +27,9 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
+   </productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Evidence</attributeType>
@@ -52,15 +55,8 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>Payment</attributeName>
-      </productAttributes>      
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>InvestmentDetails</attributeName>
       </productAttributes>
-   </productAttributeGroup>
+   </productAttributeGroup>   
    <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
    </productAttributeGroup>
@@ -159,7 +155,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>PrepareApplicant|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         <value>PrepareApplicant|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -288,7 +284,7 @@
          <value>true</value>
          <valueUnit>bool</valueUnit>
       </productAttributes>
-   </productAttributeGroup>   
+   </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
       <productAttributes>
@@ -309,10 +305,10 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>COMMUNICATIONSTRATEGY</attributeGroupName>
+      <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
       <productAttributes>
          <attributeType>int</attributeType>
-         <attributeName>productSystem</attributeName>
+         <attributeName>CommunicationSystem</attributeName>
          <value>GenCom</value>
       </productAttributes>
       <productAttributes>
