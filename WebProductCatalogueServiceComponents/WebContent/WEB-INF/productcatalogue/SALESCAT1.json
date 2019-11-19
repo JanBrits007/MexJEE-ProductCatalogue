@@ -6752,6 +6752,14 @@
                           "maxValue": "99999999",
                           "valueUnit": "ZAR",
                           "description": ""
+                        },
+                        {
+                          "attributeName": "Period",
+                          "attributeType": "EligibilityRule",
+                          "description": "",
+                          "maxValue": "2",
+                          "minValue": "2",
+                          "valueUnit": "months"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
@@ -6873,36 +6881,28 @@
                       ],
                       "eligibilityRules": [
                         {
+                          "attributeName": "Period",
+                          "attributeType": "EligibilityRule",
+                          "description": "",
+                          "maxValue": "60",
+                          "minValue": "18",
+                          "valueUnit": "month"
+                        },
+                        {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
                           "minValue": "0",
-                          "maxValue": "999999999",
+                          "maxValue": "54",
                           "valueUnit": "year",
-                          "description": "18 years and older"
+                          "description": "Only available to individuals who are younger than 55 years old"
                         },
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "InvestStart",
-                          "minValue": "250",
-                          "maxValue": "99999999",
+                          "minValue": "1000",
+                          "maxValue": "999999999",
                           "valueUnit": "ZAR",
                           "description": ""
-                        },
-                        {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "InvestMonthly",
-                          "minValue": "100",
-                          "maxValue": "99999999",
-                          "valueUnit": "ZAR",
-                          "description": ""
-                        },
-                        {
-                          "attributeName": "Period",
-                          "attributeType": "EligibilityRule",
-                          "description": "",
-                          "maxValue": "2",
-                          "minValue": "2",
-                          "valueUnit": "months"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
