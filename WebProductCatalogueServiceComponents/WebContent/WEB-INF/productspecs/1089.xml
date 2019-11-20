@@ -19,12 +19,15 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>IncomeBasic~primarySourceOfFunds~basicSalary</attributeName>
+         <attributeName>IncomeBasic</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>PreOfferFinePrint</attributeName>
       </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
@@ -53,14 +56,7 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>Payment</attributeName>
       </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>InvestmentDetails</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
+   </productAttributeGroup>   
    <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
    </productAttributeGroup>
@@ -155,11 +151,11 @@
          <attributeType>string</attributeType>
          <attributeName>CODEngine</attributeName>
          <value>InvestmentsCOD</value>
-      </productAttributes>      
+      </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>PrepareApplicant|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         <value>PrepareApplicant|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -191,11 +187,6 @@
          <attributeType>int</attributeType>
          <attributeName>costCode</attributeName>
          <value>100</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>isLead</attributeName>
-         <value>false</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -295,24 +286,6 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>SystemRelated</attributeGroupName>
-      <productAttributes>
-         <attributeType>Boolean</attributeType>
-         <attributeName>NonStraightThroughFlowTask</attributeName>
-         <value>true</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Boolean</attributeType>
-         <attributeName>StraightThroughProcess</attributeName>
-         <value>true</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>NonStraightThroughEmail</attributeName>
-         <value>pietsewinkel@cresta.co.za</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
@@ -332,30 +305,16 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+      <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
       <productAttributes>
-         <attributeType>DocumentDescription</attributeType>
-         <attributeName>Application Form|InvestmentApplicationStaffAssisted|ARRANGEMENT|AGREEMENTS|INVESTMENT|Agreement Contract</attributeName>
+         <attributeType>int</attributeType>
+         <attributeName>CommunicationSystem</attributeName>
+         <value>GenCom</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Download</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Email</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>WetSign</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>DigitallySign</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>ElectronicallySign</attributeName>
+         <attributeType>int</attributeType>
+         <attributeName>productType</attributeName>
+         <value>EMAILSMS</value>
       </productAttributes>
    </productAttributeGroup>
 </product>

@@ -1,6 +1,6 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1126</productIdentifier>
-    <name>Fixed Deposit</name>
+    <name>Fixed Deposits</name>
     <shortDescription>Looking for a lump sum, capital guaranteed investment option? Offering guaranteed interest rates for the term of your investment, the Nedbank Fixed Deposit may be the ideal short or medium term investment option for you.</shortDescription>
     <productOnAPageWebURL>/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html</productOnAPageWebURL>
     <productAttributeGroup>
@@ -52,6 +52,10 @@
         <productAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>Payment</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>InvestmentPayout</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>productInformationRequirement</attributeType>
@@ -397,6 +401,19 @@
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
             <attributeName>ElectronicallySign</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CommunicationSystem</attributeName>
+            <value>GenCom</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>productType</attributeName>
+            <value>EMAILSMS</value>
         </productAttributes>
     </productAttributeGroup>
 </product>

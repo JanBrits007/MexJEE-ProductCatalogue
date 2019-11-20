@@ -1,6 +1,6 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1199</productIdentifier>
-    <name>Just Invest</name>
+    <name>JustInvest</name>
     <shortDescription>JustInvest is a money market investment account, offering competitive, tiered interest rates and access to your funds with 24 hours’ notice.</shortDescription>
     <productOnAPageWebURL>/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html</productOnAPageWebURL>
     <productAttributeGroup>
@@ -52,6 +52,14 @@
         <productAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>Payment</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>InvestmentPayout</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>RecurringPayment</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>productInformationRequirement</attributeType>
@@ -163,6 +171,11 @@
             <attributeType>boolean</attributeType>
             <attributeName>existingToBankClientDataReConfirmationRequired</attributeName>
             <value>false</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>isNoticeProduct</attributeName>
+            <value>true</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -397,6 +410,19 @@
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
             <attributeName>ElectronicallySign</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CommunicationSystem</attributeName>
+            <value>GenCom</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>productType</attributeName>
+            <value>EMAILSMS</value>
         </productAttributes>
     </productAttributeGroup>
 </product>

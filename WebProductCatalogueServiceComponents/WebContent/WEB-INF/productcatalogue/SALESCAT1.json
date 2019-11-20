@@ -4992,21 +4992,21 @@
                       "filterItems": [
                         {
                           "filterID": 1,
-                          "filterDisplay": "Within 24 hours",
+                          "filterDisplay": "After 24 hours",
                           "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
                           "minValue": 0,
                           "maxValue": 1
                         },
                         {
                           "filterID": 2,
-                          "filterDisplay": "Between 1 and 12 months",
+                          "filterDisplay": "After 32 days",
                           "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
                           "minValue": 2,
                           "maxValue": 12
                         },
                         {
                           "filterID": 3,
-                          "filterDisplay": "12 months or longer",
+                          "filterDisplay": "At the end of the term",
                           "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
                           "minValue": 12,
                           "maxValue": 999
@@ -7559,8 +7559,9 @@
                     {
                       "productIdentifier": 1092,
                       "name": "Unit Trusts",
-                      "shortDescription": "The Unit Trusts is a diversified, professionally managed portfolio of assets by investing a modest amount of money",
+                      "shortDescription": "Unit Trusts is a diversified, professionally managed portfolio of assets by investing a modest amount of money",
                       "productPricing": [],
+                      "productCategory": "NGI",
                       "specialFeature": " ",
                       "salesHighlights": [
                         "A wide range of funds offered by a top-ranked manager",
@@ -7569,7 +7570,7 @@
                         "Save for a specific goal or time period, but have easy access to your money",
                         "In the event of an emergency, you can access your savings in 48 hours",
                         "Invest in either by debit order or with a lump sum"
-                      ],
+                      ],                      
                       "redirect": {
                         "shouldRedirect": false,
                         "redirectUrl": null
@@ -7578,7 +7579,7 @@
                         {
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor/south-african-range/unit-trusts.html "
+                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor/south-african-range/unit-trusts.html"
                         },
                         {
                           "type": "DETAIL",
@@ -7613,12 +7614,27 @@
                       ],
                       "eligibilityRules": [
                         {
+                          "attributeName": "Period",
+                          "attributeType": "EligibilityRule",
+                          "maxValue": "999999999",
+                          "minValue": "0",
+                          "valueUnit": "month"
+                        },
+                        {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
-                          "minValue": "18",
+                          "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
                           "description": "18 Years and older"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "InvestStart",
+                          "minValue": "1",
+                          "maxValue": "999999999",
+                          "valueUnit": "ZAR",
+                          "description": ""
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
@@ -7627,16 +7643,22 @@
                     {
                       "productIdentifier": 1089,
                       "name": "Retirement Annuities",
-                      "shortDescription": "The Retirement Annuities is a diversified, professionally managed portfolio of assets by investing a modest amount of money",
+                      "shortDescription": "Retirement Annuities is a disciplined, long-term savings plan to supplement existing retirement savings",
                       "productPricing": [],
+                      "productCategory": "NGI",
                       "specialFeature": " ",
                       "salesHighlights": [
-                        "A wide range of funds offered by a top-ranked manager",
-                        "The average investor does not usually have the necessary time, resources and expertise to manage their own money",
-                        "Our select investment managers act as responsible stewards of your hard-earned savings",
-                        "Save for a specific goal or time period, but have easy access to your money",
-                        "In the event of an emergency, you can access your savings in 48 hours",
-                        "Invest in either by debit order or with a lump sum"
+                        "Adhoc and flexible payment options",
+                        "Long-term compounding to provide an income stream in retirement",
+                        "Access a wide range of Nedgroup Investment funds",
+                        "No causal event fees or penalties",
+                        "Option of staggered retirement",
+                        "Voluntary contributions",
+                        "Attractive tax benefits",
+                        "No payment of estate duty",
+                        "Saving for retirement in a tax-efficient manner",
+                        "Suitable if you are self-employed or not a member of a pension or provident fund",
+                        "Suitable if you are not receiving contributions from your employer to a pension or provident fund on your behalf"
                       ],
                       "redirect": {
                         "shouldRedirect": false,
@@ -7646,7 +7668,7 @@
                         {
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor/south-african-range/unit-trusts.html "
+                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor/south-african-range/retirement.html"
                         },
                         {
                           "type": "DETAIL",
@@ -7681,12 +7703,112 @@
                       ],
                       "eligibilityRules": [
                         {
+                          "attributeName": "Period",
+                          "attributeType": "EligibilityRule",
+                          "maxValue": "14",
+                          "minValue": "14",
+                          "valueUnit": "month"
+                        },
+                        {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
-                          "minValue": "18",
+                          "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
                           "description": "18 Years and older"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "InvestStart",
+                          "minValue": "1",
+                          "maxValue": "999999999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        }
+                      ],
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {}
+                    },
+                    {
+                      "productIdentifier": 1482,
+                      "name": "Tax-free investments",
+                      "shortDescription": "Tax-free investments is a long-term savings vehicle to invest for the future and boost retirement savings",
+                      "productPricing": [],
+                      "productCategory": "NGI",
+                      "specialFeature": " ",
+                      "salesHighlights": [
+                        "0% tax, including interest, dividends and capital gains",
+                        "Access a wide range of funds",
+                        "Flexible payment options and no casual event fees or penalties",
+                        "0% tax on dividends, interest and capital gains",
+                        "R33 000 limit per year or R500 000 per lifetime",
+                        "Long-term investing but have easy access to your money in case of an emergency",
+                        "Harness the power of long-term investing"
+                      ],
+                      "redirect": {
+                        "shouldRedirect": false,
+                        "redirectUrl": null
+                      },
+                      "actions": [
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor/south-african-range/tax-free-investments.html"
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
+                      "productFeatures": [
+                        {
+                          "name": "Ideal investment for",
+                          "displayName": "Ideal investment for",
+                          "description": "Save for a specific goal or time period, but have easy access to your money"
+                        },
+                        {
+                          "name": "AdditionalDeposits",
+                          "displayName": "Additional Deposits",
+                          "description": "Yes"
+                        },
+                        {
+                          "name": "AgeRestriction",
+                          "displayName": "Age Restriction",
+                          "description": "18 Years and older"
+                        },
+                        {
+                          "name": "ElectronicAcces",
+                          "displayName": "Electronic Access",
+                          "description": "included"
+                        }
+                      ],
+                      "eligibilityRules": [
+                        {
+                          "attributeName": "Period",
+                          "attributeType": "EligibilityRule",
+                          "maxValue": "999999999",
+                          "minValue": "0",
+                          "valueUnit": "month"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "0",
+                          "maxValue": "999999999",
+                          "valueUnit": "year",
+                          "description": "18 Years and older"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "InvestStart",
+                          "minValue": "1",
+                          "maxValue": "999999999",
+                          "valueUnit": "ZAR",
+                          "description": ""
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
@@ -9192,6 +9314,11 @@
                               "attributeType": "boolean",
                               "attributeName": "requiresSecurityAndCollatoralManagement",
                               "value": "false"
+                            },
+                            {
+                              "attributeType": "string",
+                              "attributeName": "frontOfficeIntentSequence",
+                              "value": "PrepareApplicant|GenerateOfferGatherProductDetails|GatherEvidence|FinalizeFrontOfficeInteraction"
                             }
                           ]
                         }
@@ -12382,12 +12509,12 @@
                       ],
                       "salesHighlights": [
                         "Competitive interest rate.",
-                        "Deposits or withdrawals using your digital platform is alllowed if your account is loaded."
+                        "Deposits or withdrawals using your digital platform are allowed if your account is loaded."
                       ],
                       "benefits": [
                         "Instant access.",
                         "No monthly or transactional fees.",
-                        "Dedicated investment specialist available to provide information on the investment product."
+                        "Dedicated investment specialist available to provide information on the product."
                       ],
                       "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html",
                       "productFeatures": [
@@ -12615,8 +12742,8 @@
                       "productIdentifier": 1480,
                       "name": "Term Investment",
                       "dispalyName": "Term Investment",
-                      "description": "A term deposit is an investment account where you can deposit funds for a fixed term and both your capital and interest rate are fixed throughout the investment term. On maturity a new rate and investment term can be negotiated, allowing you to keep abreast of market changes. This is the perfect account for your business if you want to invest a lump sum and will not require access to it for a specific period.",
-                      "shortDescription": "A fixed investment product with a competitive interest rate. The investment period can range from 1 day to 12 months.",
+                      "description": "A term deposit is an investment account in which you can deposit funds for a fixed term and both your capital and interest rate are fixed throughout the investment term. On maturity a new rate and investment term can be negotiated, allowing you to keep abreast of market changes. This is the perfect account for your business if you want to invest a lump sum and will not require access to it for a specific period.",
+                      "shortDescription": "A fixed-investment product with a competitive interest rate. The investment period can range from 1 day to 12 months.",
                       "productPricing": [
                         {
                           "type": "",
@@ -12628,12 +12755,12 @@
                       ],
                       "salesHighlights": [
                         "Competitive interest rate.",
-                        "Select from 1 day to 12 months.",
+                        "Term can be from 1 day to 12 months.",
                         "Fixed interest rate for the agreed term of the investment."
                       ],
                       "benefits": [
                         "No monthly or transactional fees.",
-                        "Dedicated investment specialist available to provide information on the investment product."
+                        "Dedicated investment specialist available to provide information on the product."
                       ],
                       "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html",
                       "productFeatures": [
@@ -15704,12 +15831,12 @@
                       ],
                       "salesHighlights": [
                         "Competitive interest rate.",
-                        "Deposits or withdrawals using your digital platform is alllowed if your account is loaded."
+                        "Deposits or withdrawals using your digital platform are allowed if your account is loaded."
                       ],
                       "benefits": [
                         "Instant access.",
                         "No monthly or transactional fees.",
-                        "Dedicated investment specialist available to provide information on the investment product."
+                        "Dedicated investment specialist available to provide information on the product."
                       ],
                       "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html",
                       "productFeatures": [
@@ -15937,8 +16064,8 @@
                       "productIdentifier": 1480,
                       "name": "Term Investment",
                       "dispalyName": "Term Investment",
-                      "description": "A term deposit is an investment account where you can deposit funds for a fixed term and both your capital and interest rate are fixed throughout the investment term. On maturity a new rate and investment term can be negotiated, allowing you to keep abreast of market changes. This is the perfect account for your business if you want to invest a lump sum and will not require access to it for a specific period.",
-                      "shortDescription": "A fixed investment product with a competitive interest rate. The investment period can range from 1 day to 12 months.",
+                      "description": "A term deposit is an investment account in which you can deposit funds for a fixed term and both your capital and interest rate are fixed throughout the investment term. On maturity a new rate and investment term can be negotiated, allowing you to keep abreast of market changes. This is the perfect account for your business if you want to invest a lump sum and will not require access to it for a specific period.",
+                      "shortDescription": "A fixed-investment product with a competitive interest rate. The investment period can range from 1 day to 12 months.",
                       "productPricing": [
                         {
                           "type": "",
@@ -15950,12 +16077,12 @@
                       ],
                       "salesHighlights": [
                         "Competitive interest rate.",
-                        "Select from 1 day to 12 months.",
+                        "Term can be from 1 day to 12 months.",
                         "Fixed interest rate for the agreed term of the investment."
                       ],
                       "benefits": [
                         "No monthly or transactional fees.",
-                        "Dedicated investment specialist available to provide information on the investment product."
+                        "Dedicated investment specialist available to provide information on the product."
                       ],
                       "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html",
                       "productFeatures": [
