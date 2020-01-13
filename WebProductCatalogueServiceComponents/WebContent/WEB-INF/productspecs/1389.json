@@ -1200,9 +1200,9 @@
             "fee": [
               {
                 "type": "AdminFee",
-                "description": "R11.00 per sms",
+                "description": "R13.00 per sms",
                 "currency": "ZAR",
-                "amount": "11.00",
+                "amount": "13.00",
                 "frequency": "Transactional"
               }
             ]
@@ -1286,9 +1286,9 @@
             "fee": [
               {
                 "type": "AdminFee",
-                "description": "R20.18 per month",
+                "description": "R23 per month",
                 "currency": "ZAR",
-                "amount": "20.18",
+                "amount": "23",
                 "frequency": "Monthly"
               }
             ]
@@ -1502,7 +1502,7 @@
                   "attributeType": "coreProvisioningParameter",
                   "attributeName": "provisionInBranch",
                   "valueUnit": "boolean",
-                  "value": "false"
+                  "value": "true"
                 },
                 {
                   "attributeType": "coreProvisioningParameter",
@@ -1694,7 +1694,15 @@
                 "attributeType": "AvailableAction",
                 "attributeName": "Card Delivery"
               }
-            }
+            },
+            {
+              "attributeGroupName": "FeatureDetails",
+              "featureAttributes": {
+                 "attributeType": "productATMLimit",
+                 "attributeName": "ATM_Limit",
+                 "value": "2000"
+              }
+           }          
           ]
         },
         {

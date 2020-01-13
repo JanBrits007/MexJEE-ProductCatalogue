@@ -1,9 +1,9 @@
 {
     "product": [
         {
-            "productIdentifier": "1133",
-            "name": "Platinum Fixed Deposit",
-            "shortDescription": "Fixed deposits at highly competitive interest rates – exclusively for Professional Banking clients.",
+            "productIdentifier": "1360",
+            "name": "MoneyTrader",
+            "shortDescription": "The Nedbank MoneyTrader is a money market investment account offering highly competitive rates that are linked to money market conditions.",
             "productPricing": [],
             "featuresAndBenefits": [],
             "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html",
@@ -232,6 +232,11 @@
                             "value": false
                         },
                         {
+                            "attributeType": "string",
+                            "attributeName": "CODEngine",
+                            "value": "InvestmentsCOD"
+                        },
+                        {
                             "attributeType": "boolean",
                             "attributeName": "existingToBankClientDataReConfirmationRequired",
                             "value": false
@@ -271,11 +276,6 @@
                             "attributeName": "costCode",
                             "value": 100
                         },                        
-                        {
-                            "attributeType": "int",
-                            "attributeName": "productType",
-                            "value": 23
-                        },
                         {
                             "attributeType": "string",
                             "attributeName": "productSystem",
@@ -333,6 +333,11 @@
                         },
                         {
                             "attributeType": "int",
+                            "attributeName": "productType",
+                            "value": 32
+                        },
+                        {
+                            "attributeType": "int",
                             "attributeName": "productCategoryLevel",
                             "value": 1
                         },
@@ -364,19 +369,18 @@
                         {
                             "attributeType": "Feature",
                             "attributeName": "minimumAmount",
-                            "minValue": 100000,
+                            "minValue": 50000,
                             "valueUnit": "ZAR",
-                            "minMonth": 1,
-                            "maxMonth": 60,
+                            "recurringMinValue": 100,
                             "termNotice": [
                                 {
                                     "details": [
                                         {
-                                            "key": "term",
-                                            "value": 60,
-                                            "label": "months",
-                                            "code": "M",
-                                            "termPeriodMonth": 12
+                                            "key": "notice",
+                                            "value": 1,
+                                            "label": "day",
+                                            "code": "D",
+                                            "termPeriodMonth": 1
                                         }
                                     ]
                                 }
@@ -385,22 +389,27 @@
                         {
                             "attributeType": "Feature",
                             "attributeName": "interestFrequency",
+                            "allowedFrequency": []
+                        },
+                        {
+                            "attributeType": "Feature",
+                            "attributeName": "paymentFrequency",
                             "allowedFrequency": [
+                                {
+                                    "code": "W",
+                                    "name": "Weekly",
+                                    "value": [
+                                        "Monday",
+                                        "Tuesday",
+                                        "Wednesday",
+                                        "Thursday",
+                                        "Friday",
+                                        "Saturday"
+                                    ]
+                                },
                                 {
                                     "code": "M",
                                     "name": "Monthly"
-                                },
-                                {
-                                    "code": "Q",
-                                    "name": "Quarterly"
-                                },
-                                {
-                                    "code": "H",
-                                    "name": "Half-yearly"
-                                },
-                                {
-                                    "code": "E",
-                                    "name": "On Expiry"
                                 }
                             ]
                         }
