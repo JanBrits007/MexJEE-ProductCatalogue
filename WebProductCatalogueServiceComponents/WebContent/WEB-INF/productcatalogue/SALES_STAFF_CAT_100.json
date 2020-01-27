@@ -4372,10 +4372,23 @@
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
-                      "actions": [
+                      "actions": [                     
+                        {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "devstaff",
+                            "etestaff"                           
+                          ]
+                        },
                         {
                           "type": "SELECT_EWCO",
-                          "text": "Select"
+                          "text": "Select",
+                          "environments": [
+                            "prodstaff",
+                            "qastaff",
+                            "qa_kiosk"
+                          ]
                         },
                         {
                           "type": "DETAIL",
