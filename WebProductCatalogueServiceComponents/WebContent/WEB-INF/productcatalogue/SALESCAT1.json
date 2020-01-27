@@ -183,10 +183,10 @@
                       "productPricing": [
                         {
                           "type": "AdminFee",
-                          "amount": 200,
+                          "amount": 210,
                           "frequency": "Monthly",
                           "currency": "ZAR",
-                          "description": "R200.00 pm"
+                          "description": "R210.00 pm"
                         }
                       ],
                       "specialFeature": "",
@@ -399,10 +399,10 @@
                       "productPricing": [
                         {
                           "type": "AdminFee",
-                          "amount": 110,
+                          "amount": 115,
                           "frequency": "Monthly",
                           "currency": "ZAR",
-                          "description": "R110.00 pm"
+                          "description": "R115.00 pm"
                         }
                       ],
                       "specialFeature": "",
@@ -436,12 +436,12 @@
                       ],
                       "valueAddedServices": [
                         "eNotes (SMS) - Included",
-                        "No funds alert - R11.00 per sms",
+                        "No funds alert - R13.00 per sms",
                         "MyPocket - Available",
                         "Salary Switching - Available",
                         "Debit Order Switching - Available",
                         "Overdraft - Available",
-                        "Nedbank Greenbacks Rewards Membership - R20.18 per month",
+                        "Nedbank Greenbacks Rewards Membership - R23 per month",
                         "Amex Card - Available",
                         "Affinity Programmes - Available",
                         "Nedbank Insurance Funeral Plan - Available"
@@ -680,7 +680,7 @@
                       ],
                       "valueAddedServices": [
                         "eNotes (SMS) - R0,45c per sms",
-                        "No funds alert - R11.00 per sms",
+                        "No funds alert - R13.00 per sms",
                         "FREE MyPocket",
                         "Salary Switching - Available",
                         "Debit Order Switching - Available",
@@ -1079,8 +1079,9 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
-                          "text": "Select"
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/forms/af/nedbank/Nedbank4me.html"
                         },
                         {
                           "type": "DETAIL",
@@ -1093,7 +1094,7 @@
                       ],
                       "valueAddedServices": [
                         "eNotes - Included",
-                        "No Funds Alert - R11 per sms",
+                        "No Funds Alert - R13 per sms",
                         "Nedbank Arts Affinity - Available",
                         "Nedbank Children's Affinity - Available",
                         "Nedbank Green Affinity - Available",
@@ -1279,10 +1280,10 @@
                       "productPricing": [
                         {
                           "type": "AdminFee",
-                          "amount": 170.00,
+                          "amount": 180.00,
                           "frequency": "Monthly",
                           "currency": "ZAR",
-                          "description": "R 170.00 pm"
+                          "description": "R 180.00 pm"
                         }
                       ],
                       "specialFeature": "UNDER 30 WITH A MIN 4 YEAR DEGREE",
@@ -1535,10 +1536,10 @@
                       "productPricing": [
                         {
                           "type": "AdminFee",
-                          "amount": 340.00,
+                          "amount": 360.00,
                           "frequency": "Monthly",
                           "currency": "ZAR",
-                          "description": "R 340.00 pm"
+                          "description": "R 360.00 pm"
                         }
                       ],
                       "specialFeature": "NO MINIMUM ENTRY CRITERIA. REBATES AVAILABLE FROM AGE 55 AND OVER",
@@ -1776,10 +1777,10 @@
                       "productPricing": [
                         {
                           "type": "AdminFee",
-                          "amount": 126.00,
+                          "amount": 133.00,
                           "frequency": "Monthly",
                           "currency": "ZAR",
-                          "description": "R 126.00 pm"
+                          "description": "R 133.00 pm"
                         }
                       ],
                       "specialFeature": "ADDITIONAL PER-TRANSACTION-CHARGES APPLY",
@@ -2059,8 +2060,21 @@
                       },
                       "actions": [
                         {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
                           "type": "REDIRECT",
                           "text": "Select",
+                          "environments": [
+                            "prod"
+                          ],
                           "value": "https://www.nedbank.co.za/content/forms/af/cards/nedbank-credit-card-application.html/apply/check?cardType=Nedbank&formChannel=CR"
                         },
                         {
@@ -2075,10 +2089,10 @@
                       "productPricing": [
                         {
                           "type": "AdminFee",
-                          "amount": 30.00,
+                          "amount": 32.00,
                           "frequency": "Monthly",
                           "currency": "ZAR",
-                          "description": "R 30.00 pm"
+                          "description": "R 32.00 pm"
                         }
                       ],
                       "eligibilityRules": [
@@ -2266,9 +2280,22 @@
                       },
                       "actions": [
                         {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/forms/af/cards/nedbank-credit-card-application.html/apply/check?cardType=Nedbank&formChannel=CR"
+                          "value": "https://www.nedbank.co.za/content/forms/af/cards/nedbank-credit-card-application.html/apply/check?cardType=Nedbank&formChannel=CR",
+                          "environments": [
+                            "prod"
+                          ]
                         },
                         {
                           "type": "DETAIL",
@@ -2282,10 +2309,10 @@
                       "productPricing": [
                         {
                           "type": "AdminFee",
-                          "amount": 54.00,
+                          "amount": 57.00,
                           "frequency": "Monthly",
                           "currency": "ZAR",
-                          "description": "R 54.00 pm"
+                          "description": "R 57.00 pm"
                         }
                       ],
                       "eligibilityRules": [
@@ -3118,10 +3145,10 @@
                       "productPricing": [
                         {
                           "type": "AdminFee",
-                          "amount": 4200.00,
+                          "amount": 4450.00,
                           "frequency": "Annually",
                           "currency": "ZAR",
-                          "description": "R 4200.00 pa"
+                          "description": "R 4450.00 pa"
                         }
                       ],
                       "eligibilityRules": [
@@ -3671,9 +3698,22 @@
                       },
                       "actions": [
                         {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/forms/af/cards/nedbank-credit-card-application.html/apply/check?cardType=Nedbank&formChannel=CR"
+                          "value": "https://www.nedbank.co.za/content/forms/af/cards/nedbank-credit-card-application.html/apply/check?cardType=Nedbank&formChannel=CR",
+                          "environments": [
+                            "prod"
+                          ]
                         },
                         {
                           "type": "DETAIL",
@@ -3879,9 +3919,8 @@
                       },
                       "actions": [
                         {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/forms/af/cards/nedbank-credit-card-application.html/apply/check?cardType=Nedbank&formChannel=CR"
+                          "type": "SELECT",
+                          "text": "Select"
                         },
                         {
                           "type": "DETAIL",
@@ -4730,10 +4769,10 @@
                       "productPricing": [
                         {
                           "type": "AdminFee",
-                          "amount": 4200.00,
+                          "amount": 4450.00,
                           "frequency": "Annually",
                           "currency": "ZAR",
-                          "description": "R 4200.00 pa"
+                          "description": "R 4450.00 pa"
                         }
                       ],
                       "eligibilityRules": [
@@ -5065,9 +5104,22 @@
                       },
                       "actions": [
                         {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html",
+                          "environments": [
+                            "prod"
+                          ]
                         },
                         {
                           "type": "DETAIL",
@@ -5230,9 +5282,22 @@
                       },
                       "actions": [
                         {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html",
+                          "environments": [
+                            "prod"
+                          ]
                         },
                         {
                           "type": "DETAIL",
@@ -5396,9 +5461,22 @@
                       },
                       "actions": [
                         {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html",
+                          "environments": [
+                            "prod"
+                          ]
                         },
                         {
                           "type": "DETAIL",
@@ -5552,6 +5630,21 @@
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
+                      "actions": [
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
                       "productFeatures": [
                         {
                           "name": "Maximuminterestrate",
@@ -5697,9 +5790,22 @@
                       },
                       "actions": [
                         {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html",
+                          "environments": [
+                            "prod"
+                          ]
                         },
                         {
                           "type": "DETAIL",
@@ -5853,7 +5959,7 @@
                         {
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+                          "value": "https://www.nedbank.co.za/content/forms/af/nedbank/CallMeBackProfessionalBanking.html"
                         },
                         {
                           "type": "DETAIL",
@@ -6021,9 +6127,22 @@
                       },
                       "actions": [
                         {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html",
+                          "environments": [
+                            "prod"
+                          ]
                         },
                         {
                           "type": "DETAIL",
@@ -6354,6 +6473,34 @@
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
+                      "actions": [
+                        {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html",
+                          "environments": [
+                            "prod"
+                          ]
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
                       "productFeatures": [
                         {
                           "name": "Maximuminterestrate",
@@ -6498,6 +6645,34 @@
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
+                      "actions": [
+                        {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/personal/save-and-invest/investment-accounts/optimum-plus1.html",
+                          "environments": [
+                            "prod"
+                          ]
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
                       "productFeatures": [
                         {
                           "name": "Maximuminterestrate",
@@ -6641,6 +6816,34 @@
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
+                      "actions": [
+                        {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html",
+                          "environments": [
+                            "prod"
+                          ]
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
                       "productFeatures": [
                         {
                           "name": "Maximuminterestrate",
@@ -6792,6 +6995,21 @@
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
+                      "actions": [
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
                       "productFeatures": [
                         {
                           "name": "Maximuminterestrate",
@@ -6925,7 +7143,7 @@
                       ],
                       "specialFeature": "1-60 Months",
                       "salesHighlights": [
-                        "Minimum investment amount - R25 000",
+                        "Minimum investment amount - R5 000",
                         "Minimum investment period - 1 month",
                         "No monthly fees or commissions",
                         "Capital guaranteed",
@@ -6938,7 +7156,21 @@
                       "actions": [
                         {
                           "type": "SELECT_EWCO",
-                          "text": "Select"
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html",
+                          "environments": [
+                            "prod"
+                          ]
                         },
                         {
                           "type": "DETAIL",
@@ -6963,7 +7195,7 @@
                         {
                           "name": "MinimumInvestmentAmount",
                           "displayName": "Minimum Investment Amount",
-                          "description": "R 25 000"
+                          "description": "R5 000"
                         },
                         {
                           "name": "MinimumInvestmentPeriod",
@@ -7048,7 +7280,7 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "InvestStart",
-                          "minValue": "1000",
+                          "minValue": "5000",
                           "maxValue": "999999999",
                           "valueUnit": "ZAR",
                           "description": ""
@@ -7087,7 +7319,7 @@
                       ],
                       "specialFeature": "1 - 60 Months",
                       "salesHighlights": [
-                        "Minimum investment amount - R25 000",
+                        "Minimum investment amount - R5 000",
                         "Minimum investment period - 1 month",
                         "No monthly fees or commissions",
                         "Capital guaranteed",
@@ -7100,7 +7332,21 @@
                       "actions": [
                         {
                           "type": "SELECT_EWCO",
-                          "text": "Select"
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html",
+                          "environments": [
+                            "prod"
+                          ]
                         },
                         {
                           "type": "DETAIL",
@@ -7125,7 +7371,7 @@
                         {
                           "name": "MinimumInvestmentAmount",
                           "displayName": "Minimum Investment Amount",
-                          "description": "R 25 000"
+                          "description": "R5 000"
                         },
                         {
                           "name": "MinimumInvestmentPeriod",
@@ -7210,7 +7456,7 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "InvestStart",
-                          "minValue": "1000",
+                          "minValue": "5000",
                           "maxValue": "999999999",
                           "valueUnit": "ZAR",
                           "description": "Earn minimum R 1000 per annum"
@@ -7260,7 +7506,21 @@
                       "actions": [
                         {
                           "type": "SELECT_EWCO",
-                          "text": "Select"
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html",
+                          "environments": [
+                            "prod"
+                          ]
                         },
                         {
                           "type": "DETAIL",
@@ -7423,9 +7683,22 @@
                       },
                       "actions": [
                         {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/personal/save-and-invest/investment-accounts/Nedbank-Tax-Free-Fixed-Deposit.html"
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html",
+                          "environments": [
+                            "prod"
+                          ]
                         },
                         {
                           "type": "DETAIL",
@@ -7578,16 +7851,29 @@
                         "Save for a specific goal or time period, but have easy access to your money",
                         "In the event of an emergency, you can access your savings in 48 hours",
                         "Invest in either by debit order or with a lump sum"
-                      ],                      
+                      ],
                       "redirect": {
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
                       "actions": [
                         {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor/south-african-range/unit-trusts.html"
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html",
+                          "environments": [
+                            "prod"
+                          ]
                         },
                         {
                           "type": "DETAIL",
@@ -7674,9 +7960,8 @@
                       },
                       "actions": [
                         {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor/south-african-range/retirement.html"
+                          "type": "SELECT",
+                          "text": "Select"
                         },
                         {
                           "type": "DETAIL",
@@ -7759,9 +8044,22 @@
                       },
                       "actions": [
                         {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor/south-african-range/tax-free-investments.html"
+                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor.html",
+                          "environments": [
+                            "prod"
+                          ]
                         },
                         {
                           "type": "DETAIL",
@@ -8066,8 +8364,13 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
-                          "text": "SELECT"
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/forms/af/nedbank/Foreign-Currency-Account-Application.html"
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
                         }
                       ],
                       "productFeatures": [
@@ -8198,7 +8501,7 @@
                         {
                           "type": "REDIRECT",
                           "text": "Call me back",
-                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceQuoteCMB.html?formType=quote&productType=Car%20finance%20insurance"
+                          "value": "https://www.nedbankinsurancequotes.co.za/"
                         },
                         {
                           "type": "DETAIL",
@@ -8243,7 +8546,7 @@
                         {
                           "type": "REDIRECT",
                           "text": "Call me back",
-                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceQuoteCMB.html?formType=quote&productType=Car%20finance%20insurance"
+                          "value": "https://www.nedbankinsurancequotes.co.za/"
                         },
                         {
                           "type": "DETAIL",
@@ -8293,7 +8596,7 @@
                         {
                           "type": "REDIRECT",
                           "text": "Call me back",
-                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceQuoteCMB.html?formType=quote&productType=Car%20finance%20insurance"
+                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceQuoteCMB.html?formType=quote&productType=Bond%20cover"
                         },
                         {
                           "type": "DETAIL",
@@ -8335,7 +8638,7 @@
                         {
                           "type": "REDIRECT",
                           "text": "Call me back",
-                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceQuoteCMB.html?formType=quote&productType=Car%20finance%20insurance"
+                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceQuoteCMB.html?formType=quote&productType=Bond%20cover"
                         },
                         {
                           "type": "DETAIL",
@@ -8619,7 +8922,7 @@
                         {
                           "type": "REDIRECT",
                           "text": "Call me back",
-                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceQuoteCMB.html?formType=quote&productType=Credit%20card%20insurance"
+                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceQuoteCMB.html?formType=quote&productType=Overdraft%20insurance"
                         },
                         {
                           "type": "DETAIL",
@@ -8662,7 +8965,7 @@
                         {
                           "type": "REDIRECT",
                           "text": "Call me back",
-                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceQuoteCMB.html?formType=quote&productType=Credit%20card%20insurance"
+                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceInformationCMB.html?formType=info&productType=Personal%20loan%20insurance"
                         },
                         {
                           "type": "DETAIL",
@@ -8701,7 +9004,7 @@
                         {
                           "type": "REDIRECT",
                           "text": "Call me back",
-                          "value": "https://nedbank.co.za/content/nedbank-insurance/desktop/gt/en/info/contact-us.html"
+                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceQuoteCMB.html?formType=quote&productType=Life%20insurance"
                         },
                         {
                           "type": "DETAIL",
@@ -8735,7 +9038,7 @@
                         {
                           "type": "REDIRECT",
                           "text": "Call me back",
-                          "value": "https://nedbank.co.za/content/nedbank-insurance/desktop/gt/en/info/contact-us.html"
+                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceInformationCMB.html?formType=info&productType=Income%20investments"
                         },
                         {
                           "type": "DETAIL",
@@ -8827,7 +9130,7 @@
                         {
                           "type": "REDIRECT",
                           "text": "Call me back",
-                          "value": "https://nedbank.co.za/content/nedbank-insurance/desktop/gt/en/info/contact-us.html"
+                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceQuoteCMB.html?formType=quote&productType=Gold%20Funeral%20Plan"
                         },
                         {
                           "type": "DETAIL",
@@ -8882,7 +9185,7 @@
                         {
                           "type": "REDIRECT",
                           "text": "Call me back",
-                          "value": "https://nedbank.co.za/content/nedbank-insurance/desktop/gt/en/info/contact-us.html"
+                          "value": "https://nedbank.co.za/content/forms/af/nedbank-insurance/InsuranceQuoteCMB.html?formType=quote&productType=Premier%20Funeral%20Plan"
                         },
                         {
                           "type": "DETAIL",
