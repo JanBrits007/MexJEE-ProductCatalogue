@@ -3601,11 +3601,24 @@
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
-                      "actions": [
+                      "actions": [                     
+                        {
+                          "type": "SELECT",
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete"                           
+                          ]
+                        },
                         {
                           "type": "REDIRECT",
                           "text": "Branch locator",
-                          "value": "https://secured.nedbank.co.za/#/branchlocator"
+                          "value": "https://secured.nedbank.co.za/#/branchlocator",
+                          "environments": [
+                            "prod",
+                            "qa",
+                            "qa_kiosk"
+                          ]
                         },
                         {
                           "type": "DETAIL",
