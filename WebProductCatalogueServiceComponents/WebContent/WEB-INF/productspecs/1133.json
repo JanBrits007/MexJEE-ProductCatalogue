@@ -272,11 +272,6 @@
                             "value": 100
                         },                        
                         {
-                            "attributeType": "int",
-                            "attributeName": "productType",
-                            "value": 23
-                        },
-                        {
                             "attributeType": "string",
                             "attributeName": "productSystem",
                             "value": "INVEST"
@@ -305,6 +300,11 @@
                             "attributeType": "string",
                             "attributeName": "InterestOption",
                             "value": 1
+                        },
+                        {
+                            "attributeType": "int",
+                            "attributeName": "productType",
+                            "value": 3
                         },
                         {
                             "attributeType": "string",
@@ -365,9 +365,9 @@
                             "attributeType": "Feature",
                             "attributeName": "minimumAmount",
                             "minValue": 100000,
-                            "valueUnit": "ZAR",
                             "minMonth": 1,
                             "maxMonth": 60,
+                            "valueUnit": "ZAR",
                             "termNotice": [
                                 {
                                     "details": [
@@ -376,7 +376,7 @@
                                             "value": 60,
                                             "label": "months",
                                             "code": "M",
-                                            "termPeriodMonth": 12
+                                            "termPeriodMonth": 60
                                         }
                                     ]
                                 }
@@ -398,6 +398,10 @@
                                     "code": "H",
                                     "name": "Half-yearly"
                                 },
+                                {
+                                    "code": "A",
+                                    "name": "Yearly"
+                                },                                
                                 {
                                     "code": "E",
                                     "name": "On Expiry"
