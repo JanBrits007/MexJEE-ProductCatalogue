@@ -3933,7 +3933,21 @@
                       "actions": [
                         {
                           "type": "SELECT",
-                          "text": "Select"
+                          "text": "Select",
+                          "environments": [
+                            "dev",
+                            "ete",
+                            "qa",
+                            "qa_kiosk"
+                          ]
+                        },
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/forms/af/cards/nedbank-credit-card-application.html/apply/check?cardType=Nedbank&formChannel=CR",
+                          "environments": [
+                            "prod"
+                          ]
                         },
                         {
                           "type": "DETAIL",
@@ -7181,7 +7195,7 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT_EWCO",
+                          "type": "SELECT",
                           "text": "Select",
                           "environments": [
                             "dev",
@@ -7357,7 +7371,7 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT_EWCO",
+                          "type": "SELECT",
                           "text": "Select",
                           "environments": [
                             "dev",
@@ -7531,7 +7545,7 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT_EWCO",
+                          "type": "SELECT",
                           "text": "Select",
                           "environments": [
                             "dev",
