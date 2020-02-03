@@ -7,10 +7,10 @@
       "productPricing": [
         {
           "type": "AdminFee",
-          "amount": "110.00",
+          "amount": "115.00",
           "frequency": "Monthly",
           "currency": "ZAR",
-          "description": "R110.00 pm"
+          "description": "R115.00 pm"
         }
       ],
       "featuresAndBenefits": [
@@ -148,7 +148,7 @@
           "attributeGroupName": "productInformationRequirement_GenerateOffer",
           "productAttributes": {
             "attributeType": "productInformationRequirement",
-            "attributeName": "TransactionalProductDetails"
+            "attributeName": "OverdraftDetails"
           }
         },
         {
@@ -571,9 +571,9 @@
             "fee": [
               {
                 "type": "AdminFee",
-                "description": "R11.00 per sms",
+                "description": "R13.00 per sms",
                 "currency": "ZAR",
-                "amount": "11.00",
+                "amount": "13.00",
                 "frequency": "Transactional"
               }
             ]
@@ -866,6 +866,14 @@
                 "attributeType": "AvailableAction",
                 "attributeName": "Card Delivery"
               }
+            },
+            {
+              "attributeGroupName": "FeatureDetails",
+              "featureAttributes": {
+                 "attributeType": "productATMLimit",
+                 "attributeName": "ATM_Limit",
+                 "value": "2000"
+              }
             }
           ]
         },
@@ -886,9 +894,9 @@
             "fee": [
               {
                 "type": "AdminFee",
-                "description": "R20.18 per month",
+                "description": "R23.00 per month",
                 "currency": "ZAR",
-                "amount": "20.18",
+                "amount": "23.00",
                 "frequency": "Monthly"
               }
             ]
@@ -972,9 +980,9 @@
             "fee": [
               {
                 "type": "AdminFee",
-                "description": "Free",
+                "description": "R49.00 per month",
                 "currency": "ZAR",
-                "amount": "0",
+                "amount": "49.00",
                 "frequency": "Monthly"
               }
             ]
@@ -1060,23 +1068,39 @@
                 }
               ]
             },
-            {
-              "attributeGroupName": "clientEvidenceRequirement_GatherEvidence",
-              "productAttributes": [
-                {
-                  "attributeType": "Evidence",
-                  "attributeName": "3 Months Bank Statements|N/A|CLIENT|PROOFOFINCOME|STATEMENT|3 Months Bank Statements",
-                  "isComparable": "false",
-                  "valueUnit": "bool"
-                },
-                {
-                  "attributeType": "Evidence",
-                  "attributeName": "1 Months Pay Slips|N/A|CLIENT|PROOFOFINCOME|PAYSLIP|1 Months Pay Slips",
-                  "isComparable": "false",
-                  "valueUnit": "bool"
-                }
-              ]
-            }
+{
+   "attributeGroupName": "productDocumentPresentation_ActivateProducts",
+   "featureAttributes": [
+      {
+         "attributeType": "DocumentDescription",
+         "attributeName": "Pre-agreementQuote|nedbank-commercial-release/UnsecuredLendingContract|ARRANGEMENT|AGREEMENTS|AGREEMENTSCREDITFACILITY|AgreementContract"
+      },
+      {
+         "attributeType": "DocumentDescriptionStaffAssisted",
+         "attributeName": "Pre-agreementQuote|nedbank-commercial-release/UnsecuredLendingContractStaffAssisted|ARRANGEMENT|AGREEMENTS|AGREEMENTSCREDITFACILITY|AgreementContract"
+      },
+      {
+         "attributeType": "AvailableAction",
+         "attributeName": "Download"
+      },
+      {
+         "attributeType": "AvailableAction",
+         "attributeName": "Email"
+      },
+      {
+         "attributeType": "AvailableAction",
+         "attributeName": "WetSign"
+      },
+      {
+         "attributeType": "AvailableAction",
+         "attributeName": "DigitallySign"
+      },
+      {
+         "attributeType": "AvailableAction",
+         "attributeName": "ElectronicallySign"
+      }
+   ]
+}
           ]
         },
         {
@@ -1549,7 +1573,7 @@
                   "attributeType": "coreProvisioningParameter",
                   "attributeName": "provisionInBranch",
                   "valueUnit": "boolean",
-                  "value": "false"
+                  "value": "true"
                 },
                 {
                   "attributeType": "coreProvisioningParameter",

@@ -1,12 +1,12 @@
 {
     "product": [
         {
-            "productIdentifier": "1089",
-            "name": "Retirement Annuities",
-            "shortDescription": "The Retirement Annuities is  a disciplined, long-term savings plan to supplement existing retirement savings",
+            "productIdentifier": "1130",
+            "name": "Prime Select",
+            "shortDescription": "Prime Select is a A fixed-term investment, where the interest rate is linked to the prime lending rate, which allows limited additional deposits and withdrawals.",
             "productPricing": [],
             "featuresAndBenefits": [],
-            "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html",
+            "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html",
             "productAttributeGroup": [
                 {
                     "attributeGroupName": "clientInformationRequirement_GenerateOffer",
@@ -25,7 +25,7 @@
                         },
                         {
                             "attributeType": "clientInformationRequirement",
-                            "attributeName": "IncomeBasic~primarySourceOfFunds"
+                            "attributeName": "IncomeBasic"
                         },
                         {
                             "attributeType": "clientInformationRequirement",
@@ -144,7 +144,7 @@
                           "minValue": "18",
                           "maxValue": "999",
                           "valueUnit": "year",
-                          "description": "18 Years and older"
+                          "description": "18 years and older"
                         }
                     ]
                 },
@@ -164,17 +164,12 @@
                         {
                             "attributeType": "int",
                             "attributeName": "ApplicationCaptureExecutionTimeMinutes",
-                            "value": 10
+                            "value": 5
                         },
                         {
                             "attributeType": "int",
                             "attributeName": "ApplicationEndToEndExecutionTimeMinutes",
                             "value": 90
-                        },                        
-                        {
-                            "attributeType": "string",
-                            "attributeName": "ApplicationSubmissionTimeHours",
-                            "value": "14:00"
                         },
                         {
                             "attributeType": "boolean",
@@ -237,11 +232,6 @@
                             "value": false
                         },
                         {
-                            "attributeType": "string",
-                            "attributeName": "CODEngine",
-                            "value": "InvestmentsCOD"
-                        },
-                        {
                             "attributeType": "boolean",
                             "attributeName": "existingToBankClientDataReConfirmationRequired",
                             "value": false
@@ -282,11 +272,6 @@
                             "value": 100
                         },                        
                         {
-                            "attributeType": "int",
-                            "attributeName": "productType",
-                            "value": 17
-                        },
-                        {
                             "attributeType": "string",
                             "attributeName": "productSystem",
                             "value": "INVEST"
@@ -315,6 +300,11 @@
                             "attributeType": "string",
                             "attributeName": "InterestOption",
                             "value": 1
+                        },
+                        {
+                            "attributeType": "int",
+                            "attributeName": "productType",
+                            "value": 3
                         },
                         {
                             "attributeType": "string",
@@ -360,59 +350,63 @@
                             "attributeType": "string",
                             "attributeName": "InvestmentFunction",
                             "value": "Add"
+                        },
+                        {
+                            "attributeType": "boolean",
+                            "attributeName": "provisionInBranch",
+                            "value": "false"
                         }
                     ]
                 },
                 {
                     "attributeGroupName": "ProductFeatures",
-                    "productAttributes": [                        
+                    "productAttributes": [
                         {
                             "attributeType": "Feature",
-                            "attributeName": "escalation",
-                            "escalationList": [
+                            "attributeName": "minimumAmount",
+                            "minValue": 5000,
+                            "minMonth": 3,
+                            "maxMonth": 60,
+                            "valueUnit": "ZAR",
+                            "termNotice": [
                                 {
-                                    "value": "0",
-                                    "description": "0%"
-                                },
-                                {
-                                    "value": "5",
-                                    "description": "5%"
-                                },
-                                {
-                                    "value": "10",
-                                    "description": "10%"
-                                },
-                                {
-                                    "value": "15",
-                                    "description": "15%"
-                                },
-                                {
-                                    "value": "20",
-                                    "description": "20%"
+                                    "details": [
+                                        {
+                                            "key": "term",
+                                            "value": 60,
+                                            "label": "months",
+                                            "code": "M",
+                                            "termPeriodMonth": 60
+                                        }
+                                    ]
                                 }
                             ]
                         },
                         {
                             "attributeType": "Feature",
-                            "attributeName": "DocConfirmation",
-                            "confirmationText": [                                
-                                "I hereby digitally sign this application and thereby confirm and certify that:"                               
-                            ],
-                            "termsandCondition": [ 
-                                "I hereby confirm and certify that I am responsible for my investment decisions and have considered whether this investment is right for my needs.",                               
-                                "All information provided in this application is true and correct. I understand and agree that:",
-                                "I am responsible for my investment decisions and have considered whether this investment is right for my needs. All information provided in this application is true and correct.",
-                                "I understand and agree that this application will be governed by the relevant and latest Investment Agreement and have read and understood the Portfolio Characteristics - document and the Fund Fact Sheet that relates to the unit trust portfolios I am investing in.",
-                                "I have used the Effective Annual Cost calculator and I am aware of the charges that may be incurred.",
-                                "I authorise Nedgroup Investments to accept this application as submitted and agree that Nedgroup Investments will not be held liable for acting on this application.The information contained in this application may be reported to the South African tax authorities."
+                            "attributeName": "interestFrequency",
+                            "allowedFrequency": [
+                                {
+                                    "code": "M",
+                                    "name": "Monthly"
+                                },
+                                {
+                                    "code": "Q",
+                                    "name": "Quarterly"
+                                },
+                                {
+                                    "code": "H",
+                                    "name": "Half-yearly"
+                                },
+                                {
+                                    "code": "A",
+                                    "name": "Yearly"
+                                },                                
+                                {
+                                    "code": "E",
+                                    "name": "On Expiry"
+                                }
                             ]
-                        },
-                        {
-                            "attributeType": "Feature",
-                            "attributeName": "productDetails",
-                            "productCode": "RA",
-                            "channelId": 80,
-                            "maxLumpSum": 1000000
                         }
                     ]
                 },
