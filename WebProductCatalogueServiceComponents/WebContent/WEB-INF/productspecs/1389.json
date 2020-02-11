@@ -17,15 +17,11 @@
         {
           "shortDescription": "",
           "benefits": [
+            "Zero monthly account fee",
+            "Free Gold Cheque Card (includes travel insurance)",
             "Free card swipes",
-            "Pay-as-you-use for ATM withdrawals and debit orders",
-            "Digital banking, allowing you to purchase prepaid electricity and LOTTO tickets",
-            "Airtime without airtime (purchase airtime without having airtime by dialing *130*001#)",
-            "Send-iMali (send money to a cellphone number by dialing *120*001#)",
-            "Opportunity to build your credit history",
-            "ZERO monthly fee ",
-            "FREE Gold cheque card, including Scan to Pay",
-            "Flat fee of R7 for ATM withdrawals (Nedbank)"
+            "Free balance enquiries at self-assisted channels (Nedbank ATM, SMS banking, online banking, the Nedbank Money app)",
+            "MyPocket - a free budgeting and savings pocket linked to your bank account. It earns you interest and gives you instant access to your money. For more info click here."
           ]
         }
       ],
@@ -1356,6 +1352,145 @@
           ]
         },
         {
+          "featureIdentifier": "1376",
+          "name": "Salary Switching",
+          "mandatory": "false",
+          "preSelected": "true",
+          "shortDescription": "Salary Switching with transactional product",
+          "description": "Detailed description of feature",
+          "featureGrouping": {
+            "featureGroupName": "Salary Switching",
+            "featureGroupRuleForProduct": "OptionalIfAlternativeSelected"
+          },
+          "featureType": "BoltOn",
+          "referenceProductID": "-1",
+          "featurePricing": {
+            "fee": [
+              {
+                "type": "InitiationFee",
+                "description": "Initiation Fee",
+                "currency": "ZAR",
+                "amount": "0",
+                "frequency": "OnceOff"
+              }
+            ]
+          },
+          "featureDisplayAdditionalInformationWidget": "No",
+          "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+          "featureDisplayPosition": "preOffer",
+          "featureAttributeGroup": [
+            {
+              "attributeGroupName": "SystemRelated",
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "true"
+              }
+            },
+            {
+              "attributeGroupName": "coreProvisioningParameters",
+              "featureAttributes": [
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "LoanGroupingCode",
+                  "valueUnit": "PER",
+                  "value": "PER"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "true"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "legacyProductID",
+                  "valueUnit": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "attributeGroupName": "productDocumentPresentation_ActivateProducts",
+              "featureAttributes": [
+                {
+                  "attributeType": "DocumentDescription",
+                  "attributeName": "Salary Switching Letter|SalarySwitching|N/A|N/A|N/A|N/A"
+                },
+                {
+                  "attributeType": "AvailableAction",
+                  "attributeName": "Download"
+                },
+                {
+                  "attributeType": "AvailableAction",
+                  "attributeName": "Email"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "featureIdentifier": "1380",
+          "name": "Debit Order Switching",
+          "mandatory": "false",
+          "preSelected": "true",
+          "shortDescription": "Debit Order Switching with transactional product",
+          "description": "Detailed description of feature",
+          "featureGrouping": {
+            "featureGroupName": "Debit Order Switching",
+            "featureGroupRuleForProduct": "OptionalIfAlternativeSelected"
+          },
+          "featureType": "BoltOn",
+          "referenceProductID": "-1",
+          "featurePricing": {
+            "fee": [
+              {
+                "type": "InitiationFee",
+                "description": "Initiation Fee",
+                "currency": "ZAR",
+                "amount": "0",
+                "frequency": "OnceOff"
+              }
+            ]
+          },
+          "featureDisplayAdditionalInformationWidget": "No",
+          "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+          "featureDisplayPosition": "preOffer",
+          "featureAttributeGroup": [
+            {
+              "attributeGroupName": "SystemRelated",
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "true"
+              }
+            },
+            {
+              "attributeGroupName": "coreProvisioningParameters",
+              "featureAttributes": [
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "LoanGroupingCode",
+                  "valueUnit": "PER",
+                  "value": "PER"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "true"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "legacyProductID",
+                  "valueUnit": "string",
+                  "value": "1201"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "featureIdentifier": "1400",
           "name": "Affinity Programmes",
           "mandatory": "false",
@@ -1594,7 +1729,7 @@
                   "attributeType": "coreProvisioningParameter",
                   "attributeName": "provisionInBranch",
                   "valueUnit": "boolean",
-                  "value": "false"
+                  "value": "true"
                 }
               ]
             },
