@@ -1352,6 +1352,145 @@
           ]
         },
         {
+          "featureIdentifier": "1376",
+          "name": "Salary Switching",
+          "mandatory": "false",
+          "preSelected": "true",
+          "shortDescription": "Salary Switching with transactional product",
+          "description": "Detailed description of feature",
+          "featureGrouping": {
+            "featureGroupName": "Salary Switching",
+            "featureGroupRuleForProduct": "OptionalIfAlternativeSelected"
+          },
+          "featureType": "BoltOn",
+          "referenceProductID": "-1",
+          "featurePricing": {
+            "fee": [
+              {
+                "type": "InitiationFee",
+                "description": "Initiation Fee",
+                "currency": "ZAR",
+                "amount": "0",
+                "frequency": "OnceOff"
+              }
+            ]
+          },
+          "featureDisplayAdditionalInformationWidget": "No",
+          "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+          "featureDisplayPosition": "preOffer",
+          "featureAttributeGroup": [
+            {
+              "attributeGroupName": "SystemRelated",
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "true"
+              }
+            },
+            {
+              "attributeGroupName": "coreProvisioningParameters",
+              "featureAttributes": [
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "LoanGroupingCode",
+                  "valueUnit": "PER",
+                  "value": "PER"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "true"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "legacyProductID",
+                  "valueUnit": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "attributeGroupName": "productDocumentPresentation_ActivateProducts",
+              "featureAttributes": [
+                {
+                  "attributeType": "DocumentDescription",
+                  "attributeName": "Salary Switching Letter|SalarySwitching|N/A|N/A|N/A|N/A"
+                },
+                {
+                  "attributeType": "AvailableAction",
+                  "attributeName": "Download"
+                },
+                {
+                  "attributeType": "AvailableAction",
+                  "attributeName": "Email"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "featureIdentifier": "1380",
+          "name": "Debit Order Switching",
+          "mandatory": "false",
+          "preSelected": "true",
+          "shortDescription": "Debit Order Switching with transactional product",
+          "description": "Detailed description of feature",
+          "featureGrouping": {
+            "featureGroupName": "Debit Order Switching",
+            "featureGroupRuleForProduct": "OptionalIfAlternativeSelected"
+          },
+          "featureType": "BoltOn",
+          "referenceProductID": "-1",
+          "featurePricing": {
+            "fee": [
+              {
+                "type": "InitiationFee",
+                "description": "Initiation Fee",
+                "currency": "ZAR",
+                "amount": "0",
+                "frequency": "OnceOff"
+              }
+            ]
+          },
+          "featureDisplayAdditionalInformationWidget": "No",
+          "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+          "featureDisplayPosition": "preOffer",
+          "featureAttributeGroup": [
+            {
+              "attributeGroupName": "SystemRelated",
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "true"
+              }
+            },
+            {
+              "attributeGroupName": "coreProvisioningParameters",
+              "featureAttributes": [
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "LoanGroupingCode",
+                  "valueUnit": "PER",
+                  "value": "PER"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "true"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "legacyProductID",
+                  "valueUnit": "string",
+                  "value": "1201"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "featureIdentifier": "1400",
           "name": "Affinity Programmes",
           "mandatory": "false",
@@ -1590,7 +1729,7 @@
                   "attributeType": "coreProvisioningParameter",
                   "attributeName": "provisionInBranch",
                   "valueUnit": "boolean",
-                  "value": "false"
+                  "value": "true"
                 }
               ]
             },
