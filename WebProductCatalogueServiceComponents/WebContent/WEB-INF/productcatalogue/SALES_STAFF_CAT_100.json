@@ -5440,7 +5440,7 @@
                           "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": "18 years and older"
+                          "description": "No age restrictions"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -5461,7 +5461,7 @@
                         {
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
-                          "description": "",
+                          "description": "All individuals, Small Business Services and Business Banking clients",
                           "maxValue": "2",
                           "minValue": "2",
                           "valueUnit": "months"
@@ -5481,8 +5481,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 7.85,
-                          "description": "7.85% pa"
+                          "value": 7.75,
+                          "description": "7.75% pa"
                         }
                       ],
                       "specialFeature": "Short Term",
@@ -5513,7 +5513,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 7.85%"
+                          "description": "up to 7.75%"
                         },
                         {
                           "name": "Investmentterm",
@@ -5765,7 +5765,7 @@
                           "minValue": "0",
                           "maxValue": "54",
                           "valueUnit": "year",
-                          "description": "Only available to individuals who are younger than 55 years old"
+                          "description": "All individuals younger than 55 years of age, Small Business Services and Business Banking clients"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -5783,7 +5783,7 @@
                         {
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
-                          "description": "Between 1 and 60 months",
+                          "description": "",
                           "maxValue": "60",
                           "minValue": "2",
                           "valueUnit": "month"
@@ -5819,8 +5819,20 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
-                          "text": "Select"
+                            "type": "SELECT",
+                            "text": "Select",
+                            "environments": [
+                              "dev_staff",
+                              "ete_staff",
+                              "qa_staff"
+                            ]
+                        },
+                        {
+                            "type": "SELECT_EWCO",
+                            "text": "Select",
+                            "environments": [
+                                "prod_staff"
+                            ]
                         },
                         {
                           "type": "DETAIL",
@@ -5949,7 +5961,7 @@
                           "minValue": "0",
                           "maxValue": "1",
                           "valueUnit": "Period",
-                          "description": ""
+                          "description": "All individuals, Small Business Services and Business Banking clients"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
@@ -6088,7 +6100,7 @@
                           "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": "18 years and older"
+                          "description": "No age restrictions"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -6112,7 +6124,7 @@
                           "minValue": "0",
                           "maxValue": "1",
                           "valueUnit": "Period",
-                          "description": ""
+                          "description": "All individuals, Small Business Services and Business Banking clients"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
@@ -6253,7 +6265,7 @@
                           "minValue": "0",
                           "maxValue": "54",
                           "valueUnit": "year",
-                          "description": "18 years and older"
+                          "description": "No age restrictions"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -6274,7 +6286,7 @@
                           "minValue": "12",
                           "maxValue": "12",
                           "valueUnit": "Period",
-                          "description": ""
+                          "description": "All individuals, Small Business Services and Business Banking clients"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
@@ -6291,8 +6303,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 8.05,
-                          "description": "8.05% pa"
+                          "value": 8.00,
+                          "description": "8.00% pa"
                         }
                       ],
                       "specialFeature": "1 - 60 Months",
@@ -6337,7 +6349,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 8.05%"
+                          "description": "up to 8.00%"
                         },
                         {
                           "name": "Investmentterm",
@@ -6427,7 +6439,7 @@
                           "minValue": "55",
                           "maxValue": "-1",
                           "valueUnit": "year",
-                          "description": "Only available to individuals who are 55 or older"
+                          "description": "Exclusively available to individual clients, 55 years or older"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -6435,7 +6447,7 @@
                           "minValue": "5000",
                           "maxValue": "999999999",
                           "valueUnit": "ZAR",
-                          "description": "Earn minimum R 1000 per annum"
+                          "description": ""
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -6448,7 +6460,7 @@
                           "minValue": "2",
                           "maxValue": "60",
                           "valueUnit": "months",
-                          "description": "Between 1 and 60 months"
+                          "description": ""
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
@@ -6588,7 +6600,7 @@
                         {
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
-                          "description": "",
+                          "description": "All individuals, Small Business Services and Business Banking clients",
                           "maxValue": "11",
                           "minValue": "2",
                           "valueUnit": "month"
@@ -6620,7 +6632,7 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Display",
-                          "description": "Nedbank Professional clients only"
+                          "description": ""
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
@@ -6637,8 +6649,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 8.25,
-                          "description": "8.25% pa"
+                          "value": 8.05,
+                          "description": "8.05% pa"
                         }
                       ],
                       "specialFeature": "Long Term",
@@ -6671,7 +6683,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 8.25%"
+                          "description": "up to 8.05%"
                         },
                         {
                           "name": "Investmentterm",
@@ -6799,8 +6811,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 8.10,
-                          "description": "8.10% pa"
+                          "value": 8.05,
+                          "description": "8.05% pa"
                         }
                       ],
                       "specialFeature": "1 - 60 months",
@@ -6833,7 +6845,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 8.10%"
+                          "description": "up to 8.05%"
                         },
                         {
                           "name": "Investmentterm",
@@ -6923,7 +6935,7 @@
                           "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": "18 years and older"
+                          "description": "No age restrictions"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -6931,7 +6943,7 @@
                           "minValue": "100000",
                           "maxValue": "999999999",
                           "valueUnit": "ZAR",
-                          "description": "Earn minimum R 100000 per annum"
+                          "description": ""
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -6944,7 +6956,7 @@
                           "minValue": "1",
                           "maxValue": "12",
                           "valueUnit": "Period",
-                          "description": "1,2,3,6, or 12 Months"
+                          "description": "Exclusive to Nedbank Professional Banking clients"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
@@ -7081,7 +7093,7 @@
                         {
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
-                          "description": "",
+                          "description": "Exclusive to Nedbank Professional Banking clients",
                           "maxValue": "1",
                           "minValue": "0",
                           "valueUnit": "month"
@@ -7092,7 +7104,7 @@
                           "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": ""
+                          "description": "No age restrictions"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -7113,7 +7125,7 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Display",
-                          "description": "Nedbank Professional clients only"
+                          "description": ""
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
@@ -7265,7 +7277,7 @@
                           "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": "Individual clients only"
+                          "description": "No age restrictions"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -7286,7 +7298,7 @@
                         {
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
-                          "description": "",
+                          "description": "Individual clients only",
                           "maxValue": "1",
                           "minValue": "0",
                           "valueUnit": "month"
@@ -7428,7 +7440,7 @@
                           "minValue": "-1",
                           "maxValue": "-1",
                           "valueUnit": "year",
-                          "description": "No age restriction"
+                          "description": "Individuals aged 18 years or older"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -7436,7 +7448,7 @@
                           "minValue": "20000",
                           "maxValue": "999999999",
                           "valueUnit": "ZAR",
-                          "description": "Earn minimum R 20000 per annum"
+                          "description": ""
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -7449,7 +7461,7 @@
                           "minValue": "0",
                           "maxValue": "0.9",
                           "valueUnit": "Period",
-                          "description": "24 Hrs"
+                          "description": "Any individual, clubs, non-profit organisations and trust accounts"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
@@ -7466,8 +7478,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 7.55,
-                          "description": "7.55% pa"
+                          "value": 7.72,
+                          "description": "7.72% pa"
                         }
                       ],
                       "specialFeature": "12 Months",
@@ -7511,7 +7523,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 7.55%"
+                          "description": "up to 7.72%"
                         },
                         {
                           "name": "Investmentterm",
@@ -7601,7 +7613,7 @@
                           "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": "18 years and older"
+                          "description": "No age restrictions"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -7622,7 +7634,7 @@
                         {
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
-                          "description": "",
+                          "description": "Individual clients only",
                           "maxValue": "12",
                           "minValue": "12",
                           "valueUnit": "months"
