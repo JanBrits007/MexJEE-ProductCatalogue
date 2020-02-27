@@ -7,9 +7,9 @@
       "productPricing": [
         {
           "type": "AdminFee",
-          "description": "R25.00 pm",
+          "description": "R26.00 pm",
           "currency": "ZAR",
-          "amount": "25.00",
+          "amount": "26.00",
           "frequency": "Monthly"
         }
       ],
@@ -17,10 +17,15 @@
         {
           "shortDescription": "",
           "benefits": [
-            "Stop orders included",
-            "Digital banking which allows you to purchase pre-paid electricity and LOTTO tickets",
-            "Airtime without airtime (purchase airtime without having airtime using *130*001#)",
-            "Send i-Mali (send money to a cellphone number using *120*001#)"
+            "Zero monthly fee (with investment of R10 000)",
+            "Free Gold Cheque Card",
+            "4 Free Cash withdrawals at Nedbank ATM",
+            "2 Free Cash withdrawals at Nedbank Branch",
+            "1 Free Cash deposits @ Nedbank ATM (up to R3000)",
+            "Free internal and external transfers, debit & stop orders",
+            "Free Card Swipes",
+            "Free E-notifications",
+            "Earns interest on positive balances"
           ]
         }
       ],
@@ -549,7 +554,7 @@
                   "attributeType": "coreProvisioningParameter",
                   "attributeName": "provisionInBranch",
                   "valueUnit": "boolean",
-                  "value": "false"
+                  "value": "true"
                 },
                 {
                   "attributeType": "coreProvisioningParameter",
@@ -589,9 +594,9 @@
             "fee": [
               {
                 "type": "AdminFee",
-                "description": "FREE",
+                "description": "R0.45 per sms",
                 "currency": "ZAR",
-                "amount": "0",
+                "amount": "0.45",
                 "frequency": "Monthly"
               }
             ]
@@ -675,9 +680,9 @@
             "fee": [
               {
                 "type": "AdminFee",
-                "description": "R11.00 per sms",
+                "description": "R13.00 per sms",
                 "currency": "ZAR",
-                "amount": "11.00",
+                "amount": "13.00",
                 "frequency": "Transactional"
               }
             ]
@@ -1034,7 +1039,7 @@
                   "attributeType": "coreProvisioningParameter",
                   "attributeName": "provisionInBranch",
                   "valueUnit": "boolean",
-                  "value": "false"
+                  "value": "true"
                 }
               ]
             },
@@ -1132,6 +1137,14 @@
                   "attributeName": "Card Delivery"
                 }
               ]
+            },
+            {
+              "attributeGroupName": "FeatureDetails",
+              "featureAttributes": {
+                 "attributeType": "productATMLimit",
+                 "attributeName": "ATM_Limit",
+                 "value": "2000"
+              }
             }
           ]
         },
@@ -1152,9 +1165,9 @@
             "fee": [
               {
                 "type": "AdminFee",
-                "description": "R20.18 per month",
+                "description": "R23.00 per month",
                 "currency": "ZAR",
-                "amount": "20.18",
+                "amount": "23.00",
                 "frequency": "Monthly"
               }
             ]
@@ -1234,9 +1247,9 @@
             "fee": [
               {
                 "type": "AdminFee",
-                "description": "R20 per month",
+                "description": "R49 per month",
                 "currency": "ZAR",
-                "amount": "20",
+                "amount": "49",
                 "frequency": "Monthly"
               }
             ]
@@ -1461,7 +1474,28 @@
                 "frequency": "Monthly"
               }
             ]
-          }
+          },
+          "featureAttributeGroup": [
+            {
+              "attributeGroupName": "SystemRelated",
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "true"
+              }
+            },
+            {
+              "attributeGroupName": "coreProvisioningParameters",
+              "featureAttributes": [
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "false"
+                }
+              ]
+            }
+          ]
         },
         {
           "featureIdentifier": "1343",
@@ -1483,7 +1517,28 @@
                 "frequency": "Monthly"
               }
             ]
-          }
+          },
+          "featureAttributeGroup": [
+            {
+              "attributeGroupName": "SystemRelated",
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "true"
+              }
+            },
+            {
+              "attributeGroupName": "coreProvisioningParameters",
+              "featureAttributes": [
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "false"
+                }
+              ]
+            }
+          ]
         }
       ]
     }

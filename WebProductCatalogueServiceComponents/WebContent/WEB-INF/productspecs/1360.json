@@ -1,9 +1,9 @@
 {
     "product": [
         {
-            "productIdentifier": "1406",
-            "name": "Electronic OptimumPlus",
-            "shortDescription": "If you are aged 55 and older and want to invest a lump sum while enjoying capital security and a guaranteed tiered interest rate, then the Electronic OptimumPlus is for you.",
+            "productIdentifier": "1360",
+            "name": "MoneyTrader",
+            "shortDescription": "The Nedbank MoneyTrader is a money market investment account offering highly competitive rates that are linked to money market conditions.",
             "productPricing": [],
             "featuresAndBenefits": [],
             "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html",
@@ -141,10 +141,10 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
                           "isComparable": "false",
-                          "minValue": "55",
+                          "minValue": "18",
                           "maxValue": "999",
                           "valueUnit": "year",
-                          "description": "55 years and older"
+                          "description": "18 years and older"
                         }
                     ]
                 },
@@ -334,7 +334,7 @@
                         {
                             "attributeType": "int",
                             "attributeName": "productType",
-                            "value": 52
+                            "value": 31
                         },
                         {
                             "attributeType": "int",
@@ -369,19 +369,18 @@
                         {
                             "attributeType": "Feature",
                             "attributeName": "minimumAmount",
-                            "minValue": 1000,
+                            "minValue": 50000,
                             "valueUnit": "ZAR",
-                            "minMonth": 1,
-                            "maxMonth": 60,
+                            "recurringMinValue": 5000,
                             "termNotice": [
                                 {
                                     "details": [
                                         {
-                                            "key": "term",
-                                            "value": 60,
-                                            "label": "months",
-                                            "code": "M",
-                                            "termPeriodMonth": 60
+                                            "key": "notice",
+                                            "value": 1,
+                                            "label": "day",
+                                            "code": "D",
+                                            "termPeriodMonth": 1
                                         }
                                     ]
                                 }
@@ -390,26 +389,27 @@
                         {
                             "attributeType": "Feature",
                             "attributeName": "interestFrequency",
+                            "allowedFrequency": []
+                        },
+                        {
+                            "attributeType": "Feature",
+                            "attributeName": "paymentFrequency",
                             "allowedFrequency": [
+                                {
+                                    "code": "W",
+                                    "name": "Weekly",
+                                    "value": [
+                                        "Monday",
+                                        "Tuesday",
+                                        "Wednesday",
+                                        "Thursday",
+                                        "Friday",
+                                        "Saturday"
+                                    ]
+                                },
                                 {
                                     "code": "M",
                                     "name": "Monthly"
-                                },
-                                {
-                                    "code": "Q",
-                                    "name": "Quarterly"
-                                },
-                                {
-                                    "code": "H",
-                                    "name": "Half-yearly"
-                                },
-                                {
-                                    "code": "A",
-                                    "name": "Yearly"
-                                },
-                                {
-                                    "code": "E",
-                                    "name": "On Expiry"
                                 }
                             ]
                         }

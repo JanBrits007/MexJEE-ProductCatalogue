@@ -1,9 +1,9 @@
 {
     "product": [
         {
-            "productIdentifier": "1406",
-            "name": "Electronic OptimumPlus",
-            "shortDescription": "If you are aged 55 and older and want to invest a lump sum while enjoying capital security and a guaranteed tiered interest rate, then the Electronic OptimumPlus is for you.",
+            "productIdentifier": "1130",
+            "name": "Prime Select",
+            "shortDescription": "Prime Select is a A fixed-term investment, where the interest rate is linked to the prime lending rate, which allows limited additional deposits and withdrawals.",
             "productPricing": [],
             "featuresAndBenefits": [],
             "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html",
@@ -141,10 +141,10 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
                           "isComparable": "false",
-                          "minValue": "55",
+                          "minValue": "18",
                           "maxValue": "999",
                           "valueUnit": "year",
-                          "description": "55 years and older"
+                          "description": "18 years and older"
                         }
                     ]
                 },
@@ -232,11 +232,6 @@
                             "value": false
                         },
                         {
-                            "attributeType": "string",
-                            "attributeName": "CODEngine",
-                            "value": "InvestmentsCOD"
-                        },
-                        {
                             "attributeType": "boolean",
                             "attributeName": "existingToBankClientDataReConfirmationRequired",
                             "value": false
@@ -307,6 +302,11 @@
                             "value": 1
                         },
                         {
+                            "attributeType": "int",
+                            "attributeName": "productType",
+                            "value": 3
+                        },
+                        {
                             "attributeType": "string",
                             "attributeName": "productIDType",
                             "value": "ChannelProductID"
@@ -330,11 +330,6 @@
                             "attributeType": "string",
                             "attributeName": "productCategoryName",
                             "value": "INVESTMENTS"
-                        },
-                        {
-                            "attributeType": "int",
-                            "attributeName": "productType",
-                            "value": 52
                         },
                         {
                             "attributeType": "int",
@@ -369,10 +364,10 @@
                         {
                             "attributeType": "Feature",
                             "attributeName": "minimumAmount",
-                            "minValue": 1000,
-                            "valueUnit": "ZAR",
-                            "minMonth": 1,
+                            "minValue": 5000,
+                            "minMonth": 3,
                             "maxMonth": 60,
+                            "valueUnit": "ZAR",
                             "termNotice": [
                                 {
                                     "details": [
@@ -406,7 +401,7 @@
                                 {
                                     "code": "A",
                                     "name": "Yearly"
-                                },
+                                },                                
                                 {
                                     "code": "E",
                                     "name": "On Expiry"

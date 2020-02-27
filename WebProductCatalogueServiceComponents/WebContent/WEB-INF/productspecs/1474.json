@@ -25,7 +25,9 @@
             "ZERO annual fees on your cheque card.",
             "ZERO fees for balance enquiries and inter-account transfers on the MoneyApp™ and all other self-service platforms",
             "Ability to make online purchases with your card.",
-            "Free access to the www.unlocked.me experience and major discounts on the site."
+            "Free access to the www.unlocked.me experience and major discounts on the site.",
+            "Pay-as-you-use fees will apply on other transactions, see the pricing guide",
+            "MyPocket - a free budgeting and savings pocket linked to your bank account. It earns you interest and gives you instant access to your money. For more info click here."
           ]
         }
       ],
@@ -976,9 +978,9 @@
             "fee": [
               {
                 "type": "AdminFee",
-                "description": "R11.00 per sms",
+                "description": "R13.00 per sms",
                 "currency": "ZAR",
-                "amount": "11.00",
+                "amount": "13.00",
                 "frequency": "Transactional"
               }
             ]
@@ -1363,7 +1365,15 @@
                 "attributeType": "AvailableAction",
                 "attributeName": "Card Delivery"
               }
-            }
+            },
+            {
+              "attributeGroupName": "FeatureDetails",
+              "featureAttributes": {
+                 "attributeType": "productATMLimit",
+                 "attributeName": "ATM_Limit",
+                 "value": "2000"
+              }
+           }
           ]
         },
         {
@@ -1436,7 +1446,7 @@
                   "attributeType": "coreProvisioningParameter",
                   "attributeName": "provisionInBranch",
                   "valueUnit": "boolean",
-                  "value": "false"
+                  "value": "true"
                 }
               ]
             },

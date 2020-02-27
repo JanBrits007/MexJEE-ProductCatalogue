@@ -1,9 +1,9 @@
 {
     "product": [
         {
-            "productIdentifier": "1405",
-            "name": "Electronic Fixed Deposit",
-            "shortDescription": "Looking for a lump sum, capital guaranteed investment option? Offering guaranteed interest rates for the term of your investment, the Nedbank Electronic Fixed Deposit may be the ideal short or medium term investment option for you.",
+            "productIdentifier": "1139",
+            "name": "Platinum Invest",
+            "shortDescription": "Platinum Invest is a A money market investment account with highly competitive interest rates , exclusively for Professional Banking clients.",
             "productPricing": [],
             "featuresAndBenefits": [],
             "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html",
@@ -142,7 +142,7 @@
                           "attributeName": "Age",
                           "isComparable": "false",
                           "minValue": "18",
-                          "maxValue": "55",
+                          "maxValue": "999",
                           "valueUnit": "year",
                           "description": "18 years and older"
                         }
@@ -334,7 +334,7 @@
                         {
                             "attributeType": "int",
                             "attributeName": "productType",
-                            "value": 51
+                            "value": 32
                         },
                         {
                             "attributeType": "int",
@@ -369,19 +369,18 @@
                         {
                             "attributeType": "Feature",
                             "attributeName": "minimumAmount",
-                            "minValue": 1000,
+                            "minValue": 500,
                             "valueUnit": "ZAR",
-                            "minMonth": 1,
-                            "maxMonth": 60,
+                            "recurringMinValue": 100,
                             "termNotice": [
                                 {
                                     "details": [
                                         {
-                                            "key": "term",
-                                            "value": 60,
-                                            "label": "months",
-                                            "code": "M",
-                                            "termPeriodMonth": 60
+                                            "key": "notice",
+                                            "value": 1,
+                                            "label": "day",
+                                            "code": "D",
+                                            "termPeriodMonth": 1
                                         }
                                     ]
                                 }
@@ -390,26 +389,27 @@
                         {
                             "attributeType": "Feature",
                             "attributeName": "interestFrequency",
+                            "allowedFrequency": []
+                        },
+                        {
+                            "attributeType": "Feature",
+                            "attributeName": "paymentFrequency",
                             "allowedFrequency": [
+                                {
+                                    "code": "W",
+                                    "name": "Weekly",
+                                    "value": [
+                                        "Monday",
+                                        "Tuesday",
+                                        "Wednesday",
+                                        "Thursday",
+                                        "Friday",
+                                        "Saturday"
+                                    ]
+                                },
                                 {
                                     "code": "M",
                                     "name": "Monthly"
-                                },
-                                {
-                                    "code": "Q",
-                                    "name": "Quarterly"
-                                },
-                                {
-                                    "code": "H",
-                                    "name": "Half-yearly"
-                                },
-                                {
-                                    "code": "A",
-                                    "name": "Yearly"
-                                },
-                                {
-                                    "code": "E",
-                                    "name": "On Expiry"
                                 }
                             ]
                         }
