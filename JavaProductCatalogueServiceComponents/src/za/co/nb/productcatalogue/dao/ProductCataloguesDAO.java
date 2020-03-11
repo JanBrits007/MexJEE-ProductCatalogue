@@ -1,146 +1,72 @@
 package za.co.nb.productcatalogue.dao;
 
-import java.sql.Clob;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-import javax.rmi.PortableRemoteObject;
-import javax.sql.DataSource;
+import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import za.co.nb.productcatalogue.dto.ProductCatalogueJSON;
-
 public class ProductCataloguesDAO {
 
 	private final Log mLog = LogFactory.getLog(getClass());
-	//private static final String JNDI = "jdbc/bpmexdb";
-	private static final String JNDI = "jdbc/productCatalogue";
 
-	private Object lookupObject(String pJNDI) throws NamingException {
-		Object objref = null;
-		Context vInitialContext = new InitialContext();
-		try {
-			objref = vInitialContext.lookup("cell/persistent/" + pJNDI);
-		}
-		catch(Exception e) {
-			try {
-				objref = vInitialContext.lookup("node/persistent/" + pJNDI);
-			}
-			catch(Exception e2) {
-				objref = vInitialContext.lookup(pJNDI);					
-			}
-		}
-		
-		return objref;
-	}
-	
-	private Connection getDBConnection() throws Exception {
-		mLog.debug("Trace 1 >>" + JNDI + "<<");
+	private String readProductHierarchyFromResourceFile(String productCatalogueID) throws Exception {
+    	mLog.debug("Trace 1 >>" + productCatalogueID + "<<");
 
-		Connection vConnection = null;
-		
 		try {
-			Object objref = lookupObject(JNDI);//mInitialContext.lookup(pJndiName);
-			DataSource vDataSource = (DataSource)PortableRemoteObject.narrow(objref, DataSource.class);
-			vConnection = vDataSource.getConnection();
-
-			mLog.debug("Trace 2");
-		} catch (Exception e) {
-			mLog.error(e);
-			throw e;
-		}
-		
-		return vConnection;
-	}
-	
-	private void cleanupConnection(Connection pConnection, ResultSet pResultSet, PreparedStatement pPreparedStatement) {
-		try {
-			if(pResultSet != null && !pResultSet.isClosed()) {
-				pResultSet.close();
+			InputStream inputStream = ProductSpecificationsServiceDAO.class.getResourceAsStream("/productcatalogue/" + productCatalogueID + ".json");
+			
+			if(inputStream == null) {
+		    	mLog.debug("Trace 2");
+				throw new Exception("Unable to find product hierarchy for catalogue ID " + productCatalogueID);
 			}
 			
-			if(pPreparedStatement != null && !pPreparedStatement.isClosed()) {
-				pPreparedStatement.close();
-			}
+			ByteArrayOutputStream result = new ByteArrayOutputStream();
+			byte[] buffer = new byte[1024];
+			int length;
 			
-			if(pConnection != null && !pConnection.isClosed()) {
-				pConnection.close();
+			while ((length = inputStream.read(buffer)) != -1) {
+			    result.write(buffer, 0, length);
 			}
-		}
-		catch(Exception e) {
+
+	    	mLog.debug("Trace 3");
+			
+			String JSONHierarchy = result.toString(StandardCharsets.UTF_8.name());
+	
+			return JSONHierarchy;
+		} catch (IOException e) {
 			e.printStackTrace();
-			mLog.error(e);
-		}		
-	}
-
-	private void populateDatabase() throws Exception {
-		PreparedStatement vPreparedStatement = null;
-		ResultSet vResultSet = null;
-		Connection vConnection = null;
-
-		try {
-			vConnection = getDBConnection();
-			
-			vPreparedStatement = vConnection.prepareStatement("insert into PRODCATALOGUES values (?, ?, ?)");
-			vPreparedStatement.setString(1, "SALESCAT1");
-			vPreparedStatement.setString(2, "{'a':'aaa'}");
-			vPreparedStatement.setString(3, "{'a':'aaa'}");
-			vPreparedStatement.executeUpdate();
-		}
-		catch(Exception e) {
-			mLog.error(e);
-			throw e;
-		}
-		finally {
-			cleanupConnection(vConnection, vResultSet, vPreparedStatement);
+			throw new Exception("Unable to find product hierarchy for catalogue ID " + productCatalogueID);
 		}
 	}
 	
 	public String getProductCatalogueJSONByID(String pProductCatalogueID) throws Exception {
 		mLog.debug("Trace 1 >>" + pProductCatalogueID + "<<");
 
-		if(pProductCatalogueID.equalsIgnoreCase("create")) {
-			populateDatabase();
-			return null;
-		}
-		
-		PreparedStatement vPreparedStatement = null;
-		ResultSet vResultSet = null;
-		Connection vConnection = null;
-		String vProductCatalogueDetailsJSON = "";
-		
-		try {
-			vConnection = getDBConnection();
+		if (pProductCatalogueID.equalsIgnoreCase("all")) {
+	    	mLog.debug("Trace 2");
+	    	
+			String result = getProductCatalogAllJson(pProductCatalogueID);
+			return result;
+		} else {
+	    	mLog.debug("Trace 3");
 			
-			vPreparedStatement = vConnection.prepareStatement("select JSONDETAILS from PRODCATALOGUES where ID = ?");
-			vPreparedStatement.setString(1, pProductCatalogueID);
-			vResultSet = vPreparedStatement.executeQuery();
-			
-			if(vResultSet != null && vResultSet.next()) {
-				Clob vClob = vResultSet.getClob("JSONDETAILS");
-				vProductCatalogueDetailsJSON =  vClob.getSubString(1,(int)vClob.length());
-			}
+			return readProductHierarchyFromResourceFile(pProductCatalogueID);
 		}
-		catch(Exception e) {
-			mLog.error(e);
-			throw e;
-		}
-		finally {
-			cleanupConnection(vConnection, vResultSet, vPreparedStatement);
-		}
-		
-		mLog.debug("Trace 2");
-		mLog.debug("Trace 3 >>" + vProductCatalogueDetailsJSON.length() + "<<");
-		
-		ProductCatalogueJSON vProductCatalogueJSON = new ProductCatalogueJSON();
-		vProductCatalogueJSON.setCatalogue(vProductCatalogueDetailsJSON.toString());
-		
-		return vProductCatalogueDetailsJSON;
+	}
+
+	private String getProductCatalogAllJson(String id) throws Exception, FileNotFoundException {
+		throw new Exception("The use of the database for product specifications has been deprecated. Please maintain product specifications in the relevant GIT repo.");
+	}
+
+	private String findProductDetailsJSONByID(String pProductCatalogueID) throws Exception {
+		throw new Exception("The use of the database for product specifications has been deprecated. Please maintain product specifications in the relevant GIT repo.");
+	}
+
+	private String findProductDetaJSONByID(String pProductCatalogueID) throws Exception {
+		throw new Exception("The use of the database for product specifications has been deprecated. Please maintain product specifications in the relevant GIT repo.");
 	}
 }

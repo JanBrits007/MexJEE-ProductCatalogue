@@ -95,7 +95,7 @@ public interface IChannelProductCatalogue {
     @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
     public MaintainCatalogueResponseType maintainCatalogue(
         @WebParam(name = "MaintainCatalogueRequest", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", partName = "MaintainCatalogueRequest")
-        MaintainCatalogueRequestType maintainCatalogueRequest);
+        MaintainCatalogueRequestType maintainCatalogueRequest) throws Exception;
 
     /**
      * Mapping Product ID between ProductSpec and Siyaka
