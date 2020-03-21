@@ -1,20 +1,20 @@
 package za.co.nb.productcatalogue.dao;
 
 import java.io.ByteArrayInputStream;
-import java.sql.Clob;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.rmi.PortableRemoteObject;
-import javax.sql.DataSource;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBIntrospector;
 import javax.xml.bind.Unmarshaller;
@@ -22,187 +22,221 @@ import javax.xml.bind.Unmarshaller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import za.co.nb.productcatalogue.dto.ProductSpecificationJSON;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.MaintainCatalogueRequestType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
 
 public class ProductSpecificationsServiceDAO {
 
 	private final Log mLog = LogFactory.getLog(getClass());
-	//private static final String JNDI = "jdbc/CSSBPMS"; 
-	private static final String JNDI = "jdbc/productCatalogue";
-	private static int mUniquenessCounter = 0;
-	private static Map<Integer,ProductType> ptCache = new ConcurrentHashMap<Integer,ProductType>();
+	private static Map<String, ProductType> ptCache = new HashMap<String, ProductType>();
+	private static Map<String, String> ptXMLStringCache = new HashMap<String, String>();
+
+	public String createProductSpecificationJSON(String pCustomerXML, String pName, String pLastName, Calendar pDateOfBirth, String pIDType, String pIDNumber, String pCustomerType, String pRequiredCustomerUID) throws Exception {
+		throw new Exception("The use of the DB2 database for product specifications has been deprecated. Please maintain product specifications in the relevant GIT repo.");
+	}
+
+	public String getProductSpecificationXMLStringByID(String pProductSpecificationID) throws Exception {
+		mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
+
+		if (ptXMLStringCache.containsKey(pProductSpecificationID)) {
+			mLog.debug("Trace 2 >>Using Cache<<");
+			return ptXMLStringCache.get(pProductSpecificationID);
+		} 
+		else {
+			mLog.debug("Trace 3 >>Loading from Resource File<<,>>" + ptCache.keySet().size() + "<<");
+
+			String xmlString = readProductSpecificationFromResourceFile(pProductSpecificationID);
+			
+			ptXMLStringCache.put(pProductSpecificationID, xmlString);
+			
+			return xmlString;
+		}
+	}
 	
+	public ProductType getProductSpecificationXMLByID(String pProductSpecificationID) throws Exception {
+		mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
+
+		List<Integer> productIDs = new ArrayList<Integer>();
+		productIDs.add(new Integer(pProductSpecificationID));
+		
+		List<ProductType> productSpecifications = getProductSpecificationXMLByID(productIDs);
+		
+		return productSpecifications.get(0);
+	}
+	
+	public ProductType getProductSpecificationXMLByID(int pProductSpecificationID) throws Exception {
+		mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
+
+		List<Integer> productIDs = new ArrayList<Integer>();
+		productIDs.add(new Integer(pProductSpecificationID));
+		
+		List<ProductType> productSpecifications = getProductSpecificationXMLByID(productIDs);
+		
+		return productSpecifications.get(0);
+	}
+
+	public List<ProductType> getProductSpecificationXMLByID(List<Integer> pProductSpecificationID) throws Exception {
+		mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
+
+		ArrayList<ProductType> products = new ArrayList<ProductType>();
+
+		for (Integer id : pProductSpecificationID) {
+			mLog.debug("Trace 2 >>" + id + "<<");
+			
+			// TODO: Switch out the product ID if there is a string binding
+			// substitution.
+			
+			/*
+			 * if (CachedNameSpaceBindingHelper.getNameSpaceBinding(
+			 * "PC_1019Substitution", "3019").equalsIgnoreCase("true")) {
+			 * pProductSpecificationID.add(3019); }
+			 */
+			
+			if (ptCache.containsKey(id.toString())) {
+				mLog.debug("Trace 3 >>Using Cache<<");
+				products.add(ptCache.get(id.toString()));
+			} 
+			else {
+				mLog.debug("Trace 4 >>Loading from Resource File<<,>>" + ptCache.keySet().size() + "<<");
+				za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ObjectFactory objectFactory = new za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ObjectFactory();
+				ProductType prdType = objectFactory.createProductType();
+
+				// We now only read from files.
+				String xmlString = readProductSpecificationFromResourceFile(id);
+
+				JAXBContext jaxbContext = JAXBContext.newInstance("za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1");
+				Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+				Object schemaObject = JAXBIntrospector.getValue(unmarshaller.unmarshal(new ByteArrayInputStream(xmlString.getBytes())));
+
+				prdType = (ProductType) schemaObject;
+				products.add(prdType);
+
+				// Put the product spec in the cache.
+				ptCache.put(id.toString(), prdType);
+			}
+		}
+
+		mLog.debug("Trace 5");
+		
+		return products;
+	}
+
+	public String maintainCatalogueOperations(MaintainCatalogueRequestType maintainCatalogueRequest) throws Exception {
+		throw new Exception("The use of the database for product specifications has been deprecated. Please maintain product specifications in the relevant GIT repo.");
+	}
+
+	private String readProductSpecificationFromResourceFile(Integer productID) throws Exception {
+		return readProductSpecificationFromResourceFile(productID.toString());
+	}
+
 	private Object lookupObject(String pJNDI) throws NamingException {
+		mLog.debug("Trace 1");
+
 		Object objref = null;
 		Context vInitialContext = new InitialContext();
 		try {
+			mLog.debug("Trace 2");
+
 			objref = vInitialContext.lookup("cell/persistent/" + pJNDI);
 		}
 		catch(Exception e) {
+			mLog.debug("Trace 3");
+
 			try {
+				mLog.debug("Trace 4");
+
 				objref = vInitialContext.lookup("node/persistent/" + pJNDI);
 			}
 			catch(Exception e2) {
+				mLog.debug("Trace 5");
+				
 				objref = vInitialContext.lookup(pJNDI);					
 			}
 		}
+
+		mLog.debug("Trace 6");
 		
 		return objref;
 	}
 	
-	private Connection getDBConnection() throws Exception {
-		mLog.debug("Trace 1 >>" + JNDI + "<<");
+	private String retrieveProductIDSubstitution(String productID) {
+    	mLog.debug("Trace 1");
 
-		Connection vConnection = null;
-		
 		try {
-			Object objref = lookupObject(JNDI);//mInitialContext.lookup(pJndiName);
-			DataSource vDataSource = (DataSource)PortableRemoteObject.narrow(objref, DataSource.class);
-			vConnection = vDataSource.getConnection();
-
-			mLog.debug("Trace 2");
-		} catch (Exception e) {
-			mLog.error(e);
-			throw e;
-		}
-		
-		return vConnection;
-	}
-	
-	private void cleanupConnection(Connection pConnection, ResultSet pResultSet, PreparedStatement pPreparedStatement) {
-		try {
-			if(pResultSet != null && !pResultSet.isClosed()) {
-				pResultSet.close();
-			}
+			Object objref = lookupObject("PC_" + productID + "Substitution");
+			String value = (String)PortableRemoteObject.narrow(objref, String.class);
 			
-			if(pPreparedStatement != null && !pPreparedStatement.isClosed()) {
-				pPreparedStatement.close();
-			}
+	    	mLog.debug("Trace 2 >>" + value + "<<");
 			
-			if(pConnection != null && !pConnection.isClosed()) {
-				pConnection.close();
-			}
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-			mLog.error(e);
-		}		
-	}
-
-	public String createProductSpecificationJSON(String pCustomerXML, String pName, String pLastName, Calendar pDateOfBirth, String pIDType, String pIDNumber, String pCustomerType, String pRequiredCustomerUID) throws Exception {
-		PreparedStatement vPreparedStatement = null;
-		ResultSet vResultSet = null;
-		Connection vConnection = null;
-
-		String vCustomerUID;
-		
-		if(pRequiredCustomerUID == null) {
-			vCustomerUID = "" + (new Date().getTime() + mUniquenessCounter++);
-		}
-		else {
-			vCustomerUID = pRequiredCustomerUID;
-		}
-		
-		try {
-			vConnection = getDBConnection();
-			
-			vPreparedStatement = vConnection.prepareStatement("insert into CUSTOMERS values (?,?,?,?,?,?,?,?)");
-			vPreparedStatement.setString(1, vCustomerUID);
-			vPreparedStatement.setString(2, pName);
-			vPreparedStatement.setString(3, pLastName);
-			
-			if(pDateOfBirth != null) {
-				vPreparedStatement.setDate(4, new java.sql.Date(pDateOfBirth.getTime().getTime()));				
+			if(value != null) {
+				mLog.debug("Trace 3 >>" + value + "<<");
+				return value;
 			}
 			else {
-				vPreparedStatement.setDate(4, null);				
+		    	mLog.debug("Trace 4");
+
+		    	return productID;
 			}
-			
-			vPreparedStatement.setBytes(5, pCustomerXML.getBytes());
-			vPreparedStatement.setString(6, pIDType);
-			vPreparedStatement.setString(7, pIDNumber);
-			vPreparedStatement.setString(8, pCustomerType);
-			vPreparedStatement.execute();
 		}
 		catch(Exception e) {
-			mLog.error(e);
-			throw e;
+	    	mLog.debug("Trace 5");
+	    	return productID;
 		}
-		finally {
-			cleanupConnection(vConnection, vResultSet, vPreparedStatement);
-		}
-		
-		return vCustomerUID;
 	}
 	
-	public ProductType  getProductSpecificationXMLByID(int pProductSpecificationID) throws Exception {
-		mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
-		if(ptCache.containsKey(pProductSpecificationID)){
-			return ptCache.get(pProductSpecificationID);
-		}
-		
-		PreparedStatement vPreparedStatement = null;
-		ResultSet vResultSet = null;
-		Connection vConnection = null;
-		za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ObjectFactory objectFactory = new za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ObjectFactory(); 
-		mLog.debug("Trace 2 >>" + pProductSpecificationID + "<<");
-		ProductType prdType = objectFactory.createProductType();
-		try {
-			vConnection = getDBConnection();
-			
-			vPreparedStatement = vConnection.prepareStatement("select XMLHEADER, XMLDETAILS from PRODUCTSPECS where ID = ?");
-			vPreparedStatement.setInt(1, pProductSpecificationID);
-			vResultSet = vPreparedStatement.executeQuery();
-			mLog.debug("Trace 3 >>");
-			if(vResultSet != null && vResultSet.next()) {
-				Clob vClob = vResultSet.getClob("XMLDETAILS");
-				String xmlString =  vClob.getSubString(1,(int)vClob.length());
-				mLog.debug("Trace 2 >>" + xmlString + "<<");
-				JAXBContext jaxbContext = JAXBContext.newInstance("za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1");
-				Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-				Object schemaObject = JAXBIntrospector.getValue(unmarshaller.unmarshal(new ByteArrayInputStream(xmlString.getBytes())));
-				
-				prdType = (ProductType)schemaObject;				
-			}
-		}
-		catch(Exception e) {
-			//mLog.error(e);
-			mLog.debug("Exception from product cache"+e);
-			throw e;
-		}
-		finally {
-			cleanupConnection(vConnection, vResultSet, vPreparedStatement);
-		}
-		ptCache.put(pProductSpecificationID, prdType);
-		return prdType;
-	}
+	private String readProductSpecificationFromResourceFile(String productID) throws Exception {
+    	mLog.debug("Trace 1 >>" + productID + "<<");
 
-	public void debugDatabaseContents() {
-		PreparedStatement vPreparedStatement = null;
-		ResultSet vResultSet = null;
-		Connection vConnection = null;
-		int count = 0;
-		
+    	// Look for a string binding that switches this product spec out for another.
+    	productID = retrieveProductIDSubstitution(productID);
+
+    	mLog.debug("Trace 1.1 >>" + productID + "<<");
+    	
 		try {
-			mLog.debug("PRODUCTSPECS TABLE CONTENTS ARE :");
+			InputStream inputStream = ProductSpecificationsServiceDAO.class.getResourceAsStream("/productspecs/" + productID + ".xml");
 			
-			vConnection = getDBConnection();
-			
-			String vSQL = "select * from PRODUCTSPECS"; 
-			
-			vPreparedStatement = vConnection.prepareStatement(vSQL);
-			vResultSet = vPreparedStatement.executeQuery();
-			
-			if(vResultSet != null && vResultSet.next()) {
-				mLog.debug("ProductSpecification[" + count++ + "]: " + vResultSet.getString(1) + "," + vResultSet.getString(2) + "," + vResultSet.getString(3) + "," + vResultSet.getString(4));
+			if(inputStream == null) {
+		    	mLog.debug("Trace 2");
+				throw new Exception("Unable to find specification XML file for product ID " + productID);
 			}
-		}
-		catch(Exception e) {
-			mLog.error(e);
-		}
-		finally {
-			cleanupConnection(vConnection, vResultSet, vPreparedStatement);
-		}
+			
+			ByteArrayOutputStream result = new ByteArrayOutputStream();
+			byte[] buffer = new byte[1024];
+			int length;
+			
+			while ((length = inputStream.read(buffer)) != -1) {
+			    result.write(buffer, 0, length);
+			}
+
+	    	mLog.debug("Trace 3");
+			
+			String XMLSpec = result.toString(StandardCharsets.UTF_8.name());
+		
+			return XMLSpec;
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw new Exception("Unable to find specification XML file for product ID " + productID);
+		}		
 	}
+	
+    public static void main(String[] args) {
+    	System.out.println("Trace 1");
+
+    	try {
+			ProductSpecificationsServiceDAO dao = new ProductSpecificationsServiceDAO();
+			
+	    	List<Integer> productIDs = new ArrayList<Integer>();
+	    	productIDs.add(new Integer(1019));
+	    	
+	    	try {
+				dao.getProductSpecificationXMLByID(productIDs);
+				dao.getProductSpecificationXMLByID(productIDs);
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+    }
 }

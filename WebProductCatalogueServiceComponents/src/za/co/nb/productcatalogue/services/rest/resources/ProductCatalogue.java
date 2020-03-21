@@ -1,13 +1,4 @@
-// IBM Confidential OCO Source Material
-// 5725-F81 (C) COPYRIGHT International Business Machines Corp. 2011,2013
-// The source code for this program is not published or otherwise divested
-// of its trade secrets, irrespective of what has been deposited with the
-// U.S. Copyright Office.
-
 package za.co.nb.productcatalogue.services.rest.resources;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.annotation.security.PermitAll;
 import javax.ejb.Stateless;
@@ -23,28 +14,28 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import com.github.underscore.lodash.L;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import za.co.nb.productcatalogue.dao.ProductCataloguesDAO;
 import za.co.nb.productcatalogue.dto.ProductIdentifiers;
-import za.co.nedbank.cr1.common.helper.mLog;
-import za.co.nedbank.cr1.common.helper.Strings;
 
 @Path( "/producthierarchy" )
 @Stateless
 public class ProductCatalogue {
 
-    /**
-     * The name of this class
-     */
-    public static final String className = ProductCatalogue.class.getName();
-
+	private final Log mLog = LogFactory.getLog(getClass());
     private ProductCataloguesDAO mProductCataloguesDAO;
     
     private ProductCataloguesDAO getProductCataloguesDAO() {
+    	mLog.debug("Trace 1");
+
     	if(mProductCataloguesDAO == null) {
+        	mLog.debug("Trace 2");
     		mProductCataloguesDAO = new ProductCataloguesDAO();
     	}
+    	
+    	mLog.debug("Trace 3");
     	
     	return mProductCataloguesDAO;
     }
@@ -62,14 +53,17 @@ public class ProductCatalogue {
     @Path( "/{id}" )
     @Produces( MediaType.APPLICATION_JSON )
     public Response getProductCatalogueByID( @PathParam( "id" ) String id ) {
+    	mLog.debug("Trace 1");
     	
     	try {
 	        String vProductCatalogueJSON = getProductCataloguesDAO().getProductCatalogueJSONByID(id);
 
 	        if(vProductCatalogueJSON != null) {
+	        	mLog.debug("Trace 2");
 		        return Response.ok(vProductCatalogueJSON).build();
 	        }
 	        else {
+	        	mLog.debug("Trace 3");
 	        	return Response.ok(Status.NOT_FOUND).build();
 	        }
     	}
@@ -78,21 +72,31 @@ public class ProductCatalogue {
             return Response.status(Status.INTERNAL_SERVER_ERROR).build();
     	}
     }
+    
     @POST
     @Path( "/selection" )
     @Produces( MediaType.APPLICATION_JSON )
     @Consumes( "application/json" )
     public Response getProductCatalogueBySelection( ProductIdentifiers identifiers ) throws Exception {
+    	throw new Exception("This API has been deprecated");
+
+/*    	
+    	mLog.debug("Trace 1");
+    	
     	Map<String,Object> result = new HashMap<String,Object>();
-		for(String id: identifiers.getIdentifiers()){
-			mLog.infoln("Retrieving producid",id);
+
+    	for(String id: identifiers.getIdentifiers()){
+			mLog.debug("Retrieving productID >>" + id + "<<");
 			
 			String json = getProductCataloguesDAO().findProductDetailsJSONByID(id.toString());
 			if(!Strings.isEmpty(json)) {
+		    	mLog.debug("Trace 2");
+		    	
 				result.put(id, L.fromJson(json));
 			}
 		}
         
     	return Response.ok(L.toJson(result)).build();
+*/    	
     }
 }
