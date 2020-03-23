@@ -22,8 +22,12 @@ import javax.xml.bind.Unmarshaller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import za.co.nb.onboarding.casemanagement.BusinessCaseManagementDAO;
+import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.MaintainCatalogueRequestType;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductAttributeGroupType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductattributesType;
 
 public class ProductSpecificationsServiceDAO {
 
@@ -34,7 +38,7 @@ public class ProductSpecificationsServiceDAO {
 	public String createProductSpecificationJSON(String pCustomerXML, String pName, String pLastName, Calendar pDateOfBirth, String pIDType, String pIDNumber, String pCustomerType, String pRequiredCustomerUID) throws Exception {
 		throw new Exception("The use of the DB2 database for product specifications has been deprecated. Please maintain product specifications in the relevant GIT repo.");
 	}
-
+	
 	public String getProductSpecificationXMLStringByID(String pProductSpecificationID) throws Exception {
 		mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
 
@@ -52,6 +56,137 @@ public class ProductSpecificationsServiceDAO {
 			return xmlString;
 		}
 	}
+
+	public ProductType getProductSpecificationXMLStringByIDAndArrangementID(String productSpecificationID, String arrangementID) throws Exception {
+		mLog.debug("Trace 1");
+
+		// First get the case ID based on the arrangement ID.
+		if(specHasSubstitutionRules(productSpecificationID)) {
+			mLog.debug("Trace 2");
+			
+			// Must check for case specific substitutions.
+			ArrangementMetricsDAO dao = new ArrangementMetricsDAO();
+			
+			String caseID = dao.retrieveCaseIDByArrangementID(arrangementID);
+			
+			return getProductSpecificationXMLStringByIDAndCaseID(productSpecificationID, caseID);
+		}
+		else {
+			mLog.debug("Trace 3");
+			
+			return getProductSpecificationXMLByID(productSpecificationID);
+		}
+	}	
+
+	private boolean specHasSubstitutionRules(String productID) throws Exception {
+		mLog.debug("Trace 1");
+		
+		// Get the product spec.
+		ProductType productSpec = getProductSpecificationXMLByID(productID);
+
+		mLog.debug("Trace 2");
+		
+		// What environment are we running in?
+		Object objref = lookupObject("ENVIRONMENT");
+		String environment = (String)PortableRemoteObject.narrow(objref, String.class);
+		
+		// Now check if there are substitution rules.
+		for(ProductAttributeGroupType attributeGroup : productSpec.getProductAttributeGroup()) {
+			mLog.debug("Trace 3");
+
+			// Is this the substitution group.
+			if(attributeGroup.getAttributeGroupName().equalsIgnoreCase("SubstitutionRules" + environment)) {
+				// We've found a substitution group.
+				mLog.debug("Trace 4");
+
+				return true;
+			}
+		}
+
+		mLog.debug("Trace 5");
+		
+		return false;
+	}
+	
+	public ProductType getProductSpecificationXMLStringByIDAndCaseID(String productSpecificationID, String caseID) throws Exception {
+		mLog.debug("Trace 1 >>" + productSpecificationID + "<<,>>" + caseID + "<<");
+				
+		// Get the product spec.
+		ProductType productSpec = getProductSpecificationXMLByID(productSpecificationID);
+		
+		// What environment are we running in?
+		Object objref = lookupObject("ENVIRONMENT");
+		String environment = (String)PortableRemoteObject.narrow(objref, String.class);
+
+		mLog.debug("Trace 2 >>" + environment + "<<");
+
+		String substitutedProductID = null;
+		String bankerWhitelist = null;
+		
+		// Now check if there are substitution rules.
+		for(ProductAttributeGroupType attributeGroup : productSpec.getProductAttributeGroup()) {
+			mLog.debug("Trace 3");
+
+			// Is this the substitution group.
+			if(attributeGroup.getAttributeGroupName().equalsIgnoreCase("SubstitutionRules" + environment)) {
+				// We've found a substitution group.
+				mLog.debug("Trace 4");
+				
+				// Must the substitution be done for ALL users or the specific banker that started this case?
+				for(ProductattributesType attribute : attributeGroup.getProductAttributes()) {
+					mLog.debug("Trace 5");
+
+					if(attribute.getAttributeName().equalsIgnoreCase("SubstituteForWhiteListedNBNumbers")) {
+						mLog.debug("Trace 6");
+						
+						bankerWhitelist = attribute.getValue();
+					}
+					else if(attribute.getAttributeName().equalsIgnoreCase("SubstituteForProductID")) {
+						mLog.debug("Trace 6");
+
+						substitutedProductID = attribute.getValue();
+					}
+				}
+
+				try {
+					// Now check if there is a string binding override for the whitelist.
+					objref = lookupObject(substitutedProductID + "BankerWhitelist");
+					String namespaceBindingWhiteList = (String)PortableRemoteObject.narrow(objref, String.class);
+	
+					mLog.debug("Trace 7 >>" + namespaceBindingWhiteList + "<<");
+					
+					bankerWhitelist = namespaceBindingWhiteList;
+				}
+				catch(Exception e) {
+					// Do nothing
+				}
+			}
+		}
+
+		// Must we substitute the product spec?
+		if(bankerWhitelist != null) {
+			// Get the business case details.
+			BusinessCaseManagementDAO dao = new BusinessCaseManagementDAO();
+			BusinessCaseHeader caseHeader = dao.retrieveBusinessCase(caseID);
+
+			if(bankerWhitelist.contains(caseHeader.getInitiatingStaffNBNumber())) {
+				// We must substitute.
+				mLog.debug("Trace 8 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + substitutedProductID + "<< for banker >>" + caseHeader.getInitiatingStaffNBNumber() + "<<");
+
+				return getProductSpecificationXMLByID(substitutedProductID);
+			}
+			else {
+				// We mustn't substitute
+				mLog.debug("Trace 9");
+				return getProductSpecificationXMLByID(productSpecificationID);
+			}
+		}
+		else {
+			mLog.debug("Trace 10");
+			
+			return getProductSpecificationXMLByID(productSpecificationID);
+		}
+	}	
 	
 	public ProductType getProductSpecificationXMLByID(String pProductSpecificationID) throws Exception {
 		mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
@@ -82,15 +217,6 @@ public class ProductSpecificationsServiceDAO {
 
 		for (Integer id : pProductSpecificationID) {
 			mLog.debug("Trace 2 >>" + id + "<<");
-			
-			// TODO: Switch out the product ID if there is a string binding
-			// substitution.
-			
-			/*
-			 * if (CachedNameSpaceBindingHelper.getNameSpaceBinding(
-			 * "PC_1019Substitution", "3019").equalsIgnoreCase("true")) {
-			 * pProductSpecificationID.add(3019); }
-			 */
 			
 			if (ptCache.containsKey(id.toString())) {
 				mLog.debug("Trace 3 >>Using Cache<<");
