@@ -36,6 +36,13 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
+       <attributeGroupName>clientInformationRequirement_DetermineRelatedParties</attributeGroupName>
+       <productAttributes>
+          <attributeType>clientInformationRequirement</attributeType>
+          <attributeName>ResolvedLinkedMinorApplicant</attributeName>
+       </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
         <productAttributes>
             <attributeType>Evidence</attributeType>
@@ -228,6 +235,11 @@
             <attributeName>requiresSecurityAndCollatoralManagement</attributeName>
             <value>false</value>
         </productAttributes>
+        <productAttributes>
+      		<attributeType>string</attributeType>
+      		<attributeName>frontOfficeIntentSequence</attributeName>
+      		<value>PrepareApplicant|DetermineRelatedParties|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+    	</productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
