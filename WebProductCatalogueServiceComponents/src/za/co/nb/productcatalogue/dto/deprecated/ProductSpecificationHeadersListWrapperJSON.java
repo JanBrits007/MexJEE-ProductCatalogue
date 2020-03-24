@@ -1,4 +1,4 @@
-package za.co.nb.productcatalogue.dto;
+package za.co.nb.productcatalogue.dto.deprecated;
 
 import java.io.Serializable;
 import java.util.Iterator;

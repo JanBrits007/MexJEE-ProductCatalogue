@@ -132,4 +132,29 @@ public class ChannelProductCatalogueSOAPBindingImpl {
 		// First check the cache.
 		return getProductSpecificationsDAO().getProductSpecificationXMLByID(new Integer(pProductID));
 	}
+	
+	public void getProductByArrangementID(Integer productIdentifier, String arrangementID, Holder<ResultSetType> resultSet, Holder<ProductType> product) {
+		mLog.debug("Trace 1");
+
+		try {
+			ProductType productType = getProductSpecificationsDAO().getProductSpecificationByIDAndArrangementID("" + productIdentifier, arrangementID);
+
+			if (productType != null) {
+				mLog.debug("Trace 2");
+				resultSet.value = createResult("R00", "Success");
+				product.value = productType;
+			} else {
+				mLog.debug("Trace 3");
+				resultSet.value = createResult("R01", "No Record Found.");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			resultSet.value = createResult("R01", e.getMessage());
+		}
+		
+		mLog.debug("Trace 4");
+		
+		return;
+	}
+	
 }

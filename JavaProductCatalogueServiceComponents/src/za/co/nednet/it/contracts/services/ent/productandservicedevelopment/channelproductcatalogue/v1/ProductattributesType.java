@@ -8,6 +8,8 @@
 
 package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -50,7 +52,7 @@ import javax.xml.bind.annotation.XmlType;
     "value"
     
 })
-public class ProductattributesType {
+public class ProductattributesType implements Serializable {
 
     protected String attributeType;
     protected String attributeName;

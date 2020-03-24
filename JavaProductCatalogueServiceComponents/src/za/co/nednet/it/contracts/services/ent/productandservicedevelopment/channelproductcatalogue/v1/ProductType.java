@@ -8,8 +8,10 @@
 
 package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -54,9 +56,11 @@ import javax.xml.bind.annotation.XmlType;
     "productAttributeGroup",
     "features"
 })
-public class ProductType {
+public class ProductType implements Serializable {
 
-    protected Integer productIdentifier;
+	private static final long serialVersionUID = 3310644094523159806L;
+	
+	protected Integer productIdentifier;
     protected String name;
     protected String shortDescription;
     protected Object description;

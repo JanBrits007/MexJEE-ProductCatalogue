@@ -134,6 +134,6 @@ public class ArrangementMetricsDAO {
 		// Problem.
 		mLog.debug("Trace 6");
 
-		return "Case ID Not Found for Arrangement ID >>" + arrangementID + "<<";
+		return null;
 	}
 }

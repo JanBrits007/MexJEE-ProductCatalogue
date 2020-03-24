@@ -8,8 +8,10 @@
 
 package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -41,7 +43,7 @@ import javax.xml.bind.annotation.XmlType;
     "attributeGroupName",
     "productAttributes"
 })
-public class ProductAttributeGroupType {
+public class ProductAttributeGroupType implements Serializable {
 
     @XmlElement(required = true)
     protected String attributeGroupName;

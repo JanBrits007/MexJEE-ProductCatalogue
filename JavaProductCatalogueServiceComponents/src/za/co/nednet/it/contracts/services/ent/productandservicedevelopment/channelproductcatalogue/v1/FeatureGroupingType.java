@@ -8,6 +8,8 @@
 
 package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -38,7 +40,7 @@ import javax.xml.bind.annotation.XmlType;
     "featureGroupName",
     "featureGroupRuleForProduct"
 })
-public class FeatureGroupingType {
+public class FeatureGroupingType implements Serializable {
 
     protected String featureGroupName;
     protected String featureGroupRuleForProduct;

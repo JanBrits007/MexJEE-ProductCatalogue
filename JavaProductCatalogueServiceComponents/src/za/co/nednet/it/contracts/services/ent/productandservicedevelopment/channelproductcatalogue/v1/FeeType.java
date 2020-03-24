@@ -8,7 +8,9 @@
 
 package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,7 +48,7 @@ import javax.xml.bind.annotation.XmlType;
     "currency",
     "friendlyDesc"
 })
-public class FeeType {
+public class FeeType implements Serializable {
 
     @XmlElement(required = true)
     protected String type;

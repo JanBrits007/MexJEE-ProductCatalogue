@@ -84,6 +84,26 @@ public interface IChannelProductCatalogue {
         Holder<List<ProductType>> product);
 
     /**
+     * Retrieves the complete information for a given product
+     * 
+     * @param product
+     * @param productIdentifier
+     * @param resultSet
+     */
+    @WebMethod(operationName = "GetProductByArrangementID", action = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1/GetProductByArrangementID")
+    @RequestWrapper(localName = "GetProductByArrangementID", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", className = "za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.GetProductByArrangementIDType")
+    @ResponseWrapper(localName = "GetProductResponseByArrangementID", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", className = "za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.GetProductResponseByArrangementIDType")
+    public void getProductByArrangementID(
+        @WebParam(name = "productIdentifier", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1")
+        Integer productIdentifier,
+        @WebParam(name = "arrangementID", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1")
+        String arrangementID,
+        @WebParam(name = "resultSet", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", mode = WebParam.Mode.OUT)
+        Holder<ResultSetType> resultSet,
+        @WebParam(name = "productSpecification", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", mode = WebParam.Mode.OUT)
+        Holder<ProductType> product);
+    
+    /**
      * CRUD operations for a given product
      * 
      * @param maintainCatalogueRequest

@@ -8,8 +8,10 @@
 
 package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -66,7 +68,7 @@ import javax.xml.bind.annotation.XmlType;
     "featureDisplayPosition",
     "featureAttributeGroup"
 })
-public class FeaturesType {
+public class FeaturesType implements Serializable {
 
     protected Integer featureIdentifier;
     protected String name;
