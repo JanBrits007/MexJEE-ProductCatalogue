@@ -25,6 +25,7 @@ import za.co.nb.onboarding.casemanagement.BusinessCaseManagementDAO;
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 import za.co.nb.productcatalogue.dao.ArrangementMetricsDAO;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.MaintainCatalogueRequestType;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.Product;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductAttributeGroupType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductattributesType;
@@ -225,9 +226,13 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 			// We now only read from files.
 			String xmlString = readProductSpecificationFromResourceFile(id);
 
-			JAXBContext jaxbContext = JAXBContext.newInstance("za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1");
-			Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-			Object schemaObject = JAXBIntrospector.getValue(unmarshaller.unmarshal(new ByteArrayInputStream(xmlString.getBytes())));
+			mLog.debug("Trace 2.1 >>" + xmlString + "<<");
+
+			JAXBContext jaxbContext = JAXBContext.newInstance(ProductType.class);
+			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+			
+//			JAXBContext jaxbContext = JAXBContext.newInstance("za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1");
+			Object schemaObject = JAXBIntrospector.getValue(jaxbUnmarshaller.unmarshal(new ByteArrayInputStream(xmlString.getBytes())));
 
 			prdType = (ProductType) schemaObject;
 			products.add(prdType);

@@ -14,6 +14,7 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -28,7 +29,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="attributeGroupName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="featureAttributes" type="{http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1}AttributesType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="featureAttributes" type="{http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1}FeatureAttributesType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -44,8 +45,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class FeatureAttributeGroupType implements Serializable {
 
+	@XmlElement(required = true)
     protected String attributeGroupName;
-    protected List<AttributesType> featureAttributes;
+    
+    @XmlElement(required = true)
+    protected List<FeatureAttributesType> featureAttributes;
 
     /**
      * Gets the value of the attributeGroupName property.
@@ -89,15 +93,19 @@ public class FeatureAttributeGroupType implements Serializable {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link AttributesType }
+     * {@link FeatureAttributesType }
      * 
      * 
      */
-    public List<AttributesType> getFeatureAttributes() {
+    public List<FeatureAttributesType> getFeatureAttributes() {
         if (featureAttributes == null) {
-            featureAttributes = new ArrayList<AttributesType>();
+            featureAttributes = new ArrayList<FeatureAttributesType>();
         }
         return this.featureAttributes;
     }
 
+    public void setFeatureAttributes(List<FeatureAttributesType> featureAttributes) {
+    	this.featureAttributes = featureAttributes;
+    }
+    
 }

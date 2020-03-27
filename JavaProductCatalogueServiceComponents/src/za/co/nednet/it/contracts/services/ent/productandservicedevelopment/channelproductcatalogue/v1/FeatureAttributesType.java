@@ -8,23 +8,26 @@
 
 package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for AttributesType complex type.
+ * <p>Java class for FeatureAttributesType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AttributesType">
+ * &lt;complexType name="FeatureAttributesType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="attributeType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="attributeName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="isComparable" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="minValue" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="maxValue" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="valueUnit" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -38,21 +41,25 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AttributesType", propOrder = {
+@XmlType(name = "FeatureAttributesType", propOrder = {
     "attributeType",
     "attributeName",
+    "isComparable",
     "minValue",
     "maxValue",
     "valueUnit",
-    "value"
+    "value",
+    "description"
 })
-public class AttributesType {
+public class FeatureAttributesType implements Serializable {
 
     protected String attributeType;
     protected String attributeName;
+    protected String isComparable;
     protected Integer minValue;
     protected Integer maxValue;
     protected String valueUnit;
+    protected String description;
     protected String value;
 
     /**
@@ -101,6 +108,30 @@ public class AttributesType {
      */
     public void setAttributeName(String value) {
         this.attributeName = value;
+    }
+
+    /**
+     * Gets the value of the isComparable property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getIsComparable() {
+        return isComparable;
+    }
+
+    /**
+     * Sets the value of the isComparable property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setIsComparable(String value) {
+        this.isComparable = value;
     }
 
     /**
@@ -174,9 +205,31 @@ public class AttributesType {
     public void setValueUnit(String value) {
         this.valueUnit = value;
     }
-
     /**
      * Gets the value of the value property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * Sets the value of the description property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    /**
+     * Gets the value of the description property.
      * 
      * @return
      *     possible object is
