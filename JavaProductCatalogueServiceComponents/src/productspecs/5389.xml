@@ -1,6 +1,6 @@
 <a:product xmlns:a="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <a:productIdentifier>1389</a:productIdentifier>
-   <a:name>Nedbank Pay-As-You-Use</a:name>
+   <a:name>Nedbank Pay-As-You-Use Realtime</a:name>
    <a:shortDescription>A no frills, transparent account with a flat monthly fee, pay only for what you use.</a:shortDescription>
    <a:productPricing>
       <a:fee>
@@ -50,6 +50,13 @@
    </a:productAttributeGroup>
    <a:productAttributeGroup>
       <a:attributeGroupName>clientEvidenceRequirement_GenerateOffer</a:attributeGroupName>
+   </a:productAttributeGroup>
+   <a:productAttributeGroup>
+      <a:attributeGroupName>productInformationRequirement_GenerateOffer</a:attributeGroupName>
+      <a:productAttributes>
+         <a:attributeType>productInformationRequirement</a:attributeType>
+         <a:attributeName>OverdraftDetails</a:attributeName>
+      </a:productAttributes>
    </a:productAttributeGroup>
    <a:productAttributeGroup>
       <a:attributeGroupName>clientEvidenceRequirement_ActivateProducts</a:attributeGroupName>
@@ -595,6 +602,17 @@
          <a:value>preVerificationProvisioning</a:value>
       </a:productAttributes>
    </a:productAttributeGroup>
+   <a:productAttributeGroup>
+      <a:attributeGroupName>SubstitutionRulesETE</a:attributeGroupName>
+      <a:productAttributes>
+         <a:attributeName>SubstituteForWhiteListedNBNumbers</a:attributeName>
+         <a:value>nb204377</a:value>
+      </a:productAttributes>
+      <a:productAttributes>
+         <a:attributeName>SubstituteForProductID</a:attributeName>
+         <a:value>3019</a:value>
+      </a:productAttributes>
+   </a:productAttributeGroup>
    <a:features>
       <a:featureIdentifier>1014</a:featureIdentifier>
       <a:name>Overdraft</a:name>
@@ -672,14 +690,76 @@
             <a:value>1176</a:value>
          </a:featureAttributes>
       </a:featureAttributeGroup>
+      <a:featureAttributeGroup>
+         <a:attributeGroupName>clientInformationRequirement_GenerateOffer</a:attributeGroupName>
+         <a:featureAttributes>
+            <a:attributeType>clientInformationRequirement</a:attributeType>
+            <a:attributeName>ClientVerificationInformation</a:attributeName>
+         </a:featureAttributes>
+         <a:featureAttributes>
+            <a:attributeType>clientInformationRequirement</a:attributeType>
+            <a:attributeName>AdditionalPersonalInformation</a:attributeName>
+         </a:featureAttributes>
+         <a:featureAttributes>
+            <a:attributeType>clientInformationRequirement</a:attributeType>
+            <a:attributeName>MaritalStatus</a:attributeName>
+         </a:featureAttributes>
+         <a:featureAttributes>
+            <a:attributeType>clientInformationRequirement</a:attributeType>
+            <a:attributeName>EmploymentDetails</a:attributeName>
+         </a:featureAttributes>
+         <a:featureAttributes>
+            <a:attributeType>clientInformationRequirement</a:attributeType>
+            <a:attributeName>IncomeDetails</a:attributeName>
+         </a:featureAttributes>
+         <a:featureAttributes>
+            <a:attributeType>clientInformationRequirement</a:attributeType>
+            <a:attributeName>ExpensesBasic</a:attributeName>
+         </a:featureAttributes>
+         <a:featureAttributes>
+            <a:attributeType>clientInformationRequirement</a:attributeType>
+            <a:attributeName>PreOfferFinePrint</a:attributeName>
+         </a:featureAttributes>
+      </a:featureAttributeGroup>
+      <a:featureAttributeGroup>
+         <a:attributeGroupName>productDocumentPresentation_ActivateProducts</a:attributeGroupName>
+         <a:featureAttributes>
+            <a:attributeType>DocumentDescription</a:attributeType>
+            <a:attributeName>Pre-agreement Quote|nedbank-commercial-release/UnsecuredLendingContract|ARRANGEMENT|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</a:attributeName>
+         </a:featureAttributes>
+         <a:featureAttributes>
+            <a:attributeType>DocumentDescriptionStaffAssisted</a:attributeType>
+            <a:attributeName>Pre-agreement Quote|nedbank-commercial-release/UnsecuredLendingContractStaffAssisted|ARRANGEMENT|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</a:attributeName>
+         </a:featureAttributes>
+         <a:featureAttributes>
+            <a:attributeType>AvailableAction</a:attributeType>
+            <a:attributeName>Download</a:attributeName>
+         </a:featureAttributes>
+         <a:featureAttributes>
+            <a:attributeType>AvailableAction</a:attributeType>
+            <a:attributeName>Email</a:attributeName>
+         </a:featureAttributes>
+         <a:featureAttributes>
+            <a:attributeType>AvailableAction</a:attributeType>
+            <a:attributeName>WetSign</a:attributeName>
+         </a:featureAttributes>
+         <a:featureAttributes>
+            <a:attributeType>AvailableAction</a:attributeType>
+            <a:attributeName>DigitallySign</a:attributeName>
+         </a:featureAttributes>
+         <a:featureAttributes>
+            <a:attributeType>AvailableAction</a:attributeType>
+            <a:attributeName>ElectronicallySign</a:attributeName>
+         </a:featureAttributes>
+      </a:featureAttributeGroup>
    </a:features>
    <a:features>
       <a:featureIdentifier>1402</a:featureIdentifier>
       <a:name>My Pocket</a:name>
       <a:mandatory>false</a:mandatory>
-      <a:preSelected>true</a:preSelected>
-      <a:shortDescription>Saving facility on a current account</a:shortDescription>
-      <a:description>Detailed description of feature</a:description>
+      <a:preSelected>false</a:preSelected>
+      <a:shortDescription>Earn favourable interest rates</a:shortDescription>
+      <a:description>Get a free budgeting and savings pocket linked to your Nedbank current account to earn interest and get instant access to your money when you need it.</a:description>
       <a:featureGrouping>
          <a:featureGroupName>Saving</a:featureGroupName>
          <a:featureGroupRuleForProduct>Optional</a:featureGroupRuleForProduct>
@@ -709,7 +789,7 @@
       </a:featureFulfilment>
       <a:featureDisplayAdditionalInformationWidget>No</a:featureDisplayAdditionalInformationWidget>
       <a:featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</a:featureOnAPageWebURL>
-      <a:featureDisplayPosition>preOffer</a:featureDisplayPosition>
+      <a:featureDisplayPosition>VAS</a:featureDisplayPosition>
       <a:featureAttributeGroup>
          <a:attributeGroupName>SystemRelated</a:attributeGroupName>
          <a:featureAttributes>
@@ -1117,8 +1197,8 @@
       <a:name>eNotes</a:name>
       <a:mandatory>false</a:mandatory>
       <a:preSelected>true</a:preSelected>
-      <a:shortDescription>Keep track of your finances with the eNotes SMS notifications, anytime, anywhere. eNotes keeps you informed about all transactions on your account.</a:shortDescription>
-      <a:description>Detailed description of feature</a:description>
+      <a:shortDescription>Included</a:shortDescription>
+      <a:description>Keep track of your finances with the eNotes SMS notifications, anytime, anywhere. eNotes keeps you informed about all transactions on your account.</a:description>
       <a:featureGrouping>
          <a:featureGroupName>Loyalty</a:featureGroupName>
          <a:featureGroupRuleForProduct>Optional</a:featureGroupRuleForProduct>
@@ -1148,7 +1228,7 @@
       </a:featureFulfilment>
       <a:featureDisplayAdditionalInformationWidget>No</a:featureDisplayAdditionalInformationWidget>
       <a:featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</a:featureOnAPageWebURL>
-      <a:featureDisplayPosition>offer</a:featureDisplayPosition>
+      <a:featureDisplayPosition>VAS</a:featureDisplayPosition>
       <a:featureAttributeGroup>
          <a:attributeGroupName>SystemRelated</a:attributeGroupName>
          <a:featureAttributes>
@@ -1192,11 +1272,11 @@
    </a:features>
    <a:features>
       <a:featureIdentifier>1008</a:featureIdentifier>
-      <a:name>No Funds Alert</a:name>
+      <a:name>No Funds Alert Services</a:name>
       <a:mandatory>false</a:mandatory>
       <a:preSelected>true</a:preSelected>
-      <a:shortDescription>Electronic notifications when you have insufficient funds for an attempted debit order</a:shortDescription>
-      <a:description>Detailed description of feature</a:description>
+      <a:shortDescription>Included</a:shortDescription>
+      <a:description>No funds alert is a service that provides a delay of the transactions being returned,due to insufficient funds in the account. Helping you save on unnecessary dishonoured penalty fees.</a:description>
       <a:featureGrouping>
          <a:featureGroupName>Loyalty</a:featureGroupName>
          <a:featureGroupRuleForProduct>Optional</a:featureGroupRuleForProduct>
@@ -1226,7 +1306,7 @@
       </a:featureFulfilment>
       <a:featureDisplayAdditionalInformationWidget>No</a:featureDisplayAdditionalInformationWidget>
       <a:featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</a:featureOnAPageWebURL>
-      <a:featureDisplayPosition>offer</a:featureDisplayPosition>
+      <a:featureDisplayPosition>VAS</a:featureDisplayPosition>
       <a:featureAttributeGroup>
          <a:attributeGroupName>SystemRelated</a:attributeGroupName>
          <a:featureAttributes>
@@ -1270,11 +1350,11 @@
    </a:features>
    <a:features>
       <a:featureIdentifier>1454</a:featureIdentifier>
-      <a:name>Loyalty and Rewards programme</a:name>
+      <a:name>Greenbacks Rewards Membership</a:name>
       <a:mandatory>false</a:mandatory>
       <a:preSelected>true</a:preSelected>
-      <a:shortDescription>Nedbank Greenbacks Rewards membership</a:shortDescription>
-      <a:description>Detailed description of feature</a:description>
+      <a:shortDescription>Included</a:shortDescription>
+      <a:description>Nedbank Greenback member, you can earn Nedbank Greenbacks on all your eligible card spend*, which you can then redeem for a variety of exciting rewards.</a:description>
       <a:featureGrouping>
          <a:featureGroupName>Loyalty</a:featureGroupName>
          <a:featureGroupRuleForProduct>Optional</a:featureGroupRuleForProduct>
@@ -1304,7 +1384,7 @@
       </a:featureFulfilment>
       <a:featureDisplayAdditionalInformationWidget>No</a:featureDisplayAdditionalInformationWidget>
       <a:featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</a:featureOnAPageWebURL>
-      <a:featureDisplayPosition>offer</a:featureDisplayPosition>
+      <a:featureDisplayPosition>VAS</a:featureDisplayPosition>
       <a:featureAttributeGroup>
          <a:attributeGroupName>SystemRelated</a:attributeGroupName>
          <a:featureAttributes>
@@ -1429,8 +1509,8 @@
       <a:name>Funeral Cover</a:name>
       <a:mandatory>false</a:mandatory>
       <a:preSelected>false</a:preSelected>
-      <a:shortDescription>The Nedbank Funeral cover provides cover that will help to secure a dignified funeral for yourself.</a:shortDescription>
-      <a:description>Detailed description of feature</a:description>
+      <a:shortDescription />
+      <a:description>The Nedbank Insurance Funeral Plan provides cover that will help you to secure a dignified funeral for yourself or your family members. If you choose this option, we'll get in touch with you to finalise the sale.</a:description>
       <a:featureGrouping>
          <a:featureGroupName>Loyalty</a:featureGroupName>
          <a:featureGroupRuleForProduct>Optional</a:featureGroupRuleForProduct>
@@ -1460,7 +1540,7 @@
       </a:featureFulfilment>
       <a:featureDisplayAdditionalInformationWidget>No</a:featureDisplayAdditionalInformationWidget>
       <a:featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</a:featureOnAPageWebURL>
-      <a:featureDisplayPosition>offer</a:featureDisplayPosition>
+      <a:featureDisplayPosition>VAS</a:featureDisplayPosition>
       <a:featureAttributeGroup>
          <a:attributeGroupName>SystemRelated</a:attributeGroupName>
          <a:featureAttributes>
@@ -1506,9 +1586,9 @@
       <a:featureIdentifier>1376</a:featureIdentifier>
       <a:name>Salary Switching</a:name>
       <a:mandatory>false</a:mandatory>
-      <a:preSelected>true</a:preSelected>
-      <a:shortDescription>Salary Switching with transactional product</a:shortDescription>
-      <a:description>Detailed description of feature</a:description>
+      <a:preSelected>false</a:preSelected>
+      <a:shortDescription />
+      <a:description>Our free salary switching service will provide you with a confirmation of banking details to take to your employer for a quicker and simpler switch. Your overdraft will activate once your first salary is deplosited.</a:description>
       <a:featureGrouping>
          <a:featureGroupName>Salary Switching</a:featureGroupName>
          <a:featureGroupRuleForProduct>OptionalIfAlternativeSelected</a:featureGroupRuleForProduct>
@@ -1526,7 +1606,7 @@
       </a:featurePricing>
       <a:featureDisplayAdditionalInformationWidget>No</a:featureDisplayAdditionalInformationWidget>
       <a:featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</a:featureOnAPageWebURL>
-      <a:featureDisplayPosition>preOffer</a:featureDisplayPosition>
+      <a:featureDisplayPosition>VAS</a:featureDisplayPosition>
       <a:featureAttributeGroup>
          <a:attributeGroupName>SystemRelated</a:attributeGroupName>
          <a:featureAttributes>
@@ -1580,9 +1660,9 @@
       <a:featureIdentifier>1380</a:featureIdentifier>
       <a:name>Debit Order Switching</a:name>
       <a:mandatory>false</a:mandatory>
-      <a:preSelected>true</a:preSelected>
-      <a:shortDescription>Debit Order Switching with transactional product</a:shortDescription>
-      <a:description>Detailed description of feature</a:description>
+      <a:preSelected>false</a:preSelected>
+      <a:shortDescription />
+      <a:description>If this is going to be your main account, we can, where possible, help you move your debit orders to your new Nedbank account for free,or you can download the MoneyApp and do it yourself.</a:description>
       <a:featureGrouping>
          <a:featureGroupName>Debit Order Switching</a:featureGroupName>
          <a:featureGroupRuleForProduct>OptionalIfAlternativeSelected</a:featureGroupRuleForProduct>
@@ -1600,7 +1680,7 @@
       </a:featurePricing>
       <a:featureDisplayAdditionalInformationWidget>No</a:featureDisplayAdditionalInformationWidget>
       <a:featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</a:featureOnAPageWebURL>
-      <a:featureDisplayPosition>preOffer</a:featureDisplayPosition>
+      <a:featureDisplayPosition>VAS</a:featureDisplayPosition>
       <a:featureAttributeGroup>
          <a:attributeGroupName>SystemRelated</a:attributeGroupName>
          <a:featureAttributes>
@@ -1790,8 +1870,8 @@
       <a:name>Amex Card</a:name>
       <a:mandatory>false</a:mandatory>
       <a:preSelected>true</a:preSelected>
-      <a:shortDescription>Accelerate your Greenbacks rewards with the Amex Card</a:shortDescription>
-      <a:description>Detailed description of feature</a:description>
+      <a:shortDescription />
+      <a:description>Accelerate your Greenbacks rewards with the Amex Card</a:description>
       <a:featureGrouping>
          <a:featureGroupName>Loyalty</a:featureGroupName>
          <a:featureGroupRuleForProduct>Optional</a:featureGroupRuleForProduct>
@@ -1812,7 +1892,7 @@
       </a:featureFulfilment>
       <a:featureDisplayAdditionalInformationWidget>No</a:featureDisplayAdditionalInformationWidget>
       <a:featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</a:featureOnAPageWebURL>
-      <a:featureDisplayPosition>offer</a:featureDisplayPosition>
+      <a:featureDisplayPosition>VAS</a:featureDisplayPosition>
       <a:featureAttributeGroup>
          <a:attributeGroupName>SystemRelated</a:attributeGroupName>
          <a:featureAttributes>

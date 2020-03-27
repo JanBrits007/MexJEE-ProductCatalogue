@@ -43,10 +43,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FeeType", propOrder = {
     "type",
-    "amount",
-    "frequency",
+    "friendlyDesc",
     "currency",
-    "friendlyDesc"
+    "amount",
+    "frequency"
 })
 public class FeeType implements Serializable {
 

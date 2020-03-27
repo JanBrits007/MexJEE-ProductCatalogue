@@ -47,10 +47,9 @@ import javax.xml.bind.annotation.XmlType;
     "isComparable",
     "minValue",
     "maxValue",
+    "value",
     "valueUnit",
-    "description",
-    "value"
-    
+    "description"
 })
 public class ProductattributesType implements Serializable {
 
