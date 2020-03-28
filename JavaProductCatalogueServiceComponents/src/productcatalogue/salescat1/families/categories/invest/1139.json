@@ -1,0 +1,160 @@
+{
+	"productIdentifier": "1139",
+	"name": "Platinum Invest",
+	"shortDescription": "A money market investment account with highly competitive interest rates , exclusively for Professional Banking clients.",
+	"productPricing": [{
+		"type": "InterestRate",
+		"value": 5.25,
+		"description": "5.25% pa"
+	}],
+	"specialFeature": "24 hours",
+	"salesHighlights": ["Minimum investment amount - R500",
+	"Minimum investment period - 24 hours",
+	"No monthly fees or commissions",
+	"Initial capital fully guaranteed"],
+	"redirect": {
+		"shouldRedirect": false,
+		"redirectUrl": null
+	},
+	"actions": [{
+		"type": "REDIRECT",
+		"text": "Select",
+		"value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+	},
+	{
+		"type": "DETAIL",
+		"text": "Details"
+	},
+	{
+		"type": "COMPARE",
+		"text": "Compare"
+	}],
+	"productFeatures": [{
+		"name": "Maximuminterestrate",
+		"displayName": "Maximum interest rate",
+		"description": "up to 5.25%"
+	},
+	{
+		"name": "Investmentterm",
+		"displayName": "Investment term",
+		"description": "24 hours"
+	},
+	{
+		"name": "MinimumInvestmentAmount",
+		"displayName": "Minimum Investment Amount",
+		"description": "R 500"
+	},
+	{
+		"name": "MinimumInvestmentPeriod",
+		"displayName": "Minimum Investment Period",
+		"description": "24 hours"
+	},
+	{
+		"name": "TermvsNotice",
+		"displayName": "Term vs Notice",
+		"description": "Term"
+	},
+	{
+		"name": "Freeaccesspriortoterm",
+		"displayName": "Free access prior to term",
+		"description": "No"
+	},
+	{
+		"name": "AdditionalDeposits",
+		"displayName": "Additional Deposits",
+		"description": "Yes"
+	},
+	{
+		"name": "AgeRestriction",
+		"displayName": "Age Restriction",
+		"description": "Nedbank Professional Banking clients only"
+	},
+	{
+		"name": "Interestpaymentfrequency",
+		"displayName": "Interest payment frequency",
+		"description": "Monthly Capitalised"
+	},
+	{
+		"name": "ElectronicAcces",
+		"displayName": "Electronic Access",
+		"description": "Yes"
+	},
+	{
+		"name": "Stoporders",
+		"displayName": "Stop orders",
+		"description": "included"
+	},
+	{
+		"name": "Statements",
+		"displayName": "Statements",
+		"description": "included"
+	},
+	{
+		"name": "Fees",
+		"displayName": "Fees",
+		"description": "Cash deposit fees"
+	},
+	{
+		"name": "Investmentterm2",
+		"displayName": "Investment term",
+		"description": "24 hours"
+	},
+	{
+		"name": "Withdrawals",
+		"displayName": "Withdrawals",
+		"description": "1 days' notice required; minimum. R100"
+	},
+	{
+		"name": "Additionaldeposits",
+		"displayName": "Additional deposits",
+		"description": "Minimum R100"
+	},
+	{
+		"name": "Fixedrate",
+		"displayName": "Fixed rate?",
+		"description": "No"
+	}],
+	"eligibilityRules": [{
+		"attributeName": "Period",
+		"attributeType": "EligibilityRule",
+		"description": "Exclusive to Nedbank Professional Banking clients",
+		"maxValue": "1",
+		"minValue": "0",
+		"valueUnit": "month"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "Age",
+		"minValue": "0",
+		"maxValue": "999999999",
+		"valueUnit": "year",
+		"description": "No age restrictions"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "InvestStart",
+		"minValue": "500",
+		"maxValue": "999999999",
+		"valueUnit": "ZAR",
+		"description": ""
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "InvestMonthly",
+		"minValue": "100",
+		"maxValue": "999999999",
+		"valueUnit": "ZAR",
+		"description": ""
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "Display",
+		"description": "Nedbank Professional clients only"
+	}],
+	"lifeCycleStatus": "AVAILABLE",
+	"calculator": {
+		"term": 0,
+		"notice": 1,
+		"productType": 30
+	}
+}

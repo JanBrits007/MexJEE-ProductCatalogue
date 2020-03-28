@@ -1,0 +1,80 @@
+{
+	"productIdentifier": "1176",
+	"name": "Overdraft",
+	"shortDescription": "An overdraft is a flexible, short-term credit facility linked to your transactional current account that gives you access to additional funds. It is an excellent tool to help you manage unforeseen expenses and get through those tight moments between paydays.",
+	"productPricing": [{
+		"type": "AdminFee",
+		"amount": 43.00,
+		"frequency": "Monthly",
+		"currency": "ZAR",
+		"description": "R 43.00 pm"
+	}],
+	"specialFeature": "To apply, visit any Nedbank or call us on 0860 555 111",
+	"salesHighlights": ["Since an overdraft is linked to your transactional current account, there is no need to open a separate account.",
+	"The additional funds are available once your account balance reaches zero.",
+	"The overdraft amount is available, whether you use it or not, and you can use all or only a portion of it.",
+	"Interest is charged only on the portion of the overdraft you have used.",
+	"You will get a personalised interest rate on your overdraft.",
+	"You can choose to take out overdraft insurance, which ensures that you have peace of mind in the event of your death, disablement or retrenchment."],
+	"redirect": {
+		"shouldRedirect": false,
+		"redirectUrl": null
+	},
+	"actions": [{
+		"type": "SELECT",
+		"text": "Select",
+		"environments": ["dev",
+		"ete"]
+	},
+	{
+		"type": "REDIRECT",
+		"text": "Branch locator",
+		"value": "https://secured.nedbank.co.za/#/branchlocator",
+		"environments": ["prod",
+		"qa",
+		"qa_kiosk"]
+	},
+	{
+		"type": "DETAIL",
+		"text": "Details"
+	}],
+	"productAttributeGroup": [],
+	"eligibilityRules": [{
+		"attributeType": "EligibilityRule",
+		"description": "Be 18 years or older"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"description": "Earn More than R3 000.00 p/m"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"description": "A valid SA Bar-coded Identity card/document"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"description": "Subject to formal credit check"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"description": "Proof of income (three months' payslips)"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"description": "Three months bank statements (if non-Nedbank client)"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"description": "For salary switching, three months bank statements and the rate that is reflected at the other institution;"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"description": "You will also need to have a current account with us - either an existing account or we can open one for you when you apply for an overdraft."
+	},
+	{
+		"attributeType": "ConcurrentApplicationLimitationGroup",
+		"attributeName": "ConcurrentApplicationLimitation",
+		"value": "2"
+	}],
+	"lifeCycleStatus": "AVAILABLE"
+}
