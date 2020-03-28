@@ -39,6 +39,8 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
 	private final Log mLog = LogFactory.getLog(getClass());
 
+	private static final boolean ENABLE_XSD_VALIDATION = false;
+	
 	public String createProductSpecificationJSON(String pCustomerXML, String pName, String pLastName, Calendar pDateOfBirth, String pIDType, String pIDNumber, String pCustomerType, String pRequiredCustomerUID) throws Exception {
 		throw new Exception("The use of the DB2 database for product specifications has been deprecated. Please maintain product specifications in the relevant GIT repo.");
 	}
@@ -253,17 +255,19 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 				mLog.debug("Trace 3.1");
 
 				//Setup schema validator
-	            SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-	            Source schemaFile = new StreamSource(getClass().getClassLoader().getResourceAsStream("/za/co/nb/productcatalogue/ejb/ProductTypeSchema.xsd"));
+				if(ENABLE_XSD_VALIDATION) {
+					mLog.debug("Trace 3.2");
+		            SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+		            Source schemaFile = new StreamSource(getClass().getClassLoader().getResourceAsStream("/za/co/nb/productcatalogue/ejb/ProductTypeSchema.xsd"));
+		            
+					mLog.debug("Trace 3.3");
+		            
+		            Schema schema = sf.newSchema(schemaFile);
+		            jaxbUnmarshaller.setSchema(schema);								
+				}
 	            
-				mLog.debug("Trace 3.2");
+				mLog.debug("Trace 3.4");
 	            
-	            Schema schema = sf.newSchema(schemaFile);
-	            jaxbUnmarshaller.setSchema(schema);			
-	            
-				mLog.debug("Trace 3.3");
-	            
-	//			JAXBContext jaxbContext = JAXBContext.newInstance("za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1");
 				Object schemaObject = JAXBIntrospector.getValue(jaxbUnmarshaller.unmarshal(new ByteArrayInputStream(xmlString.getBytes())));
 				
 				mLog.debug("Trace 4");
@@ -274,11 +278,18 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 				mLog.debug("Trace 4.1");
 			}
 			catch(Exception e) {
-				mLog.debug("Trace 4.2 >>" + e.getCause().getMessage() + "<<");
-
+				mLog.debug("Trace 4.2");
 				e.printStackTrace();
+
+				// Schema validator is a mess. It returns no stack trace on the exception. Need to specifically handle it.
+				if(e != null && e.getCause() != null) {
+					mLog.debug("Trace 4.3 >>" + e.getCause().getMessage() + "<<");
+					throw new Exception("Schema validation failure for spec " + id + ". " + e.getCause().getMessage());					
+				}
+
+				mLog.debug("Trace 4.4");
 				
-				throw new Exception("Schema validation failure. " + e.getCause().getMessage());
+				throw e;
 			}
 			catch(Throwable t) {
 				mLog.debug("Trace 4.3");
