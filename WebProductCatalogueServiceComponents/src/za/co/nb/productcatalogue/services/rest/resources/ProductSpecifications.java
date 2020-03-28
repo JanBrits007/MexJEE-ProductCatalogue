@@ -21,7 +21,7 @@ import javax.ws.rs.core.Response.Status;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import za.co.nb.productcatalogue.dao.ProductSpecificationsDAO;
+import za.co.nb.productcatalogue.dao.ProductSpecificationsJSONServiceDAO;
 
 
 @Path( "/productSpecifications" )
@@ -34,14 +34,14 @@ public class ProductSpecifications {
     public static final String className = ProductSpecifications.class.getName();
 	private final Log mLog = LogFactory.getLog(getClass());
 
-    private ProductSpecificationsDAO mProductSpecificationsDAO;
+    private ProductSpecificationsJSONServiceDAO mProductSpecificationsDAO;
     
-    private ProductSpecificationsDAO getProductSpecificationsDAO() {
+    private ProductSpecificationsJSONServiceDAO getProductSpecificationsDAO() {
     	mLog.debug("Trace 1");
     	
     	if(mProductSpecificationsDAO == null) {
         	mLog.debug("Trace 2");
-    		mProductSpecificationsDAO = new ProductSpecificationsDAO();
+    		mProductSpecificationsDAO = new ProductSpecificationsJSONServiceDAO();
     	}
     	
     	mLog.debug("Trace 3");

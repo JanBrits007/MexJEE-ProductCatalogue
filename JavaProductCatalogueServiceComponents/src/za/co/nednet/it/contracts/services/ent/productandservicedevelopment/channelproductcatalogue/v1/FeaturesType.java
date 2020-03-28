@@ -70,7 +70,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class FeaturesType implements Serializable {
 
-    protected Integer featureIdentifier;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -5839741800555773655L;
+	protected Integer featureIdentifier;
     protected String name;
     protected String mandatory;
     protected String preSelected;

@@ -45,7 +45,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class ProductAttributeGroupType implements Serializable {
 
-    @XmlElement(required = true)
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -4964320937880653851L;
+	@XmlElement(required = true)
     protected String attributeGroupName;
     protected List<ProductattributesType> productAttributes;
 

@@ -12,7 +12,7 @@ public class ProductSpecificationHeadersListWrapperJSON implements Serializable 
 	private String categoryName;
 	private List<String> mHeaders = new LinkedList<String>();
 	
-	public List getHeaders() {
+	public List<String> getHeaders() {
 		return mHeaders;
 	}
 	

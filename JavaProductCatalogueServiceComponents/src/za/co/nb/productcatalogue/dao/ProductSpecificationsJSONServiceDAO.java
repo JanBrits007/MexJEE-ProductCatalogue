@@ -14,7 +14,7 @@ import org.apache.commons.logging.LogFactory;
 
 import za.co.nb.productcatalogue.dto.ProductSpecificationJSON;
 
-public class ProductSpecificationsDAO {
+public class ProductSpecificationsJSONServiceDAO {
 
 	private final Log mLog = LogFactory.getLog(getClass());
 	private ProductSpecificationsServiceDAO mProductSpecificationsDAO;

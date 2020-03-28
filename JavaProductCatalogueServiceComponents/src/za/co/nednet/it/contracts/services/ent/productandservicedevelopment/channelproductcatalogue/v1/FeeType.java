@@ -50,7 +50,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class FeeType implements Serializable {
 
-    @XmlElement(required = true)
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -8205137175604821355L;
+	@XmlElement(required = true)
     protected String type;
     @XmlElement(required = true)
     protected BigDecimal amount;

@@ -53,7 +53,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class FeatureAttributesType implements Serializable {
 
-    protected String attributeType;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 2267455425361780472L;
+	protected String attributeType;
     protected String attributeName;
     protected String isComparable;
     protected Integer minValue;

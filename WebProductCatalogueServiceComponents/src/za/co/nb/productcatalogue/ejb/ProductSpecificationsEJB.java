@@ -14,9 +14,14 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.rmi.PortableRemoteObject;
+import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBIntrospector;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -25,7 +30,6 @@ import za.co.nb.onboarding.casemanagement.BusinessCaseManagementDAO;
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 import za.co.nb.productcatalogue.dao.ArrangementMetricsDAO;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.MaintainCatalogueRequestType;
-import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.Product;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductAttributeGroupType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductattributesType;
@@ -66,14 +70,13 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 				return getProductSpecificationXMLByID(productSpecificationID);
 			}
 			else {
-				mLog.debug("Trace 4");
+				mLog.debug("Trace 4 >>" + caseID + "<<");
 				
 				return getProductSpecificationByIDAndCaseID(productSpecificationID, caseID);
 			}
 		}
 		else {
 			mLog.debug("Trace 5");
-			
 			return getProductSpecificationXMLByID(productSpecificationID);
 		}
 	}	
@@ -115,7 +118,16 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 		ProductType productSpec = getProductSpecificationXMLByID(productSpecificationID);
 		
 		// What environment are we running in?
-		Object objref = lookupObject("ENVIRONMENT");
+		Object objref = null;
+		
+		try {
+			objref = lookupObject("ENVIRONMENT");
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			throw new Exception("Environment string namespace binding not defined in server");
+		}
+		
 		String environment = (String)PortableRemoteObject.narrow(objref, String.class);
 
 		mLog.debug("Trace 2 >>" + environment + "<<");
@@ -137,18 +149,20 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 					mLog.debug("Trace 5");
 
 					if(attribute.getAttributeName().equalsIgnoreCase("SubstituteForWhiteListedNBNumbers")) {
-						mLog.debug("Trace 6");
+						mLog.debug("Trace 6 >>SubstituteForWhiteListedNBNumbers<<,>>" + attribute.getValue() + "<<");
 						
 						bankerWhitelist = attribute.getValue();
 					}
 					else if(attribute.getAttributeName().equalsIgnoreCase("SubstituteForProductID")) {
-						mLog.debug("Trace 6");
+						mLog.debug("Trace 6.1 >>SubstituteForProductID<<,>>" + attribute.getValue() + "<<");
 
 						substitutedProductID = attribute.getValue();
 					}
 				}
 
 				try {
+					mLog.debug("Trace 6.2");
+					
 					// Now check if there is a string binding override for the whitelist.
 					objref = lookupObject(substitutedProductID + "BankerWhitelist");
 					String namespaceBindingWhiteList = (String)PortableRemoteObject.narrow(objref, String.class);
@@ -165,13 +179,15 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
 		// Must we substitute the product spec?
 		if(bankerWhitelist != null) {
-			mLog.debug("Trace 8");
+			mLog.debug("Trace 8 >>" + bankerWhitelist + "<<");
 			
 			// Get the business case details.
 			BusinessCaseManagementDAO dao = new BusinessCaseManagementDAO();
 			BusinessCaseHeader caseHeader = dao.retrieveBusinessCase(caseID);
 
-			if(bankerWhitelist.contains(caseHeader.getInitiatingStaffNBNumber())) {
+			mLog.debug("Trace 8.1 >>" + caseHeader.getInitiatingStaffNBNumber().toLowerCase() + "<<");
+			
+			if(bankerWhitelist.toLowerCase().contains(caseHeader.getInitiatingStaffNBNumber().toLowerCase())) {
 				// We must substitute.
 				mLog.debug("Trace 9 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + substitutedProductID + "<< for banker >>" + caseHeader.getInitiatingStaffNBNumber() + "<<");
 
@@ -226,19 +242,54 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 			// We now only read from files.
 			String xmlString = readProductSpecificationFromResourceFile(id);
 
-			mLog.debug("Trace 2.1 >>" + xmlString + "<<");
+//			mLog.debug("Trace 2.1 >>" + xmlString + "<<");
 
 			JAXBContext jaxbContext = JAXBContext.newInstance(ProductType.class);
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-			
-//			JAXBContext jaxbContext = JAXBContext.newInstance("za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1");
-			Object schemaObject = JAXBIntrospector.getValue(jaxbUnmarshaller.unmarshal(new ByteArrayInputStream(xmlString.getBytes())));
 
-			prdType = (ProductType) schemaObject;
-			products.add(prdType);
+			mLog.debug("Trace 3");
+			
+			try {
+				mLog.debug("Trace 3.1");
+
+				//Setup schema validator
+	            SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+	            Source schemaFile = new StreamSource(getClass().getClassLoader().getResourceAsStream("/za/co/nb/productcatalogue/ejb/ProductTypeSchema.xsd"));
+	            
+				mLog.debug("Trace 3.2");
+	            
+	            Schema schema = sf.newSchema(schemaFile);
+	            jaxbUnmarshaller.setSchema(schema);			
+	            
+				mLog.debug("Trace 3.3");
+	            
+	//			JAXBContext jaxbContext = JAXBContext.newInstance("za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1");
+				Object schemaObject = JAXBIntrospector.getValue(jaxbUnmarshaller.unmarshal(new ByteArrayInputStream(xmlString.getBytes())));
+				
+				mLog.debug("Trace 4");
+				
+				prdType = (ProductType) schemaObject;
+				products.add(prdType);
+				
+				mLog.debug("Trace 4.1");
+			}
+			catch(Exception e) {
+				mLog.debug("Trace 4.2 >>" + e.getCause().getMessage() + "<<");
+
+				e.printStackTrace();
+				
+				throw new Exception("Schema validation failure. " + e.getCause().getMessage());
+			}
+			catch(Throwable t) {
+				mLog.debug("Trace 4.3");
+				t.printStackTrace();
+				throw new Exception(t);
+			}
+						
+			mLog.debug("Trace 5");
 		}
 
-		mLog.debug("Trace 5");
+		mLog.debug("Trace 6");
 		
 		return products;
 	}
@@ -248,6 +299,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 	}
 
 	private String readProductSpecificationFromResourceFile(Integer productID) throws Exception {
+		mLog.debug("Trace 1");
 		return readProductSpecificationFromResourceFile(productID.toString());
 	}
 

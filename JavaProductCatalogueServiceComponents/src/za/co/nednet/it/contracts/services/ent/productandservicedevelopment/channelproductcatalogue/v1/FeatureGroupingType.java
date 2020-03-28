@@ -42,7 +42,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class FeatureGroupingType implements Serializable {
 
-    protected String featureGroupName;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -2360946974691535849L;
+	protected String featureGroupName;
     protected String featureGroupRuleForProduct;
 
     /**

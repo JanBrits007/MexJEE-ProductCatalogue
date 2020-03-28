@@ -53,7 +53,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class ProductattributesType implements Serializable {
 
-    protected String attributeType;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 7089887898706893740L;
+	protected String attributeType;
     protected String attributeName;
     protected String isComparable;
     protected Integer minValue;

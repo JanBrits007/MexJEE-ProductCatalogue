@@ -45,6 +45,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class FeatureAttributeGroupType implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8329770166830794540L;
+
 	@XmlElement(required = true)
     protected String attributeGroupName;
     

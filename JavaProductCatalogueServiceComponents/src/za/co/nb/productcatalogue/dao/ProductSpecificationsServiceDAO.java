@@ -22,6 +22,7 @@ public class ProductSpecificationsServiceDAO {
 		mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
 
 		if(productSpecificationsEJB == null) {
+			mLog.debug("Trace 2");
 			InitialContext context = new InitialContext();
 			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup(ProductSpecificationsServiceRemoteInterface.class.getName());
 		}
@@ -33,6 +34,7 @@ public class ProductSpecificationsServiceDAO {
 		mLog.debug("Trace 1 >>" + productSpecificationID + "<<,>>" + arrangementID + "<<");
 
 		if(productSpecificationsEJB == null) {
+			mLog.debug("Trace 2");
 			InitialContext context = new InitialContext();
 			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup(ProductSpecificationsServiceRemoteInterface.class.getName());
 		}
@@ -44,6 +46,7 @@ public class ProductSpecificationsServiceDAO {
 		mLog.debug("Trace 1 >>" + productSpecificationID + "<<,>>" + caseID + "<<");
 				
 		if(productSpecificationsEJB == null) {
+			mLog.debug("Trace 2");
 			InitialContext context = new InitialContext();
 			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup(ProductSpecificationsServiceRemoteInterface.class.getName());
 		}
@@ -55,6 +58,7 @@ public class ProductSpecificationsServiceDAO {
 		mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
 
 		if(productSpecificationsEJB == null) {
+			mLog.debug("Trace 2");
 			InitialContext context = new InitialContext();
 			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup(ProductSpecificationsServiceRemoteInterface.class.getName());
 		}
@@ -66,6 +70,7 @@ public class ProductSpecificationsServiceDAO {
 		mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
 
 		if(productSpecificationsEJB == null) {
+			mLog.debug("Trace 2");
 			InitialContext context = new InitialContext();
 			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup(ProductSpecificationsServiceRemoteInterface.class.getName());
 		}
@@ -77,6 +82,7 @@ public class ProductSpecificationsServiceDAO {
 		mLog.debug("Trace 1 >>" + pProductSpecificationIDs + "<<");
 
 		if(productSpecificationsEJB == null) {
+			mLog.debug("Trace 2");
 			InitialContext context = new InitialContext();
 			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup(ProductSpecificationsServiceRemoteInterface.class.getName());
 		}

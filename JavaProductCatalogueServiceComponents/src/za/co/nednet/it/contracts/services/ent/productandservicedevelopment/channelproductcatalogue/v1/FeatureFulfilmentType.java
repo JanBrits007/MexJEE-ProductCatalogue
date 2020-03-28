@@ -46,7 +46,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class FeatureFulfilmentType implements Serializable {
 
-    protected String channel;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 2624317756543481819L;
+	protected String channel;
     protected String fulfilmentType;
     protected String fulfilmentInputSetting1;
     protected String fulfilmentInputSetting2;

@@ -101,7 +101,7 @@ public class ArrangementMetricsDAO {
 	}
 	
 	public String retrieveCaseIDByArrangementID(String arrangementID) throws Exception {
-		mLog.debug("Trace 1");
+		mLog.debug("Trace 1 >>" + arrangementID + "<<");
 
 		PreparedStatement vPreparedStatement = null;
 		ResultSet vResultSet = null;
@@ -123,16 +123,17 @@ public class ArrangementMetricsDAO {
 			mLog.debug("Trace 4");
 
 			if(vResultSet.next()) {
+				mLog.debug("Trace 5 >>" + vResultSet.getString("CASEID") + "<<");
 				return vResultSet.getString("CASEID");
 			}
 		}
 		finally {
-			mLog.debug("Trace 5");
+			mLog.debug("Trace 6");
 			cleanupConnection(vConnection, vResultSet, vPreparedStatement);			
 		}
 		
 		// Problem.
-		mLog.debug("Trace 6");
+		mLog.debug("Trace 7");
 
 		return null;
 	}

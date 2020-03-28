@@ -41,7 +41,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class ProductPricingType implements Serializable {
 
-    @XmlElement(required = true)
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -6053273097228177931L;
+	@XmlElement(required = true)
     protected FeeType fee;
 
     /**
