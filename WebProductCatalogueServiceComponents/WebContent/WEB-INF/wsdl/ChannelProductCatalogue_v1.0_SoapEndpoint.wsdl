@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+  <wsdl:import location="ChannelProductCatalogue_v1.0_SoapBinding.wsdl" namespace="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+    </wsdl:import>
+  <wsdl:service name="ChannelProductCatalogue">
+    <wsdl:port binding="tns:ChannelProductCatalogueSOAPBinding" name="ChannelProductCatalogueSOAPBindingPort">
+      <soap:address location="http://BSA_MPGWs:5000/services/ent/productandservicedevelopment/channelproductcatalogue/v1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

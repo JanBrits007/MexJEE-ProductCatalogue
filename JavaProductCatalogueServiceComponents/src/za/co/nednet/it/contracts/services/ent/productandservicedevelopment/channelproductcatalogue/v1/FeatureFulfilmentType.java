@@ -8,8 +8,6 @@
 
 package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1;
 
-import java.io.Serializable;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -44,13 +42,9 @@ import javax.xml.bind.annotation.XmlType;
     "fulfilmentInputSetting1",
     "fulfilmentInputSetting2"
 })
-public class FeatureFulfilmentType implements Serializable {
+public class FeatureFulfilmentType {
 
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 2624317756543481819L;
-	protected String channel;
+    protected String channel;
     protected String fulfilmentType;
     protected String fulfilmentInputSetting1;
     protected String fulfilmentInputSetting2;

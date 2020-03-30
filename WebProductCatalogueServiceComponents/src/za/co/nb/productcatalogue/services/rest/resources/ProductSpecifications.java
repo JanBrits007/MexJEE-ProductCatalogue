@@ -18,33 +18,27 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
-import za.co.nb.productcatalogue.dao.ProductSpecificationsJSONServiceDAO;
+import za.co.nb.productcatalogue.dao.ProductSpecificationsDAO;
 
 
 @Path( "/productSpecifications" )
 @Stateless
 public class ProductSpecifications {
 
+//    @EJB
+//    IEntitlementsApproval entitlementsApprovalService;
+
     /**
      * The name of this class
      */
     public static final String className = ProductSpecifications.class.getName();
-	private final Log mLog = LogFactory.getLog(getClass());
 
-    private ProductSpecificationsJSONServiceDAO mProductSpecificationsDAO;
+    private ProductSpecificationsDAO mProductSpecificationsDAO;
     
-    private ProductSpecificationsJSONServiceDAO getProductSpecificationsDAO() {
-    	mLog.debug("Trace 1");
-    	
+    private ProductSpecificationsDAO getProductSpecificationsDAO() {
     	if(mProductSpecificationsDAO == null) {
-        	mLog.debug("Trace 2");
-    		mProductSpecificationsDAO = new ProductSpecificationsJSONServiceDAO();
+    		mProductSpecificationsDAO = new ProductSpecificationsDAO();
     	}
-    	
-    	mLog.debug("Trace 3");
     	
     	return mProductSpecificationsDAO;
     }
@@ -62,17 +56,14 @@ public class ProductSpecifications {
     @Path( "/{id}" )
     @Produces( MediaType.APPLICATION_JSON )
     public Response getProductSpecificationByID( @PathParam( "id" ) String id ) {
-    	mLog.debug("Trace 1");
     	
     	try {
 	        String vProductSpecificationJSON = getProductSpecificationsDAO().getProductSpecificationJSONByID(id);
 
 	        if(vProductSpecificationJSON != null) {
-	        	mLog.debug("Trace 2");
 		        return Response.ok(vProductSpecificationJSON).build();
 	        }
 	        else {
-	        	mLog.debug("Trace 3");
 	        	return Response.ok(Status.NOT_FOUND).build();
 	        }
     	}
@@ -81,4 +72,5 @@ public class ProductSpecifications {
             return Response.status(Status.INTERNAL_SERVER_ERROR).build();
     	}
     }
+
 }

@@ -8,13 +8,10 @@
 
 package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -29,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="attributeGroupName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="featureAttributes" type="{http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1}FeatureAttributesType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="featureAttributes" type="{http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1}AttributesType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -43,18 +40,10 @@ import javax.xml.bind.annotation.XmlType;
     "attributeGroupName",
     "featureAttributes"
 })
-public class FeatureAttributeGroupType implements Serializable {
+public class FeatureAttributeGroupType {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -8329770166830794540L;
-
-	@XmlElement(required = true)
     protected String attributeGroupName;
-    
-    @XmlElement(required = true)
-    protected List<FeatureAttributesType> featureAttributes;
+    protected List<AttributesType> featureAttributes;
 
     /**
      * Gets the value of the attributeGroupName property.
@@ -98,19 +87,15 @@ public class FeatureAttributeGroupType implements Serializable {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link FeatureAttributesType }
+     * {@link AttributesType }
      * 
      * 
      */
-    public List<FeatureAttributesType> getFeatureAttributes() {
+    public List<AttributesType> getFeatureAttributes() {
         if (featureAttributes == null) {
-            featureAttributes = new ArrayList<FeatureAttributesType>();
+            featureAttributes = new ArrayList<AttributesType>();
         }
         return this.featureAttributes;
     }
 
-    public void setFeatureAttributes(List<FeatureAttributesType> featureAttributes) {
-    	this.featureAttributes = featureAttributes;
-    }
-    
 }

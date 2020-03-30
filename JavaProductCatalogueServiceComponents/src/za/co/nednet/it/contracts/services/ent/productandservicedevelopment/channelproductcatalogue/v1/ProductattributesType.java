@@ -8,8 +8,6 @@
 
 package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1;
 
-import java.io.Serializable;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -47,17 +45,14 @@ import javax.xml.bind.annotation.XmlType;
     "isComparable",
     "minValue",
     "maxValue",
-    "value",
     "valueUnit",
-    "description"
+    "description",
+    "value"
+    
 })
-public class ProductattributesType implements Serializable {
+public class ProductattributesType {
 
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 7089887898706893740L;
-	protected String attributeType;
+    protected String attributeType;
     protected String attributeName;
     protected String isComparable;
     protected Integer minValue;

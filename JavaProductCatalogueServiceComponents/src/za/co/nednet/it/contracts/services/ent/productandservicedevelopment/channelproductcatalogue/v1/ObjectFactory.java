@@ -153,8 +153,8 @@ public class ObjectFactory {
      * Create an instance of {@link AttributesType }
      * 
      */
-    public FeatureAttributesType createAttributesType() {
-        return new FeatureAttributesType();
+    public AttributesType createAttributesType() {
+        return new AttributesType();
     }
 
     /**

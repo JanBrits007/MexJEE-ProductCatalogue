@@ -8,8 +8,6 @@
 
 package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1;
 
-import java.io.Serializable;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,13 +37,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ProductPricingType", propOrder = {
     "fee"
 })
-public class ProductPricingType implements Serializable {
+public class ProductPricingType {
 
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = -6053273097228177931L;
-	@XmlElement(required = true)
+    @XmlElement(required = true)
     protected FeeType fee;
 
     /**

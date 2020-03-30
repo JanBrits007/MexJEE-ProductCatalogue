@@ -8,9 +8,7 @@
 
 package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -43,18 +41,14 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FeeType", propOrder = {
     "type",
-    "friendlyDesc",
-    "currency",
     "amount",
-    "frequency"
+    "frequency",
+    "currency",
+    "friendlyDesc"
 })
-public class FeeType implements Serializable {
+public class FeeType {
 
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = -8205137175604821355L;
-	@XmlElement(required = true)
+    @XmlElement(required = true)
     protected String type;
     @XmlElement(required = true)
     protected BigDecimal amount;
