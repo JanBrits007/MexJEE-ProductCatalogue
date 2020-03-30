@@ -26,31 +26,9 @@ public class ProductCataloguesDAO {
 
 		try {
 			return readDataFromJSONResourceFile("/productcatalogue/" + productCatalogueID + ".json");
-/*			
-			InputStream inputStream = ProductSpecificationsServiceDAO.class.getResourceAsStream("/productcatalogue/" + productCatalogueID + ".json");
-			
-			if(inputStream == null) {
-		    	mLog.debug("Trace 2");
-				throw new Exception("Unable to find product hierarchy for catalogue ID " + productCatalogueID);
-			}
-			
-			ByteArrayOutputStream result = new ByteArrayOutputStream();
-			byte[] buffer = new byte[1024];
-			int length;
-			
-			while ((length = inputStream.read(buffer)) != -1) {
-			    result.write(buffer, 0, length);
-			}
-
-	    	mLog.debug("Trace 3");
-			
-			String JSONHierarchy = result.toString(StandardCharsets.UTF_8.name());
-	
-			return JSONHierarchy;
-*/			
-		} catch (IOException e) {
+		} catch(Exception e) {
 			e.printStackTrace();
-			throw new Exception("Unable to find product hierarchy for catalogue ID " + productCatalogueID);
+			return "Unable to compose hierarchy for catalogue ID " + productCatalogueID + ". Please check the log file for detailed exception message";
 		}
 	}
 
@@ -64,6 +42,8 @@ public class ProductCataloguesDAO {
 		    	mLog.debug("Trace 2");
 				throw new Exception("Unable to find resource with filename " + resourceFilename);
 			}
+
+	    	mLog.debug("Trace 2.1");
 			
 			ByteArrayOutputStream result = new ByteArrayOutputStream();
 			byte[] buffer = new byte[1024];
