@@ -170,15 +170,15 @@
                   <value>false</value>
                </productAttributes>
 			   <productAttributes>
-					<attributeType>string</attributeType>
-					<attributeName>frontOfficeIntentSequenceStaff</attributeName>
-					<value>PrepareApplicant|GenerateOfferGatherProductDetails|FinalizeFrontOfficeInteraction</value>
-				</productAttributes>
-			   <productAttributes>
 			       <attributeType>string</attributeType>
                    <attributeName>frontOfficeIntentSequence</attributeName>
-                   <value>PrepareApplicant|GenerateOfferGatherProductDetails|GatherEvidence|FinalizeFrontOfficeInteraction</value>
+                   <value>PrepareApplicant|GenerateOfferGatherProductDetails|GatherOfferProductDetails|FinalizeFrontOfficeInteraction</value>
 		       </productAttributes>
+			  <productAttributes>
+			       <attributeType>string</attributeType>
+                   <attributeName>frontOfficeIntentSequenceStaff</attributeName>
+                   <value>PrepareApplicant|GenerateOfferGatherProductDetails|GatherOfferProductDetails|FinalizeFrontOfficeInteraction</value>
+		       </productAttributes>				   
             </productAttributeGroup>
             <productAttributeGroup>
                <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
@@ -187,4 +187,15 @@
                   <attributeName>ConsentCheckPageComponent</attributeName>
                </productAttributes>
             </productAttributeGroup>
-         </product>
+			<productAttributeGroup>
+               <attributeGroupName>documentsToBeUploaded</attributeGroupName>
+               <productAttributes>
+                  <attributeType>Agreement Contract</attributeType>
+                  <attributeName>AGREEMENTSMERCHANTSERVICE</attributeName>
+               </productAttributes>
+			   <productAttributes>
+                  <attributeType>Application</attributeType>
+                  <attributeName>APPLICATIONSMERCHANTSERVICE</attributeName>
+               </productAttributes>
+            </productAttributeGroup>
+</product>
