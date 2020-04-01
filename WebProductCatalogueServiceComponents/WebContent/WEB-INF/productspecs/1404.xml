@@ -1,21 +1,17 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1404</productIdentifier>
-    <name>Business PAYU</name>
-    <dispalyName>Business PAYU</dispalyName>
-    <shortDescription>For new and established businesses that need full transactional functionality and options for an overdraft, a credit card and business lending.</shortDescription>
+    <name>Business Pay-As-You-Use</name>
+    <dispalyName>Business Pay-As-You-Use</dispalyName>
+    <shortDescription>Full transactional capabilities for a low monthly maintenance fee.</shortDescription>
     <productPricing>
         <fee>
             <type>AdminFee</type>
-            <amount>180</amount>
+            <amount>60</amount>
             <frequency>Monthly</frequency>
             <currency>ZAR</currency>
-            <description>R 180 pm</description>
+            <description>R 60 pm</description>
         </fee>
     </productPricing>
-    <salesHighlights>Full transactional capabilities with linked cheque card and electronic/mobile banking access</salesHighlights>
-    <salesHighlights>Low monthly maintenance fees, and pay-as you-use pricing.</salesHighlights>
-    <salesHighlights>Access to the full range of small-business solutions, including point-of-sale devices, financing and investment options and other value added services.</salesHighlights>
-    <salesHighlights>Earn Greenbacks loyalty points on your card spend</salesHighlights>
     <productOnAPageWebURL>/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html</productOnAPageWebURL>
     <productAttributeGroup>
         <attributeGroupName>ProductFeatures</attributeGroupName>
@@ -317,6 +313,16 @@
             <attributeName>requiresSecurityAndCollatoralManagement</attributeName>
             <value>false</value>
         </productAttributes>
+        <productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>frontOfficeIntentSequence</attributeName>
+			<value>GenerateOfferGatherProductDetails|ElectronicChannel|CreateSigningCeremony</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>frontOfficeIntentSequence_NonSTP</attributeName>
+			<value>GenerateOfferGatherProductDetails|ElectronicChannel|GatherEvidence|FinalizeFrontOfficeInteraction</value>
+		</productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
@@ -348,29 +354,13 @@
     <productAttributeGroup>
         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
         <productAttributes>
-            <attributeType>productConfigurationInformation</attributeType>
-            <attributeName>ProductConfigWidgetComponent</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>statementInformation</attributeType>
-            <attributeName>statementWidget</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>chequeAndDepositeInformation</attributeType>
-            <attributeName>chequeAndDepositeWidget</attributeName>
-        </productAttributes>
-        <productAttributes>
             <attributeType>namingOfAccunts</attributeType>
             <attributeName>namingOfAccuntsWidget</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>newSignaturies</attributeType>
             <attributeName>newSignaturiesWidget</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>copyFromExisting</attributeType>
-            <attributeName>copyFromExistingWidget</attributeName>
-        </productAttributes>
+        </productAttributes>        
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>coreProvisioningParameters</attributeGroupName>

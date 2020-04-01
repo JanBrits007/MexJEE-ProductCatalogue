@@ -1,14 +1,14 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-            <productIdentifier>1338</productIdentifier>
-            <name>Card Acquiring</name>
-            <shortDescription>Card Acquiring is a service for merchants that accept non cash payment methods such as credit cards, debit cards and point-of-sale devices.</shortDescription>
+            <productIdentifier>1309</productIdentifier>
+            <name>TradeXchange</name>
+            <shortDescription>If a Nedbank client receives a Draft from an overseas payer, the Nedbank client will deposit the Draft at a Nedbank branch. This is called a cheque collection.  Nedbank will then organize for the money to be collected from the payer's account and deposited into the Nedbank client's account.</shortDescription>
             <productAttributeGroup>
                <attributeGroupName>ProductFeatures</attributeGroupName>
                <productAttributes>
                   <attributeType>Feature</attributeType>
                   <attributeName>DisplayName</attributeName>
                   <isComparable>false</isComparable>
-                  <value>Card Acquiring</value>
+                  <value>TradeXchange</value>
                </productAttributes>
                <productAttributes>
                   <attributeType>Feature</attributeType>
@@ -71,7 +71,7 @@
                <productAttributes>
                   <attributeType>string</attributeType>
                   <attributeName>isLead</attributeName>
-                  <value>false</value>
+                  <value>true</value>
                </productAttributes>
             </productAttributeGroup>
             <productAttributeGroup>
@@ -169,33 +169,32 @@
                   <attributeName>requiresSecurityAndCollatoralManagement</attributeName>
                   <value>false</value>
                </productAttributes>
-			   <productAttributes>
+               <productAttributes>
+                  <attributeType>string</attributeType>
+                  <attributeName>CODEngine</attributeName>
+                  <value>JuristicOverdraftCOD</value>
+               </productAttributes>
+			      <productAttributes>
 			       <attributeType>string</attributeType>
                    <attributeName>frontOfficeIntentSequence</attributeName>
-                   <value>PrepareApplicant|GenerateOfferGatherProductDetails|GatherOfferProductDetails|FinalizeFrontOfficeInteraction</value>
-		       </productAttributes>
-			  <productAttributes>
-			       <attributeType>string</attributeType>
-                   <attributeName>frontOfficeIntentSequenceStaff</attributeName>
-                   <value>PrepareApplicant|GenerateOfferGatherProductDetails|GatherOfferProductDetails|FinalizeFrontOfficeInteraction</value>
-		       </productAttributes>				   
+                   <value>PrepareApplicant|GenerateOfferGatherProductDetails|GatherEvidence|FinalizeFrontOfficeInteraction</value>
+		         </productAttributes>
+      	       <productAttributes>
+				   <attributeType>string</attributeType>
+				   <attributeName>frontOfficeIntentSequenceLead</attributeName>
+				   <value>PrepareApplicant|GenerateOfferGatherProductDetails|FinalizeFrontOfficeInteraction</value>
+			   </productAttributes>
+			   <productAttributes>
+                    <attributeType>string</attributeType>
+                    <attributeName>frontOfficeIntentSequenceStaff</attributeName>
+                    <value>PrepareApplicant|GenerateOfferGatherProductDetails|FinalizeFrontOfficeInteraction</value>
+                </productAttributes>
             </productAttributeGroup>
             <productAttributeGroup>
                <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
                <productAttributes>
                   <attributeType>productConfigurationInformation</attributeType>
-                  <attributeName>ConsentCheckPageComponent</attributeName>
+                  <attributeName>TradeXchangeWidget</attributeName>
                </productAttributes>
             </productAttributeGroup>
-			<productAttributeGroup>
-               <attributeGroupName>documentsToBeUploaded</attributeGroupName>
-               <productAttributes>
-                  <attributeType>Agreement Contract</attributeType>
-                  <attributeName>AGREEMENTSMERCHANTSERVICE</attributeName>
-               </productAttributes>
-			   <productAttributes>
-                  <attributeType>Application</attributeType>
-                  <attributeName>APPLICATIONSMERCHANTSERVICE</attributeName>
-               </productAttributes>
-            </productAttributeGroup>
-</product>
+         </product>
