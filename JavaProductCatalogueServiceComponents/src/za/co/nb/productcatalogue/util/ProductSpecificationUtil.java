@@ -28,12 +28,12 @@ public class ProductSpecificationUtil {
 		return getProductOrFeatureAttributeValue(productSpecification, attributeGroup, attributeName);
 	}
 
-	public String getProductOrFeatureAttributeValue(ProductType productSpecification, String attributeGroup, String attributeName) throws Exception {
-		mLog.debug("Trace 1");
+	public String getProductOrFeatureAttributeValue(ProductType productSpecification, String attributeGroup, String attributeName) throws InvalidAttributeException {
+		mLog.debug("Trace 1 >>" + attributeGroup + "<<,>>" + attributeName + "<<");
 		
 		// First look in product attribute groups.
 		for(ProductAttributeGroupType productAttributeGroup : productSpecification.getProductAttributeGroup()) {
-			mLog.debug("Trace 2");
+			mLog.debug("Trace 2 >>" + productAttributeGroup.getAttributeGroupName() + "<<");
 			
 			// Now look for the attribute group.
 			if(productAttributeGroup.getAttributeGroupName().equalsIgnoreCase(attributeGroup)) {
@@ -41,7 +41,7 @@ public class ProductSpecificationUtil {
 				// Found it.
 				// Now find the attribute.
 				for(ProductattributesType attribute : productAttributeGroup.getProductAttributes()) {
-					mLog.debug("Trace 4");
+					mLog.debug("Trace 4 >>" + attribute.getAttributeName() + "<<");
 
 					if(attribute.getAttributeName().equalsIgnoreCase(attributeName)) {
 						// Found it.
@@ -55,10 +55,10 @@ public class ProductSpecificationUtil {
 		
 		// Didn't find it on product level. Look in features.
 		for(FeaturesType feature : productSpecification.getFeatures()) {
-			mLog.debug("Trace 6");
+			mLog.debug("Trace 6 >>" + feature.getFeatureIdentifier() + "<<");
 
 			for(FeatureAttributeGroupType featureAttributeGroup : feature.getFeatureAttributeGroup()) {
-				mLog.debug("Trace 7");
+				mLog.debug("Trace 7 >>" + featureAttributeGroup.getAttributeGroupName() + "<<");
 				
 				// Now look for the attribute group.
 				if(featureAttributeGroup.getAttributeGroupName().equalsIgnoreCase(attributeGroup)) {
@@ -66,7 +66,7 @@ public class ProductSpecificationUtil {
 					// Found it.
 					// Now find the attribute.
 					for(FeatureAttributesType attribute : featureAttributeGroup.getFeatureAttributes()) {
-						mLog.debug("Trace 9");
+						mLog.debug("Trace 9 >>" + attribute.getAttributeName() + "<<");
 
 						if(attribute.getAttributeName().equalsIgnoreCase(attributeName)) {
 							// Found it.
