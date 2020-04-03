@@ -147,4 +147,72 @@ public class ProductSpecificationUtil {
 		// Didn't find the attribute.
 		throw new InvalidAttributeException("Invalid product specification attribute for product ID " + productSpecification.getProductIdentifier() + " with attribute group " + attributeGroup + " and attribute name " + attributeName);
 	}
+	
+	
+	public String getProductAttributeValue(ProductType productSpecification, String attributeGroup, String attributeName) throws InvalidAttributeException {
+		mLog.debug("Trace 1 >>" + attributeGroup + "<<,>>" + attributeName + "<<");
+		String productAttributeValue = "";
+		// Let's look in product attribute groups.
+		for(ProductAttributeGroupType productAttributeGroup : productSpecification.getProductAttributeGroup()) {
+			mLog.debug("Trace 2 >>" + productAttributeGroup.getAttributeGroupName() + "<<");
+			
+			// Now look for the attribute group.
+			if(productAttributeGroup.getAttributeGroupName().equalsIgnoreCase(attributeGroup)) {
+				mLog.debug("Trace 3");
+				// Found it.
+				// Now find the attribute.
+				for(ProductattributesType attribute : productAttributeGroup.getProductAttributes()) {
+					mLog.debug("Trace 4 >>" + attribute.getAttributeName() + "<<");
+
+					if(attribute.getAttributeName().equalsIgnoreCase(attributeName)) {
+						// Found it.
+						mLog.debug("Trace 5");
+						
+						productAttributeValue = attribute.getValue();
+					}
+				}
+			}
+		}
+		mLog.debug("Trace 6");
+		
+		return productAttributeValue;
+	}
+		
+	public String getFeatureAttributeValue(ProductType productSpecification, String attributeGroup, String attributeName,int featureID) throws InvalidAttributeException {
+		mLog.debug("Trace 1 >>" + attributeGroup + "<<,>>" + attributeName + "<<");
+		
+		String featureAttributeValue = "";
+		// Let's look in feature attribute groups.
+		for(FeaturesType feature : productSpecification.getFeatures()) {
+			mLog.debug("Trace 6 >>" + feature.getFeatureIdentifier() + "<<");
+			
+			if(feature.getFeatureIdentifier() == featureID){
+				
+				for(FeatureAttributeGroupType featureAttributeGroup : feature.getFeatureAttributeGroup()) {
+					mLog.debug("Trace 7 >>" + featureAttributeGroup.getAttributeGroupName() + "<<");
+					
+					// Now look for the attribute group.
+					if(featureAttributeGroup.getAttributeGroupName().equalsIgnoreCase(attributeGroup)) {
+						mLog.debug("Trace 8");
+						// Found it.
+						// Now find the attribute.
+						for(FeatureAttributesType attribute : featureAttributeGroup.getFeatureAttributes()) {
+							mLog.debug("Trace 9 >>" + attribute.getAttributeName() + "<<");
+
+							if(attribute.getAttributeName().equalsIgnoreCase(attributeName)) {
+								// Found it.
+								mLog.debug("Trace 10");
+								
+								featureAttributeValue = attribute.getValue();
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		mLog.debug("Trace 6");
+		
+		return featureAttributeValue;
+	}
 }
