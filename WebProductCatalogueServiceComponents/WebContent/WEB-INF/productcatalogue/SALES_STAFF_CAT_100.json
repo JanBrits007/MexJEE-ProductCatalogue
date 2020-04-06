@@ -2791,9 +2791,21 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
-                          "text": "Select"
-                        },
+                           "type": "SELECT",
+                           "text": "Select",
+                           "environments": [
+                               "dev_staff",
+                               "ete_staff",
+                               "qa_staff"
+                           ]
+                       },
+                       {
+                           "type": "SELECT_EWCO",
+                           "text": "Select",
+                           "environments": [
+                               "prod_staff"
+                           ]
+                       },
                         {
                           "type": "DETAIL",
                           "text": "Details"
@@ -2978,9 +2990,21 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
-                          "text": "Select"
-                        },
+                           "type": "SELECT",
+                           "text": "Select",
+                           "environments": [
+                               "dev_staff",
+                               "ete_staff",
+                               "qa_staff"
+                           ]
+                       },
+                       {
+                           "type": "SELECT_EWCO",
+                           "text": "Select",
+                           "environments": [
+                               "prod_staff"
+                           ]
+                       },
                         {
                           "type": "DETAIL",
                           "text": "Details"
@@ -4217,9 +4241,21 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
-                          "text": "Select"
-                        },
+                           "type": "SELECT",
+                           "text": "Select",
+                           "environments": [
+                               "dev_staff",
+                               "ete_staff",
+                               "qa_staff"
+                           ]
+                       },
+                       {
+                           "type": "SELECT_EWCO",
+                           "text": "Select",
+                           "environments": [
+                               "prod_staff"
+                           ]
+                       },
                         {
                           "type": "DETAIL",
                           "text": "Details"
@@ -4387,9 +4423,21 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
-                          "text": "Select"
-                        },
+                           "type": "SELECT",
+                           "text": "Select",
+                           "environments": [
+                               "dev_staff",
+                               "ete_staff",
+                               "qa_staff"
+                           ]
+                       },
+                       {
+                           "type": "SELECT_EWCO",
+                           "text": "Select",
+                           "environments": [
+                               "prod_staff"
+                           ]
+                       },
                         {
                           "type": "DETAIL",
                           "text": "Details"
@@ -5318,8 +5366,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 6.60,
-                          "description": "6.60% pa"
+                          "value": 5.60,
+                          "description": "5.60% pa"
                         }
                       ],
                       "specialFeature": "Short Term",
@@ -5334,7 +5382,7 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
+                          "type": "SELECT_EWCO",
                           "text": "Select"
                         },
                         {
@@ -5350,7 +5398,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 6.60%"
+                          "description": "up to 5.60%"
                         },
                         {
                           "name": "Investmentterm",
@@ -5641,8 +5689,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 7.75,
-                          "description": "7.75% pa"
+                          "value": 8.20,
+                          "description": "8.20% pa"
                         }
                       ],
                       "specialFeature": "1-60 Months",
@@ -5659,7 +5707,7 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
+                          "type": "SELECT_EWCO",
                           "text": "Select"
                         },
                         {
@@ -5675,7 +5723,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 7.75%"
+                          "description": "up to 8.20%"
                         },
                         {
                           "name": "Investmentterm",
@@ -5803,8 +5851,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 6.25,
-                          "description": "6,25% pa"
+                          "value": 5.25,
+                          "description": "5.25% pa"
                         }
                       ],
                       "specialFeature": "Short Term",
@@ -5819,20 +5867,8 @@
                       },
                       "actions": [
                         {
-                            "type": "SELECT",
-                            "text": "Select",
-                            "environments": [
-                              "dev_staff",
-                              "ete_staff",
-                              "qa_staff"
-                            ]
-                        },
-                        {
-                            "type": "SELECT_EWCO",
-                            "text": "Select",
-                            "environments": [
-                                "prod_staff"
-                            ]
+                          "type": "SELECT_EWCO",
+                          "text": "Select"
                         },
                         {
                           "type": "DETAIL",
@@ -5847,7 +5883,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 6.25%"
+                          "description": "up to 5.25%"
                         },
                         {
                           "name": "Investmentterm",
@@ -5967,7 +6003,7 @@
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {
                         "term": 0,
-                        "notice": 24,
+                        "notice": 1,
                         "productType": 31
                       }
                     },
@@ -5978,8 +6014,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 6.00,
-                          "description": "6,00% pa"
+                          "value": 5.00,
+                          "description": "5.00% pa"
                         }
                       ],
                       "specialFeature": "Short Term",
@@ -5994,7 +6030,7 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
+                          "type": "SELECT_EWCO",
                           "text": "Select"
                         },
                         {
@@ -6010,7 +6046,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 6.00%"
+                          "description": "up to 5.00%"
                         },
                         {
                           "name": "Investmentterm",
@@ -6130,7 +6166,7 @@
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {
                         "term": 0,
-                        "notice": 24,
+                        "notice": 1,
                         "productType": 32
                       }
                     },
@@ -6141,8 +6177,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 7.00,
-                          "description": "7.00% pa"
+                          "value": 6.35,
+                          "description": "6.35% pa"
                         }
                       ],
                       "specialFeature": "12 months",
@@ -6159,7 +6195,7 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
+                          "type": "SELECT_EWCO",
                           "text": "Select"
                         },
                         {
@@ -6175,7 +6211,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 7.00%"
+                          "description": "up to 6.35%"
                         },
                         {
                           "name": "Investmentterm",
@@ -6303,8 +6339,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 8.00,
-                          "description": "8.00% pa"
+                          "value": 8.50,
+                          "description": "8.50% pa"
                         }
                       ],
                       "specialFeature": "1 - 60 Months",
@@ -6321,20 +6357,8 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
-                          "text": "Select",
-                          "environments": [
-                            "dev_staff",
-                            "ete_staff",
-                            "qa_staff"
-                          ]
-                        },
-                        {
                           "type": "SELECT_EWCO",
-                          "text": "Select",
-                          "environments": [
-                            "prod_staff"
-                          ]
+                          "text": "Select"
                         },
                         {
                           "type": "DETAIL",
@@ -6349,7 +6373,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 8.00%"
+                          "description": "up to 8.50%"
                         },
                         {
                           "name": "Investmentterm",
@@ -6477,8 +6501,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 6.73,
-                          "description": "6.73% pa"
+                          "value": 5.68,
+                          "description": "5.68% pa"
                         }
                       ],
                       "specialFeature": "3 - 60 months",
@@ -6497,7 +6521,7 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
+                          "type": "SELECT_EWCO",
                           "text": "Select"
                         },
                         {
@@ -6513,7 +6537,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 6.73%"
+                          "description": "up to 5.68%"
                         },
                         {
                           "name": "Investmentterm",
@@ -6543,7 +6567,7 @@
                         {
                           "name": "AdditionalDeposits",
                           "displayName": "Additional Deposits",
-                          "description": "Yes"
+                          "description": "No"
                         },
                         {
                           "name": "AgeRestriction",
@@ -6601,9 +6625,9 @@
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
                           "description": "All individuals, Small Business Services and Business Banking clients",
-                          "maxValue": "11",
-                          "minValue": "2",
-                          "valueUnit": "month"
+                          "maxValue": "12",
+                          "minValue": "12",
+                          "valueUnit": "Period"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -6637,7 +6661,7 @@
                       ],
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {
-                        "term": 11,
+                        "term": 60,
                         "notice": 0,
                         "productType": 15
                       }
@@ -6811,8 +6835,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 8.05,
-                          "description": "8.05% pa"
+                          "value": 8.55,
+                          "description": "8.55% pa"
                         }
                       ],
                       "specialFeature": "1 - 60 months",
@@ -6829,7 +6853,7 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
+                          "type": "SELECT_EWCO",
                           "text": "Select"
                         },
                         {
@@ -6845,7 +6869,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 8.05%"
+                          "description": "up to 8.55%"
                         },
                         {
                           "name": "Investmentterm",
@@ -6973,8 +6997,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 6.25,
-                          "description": "6.25% pa"
+                          "value": 5.25,
+                          "description": "5.25% pa"
                         }
                       ],
                       "specialFeature": "24 hours",
@@ -6990,7 +7014,7 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
+                          "type": "SELECT_EWCO",
                           "text": "Select"
                         },
                         {
@@ -7006,7 +7030,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 6.25%"
+                          "description": "up to 5.25%"
                         },
                         {
                           "name": "Investmentterm",
@@ -7131,7 +7155,7 @@
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {
                         "term": 0,
-                        "notice": 24,
+                        "notice": 1,
                         "productType": 30
                       }
                     },
@@ -7142,8 +7166,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 6.25,
-                          "description": "6.25% pa"
+                          "value": 5.25,
+                          "description": "5.25% pa"
                         }
                       ],
                       "specialFeature": "24 hours",
@@ -7159,20 +7183,8 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
-                          "text": "Select",
-                          "environments": [
-                            "dev_staff",
-                            "ete_staff",
-                            "qa_staff"
-                          ]
-                        },
-                        {
                           "type": "SELECT_EWCO",
-                          "text": "Select",
-                          "environments": [
-                            "prod_staff"
-                          ]
+                          "text": "Select"
                         },
                         {
                           "type": "DETAIL",
@@ -7187,7 +7199,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 6.25%"
+                          "description": "up to 5.25%"
                         },
                         {
                           "name": "Investmentterm",
@@ -7307,7 +7319,7 @@
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {
                         "term": 0,
-                        "notice": 24,
+                        "notice": 1,
                         "productType": 49
                       }
                     },
@@ -7318,8 +7330,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 4.75,
-                          "description": "4.75% pa"
+                          "value": 3.75,
+                          "description": "3.75% pa"
                         }
                       ],
                       "specialFeature": "Short Term",
@@ -7350,7 +7362,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 4.75%"
+                          "description": "up to 3.75%"
                         },
                         {
                           "name": "Investmentterm",
@@ -7478,8 +7490,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 7.72,
-                          "description": "7.72% pa"
+                          "value": 6.60,
+                          "description": "6.60% pa"
                         }
                       ],
                       "specialFeature": "12 Months",
@@ -7495,20 +7507,8 @@
                       },
                       "actions": [
                         {
-                          "type": "SELECT",
-                          "text": "Select",
-                          "environments": [
-                            "dev_staff",
-                            "ete_staff",
-                            "qa_staff"
-                          ]
-                        },
-                        {
                           "type": "SELECT_EWCO",
-                          "text": "Select",
-                          "environments": [
-                            "prod_staff"
-                          ]
+                          "text": "Select"
                         },
                         {
                           "type": "DETAIL",
@@ -7523,7 +7523,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 7.72%"
+                          "description": "up to 6.60%"
                         },
                         {
                           "name": "Investmentterm",
