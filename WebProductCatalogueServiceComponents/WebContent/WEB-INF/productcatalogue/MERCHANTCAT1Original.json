@@ -1,0 +1,2093 @@
+{
+  "catalogue": {
+    "productHierarchy": {
+      "productFamilies": [
+        {
+          "name": "Personal",
+          "description": "Products for Individuals",
+          "productCategories": [
+            {
+              "name": "Bank",
+              "displayName": "Bank",
+              "description": "I need an account, a credit card or a bundle of banking services",
+              "productLines": [
+                {
+                  "displayName": "Accounts & bundled offerings",
+                  "name": "Accounts",
+                  "description": "Transactional banking products",
+                  "filterGroups": [
+                    {
+                      "filterGroupID": 1,
+                      "filterGroupName": "Age",
+                      "filterDisplayName": "What is your age?",
+                      "filterType": "Range",
+                      "filterItems": [
+                        {
+                          "filterID": 1,
+                          "filterDisplay": "All ages",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                          "minValue": 0,
+                          "maxValue": 999
+                        },
+                        {
+                          "filterID": 2,
+                          "filterDisplay": "Under 18",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                          "minValue": 0,
+                          "maxValue": 17
+                        },
+                        {
+                          "filterID": 3,
+                          "filterDisplay": "18 - 25",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                          "minValue": 18,
+                          "maxValue": 25
+                        },
+                        {
+                          "filterID": 4,
+                          "filterDisplay": "26 - 54",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                          "minValue": 26,
+                          "maxValue": 54
+                        },
+                        {
+                          "filterID": 5,
+                          "filterDisplay": "Over 55",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                          "minValue": 55,
+                          "maxValue": 999
+                        }
+                      ]
+                    },
+                    {
+                      "filterGroupID": 2,
+                      "filterGroupName": "Income",
+                      "filterDisplayName": "How much do you earn per year?",
+                      "filterType": "Range",
+                      "filterItems": [
+                        {
+                          "filterID": 1,
+                          "filterDisplay": "All income",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                          "minValue": 0,
+                          "maxValue": 9999999
+                        },
+                        {
+                          "filterID": 2,
+                          "filterDisplay": "Student",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                          "minValue": 0,
+                          "maxValue": 0
+                        },
+                        {
+                          "filterID": 3,
+                          "filterDisplay": "Less than R120 000",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                          "minValue": 1,
+                          "maxValue": 119999
+                        },
+                        {
+                          "filterID": 4,
+                          "filterDisplay": "R120 000 - R300 000",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                          "minValue": 120000,
+                          "maxValue": 299999
+                        },
+                        {
+                          "filterID": 5,
+                          "filterDisplay": "R300 000 - R750 000",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                          "minValue": 300000,
+                          "maxValue": 749999
+                        },
+                        {
+                          "filterID": 6,
+                          "filterDisplay": "More than R750 000",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                          "minValue": 750000,
+                          "maxValue": 9999999
+                        }
+                      ]
+                    },
+                    {
+                      "filterGroupID": 3,
+                      "filterGroupName": "Package",
+                      "filterDisplayName": "What kind of package do you need?",
+                      "filterType": "List",
+                      "filterItems": [
+                        {
+                          "filterID": 9,
+                          "filterDisplay": "An account only",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Pay-as-you-use')]",
+                          "value": "true"
+                        },
+                        {
+                          "filterID": 10,
+                          "filterDisplay": "A bundled offering",
+                          "productAttribute": "productAttributes[?(@.attributeName==='DebitOrderRepaymentRequired')]",
+                          "value": "false"
+                        }
+                      ]
+                    }
+                  ],
+                  "popularProducts": [
+                    1354,
+                    1019,
+                    1389
+                  ],
+                  "productGroups": [
+                    {
+                      "groupIdentifier": "POPULAR_CHOICES",
+                      "name": "POPULAR CHOICES",
+                      "products": [
+                        1354,
+                        1021,
+                        1389
+                      ]
+                    },
+                    {
+                      "groupIdentifier": "EVERYDAY_BANKING",
+                      "name": "EVERYDAY BANKING",
+                      "products": [
+                        1354,
+                        1019,
+                        1389
+                      ]
+                    },
+                    {
+                      "groupIdentifier": "YOUTH_BANKING",
+                      "name": "YOUTH BANKING",
+                      "products": [
+                        1385,
+                        1474,
+                        1400,
+                        1021,
+                        1108
+                      ]
+                    },
+                    {
+                      "groupIdentifier": "SENIOR_BANKING",
+                      "name": "SENIOR BANKING",
+                      "products": [
+                        1015,
+                        1389
+                      ]
+                    }
+                  ],
+                  "products": [
+                    {
+                      "productIdentifier": 1354,
+                      "name": "Savvy Bundle",
+                      "shortDescription": "Get the ultimate! This offer includes unlimited transactions, a platinum cheque and credit card and so much more.",
+                      "productPricing": [
+                        {
+                          "type": "AdminFee",
+                          "amount": 210,
+                          "frequency": "Monthly",
+                          "currency": "ZAR",
+                          "description": "R210.00 pm"
+                        }
+                      ],
+                      "specialFeature": "",
+                      "salesHighlights": [
+                        "Platinum cheque and credit cards.",
+			            "American Express® cheque and credit cards.",
+			            "The option of an overdraft facility.",
+			            "Nedbank Greenbacks Money Management membership with double Greenbacks when using your American Express® cards.",
+			            "Greenbacks SHOP Card.",
+			            "Free digital banking through online banking, the Nedbank Money app and Cellphone Banking.",
+			            "Unlimited card swipes.",
+			            "Unlimited deposits at cash-accepting ATMs.",
+			            "Unlimited Nedbank ATM cash withdrawals.",
+			            "Unlimited cash withdrawals at point-of-sale devices at participating retailers.",
+			            "Unlimited debit orders.",
+			            "Unlimited stop orders.",
+			            "Unlimited account payments and interaccount transfers on self-service channels."
+                      ],
+                      "redirect": {
+                        "shouldRedirect": false,
+                        "redirectUrl": null
+                      },
+                      "actions": [
+                        {
+                          "type": "SELECT",
+                          "text": "Select"
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
+                      "valueAddedServices": [
+                        "eNotes (SMS) - Included",
+                        "No funds alert - Included",
+                        "MyPocket - Included",
+                        "Salary Switching - Available",
+                        "Debit Order Switching - Available",
+                        "Platinum credit card - Included",
+                        "Overdraft - Facility fee included",
+                        "Nedbank Greenbacks Rewards Membership - Included",
+                        "Amex Card - Available",
+                        "Affinity Programmes - Available",
+                        "Nedbank Insurance Funeral Plan - Available"
+                      ],
+                      "productFeatures": [
+                        {
+                          "name": "fee",
+                          "displayName": "Monthly Fee",
+                          "description": "R200.00"
+                        },
+                        {
+                          "name": "Age",
+                          "displayName": "Age",
+                          "description": "18+"
+                        },
+                        {
+                          "name": "Chequecard",
+                          "displayName": "Cheque Card",
+                          "description": "Platinum cheque card included"
+                        },
+                        {
+                          "name": "Nedbankatmwithdrawals",
+                          "displayName": "Nedbank ATM withdrawals",
+                          "description": "Nedbank ATM withdrawals included"
+                        },
+                        {
+                          "name": "Debitordersinternal",
+                          "displayName": "Debit orders (Internal)",
+                          "description": "Unlimited debit orders"
+                        },
+                        {
+                          "name": "Debitordersexternal",
+                          "displayName": "Debit orders (External)",
+                          "description": "Unlimited debit orders"
+                        },
+                        {
+                          "name": "Stoporders",
+                          "displayName": "Stop orders",
+                          "description": "Stop orders included"
+                        },
+                        {
+                          "name": "Cardswipes",
+                          "displayName": "Card swipes",
+                          "description": "Unlimited card swipes"
+                        },
+                        {
+                          "name": "Cashwithdrawalsatparticipatingretailers",
+                          "displayName": "Cash withdrawals",
+                          "description": "Unlimited cash withdrawals at participating retailers and at a Nedbank ATM included"
+                        },
+                        {
+                          "name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+                          "displayName": "Digital banking",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "AirtimewithoutAirtime",
+                          "displayName": "Airtime without Airtime",
+                          "description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+                        },
+                        {
+                          "name": "SendiMali",
+                          "displayName": "Send i-Mali",
+                          "description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+                        },
+                        {
+                          "name": "Domesticairportloungeaccess",
+                          "displayName": "Domestic airport lounge",
+                          "description": "Twelve domestic lounge visits per annum"
+                        },
+                        {
+                          "name": "Income",
+                          "displayName": "Income",
+                          "description": "No minimum income required"
+                        },
+                        {
+                          "name": "RelationshipBanker",
+                          "displayName": "Relationship Banker",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Creditcard",
+                          "displayName": "Credit card",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Greenbacks",
+                          "displayName": "Greenbacks",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Electronicchannels",
+                          "displayName": "Electronic channels",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "eNote",
+                          "displayName": "eNote",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Nofundsalert",
+                          "displayName": "No-funds alert",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Balanceenquiry",
+                          "displayName": "Balance enquiry",
+                          "description": "Included on Self Service channels"
+                        },
+                        {
+                          "name": "Overdraft",
+                          "displayName": "Overdraft",
+                          "description": "Included"
+                        }
+                      ],
+                      "eligibilityRules": [
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "18",
+                          "maxValue": "56",
+                          "valueUnit": "year",
+                          "description": "18 years and older"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "26",
+                          "maxValue": "54",
+                          "valueUnit": "year",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "120000",
+                          "maxValue": "9999999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "300000",
+                          "maxValue": "749999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Package",
+                          "value": "A bundled offering",
+                          "valueUnit": "package"
+                        },
+                        {
+                          "attributeType": "ConcurrentApplicationLimitationGroup",
+                          "attributeName": "ConcurrentApplicationLimitation",
+                          "value": "1"
+                        }
+                      ],
+                      "lifeCycleStatus": "AVAILABLE"
+                    },
+                    {
+                      "productIdentifier": 1019,
+                      "name": "Savvy Plus",
+                      "shortDescription": "Do your banking for a fixed monthly fee and enjoy the flexibility of adding benefits, such as an overdraft facility and Nedbank Greenbacks Rewards membership, when you need them.",
+                      "productPricing": [
+                        {
+                          "type": "AdminFee",
+                          "amount": 115,
+                          "frequency": "Monthly",
+                          "currency": "ZAR",
+                          "description": "R115.00 pm"
+                        }
+                      ],
+                      "specialFeature": "",
+                      "salesHighlights": [
+                        "A gold cheque card",
+			            "Unlimited card swipes.",
+			            "Unlimited deposits at cash-accepting Nedbank ATMs.",
+			            "Unlimited cash withdrawals at point-of-sale devices at participating retailers.",
+			            "Four free monthly withdrawals at Nedbank ATMs.",
+			            "Unlimited debit orders.",
+			            "Unlimited stop orders.",
+			            "Free digital banking through online banking, the Nedbank Money app and Cellphone Banking.",
+			            "SMS notifications (eNotes).",
+			            "eStatements.",
+			            "Access to the mobile-based Nedbank MobiMoney Account.",
+			            "Access to MyPocket – a free budgeting and savings pocket linked to your account.",
+			            "Nedbank Greenbacks Money Management membership.",
+			            "The option of an overdraft facility.",
+			            "Access to Send-iMali to send money quickly and securely to any South African cellphone."
+                      ],
+                      "redirect": {
+                        "shouldRedirect": false,
+                        "redirectUrl": null
+                      },
+                      "actions": [
+                        {
+                          "type": "SELECT",
+                          "text": "Select"
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
+                      "valueAddedServices": [
+                        "eNotes (SMS) - Included",
+                        "No funds alert - R13.00 per sms",
+                        "MyPocket - Available",
+                        "Salary Switching - Available",
+                        "Debit Order Switching - Available",
+                        "Overdraft - Available",
+                        "Nedbank Greenbacks Rewards Membership - R23 per month",
+                        "Amex Card - Available",
+                        "Affinity Programmes - Available",
+                        "Nedbank Insurance Funeral Plan - Available"
+                      ],
+                      "productFeatures": [
+                        {
+                          "name": "fee",
+                          "displayName": "Monthly Fee",
+                          "description": "R110.00"
+                        },
+                        {
+                          "name": "Age",
+                          "displayName": "Age",
+                          "description": "18+"
+                        },
+                        {
+                          "name": "Chequecard",
+                          "displayName": "Cheque Card",
+                          "description": "Gold cheque card included"
+                        },
+                        {
+                          "name": "Nedbankatmwithdrawals",
+                          "displayName": "Nedbank ATM withdrawals",
+                          "description": "First four Nedbank withdrawals included"
+                        },
+                        {
+                          "name": "Debitordersinternal",
+                          "displayName": "Debit orders (Internal)",
+                          "description": "Unlimited debit orders"
+                        },
+                        {
+                          "name": "Debitordersexternal",
+                          "displayName": "Debit orders (External)",
+                          "description": "Unlimited debit orders"
+                        },
+                        {
+                          "name": "Stoporders",
+                          "displayName": "Stop orders",
+                          "description": "Stop orders included"
+                        },
+                        {
+                          "name": "Cardswipes",
+                          "displayName": "Card swipes",
+                          "description": "Unlimited card swipes"
+                        },
+                        {
+                          "name": "Cashwithdrawalsatparticipatingretailers",
+                          "displayName": "Cash withdrawals",
+                          "description": "Unlimited cash withdrawals at participating retailers point-of-sale included"
+                        },
+                        {
+                          "name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+                          "displayName": "Digital banking",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "AirtimewithoutAirtime",
+                          "displayName": "Airtime without Airtime",
+                          "description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+                        },
+                        {
+                          "name": "SendiMali",
+                          "displayName": "Send i-Mali",
+                          "description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+                        },
+                        {
+                          "name": "Domesticairportloungeaccess",
+                          "displayName": "Domestic airport lounge",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Income",
+                          "displayName": "Income",
+                          "description": "No minimum income required"
+                        },
+                        {
+                          "name": "RelationshipBanker",
+                          "displayName": "Relationship Banker",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Creditcard",
+                          "displayName": "Credit card",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Greenbacks",
+                          "displayName": "Greenbacks",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Chargecard",
+                          "displayName": "Charge card",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Electronicchannels",
+                          "displayName": "Electronic channels",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "eNote",
+                          "displayName": "eNote",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Nofundsalert",
+                          "displayName": "No-funds alert",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Internationalairportloungeaccess",
+                          "displayName": "International airport lounge",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Balanceenquiry",
+                          "displayName": "Balance enquiry",
+                          "description": "Included on Self Service channels"
+                        },
+                        {
+                          "name": "Forexdelivery",
+                          "displayName": "Forex delivery",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Overdraft",
+                          "displayName": "Overdraft",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Investment",
+                          "displayName": "Investment",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Insurance",
+                          "displayName": "Insurance",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Tailoredfinancing",
+                          "displayName": "Tailored financing",
+                          "description": "n/a"
+                        }
+                      ],
+                      "eligibilityRules": [
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "18",
+                          "maxValue": "56",
+                          "valueUnit": "year",
+                          "description": "18 years and older"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "26",
+                          "maxValue": "54",
+                          "valueUnit": "year",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "1",
+                          "maxValue": "749999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "120000",
+                          "maxValue": "299999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Package",
+                          "value": "An account only",
+                          "valueUnit": "package"
+                        },
+                        {
+                          "attributeType": "ConcurrentApplicationLimitationGroup",
+                          "attributeName": "ConcurrentApplicationLimitation",
+                          "value": "1"
+                        }
+                      ],
+                      "lifeCycleStatus": "AVAILABLE"
+                    },
+                    {
+                      "productIdentifier": "1389",
+                      "name": "Nedbank Pay-As-You-Use",
+                      "shortDescription": "A no frills, transparent account with a flat monthly fee, pay only for what you use.",
+                      "productPricing": [
+                        {
+                          "type": "AdminFee",
+                          "amount": 0,
+                          "frequency": "Monthly",
+                          "currency": "ZAR",
+                          "description": "Zero monthly fee"
+                        }
+                      ],
+                      "specialFeature": "ADDITIONAL PER-TRANSACTION-CHARGES APPLY",
+                      "salesHighlights": [
+                        "Zero monthly account fee",
+            "Free Gold Cheque Card (includes travel insurance)",
+            "Free card swipes",
+            "Free balance enquiries at self-assisted channels (Nedbank ATM, SMS banking, online banking, the Nedbank Money app)",
+            "MyPocket - a free budgeting and savings pocket linked to your bank account. It earns you interest and gives you instant access to your money. For more info click here."
+                      ],
+                      "redirect": {
+                        "shouldRedirect": false,
+                        "redirectUrl": null
+                      },
+                      "actions": [
+                        {
+                          "type": "SELECT",
+                          "text": "Select"
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
+                      "valueAddedServices": [
+                        "eNotes (SMS) - R0,45c per sms",
+                        "No funds alert - R13.00 per sms",
+                        "FREE MyPocket",
+                        "Salary Switching - Available",
+                        "Debit Order Switching - Available",
+                        "Affinity Programmes - Available",
+                        "Amex Card (if cheque card is selected) - Available",
+                        "Nedbank Greenbacks Rewards membership (if cheque card is selected) - Available",
+                        "Nedbank Insurance Funeral Plan - Available"
+                      ],
+                      "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html",
+                      "productFeatures": [
+                        {
+                          "name": "fee",
+                          "displayName": "Monthly Fee",
+                          "description": "R0"
+                        },
+                        {
+                          "name": "Age",
+                          "displayName": "Age",
+                          "description": "18+"
+                        },
+                        {
+                          "name": "Chequecard",
+                          "displayName": "Cheque Card",
+                          "description": "Gold cheque card included"
+                        },
+                        {
+                          "name": "Nedbankatmwithdrawals",
+                          "displayName": "Nedbank ATM withdrawals",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Debitordersinternal",
+                          "displayName": "Debit orders (Internal)",
+                          "description": "Internal Debit orders included"
+                        },
+                        {
+                          "name": "Debitordersexternal",
+                          "displayName": "Debit orders (External)",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Stoporders",
+                          "displayName": "Stop orders",
+                          "description": "Stop orders included"
+                        },
+                        {
+                          "name": "Cardswipes",
+                          "displayName": "Card swipes",
+                          "description": "Unlimited card swipes"
+                        },
+                        {
+                          "name": "Cashwithdrawalsatparticipatingretailers",
+                          "displayName": "Cash withdrawals",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+                          "displayName": "Digital banking",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Greenbacks",
+                          "displayName": "Greenbacks",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Electronicchannels",
+                          "displayName": "Electronic channels",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "eNote",
+                          "displayName": "eNote",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Nofundsalert",
+                          "displayName": "No-funds alert",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Balanceenquiry",
+                          "displayName": "Balance enquiry",
+                          "description": "Included on Self Service channels"
+                        },
+                        {
+                          "name": "AirtimewithoutAirtime",
+                          "displayName": "Airtime without Airtime",
+                          "description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+                        },
+                        {
+                          "name": "SendiMali",
+                          "displayName": "Send i-Mali",
+                          "description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+                        },
+                        {
+                          "name": "Domesticairportloungeaccess",
+                          "displayName": "Domestic airport lounge",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Income",
+                          "displayName": "Income",
+                          "description": "No minimum income required"
+                        }
+                      ],
+                      "eligibilityRules": [
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "18",
+                          "maxValue": "56",
+                          "valueUnit": "year",
+                          "description": "18 years and older"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "26",
+                          "maxValue": "54",
+                          "valueUnit": "year",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "1",
+                          "maxValue": "749999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "120000",
+                          "maxValue": "299999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Package",
+                          "value": "An account only",
+                          "valueUnit": "package"
+                        },
+                        {
+                          "attributeType": "ConcurrentApplicationLimitationGroup",
+                          "attributeName": "ConcurrentApplicationLimitation",
+                          "value": "1"
+                        }
+                      ],
+                      "lifeCycleStatus": "AVAILABLE"
+                    },
+                    {
+                      "productIdentifier": 1474,
+                      "name": "Unlocked.Me",
+                      "shortDescription": "Perfect for busy students, through free digital banking, this account gives you quick and easy access to cash.",
+                      "productPricing": [
+                        {
+                          "type": "AdminFee",
+                          "amount": 0,
+                          "frequency": "Monthly",
+                          "currency": "ZAR",
+                          "description": "Zero monthly fee"
+                        }
+                      ],
+                      "specialFeature": "Free Cheque Card",
+                      "salesHighlights": [
+                        "ZERO fees on card swipes.",
+			            "ZERO fees on cash deposits of up to R3 000 at Nedbank ATMs. (Thereafter pay-as-you-use fees will apply).",
+			            "ZERO fees on internal debit and stop orders",
+			            "ZERO fees for one external debit order (non-Nedbank).",
+			            "ZERO data usage when banking with the Nedbank MoneyApp™.",
+			            "ZERO annual fees on your cheque card.",
+			            "ZERO fees for balance enquiries and inter-account transfers on the MoneyApp™ and all other self-service platforms",
+			            "Ability to make online purchases with your card.",
+			            "Free access to the www.unlocked.me experience and major discounts on the site.",
+			            "Pay-as-you-use fees will apply on other transactions, see the pricing guide",
+			            "MyPocket - a free budgeting and savings pocket linked to your bank account. It earns you interest and gives you instant access to your money. For more info click here."
+			                      ],
+                      "redirect": {
+                        "shouldRedirect": false,
+                        "redirectUrl": null
+                      },
+                      "actions": [
+                        {
+                          "type": "SELECT",
+                          "text": "Select"
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
+                      "productFeatures": [
+                        {
+                          "name": "fee",
+                          "displayName": "Monthly Fee",
+                          "description": "R 0"
+                        },
+                        {
+                          "name": "Age",
+                          "displayName": "Age",
+                          "description": "16 - 26"
+                        },
+                        {
+                          "name": "Chequecard",
+                          "displayName": "Cheque Card",
+                          "description": "Unlocked.Me cheque card included"
+                        },
+                        {
+                          "name": "Nedbankatmwithdrawals",
+                          "displayName": "Nedbank ATM withdrawals",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Debitordersinternal",
+                          "displayName": "Debit orders (Internal)",
+                          "description": "Internal Debit orders included"
+                        },
+                        {
+                          "name": "Debitordersexternal",
+                          "displayName": "Debit orders (External)",
+                          "description": "1 free, thereafter pay as you use"
+                        },
+                        {
+                          "name": "Stoporders",
+                          "displayName": "Stop orders",
+                          "description": "Stop orders included"
+                        },
+                        {
+                          "name": "Cardswipes",
+                          "displayName": "Card swipes",
+                          "description": "Unlimited card swipes"
+                        },
+                        {
+                          "name": "Cashwithdrawalsatparticipatingretailers",
+                          "displayName": "Cash withdrawals",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+                          "displayName": "Digital banking",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "AirtimewithoutAirtime",
+                          "displayName": "Airtime without Airtime",
+                          "description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+                        },
+                        {
+                          "name": "SendiMali",
+                          "displayName": "Send i-Mali",
+                          "description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+                        },
+                        {
+                          "name": "Domesticairportloungeaccess",
+                          "displayName": "Domestic airport lounge",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Income",
+                          "displayName": "Income",
+                          "description": "No minimum income required"
+                        },
+                        {
+                          "name": "RelationshipBanker",
+                          "displayName": "Relationship Banker",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Creditcard",
+                          "displayName": "Credit card",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Greenbacks",
+                          "displayName": "Greenbacks",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Chargecard",
+                          "displayName": "Charge card",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Electronicchannels",
+                          "displayName": "Electronic channels",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "eNote",
+                          "displayName": "eNote",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Nofundsalert",
+                          "displayName": "No-funds alert",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Internationalairportloungeaccess",
+                          "displayName": "International airport lounge",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Balanceenquiry",
+                          "displayName": "Balance enquiry",
+                          "description": "Included on Self Service channels"
+                        },
+                        {
+                          "name": "Forexdelivery",
+                          "displayName": "Forex delivery",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Overdraft",
+                          "displayName": "Overdraft",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Investment",
+                          "displayName": "Investment",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Insurance",
+                          "displayName": "Insurance",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Tailoredfinancing",
+                          "displayName": "Tailored financing",
+                          "description": "n/a"
+                        }
+                      ],
+                      "eligibilityRules": [
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "16",
+                          "maxValue": "25",
+                          "valueUnit": "year",
+                          "description": "From 16 to 25 years old"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "0",
+                          "maxValue": "299999",
+                          "valueUnit": "ZAR",
+                          "description": "No minimum income"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Package",
+                          "value": "An account only",
+                          "valueUnit": "package"
+                        },
+                        {
+                          "attributeType": "ConcurrentApplicationLimitationGroup",
+                          "attributeName": "ConcurrentApplicationLimitation",
+                          "value": "1"
+                        }
+                      ],
+                      "lifeCycleStatus": "AVAILABLE"
+                    },
+                    {
+                      "productIdentifier": 1385,
+                      "name": "Nedbank 4me",
+                      "shortDescription": "Under 18? This account is tailored for kids and offers a secure way to transact and save.",
+                      "productPricing": [
+                        {
+                          "type": "AdminFee",
+                          "amount": 0,
+                          "frequency": "",
+                          "currency": "ZAR",
+                          "description": "Free"
+                        }
+                      ],
+                      "specialFeature": "Free Debit Card",
+                      "salesHighlights": [
+                        "Unlimited free card swipes",
+			            "Unlimited free internal debit and stop orders",
+			            "Unlimited free cash withdrawals at participating retailer point-of-sale devices(1)",
+			            "Unlimited free eNote SMS notifications",
+			            "Unlimited free interaccount transfers and balance enquiries at self-service(2) channels",
+			            "Four free Nedbank ATM cash withdrawals; and",
+			            "Cash deposits of up to R1 000 free at Nedbank ATMs."
+                      ],
+                      "redirect": {
+                        "shouldRedirect": false,
+                        "redirectUrl": null
+                      },
+                      "actions": [
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/forms/af/nedbank/Nedbank4me.html"
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
+                      "valueAddedServices": [
+                        "eNotes - Included",
+                        "No Funds Alert - R13 per sms",
+                        "Nedbank Arts Affinity - Available",
+                        "Nedbank Children's Affinity - Available",
+                        "Nedbank Green Affinity - Available",
+                        "Nedbank Sport Affinity - Available"
+                      ],
+                      "productFeatures": [
+                        {
+                          "name": "fee",
+                          "displayName": "Monthly Fee",
+                          "description": "R 0"
+                        },
+                        {
+                          "name": "Age",
+                          "displayName": "Age",
+                          "description": "Under 18"
+                        },
+                        {
+                          "name": "Chequecard",
+                          "displayName": "Cheque Card",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Nedbankatmwithdrawals",
+                          "displayName": "Nedbank ATM withdrawals",
+                          "description": "First four Nedbank withdrawals are included"
+                        },
+                        {
+                          "name": "Debitordersinternal",
+                          "displayName": "Debit orders (Internal)",
+                          "description": "Internal Debit orders included"
+                        },
+                        {
+                          "name": "Debitordersexternal",
+                          "displayName": "Debit orders (External)",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Stoporders",
+                          "displayName": "Stop orders",
+                          "description": "Stop orders included"
+                        },
+                        {
+                          "name": "Cardswipes",
+                          "displayName": "Card swipes",
+                          "description": "Unlimited card swipes"
+                        },
+                        {
+                          "name": "Cashwithdrawalsatparticipatingretailers",
+                          "displayName": "Cash withdrawals",
+                          "description": "Free cash withdrawals at participating retailers point-of-sale included"
+                        },
+                        {
+                          "name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+                          "displayName": "Digital banking",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "AirtimewithoutAirtime",
+                          "displayName": "Airtime without Airtime",
+                          "description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+                        },
+                        {
+                          "name": "SendiMali",
+                          "displayName": "Send i-Mali",
+                          "description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+                        },
+                        {
+                          "name": "Domesticairportloungeaccess",
+                          "displayName": "Domestic airport lounge",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Income",
+                          "displayName": "Income",
+                          "description": "No minimum income required"
+                        },
+                        {
+                          "name": "RelationshipBanker",
+                          "displayName": "Relationship Banker",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Creditcard",
+                          "displayName": "Credit card",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Greenbacks",
+                          "displayName": "Greenbacks",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Chargecard",
+                          "displayName": "Charge card",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Electronicchannels",
+                          "displayName": "Electronic channels",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "eNote",
+                          "displayName": "eNote",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Nofundsalert",
+                          "displayName": "No-funds alert",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Internationalairportloungeaccess",
+                          "displayName": "International airport lounge",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Balanceenquiry",
+                          "displayName": "Balance enquiry",
+                          "description": "Included on Self Service channels"
+                        },
+                        {
+                          "name": "Forexdelivery",
+                          "displayName": "Forex delivery",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Overdraft",
+                          "displayName": "Overdraft",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Investment",
+                          "displayName": "Investment",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Insurance",
+                          "displayName": "Insurance",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "Tailoredfinancing",
+                          "displayName": "Tailored financing",
+                          "description": "n/a"
+                        }
+                      ],
+                      "eligibilityRules": [
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "0",
+                          "maxValue": "17",
+                          "valueUnit": "year",
+                          "description": "Be younger than 18 years"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "0",
+                          "maxValue": "0",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Package",
+                          "value": "An account only",
+                          "valueUnit": "package"
+                        },
+                        {
+                          "attributeType": "ConcurrentApplicationLimitationGroup",
+                          "attributeName": "ConcurrentApplicationLimitation",
+                          "value": "1"
+                        }
+                      ],
+                      "lifeCycleStatus": "AVAILABLE"
+                    },
+                    {
+                      "productIdentifier": 1400,
+                      "name": "Young Professional Bundle",
+                      "shortDescription": "Are you just setting out in your career? Get fast-tracked into Professional Banking at 50% of the monthly fee.",
+                      "productPricing": [
+                        {
+                          "type": "AdminFee",
+                          "amount": 180.00,
+                          "frequency": "Monthly",
+                          "currency": "ZAR",
+                          "description": "R 180.00 pm"
+                        }
+                      ],
+                      "specialFeature": "UNDER 30 WITH A MIN 4 YEAR DEGREE",
+                      "salesHighlights": [
+                        "Relationship services for the entire family including a dedicated relationship banker, 24/7 call & email support and access to lending, invest and financial planning specialists",
+                        "Unlimited swipes, debit orders and ATM withdrawals",
+                        "Professional (Platimum Greenbacks) cheque card - contactless enabled. Dual issued with Amex and Visa Signature to ensure wide acceptance as well as to ensure the nest lifestyle, travel and reward benefits possible",
+                        "American Express® Platinum charge card at 50% discounted annual fee (for the first year only)",
+                        "Overdraft facility available - additional fees apply",
+                        "eNotes (SMS notifications)",
+                        "No-funds alert (low balance notification)",
+                        "Online banking subscription / Money™ App",
+                        "Greenbacks rewards subscription",
+                        "Unlimited access to Bidvest domestic / international departure lounges via your Professional Cheque or Credit Card, when leaving SA",
+                        "4 free visits to Bidvest domestic / international departure lounges for kids on active Nedbank 4me or Unlocked.me Student accounts",
+                        "10 International lounge visits via Professional Visa Signature Cheque or Credit Card. Emergency concierge services",
+                        "Your household automatically qualifies to experience your relationship services",
+                        "Get automatic travel insurance (for medical emergencies) when paying with your Professional Banking Credit Card",
+                        "Free forex delivery (foreign cash & travel card) at preferenial rates",
+                        "100% loans for properties less than R1,5 million at tailored rates",
+                        "100% loan for vehicle applications less than R400,000",
+                        "Platinum investment products at exclusive rates. Direct access to Treasury for investments greater than R250,000",
+                        "Free will drafting. Access to holistic estate & retirement planning"
+                      ],
+                      "redirect": {
+                        "shouldRedirect": false,
+                        "redirectUrl": null
+                      },
+                      "actions": [
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/forms/af/nedbank/CallMeBackProfessionalBanking.html"
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
+                      "valueAddedServices": [
+                        "Greenbacks (Get rewarded for your everyday spend)",
+                        "Free will drafting",
+                        "Two free supplementary cards",
+                        "Contactless-enabled cards (tap your card and pay)"
+                      ],
+                      "eligibilityRules": [
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "18",
+                          "maxValue": "29",
+                          "valueUnit": "year",
+                          "description": "From 18 to 29 years old"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "0",
+                          "maxValue": "0",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "300000",
+                          "maxValue": "9999999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Package",
+                          "value": "A bundled offering",
+                          "valueUnit": "package"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Education",
+                          "minValue": "4",
+                          "valueUnit": "year",
+                          "description": "Minimum 4 year degree or 3 years plus Honours (NQF level 8 equivalent)"
+                        },
+                        {
+                          "attributeType": "ConcurrentApplicationLimitationGroup",
+                          "attributeName": "ConcurrentApplicationLimitation",
+                          "value": "1"
+                        }
+                      ],
+                      "requiredDocuments": [
+                        {
+                          "attributeType": "Display",
+                          "attributeName": "Proof of your identity",
+                          "isComparable": "false",
+                          "valueUnit": "bool"
+                        }
+                      ],
+                      "productFeatures": [
+                        {
+                          "name": "Age",
+                          "displayName": "Age",
+                          "description": "Under 30 with a 4 year qualification"
+                        },
+                        {
+                          "name": "fee",
+                          "displayName": "Monthly Fee",
+                          "description": "R 170.00"
+                        },
+                        {
+                          "name": "Income",
+                          "displayName": "Income",
+                          "description": "n/a"
+                        },
+                        {
+                          "name": "RelationshipBanker",
+                          "displayName": "Relationship Banker",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Chequecard",
+                          "displayName": "Cheque card",
+                          "description": "Professional (Platinum Greenbacks) cheque card included"
+                        },
+                        {
+                          "name": "Nedbankatmwithdrawals",
+                          "displayName": "Nedbank ATM withdrawals",
+                          "description": "Unlimited ATM withdrawals"
+                        },
+                        {
+                          "name": "Debitordersinternal",
+                          "displayName": "Debit orders (Internal)",
+                          "description": "Unlimited debit orders"
+                        },
+                        {
+                          "name": "Debitordersexternal",
+                          "displayName": "Debit orders (External)",
+                          "description": "Unlimited debit orders"
+                        },
+                        {
+                          "name": "Stoporders",
+                          "displayName": "Stop orders",
+                          "description": "Stop orders included"
+                        },
+                        {
+                          "name": "Cardswipes",
+                          "displayName": "Card swipes",
+                          "description": "Unlimited swipes"
+                        },
+                        {
+                          "name": "Cashwithdrawalsatparticipatingretailers",
+                          "displayName": "Cash withdrawals",
+                          "description": "Cash withdrawals at participating retailers and at a Nedbank ATM included"
+                        },
+                        {
+                          "name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+                          "displayName": "Digital banking",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "AirtimewithoutAirtime",
+                          "displayName": "Airtime without Airtime",
+                          "description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+                        },
+                        {
+                          "name": "SendiMali",
+                          "displayName": "Send i-Mali",
+                          "description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+                        },
+                        {
+                          "name": "Creditcard",
+                          "displayName": "Credit card",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Greenbacks",
+                          "displayName": "Greenbacks",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Chargecard",
+                          "displayName": "Charge card",
+                          "description": "American Express® Platinum Charge Card available at 50% discounted annual fee (for the first year only)"
+                        },
+                        {
+                          "name": "Electronicchannels",
+                          "displayName": "Electronic channels",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "eNote",
+                          "displayName": "eNote",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Nofundsalert",
+                          "displayName": "No-funds alert",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Internationalairportloungeaccess",
+                          "displayName": "International airport lounge",
+                          "description": "Ten visits per annum. One guest per visit"
+                        },
+                        {
+                          "name": "Domesticairportloungeaccess",
+                          "displayName": "Domestic airport lounge",
+                          "description": "Unlimited access to Bidvest domestic and international lounges"
+                        },
+                        {
+                          "name": "Balanceenquiry",
+                          "displayName": "Balance enquiry",
+                          "description": "Included on Self Service channels"
+                        },
+                        {
+                          "name": "Forexdelivery",
+                          "displayName": "Forex delivery",
+                          "description": "Free forex delivery (foreign cash & travel card) at preferential rates"
+                        },
+                        {
+                          "name": "Overdraft",
+                          "displayName": "Overdraft",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Investment",
+                          "displayName": "Investment",
+                          "description": "Exclusive competitive platinum investment products"
+                        },
+                        {
+                          "name": "Insurance",
+                          "displayName": "Insurance",
+                          "description": "Travel insurance included when paying with your Professional Banking Credit Card."
+                        },
+                        {
+                          "name": "Tailoredfinancing",
+                          "displayName": "Tailored financing",
+                          "description": "Tailored financing: 100% loans for home loan applications of less than R1,5 million and 100% loans **for vehicle finance applications of less than R400 000.,All credit applications are subject to final credit approval and terms and conditions."
+                        }
+                      ],
+                      "lifeCycleStatus": "AVAILABLE"
+                    },
+                    {
+                      "productIdentifier": 1021,
+                      "name": "Professional Bundle",
+                      "shortDescription": "A private banking experience that emphasizes convenience, quality and flexibility at a fixed monthly fee",
+                      "productPricing": [
+                        {
+                          "type": "AdminFee",
+                          "amount": 360.00,
+                          "frequency": "Monthly",
+                          "currency": "ZAR",
+                          "description": "R 360.00 pm"
+                        }
+                      ],
+                      "specialFeature": "NO MINIMUM ENTRY CRITERIA. REBATES AVAILABLE FROM AGE 55 AND OVER",
+                      "salesHighlights": [
+                        "Relationship services for the entire family including a dedicated relationship banker, 24/7 call & email support and access to lending, invest and financial planning specialists",
+                        "Unlimited swipes, debit orders and ATM withdrawals",
+                        "Professional (Platimum Greenbacks) cheque card - contactless enabled. Dual issued with Amex and Visa Signature to ensure wide acceptance as well as to ensure the nest lifestyle, travel and reward benefits possible",
+                        "American Express® Platinum charge card at 50% discounted annual fee (for the first year only)",
+                        "Overdraft facility available - additional fees apply",
+                        "eNotes (SMS notifications)",
+                        "No-funds alert (low balance notification)",
+                        "Online banking subscription / Money™ App",
+                        "Greenbacks rewards subscription",
+                        "Unlimited access to Bidvest domestic / international departure lounges via your Professional Cheque or Credit Card, when leaving SA",
+                        "4 free visits to Bidvest domestic / international departure lounges for kids on active Nedbank 4me or Unlocked.me Student accounts",
+                        "10 International lounge visits via Professional Visa Signature Cheque or Credit Card. Emergency concierge services",
+                        "Your household automatically qualifies to experience your relationship services",
+                        "Get automatic travel insurance (for medical emergencies) when paying with your Professional Banking Credit Card",
+                        "Free forex delivery (foreign cash & travel card) at preferenial rates",
+                        "100% loans for properties less than R5 million at tailored rates",
+                        "Quick vehicle finance credit decisions via your relationship banker",
+                        "Platinum investment products at exclusive rates. Direct access to Treasury for investments greater than R250,000",
+                        "Free will drafting. Access to holistic estate & retirement planning"
+                      ],
+                      "redirect": {
+                        "shouldRedirect": false,
+                        "redirectUrl": null
+                      },
+                      "actions": [
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/forms/af/nedbank/CallMeBackProfessionalBanking.html"
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
+                      "valueAddedServices": [
+                        "Greenbacks (Get rewarded for your everyday spend)",
+                        "Free will drafting",
+                        "Two free supplementary cards",
+                        "Contactless-enabled cards (tap your card and pay)"
+                      ],
+                      "eligibilityRules": [
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "18",
+                          "maxValue": "999",
+                          "valueUnit": "year",
+                          "description": "18 years and older"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "300000",
+                          "maxValue": "9999999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Package",
+                          "value": "A bundled offering",
+                          "valueUnit": "package"
+                        },
+                        {
+                          "attributeType": "ConcurrentApplicationLimitationGroup",
+                          "attributeName": "ConcurrentApplicationLimitation",
+                          "value": "1"
+                        }
+                      ],
+                      "requiredDocuments": [
+                        {
+                          "attributeType": "Display",
+                          "attributeName": "Proof of your identity",
+                          "isComparable": "false",
+                          "valueUnit": "bool"
+                        }
+                      ],
+                      "productFeatures": [
+                        {
+                          "name": "Age",
+                          "displayName": "Age",
+                          "description": "18+"
+                        },
+                        {
+                          "name": "fee",
+                          "displayName": "Monthly Fee",
+                          "description": "R 340.00"
+                        },
+                        {
+                          "name": "Nedbankatmwithdrawals",
+                          "displayName": "Nedbank ATM withdrawals",
+                          "description": "Unlimited Nedbank ATM withdrawals"
+                        },
+                        {
+                          "name": "Debitordersinternal",
+                          "displayName": "Debit orders (Internal)",
+                          "description": "Unlimited debit orders"
+                        },
+                        {
+                          "name": "Debitordersexternal",
+                          "displayName": "Debit orders (External)",
+                          "description": "Unlimited debit orders"
+                        },
+                        {
+                          "name": "Stoporders",
+                          "displayName": "Stop orders",
+                          "description": "Stop orders included"
+                        },
+                        {
+                          "name": "Cardswipes",
+                          "displayName": "Card swipes",
+                          "description": "Unlimited swipes"
+                        },
+                        {
+                          "name": "Cashwithdrawalsatparticipatingretailers",
+                          "displayName": "Cash withdrawals",
+                          "description": "Cash withdrawals at participating retailers and at a Nedbank ATM included"
+                        },
+                        {
+                          "name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+                          "displayName": "Digital banking",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "AirtimewithoutAirtime",
+                          "displayName": "Airtime without Airtime",
+                          "description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+                        },
+                        {
+                          "name": "SendiMali",
+                          "displayName": "Send i-Mali",
+                          "description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+                        },
+                        {
+                          "name": "Income",
+                          "displayName": "Income",
+                          "description": "No minimum income is required however, this offering is ideally suited to those earning over R750 000 per year."
+                        },
+                        {
+                          "name": "RelationshipBanker",
+                          "displayName": "Relationship Banker",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Chequecard",
+                          "displayName": "Cheque card",
+                          "description": "Professional (Platinum Greenbacks) cheque card included"
+                        },
+                        {
+                          "name": "Creditcard",
+                          "displayName": "Credit card",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Greenbacks",
+                          "displayName": "Greenbacks",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Chargecard",
+                          "displayName": "Charge card",
+                          "description": "American Express® Platinum Charge Card available at 50% discounted annual fee (for the first year only)"
+                        },
+                        {
+                          "name": "Electronicchannels",
+                          "displayName": "Electronic channels",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "eNote",
+                          "displayName": "eNote",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Nofundsalert",
+                          "displayName": "No-funds alert",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Internationalairportloungeaccess",
+                          "displayName": "International airport lounge",
+                          "description": "Ten visits per annum. One guest per visit"
+                        },
+                        {
+                          "name": "Domesticairportloungeaccess",
+                          "displayName": "Domestic airport lounge",
+                          "description": "Unlimited access to Bidvest domestic and international lounges"
+                        },
+                        {
+                          "name": "Balanceenquiry",
+                          "displayName": "Balance enquiry",
+                          "description": "Included on Self Service channels"
+                        },
+                        {
+                          "name": "Forexdelivery",
+                          "displayName": "Forex delivery",
+                          "description": "Free forex delivery (foreign cash & travel card) at preferential rates"
+                        },
+                        {
+                          "name": "Overdraft",
+                          "displayName": "Overdraft",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Investment",
+                          "displayName": "Investment",
+                          "description": "Exclusive competitive platinum investment products"
+                        },
+                        {
+                          "name": "Insurance",
+                          "displayName": "Insurance",
+                          "description": "Travel insurance included when paying with your Professional Banking Credit Card."
+                        },
+                        {
+                          "name": "Tailoredfinancing",
+                          "displayName": "Tailored financing",
+                          "description": "Tailored financing: 100% loans for home loan applications of less than R5 million and 100% loans **Quick vehicle finance credit decisions via your relationship banker. All credit applications are subject to final credit approval and terms and conditions."
+                        }
+                      ],
+                      "lifeCycleStatus": "AVAILABLE"
+                    },
+                    {
+                      "productIdentifier": 1108,
+                      "name": "Professional Pay-As-You-Use",
+                      "shortDescription": "A private banking experience that emphasizes convenience, quality and flexibility.",
+                      "productPricing": [
+                        {
+                          "type": "AdminFee",
+                          "amount": 133.00,
+                          "frequency": "Monthly",
+                          "currency": "ZAR",
+                          "description": "R 133.00 pm"
+                        }
+                      ],
+                      "specialFeature": "ADDITIONAL PER-TRANSACTION-CHARGES APPLY",
+                      "salesHighlights": [
+                        "Relationship services for the entire family including a dedicated relationship banker, 24/7 call & email support and access to lending, invest and financial planning specialists",
+                        "Pay per transaction",
+                        "Professional (Platimum Greenbacks) cheque card - contactless enabled. Dual issued with Amex and Visa Signature to ensure wide acceptance as well as to ensure the nest lifestyle, travel and reward benefits possible",
+                        "Choose from our range of Credit Cards - additional fees apply",
+                        "Overdraft facility available - additional fees apply",
+                        "eNotes (SMS notifications)",
+                        "No-funds alert (low balance notification)",
+                        "Online banking subscription (subscription fee applies) / Money™ App",
+                        "Greenbacks rewards subscription - additional fees apply",
+                        "Unlimited access to Bidvest domestic / international departure lounges via your Professional Cheque Card, when leaving SA",
+                        "4 free visits to Bidvest domestic / international departure lounges for kids on active Nedbank 4me or Unlocked.me Student accounts",
+                        "Benefits as per the specific credit card chosen",
+                        "Your household automatically qualifies to experience your relationship services",
+                        "Travel insurance is specific to your chosen Credit Card. See Professional (Platinum Greenbacks) Credit Card as travel insurance is",
+                        "Free forex delivery (foreign cash & travel card) at preferenial rates",
+                        "100% loans for properties less than R5 million at tailored rates",
+                        "Quick vehicle finance credit decisions via your relationship banker",
+                        "Platinum investment products at exclusive rates. Direct access to Treasury for investments greater than R250,000",
+                        "Free will drafting. Access to holistic estate & retirement planning"
+                      ],
+                      "redirect": {
+                        "shouldRedirect": false,
+                        "redirectUrl": null
+                      },
+                      "actions": [
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/forms/af/nedbank/CallMeBackProfessionalBanking.html"
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
+                      "valueAddedServices": [
+                        "Greenbacks (Get rewarded for your everyday spend)",
+                        "Free will drafting",
+                        "Two free supplementary cards",
+                        "Contactless-enabled cards (tap your card and pay)"
+                      ],
+                      "eligibilityRules": [
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "26",
+                          "maxValue": "56",
+                          "valueUnit": "year",
+                          "description": "18 years and older"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Income",
+                          "minValue": "750000",
+                          "maxValue": "999999999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Package",
+                          "value": "An account only",
+                          "valueUnit": "package"
+                        },
+                        {
+                          "attributeType": "ConcurrentApplicationLimitationGroup",
+                          "attributeName": "ConcurrentApplicationLimitation",
+                          "value": "1"
+                        }
+                      ],
+                      "requiredDocuments": [
+                        {
+                          "attributeType": "Display",
+                          "attributeName": "Proof of your identity",
+                          "isComparable": "false",
+                          "valueUnit": "bool"
+                        }
+                      ],
+                      "productFeatures": [
+                        {
+                          "name": "Age",
+                          "displayName": "Age",
+                          "description": "18+"
+                        },
+                        {
+                          "name": "fee",
+                          "displayName": "Monthly Fee",
+                          "description": "R 126.00"
+                        },
+                        {
+                          "name": "Income",
+                          "displayName": "Income",
+                          "description": "No minimum income is required however, this offering is ideally suited to those earning over R750 000 per year."
+                        },
+                        {
+                          "name": "RelationshipBanker",
+                          "displayName": "Relationship Banker",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Chequecard",
+                          "displayName": "Cheque card",
+                          "description": "Professional (Platinum Greenbacks) cheque card included"
+                        },
+                        {
+                          "name": "Nedbankatmwithdrawals",
+                          "displayName": "Nedbank ATM withdrawals",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Debitordersinternal",
+                          "displayName": "Debit orders (Internal)",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Debitordersexternal",
+                          "displayName": "Debit orders (External)",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Stoporders",
+                          "displayName": "Stop orders",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Cardswipes",
+                          "displayName": "Card swipes",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Cashwithdrawalsatparticipatingretailers",
+                          "displayName": "Cash withdrawals",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+                          "displayName": "Digital banking",
+                          "description": "Pay as you use"
+                        },
+                        {
+                          "name": "AirtimewithoutAirtime",
+                          "displayName": "Airtime without Airtime",
+                          "description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+                        },
+                        {
+                          "name": "SendiMali",
+                          "displayName": "Send i-Mali",
+                          "description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+                        },
+                        {
+                          "name": "Creditcard",
+                          "displayName": "Credit card",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Greenbacks",
+                          "displayName": "Greenbacks",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Chargecard",
+                          "displayName": "Charge card",
+                          "description": "American Express® Platinum Charge Card available at an annual fee"
+                        },
+                        {
+                          "name": "Electronicchannels",
+                          "displayName": "Electronic channels",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "eNote",
+                          "displayName": "eNote",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Nofundsalert",
+                          "displayName": "No-funds alert",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Internationalairportloungeaccess",
+                          "displayName": "International airport lounge",
+                          "description": "Ten visits per annum. One guest per visit"
+                        },
+                        {
+                          "name": "Domesticairportloungeaccess",
+                          "displayName": "Domestic airport lounge",
+                          "description": "Unlimited access to Bidvest domestic and international lounges"
+                        },
+                        {
+                          "name": "RelationshipBanker",
+                          "displayName": "Relationship Banker",
+                          "description": "Included"
+                        },
+                        {
+                          "name": "Balanceenquiry",
+                          "displayName": "Balance enquiry",
+                          "description": "Included on Self Service channels"
+                        },
+                        {
+                          "name": "Forexdelivery",
+                          "displayName": "Forex delivery",
+                          "description": "Free forex delivery (foreign cash & travel card) at preferential rates"
+                        },
+                        {
+                          "name": "Overdraft",
+                          "displayName": "Overdraft",
+                          "description": "Optional"
+                        },
+                        {
+                          "name": "Investment",
+                          "displayName": "Investment",
+                          "description": "Exclusive competitive platinum investment products "
+                        },
+                        {
+                          "name": "Insurance",
+                          "displayName": "Insurance",
+                          "description": "Travel insurance included when paying with your Professional Banking Credit Card."
+                        },
+                        {
+                          "name": "Tailoredfinancing",
+                          "displayName": "Tailored financing",
+                          "description": "Tailored financing: 100% loans for home loan applications of less than R5 million and 100% loans **Quick vehicle finance credit decisions via your relationship banker. All credit applications are subject to final credit approval and terms and conditions."
+                        }
+                      ],
+                      "lifeCycleStatus": "AVAILABLE"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Borrow",
+              "displayName": "Borrow",
+              "description": "I need a loan to help me achieve my goals",
+              "productLines": [
+                {
+                  "displayName": "Personal loan",
+                  "name": "PersonalLoan",
+                  "description": "School fees, unexpected bills, a holiday, 2nd hand vehicle or home renovations? A personal loan can offer you the funds you need.",
+                  "popularProducts": [
+                    1146,
+                    1146,
+                    1420
+                  ],
+                  "products": [
+                    {
+                      "productIdentifier": 1146,
+                      "name": "Personal Loan",
+                      "shortDescription": "A personal loan is an easy and affordable way to better your life. Think about the good that a loan can do for you or your family, and you too can experience how a loan can pay you back.",
+                      "productPricing": [
+                        {
+                          "type": "AdminFee",
+                          "amount": 50,
+                          "frequency": "monthly",
+                          "currency": "ZAR",
+                          "description": " "
+                        }
+                      ],
+                      "specialFeature": "Max loan: R300 000",
+                      "salesHighlights": [
+                        "Loans available from R2 000 to R300 000*",
+                        "Flexible repayment periods of 6 to 72 months.",
+                        "Monthly repayments debited from your bank account.",
+                        "The best possible interest rate that we can offer you.",
+                        "Easy application process.",
+                        "If your loan is approved, we will deposit the money directly into your bank account.",
+                        "When you take out a personal loan, it is compulsory to have loan protection cover for death, disability and retrenchment. Nedbank Personal Loan Protection Insurance has been specially developed to help pay off your outstanding debt should you be unable to make your loan repayments in the event of your death, disablement or retrenchment. Or you can take out an insurance policy of your choice provided it has all the necessary benefits. Ask about our loan insurance when you apply for your loan."
+                      ],
+                      "redirect": {
+                        "shouldRedirect": false,
+                        "redirectUrl": null
+                      },
+                      "actions": [
+                        {
+                          "type": "SELECT",
+                          "text": "Select"
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        }
+                      ],
+                      "lifeCycleStatus": "AVAILABLE"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
