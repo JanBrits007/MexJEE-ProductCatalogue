@@ -117,10 +117,13 @@ public class ProductCataloguesDAO {
     	return investmentRatesMap.getValue().get(productID).getLowerLimitRate();
 	}
 	
-	private double getBaseRate() {
+	private double getBaseRate() throws Exception {
     	mLog.debug("Trace 1");
 
-		double baseRate = 8.750;
+    	SystemConfiguratorDAO dao = new SystemConfiguratorDAO();
+    	Environment.BaseRate baseRateConfig = dao.getEnvironment().BASE_RATE;
+    	
+		double baseRate = Double.parseDouble(baseRateConfig.getValue());
 		
     	mLog.debug("Trace 2 >>" + baseRate + "<<");
 		
