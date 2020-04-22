@@ -1,6 +1,6 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-   <productIdentifier>1021</productIdentifier>
-   <name>Professional Bundle</name>
+   <productIdentifier>5032</productIdentifier>
+   <name>Professional Credit Card</name>
    <productAttributeGroup>
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
@@ -18,13 +18,13 @@
       </productAttributes>
       <productAttributes>
          <attributeType>Evidence</attributeType>
-         <attributeName>Optional|an_overdraft_facility|LatestSalaryProofClause</attributeName>
+         <attributeName>LatestSalaryProofClause</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
       <productAttributes>
          <attributeType>Evidence</attributeType>
-         <attributeName>Optional|an_overdraft_facility|LatestBankStatementsClause</attributeName>
+         <attributeName>LatestBankStatementsClause</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
@@ -33,23 +33,7 @@
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>TransactionalProductDetailsV2</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OverdraftDetailsV2|min=500.00~max=200000.00</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>EligibilityRules</attributeGroupName>
-      <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <attributeName>Age</attributeName>
-         <isComparable>false</isComparable>
-         <minValue>18</minValue>
-         <maxValue>999</maxValue>
-         <valueUnit>year</valueUnit>
-         <description>be 18 years or older</description>
+         <attributeName>CreditCardDetailsV2|min=500.00~max=200000.00</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -64,30 +48,27 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ComplianceInformationV2|PrimaryNationality~CountryOfBirth~CountryOfResidence~SourceOfFunds~FATCRS~ClientConsent</attributeName>
+         <attributeName>ComplianceInformationV2|MaritalStatus~PrimaryNationality~CountryOfBirth~CountryOfResidence~SourceOfFunds~FATCRS~ClientConsent</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>EmploymentInformationV2|EmploymentType~Occupation~EmploymentIndustry</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-      <productAttributes>
-         <attributeType>DocumentDescription</attributeType>
-         <attributeName>Professional bundle terms and conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
+         <attributeName>EmploymentInformationV2|EmploymentType~Occupation~EmploymentIndustry~PresentEmployer~WorkContactDetails</attributeName>
       </productAttributes>
       <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Download</attributeName>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>IncomeInformationV2|NettSalary~GrossSalary~SalaryAccountDetails</attributeName>
       </productAttributes>
       <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Email</attributeName>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>DebtObligationsInformationV2</attributeName>
       </productAttributes>
       <productAttributes>
-         <attributeType>DocTemplateName</attributeType>
-         <attributeName>ProductContract</attributeName>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>HouseholdExpensesInformationV2|TotalExpenses~DetailedExpenses</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>CreditSummaryPlaceholderV2</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -140,19 +121,19 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>DeclarationInformationV2</attributeName>
+         <attributeName>DeclarationInformation</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>RelationshipBankerInformationV2</attributeName>
+         <attributeName>RelationshipBankerInformation</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>KeepingInTouchInformationV2</attributeName>
+         <attributeName>KeepingInTouchInformation</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDoneInformationV2</attributeName>
+         <attributeName>YoureDoneInformation</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -182,73 +163,17 @@
          <attributeName>frontOfficeIntentSequence</attributeName>
          <value>GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|ActivateProductsGatherProductDetails|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>CODEngine</attributeName>
-         <value>RRBCOD</value>
-      </productAttributes>
    </productAttributeGroup>
    <features>
-      <featureIdentifier>0</featureIdentifier>
-      <featureType>BundledProduct</featureType>
-      <referenceProductID>5032</referenceProductID>
-   </features>
-   <features>
-      <featureIdentifier>1014</featureIdentifier>
-      <name>Overdraft</name>
-      <mandatory>false</mandatory>
+      <featureIdentifier>1028</featureIdentifier>
+      <name>Credit Card Plastic Card</name>
+      <mandatory>true</mandatory>
       <preSelected>true</preSelected>
-      <featureAttributeGroup>
-         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ComplianceInformationV2|MaritalStatus</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>EmploymentInformationV2|PresentEmployer~WorkContactDetails</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>IncomeInformationV2|NettSalary~GrossSalary~SalaryAccountDetails</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>DebtObligationsInformationV2</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>HouseholdExpensesInformationV2|TotalExpenses~DetailedExpenses</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>CreditSummaryPlaceholderV2</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
-         <featureAttributes>
-            <attributeType>Evidence</attributeType>
-            <attributeName>3 Months Bank Statements|N/A|CLIENT|PROOFOFINCOME|Statement|Bank Statement</attributeName>
-            <valueUnit>bool</valueUnit>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>Evidence</attributeType>
-            <attributeName>1 Months Pay Slips|N/A|CLIENT|PROOFOFINCOME|Payslip|Payslip</attributeName>
-            <valueUnit>bool</valueUnit>
-         </featureAttributes>
-      </featureAttributeGroup>
-   </features>
-   <features>
-      <featureIdentifier>5386</featureIdentifier>
-      <name>Professional Cheque Card</name>
-      <mandatory>false</mandatory>
-      <preSelected>false</preSelected>
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDeliveryDetailsV2|CardCollection~CardDelivery</attributeName>
+            <attributeName>CardDeliveryDetails|CardCollection~CardDelivery</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>   
