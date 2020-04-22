@@ -187,6 +187,11 @@
          <attributeName>CODEngine</attributeName>
          <value>RRBCOD</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Authenticate|Product Setup|About You|Finalisation|Customisation</value>
+      </productAttributes>
    </productAttributeGroup>
    <features>
       <featureIdentifier>0</featureIdentifier>
@@ -210,19 +215,19 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>IncomeInformationV2|NettSalary~GrossSalary~SalaryAccountDetails</attributeName>
+            <attributeName>IncomeInformationV2|activityStep=Credit Info~NettSalary~GrossSalary~SalaryAccountDetails</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>DebtObligationsInformationV2</attributeName>
+            <attributeName>DebtObligationsInformationV2|activityStep=Credit Info</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>HouseholdExpensesInformationV2|TotalExpenses~DetailedExpenses</attributeName>
+            <attributeName>HouseholdExpensesInformationV2|activityStep=Credit Info~TotalExpenses~DetailedExpenses</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>CreditSummaryPlaceholderV2</attributeName>
+            <attributeName>CreditSummaryPlaceholderV2|activityStep=Credit Info</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -244,6 +249,11 @@
             <attributeType>enum</attributeType>
             <attributeName>riskAnalysisMechanismIntent2</attributeName>
             <value>automatedManualAssessment</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>breadcrumbSteps</attributeName>
+            <value>Authenticate|Product Setup|About You|Credit Info|Finalisation|Customisation</value>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
