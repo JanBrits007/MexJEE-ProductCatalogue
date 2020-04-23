@@ -56,19 +56,19 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>IncomeInformationV2|NettSalary~GrossSalary~SalaryAccountDetails</attributeName>
+         <attributeName>IncomeInformationV2|activityStep=Credit Info~NettSalary~GrossSalary~SalaryAccountDetails</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>DebtObligationsInformationV2</attributeName>
+         <attributeName>DebtObligationsInformationV2|activityStep=Credit Info</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>HouseholdExpensesInformationV2|TotalExpenses~DetailedExpenses</attributeName>
+         <attributeName>HouseholdExpensesInformationV2|activityStep=Credit Info~TotalExpenses~DetailedExpenses</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>CreditSummaryPlaceholderV2</attributeName>
+         <attributeName>CreditSummaryPlaceholderV2|activityStep=Credit Info</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -156,12 +156,17 @@
       <productAttributes>
          <attributeType>enum</attributeType>
          <attributeName>riskAnalysisMechanismIntent2</attributeName>
-         <value>automated</value>
+         <value>automatedManualAssessment</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
          <value>GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|ActivateProductsGatherProductDetails|FinalizeFrontOfficeInteraction</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Authenticate|Product Setup|About You|Credit Info|Finalisation|Customisation</value>
       </productAttributes>
    </productAttributeGroup>
    <features>
