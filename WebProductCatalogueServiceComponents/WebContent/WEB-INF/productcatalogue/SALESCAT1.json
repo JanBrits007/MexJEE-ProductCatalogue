@@ -5248,7 +5248,7 @@
               "description": "I need my savings to work as hard as I do",
               "productLines": [
                 {
-                  "displayName": "Investment Account",
+                  "displayName": "Everyday invest",
                   "name": "InvestmentAccount",
                   "filterGroups": [
                     {
@@ -5315,21 +5315,21 @@
                       "filterItems": [
                         {
                           "filterID": 1,
-                          "filterDisplay": "After 24 hours notice",
+                          "filterDisplay": "Within 24 hours",
                           "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
                           "minValue": 0,
                           "maxValue": 1
                         },
                         {
                           "filterID": 2,
-                          "filterDisplay": "After 32 days notice",
+                          "filterDisplay": "Between 1 and 12 months",
                           "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
                           "minValue": 2,
-                          "maxValue": 11
+                          "maxValue": 12
                         },
                         {
                           "filterID": 3,
-                          "filterDisplay": "At the end of my investment period",
+                          "filterDisplay": "12 months or longer",
                           "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
                           "minValue": 12,
                           "maxValue": 999
@@ -5363,7 +5363,7 @@
                       ]
                     }
                   ],
-                  "products": [
+                  "products": [                                        
                     {
                       "productIdentifier": 1360,
                       "name": "MoneyTrader",
@@ -5492,7 +5492,7 @@
                         {
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
-                          "description": "All individuals, Small Business Services and Business Banking clients",
+                          "description": "",
                           "maxValue": "1",
                           "minValue": "0",
                           "valueUnit": "month"
@@ -5525,7 +5525,7 @@
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {
                         "term": 0,
-                        "notice": 1,
+                        "notice": 24,
                         "productType": 31
                       }
                     },
@@ -5657,7 +5657,7 @@
                         {
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
-                          "description": "All individuals, Small Business Services and Business Banking clients",
+                          "description": "",
                           "maxValue": "1",
                           "minValue": "0",
                           "valueUnit": "month"
@@ -5668,7 +5668,7 @@
                           "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": "No age restrictions"
+                          "description": "18 years and older"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -5690,9 +5690,9 @@
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {
                         "term": 0,
-                        "notice": 1,
+                        "notice": 24,
                         "productType": 32
-                      }
+                     }
                     },
                     {
                       "productIdentifier": "1134",
@@ -5823,7 +5823,7 @@
                         {
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
-                          "description": "All individuals, Small Business Services and Business Banking clients",
+                          "description": "",
                           "maxValue": "12",
                           "minValue": "12",
                           "valueUnit": "month"
@@ -5832,9 +5832,9 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
                           "minValue": "0",
-                          "maxValue": "999999999",
+                          "maxValue": "54",
                           "valueUnit": "year",
-                          "description": "No age restrictions"
+                          "description": "18 years and older"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -5850,8 +5850,8 @@
                         "term": 12,
                         "notice": 0,
                         "productType": 17
-                      }
-                    },
+                     }
+                    }, 
                     {
                       "productIdentifier": "1349",
                       "name": "Nedbank Green Optimum Deposit",
@@ -5859,8 +5859,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 8.05,
-                          "description": "8.05% pa"
+                          "value": 8.7,
+                          "description": "8.70% pa"
                         }
                       ],
                       "specialFeature": "18 - 60 months",
@@ -5875,26 +5875,11 @@
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
-                      "actions": [
-                        {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
-                        },
-                        {
-                          "type": "DETAIL",
-                          "text": "Details"
-                        },
-                        {
-                          "type": "COMPARE",
-                          "text": "Compare"
-                        }
-                      ],
                       "productFeatures": [
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 8.05%"
+                          "description": "up to 8.70%"
                         },
                         {
                           "name": "Investmentterm",
@@ -6008,8 +5993,8 @@
                         "term": 12,
                         "notice": 0,
                         "productType": 17
-                      }
-                    },
+                     }
+                    },                   
                     {
                       "productIdentifier": "1133",
                       "name": "Platinum Fixed Deposit",
@@ -6017,11 +6002,11 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 8.20,
-                          "description": "8.20% pa"
+                          "value": 8.2,
+                          "description": "8.2% pa"
                         }
                       ],
-                      "specialFeature": "1 - 60 months",
+                      "specialFeature": "1 - 12 months",
                       "salesHighlights": [
                         "Minimum investment amount - R100 000",
                         "Minimum investment period - 1 month",
@@ -6052,12 +6037,12 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 8.20%"
+                          "description": "up to 8.2%"
                         },
                         {
                           "name": "Investmentterm",
                           "displayName": "Investment term",
-                          "description": "1 - 60 months"
+                          "description": "1 - 12 months"
                         },
                         {
                           "name": "MinimumInvestmentAmount",
@@ -6142,7 +6127,7 @@
                           "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": "No age restrictions"
+                          "description": "18 years and older"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -6155,7 +6140,7 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Display",
-                          "description": "Exclusive to Nedbank Professional Banking clients"
+                          "description": "Nedbank Professional clients only"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
@@ -6163,7 +6148,7 @@
                         "term": 60,
                         "notice": 0,
                         "productType": 23
-                      }
+                     }
                     },
                     {
                       "productIdentifier": "1139",
@@ -6293,7 +6278,7 @@
                         {
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
-                          "description": "Exclusive to Nedbank Professional Banking clients",
+                          "description": "",
                           "maxValue": "1",
                           "minValue": "0",
                           "valueUnit": "month"
@@ -6304,7 +6289,7 @@
                           "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": "No age restrictions"
+                          "description": ""
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -6331,176 +6316,12 @@
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {
                         "term": 0,
-                        "notice": 1,
+                        "notice": 24,
                         "productType": 30
-                      }
+                     }
+
                     },
-                    {
-                      "productIdentifier": "1392",
-                      "name": "Tax-free Savings Account",
-                      "shortDescription": "The Nedbank Tax Free Savings Account provides you with an opportunity to save your money and enjoy the proceeds, tax free.",
-                      "productPricing": [
-                        {
-                          "type": "InterestRate",
-                          "value": 4.25,
-                          "description": "4.25% pa"
-                        }
-                      ],
-                      "specialFeature": "24 hours",
-                      "salesHighlights": [
-                        "Minimum investment amount - R500",
-                        "Minimum investment period - 24 hours",
-                        "No monthly fees or commissions",
-                        "Capital fully guaranteed"
-                      ],
-                      "redirect": {
-                        "shouldRedirect": false,
-                        "redirectUrl": null
-                      },
-                      "actions": [
-                        {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
-                        },
-                        {
-                          "type": "DETAIL",
-                          "text": "Details"
-                        },
-                        {
-                          "type": "COMPARE",
-                          "text": "Compare"
-                        }
-                      ],
-                      "productFeatures": [
-                        {
-                          "name": "Maximuminterestrate",
-                          "displayName": "Maximum interest rate",
-                          "description": "up to 4.25%"
-                        },
-                        {
-                          "name": "Investmentterm",
-                          "displayName": "Investment term",
-                          "description": "24 hours"
-                        },
-                        {
-                          "name": "MinimumInvestmentAmount",
-                          "displayName": "Minimum Investment Amount",
-                          "description": "R 500"
-                        },
-                        {
-                          "name": "MinimumInvestmentPeriod",
-                          "displayName": "Minimum Investment Period",
-                          "description": "24 hours"
-                        },
-                        {
-                          "name": "TermvsNotice",
-                          "displayName": "Term vs Notice",
-                          "description": "Notice"
-                        },
-                        {
-                          "name": "Freeaccesspriortoterm",
-                          "displayName": "Free access prior to term",
-                          "description": "Yes"
-                        },
-                        {
-                          "name": "AdditionalDeposits",
-                          "displayName": "Additional Deposits",
-                          "description": "Yes"
-                        },
-                        {
-                          "name": "AgeRestriction",
-                          "displayName": "Age Restriction",
-                          "description": "Individual clients only"
-                        },
-                        {
-                          "name": "Interestpaymentfrequency",
-                          "displayName": "Interest payment frequency",
-                          "description": "Monthly Capitalised"
-                        },
-                        {
-                          "name": "ElectronicAcces",
-                          "displayName": "Electronic Access",
-                          "description": "included"
-                        },
-                        {
-                          "name": "Stoporders",
-                          "displayName": "Stop orders",
-                          "description": "included"
-                        },
-                        {
-                          "name": "Statements",
-                          "displayName": "Statements",
-                          "description": "included"
-                        },
-                        {
-                          "name": "Fees",
-                          "displayName": "Fees",
-                          "description": "None"
-                        },
-                        {
-                          "name": "Investmentterm2",
-                          "displayName": "Investment term",
-                          "description": "24 hours"
-                        },
-                        {
-                          "name": "Withdrawals",
-                          "displayName": "Withdrawals",
-                          "description": "Minimum R50"
-                        },
-                        {
-                          "name": "Additionaldeposits",
-                          "displayName": "Additional deposits",
-                          "description": "Minimum R50"
-                        },
-                        {
-                          "name": "Fixedrate",
-                          "displayName": "Fixed rate?",
-                          "description": "No"
-                        }
-                      ],
-                      "eligibilityRules": [
-                        {
-                          "attributeName": "Period",
-                          "attributeType": "EligibilityRule",
-                          "description": "Individual clients only",
-                          "maxValue": "1",
-                          "minValue": "0",
-                          "valueUnit": "month"
-                        },
-                        {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "Age",
-                          "minValue": "0",
-                          "maxValue": "999999999",
-                          "valueUnit": "year",
-                          "description": "No age restrictions"
-                        },
-                        {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "InvestStart",
-                          "minValue": "500",
-                          "maxValue": "999999999",
-                          "valueUnit": "ZAR",
-                          "description": ""
-                        },
-                        {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "InvestMonthly",
-                          "minValue": "50",
-                          "maxValue": "999999999",
-                          "valueUnit": "ZAR",
-                          "description": ""
-                        }
-                      ],
-                      "lifeCycleStatus": "AVAILABLE",
-                      "calculator": {
-                        "term": 0,
-                        "notice": 1,
-                        "productType": 49
-                      }
-                    },
-                    {
+                     {
                       "productIdentifier": "1127",
                       "name": "Money Market Investment Account",
                       "shortDescription": "Get market-related interest rates and full access to funds with this flexible, fully transactional investment account.",
@@ -6636,7 +6457,7 @@
                         {
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
-                          "description": "Any individual, clubs, non-profit organisations and trust accounts",
+                          "description": "Within 24 hours",
                           "maxValue": "1",
                           "minValue": "0",
                           "valueUnit": "month"
@@ -6647,7 +6468,7 @@
                           "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": "Individuals aged 18 years or older"
+                          "description": "No age restriction"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -6679,7 +6500,7 @@
                           "description": "7.95% pa"
                         }
                       ],
-                      "specialFeature": "1 - 60 Months",
+                      "specialFeature": "1 - 17 Months",
                       "salesHighlights": [
                         "Minimum investment amount - R1000",
                         "Minimum investment period - 1 month",
@@ -6692,21 +6513,6 @@
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
-                      "actions": [
-                        {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
-                        },
-                        {
-                          "type": "DETAIL",
-                          "text": "Details"
-                        },
-                        {
-                          "type": "COMPARE",
-                          "text": "Compare"
-                        }
-                      ],
                       "productFeatures": [
                         {
                           "name": "Maximuminterestrate",
@@ -6716,7 +6522,7 @@
                         {
                           "name": "Investmentterm",
                           "displayName": "Investment term",
-                          "description": "1 - 60 Months"
+                          "description": "1 - 17 Months"
                         },
                         {
                           "name": "MinimumInvestmentAmount",
@@ -6798,7 +6604,7 @@
                         {
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
-                          "description": "",
+                          "description": "Between 1 and 17 months",
                           "maxValue": "11",
                           "minValue": "2",
                           "valueUnit": "month"
@@ -6809,7 +6615,7 @@
                           "minValue": "0",
                           "maxValue": "54",
                           "valueUnit": "year",
-                          "description": "Exclusive to individuals younger than 55 years of age,  and Small Business Services clients with a Nedbank digital banking profile"
+                          "description": "Only available to individuals who are younger than 55 years old"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -6825,7 +6631,7 @@
                         "term": 60,
                         "notice": 0,
                         "productType": 51
-                      }
+                     }
                     },
                     {
                       "productIdentifier": 1406,
@@ -6838,7 +6644,7 @@
                           "description": "8.20% pa"
                         }
                       ],
-                      "specialFeature": "1 - 60 Months",
+                      "specialFeature": "1 - 17 Months",
                       "salesHighlights": [
                         "Minimum investment amount - R1000",
                         "Minimum investment period - 1 month",
@@ -6851,21 +6657,6 @@
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
-                      "actions": [
-                        {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/personal/save-and-invest/investment-accounts/optimum-plus1.html"
-                        },
-                        {
-                          "type": "DETAIL",
-                          "text": "Details"
-                        },
-                        {
-                          "type": "COMPARE",
-                          "text": "Compare"
-                        }
-                      ],
                       "productFeatures": [
                         {
                           "name": "Maximuminterestrate",
@@ -6875,7 +6666,7 @@
                         {
                           "name": "Investmentterm",
                           "displayName": "Investment term",
-                          "description": "1 - 60 Months"
+                          "description": "1 - 17 Months"
                         },
                         {
                           "name": "MinimumInvestmentAmount",
@@ -6957,7 +6748,7 @@
                         {
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
-                          "description": "",
+                          "description": "Between 1 and 17 months",
                           "maxValue": "11",
                           "minValue": "2",
                           "valueUnit": "month"
@@ -6966,9 +6757,9 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
                           "minValue": "55",
-                          "maxValue": "-1",
+                          "maxValue": "59",
                           "valueUnit": "year",
-                          "description": "Exclusively available to individual clients, 55 years or older with a Nedbank digital banking profile"
+                          "description": "Only available to individuals who are 55 or older"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -6984,7 +6775,7 @@
                         "term": 17,
                         "notice": 0,
                         "productType": 52
-                      }
+                     }
                     },
                     {
                       "productIdentifier": 1128,
@@ -7009,21 +6800,6 @@
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
-                      "actions": [
-                        {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
-                        },
-                        {
-                          "type": "DETAIL",
-                          "text": "Details"
-                        },
-                        {
-                          "type": "COMPARE",
-                          "text": "Compare"
-                        }
-                      ],
                       "productFeatures": [
                         {
                           "name": "Maximuminterestrate",
@@ -7118,7 +6894,7 @@
                           "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": "No age restrictions"
+                          "description": "18 years and older"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -7135,22 +6911,14 @@
                           "maxValue": "99999999",
                           "valueUnit": "ZAR",
                           "description": ""
-                        },
-                        {
-                          "attributeName": "Period",
-                          "attributeType": "EligibilityRule",
-                          "description": "All individuals and Small Business Services clients with a Nedbank digital banking profile",
-                          "maxValue": "2",
-                          "minValue": "2",
-                          "valueUnit": "months"
                         }
                       ],
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {
                         "term": 0,
-                        "notice": 32,
-                        "productType": 19
-                      }
+                        "notice": 32 ,
+                        "productType":19 
+                     }
                     },
                     {
                       "productIdentifier": 1348,
@@ -7159,8 +6927,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 7.75,
-                          "description": "7.75% pa"
+                          "value": 8.4,
+                          "description": "8.40% pa"
                         }
                       ],
                       "specialFeature": "18 - 60 months",
@@ -7175,26 +6943,11 @@
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
-                      "actions": [
-                        {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
-                        },
-                        {
-                          "type": "DETAIL",
-                          "text": "Details"
-                        },
-                        {
-                          "type": "COMPARE",
-                          "text": "Compare"
-                        }
-                      ],
                       "productFeatures": [
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 7.75%"
+                          "description": "up to 8.40%"
                         },
                         {
                           "name": "Investmentterm",
@@ -7305,10 +7058,10 @@
                       ],
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {
-                        "term": 60,
-                        "notice": 0,
-                        "productType": 43
-                      }
+                        "term":60,
+                        "notice": 0 ,
+                        "productType":43
+                     }
                     },
                     {
                       "productIdentifier": 1126,
@@ -7323,7 +7076,7 @@
                       ],
                       "specialFeature": "1-60 Months",
                       "salesHighlights": [
-                        "Minimum investment amount - R5 000",
+                        "Minimum investment amount - R25 000",
                         "Minimum investment period - 1 month",
                         "No monthly fees or commissions",
                         "Capital guaranteed",
@@ -7335,9 +7088,8 @@
                       },
                       "actions": [
                         {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+                          "type": "SELECT_EWCO",
+                          "text": "Select"
                         },
                         {
                           "type": "DETAIL",
@@ -7362,7 +7114,7 @@
                         {
                           "name": "MinimumInvestmentAmount",
                           "displayName": "Minimum Investment Amount",
-                          "description": "R5 000"
+                          "description": "R 25 000"
                         },
                         {
                           "name": "MinimumInvestmentPeriod",
@@ -7447,7 +7199,7 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "InvestStart",
-                          "minValue": "5000",
+                          "minValue": "1000",
                           "maxValue": "999999999",
                           "valueUnit": "ZAR",
                           "description": ""
@@ -7469,9 +7221,9 @@
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {
                         "term": 60,
-                        "notice": 0,
+                        "notice": 0 ,
                         "productType": 3
-                      }
+                     }
                     },
                     {
                       "productIdentifier": 1136,
@@ -7486,7 +7238,7 @@
                       ],
                       "specialFeature": "1 - 60 Months",
                       "salesHighlights": [
-                        "Minimum investment amount - R5 000",
+                        "Minimum investment amount - R25 000",
                         "Minimum investment period - 1 month",
                         "No monthly fees or commissions",
                         "Capital guaranteed",
@@ -7498,9 +7250,8 @@
                       },
                       "actions": [
                         {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+                          "type": "SELECT_EWCO",
+                          "text": "Select"
                         },
                         {
                           "type": "DETAIL",
@@ -7525,7 +7276,7 @@
                         {
                           "name": "MinimumInvestmentAmount",
                           "displayName": "Minimum Investment Amount",
-                          "description": "R5 000"
+                          "description": "R 25 000"
                         },
                         {
                           "name": "MinimumInvestmentPeriod",
@@ -7610,7 +7361,7 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "InvestStart",
-                          "minValue": "5000",
+                          "minValue": "1000",
                           "maxValue": "999999999",
                           "valueUnit": "ZAR",
                           "description": "Earn minimum R 1000 per annum"
@@ -7631,10 +7382,10 @@
                       ],
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {
-                        "term": 60,
-                        "notice": 0,
-                        "productType": 28
-                      }
+                        "term":60,
+                        "notice": 0 ,
+                        "productType":28
+                     }
                     },
                     {
                       "productIdentifier": 1391,
@@ -7643,8 +7394,8 @@
                       "productPricing": [
                         {
                           "type": "InterestRate",
-                          "value": 5.85,
-                          "description": "5.85% pa"
+                          "value": 4.6,
+                          "description": "4.6% pa"
                         }
                       ],
                       "specialFeature": "Short Term",
@@ -7659,9 +7410,8 @@
                       },
                       "actions": [
                         {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+                          "type": "SELECT_EWCO",
+                          "text": "Select"
                         },
                         {
                           "type": "DETAIL",
@@ -7676,7 +7426,7 @@
                         {
                           "name": "Maximuminterestrate",
                           "displayName": "Maximum interest rate",
-                          "description": "up to 5.85%"
+                          "description": "up to 4.6%"
                         },
                         {
                           "name": "Investmentterm",
@@ -7795,10 +7545,295 @@
                       ],
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {
+                        "term":0,
+                        "notice": 32 ,
+                        "productType":50
+                     }
+                    }
+                    
+                  ]
+                },
+                {
+                  "displayName": "Tax free investments",
+                  "name": "taxfreeinvestments",
+                  "filterGroups": [
+                    {
+                      "filterGroupID": 1,
+                      "filterGroupName": "Age",
+                      "filterDisplayName": "What is your age?",
+                      "filterType": "Range",
+                      "filterItems": [
+                        {
+                          "filterID": 1,
+                          "filterDisplay": "Younger than 55",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                          "minValue": 0,
+                          "maxValue": 54
+                        },
+                        {
+                          "filterID": 2,
+                          "filterDisplay": "55 or older",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                          "minValue": 55,
+                          "maxValue": 999
+                        }
+                      ]
+                    },
+                    {
+                      "filterGroupID": 2,
+                      "filterGroupName": "InvestStart",
+                      "filterDisplayName": "How much money will you be depositing to begin with?",
+                      "filterType": "TextRange",
+                      "filterItems": [
+                        {
+                          "filterID": 1,
+                          "filterDisplay": "Initial amount",
+                          "productAttribute": "productAttributes[?(@.attributeName==='InvestStart')]",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "filterGroupID": 3,
+                      "filterGroupName": "InvestMonthly",
+                      "filterDisplayName": "Would you want to make more deposits once the account is opened?",
+                      "filterType": "YesNo",
+                      "filterItems": [
+                        {
+                          "filterID": 1,
+                          "filterDisplay": "Yes",
+                          "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
+                          "value": "yes"
+                        },
+                        {
+                          "filterID": 2,
+                          "filterDisplay": "No",
+                          "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
+                          "value": "no"
+                        }
+                      ]
+                    },
+                    {
+                      "filterGroupID": 4,
+                      "filterGroupName": "Period",
+                      "filterDisplayName": "When do you need access to your money?",
+                      "filterType": "Range",
+                      "filterItems": [
+                        {
+                          "filterID": 1,
+                          "filterDisplay": "Within 24 hours",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
+                          "minValue": 0,
+                          "maxValue": 1
+                        },
+                        {
+                          "filterID": 2,
+                          "filterDisplay": "Between 1 and 12 months",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
+                          "minValue": 2,
+                          "maxValue": 12
+                        },
+                        {
+                          "filterID": 3,
+                          "filterDisplay": "12 months or longer",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
+                          "minValue": 12,
+                          "maxValue": 999
+                        }
+                      ]
+                    }
+                  ],
+                  "popularProducts": [
+                    1391,
+                    1126,
+                    1348
+                  ],
+                  "productGroups": [
+                    {
+                      "groupIdentifier": "POPULAR_PRODUCTS",
+                      "name": "POPULAR CHOICES",
+                      "products": [
+                        1391,
+                        1348,
+                        1392
+                      ]
+                    },
+                    {
+                      "groupIdentifier": "ACCESS_WITHIN_24HRS",
+                      "name": "ACCESS WITHIN 24HRS",
+                      "products": [
+                        1360,
+                        1199,
+                        1392,
+                        1139
+                      ]
+                    }
+                  ],
+                  "products": [                                        
+                    {
+                      "productIdentifier": "1392",
+                      "name": "Tax-free Savings Account",
+                      "shortDescription": "The Nedbank Tax Free Savings Account provides you with an opportunity to save your money and enjoy the proceeds, tax free.",
+                      "productPricing": [
+                        {
+                          "type": "InterestRate",
+                          "value": 4.25,
+                          "description": "4.25% pa"
+                        }
+                      ],
+                      "specialFeature": "24 hours",
+                      "salesHighlights": [
+                        "Minimum investment amount - R500",
+                        "Minimum investment period - 24 hours",
+                        "No monthly fees or commissions",
+                        "Capital fully guaranteed"
+                      ],
+                      "redirect": {
+                        "shouldRedirect": false,
+                        "redirectUrl": null
+                      },
+                      "actions": [
+                        {
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
+                      "productFeatures": [
+                        {
+                          "name": "Maximuminterestrate",
+                          "displayName": "Maximum interest rate",
+                          "description": "up to 4.25%"
+                        },
+                        {
+                          "name": "Investmentterm",
+                          "displayName": "Investment term",
+                          "description": "24 hours"
+                        },
+                        {
+                          "name": "MinimumInvestmentAmount",
+                          "displayName": "Minimum Investment Amount",
+                          "description": "R 500"
+                        },
+                        {
+                          "name": "MinimumInvestmentPeriod",
+                          "displayName": "Minimum Investment Period",
+                          "description": "24 hours"
+                        },
+                        {
+                          "name": "TermvsNotice",
+                          "displayName": "Term vs Notice",
+                          "description": "Notice"
+                        },
+                        {
+                          "name": "Freeaccesspriortoterm",
+                          "displayName": "Free access prior to term",
+                          "description": "Yes"
+                        },
+                        {
+                          "name": "AdditionalDeposits",
+                          "displayName": "Additional Deposits",
+                          "description": "Yes"
+                        },
+                        {
+                          "name": "AgeRestriction",
+                          "displayName": "Age Restriction",
+                          "description": "Individual clients only"
+                        },
+                        {
+                          "name": "Interestpaymentfrequency",
+                          "displayName": "Interest payment frequency",
+                          "description": "Monthly Capitalised"
+                        },
+                        {
+                          "name": "ElectronicAcces",
+                          "displayName": "Electronic Access",
+                          "description": "included"
+                        },
+                        {
+                          "name": "Stoporders",
+                          "displayName": "Stop orders",
+                          "description": "included"
+                        },
+                        {
+                          "name": "Statements",
+                          "displayName": "Statements",
+                          "description": "included"
+                        },
+                        {
+                          "name": "Fees",
+                          "displayName": "Fees",
+                          "description": "None"
+                        },
+                        {
+                          "name": "Investmentterm2",
+                          "displayName": "Investment term",
+                          "description": "24 hours"
+                        },
+                        {
+                          "name": "Withdrawals",
+                          "displayName": "Withdrawals",
+                          "description": "Minimum R50"
+                        },
+                        {
+                          "name": "Additionaldeposits",
+                          "displayName": "Additional deposits",
+                          "description": "Minimum R50"
+                        },
+                        {
+                          "name": "Fixedrate",
+                          "displayName": "Fixed rate?",
+                          "description": "No"
+                        }
+                      ],
+                      "eligibilityRules": [
+                        {
+                          "attributeName": "Period",
+                          "attributeType": "EligibilityRule",
+                          "description": "",
+                          "maxValue": "1",
+                          "minValue": "0",
+                          "valueUnit": "month"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Age",
+                          "minValue": "0",
+                          "maxValue": "999999999",
+                          "valueUnit": "year",
+                          "description": "Individual clients only"
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "InvestStart",
+                          "minValue": "500",
+                          "maxValue": "999999999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "InvestMonthly",
+                          "minValue": "50",
+                          "maxValue": "999999999",
+                          "valueUnit": "ZAR",
+                          "description": ""
+                        }
+                      ],
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {
                         "term": 0,
-                        "notice": 32,
-                        "productType": 50
-                      }
+                        "notice": 24,
+                        "productType": 49
+                     }
                     },
                     {
                       "productIdentifier": 1473,
@@ -7826,7 +7861,7 @@
                         {
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+                          "value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/personal/save-and-invest/investment-accounts/Nedbank-Tax-Free-Fixed-Deposit.html"
                         },
                         {
                           "type": "DETAIL",
@@ -7931,7 +7966,7 @@
                           "minValue": "0",
                           "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": "No age restrictions"
+                          "description": "18 years and older"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -7952,7 +7987,7 @@
                         {
                           "attributeName": "Period",
                           "attributeType": "EligibilityRule",
-                          "description": "Individual clients only",
+                          "description": "",
                           "maxValue": "12",
                           "minValue": "12",
                           "valueUnit": "months"
@@ -7960,17 +7995,210 @@
                       ],
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {
-                        "term": 12,
-                        "notice": 0,
-                        "productType": 55
-                      }
+                        "term":12,
+                        "notice": 0 ,
+                        "productType":55
+                     }
                     },
+                    {
+                      "productIdentifier": 7777,
+                      "name": "Tax Free Investments",
+                      "shortDescription": "The Tax Free Investments is a Long-term savings vehicle to invest for the future or boost retirement savings and enjoy the proceeds tax free",
+                      "productPricing": [],
+                      "specialFeature": "",
+                      "salesHighlights": [
+                        "A wide range of funds offered by a top-ranked manager"
+                      ],
+                      "redirect": {
+                        "shouldRedirect": false,
+                        "redirectUrl": null
+                      },
+                      "actions": [{
+                          "type": "REDIRECT",
+                          "text": "Select",
+                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor/south-african-range/unit-trusts.html "
+                        },
+                        {
+                          "type": "DETAIL",
+                          "text": "Details"
+                        },
+                        {
+                          "type": "COMPARE",
+                          "text": "Compare"
+                        }
+                      ],
+                      "productFeatures": [{
+                          "name": "Ideal investment for",
+                          "displayName": "Ideal investment for",
+                          "description": "Save for a specific goal or time period, but have easy access to your money"
+                        },
+                        {
+                          "name": "AdditionalDeposits",
+                          "displayName": "Additional Deposits",
+                          "description": "Yes"
+                        },
+                        {
+                          "name": "AgeRestriction",
+                          "displayName": "Age Restriction",
+                          "description": "18 Years and older"
+                        },
+                        {
+                          "name": "ElectronicAcces",
+                          "displayName": "Electronic Access",
+                          "description": "included"
+                        },
+                        {
+                          "name": "Stoporders",
+                          "displayName": "Stop orders",
+                          "description": "included"
+                        },
+                        {
+                          "name": "Statements",
+                          "displayName": "Statements",
+                          "description": "included"
+                        },
+                        {
+                          "name": "Additionaldeposits",
+                          "displayName": "Additional deposits",
+                          "description": "Minimum R5000"
+                        }
+                      ],
+                      "eligibilityRules": [{
+                        "attributeType": "EligibilityRule",
+                        "attributeName": "Age",
+                        "minValue": "18",
+                        "maxValue": "999999999",
+                        "valueUnit": "year",
+                        "description": "18 Years and older"
+                      }],
+                      "lifeCycleStatus": "AVAILABLE",
+                      "calculator": {}
+                     }
+                    
+                  ]
+                },
+                {
+                  "displayName": "Unit trusts",
+                  "name": "InvestmentAccount",
+                  "filterGroups": [
+                    {
+                      "filterGroupID": 1,
+                      "filterGroupName": "Age",
+                      "filterDisplayName": "What is your age?",
+                      "filterType": "Range",
+                      "filterItems": [
+                        {
+                          "filterID": 1,
+                          "filterDisplay": "Younger than 55",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                          "minValue": 0,
+                          "maxValue": 54
+                        },
+                        {
+                          "filterID": 2,
+                          "filterDisplay": "55 or older",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                          "minValue": 55,
+                          "maxValue": 999
+                        }
+                      ]
+                    },
+                    {
+                      "filterGroupID": 2,
+                      "filterGroupName": "InvestStart",
+                      "filterDisplayName": "How much money will you be depositing to begin with?",
+                      "filterType": "TextRange",
+                      "filterItems": [
+                        {
+                          "filterID": 1,
+                          "filterDisplay": "Initial amount",
+                          "productAttribute": "productAttributes[?(@.attributeName==='InvestStart')]",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "filterGroupID": 3,
+                      "filterGroupName": "InvestMonthly",
+                      "filterDisplayName": "Would you want to make more deposits once the account is opened?",
+                      "filterType": "YesNo",
+                      "filterItems": [
+                        {
+                          "filterID": 1,
+                          "filterDisplay": "Yes",
+                          "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
+                          "value": "yes"
+                        },
+                        {
+                          "filterID": 2,
+                          "filterDisplay": "No",
+                          "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
+                          "value": "no"
+                        }
+                      ]
+                    },
+                    {
+                      "filterGroupID": 4,
+                      "filterGroupName": "Period",
+                      "filterDisplayName": "When do you need access to your money?",
+                      "filterType": "Range",
+                      "filterItems": [
+                        {
+                          "filterID": 1,
+                          "filterDisplay": "Within 24 hours",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
+                          "minValue": 0,
+                          "maxValue": 1
+                        },
+                        {
+                          "filterID": 2,
+                          "filterDisplay": "Between 1 and 12 months",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
+                          "minValue": 2,
+                          "maxValue": 12
+                        },
+                        {
+                          "filterID": 3,
+                          "filterDisplay": "12 months or longer",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
+                          "minValue": 12,
+                          "maxValue": 999
+                        }
+                      ]
+                    }
+                  ],
+                  "popularProducts": [
+                    1391,
+                    1126,
+                    1348
+                  ],
+                  "productGroups": [
+                    {
+                      "groupIdentifier": "POPULAR_PRODUCTS",
+                      "name": "POPULAR CHOICES",
+                      "products": [
+                        1391,
+                        1348,
+                        1392
+                      ]
+                    },
+                    {
+                      "groupIdentifier": "ACCESS_WITHIN_24HRS",
+                      "name": "ACCESS WITHIN 24HRS",
+                      "products": [
+                        1360,
+                        1199,
+                        1392,
+                        1139
+                      ]
+                    }
+                  ],
+                  "products": [
                     {
                       "productIdentifier": 1092,
                       "name": "Unit Trusts",
-                      "shortDescription": "Unit Trusts is a diversified, professionally managed portfolio of assets by investing a modest amount of money",
+                      "shortDescription": "The Unit Trusts is a diversified, professionally managed portfolio of assets by investing a modest amount of money",
                       "productPricing": [],
-                      "productCategory": "NGI",
                       "specialFeature": " ",
                       "salesHighlights": [
                         "A wide range of funds offered by a top-ranked manager",
@@ -7984,11 +8212,10 @@
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
-                      "actions": [
-                        {
+                      "actions": [{
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor.html"
+                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor/south-african-range/unit-trusts.html "
                         },
                         {
                           "type": "DETAIL",
@@ -7999,8 +8226,7 @@
                           "text": "Compare"
                         }
                       ],
-                      "productFeatures": [
-                        {
+                      "productFeatures": [{
                           "name": "Ideal investment for",
                           "displayName": "Ideal investment for",
                           "description": "Save for a specific goal or time period, but have easy access to your money"
@@ -8021,63 +8247,154 @@
                           "description": "included"
                         }
                       ],
-                      "eligibilityRules": [
-                        {
-                          "attributeName": "Period",
-                          "attributeType": "EligibilityRule",
-                          "maxValue": "999999999",
-                          "minValue": "0",
-                          "valueUnit": "month"
-                        },
-                        {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "Age",
-                          "minValue": "0",
-                          "maxValue": "999999999",
-                          "valueUnit": "year",
-                          "description": "18 Years and older"
-                        },
-                        {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "InvestStart",
-                          "minValue": "1",
-                          "maxValue": "999999999",
-                          "valueUnit": "ZAR",
-                          "description": ""
-                        }
-                      ],
+                      "eligibilityRules": [{
+                        "attributeType": "EligibilityRule",
+                        "attributeName": "Age",
+                        "minValue": "18",
+                        "maxValue": "999999999",
+                        "valueUnit": "year",
+                        "description": "18 Years and older"
+                      }],
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {}
+
+                      }
+                  ]
+                },
+                {
+                  "displayName": "Retirement annuity",
+                  "name": "InvestmentAccount",
+                  "filterGroups": [
+                    {
+                      "filterGroupID": 1,
+                      "filterGroupName": "Age",
+                      "filterDisplayName": "What is your age?",
+                      "filterType": "Range",
+                      "filterItems": [
+                        {
+                          "filterID": 1,
+                          "filterDisplay": "Younger than 55",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                          "minValue": 0,
+                          "maxValue": 54
+                        },
+                        {
+                          "filterID": 2,
+                          "filterDisplay": "55 or older",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                          "minValue": 55,
+                          "maxValue": 999
+                        }
+                      ]
                     },
+                    {
+                      "filterGroupID": 2,
+                      "filterGroupName": "InvestStart",
+                      "filterDisplayName": "How much money will you be depositing to begin with?",
+                      "filterType": "TextRange",
+                      "filterItems": [
+                        {
+                          "filterID": 1,
+                          "filterDisplay": "Initial amount",
+                          "productAttribute": "productAttributes[?(@.attributeName==='InvestStart')]",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "filterGroupID": 3,
+                      "filterGroupName": "InvestMonthly",
+                      "filterDisplayName": "Would you want to make more deposits once the account is opened?",
+                      "filterType": "YesNo",
+                      "filterItems": [
+                        {
+                          "filterID": 1,
+                          "filterDisplay": "Yes",
+                          "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
+                          "value": "yes"
+                        },
+                        {
+                          "filterID": 2,
+                          "filterDisplay": "No",
+                          "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
+                          "value": "no"
+                        }
+                      ]
+                    },
+                    {
+                      "filterGroupID": 4,
+                      "filterGroupName": "Period",
+                      "filterDisplayName": "When do you need access to your money?",
+                      "filterType": "Range",
+                      "filterItems": [
+                        {
+                          "filterID": 1,
+                          "filterDisplay": "Within 24 hours",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
+                          "minValue": 0,
+                          "maxValue": 1
+                        },
+                        {
+                          "filterID": 2,
+                          "filterDisplay": "Between 1 and 12 months",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
+                          "minValue": 2,
+                          "maxValue": 12
+                        },
+                        {
+                          "filterID": 3,
+                          "filterDisplay": "12 months or longer",
+                          "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
+                          "minValue": 12,
+                          "maxValue": 999
+                        }
+                      ]
+                    }
+                  ],
+                  "popularProducts": [
+                    1391,
+                    1126,
+                    1348
+                  ],
+                  "productGroups": [
+                    {
+                      "groupIdentifier": "POPULAR_PRODUCTS",
+                      "name": "POPULAR CHOICES",
+                      "products": [
+                        1391,
+                        1348,
+                        1392
+                      ]
+                    },
+                    {
+                      "groupIdentifier": "ACCESS_WITHIN_24HRS",
+                      "name": "ACCESS WITHIN 24HRS",
+                      "products": [
+                        1360,
+                        1199,
+                        1392,
+                        1139
+                      ]
+                    }
+                  ],
+                  "products": [
                     {
                       "productIdentifier": 1089,
                       "name": "Retirement Annuities",
-                      "shortDescription": "Retirement Annuities is a disciplined, long-term savings plan to supplement existing retirement savings",
+                      "shortDescription": "The Retirement Annuities is  a disciplined, long-term savings plan to supplement existing retirement savings",
                       "productPricing": [],
-                      "productCategory": "NGI",
-                      "specialFeature": " ",
-                      "salesHighlights": [
-                        "Adhoc and flexible payment options",
-                        "Long-term compounding to provide an income stream in retirement",
-                        "Access a wide range of Nedgroup Investment funds",
-                        "No causal event fees or penalties",
-                        "Option of staggered retirement",
-                        "Voluntary contributions",
-                        "Attractive tax benefits",
-                        "No payment of estate duty",
-                        "Saving for retirement in a tax-efficient manner",
-                        "Suitable if you are self-employed or not a member of a pension or provident fund",
-                        "Suitable if you are not receiving contributions from your employer to a pension or provident fund on your behalf"
+                      "specialFeature": "",
+                       "salesHighlights": [
+                        "A wide range of funds offered by a top-ranked manager"
                       ],
                       "redirect": {
                         "shouldRedirect": false,
                         "redirectUrl": null
                       },
-                      "actions": [
-                        {
+                      "actions": [{
                           "type": "REDIRECT",
                           "text": "Select",
-                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor.html"
+                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor/south-african-range/unit-trusts.html "
                         },
                         {
                           "type": "DETAIL",
@@ -8088,8 +8405,7 @@
                           "text": "Compare"
                         }
                       ],
-                      "productFeatures": [
-                        {
+                      "productFeatures": [{
                           "name": "Ideal investment for",
                           "displayName": "Ideal investment for",
                           "description": "Save for a specific goal or time period, but have easy access to your money"
@@ -8108,123 +8424,38 @@
                           "name": "ElectronicAcces",
                           "displayName": "Electronic Access",
                           "description": "included"
-                        }
-                      ],
-                      "eligibilityRules": [
-                        {
-                          "attributeName": "Period",
-                          "attributeType": "EligibilityRule",
-                          "maxValue": "14",
-                          "minValue": "14",
-                          "valueUnit": "month"
                         },
                         {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "Age",
-                          "minValue": "0",
-                          "maxValue": "999999999",
-                          "valueUnit": "year",
-                          "description": "18 Years and older"
-                        },
-                        {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "InvestStart",
-                          "minValue": "1",
-                          "maxValue": "999999999",
-                          "valueUnit": "ZAR",
-                          "description": ""
-                        }
-                      ],
-                      "lifeCycleStatus": "AVAILABLE",
-                      "calculator": {}
-                    },
-                    {
-                      "productIdentifier": 1482,
-                      "name": "Tax-free investments",
-                      "shortDescription": "Tax-free investments is a long-term savings vehicle to invest for the future and boost retirement savings",
-                      "productPricing": [],
-                      "productCategory": "NGI",
-                      "specialFeature": " ",
-                      "salesHighlights": [
-                        "0% tax, including interest, dividends and capital gains",
-                        "Access a wide range of funds",
-                        "Flexible payment options and no casual event fees or penalties",
-                        "0% tax on dividends, interest and capital gains",
-                        "R33 000 limit per year or R500 000 per lifetime",
-                        "Long-term investing but have easy access to your money in case of an emergency",
-                        "Harness the power of long-term investing"
-                      ],
-                      "redirect": {
-                        "shouldRedirect": false,
-                        "redirectUrl": null
-                      },
-                      "actions": [
-                        {
-                          "type": "REDIRECT",
-                          "text": "Select",
-                          "value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor.html"
-                        },
-                        {
-                          "type": "DETAIL",
-                          "text": "Details"
-                        },
-                        {
-                          "type": "COMPARE",
-                          "text": "Compare"
-                        }
-                      ],
-                      "productFeatures": [
-                        {
-                          "name": "Ideal investment for",
-                          "displayName": "Ideal investment for",
-                          "description": "Save for a specific goal or time period, but have easy access to your money"
-                        },
-                        {
-                          "name": "AdditionalDeposits",
-                          "displayName": "Additional Deposits",
-                          "description": "Yes"
-                        },
-                        {
-                          "name": "AgeRestriction",
-                          "displayName": "Age Restriction",
-                          "description": "18 Years and older"
-                        },
-                        {
-                          "name": "ElectronicAcces",
-                          "displayName": "Electronic Access",
+                          "name": "Stoporders",
+                          "displayName": "Stop orders",
                           "description": "included"
-                        }
-                      ],
-                      "eligibilityRules": [
-                        {
-                          "attributeName": "Period",
-                          "attributeType": "EligibilityRule",
-                          "maxValue": "999999999",
-                          "minValue": "0",
-                          "valueUnit": "month"
                         },
                         {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "Age",
-                          "minValue": "0",
-                          "maxValue": "999999999",
-                          "valueUnit": "year",
-                          "description": "18 Years and older"
+                          "name": "Statements",
+                          "displayName": "Statements",
+                          "description": "included"
                         },
                         {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "InvestStart",
-                          "minValue": "1",
-                          "maxValue": "999999999",
-                          "valueUnit": "ZAR",
-                          "description": ""
+                          "name": "Additionaldeposits",
+                          "displayName": "Additional deposits",
+                          "description": "Minimum R5000"
                         }
                       ],
+                      "eligibilityRules": [{
+                        "attributeType": "EligibilityRule",
+                        "attributeName": "Age",
+                        "minValue": "18",
+                        "maxValue": "999999999",
+                        "valueUnit": "year",
+                        "description": "18 Years and older"
+                      }],
                       "lifeCycleStatus": "AVAILABLE",
                       "calculator": {}
-                    }
+                       }
+                   
                   ]
                 }
+               
               ]
             },
             {
