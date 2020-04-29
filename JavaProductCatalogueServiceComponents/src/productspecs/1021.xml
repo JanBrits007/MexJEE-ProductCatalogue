@@ -418,6 +418,14 @@
          <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ClientVerificationInformationV2</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>PersonalInformationV2|ResidentialAddress~PostalAddress</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
             <attributeName>ComplianceInformationV2|MaritalStatus</attributeName>
          </featureAttributes>
          <featureAttributes>
@@ -460,6 +468,19 @@
             <attributeType>string</attributeType>
             <attributeName>breadcrumbSteps</attributeName>
             <value>Authenticate|Product Setup|About You|Credit Info|Finalisation|Customisation</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>leadTemplateName</attributeName>
+            <value>nedbank-commercial-release/AppFormPBStaffAssisted</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>bool</attributeType>
+            <attributeName>isLead</attributeName>
+            <value>true</value>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
