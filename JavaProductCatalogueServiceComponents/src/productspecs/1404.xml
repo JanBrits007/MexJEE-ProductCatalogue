@@ -317,10 +317,20 @@
 			<attributeName>frontOfficeIntentSequence</attributeName>
 			<value>GenerateOfferGatherProductDetails|ElectronicChannel|CreateSigningCeremony</value>
 		</productAttributes>
+		<productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence_GE</attributeName>
+            <value>GenerateOfferGatherProductDetails|ElectronicChannel|GatherEvidence|CreateSigningCeremonyUnhealthy</value>
+		</productAttributes>
         <productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeIntentSequence_NonSTP</attributeName>
-			<value>GenerateOfferGatherProductDetails|ElectronicChannel|GatherEvidence|FinalizeFrontOfficeInteraction</value>
+			<value>GenerateOfferGatherProductDetails|ElectronicChannel|CreateSigningCeremony|FinalizeFrontOfficeInteraction</value>
+		</productAttributes>
+		<productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence_NonSTP_Unhealthy</attributeName>
+			<value>GenerateOfferGatherProductDetails|ElectronicChannel|GatherEvidence|CreateSigningCeremonyUnhealthy|FinalizeFrontOfficeInteraction</value>
 		</productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -359,6 +369,10 @@
         <productAttributes>
             <attributeType>newSignaturies</attributeType>
             <attributeName>newSignaturiesWidget</attributeName>
+        </productAttributes>
+		<productAttributes>
+            <attributeType>facilityNumber</attributeType>
+            <attributeName>facilityNumberWidget</attributeName>
         </productAttributes>        
     </productAttributeGroup>
     <productAttributeGroup>
