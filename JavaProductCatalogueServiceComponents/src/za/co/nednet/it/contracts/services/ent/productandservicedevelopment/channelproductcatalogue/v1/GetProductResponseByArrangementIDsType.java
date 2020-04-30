@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GetProductResponseByArrangementIDType", propOrder = {
+@XmlType(name = "GetProductResponseByArrangementIDsType", propOrder = {
     "resultSet",
     "productSpecifications"
 })

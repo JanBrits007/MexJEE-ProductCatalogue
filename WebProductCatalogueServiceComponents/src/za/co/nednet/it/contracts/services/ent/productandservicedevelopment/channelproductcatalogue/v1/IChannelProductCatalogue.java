@@ -104,13 +104,7 @@ public interface IChannelProductCatalogue {
         @WebParam(name = "productSpecification", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", mode = WebParam.Mode.OUT)
         Holder<ProductType> product);
 
-    /**
-     * Retrieves the complete information for a given product
-     * 
-     * @param product
-     * @param productIdentifier
-     * @param resultSet
-     */
+   
     @WebMethod(operationName = "GetProductByArrangementIDs", action = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1/GetProductByArrangementIDs")
     @RequestWrapper(localName = "GetProductByArrangementIDs", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", className = "za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.GetProductByArrangementIDsType")
     @ResponseWrapper(localName = "GetProductResponseByArrangementIDs", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", className = "za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.GetProductResponseByArrangementIDsType")
@@ -123,7 +117,8 @@ public interface IChannelProductCatalogue {
         Holder<ResultSetType> resultSet,
         @WebParam(name = "productSpecifications", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", mode = WebParam.Mode.OUT)
         Holder<List<ProductType>> productSpecifications);
-    
+
+
     /**
      * CRUD operations for a given product
      * 
