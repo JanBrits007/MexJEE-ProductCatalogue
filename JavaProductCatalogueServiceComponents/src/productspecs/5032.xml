@@ -98,7 +98,7 @@
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Client FAIS Record of Advice|FAISRecordOfAdviceStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+         <attributeName>Client FAIS Record of Advice|nedbank-commercial-release/FAISRecordOfAdviceStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -137,6 +137,14 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
+      <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>3 Months Bank Statements OR 3 Months Pay Slips|N/A|CLIENT|PROOFOFINCOME|Statement~Payslip|Bank Statement~Payslip</attributeName>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -167,6 +175,29 @@
          <attributeType>string</attributeType>
          <attributeName>breadcrumbSteps</attributeName>
          <value>Authenticate|Product Setup|About You|Credit Info|Finalisation|Customisation</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|ActivateProductsGatherProductDetails=Customisation|FinalizeFrontOfficeInteraction=Customisation</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>supressClientCommunications</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>leadTemplateName</attributeName>
+         <value>nedbank-commercial-release/AppFormPBStaffAssisted</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>bool</attributeType>
+         <attributeName>isLead</attributeName>
+         <value>true</value>
       </productAttributes>
    </productAttributeGroup>
    <features>
