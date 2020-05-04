@@ -136,6 +136,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
 		String substitutedProductID = null;
 		String bankerWhitelist = null;
+		String channelWhitelist = null;
 		
 		// Now check if there are substitution rules.
 		for(ProductAttributeGroupType attributeGroup : productSpec.getProductAttributeGroup()) {
@@ -146,7 +147,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 				// We've found a substitution group.
 				mLog.debug("Trace 4");
 				
-				// Must the substitution be done for ALL users or the specific banker that started this case?
+				// Must the substitution be done for ALL users or the specific banker that started this case? Or must it be done for a specific channel
 				for(ProductattributesType attribute : attributeGroup.getProductAttributes()) {
 					mLog.debug("Trace 5");
 
@@ -155,8 +156,13 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 						
 						bankerWhitelist = attribute.getValue();
 					}
+					else if(attribute.getAttributeName().equalsIgnoreCase("SubstituteForChannelIDs")) {
+						mLog.debug("Trace 6.1 >>SubstituteForChannelIDs<<,>>" + attribute.getValue() + "<<");
+
+						channelWhitelist = attribute.getValue();
+					}
 					else if(attribute.getAttributeName().equalsIgnoreCase("SubstituteForProductID")) {
-						mLog.debug("Trace 6.1 >>SubstituteForProductID<<,>>" + attribute.getValue() + "<<");
+						mLog.debug("Trace 6.2 >>SubstituteForProductID<<,>>" + attribute.getValue() + "<<");
 
 						substitutedProductID = attribute.getValue();
 					}
@@ -180,29 +186,50 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 		}
 
 		// Must we substitute the product spec?
-		if(bankerWhitelist != null) {
-			mLog.debug("Trace 8 >>" + bankerWhitelist + "<<");
+		if(channelWhitelist != null) {
+			mLog.debug("Trace 8 >>" + channelWhitelist + "<<");
 			
 			// Get the business case details.
 			BusinessCaseManagementDAO dao = new BusinessCaseManagementDAO();
 			BusinessCaseHeader caseHeader = dao.retrieveBusinessCase(caseID);
 
-			mLog.debug("Trace 8.1 >>" + caseHeader.getInitiatingStaffNBNumber().toLowerCase() + "<<");
+			mLog.debug("Trace 9 >>" + caseHeader.getInitiatingChannelID().toLowerCase() + "<<");
 			
-			if(bankerWhitelist.toLowerCase().contains(caseHeader.getInitiatingStaffNBNumber().toLowerCase())) {
+			if(channelWhitelist.toLowerCase().contains(caseHeader.getInitiatingChannelID().toLowerCase())) {
 				// We must substitute.
-				mLog.debug("Trace 9 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + substitutedProductID + "<< for banker >>" + caseHeader.getInitiatingStaffNBNumber() + "<<");
+				mLog.debug("Trace 10 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + substitutedProductID + "<< for channel >>" + caseHeader.getInitiatingChannelID() + "<<");
 
 				return getProductSpecificationXMLByID(substitutedProductID);
 			}
 			else {
 				// We mustn't substitute
-				mLog.debug("Trace 10");
+				mLog.debug("Trace 11");
+				return getProductSpecificationXMLByID(productSpecificationID);
+			}
+		}
+		else if(bankerWhitelist != null) {
+			mLog.debug("Trace 12 >>" + bankerWhitelist + "<<");
+			
+			// Get the business case details.
+			BusinessCaseManagementDAO dao = new BusinessCaseManagementDAO();
+			BusinessCaseHeader caseHeader = dao.retrieveBusinessCase(caseID);
+
+			mLog.debug("Trace 13 >>" + caseHeader.getInitiatingStaffNBNumber().toLowerCase() + "<<");
+			
+			if(bankerWhitelist.toLowerCase().contains(caseHeader.getInitiatingStaffNBNumber().toLowerCase())) {
+				// We must substitute.
+				mLog.debug("Trace 14 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + substitutedProductID + "<< for banker >>" + caseHeader.getInitiatingStaffNBNumber() + "<<");
+
+				return getProductSpecificationXMLByID(substitutedProductID);
+			}
+			else {
+				// We mustn't substitute
+				mLog.debug("Trace 15");
 				return getProductSpecificationXMLByID(productSpecificationID);
 			}
 		}
 		else {
-			mLog.debug("Trace 11");
+			mLog.debug("Trace 16");
 			
 			return getProductSpecificationXMLByID(productSpecificationID);
 		}
