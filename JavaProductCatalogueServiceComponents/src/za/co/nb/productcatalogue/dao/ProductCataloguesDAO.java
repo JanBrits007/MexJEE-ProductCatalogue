@@ -103,6 +103,10 @@ public class ProductCataloguesDAO {
 
     	mLog.debug("Trace 2");
     	
+    	if(investmentRatesMap == null || investmentRatesMap.getValue() == null || investmentRatesMap.getValue().get(productID) == null) {
+    		return 0.00;
+    	}
+    	
     	return investmentRatesMap.getValue().get(productID).getUpperLimitRate();
 	}
 
