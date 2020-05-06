@@ -201,13 +201,9 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
 				return getProductSpecificationXMLByID(substitutedProductID);
 			}
-			else {
-				// We mustn't substitute
-				mLog.debug("Trace 11");
-				return getProductSpecificationXMLByID(productSpecificationID);
-			}
 		}
-		else if(bankerWhitelist != null) {
+		
+		if(bankerWhitelist != null) {
 			mLog.debug("Trace 12 >>" + bankerWhitelist + "<<");
 			
 			// Get the business case details.
