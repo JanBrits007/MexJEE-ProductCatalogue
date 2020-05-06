@@ -423,12 +423,12 @@
       ],
       "features": [
         {
-          "featureIdentifier": "1015",
-          "name": "My Pocket",
+          "featureIdentifier": "1402",
+          "name": "Free MyPocket",
           "mandatory": "false",
-          "preSelected": "true",
-          "shortDescription": "Saving facility on a current account",
-          "description": "Detailed description of feature",
+          "preSelected": "false",
+          "shortDescription": "Earn favourable interest rates",
+          "description": "Get a free budgeting and savings pocket linked to your Nedbank current account to earn interest and get instant access to your money when you need it.",
           "featureGrouping": {
             "featureGroupName": "Saving",
             "featureGroupRuleForProduct": "Optional"
@@ -462,17 +462,15 @@
           ],
           "featureDisplayAdditionalInformationWidget": "No",
           "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
-          "featureDisplayPosition": "preOffer",
+          "featureDisplayPosition": "VAS",
           "featureAttributeGroup": [
             {
               "attributeGroupName": "SystemRelated",
-              "featureAttributes": [
-                {
-                  "attributeType": "Flag",
-                  "attributeName": "StraightThroughProcess",
-                  "value": "false"
-                }
-              ]
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "false"
+              }
             },
             {
               "attributeGroupName": "coreProvisioningParameters",
@@ -482,19 +480,29 @@
                   "attributeName": "FeatureCode",
                   "valueUnit": "string",
                   "value": "ThisisthesFeaturecode"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "false"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "legacyProductID",
+                  "valueUnit": "string",
+                  "value": ""
                 }
               ]
             },
             {
               "attributeGroupName": "currentFeatureInformation",
-              "featureAttributes": [
-                {
-                  "attributeType": "Information",
-                  "attributeName": "InterestRate",
-                  "valueUnit": "Decimal",
-                  "value": "5"
-                }
-              ]
+              "featureAttributes": {
+                "attributeType": "Information",
+                "attributeName": "InterestRate",
+                "valueUnit": "Decimal",
+                "value": "5"
+              }
             }
           ]
         },
@@ -765,11 +773,11 @@
         },
         {
           "featureIdentifier": "1374",
-          "name": "eNotes(SMS)",
+          "name": "eNotes",
           "mandatory": "false",
           "preSelected": "true",
-          "shortDescription": "Keep track of your finances with the eNotes SMS notifications, anytime, anywhere. eNotes keeps you informed about all transactions on your account.",
-          "description": "Detailed description of feature",
+          "shortDescription": "Included",
+          "description": "Keep track of your finances with the eNotes SMS notifications, anytime, anywhere. eNotes keeps you informed about all transactions on your account.",
           "featureGrouping": {
             "featureGroupName": "Loyalty",
             "featureGroupRuleForProduct": "Optional"
@@ -803,17 +811,15 @@
           ],
           "featureDisplayAdditionalInformationWidget": "No",
           "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
-          "featureDisplayPosition": "offer",
+          "featureDisplayPosition": "VAS",
           "featureAttributeGroup": [
             {
               "attributeGroupName": "SystemRelated",
-              "featureAttributes": [
-                {
-                  "attributeType": "Flag",
-                  "attributeName": "StraightThroughProcess",
-                  "value": "True"
-                }
-              ]
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "True"
+              }
             },
             {
               "attributeGroupName": "coreProvisioningParameters",
@@ -823,31 +829,41 @@
                   "attributeName": "FeatureCode",
                   "valueUnit": "string",
                   "value": "ThisisthesFeaturecode"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "false"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "legacyProductID",
+                  "valueUnit": "string",
+                  "value": "1179"
                 }
               ]
             },
             {
               "attributeGroupName": "placeholder-Fullstructure",
-              "featureAttributes": [
-                {
-                  "attributeType": "type",
-                  "attributeName": "name",
-                  "minValue": "1",
-                  "maxValue": "2",
-                  "valueUnit": "text",
-                  "value": "some value"
-                }
-              ]
+              "featureAttributes": {
+                "attributeType": "type",
+                "attributeName": "name",
+                "minValue": "1",
+                "maxValue": "2",
+                "valueUnit": "text",
+                "value": "some value"
+              }
             }
           ]
         },
         {
           "featureIdentifier": "1008",
-          "name": "No funds alert",
+          "name": "No Funds Alert Services",
           "mandatory": "false",
           "preSelected": "true",
-          "shortDescription": "Electronic notifications when you have insufficient funds for an attempted debit order",
-          "description": "Detailed description of feature",
+          "shortDescription": "Included",
+          "description": "No funds alert is a service that provides a delay of the transactions being returned,due to insufficient funds in the account. Helping you save on unnecessary dishonoured penalty fees.",
           "featureGrouping": {
             "featureGroupName": "Loyalty",
             "featureGroupRuleForProduct": "Optional"
@@ -858,9 +874,9 @@
             "fee": [
               {
                 "type": "AdminFee",
-                "description": "R13.00 per sms",
+                "description": "Included",
                 "currency": "ZAR",
-                "amount": "13.00",
+                "amount": "0",
                 "frequency": "Transactional"
               }
             ]
@@ -881,17 +897,15 @@
           ],
           "featureDisplayAdditionalInformationWidget": "No",
           "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
-          "featureDisplayPosition": "offer",
+          "featureDisplayPosition": "VAS",
           "featureAttributeGroup": [
             {
               "attributeGroupName": "SystemRelated",
-              "featureAttributes": [
-                {
-                  "attributeType": "Flag",
-                  "attributeName": "StraightThroughProcess",
-                  "value": "True"
-                }
-              ]
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "True"
+              }
             },
             {
               "attributeGroupName": "coreProvisioningParameters",
@@ -901,21 +915,31 @@
                   "attributeName": "FeatureCode",
                   "valueUnit": "string",
                   "value": "ThisisthesFeaturecode"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "false"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "legacyProductID",
+                  "valueUnit": "string",
+                  "value": "1359"
                 }
               ]
             },
             {
               "attributeGroupName": "placeholder-Fullstructure",
-              "featureAttributes": [
-                {
-                  "attributeType": "type",
-                  "attributeName": "name",
-                  "minValue": "1",
-                  "maxValue": "2",
-                  "valueUnit": "text",
-                  "value": "some value"
-                }
-              ]
+              "featureAttributes": {
+                "attributeType": "type",
+                "attributeName": "name",
+                "minValue": "1",
+                "maxValue": "2",
+                "valueUnit": "text",
+                "value": "some value"
+              }
             }
           ]
         },
@@ -996,12 +1020,90 @@
           ]
         },
         {
-          "featureIdentifier": "1380",
-          "name": "Debit Order Switching",
+          "featureIdentifier": "1376",
+          "name": "Salary Switching",
           "mandatory": "false",
-          "preSelected": "true",
-          "shortDescription": "Debit Order Switching with transactional product",
-          "description": "Detailed description of feature",
+          "preSelected": "false",
+          "shortDescription": "",
+          "description": "Our free salary switching service will provide you with a confirmation of banking details to take to your employer for a quicker and simpler switch. Your overdraft will activate once your first salary is deplosited.",
+          "featureGrouping": {
+            "featureGroupName": "Salary Switching",
+            "featureGroupRuleForProduct": "OptionalIfAlternativeSelected"
+          },
+          "featureType": "BoltOn",
+          "referenceProductID": "-1",
+          "featurePricing": {
+            "fee": [
+              {
+                "type": "InitiationFee",
+                "description": "Initiation Fee",
+                "currency": "ZAR",
+                "amount": "0",
+                "frequency": "OnceOff"
+              }
+            ]
+          },
+          "featureDisplayAdditionalInformationWidget": "No",
+          "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+          "featureDisplayPosition": "VAS",
+          "featureAttributeGroup": [
+            {
+              "attributeGroupName": "SystemRelated",
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "true"
+              }
+            },
+            {
+              "attributeGroupName": "coreProvisioningParameters",
+              "featureAttributes": [
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "FeatureCode",
+                  "valueUnit": "string",
+                  "value": "ThisisthesFeaturecode"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "true"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "legacyProductID",
+                  "valueUnit": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "attributeGroupName": "productDocumentPresentation_ActivateProducts",
+              "featureAttributes": [
+                {
+                  "attributeType": "DocumentDescription",
+                  "attributeName": "Salary Switching Letter|SalarySwitching|N/A|N/A|N/A|N/A"
+                },
+                {
+                  "attributeType": "AvailableAction",
+                  "attributeName": "Download"
+                },
+                {
+                  "attributeType": "AvailableAction",
+                  "attributeName": "Email"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "featureIdentifier": "1380",
+          "name": "Debit order Switching",
+          "mandatory": "false",
+          "preSelected": "false",
+          "shortDescription": "",
+          "description": "If this is going to be your main account, we can, where possible, help you move your debit orders to your new Nedbank account for free,or you can download the MoneyApp and do it yourself.",
           "featureGrouping": {
             "featureGroupName": "Debit Order Switching",
             "featureGroupRuleForProduct": "OptionalIfAlternativeSelected"
@@ -1009,44 +1111,141 @@
           "featureType": "BoltOn",
           "referenceProductID": "-1",
           "featurePricing": {
-            "fee": {
-              "type": "InitiationFee",
-              "description": "Initiation Fee",
-              "currency": "ZAR",
-              "amount": "0",
-              "frequency": "OnceOff"
-            }
+            "fee": [
+              {
+                "type": "InitiationFee",
+                "description": "Initiation Fee",
+                "currency": "ZAR",
+                "amount": "0",
+                "frequency": "OnceOff"
+              }
+            ]
           },
           "featureDisplayAdditionalInformationWidget": "No",
           "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
-          "featureDisplayPosition": "preOffer",
+          "featureDisplayPosition": "VAS",
           "featureAttributeGroup": [
             {
               "attributeGroupName": "SystemRelated",
-              "featureAttributes": [
-                {
-                  "attributeType": "Flag",
-                  "attributeName": "StraightThroughProcess",
-                  "value": "true"
-                }
-              ]
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "true"
+              }
             },
             {
               "attributeGroupName": "coreProvisioningParameters",
               "featureAttributes": [
                 {
                   "attributeType": "coreProvisioningParameter",
-                  "attributeName": "LoanGroupingCode",
-                  "valueUnit": "PER",
-                  "value": "PER"
+                  "attributeName": "FeatureCode",
+                  "valueUnit": "string",
+                  "value": "ThisisthesFeaturecode"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "true"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "legacyProductID",
+                  "valueUnit": "string",
+                  "value": "1201"
                 }
               ]
             }
           ]
         },
         {
-          "featureIdentifier": "1334",
-          "name": "Debit Card Access Mechanism",
+          "featureIdentifier": "1025",
+          "name": "Nedbank Insurance Funeral Plan",
+          "mandatory": "false",
+          "preSelected": "false",
+          "shortDescription": "",
+          "description": "The Nedbank Insurance Funeral Plan provides cover that will help you to secure a dignified funeral for yourself or your family members. If you choose this option, we'll get in touch with you to finalise the sale.",
+          "featureGrouping": {
+            "featureGroupName": "Loyalty",
+            "featureGroupRuleForProduct": "Optional"
+          },
+          "featureType": "BoltOn",
+          "referenceProductID": "-1",
+          "featurePricing": {
+            "fee": [
+              {
+                "type": "AdminFee",
+                "currency": "ZAR",
+                "amount": "0",
+                "frequency": "Monthly"
+              }
+            ]
+          },
+          "featureFulfilment": [
+            {
+              "channel": "selfServiceWeb",
+              "fulfilmentType": "setting",
+              "fulfilmentInputSetting1": "N/A",
+              "fulfilmentInputSetting2": "N/A"
+            },
+            {
+              "channel": "staffAssisted",
+              "fulfilmentType": "setting",
+              "fulfilmentInputSetting1": "N/A",
+              "fulfilmentInputSetting2": "N/A"
+            }
+          ],
+          "featureDisplayAdditionalInformationWidget": "No",
+          "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+          "featureDisplayPosition": "VAS",
+          "featureAttributeGroup": [
+            {
+              "attributeGroupName": "SystemRelated",
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "True"
+              }
+            },
+            {
+              "attributeGroupName": "coreProvisioningParameters",
+              "featureAttributes": [
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "FeatureCode",
+                  "valueUnit": "string",
+                  "value": "ThisisthesFeaturecode"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "true"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "legacyProductID",
+                  "valueUnit": "string",
+                  "value": "1390"
+                }
+              ]
+            },
+            {
+              "attributeGroupName": "placeholder-Fullstructure",
+              "featureAttributes": {
+                "attributeType": "type",
+                "attributeName": "name",
+                "minValue": "1",
+                "maxValue": "2",
+                "valueUnit": "text",
+                "value": "some value"
+              }
+            }
+          ]
+        },
+        {
+          "featureIdentifier": "1385",
+          "name": "Debit Card",
           "mandatory": "false",
           "preSelected": "false",
           "shortDescription": "Short description of feature",
@@ -1056,24 +1255,24 @@
           "featureDisplayPosition": "preOffer",
           "referenceProductID": "-1",
           "featurePricing": {
-            "fee": {
-              "type": "InitiationFee",
-              "description": "Initiation Fee",
-              "currency": "ZAR",
-              "amount": "0",
-              "frequency": "OnceOff"
-            }
+            "fee": [
+              {
+                "type": "AdminFee",
+                "description": "FREE",
+                "currency": "ZAR",
+                "amount": "0",
+                "frequency": "Monthly"
+              }
+            ]
           },
           "featureAttributeGroup": [
             {
               "attributeGroupName": "SystemRelated",
-              "featureAttributes": [
-                {
-                  "attributeType": "Flag",
-                  "attributeName": "StraightThroughProcess",
-                  "value": "true"
-                }
-              ]
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "true"
+              }
             },
             {
               "attributeGroupName": "coreProvisioningParameters",
@@ -1083,18 +1282,30 @@
                   "attributeName": "LoanGroupingCode",
                   "valueUnit": "PER",
                   "value": "PER"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "false"
                 }
               ]
             },
             {
               "attributeGroupName": "productInformationRequirement_ActivateProducts",
-              "featureAttributes": [
-                {
-                  "attributeType": "AvailableAction",
-                  "attributeName": "Card Collection"
-                }
-              ]
-            }
+              "featureAttributes": {
+                "attributeType": "AvailableAction",
+                "attributeName": "Card Collection"
+              }
+            },
+            {
+              "attributeGroupName": "FeatureDetails",
+              "featureAttributes": {
+                 "attributeType": "productATMLimit",
+                 "attributeName": "ATM_Limit",
+                 "value": "2000"
+              }
+           }
           ]
         }
       ]
