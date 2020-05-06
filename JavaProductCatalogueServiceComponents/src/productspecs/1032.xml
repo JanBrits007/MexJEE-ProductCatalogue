@@ -1,4 +1,4 @@
-﻿<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1032</productIdentifier>
 	<name>Nedbank Gold Credit Card</name>
 	<productAttributeGroup>
@@ -202,30 +202,7 @@
 			<attributeType>DocTemplateName</attributeType>
 			<attributeName>CreditCardTermsAndConditionsUniversal</attributeName>
 		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-		<productAttributes>
-			<attributeType>DocumentDescription</attributeType>
-			<attributeName>FAIS Client Acknowledgement|nedbank-commercial-release/CCFAISClientAcknowledgementStaffAssisted|ARRANGEMENTS|APPLICATIONS|APPLICATIONSCREDITCARD|FAIS Client Acknowledgement</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>Download</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>Email</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>WetSign</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>ElectronicallySign</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
+	</productAttributeGroup><!--<productAttributeGroup><attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName><productAttributes><attributeType>DocumentDescription</attributeType><attributeName>FAIS Client Acknowledgement|nedbank-commercial-release/CCFAISClientAcknowledgementStaffAssisted|ARRANGEMENTS|APPLICATIONS|APPLICATIONSCREDITCARD|FAIS Client Acknowledgement</attributeName></productAttributes><productAttributes><attributeType>AvailableAction</attributeType><attributeName>Download</attributeName></productAttributes><productAttributes><attributeType>AvailableAction</attributeType><attributeName>Email</attributeName></productAttributes><productAttributes><attributeType>AvailableAction</attributeType><attributeName>WetSign</attributeName></productAttributes><productAttributes><attributeType>AvailableAction</attributeType><attributeName>ElectronicallySign</attributeName></productAttributes></productAttributeGroup> -->
 	<productAttributeGroup>
 		<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
 		<productAttributes>
@@ -320,8 +297,7 @@
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
-		<attributeGroupName>productCodeMappings</attributeGroupName>
-		<!-- Are these required -->
+		<attributeGroupName>productCodeMappings</attributeGroupName><!-- Are these required -->
 		<productAttributes>
 			<attributeType>productCodeMapping</attributeType>
 			<attributeName>MDM_ProductCode</attributeName>
@@ -355,21 +331,21 @@
 			<attributeName>productType</attributeName>
 			<value>CREDITCARD</value>
 		</productAttributes>
-		<productAttributes>  
-			<attributeType>flag</attributeType>  
-			<attributeName>ProvisioningPhase</attributeName>  
-			<value>preFICAProvisioning</value>  
-		</productAttributes>  
+		<productAttributes>
+			<attributeType>flag</attributeType>
+			<attributeName>ProvisioningPhase</attributeName>
+			<value>preFICAProvisioning</value>
+		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>CreditDetails</attributeGroupName>
 		<productAttributes>
 			<attributeName>minimumCreditAvaliableZAR</attributeName>
-			<value>1000</value>
+			<value>2000</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeName>maximumCreditAvaliableZAR</attributeName>
-			<value>250000</value>
+			<value>200000</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -504,6 +480,26 @@
 				<attributeName>ATM_Limit</attributeName>
 				<value>2000</value>
 			</featureAttributes>
+			<featureAttributes>
+				<attributeType>monthlyServiceFeeFrequency</attributeType>
+				<attributeName>Monthly_Service_Fee_Frequency</attributeName>
+				<value>Monthly</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>monthlyCreditFacilityServiceFeeFrequency</attributeType>
+				<attributeName>Monthly_Credit_Facility_Service_Fee_Frequency</attributeName>
+				<value>Monthly</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>initiationFeeFrequency</attributeType>
+				<attributeName>Initiation_Fee_Frequency</attributeName>
+				<value>Revolving</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>numberOfInstallments</attributeType>
+				<attributeName>Number_Of_Installments</attributeName>
+				<value>Revolving</value>
+			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
 	<features>
@@ -530,7 +526,7 @@
 		<name>Nedbank Greenback Rewards</name>
 		<mandatory>false</mandatory>
 		<preSelected>true</preSelected>
-		<shortDescription>By joining our Greenbacks Rewards Programme you will	earn rewards when you use your credit card or one of our other	transactional accounts.</shortDescription>
+		<shortDescription>By joining our Greenbacks Rewards Programme you will earn rewards when you use your credit card or one of our other transactional accounts.</shortDescription>
 		<description>Detailed description of feature</description>
 		<featureGrouping>
 			<featureGroupName>Loyalty</featureGroupName>
@@ -588,7 +584,7 @@
 				<attributeType>coreProvisioningParameter</attributeType>
 				<attributeName>legacyProductID</attributeName>
 				<valueUnit>string</valueUnit>
-				<value/>
+				<value />
 			</featureAttributes>
 		</featureAttributeGroup>
 		<featureAttributeGroup>
@@ -606,7 +602,7 @@
 			<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
 			<featureAttributes>
 				<attributeType>DocumentDescription</attributeType>
-				<attributeName>Rewards Terms and	Conditions|nedbank-commercial-release/CreditCardRewardsTermsAndConditionsUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Terms	and Conditions</attributeName>
+				<attributeName>Rewards Terms and Conditions|nedbank-commercial-release/CreditCardRewardsTermsAndConditionsUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Terms and Conditions</attributeName>
 			</featureAttributes>
 			<featureAttributes>
 				<attributeType>AvailableAction</attributeType>
@@ -627,7 +623,7 @@
 		<name>Affinity Rewards</name>
 		<mandatory>false</mandatory>
 		<preSelected>false</preSelected>
-		<shortDescription>Through our programmes you can support the arts,	environmental conservation initiatives or sports or help needy	children, at no cost to you. You choose the affinity programme you'd	like to support.</shortDescription>
+		<shortDescription>Through our programmes you can support the arts, environmental conservation initiatives or sports or help needy children, at no cost to you. You choose the affinity programme you'd like to support.</shortDescription>
 		<description>Detailed description of feature</description>
 		<featureGrouping>
 			<featureGroupName>Loyalty</featureGroupName>
@@ -716,6 +712,33 @@
 				<attributeName>legacyProductID</attributeName>
 				<valueUnit>string</valueUnit>
 				<value />
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+			<featureAttributes>
+				<attributeType>DocumentDescription</attributeType>
+				<attributeName>FAIS Client Acknowledgement|nedbank-commercial-release/CCFAISClientAcknowledgementStaffAssisted|ARRANGEMENTS|APPLICATIONS|APPLICATIONSCREDITCARD|FAIS Client Acknowledgement</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>Download</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>Email</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>WetSign</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>ElectronicallySign</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>DocTemplateName</attributeType>
+				<attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
