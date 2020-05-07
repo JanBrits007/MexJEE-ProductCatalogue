@@ -156,5 +156,36 @@ public class ChannelProductCatalogueSOAPBindingImpl {
 		
 		return;
 	}
-	
+
+	public void getProductByArrangementIDs(List<Integer> productIdentifiers, List<String> arrangementIDs, Holder<ResultSetType> resultSet, Holder<List<ProductType>> productSpecifications) {
+		mLog.debug("Trace 1");
+		
+		for(int i=0; i< productIdentifiers.size(); i++) {
+			mLog.debug("Trace 2 >>" + productIdentifiers.get(i) + "<<");
+			
+			try {
+				Holder<ProductType> productSpecificationHolder = new Holder<ProductType>(); 
+				
+				getProductByArrangementID(productIdentifiers.get(i), arrangementIDs.get(i), resultSet, productSpecificationHolder);
+
+				if(!resultSet.value.getResultCode().equalsIgnoreCase("R00")) {
+					mLog.debug("Trace 3");
+					// We have an error.
+					return;
+				}
+				
+				mLog.debug("Trace 4");
+				
+				if(productSpecifications.value == null) {
+					mLog.debug("Trace 5");
+					productSpecifications.value = new ArrayList<ProductType>();
+				}
+				
+				productSpecifications.value.add(productSpecificationHolder.value);
+			} catch (Exception e) {
+				e.printStackTrace();
+				resultSet.value = createResult("R01", e.getMessage());
+			}
+		}
+	}	
 }

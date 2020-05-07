@@ -40,7 +40,7 @@
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ClientVerificationInformationV2</attributeName>
+         <attributeName>ClientVerificationInformation</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -98,7 +98,7 @@
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Client FAIS Record of Advice|FAISRecordOfAdviceStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+         <attributeName>Client FAIS Record of Advice|nedbank-commercial-release/FAISRecordOfAdviceStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -121,21 +121,22 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>DeclarationInformation</attributeName>
+         <attributeName>DeclarationInformationV2|ZOrder=200</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>RelationshipBankerInformation</attributeName>
+         <attributeName>RelationshipBankerInformationV2</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>KeepingInTouchInformation</attributeName>
+         <attributeName>KeepingInTouchInformationV2</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDoneInformation</attributeName>
+         <attributeName>YoureDoneInformationV2</attributeName>
       </productAttributes>
    </productAttributeGroup>
+<!--
    <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
       <productAttributes>
@@ -144,6 +145,7 @@
          <valueUnit>bool</valueUnit>
       </productAttributes>
    </productAttributeGroup>
+-->   
    <productAttributeGroup>
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
       <productAttributes>
@@ -176,6 +178,11 @@
          <attributeName>breadcrumbSteps</attributeName>
          <value>Authenticate|Product Setup|About You|Credit Info|Finalisation|Customisation</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|ActivateProductsGatherProductDetails=Customisation|FinalizeFrontOfficeInteraction=Customisation</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>coreProvisioningParameters</attributeGroupName>
@@ -184,17 +191,27 @@
          <attributeName>supressClientCommunications</attributeName>
          <value>true</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>leadTemplateName</attributeName>
+         <value>nedbank-commercial-release/AppFormPBStaffAssisted</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>bool</attributeType>
+         <attributeName>isLead</attributeName>
+         <value>true</value>
+      </productAttributes>
    </productAttributeGroup>
    <features>
-      <featureIdentifier>1028</featureIdentifier>
-      <name>Credit Card Plastic Card</name>
+      <featureIdentifier>5387</featureIdentifier>
+      <name>Multi App Cheque/Credit Card Plastic Card</name>
       <mandatory>true</mandatory>
       <preSelected>true</preSelected>
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDeliveryDetails|CardCollection~CardDelivery</attributeName>
+            <attributeName>CardDeliveryDetails|ZOrder=100~ContractComponentProductType=5387~allowOptOut~allowCardCollection~allowCardDelivery</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>   
