@@ -1,531 +1,161 @@
 {
-    "name": "Invest",
-    "displayName": "Save|Invest",
-    "description": "I need my savings to work as hard as I do",
-    "productLines": [
-        {
-            "displayName": "Everyday Invest",
-            "name": "InvestmentAccount",
-            "filterGroups": [
-                {
-                    "filterGroupID": 1,
-                    "filterGroupName": "Age",
-                    "filterDisplayName": "What is your age?",
-                    "filterType": "Range",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "Younger than 55",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-                            "minValue": 0,
-                            "maxValue": 54
-                        },
-                        {
-                            "filterID": 2,
-                            "filterDisplay": "55 or older",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-                            "minValue": 55,
-                            "maxValue": 999
-                        }
-                    ]
-                },
-                {
-                    "filterGroupID": 2,
-                    "filterGroupName": "InvestStart",
-                    "filterDisplayName": "How much money will you be depositing to begin with?",
-                    "filterType": "TextRange",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "Initial amount",
-                            "productAttribute": "productAttributes[?(@.attributeName==='InvestStart')]",
-                            "value": ""
-                        }
-                    ]
-                },
-                {
-                    "filterGroupID": 3,
-                    "filterGroupName": "InvestMonthly",
-                    "filterDisplayName": "Would you want to make more deposits once the account is opened?",
-                    "filterType": "YesNo",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "Yes",
-                            "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
-                            "value": "yes"
-                        },
-                        {
-                            "filterID": 2,
-                            "filterDisplay": "No",
-                            "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
-                            "value": "no"
-                        }
-                    ]
-                },
-                {
-                    "filterGroupID": 4,
-                    "filterGroupName": "Period",
-                    "filterDisplayName": "When do you need access to your money?",
-                    "filterType": "Range",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "After 24 hours notice",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-                            "minValue": 0,
-                            "maxValue": 1
-                        },
-                        {
-                            "filterID": 2,
-                            "filterDisplay": "After 32 days notice",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-                            "minValue": 2,
-                            "maxValue": 11
-                        },
-                        {
-                            "filterID": 3,
-                            "filterDisplay": "At the end of my investment period",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-                            "minValue": 12,
-                            "maxValue": 999
-                        }
-                    ]
-                }
-            ],
-            "popularProducts": [
-                1391,
-                1126,
-                1348
-            ],
-            "productGroups": [
-                {
-                    "groupIdentifier": "POPULAR_PRODUCTS",
-                    "name": "POPULAR CHOICES",
-                    "products": [
-                        1391,
-                        1348,
-                        1392
-                    ]
-                },
-                {
-                    "groupIdentifier": "ACCESS_WITHIN_24HRS",
-                    "name": "ACCESS WITHIN 24HRS",
-                    "products": [
-                        1360,
-                        1199,
-                        1392,
-                        1139
-                    ]
-                }
-            ],
-            "products": [
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1360.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1199.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1134.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1349.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1133.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1139.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1127.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1405.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1406.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1128.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1348.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1126.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1136.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1391.json"
-				}
-            ]
-        },
-        {
-            "displayName": "Tax Free",
-            "name": "taxfreeinvestments",
-            "filterGroups": [
-                {
-                    "filterGroupID": 1,
-                    "filterGroupName": "Age",
-                    "filterDisplayName": "What is your age?",
-                    "filterType": "Range",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "Younger than 55",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-                            "minValue": 0,
-                            "maxValue": 54
-                        },
-                        {
-                            "filterID": 2,
-                            "filterDisplay": "55 or older",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-                            "minValue": 55,
-                            "maxValue": 999
-                        }
-                    ]
-                },
-                {
-                    "filterGroupID": 2,
-                    "filterGroupName": "InvestStart",
-                    "filterDisplayName": "How much money will you be depositing to begin with?",
-                    "filterType": "TextRange",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "Initial amount",
-                            "productAttribute": "productAttributes[?(@.attributeName==='InvestStart')]",
-                            "value": ""
-                        }
-                    ]
-                },
-                {
-                    "filterGroupID": 3,
-                    "filterGroupName": "InvestMonthly",
-                    "filterDisplayName": "Would you want to make more deposits once the account is opened?",
-                    "filterType": "YesNo",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "Yes",
-                            "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
-                            "value": "yes"
-                        },
-                        {
-                            "filterID": 2,
-                            "filterDisplay": "No",
-                            "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
-                            "value": "no"
-                        }
-                    ]
-                },
-                {
-                    "filterGroupID": 4,
-                    "filterGroupName": "Period",
-                    "filterDisplayName": "When do you need access to your money?",
-                    "filterType": "Range",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "After 24 hours notice",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-                            "minValue": 0,
-                            "maxValue": 1
-                        },
-                        {
-                            "filterID": 2,
-                            "filterDisplay": "After 32 days notice",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-                            "minValue": 2,
-                            "maxValue": 11
-                        },
-                        {
-                            "filterID": 3,
-                            "filterDisplay": "At the end of my investment period",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-                            "minValue": 12,
-                            "maxValue": 999
-                        }
-                    ]
-                }
-            ],
-            "popularProducts": [],
-            "productGroups": [
-                {
-                    "groupIdentifier": "POPULAR_PRODUCTS",
-                    "name": "POPULAR CHOICES",
-                    "products": [
-                        1392
-                    ]
-                },
-                {
-                    "groupIdentifier": "ACCESS_WITHIN_24HRS",
-                    "name": "ACCESS WITHIN 24HRS",
-                    "products": [
-                        1392
-                    ]
-                }
-            ],
-            "products": [
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1392.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1473.json"
-				},
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1482.json"
-				}
-            ]
-        },
-        {
-            "displayName": "Unit trusts",
-            "name": "InvestmentAccount",
-            "filterGroups": [
-                {
-                    "filterGroupID": 1,
-                    "filterGroupName": "Age",
-                    "filterDisplayName": "What is your age?",
-                    "filterType": "Range",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "Younger than 55",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-                            "minValue": 0,
-                            "maxValue": 54
-                        },
-                        {
-                            "filterID": 2,
-                            "filterDisplay": "55 or older",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-                            "minValue": 55,
-                            "maxValue": 999
-                        }
-                    ]
-                },
-                {
-                    "filterGroupID": 2,
-                    "filterGroupName": "InvestStart",
-                    "filterDisplayName": "How much money will you be depositing to begin with?",
-                    "filterType": "TextRange",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "Initial amount",
-                            "productAttribute": "productAttributes[?(@.attributeName==='InvestStart')]",
-                            "value": ""
-                        }
-                    ]
-                },
-                {
-                    "filterGroupID": 3,
-                    "filterGroupName": "InvestMonthly",
-                    "filterDisplayName": "Would you want to make more deposits once the account is opened?",
-                    "filterType": "YesNo",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "Yes",
-                            "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
-                            "value": "yes"
-                        },
-                        {
-                            "filterID": 2,
-                            "filterDisplay": "No",
-                            "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
-                            "value": "no"
-                        }
-                    ]
-                },
-                {
-                    "filterGroupID": 4,
-                    "filterGroupName": "Period",
-                    "filterDisplayName": "When do you need access to your money?",
-                    "filterType": "Range",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "After 24 hours notice",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-                            "minValue": 0,
-                            "maxValue": 1
-                        },
-                        {
-                            "filterID": 2,
-                            "filterDisplay": "After 32 days notice",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-                            "minValue": 2,
-                            "maxValue": 11
-                        },
-                        {
-                            "filterID": 3,
-                            "filterDisplay": "At the end of my investment period",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-                            "minValue": 12,
-                            "maxValue": 999
-                        }
-                    ]
-                }
-            ],
-            "popularProducts": [
-                1391,
-                1126,
-                1348
-            ],
-            "productGroups": [
-                {
-                    "groupIdentifier": "POPULAR_PRODUCTS",
-                    "name": "POPULAR CHOICES",
-                    "products": [
-                        1391,
-                        1348,
-                        1392
-                    ]
-                },
-                {
-                    "groupIdentifier": "ACCESS_WITHIN_24HRS",
-                    "name": "ACCESS WITHIN 24HRS",
-                    "products": [
-                        1360,
-                        1199,
-                        1392,
-                        1139
-                    ]
-                }
-            ],
-            "products": [
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1092.json"
-				}
-            ]
-        },
-        {
-            "displayName": "Retirement Annuities",
-            "name": "InvestmentAccount",
-            "filterGroups": [
-                {
-                    "filterGroupID": 1,
-                    "filterGroupName": "Age",
-                    "filterDisplayName": "What is your age?",
-                    "filterType": "Range",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "Younger than 55",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-                            "minValue": 0,
-                            "maxValue": 54
-                        },
-                        {
-                            "filterID": 2,
-                            "filterDisplay": "55 or older",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-                            "minValue": 55,
-                            "maxValue": 999
-                        }
-                    ]
-                },
-                {
-                    "filterGroupID": 2,
-                    "filterGroupName": "InvestStart",
-                    "filterDisplayName": "How much money will you be depositing to begin with?",
-                    "filterType": "TextRange",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "Initial amount",
-                            "productAttribute": "productAttributes[?(@.attributeName==='InvestStart')]",
-                            "value": ""
-                        }
-                    ]
-                },
-                {
-                    "filterGroupID": 3,
-                    "filterGroupName": "InvestMonthly",
-                    "filterDisplayName": "Would you want to make more deposits once the account is opened?",
-                    "filterType": "YesNo",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "Yes",
-                            "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
-                            "value": "yes"
-                        },
-                        {
-                            "filterID": 2,
-                            "filterDisplay": "No",
-                            "productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
-                            "value": "no"
-                        }
-                    ]
-                },
-                {
-                    "filterGroupID": 4,
-                    "filterGroupName": "Period",
-                    "filterDisplayName": "When do you need access to your money?",
-                    "filterType": "Range",
-                    "filterItems": [
-                        {
-                            "filterID": 1,
-                            "filterDisplay": "After 24 hours notice",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-                            "minValue": 0,
-                            "maxValue": 1
-                        },
-                        {
-                            "filterID": 2,
-                            "filterDisplay": "After 32 days notice",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-                            "minValue": 2,
-                            "maxValue": 11
-                        },
-                        {
-                            "filterID": 3,
-                            "filterDisplay": "At the end of my investment period",
-                            "productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-                            "minValue": 12,
-                            "maxValue": 999
-                        }
-                    ]
-                }
-            ],
-            "popularProducts": [
-                1391,
-                1126,
-                1348
-            ],
-            "productGroups": [
-                {
-                    "groupIdentifier": "POPULAR_PRODUCTS",
-                    "name": "POPULAR CHOICES",
-                    "products": [
-                        1391,
-                        1348,
-                        1392
-                    ]
-                },
-                {
-                    "groupIdentifier": "ACCESS_WITHIN_24HRS",
-                    "name": "ACCESS WITHIN 24HRS",
-                    "products": [
-                        1360,
-                        1199,
-                        1392,
-                        1139
-                    ]
-                }
-            ],
-            "products": [
-                {
-					"fileReference": "/productcatalogue/salescat1/families/categories/invest/1089.json"
-				}
-            ]
-        }
-    ]
+	"name": "Invest",
+	"displayName": "Save|Invest",
+	"description": "I need my savings to work as hard as I do",
+	"productLines": [{
+		"displayName": "Investment Account",
+		"name": "InvestmentAccount",
+		"filterGroups": [{
+			"filterGroupID": 1,
+			"filterGroupName": "Age",
+			"filterDisplayName": "What is your age?",
+			"filterType": "Range",
+			"filterItems": [{
+				"filterID": 1,
+				"filterDisplay": "Younger than 55",
+				"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+				"minValue": 0,
+				"maxValue": 54
+			},
+			{
+				"filterID": 2,
+				"filterDisplay": "55 or older",
+				"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+				"minValue": 55,
+				"maxValue": 999
+			}]
+		},
+		{
+			"filterGroupID": 2,
+			"filterGroupName": "InvestStart",
+			"filterDisplayName": "How much money will you be depositing to begin with?",
+			"filterType": "TextRange",
+			"filterItems": [{
+				"filterID": 1,
+				"filterDisplay": "Initial amount",
+				"productAttribute": "productAttributes[?(@.attributeName==='InvestStart')]",
+				"value": ""
+			}]
+		},
+		{
+			"filterGroupID": 3,
+			"filterGroupName": "InvestMonthly",
+			"filterDisplayName": "Would you want to make more deposits once the account is opened?",
+			"filterType": "YesNo",
+			"filterItems": [{
+				"filterID": 1,
+				"filterDisplay": "Yes",
+				"productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
+				"value": "yes"
+			},
+			{
+				"filterID": 2,
+				"filterDisplay": "No",
+				"productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
+				"value": "no"
+			}]
+		},
+		{
+			"filterGroupID": 4,
+			"filterGroupName": "Period",
+			"filterDisplayName": "When do you need access to your money?",
+			"filterType": "Range",
+			"filterItems": [{
+				"filterID": 1,
+				"filterDisplay": "After 24 hours notice",
+				"productAttribute": "productAttributes[?(@.attributeName==='Period')]",
+				"minValue": 0,
+				"maxValue": 1
+			},
+			{
+				"filterID": 2,
+				"filterDisplay": "After 32 days notice",
+				"productAttribute": "productAttributes[?(@.attributeName==='Period')]",
+				"minValue": 2,
+				"maxValue": 11
+			},
+			{
+				"filterID": 3,
+				"filterDisplay": "At the end of my investment period",
+				"productAttribute": "productAttributes[?(@.attributeName==='Period')]",
+				"minValue": 12,
+				"maxValue": 999
+			}]
+		}],
+		"popularProducts": [1391,
+		1126,
+		1348],
+		"productGroups": [{
+			"groupIdentifier": "POPULAR_PRODUCTS",
+			"name": "POPULAR CHOICES",
+			"products": [1391,
+			1348,
+			1392]
+		},
+		{
+			"groupIdentifier": "ACCESS_WITHIN_24HRS",
+			"name": "ACCESS WITHIN 24HRS",
+			"products": [1360,
+			1199,
+			1392,
+			1139]
+		}],
+		"products": [{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1360.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1199.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1134.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1349.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1133.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1139.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1392.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1127.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1405.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1406.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1128.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1348.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1126.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1136.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1391.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1473.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1092.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1089.json"
+		},
+		{
+			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1482.json"
+		}]
+	}]
 }
