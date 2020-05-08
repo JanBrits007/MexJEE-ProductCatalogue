@@ -1,4 +1,4 @@
-<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1" xmlns:a="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1128</productIdentifier>
     <name>Electronic 32 Day Notice</name>
     <shortDescription>An Investment account offering competitive interest rates and short-term flexibility, that is exclusively available online.</shortDescription>
@@ -177,7 +177,25 @@
             <attributeName>isNoticeProduct</attributeName>
             <value>true</value>
         </productAttributes>
+        <a:productAttributes>
+            <a:attributeType>string</a:attributeType>
+            <a:attributeName>requiresElgiblityScoringAtIntents</a:attributeName>
+            <a:value>intent 0|intent 1</a:value>
+        </a:productAttributes>
     </productAttributeGroup>
+    <a:productAttributeGroup>
+       <a:attributeGroupName>DecisioningControl</a:attributeGroupName>
+       <a:productAttributes>
+          <a:attributeType>boolean</a:attributeType>
+          <a:attributeName>ComponentSupportsDeclineReasons</a:attributeName>
+          <a:value>true</a:value>
+       </a:productAttributes>
+       <a:productAttributes>
+          <a:attributeType>boolean</a:attributeType>
+          <a:attributeName>EnforceAgeValidationRules</a:attributeName>
+          <a:value>true</a:value>
+       </a:productAttributes>
+    </a:productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productCodeMappings</attributeGroupName>
         <productAttributes>

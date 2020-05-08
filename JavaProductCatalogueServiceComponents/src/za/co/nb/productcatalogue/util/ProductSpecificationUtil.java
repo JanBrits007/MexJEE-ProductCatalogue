@@ -8,6 +8,7 @@ import org.apache.commons.logging.LogFactory;
 
 import za.co.nb.productcatalogue.dao.ProductSpecificationsServiceDAO;
 import za.co.nb.productcatalogue.exception.InvalidAttributeException;
+import za.co.nb.productcatalogue.exception.InvalidAttributeGroupException;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.FeatureAttributeGroupType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.FeatureAttributesType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.FeaturesType;
@@ -19,6 +20,24 @@ public class ProductSpecificationUtil {
 
 	private final Log mLog = LogFactory.getLog(getClass());
 
+	public ProductAttributeGroupType getProductAttributeGroupValues(ProductType productSpecification, String attributeGroupName) throws InvalidAttributeGroupException {
+		mLog.debug("Trace 1");
+		
+		// First look in product attribute groups.
+		for(ProductAttributeGroupType productAttributeGroup : productSpecification.getProductAttributeGroup()) {
+			mLog.debug("Trace 2 >>" + productAttributeGroup.getAttributeGroupName() + "<<");
+			
+			// Now look for the attribute group.
+			if(productAttributeGroup.getAttributeGroupName().equalsIgnoreCase(attributeGroupName)) {
+				mLog.debug("Trace 3");
+				// Found it.
+				return productAttributeGroup;
+			}
+		}
+
+		throw new InvalidAttributeGroupException("Invalid attribute group " + attributeGroupName + ". Check the product specification for product ID " + productSpecification.getProductIdentifier());
+	}
+	
 	public String getProductOrFeatureAttributeValue(String productID, String attributeGroup, String attributeName) throws Exception {
 		mLog.debug("Trace 1");
 		
