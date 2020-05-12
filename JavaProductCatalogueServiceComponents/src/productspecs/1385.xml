@@ -41,6 +41,10 @@
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>AdditionalPersonalInformation|WidgitName=Child's Personal Information</attributeName>
         </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>IncomeBasic|WidgitName=Child's Basic Income</attributeName>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
        <attributeGroupName>clientInformationRequirement_DetermineRelatedParties</attributeGroupName>
@@ -54,6 +58,12 @@
         <productAttributes>
             <attributeType>Evidence</attributeType>
             <attributeName>ProofOfIdentificationClause</attributeName>
+            <isComparable>false</isComparable>
+            <valueUnit>bool</valueUnit>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>Evidence</attributeType>
+            <attributeName>ProofOfMinorIdentificationClause</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
@@ -1086,7 +1096,7 @@
       <featureIdentifier>1380</featureIdentifier>
       <name>Debit Order Switching</name>
       <mandatory>false</mandatory>
-      <preSelected>false</preSelected>
+      <preSelected>true</preSelected>
       <shortDescription>Debit Order Switching with transactional product</shortDescription>
       <description>Detailed description of feature</description>
       <featureGrouping>
@@ -1137,4 +1147,23 @@
          </featureAttributes>
       </featureAttributeGroup>
    </features>
+   <features>
+	    <featureIdentifier>1334</featureIdentifier>
+	    <name>Debit Card</name>
+	    <mandatory>false</mandatory>
+	    <preSelected>false</preSelected>
+	    <shortDescription>Short description of feature</shortDescription>
+	    <description>Detailed description of feature</description>
+	    <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+	    <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+	    <featureDisplayPosition>preOffer</featureDisplayPosition>
+	    <featureAttributeGroup>
+	        <attributeGroupName>SystemRelated</attributeGroupName>
+	        <featureAttributes>
+	            <attributeType>Flag</attributeType>
+	            <attributeName>StraightThroughProcess</attributeName>
+	            <value>true</value>
+	        </featureAttributes>
+	    </featureAttributeGroup>
+	</features>
 </product>
