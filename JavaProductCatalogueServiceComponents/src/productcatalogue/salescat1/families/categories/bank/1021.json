@@ -1,7 +1,8 @@
 {
 	"productIdentifier": 1021,
 	"name": "Professional Bundle",
-	"shortDescription": "A private banking experience that emphasizes convenience, quality and flexibility at a fixed monhtly fee. Tailored pricing available for Young professionals and those aged 55 and over.",
+	"shortDescription": "This bundle includes a credit card with an optional overdraft, plus all the private banking perks you deserve - for a fixed monthly fee.",
+	"description": "A private banking experience that emphasises convenience, quality and flexibility at a fixed monthly fee.~This bundle includes a credit card with an optional overdraft, plus all the perks you deserve.~Up to 50% monthly fee rebates are available for those 55 years and older with Nedbank investments.",
 	"productPricing": [
 		{
 			"type": "AdminFee",
@@ -13,74 +14,24 @@
 	],
 	"specialFeature": "No minimum income criteria",
 	"additionalInfo": [
-		"This bundle includes a credit card with an optional overdraft, plus all the perks you deserve. Enjoy a personalised interest rate on your overdraft and up to 55 days interest free credit on your credit card purchases.",
-		"Up to 50% monthly fee rebates are available for those 55 years and older with Nedbank investments."
+		"Professional account with significant transnational value",
+		"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
+		"Nedbank Money app or Online Banking for world-class secure digital banking",
+		"Professional cheque and credit cards offering local and international perks",
+		"Greenbacks Card Swiper subscription",
+		"SMS notifications: eNotes and No-funds alert"
 	],
 	"detailsScreen": {
 		"component-name": "product-details",
 		"version": "2.0"
 	},
 	"salesHighlights": [
-		{
-			"id": "sh1",
-			"description": "A dedicated relationship banker"
-		},
-		{
-			"id": "sh2",
-			"description": "24/7 service"
-		},
-		{
-			"id": "sh3",
-			"description": "Preferential rates"
-		},
-		{
-			"id": "sh4",
-			"description": "Tailored credit"
-		},
-		{
-			"id": "sh5",
-			"description": "International travel reward and lifestyle perks"
-		},
-		{
-			"id": "",
-			"description": "Professional Account with transactional account"
-		},
-		{
-			"id": "",
-			"description": "Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists"
-		},
-		{
-			"id": "",
-			"description": "24/7 telephone and email support"
-		},
-		{
-			"id": "",
-			"description": "Nedbank Money app or online Banking for worldclass secure access to your account whereever you are"
-		},
-		{
-			"id": "",
-			"description": "Greenbacks rewards"
-		},
-		{
-			"id": "",
-			"description": "Professional cheque cards offering local and international perks"
-		},
-		{
-			"id": "",
-			"description": "Professional credit cards offering local and international travel perks"
-		},
-		{
-			"id": "",
-			"description": "eNotes"
-		},
-		{
-			"id": "",
-			"description": "No-funds alert"
-		},
-		{
-			"id": "",
-			"description": "Optional Overdraft"
-		}
+		"sh1~A banking package that works as hard as you do",
+		"sh2~Lifestyle perks for the entire family",
+		"sh3~Unique investments to suit your lifestyle",
+		"sh4~Finance that lets you dream big",
+		"sh5~Ways to bank that suit your hours",
+		"sh6~Tailored offering for young professionals and those over 54"		
 	],
 	"startApplicationScreen": {
 		"isRequired": "false"
@@ -95,15 +46,14 @@
 			"text": "Select",
 			"environments": [
 				"dev",
-				"ete",
-				"qa",
-				"qa_kiosk"
+				"ete"
 			]
 		},
 		{
 			"type": "REDIRECT",
 			"text": "Select",
 			"environments": [
+				"qa",
 				"prod"
 			],
 			"value": "https://www.nedbank.co.za/content/forms/af/nedbank/CallMeBackProfessionalBanking.html"
@@ -171,7 +121,7 @@
 			"minValue": "300000",
 			"maxValue": "9999999",
 			"valueUnit": "ZAR",
-			"description": "There is no minimum income requirements this package is recommended for those earning from R750,000 per annum"
+			"description": "There is no minimum income requirement this package is recommended for those earning from R750,000 per annum"
 		},
 		{
 			"attributeType": "EligibilityRule",
@@ -205,6 +155,13 @@
 			"isComparable": "false",
 			"valueUnit": "bool",
 			"description": "(we can source these for you from most banks)"
+		},
+		{
+			"attributeType": "Display",
+			"attributeName": "Additional documents",
+			"isComparable": "false",
+			"valueUnit": "bool",
+			"description": "for overdraft and credit card applications, additional documents may be required"
 		}
 	],
 	"productFeatures": [
@@ -349,5 +306,15 @@
 			"description": "Tailored financing: 100% loans for home loan applications of less than R5 million and 100% loans **Quick vehicle finance credit decisions via your relationship banker. All credit applications are subject to final credit approval and terms and conditions."
 		}
 	],
-	"lifeCycleStatus": "AVAILABLE"
+	"lifeCycleStatus": "AVAILABLE",
+	"downloadLinks":[
+		{
+			"id": "pricingSchedule",
+			"url": "https://www.nedbank.co.za/content/dam/nedbank/Campaigns/NedbankCurrentAccPRBCharges.pdf"
+		},
+		{
+			"id": "brochure",
+			"url": "https://www.nedbank.co.za/content/dam/nedbank/Campaigns/NedbankCurrentAccPRBCharges.pdf"
+		}
+	]
 }
