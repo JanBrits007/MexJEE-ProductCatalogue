@@ -222,7 +222,7 @@ public class ProductCataloguesDAO {
     	}
 	}
 
-	private String injectUpperAndLowerRates(String hierarchyJSONString) {
+	private String injectUpperAndLowerRatesAsString(String hierarchyJSONString) {
     	mLog.debug("Trace 1");
 		
     	// In case it goes pear shaped, we will return this,
@@ -313,6 +313,116 @@ public class ProductCataloguesDAO {
     		return originalHierarchyJSONString;
     	}
 	}
+
+	private String injectUpperAndLowerRatesAsDecimal(String hierarchyJSONString) {
+    	mLog.debug("Trace 1");
+		
+    	// In case it goes pear shaped, we will return this,
+    	String originalHierarchyJSONString = new String(hierarchyJSONString);
+    	
+    	// Scan the whole string for base rate markers.
+    	try {
+			mLog.debug("Trace 2 >>" + hierarchyJSONString + "<<");
+			
+	        // Handle upper rates.
+			// Find the upper rate markers.
+			// Check whether there are any resource file references to replace.
+			Pattern pattern = Pattern.compile("\\%upperRateDec.*?\\%");
+	        Matcher matcher = pattern.matcher(hierarchyJSONString);
+	        
+	        double rate = 0.0;
+
+	        while (matcher.find()) {
+				mLog.debug("Trace 3");
+
+	        	// Process the next reference to a file.
+		    	String upperRateMarker = matcher.group(0);
+		    	
+				mLog.debug("Trace 4 >>" + upperRateMarker + "<<");
+		    	
+				mLog.debug("Trace 5");
+
+				// Split out the variable rate party.
+				String productID = upperRateMarker.replaceAll(".*\\-", "").trim();
+				productID = productID.replaceAll("\\%", "").trim();
+				mLog.debug("Trace 5.1 >>" + productID + "<<");
+
+				// Get the upper rate for this product ID.
+				rate = getProductSpecificUpperRate(productID);
+				
+		    	// Replace the variable rate in the matched pattern entry.
+				hierarchyJSONString = matcher.replaceFirst("%Dec%" + rate + "%Dec%");
+
+				mLog.debug("Trace 11 >>" + hierarchyJSONString + "<<");
+				
+				// Now replace the string terminators
+				hierarchyJSONString = hierarchyJSONString.replaceAll("\"\\%Dec\\%", "");
+
+				mLog.debug("Trace 12 >>" + hierarchyJSONString + "<<");
+				
+				hierarchyJSONString = hierarchyJSONString.replaceAll("\\%Dec\\%\"", "");
+
+				mLog.debug("Trace 13 >>" + hierarchyJSONString + "<<");
+				
+		    	// Reset the matcher on the updated data.
+        		matcher = pattern.matcher(hierarchyJSONString);
+	        }
+
+	        // Handle lower rates.
+			// Find the lower rate markers.
+			// Check whether there are any resource file references to replace.
+			pattern = Pattern.compile("\\%lowerRateDec.*?\\%");
+	        matcher = pattern.matcher(hierarchyJSONString);
+	        
+	        rate = 0.0;
+
+	        while (matcher.find()) {
+				mLog.debug("Trace 7");
+
+	        	// Process the next reference to a file.
+		    	String lowerRateMarker = matcher.group(0);
+		    	
+				mLog.debug("Trace 8 >>" + lowerRateMarker + "<<");
+		    	
+				mLog.debug("Trace 9");
+
+				// Split out the variable rate party.
+				String productID = lowerRateMarker.replaceAll(".*\\-", "").trim();
+				productID = productID.replaceAll("\\%", "").trim();
+				mLog.debug("Trace 10 >>" + productID + "<<");
+
+				// Get the lower rate for this product ID.
+				rate = getProductSpecificLowerRate(productID);
+				
+		    	// Replace the variable rate in the matched pattern entry.
+				hierarchyJSONString = matcher.replaceFirst("%Dec%" + rate + "%Dec%");
+
+				mLog.debug("Trace 11 >>" + hierarchyJSONString + "<<");
+				
+				// Now replace the string terminators
+				hierarchyJSONString = hierarchyJSONString.replaceAll("\"\\%Dec\\%", "");
+
+				mLog.debug("Trace 12 >>" + hierarchyJSONString + "<<");
+				
+				hierarchyJSONString = hierarchyJSONString.replaceAll("\\%Dec\\%\"", "");
+
+				mLog.debug("Trace 13 >>" + hierarchyJSONString + "<<");
+				
+		    	// Reset the matcher on the updated data.
+        		matcher = pattern.matcher(hierarchyJSONString);
+	        }
+	        
+	        mLog.debug("Trace 14 >>" + hierarchyJSONString + "<<");
+
+	    	return hierarchyJSONString;
+    	}
+    	catch(Exception e) {
+    		e.printStackTrace();
+    		
+    		// It's gone pear shaped.
+    		return originalHierarchyJSONString;
+    	}
+	}
 	
 	public String getProductCatalogueJSONByID(String pProductCatalogueID) throws Exception {
 		mLog.debug("Trace 1 >>" + pProductCatalogueID + "<<");
@@ -335,9 +445,12 @@ public class ProductCataloguesDAO {
 		    	
 		    	// Post process the catalogue to inject all base rate linked variable rate references.
 		    	catalogueString = injectVariableRates(catalogueString);
+
+		    	// Post process the catalogue to inject all the upper and lower rates as decimals.
+		    	catalogueString = injectUpperAndLowerRatesAsDecimal(catalogueString);
 		    	
 		    	// Post process the catalogue to inject all the upper and lower rates.
-		    	catalogueString = injectUpperAndLowerRates(catalogueString);
+		    	catalogueString = injectUpperAndLowerRatesAsString(catalogueString);
 		    	
 				mCatalogueCache.put(pProductCatalogueID, catalogueString);
 		    	
@@ -373,16 +486,30 @@ public class ProductCataloguesDAO {
     	ProductCataloguesDAO dao = new ProductCataloguesDAO();
 
     	try {
+    		String hierarchyJSONString = "\"%Dec%4.95%Dec%\"";
+    		
+    		System.out.println(hierarchyJSONString);
+    		
+			hierarchyJSONString = hierarchyJSONString.replaceAll("\"\\%Dec\\%", "");
+
+    		System.out.println(hierarchyJSONString);
+
+			hierarchyJSONString = hierarchyJSONString.replaceAll("\\%Dec\\%\"", "");
+
+    		System.out.println(hierarchyJSONString);
+    		
+/*    		
 			String hierarchyData = dao.readProductHierarchyFromResourceFile("SALESCAT1BaseRateTest");
 			
 			System.out.println("Trace 1 >>" + hierarchyData + "<<");
 
-			hierarchyData = dao.injectUpperAndLowerRates(hierarchyData);
+			hierarchyData = dao.injectUpperAndLowerRatesAsString(hierarchyData);
+			hierarchyData = dao.injectUpperAndLowerRatesAsDecimal(hierarchyData);
 
 			System.out.println("Trace 2 >>" + hierarchyData + "<<");
 
 //	        System.out.println("Trace 9 >>" + hierarchyData + "<<");
-	        
+*/	        
 /*    		
 			InputStream inputStream = ProductSpecificationsServiceDAO.class.getResourceAsStream("/productcatalogue/SALESCATSelfV2.json");
 			
