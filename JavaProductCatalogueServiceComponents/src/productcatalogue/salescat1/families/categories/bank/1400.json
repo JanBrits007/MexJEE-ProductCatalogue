@@ -1,7 +1,8 @@
 {
 	"productIdentifier": 1400,
 	"name": "Young Professional Bundle",
-	"shortDescription": "Are you just setting out in your career? Get fast-tracked into Professional Banking at 50% of the monthly fee.",
+	"shortDescription": "Exclusively for under 30's with a 4-year qualification, this bundle includes a credit card facility with an optional overdraft, plus all the perks at 50% of the monthly fee.",
+	"description": "If you’re under 30 with a four-year degree, we know you are going places. Get fast-tracked into a private banking experience at a 50% reduced monthly fee.~This bundle includes a credit card facility with an optional overdraft, plus all the perks you deserve.~This bundle includes a credit card facility with an optional overdraft, plus all the perks you deserve.",
 	"productPricing": [{
 		"type": "AdminFee",
 		"amount": 180.00,
@@ -10,25 +11,26 @@
 		"description": "R 180.00 pm"
 	}],
 	"specialFeature": "UNDER 30 WITH A MIN 4 YEAR DEGREE",
-	"salesHighlights": ["Relationship services for the entire family including a dedicated relationship banker, 24/7 call & email support and access to lending, invest and financial planning specialists",
-	"Unlimited swipes, debit orders and ATM withdrawals",
-	"Professional (Platinum Greenbacks) cheque card - contactless enabled. Dual issued with Amex and Visa Signature to ensure wide acceptance as well as to ensure the best lifestyle, travel and reward benefits possible",
-	"American Express® Platinum charge card at 50% discounted annual fee (for the first year only)",
-	"Overdraft facility available - additional fees apply",
-	"eNotes (SMS notifications)",
-	"No-funds alert (low balance notification)",
-	"Online banking subscription / Money™ App",
-	"Greenbacks rewards subscription",
-	"Unlimited access to Bidvest domestic / international departure lounges via your Professional Cheque or Credit Card, when leaving SA",
-	"4 free visits to Bidvest domestic / international departure lounges for kids on active Nedbank 4me or Unlocked.me Student accounts",
-	"10 International lounge visits via Professional Visa Signature Cheque or Credit Card. Emergency concierge services",
-	"Your household automatically qualifies to experience your relationship services",
-	"Get automatic travel insurance (for medical emergencies) when paying with your Professional Banking Credit Card",
-	"Free forex delivery (foreign cash & travel card) at preferential rates",
-	"100% loans for properties less than R1,5 million at tailored rates",
-	"100% loan for vehicle applications less than R400,000",
-	"Platinum investment products at exclusive rates. Direct access to Treasury for investments greater than R250,000",
-	"Free will drafting. Access to holistic estate & retirement planning"],
+	"additionalInfo": [
+		"Professional account with significant transnational value",
+		"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
+		"Nedbank Money app or Online Banking for world-class secure digital banking",
+		"Professional cheque and credit cards offering local and international perks",
+		"Greenbacks Card Swiper subscription",
+		"SMS notifications: eNotes and No-funds alert"
+	],
+	"detailsScreen": {
+		"component-name": "product-details",
+		"version": "2.0"
+	},
+	"salesHighlights": [
+		"sh1~A banking package that works as hard as you do",
+		"sh2~Lifestyle perks for the entire family",
+		"sh3~Unique investments to suit your lifestyle",
+		"sh4~Finance that lets you dream big",
+		"sh5~Ways to bank that suit your hours",
+		"sh6~Tailored offering for young professionals and those over 54"
+	],
 	"redirect": {
 		"shouldRedirect": false,
 		"redirectUrl": null
@@ -59,29 +61,7 @@
 		"minValue": "18",
 		"maxValue": "29",
 		"valueUnit": "year",
-		"description": "From 18 to 29 years old"
-	},
-	{
-		"attributeType": "EligibilityRule",
-		"attributeName": "Income",
-		"minValue": "0",
-		"maxValue": "0",
-		"valueUnit": "ZAR",
-		"description": ""
-	},
-	{
-		"attributeType": "EligibilityRule",
-		"attributeName": "Income",
-		"minValue": "300000",
-		"maxValue": "9999999",
-		"valueUnit": "ZAR",
-		"description": ""
-	},
-	{
-		"attributeType": "EligibilityRule",
-		"attributeName": "Package",
-		"value": "A bundled offering",
-		"valueUnit": "package"
+		"description": "Individuals from 18 to 29 years."
 	},
 	{
 		"attributeType": "EligibilityRule",
@@ -91,10 +71,59 @@
 		"description": "Minimum 4 year degree or 3 years plus Honours (NQF level 8 equivalent)"
 	},
 	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "Income",
+		"minValue": "0",
+		"maxValue": "0",
+		"valueUnit": "ZAR",
+		"description": "There is no minimum income requirement."
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "Package",
+		"value": "A bundled offering",
+		"valueUnit": "Not available to trust, companies or legal entities"
+	},	
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "CreditCheck",
+		"description": "All credit facilities are subject to credit and affordability checks"
+	},
+	{
 		"attributeType": "ConcurrentApplicationLimitationGroup",
 		"attributeName": "ConcurrentApplicationLimitation",
 		"value": "1"
 	}],
+	"requiredDocuments": [
+		{
+			"attributeType": "Display",
+			"attributeName": "Valid South African identity",
+			"isComparable": "false",
+			"valueUnit": "bool",
+			"description": "card/document or passport with valid permit"
+		},
+		{
+			"attributeType": "Display",
+			"attributeName": "3-Months bank statements",
+			"isComparable": "false",
+			"valueUnit": "bool",
+			"description": "(we can source these for you from most banks)"
+		},
+		{
+			"attributeType": "Display",
+			"attributeName": "Additional documents",
+			"isComparable": "false",
+			"valueUnit": "bool",
+			"description": "for overdraft and credit card applications, additional documents may be required"
+		},
+		{
+			"attributeType": "Display",
+			"attributeName": "Education declaration",
+			"isComparable": "false",
+			"valueUnit": "bool",
+			"description": "you will be required to sign a declaration that you have the required level of education to qualify"
+		}
+	],
 	"productFeatures": [{
 		"name": "Age",
 		"displayName": "Age",
@@ -235,5 +264,15 @@
 		"displayName": "Tailored financing",
 		"description": "Tailored financing: 100% loans for home loan applications of less than R1,5 million and 100% loans **for vehicle finance applications of less than R400 000.,All credit applications are subject to final credit approval and terms and conditions."
 	}],
-	"lifeCycleStatus": "AVAILABLE"
+	"lifeCycleStatus": "AVAILABLE",
+	"downloadLinks":[
+		{
+			"id": "pricingSchedule",
+			"url": "https://www.nedbank.co.za/content/dam/nedbank/Campaigns/NedbankCurrentAccPRBCharges.pdf"
+		},
+		{
+			"id": "brochure",
+			"url": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/personal/bank/professional-banking/professional-banking.html"
+		}
+	]
 }
