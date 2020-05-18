@@ -6,6 +6,7 @@
 package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1;
 
 import java.util.List;
+
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
@@ -102,7 +103,22 @@ public interface IChannelProductCatalogue {
         Holder<ResultSetType> resultSet,
         @WebParam(name = "productSpecification", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", mode = WebParam.Mode.OUT)
         Holder<ProductType> product);
-    
+
+   
+    @WebMethod(operationName = "GetProductByArrangementIDs", action = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1/GetProductByArrangementIDs")
+    @RequestWrapper(localName = "GetProductByArrangementIDs", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", className = "za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.GetProductByArrangementIDsType")
+    @ResponseWrapper(localName = "GetProductResponseByArrangementIDs", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", className = "za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.GetProductResponseByArrangementIDsType")
+    public void getProductByArrangementIDs(
+        @WebParam(name = "productIdentifiers", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1")
+        List<Integer> productIdentifiers,
+        @WebParam(name = "arrangementIDs", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1")
+        List<String> arrangementIDs,
+        @WebParam(name = "resultSet", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", mode = WebParam.Mode.OUT)
+        Holder<ResultSetType> resultSet,
+        @WebParam(name = "productSpecifications", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", mode = WebParam.Mode.OUT)
+        Holder<List<ProductType>> productSpecifications);
+
+
     /**
      * CRUD operations for a given product
      * 
@@ -130,5 +146,5 @@ public interface IChannelProductCatalogue {
     public GetProductMappingResponseType getProductMapping(
         @WebParam(name = "GetProductMappingRequest", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", partName = "GetProductMappingRequest")
         GetProductMappingRequestType getProductMappingRequest);
-
+    
 }

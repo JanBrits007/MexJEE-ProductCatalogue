@@ -1,7 +1,8 @@
 {
 	"productIdentifier": 1108,
 	"name": "Professional Pay-As-You-Use",
-	"shortDescription": "A private banking experience that emphasizes convenience, quality and flexibility.",
+	"shortDescription": "Get all the private banking perks you deserve. A monthly maintenance fee applies, then only pay for the transactions you use.",
+	"description": "A private banking experience that emphasises convenience, quality and flexibility on a pay as you use basis.",
 	"productPricing": [{
 		"type": "AdminFee",
 		"amount": 133.00,
@@ -10,25 +11,26 @@
 		"description": "R 133.00 pm"
 	}],
 	"specialFeature": "ADDITIONAL PER-TRANSACTION-CHARGES APPLY",
-	"salesHighlights": ["Relationship services for the entire family including a dedicated relationship banker, 24/7 call & email support and access to lending, invest and financial planning specialists",
-	"Pay per transaction",
-	"Professional (Platimum Greenbacks) cheque card - contactless enabled. Dual issued with Amex and Visa Signature to ensure wide acceptance as well as to ensure the nest lifestyle, travel and reward benefits possible",
-	"Choose from our range of Credit Cards - additional fees apply",
-	"Overdraft facility available - additional fees apply",
-	"eNotes (SMS notifications)",
-	"No-funds alert (low balance notification)",
-	"Online banking subscription (subscription fee applies) / Money™ App",
-	"Greenbacks rewards subscription - additional fees apply",
-	"Unlimited access to Bidvest domestic / international departure lounges via your Professional Cheque Card, when leaving SA",
-	"4 free visits to Bidvest domestic / international departure lounges for kids on active Nedbank 4me or Unlocked.me Student accounts",
-	"Benefits as per the specific credit card chosen",
-	"Your household automatically qualifies to experience your relationship services",
-	"Travel insurance is specific to your chosen Credit Card. See Professional (Platinum Greenbacks) Credit Card as travel insurance is",
-	"Free forex delivery (foreign cash & travel card) at preferenial rates",
-	"100% loans for properties less than R5 million at tailored rates",
-	"Quick vehicle finance credit decisions via your relationship banker",
-	"Platinum investment products at exclusive rates. Direct access to Treasury for investments greater than R250,000",
-	"Free will drafting. Access to holistic estate & retirement planning"],
+	"additionalInfo": [
+		"Professional account",
+		"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
+		"Nedbank Money app or Online Banking for worldclass secure digital banking",
+		"Professional cheque and credit cards offering local and international perks",
+		"Greenbacks Card Swiper subscription",
+		"SMS notifications: eNotes and No-funds alert"
+	],
+	"detailsScreen": {
+		"component-name": "product-details",
+		"version": "2.0"
+	},
+	"salesHighlights": [
+		"sh1~A banking package that works as hard as you do",
+		"sh2~Lifestyle perks for the entire family",
+		"sh3~Unique investments to suit your lifestyle",
+		"sh4~Finance that lets you dream big",
+		"sh5~Ways to bank that suit your hours",
+		"sh6~Tailored offering for young professionals and those over 54"
+	],
 	"redirect": {
 		"shouldRedirect": false,
 		"redirectUrl": null
@@ -48,15 +50,18 @@
 	}],
 	"valueAddedServices": ["Greenbacks (Get rewarded for your everyday spend)",
 	"Free will drafting",
-	"Two free supplementary cards",
-	"Contactless-enabled cards (tap your card and pay)"],
+	"Free supplementary cards",
+	"Contactless-enabled cards (tap your card and pay)",
+	"Debit Order Switching",
+	"MyPocket",
+	"Salary Switching"],
 	"eligibilityRules": [{
 		"attributeType": "EligibilityRule",
 		"attributeName": "Age",
 		"minValue": "26",
 		"maxValue": "56",
 		"valueUnit": "year",
-		"description": "18 years and older"
+		"description": "Individuals over the age of 18 years"
 	},
 	{
 		"attributeType": "EligibilityRule",
@@ -64,25 +69,47 @@
 		"minValue": "750000",
 		"maxValue": "999999999",
 		"valueUnit": "ZAR",
-		"description": ""
+		"description": "There is no minimum income requirement, however this offering is recommended for those earning from R750,000 per annum"
 	},
 	{
 		"attributeType": "EligibilityRule",
 		"attributeName": "Package",
-		"value": "An account only",
-		"valueUnit": "package"
+		"value": "A bundled offering",
+		"valueUnit": "Not available to trust, companies or legal entities"
+	},	
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "CreditCheck",
+		"description": "All credit facilities are subject to credit and affordability checks"
 	},
 	{
 		"attributeType": "ConcurrentApplicationLimitationGroup",
 		"attributeName": "ConcurrentApplicationLimitation",
 		"value": "1"
 	}],
-	"requiredDocuments": [{
-		"attributeType": "Display",
-		"attributeName": "Proof of your identity",
-		"isComparable": "false",
-		"valueUnit": "bool"
-	}],
+	"requiredDocuments": [
+		{
+			"attributeType": "Display",
+			"attributeName": "Valid South African identity",
+			"isComparable": "false",
+			"valueUnit": "bool",
+			"description": "card/document or passport with valid permit"
+		},
+		{
+			"attributeType": "Display",
+			"attributeName": "3-Months bank statements",
+			"isComparable": "false",
+			"valueUnit": "bool",
+			"description": "(we can source these for you from most banks)"
+		},
+		{
+			"attributeType": "Display",
+			"attributeName": "Additional documents",
+			"isComparable": "false",
+			"valueUnit": "bool",
+			"description": "for overdraft and credit card applications, additional documents may be required"
+		}
+	],
 	"productFeatures": [{
 		"name": "Age",
 		"displayName": "Age",
@@ -228,5 +255,15 @@
 		"displayName": "Tailored financing",
 		"description": "Tailored financing: 100% loans for home loan applications of less than R5 million and 100% loans **Quick vehicle finance credit decisions via your relationship banker. All credit applications are subject to final credit approval and terms and conditions."
 	}],
-	"lifeCycleStatus": "AVAILABLE"
+	"lifeCycleStatus": "AVAILABLE",
+	"downloadLinks":[
+		{
+			"id": "pricingSchedule",
+			"url": "https://www.nedbank.co.za/content/dam/nedbank/Campaigns/NedbankCurrentAccPRBCharges.pdf"
+		},
+		{
+			"id": "brochure",
+			"url": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/personal/bank/profession"
+		}
+	]
 }

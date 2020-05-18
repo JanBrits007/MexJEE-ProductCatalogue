@@ -876,7 +876,7 @@
           "name": "eNotes",
           "mandatory": "false",
           "preSelected": "true",
-          "shortDescription": "Included",
+          "shortDescription": "R0.45 per SMS",
           "description": "Keep track of your finances with the eNotes SMS notifications, anytime, anywhere. eNotes keeps you informed about all transactions on your account.",
           "featureGrouping": {
             "featureGroupName": "Loyalty",
@@ -888,9 +888,9 @@
             "fee": [
               {
                 "type": "AdminFee",
-                "description": "FREE",
+                "description": "R0.45 per SMS",
                 "currency": "ZAR",
-                "amount": "0",
+                "amount": "0.45",
                 "frequency": "Monthly"
               }
             ]
@@ -966,7 +966,7 @@
           "name": "No Funds Alert Services",
           "mandatory": "false",
           "preSelected": "true",
-          "shortDescription": "Included",
+          "shortDescription": "R13.00 per SMS",
           "description": "No funds alert is a service that provides a delay of the transactions being returned,due to insufficient funds in the account. Helping you save on unnecessary dishonoured penalty fees.",
           "featureGrouping": {
             "featureGroupName": "Loyalty",
@@ -1460,6 +1460,142 @@
                 {
                   "attributeType": "AvailableAction",
                   "attributeName": "Card Delivery"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "featureIdentifier": "1454",
+          "name": "Greenbacks Rewards Membership",
+          "mandatory": "false",
+          "preSelected": "true",
+          "shortDescription": "R23.00 per month",
+          "description": "Nedbank Greenback member, you can earn Nedbank Greenbacks on all your eligible card spend*, which you can then redeem for a variety of exciting rewards.",
+          "featureGrouping": {
+            "featureGroupName": "Loyalty",
+            "featureGroupRuleForProduct": "Optional"
+          },
+          "featureType": "BoltOn",
+          "referenceProductID": "-1",
+          "featurePricing": {
+            "fee": [
+              {
+                "type": "AdminFee",
+                "description": "R23.00 per month",
+                "currency": "ZAR",
+                "amount": "23.00",
+                "frequency": "Monthly"
+              }
+            ]
+          },
+          "featureFulfilment": [
+            {
+              "channel": "selfServiceWeb",
+              "fulfilmentType": "setting",
+              "fulfilmentInputSetting1": "N/A",
+              "fulfilmentInputSetting2": "N/A"
+            },
+            {
+              "channel": "staffAssisted",
+              "fulfilmentType": "setting",
+              "fulfilmentInputSetting1": "N/A",
+              "fulfilmentInputSetting2": "N/A"
+            }
+          ],
+          "featureDisplayAdditionalInformationWidget": "No",
+          "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+          "featureDisplayPosition": "VAS",
+          "featureAttributeGroup": [
+            {
+              "attributeGroupName": "SystemRelated",
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "True"
+              }
+            },
+            {
+              "attributeGroupName": "coreProvisioningParameters",
+              "featureAttributes": [
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "FeatureCode",
+                  "valueUnit": "string",
+                  "value": "ThisisthesFeaturecode"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "false"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "legacyProductID",
+                  "valueUnit": "string",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "attributeGroupName": "placeholder-Fullstructure",
+              "featureAttributes": {
+                "attributeType": "type",
+                "attributeName": "name",
+                "minValue": "1",
+                "maxValue": "2",
+                "valueUnit": "text",
+                "value": "some value"
+              }
+            }
+          ]
+        },
+        {
+          "featureIdentifier": "1387",
+          "name": "Amex Card",
+          "mandatory": "false",
+          "preSelected": "true",
+          "shortDescription": "",
+          "description": "Accelerate your Greenbacks rewards with the Amex Card",
+          "featureDisplayAdditionalInformationWidget": "No",
+          "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+          "featureDisplayPosition": "VAS",
+          "referenceProductID": "1454",
+          "featurePricing": {
+            "fee": [
+              {
+                "type": "AdminFee",
+                "description": "Available",
+                "currency": "ZAR",
+                "amount": "0",
+                "frequency": "Monthly"
+              }
+            ]
+          },
+          "featureAttributeGroup": [
+            {
+              "attributeGroupName": "SystemRelated",
+              "featureAttributes": {
+                "attributeType": "Flag",
+                "attributeName": "StraightThroughProcess",
+                "value": "true"
+              }
+            },
+            {
+              "attributeGroupName": "coreProvisioningParameters",
+              "featureAttributes": [
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "LoanGroupingCode",
+                  "valueUnit": "PER",
+                  "value": "PER"
+                },
+                {
+                  "attributeType": "coreProvisioningParameter",
+                  "attributeName": "provisionInBranch",
+                  "valueUnit": "boolean",
+                  "value": "false"
                 }
               ]
             }

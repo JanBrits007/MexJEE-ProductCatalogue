@@ -199,7 +199,12 @@
 		<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
 		<productAttributes>
 			<attributeType>boolean</attributeType>
-			<attributeName>requiresProofOfIncome</attributeName>
+			<attributeName>requiresDEAStatement</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>requiresSourcePaylslip</attributeName>
 			<value>true</value>
 		</productAttributes>
 		<productAttributes>
@@ -267,6 +272,16 @@
 			<attributeName>GatherDocumentsLiaisonTeam</attributeName>
 			<value>LiaisonTeam</value>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>bool</attributeType>
+			<attributeName>FinalCaseQualityAssuranceRequired</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>bool</attributeType>
+			<attributeName>FinalCaseQualityAssuranceTeam</attributeName>
+			<value>CreditCardFinalAssessmentVerificationTeam</value>
+		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>productCodeMappings</attributeGroupName><!-- Are these required -->
@@ -313,11 +328,11 @@
 		<attributeGroupName>CreditDetails</attributeGroupName>
 		<productAttributes>
 			<attributeName>minimumCreditAvaliableZAR</attributeName>
-			<value>1000</value>
+			<value>2000</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeName>maximumCreditAvaliableZAR</attributeName>
-			<value>250000</value>
+			<value>200000</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -451,6 +466,31 @@
 				<attributeType>productATMLimit</attributeType>
 				<attributeName>ATM_Limit</attributeName>
 				<value>2000</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>monthlyServiceFeeFrequency</attributeType>
+				<attributeName>Monthly_Service_Fee_Frequency</attributeName>
+				<value>Monthly</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>monthlyCreditFacilityServiceFeeFrequency</attributeType>
+				<attributeName>Monthly_Credit_Facility_Service_Fee_Frequency</attributeName>
+				<value>Monthly</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>initiationFeeFrequency</attributeType>
+				<attributeName>Initiation_Fee_Frequency</attributeName>
+				<value>Revolving</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>numberOfInstallments</attributeType>
+				<attributeName>Number_Of_Installments</attributeName>
+				<value>Revolving</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>minimumRepaymentPercentage</attributeType>
+				<attributeName>Minimum_Repayment_Percentage</attributeName>
+				<value>5</value>
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
@@ -691,6 +731,16 @@
 			<featureAttributes>
 				<attributeType>DocTemplateName</attributeType>
 				<attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+	    <featureAttributeGroup>
+		    <attributeGroupName>EligibilityRules</attributeGroupName>
+			<featureAttributes>
+				<attributeType>EligibilityRule</attributeType>
+				<attributeName>Age</attributeName>
+				<minValue>18</minValue>
+				<maxValue>64</maxValue>
+				<valueUnit>year</valueUnit>
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>

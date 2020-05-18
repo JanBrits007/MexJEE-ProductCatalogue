@@ -2,11 +2,13 @@
 	"productIdentifier": 1473,
 	"name": "Nedbank Tax Free Fixed Deposit",
 	"shortDescription": "The Nedbank Tax Free Fixed Deposit provides you with an opportunity to invest your money for 12 months and enjoy the proceeds, tax free.",
-	"productPricing": [{
-		"type": "InterestRate",
-		"value": 6.00,
-		"description": "6.00% pa"
-	}],
+	"productPricing": [
+		{
+		  "type": "InterestRate",
+		  "value": "%upperRateDec-1473%",
+		  "description": "%upperRate-1473%% pa"
+		}
+	  ],  
 	"specialFeature": "12 Months",
 	"salesHighlights": ["Minimum investment amount - R1000",
 	"Minimum investment period - 12 Months",
@@ -27,8 +29,7 @@
 	{
 		"type": "REDIRECT",
 		"text": "Select",
-		"environments": ["prod"],
-		"value": "https://www.nedbank.co.za/content/forms/af/cards/nedbank-credit-card-application.html/apply/check?cardType=Nedbank&formChannel=CR"
+		"value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
 	},
 	{
 		"type": "DETAIL",
@@ -41,7 +42,7 @@
 	"productFeatures": [{
 		"name": "Maximuminterestrate",
 		"displayName": "Maximum interest rate",
-		"description": "up to 6.00%"
+		"description": "up to %upperRate-1473%%"
 	},
 	{
 		"name": "Investmentterm",

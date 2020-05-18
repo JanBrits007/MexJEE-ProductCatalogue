@@ -2,11 +2,13 @@
 	"productIdentifier": 1360,
 	"name": "MoneyTrader",
 	"shortDescription": "The Nedbank MoneyTrader is a money market investment account offering highly competitive rates that are linked to money market conditions.",
-	"productPricing": [{
-		"type": "InterestRate",
-		"value": 4.25,
-		"description": "4.25% pa"
-	}],
+	"productPricing": [
+		{
+		  "type": "InterestRate",
+		  "value": "%upperRateDec-1360%",
+		  "description": "%upperRate-1360%% pa"
+		}
+	  ],  
 	"specialFeature": "24 hours",
 	"salesHighlights": ["Minimum investment amount - R50 000",
 	"Minimum investment period - 24 hours",
@@ -27,8 +29,7 @@
 	{
 		"type": "REDIRECT",
 		"text": "Select",
-		"environments": ["prod"],
-		"value": "https://www.nedbank.co.za/content/forms/af/cards/nedbank-credit-card-application.html/apply/check?cardType=Nedbank&formChannel=CR"
+		"value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
 	},
 	{
 		"type": "DETAIL",
@@ -41,7 +42,7 @@
 	"productFeatures": [{
 		"name": "Maximuminterestrate",
 		"displayName": "Maximum interest rate",
-		"description": "up to 4.25%"
+		"description": "up to %upperRate-1360%%"
 	},
 	{
 		"name": "Investmentterm",
