@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>BPMX</groupId>
+  <artifactId>bpmexjee-productcataloguecache</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <scm.project.repo>bpmexjee-productcataloguecache</scm.project.repo>
+  </properties>
+
+  <parent>
+  	<groupId>za.co.nedbank.cr</groupId>
+  	<artifactId>cr-maven-parent</artifactId>
+  	<version>1.15.0</version>
+  </parent>
+
+    <scm>
+        <connection>scm:git:${scm.url}/${scm.project}/${scm.project.repo}.git</connection>
+        <url>${scm.url}/${scm.project}3/${scm.project.repo}</url>
+        <developerConnection>scm:git:${scm.url}/${scm.project}/${scm.project.repo}.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+  
+  <dependencies>
+	  <dependency>
+		<groupId>BPMX</groupId>
+		<artifactId>JavaBusinessCaseManagement</artifactId>
+	  </dependency>
+	  <dependency>
+		<groupId>BPMX</groupId>
+		<artifactId>JavaCommon</artifactId>
+	  </dependency>
+	  <dependency>
+		<groupId>BPMX</groupId>
+		<artifactId>JavaSystemConfigurator</artifactId>
+	  </dependency>
+	  
+	<!-- Note that all library dependencies should be defined without a version as the version and scope is specified in the parent-bom pom -->
+	<!-- Custom JARS jar, web, ejb and client modules -->
+	<!-- Add custom libraries here eg.
+	<dependency>
+		<groupId>BPMX</groupId>
+		<artifactId>CR1Common</artifactId>
+	</dependency>
+	-->  
+	  
+	  
+    <!-- 3rd party JARS for jar, web, ejb and client modules -->
+	<!-- Add the 3rd party libraries here eg.
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+    </dependency>
+	-->
+
+    <!-- WAS JARS -->
+	<!-- Add the WAS libraries here for jar, web, ejb and client modules eg.
+    <dependency>
+      <groupId>com.ibm.websphere</groupId>
+      <artifactId>com.ibm.jaxws.thinclient_8.5.0</artifactId>
+    </dependency>
+	-->
+    </dependencies>
+  
+  <!-- Add modules that need to be built and included in the ear file. Starting with the jar modules, then ejb, then web and lastly sys eg.-->
+  <modules>
+    <module>WebProductCatalogueServiceComponents</module>
+    <module>SysProductCatalogueServiceComponents</module>
+	<module>JavaProductCatalogueServiceComponents</module>
+  </modules>
+  
+</project>

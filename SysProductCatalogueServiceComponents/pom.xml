@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>BPMX</groupId>
+  <artifactId><!--Type the SYS module's name in here eg. SysEntitlementAuthorisation --></artifactId>
+  <packaging>ear</packaging>
+
+	<parent>
+		<groupId>BPMX</groupId>
+		<artifactId>bpmexjee-productcataloguecache</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>  
+  
+  <build>
+  <finalName>SysProductCatalogueServiceComponents</finalName>
+    <plugins> 
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-ear-plugin</artifactId>
+		<version>${maven.ear.plugin.version}</version>
+		<configuration>
+			<defaultLibBundleDir>lib</defaultLibBundleDir>
+			<skinnyWars>true</skinnyWars>
+			<finalName>SysProductCatalogueServiceComponents</finalName>
+			<modules>
+				<!-- add modules that need to be included in the ear here --> 
+				<webModule>
+					<groupId>BPMX</groupId>
+					<artifactId>WebProductCatalogueServiceComponents</artifactId>
+					<bundleFileName>WebProductCatalogueServiceComponents.war</bundleFileName>
+				</webModule>
+			</modules>
+		</configuration>
+	</plugin>
+    </plugins>
+  </build>
+
+ <dependencies>
+ <!-- Add the jar, war and ejb dependencies here eg. -->
+  <dependency>
+	<groupId>BPMX</groupId>
+	<artifactId>WebProductCatalogueServiceComponents</artifactId>
+    <type>war</type>
+    <version>${project.parent.version}</version>
+  </dependency>
+  <dependency>
+    <groupId>BPMX</groupId>
+    <artifactId>JavaProductCatalogueServiceComponents</artifactId>
+  </dependency>
+  </dependencies>
+</project>
