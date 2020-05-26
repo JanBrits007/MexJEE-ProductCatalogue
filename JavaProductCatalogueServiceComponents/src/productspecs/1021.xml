@@ -5,7 +5,7 @@
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Compliance</attributeType>
-         <attributeName>BureauCheckConsent</attributeName>
+         <attributeName>NotUnderCreditAdministrationV2</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -49,7 +49,7 @@
          <minValue>18</minValue>
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>be 18 years or older</description>
+         <description>be at least 18 years old.</description>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -160,7 +160,7 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
-         <value>5</value>
+         <value>5-10</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -180,7 +180,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|ActivateProductsGatherProductDetails|FinalizeFrontOfficeInteraction</value>
+         <value>VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|ActivateProductsGatherProductDetails|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -195,7 +195,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|ActivateProductsGatherProductDetails=Customisation|FinalizeFrontOfficeInteraction=Customisation</value>
+         <value>VerifyIdentity=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|ActivateProductsGatherProductDetails=Customisation|FinalizeFrontOfficeInteraction=Customisation</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>

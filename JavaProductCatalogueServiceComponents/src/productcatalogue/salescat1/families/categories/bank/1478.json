@@ -1,8 +1,8 @@
 {
-	"productIdentifier": 1021,
-	"name": "Professional Bundle",
-	"shortDescription": "This bundle includes a credit card with an optional overdraft, plus all the private banking perks you deserve - for a fixed monthly fee.",
-	"description": "A private banking experience that emphasises convenience, quality and flexibility at a fixed monthly fee.~This bundle includes a credit card with an optional overdraft, plus all the perks you deserve.~Up to 50% monthly fee rebates are available for those 55 years and older with Nedbank investments.",
+	"productIdentifier": 1478,
+	"name": "Professional One",
+	"shortDescription": "This bundle includes one account that pays you interest and one facility with up to 40-days interest free credit, plus all the private banking perks you deserve - for a fixed monthly fee.",
+	"description": "A private banking experience that emphasises convenience, quality and flexibility at a fixed monthly fee.~This bundle includes one account that pays you interest and one credit facility at a personalised interest rate with up to 40-days interest free, plus all the perks you deserve.Up to 50% monthly fee rebates for those 55 year and older with Nedbank investments.",
 	"productPricing": [
 		{
 			"type": "AdminFee",
@@ -14,10 +14,11 @@
 	],
 	"specialFeature": "No minimum income criteria",
 	"additionalInfo": [
-		"Professional account with significant transnational value",
-		"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
+		"Professional ONE account with significant transnational value and earn 0,75% interest on your positive balances",
+        "A credit facility (minimum R10,000) with up to 40-days interest free",
+        "Professional credit cards with local and international travel and lifestyle benefits",
+        "Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
 		"Nedbank Money app or Online Banking for world-class secure digital banking",
-		"Professional cheque and credit cards offering local and international perks",
 		"Greenbacks Card Swiper subscription",
 		"SMS notifications: eNotes and No-funds alert"
 	],
@@ -40,65 +41,19 @@
 		"shouldRedirect": false,
 		"redirectUrl": null
 	},
-	"actions": [
-		{
-			"type": "SELECT",
-			"text": "Select",
-			"environments": [
-				"dev",
-				"ete"
-			]
-		},
-		{
-			"type": "REDIRECT",
-			"text": "Select",
-			"environments": [
-				"qa",
-				"prod"
-			],
-			"value": "https://www.nedbank.co.za/content/forms/af/nedbank/CallMeBackProfessionalBanking.html"
-		},
-		{
-			"type": "DETAIL",
-			"text": "Details"
-		},
-		{
-			"type": "COMPARE",
-			"text": "Compare"
-		}
-	],
-	"applicationSteps": [
-		{
-			"index": 1,
-			"name": "Authenticate",
-			"Description": "Register to log in with your Nedbank ID."
-		},
-		{
-			"index": 2,
-			"name": "Product setup",
-			"Description": "Setup your product to suit your needs."
-		},
-		{
-			"index": 3,
-			"name": "About you",
-			"Description": "Tell us more details about you."
-		},
-		{
-			"index": 4,
-			"name": "Credit info",
-			"Description": "Only required if you need a credit facility."
-		},
-		{
-			"index": 5,
-			"name": "Finalisation",
-			"Description": "Upload documents and accept some T&Cs."
-		},
-		{
-			"index": 6,
-			"name": "Customisation",
-			"Description": "Choose your banker and card delivery."
-		}
-	],
+    "actions": [{
+		"type": "REDIRECT",
+		"text": "Select",
+		"value": "https://www.nedbank.co.za/content/forms/af/nedbank/CallMeBackProfessionalBanking.html"
+	},
+	{
+		"type": "DETAIL",
+		"text": "Details"
+	},
+	{
+		"type": "COMPARE",
+		"text": "Compare"
+	}],	
 	"valueAddedServices": ["Greenbacks (Get rewarded for your everyday spend)",
 	"Free will drafting",
 	"Free supplementary cards",
@@ -121,7 +76,7 @@
 			"minValue": "300000",
 			"maxValue": "9999999",
 			"valueUnit": "ZAR",
-			"description": "There is no minimum income requirement this package is recommended for those earning from R750,000 per annum"
+			"description": "There is no minimum income requirement, however this offering is recommended for those earning from R750,000 per annum"
 		},
 		{
 			"attributeType": "EligibilityRule",
@@ -133,7 +88,7 @@
 		{
 			"attributeType": "EligibilityRule",
 			"attributeName": "CreditCheck",
-			"description": "All credit facilities are subject to credit and affordability checks"
+			"description": "This bundle is subject to the approval of a minimum R10,000 credit facility. All credit facilities are subject to credit and affordability checks"
 		},
 		{
 			"attributeType": "ConcurrentApplicationLimitationGroup",
@@ -151,7 +106,7 @@
 		},
 		{
 			"attributeType": "Display",
-			"attributeName": "3-Months bank statements",
+			"attributeName": "3-Months bank statements or letter of appointment/contract",
 			"isComparable": "false",
 			"valueUnit": "bool",
 			"description": "(we can source these for you from most banks)"
@@ -162,6 +117,13 @@
 			"isComparable": "false",
 			"valueUnit": "bool",
 			"description": "for overdraft and credit card applications, additional documents may be required"
+        },
+        {
+			"attributeType": "Display",
+			"attributeName": "Education declaration",
+			"isComparable": "false",
+			"valueUnit": "bool",
+			"description": "You will be required to sign a declaration that you have the required level of education to qualify"
 		}
 	],
 	"productFeatures": [
@@ -310,11 +272,11 @@
 	"downloadLinks":[
 		{
 			"id": "pricingSchedule",
-			"url": "https://www.nedbank.co.za/content/dam/nedbank/Campaigns/NedbankCurrentAccPRBCharges.pdf"
+			"url":"https://www.nedbank.co.za/content/dam/nedbank/Campaigns/NedbankCurrentAccPRBCharges.pdf"
 		},
 		{
 			"id": "brochure",
-			"url": "https://www.nedbank.co.za/content/dam/nedbank/Campaigns/NedbankCurrentAccPRBCharges.pdf"
+			"url": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/personal/bank/professional-banking/professional-banking.html"
 		}
 	]
 }
