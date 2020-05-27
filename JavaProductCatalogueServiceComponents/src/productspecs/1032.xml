@@ -290,6 +290,11 @@
 			<attributeName>FinalCaseQualityAssuranceTeam</attributeName>
 			<value>CreditCardFinalAssessmentVerificationTeam</value>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>BPMCARDOFFER</attributeName>
+			<value>BPMCARDROLE</value>
+		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
@@ -510,6 +515,11 @@
 				<attributeName>Number_Of_Installments</attributeName>
 				<value>Revolving</value>
 			</featureAttributes>
+			<featureAttributes>
+				<attributeType>minimumRepaymentPercentage</attributeType>
+				<attributeName>Minimum_Repayment_Percentage</attributeName>
+				<value>5</value>
+			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
 	<features>
@@ -628,6 +638,135 @@
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
+    <features>
+		<featureIdentifier>1333</featureIdentifier>
+		<name>SHOP card</name>
+		<mandatory>false</mandatory>
+		<preSelected>true</preSelected>
+		<shortDescription>Great news! We've made it quick and easy to redeem all the Greenbacks you've earned with your very own SHOP card</shortDescription>
+		<description>Accelerate your Greenbacks rewards into cash with the SHOP Card</description>
+		<featureGrouping>
+			<featureGroupName>Loyalty</featureGroupName>
+			<featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
+		</featureGrouping>
+		<featureType>BoltOn</featureType>
+		<referenceProductID>-1</referenceProductID>
+		<featureFulfilment>			
+			<channel>selfServiceWeb</channel>
+			<fulfilmentType>setting</fulfilmentType>
+			<fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+			<fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+		</featureFulfilment>
+		<featureFulfilment>
+			<channel>staffAssisted</channel>
+			<fulfilmentType>setting</fulfilmentType>
+			<fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+			<fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+		</featureFulfilment>
+		<featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+		<featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+		<featureDisplayPosition>VAS</featureDisplayPosition>
+		<featureAttributeGroup>
+			<attributeGroupName>SystemRelated</attributeGroupName>
+			<featureAttributes>
+				<attributeType>Flag</attributeType>
+				<attributeName>StraightThroughProcess</attributeName>
+				<value>True</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+			<featureAttributes>
+				<attributeType>type</attributeType>
+				<attributeName>name</attributeName>							
+				<minValue>1</minValue>						
+				<maxValue>2</maxValue>
+				<valueUnit>text</valueUnit>
+				<value>some value</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>					
+			<attributeGroupName>coreProvisioningParameters</attributeGroupName>					
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSProdCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>CRD</value>
+			</featureAttributes>
+			<featureAttributes>							
+				<attributeType>coreProvisioningParameter</attributeType>							
+				<attributeName>CAMSCtlAdId</attributeName>							
+				<valueUnit>PER</valueUnit>							
+				<value>C1</value>						
+			</featureAttributes>					
+			<featureAttributes>							
+				<attributeType>coreProvisioningParameter</attributeType>							
+				<attributeName>CAMSRelCd</attributeName>							
+				<valueUnit>PER</valueUnit>							
+				<value>PRI</value>						
+			</featureAttributes>					
+			<featureAttributes>							
+				<attributeType>coreProvisioningParameter</attributeType>							
+				<attributeName>CAMSSCtlSlTnPgCd</attributeName>							
+				<valueUnit>PER</valueUnit>							
+				<value>6563</value>						
+			</featureAttributes>					
+			<featureAttributes>							
+				<attributeType>coreProvisioningParameter</attributeType>							
+				<attributeName>CAMSCredLnAmt</attributeName>							
+				<valueUnit>PER</valueUnit>							
+				<value>0</value>						
+			</featureAttributes>					
+			<featureAttributes>							
+				<attributeType>coreProvisioningParameter</attributeType>							
+				<attributeName>CAMSPayMethod</attributeName>							
+				<valueUnit>PER</valueUnit>							
+				<value>MAN</value>						
+			</featureAttributes>					
+			<featureAttributes>							
+				<attributeType>coreProvisioningParameter</attributeType>							
+				<attributeName>CAMSPlasticType</attributeName>							
+				<valueUnit>PER</valueUnit>							
+				<value>AG6</value>						
+			</featureAttributes>					
+			<featureAttributes>							
+				<attributeType>coreProvisioningParameter</attributeType>							
+				<attributeName>CAMSCrdStock</attributeName>							
+				<valueUnit>PER</valueUnit>							
+				<value>AS6</value>						
+			</featureAttributes>					
+			<featureAttributes>							
+				<attributeType>coreProvisioningParameter</attributeType>							
+				<attributeName>CAMSActType</attributeName>							
+				<valueUnit>PER</valueUnit>							
+				<value>PRI</value>						
+			</featureAttributes>					
+			<featureAttributes>							
+				<attributeType>coreProvisioningParameter</attributeType>							
+				<attributeName>CAMSATrRegistrationNbr</attributeName>							
+				<valueUnit>PER</valueUnit>							
+				<value>194905</value>                 
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>		
+				<attributeName>provisionInBranch</attributeName>
+				<valueUnit>boolean</valueUnit>
+				<value>false</value>      
+            </featureAttributes>
+            <featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSLangCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>ENG</value>
+            </featureAttributes>
+            <featureAttributes> 
+                <attributeType>coreProvisioningParameter</attributeType>    
+                <attributeName>CAMSSolicitationCode</attributeName>
+                <valueUnit>PER</valueUnit>    
+                <value>7032</value>
+            </featureAttributes>
+       </featureAttributeGroup>
+    </features> 
 	<features>
 		<featureIdentifier>1400</featureIdentifier>
 		<name>Affinity Rewards</name>
@@ -749,6 +888,16 @@
 			<featureAttributes>
 				<attributeType>DocTemplateName</attributeType>
 				<attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+		    <attributeGroupName>EligibilityRules</attributeGroupName>
+			<featureAttributes>
+				<attributeType>EligibilityRule</attributeType>
+				<attributeName>Age</attributeName>
+				<minValue>18</minValue>
+				<maxValue>64</maxValue>
+				<valueUnit>year</valueUnit>
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
