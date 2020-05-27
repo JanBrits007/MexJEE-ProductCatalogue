@@ -46,6 +46,27 @@
             <valueUnit>year</valueUnit>
             <description>be 18 years or older</description>
         </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>EligibleSegments</attributeName>
+            <isComparable>false</isComparable>
+            <Value>200~201|200~226</Value>
+            <valueUnit>string</valueUnit>
+            <description>Exclusive to Nedbank Personal Relationship Banking Clients</description>
+        </productAttributes> 
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>DecisioningControl</attributeGroupName>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>ComponentSupportsDeclineReasons</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>EnforceSegmentValidationRules</attributeName>
+            <value>true</value>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
