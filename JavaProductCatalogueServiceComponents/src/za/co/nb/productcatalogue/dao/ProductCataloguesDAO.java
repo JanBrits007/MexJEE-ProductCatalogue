@@ -4,11 +4,15 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import javax.xml.ws.Holder;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -17,12 +21,13 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 import za.co.nb.system.config.dao.SystemConfiguratorDAO;
 import za.co.nb.system.config.environment.Environment;
+import za.co.nb.system.pml.service.client.ProductOfferInformationServiceClient;
 
 public class ProductCataloguesDAO {
 
 	private final Log mLog = LogFactory.getLog(getClass());
 
-	private static Map<String, String> mCatalogueCache = new HashMap<String, String>();
+	private static Map<String, CachedCatalogueDetails> mCatalogueCache = new HashMap<String, CachedCatalogueDetails>();
 	
 	public String readProductHierarchyFromResourceFile(String productCatalogueID) throws Exception {
     	mLog.debug("Trace 1 >>" + productCatalogueID + "<<");
@@ -98,16 +103,26 @@ public class ProductCataloguesDAO {
 	private double getProductSpecificUpperRate(String productID) throws Exception {
     	mLog.debug("Trace 1");
 
-    	SystemConfiguratorDAO dao = new SystemConfiguratorDAO();
-    	Environment.InvestmentsRatesMap investmentRatesMap =  dao.getEnvironment().INVESTMENTS_RATES_TABLES;
+/*    	SystemConfiguratorDAO dao = new SystemConfiguratorDAO();
+*/    	ProductOfferInformationServiceClient service = new ProductOfferInformationServiceClient();
+
+    	//replace this line with my service.
+    	//Environment.InvestmentsRatesMap investmentRatesMap =  dao.getEnvironment().INVESTMENTS_RATES_TABLES;
+		double investmentRatesMap;		
+    	Long investmentRates = Long.valueOf(productID);
+    	BigInteger convertedProductID = BigInteger.valueOf(investmentRates);
+    	Holder<BigInteger> productIdentifier = new Holder<BigInteger>();
+    	productIdentifier.value = convertedProductID;
+    	
+    	investmentRatesMap = service.retrieveProductInterestRates(productIdentifier);
 
     	mLog.debug("Trace 2");
     	
-    	if(investmentRatesMap == null || investmentRatesMap.getValue() == null || investmentRatesMap.getValue().get(productID) == null) {
+    	if(investmentRatesMap == 0) {
     		return 0.00;
     	}
     	
-    	return investmentRatesMap.getValue().get(productID).getUpperLimitRate();
+    	return investmentRatesMap;
 	}
 
 	private double getProductSpecificLowerRate(String productID) throws Exception {
@@ -428,9 +443,10 @@ public class ProductCataloguesDAO {
 		mLog.debug("Trace 1 >>" + pProductCatalogueID + "<<");
 
 		// First check whether the catalogue is in the cache.
-		String cachedCatalogue = mCatalogueCache.get(pProductCatalogueID);
-
-		if(cachedCatalogue == null) {
+		CachedCatalogueDetails cachedCatalogue = mCatalogueCache.get(pProductCatalogueID);
+		Date oneHourAgo = new Date(); 
+		oneHourAgo.setTime(oneHourAgo.getTime() - (60*60*1000));
+		if(cachedCatalogue == null || cachedCatalogue.getCacheDateTime().before(oneHourAgo)) {
 	    	mLog.debug("Trace 2");
 	    	
 			if (pProductCatalogueID.equalsIgnoreCase("all")) {
@@ -451,8 +467,10 @@ public class ProductCataloguesDAO {
 		    	
 		    	// Post process the catalogue to inject all the upper and lower rates.
 		    	catalogueString = injectUpperAndLowerRatesAsString(catalogueString);
-		    	
-				mCatalogueCache.put(pProductCatalogueID, catalogueString);
+		    	cachedCatalogue = new CachedCatalogueDetails();
+		    	cachedCatalogue.setCacheDateTime(new Date());
+		    	cachedCatalogue.setCatalogueContent(catalogueString);
+				mCatalogueCache.put(pProductCatalogueID, cachedCatalogue);
 		    	
 				return catalogueString;
 			}
@@ -460,7 +478,7 @@ public class ProductCataloguesDAO {
 		else {
 	    	mLog.debug("Trace 5");
 			
-	    	return cachedCatalogue;
+	    	return cachedCatalogue.getCatalogueContent();
 		}
 	}
 
@@ -480,6 +498,32 @@ public class ProductCataloguesDAO {
 		mLog.debug("Trace 3 >>" + filename + "<<");
 		
 		return filename;
+	}
+	
+	private class CachedCatalogueDetails {
+	  private String catalogueContent;
+	  private Date cacheDateTime;
+    
+  	public String getCatalogueContent()
+  	  {
+        return catalogueContent;
+      }
+  	
+      public void setCatalogueContent(String catalogueContent)
+      {
+        this.catalogueContent = catalogueContent;
+      }
+      
+      public Date getCacheDateTime()
+      {
+        return cacheDateTime;
+      }
+      
+      public void setCacheDateTime(Date cacheDateTime)
+      {
+        this.cacheDateTime = cacheDateTime;
+      }
+  	  
 	}
 		
     public static void main(String...args) {
@@ -553,6 +597,8 @@ public class ProductCataloguesDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}        
+    
     }
+    
 	
 }
