@@ -23,10 +23,18 @@
         "shouldRedirect": false,
         "redirectUrl": null
     },
-    "actions": [
-        {
+    "actions": [{
+		"type": "SELECT",
+		"text": "Select",
+		"environments": ["dev",
+		"ete",
+		"qa",
+		"qa_kiosk"]
+	},
+       {
             "type": "SELECT_EWCO",
-            "text": "Select"
+            "text": "Select",
+            "environments": ["prod"]
         },
         {
             "type": "DETAIL",
