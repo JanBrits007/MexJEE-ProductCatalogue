@@ -1,0 +1,207 @@
+{
+      "product": [
+            {
+                  "productIdentifier": "1176",
+                  "name": "Overdraft",
+                  "productAttributeGroup": [
+                        {
+                              "attributeGroupName": "EligibilityRules",
+                              "productAttributes": [
+                                    {
+                                          "attributeType": "EligibilityRule",
+                                          "attributeName": "Age",
+                                          "isComparable": "false",
+                                          "minValue": "18",
+                                          "maxValue": "999",
+                                          "valueUnit": "year",
+                                          "description": "18 years or older"
+                                    },
+                                    {
+                                          "attributeType": "EligibilityRule",
+                                          "attributeName": "Income",
+                                          "isComparable": "false",
+                                          "minValue": "3500",
+                                          "maxValue": "99999999",
+                                          "valueUnit": "ZAR",
+                                          "description": "earn a regular monthly income of at least R3 500 per month"
+                                    },
+                                    {
+                                          "attributeType": "EligibilityRule",
+                                          "attributeName": "NaturalPerson",
+                                          "isComparable": "false",
+                                          "value": "true",
+                                          "valueUnit": "bool"
+                                    },
+                                    {
+                                          "attributeType": "EligibilityRule",
+                                          "attributeName": "DebitOrderRepaymentRequired",
+                                          "isComparable": "false",
+                                          "value": "true",
+                                          "valueUnit": "bool"
+                                    },
+                                    {
+                                          "attributeType": "EligibilityRule",
+                                          "attributeName": "CreditApproval",
+                                          "isComparable": "false",
+                                          "value": "true",
+                                          "valueUnit": "bool"
+                                    },
+                                    {
+                                          "attributeType": "EligibilityRule",
+                                          "attributeName": "NotUnderCreditAdministration",
+                                          "isComparable": "false",
+                                          "value": "true",
+                                          "valueUnit": "bool"
+                                    }
+                              ]
+                        },
+                        {
+                              "attributeGroupName": "ProductFeatures",
+                              "productAttributes": [
+                                    {
+                                          "attributeType": "Feature",
+                                          "attributeName": "LoanAmount",
+                                          "isComparable": "true",
+                                          "minValue": "500",
+                                          "maxValue": "300000",
+                                          "valueUnit": "ZAR"
+                                    }
+                              ]
+                        }
+                  ],
+                  "features": [
+                        {
+                              "featureIdentifier": "1014",
+                              "name": "Overdraft",
+                              "mandatory": "false",
+                              "preSelected": "true",
+                              "shortDescription": "Overdraft",
+                              "description": "Detailed description of feature",
+                              "featureGrouping": {
+                                    "featureGroupName": "Loyalty",
+                                    "featureGroupRuleForProduct": "Optional"
+                              },
+                              "featureType": "BoltOn",
+                              "referenceProductID": "-1",
+                              "featurePricing": {
+                                    "fee": [
+                                          {
+                                                "type": "AdminFee",
+                                                "description": "Free",
+                                                "currency": "ZAR",
+                                                "amount": "0",
+                                                "frequency": "Monthly"
+                                          }
+                                    ]
+                              },
+                              "featureFulfilment": [
+                                    {
+                                          "channel": "selfServiceWeb",
+                                          "fulfilmentType": "setting",
+                                          "fulfilmentInputSetting1": "N/A",
+                                          "fulfilmentInputSetting2": "N/A"
+                                    },
+                                    {
+                                          "channel": "staffAssisted",
+                                          "fulfilmentType": "setting",
+                                          "fulfilmentInputSetting1": "N/A",
+                                          "fulfilmentInputSetting2": "N/A"
+                                    }
+                              ],
+                              "featureDisplayAdditionalInformationWidget": "No",
+                              "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+                              "featureDisplayPosition": "Preoffer",
+                              "featureAttributeGroup": [
+                                    {
+                                          "attributeGroupName": "SystemRelated",
+                                          "featureAttributes": [
+                                                {
+                                                      "attributeType": "Flag",
+                                                      "attributeName": "StraightThroughProcess",
+                                                      "value": "True"
+                                                },
+                                                {
+                                                      "attributeType": "Flag",
+                                                      "attributeName": "mandatoryWithBaseProduct",
+                                                      "value": "True"
+                                                }
+                                          ]
+                                    },
+                                    {
+                                          "attributeGroupName": "coreProvisioningParameters",
+                                          "featureAttributes": [
+                                                {
+                                                      "attributeType": "coreProvisioningParameter",
+                                                      "attributeName": "FeatureCode",
+                                                      "valueUnit": "string",
+                                                      "value": "ThisisthesFeaturecode"
+                                                },
+                                                {
+                                                      "attributeType": "coreProvisioningParameter",
+                                                      "attributeName": "provisionInBranch",
+                                                      "valueUnit": "boolean",
+                                                      "value": "true"
+                                                },
+                                                {
+                                                      "attributeType": "coreProvisioningParameter",
+                                                      "attributeName": "legacyProductID",
+                                                      "valueUnit": "string",
+                                                      "value": "1176"
+                                                }
+                                          ]
+                                    },
+                                    {
+                                          "attributeGroupName": "placeholder-Fullstructure",
+                                          "featureAttributes": {
+                                                "attributeType": "type",
+                                                "attributeName": "name",
+                                                "minValue": "1",
+                                                "maxValue": "2",
+                                                "valueUnit": "text",
+                                                "value": "some value"
+                                          }
+                                    },
+                                    {
+                                          "attributeGroupName": "clientInformationRequirement_GenerateOffer",
+                                          "featureAttributes": [
+                                                {
+                                                      "attributeType": "clientInformationRequirement",
+                                                      "attributeName": "MaritalStatus"
+                                                },
+                                                {
+                                                      "attributeType": "clientInformationRequirement",
+                                                      "attributeName": "EmploymentDetails"
+                                                },
+                                                {
+                                                      "attributeType": "clientInformationRequirement",
+                                                      "attributeName": "IncomeDetails"
+                                                },
+                                                {
+                                                      "attributeType": "clientInformationRequirement",
+                                                      "attributeName": "ExpensesBasic"
+                                                }
+                                          ]
+                                    },
+                                    {
+                                          "attributeGroupName": "clientEvidenceRequirement_GatherEvidence",
+                                          "productAttributes": [
+                                                {
+                                                      "attributeType": "Evidence",
+                                                      "attributeName": "3 Months Bank Statements|N/A|CLIENT|PROOFOFINCOME|STATEMENT|3 Months Bank Statements",
+                                                      "isComparable": "false",
+                                                      "valueUnit": "bool"
+                                                },
+                                                {
+                                                      "attributeType": "Evidence",
+                                                      "attributeName": "1 Months Pay Slips|N/A|CLIENT|PROOFOFINCOME|PAYSLIP|1 Months Pay Slips",
+                                                      "isComparable": "false",
+                                                      "valueUnit": "bool"
+                                                }
+                                          ]
+                                    }
+                              ]
+                        }
+                  ]
+            }
+      ]
+}
