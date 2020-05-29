@@ -21,93 +21,96 @@
                       "filterGroupName": "Age",
                       "filterDisplayName": "What is your age?",
                       "filterType": "Range",
-                      "filterItems": [
-                        {
-                          "filterID": 1,
-                          "filterDisplay": "All ages",
-                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-                          "minValue": 0,
-                          "maxValue": 999
-                        },
-                        {
-                          "filterID": 2,
-                          "filterDisplay": "Under 18",
-                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-                          "minValue": 0,
-                          "maxValue": 17
-                        },
-                        {
-                          "filterID": 3,
-                          "filterDisplay": "18 - 25",
-                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-                          "minValue": 18,
-                          "maxValue": 25
-                        },
-                        {
-                          "filterID": 4,
-                          "filterDisplay": "26 - 54",
-                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-                          "minValue": 26,
-                          "maxValue": 54
-                        },
-                        {
-                          "filterID": 5,
-                          "filterDisplay": "Over 55",
-                          "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-                          "minValue": 55,
-                          "maxValue": 999
-                        }
-                      ]
+                      "filterItems": [{
+                        "filterID": 1,
+                        "filterDisplay": "All ages",
+                        "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                        "minValue": 0,
+                        "maxValue": 999999999
+                      },
+                      {
+                        "filterID": 2,
+                        "filterDisplay": "Under 16",
+                        "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                        "minValue": 0,
+                        "maxValue": 15
+                      },
+                      {
+                        "filterID": 3,
+                        "filterDisplay": "16 - 17",
+                        "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                        "minValue": 16,
+                        "maxValue": 17
+                      },
+                      {
+                        "filterID": 4,
+                        "filterDisplay": "18 - 26",
+                        "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                        "minValue": 18,
+                        "maxValue": 26
+                      },
+                      {
+                        "filterID": 5,
+                        "filterDisplay": "27 - 29",
+                        "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                        "minValue": 27,
+                        "maxValue": 29
+                      },
+                      {
+                        "filterID": 6,
+                        "filterDisplay": "Over 30",
+                        "productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+                        "minValue": 30,
+                        "maxValue": 999999999
+                      }]
                     },
                     {
                       "filterGroupID": 2,
                       "filterGroupName": "Income",
                       "filterDisplayName": "How much do you earn per year?",
                       "filterType": "Range",
-                      "filterItems": [
-                        {
-                          "filterID": 1,
-                          "filterDisplay": "All income",
-                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
-                          "minValue": 0,
-                          "maxValue": 9999999
-                        },
-                        {
-                          "filterID": 2,
-                          "filterDisplay": "Student",
-                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
-                          "minValue": 0,
-                          "maxValue": 0
-                        },
-                        {
-                          "filterID": 3,
-                          "filterDisplay": "Less than R120 000",
-                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
-                          "minValue": 1,
-                          "maxValue": 119999
-                        },
-                        {
-                          "filterID": 4,
-                          "filterDisplay": "R120 000 - R300 000",
-                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
-                          "minValue": 120000,
-                          "maxValue": 299999
-                        },
-                        {
-                          "filterID": 5,
-                          "filterDisplay": "R300 000 - R750 000",
-                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
-                          "minValue": 300000,
-                          "maxValue": 749999
-                        },
-                        {
-                          "filterID": 6,
-                          "filterDisplay": "More than R750 000",
-                          "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
-                          "minValue": 750000,
-                          "maxValue": 9999999
-                        }
-                      ]
+                      "filterItems": [{
+                        "filterID": 1,
+                        "filterDisplay": "All income",
+                        "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                        "minValue": 0,
+                        "maxValue": 999999999
+                      },
+                      {
+                        "filterID": 2,
+                        "filterDisplay": "R0 – R35 988",
+                        "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                        "minValue": 0,
+                        "maxValue": 35988
+                      },
+                      {
+                        "filterID": 3,
+                        "filterDisplay": "R36 000 - R120 000",
+                        "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                        "minValue": 36000,
+                        "maxValue": 120000
+                      },
+                      {
+                        "filterID": 4,
+                        "filterDisplay": "R120 001 - R300 000",
+                        "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                        "minValue": 120001,
+                        "maxValue": 300000
+                      },
+                      {
+                        "filterID": 5,
+                        "filterDisplay": "R300 001 - R750 000",
+                        "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                        "minValue": 300001,
+                        "maxValue": 750000
+                      },
+                      {
+                        "filterID": 6,
+                        "filterDisplay": "More than R750 000",
+                        "productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+                        "minValue": 750001,
+                        "maxValue": 999999999
+                      }]
                     },
                     {
                       "filterGroupID": 3,
@@ -350,31 +353,15 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
                           "minValue": "18",
-                          "maxValue": "56",
+                          "maxValue": "999999999",
                           "valueUnit": "year",
                           "description": "18 years and older"
                         },
                         {
                           "attributeType": "EligibilityRule",
-                          "attributeName": "Age",
-                          "minValue": "26",
-                          "maxValue": "54",
-                          "valueUnit": "year",
-                          "description": ""
-                        },
-                        {
-                          "attributeType": "EligibilityRule",
                           "attributeName": "Income",
                           "minValue": "120000",
-                          "maxValue": "9999999",
-                          "valueUnit": "ZAR",
-                          "description": ""
-                        },
-                        {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "Income",
-                          "minValue": "300000",
-                          "maxValue": "749999",
+                          "maxValue": "999999999",
                           "valueUnit": "ZAR",
                           "description": ""
                         },
@@ -600,31 +587,15 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
                           "minValue": "18",
-                          "maxValue": "56",
+                          "maxValue": "999999999",
                           "valueUnit": "year",
                           "description": "18 years and older"
                         },
                         {
                           "attributeType": "EligibilityRule",
-                          "attributeName": "Age",
-                          "minValue": "26",
-                          "maxValue": "54",
-                          "valueUnit": "year",
-                          "description": ""
-                        },
-                        {
-                          "attributeType": "EligibilityRule",
                           "attributeName": "Income",
-                          "minValue": "1",
-                          "maxValue": "749999",
-                          "valueUnit": "ZAR",
-                          "description": ""
-                        },
-                        {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "Income",
-                          "minValue": "120000",
-                          "maxValue": "299999",
+                          "minValue": "36000",
+                          "maxValue": "750000",
                           "valueUnit": "ZAR",
                           "description": ""
                         },
@@ -794,32 +765,16 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
-                          "minValue": "18",
-                          "maxValue": "56",
+                          "minValue": "27",
+                          "maxValue": "999999999",
                           "valueUnit": "year",
                           "description": "18 years and older"
                         },
                         {
                           "attributeType": "EligibilityRule",
-                          "attributeName": "Age",
-                          "minValue": "26",
-                          "maxValue": "54",
-                          "valueUnit": "year",
-                          "description": ""
-                        },
-                        {
-                          "attributeType": "EligibilityRule",
                           "attributeName": "Income",
-                          "minValue": "1",
-                          "maxValue": "749999",
-                          "valueUnit": "ZAR",
-                          "description": ""
-                        },
-                        {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "Income",
-                          "minValue": "120000",
-                          "maxValue": "299999",
+                          "minValue": "0",
+                          "maxValue": "750000",
                           "valueUnit": "ZAR",
                           "description": ""
                         },
@@ -1269,7 +1224,7 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "Income",
                           "minValue": "0",
-                          "maxValue": "299999",
+                          "maxValue": "999999999",
                           "valueUnit": "ZAR",
                           "description": "No minimum income"
                         },
@@ -1486,15 +1441,15 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
                           "minValue": "0",
-                          "maxValue": "17",
+                          "maxValue": "15",
                           "valueUnit": "year",
-                          "description": "Be younger than 18 years"
+                          "description": "Be younger than 16 years"
                         },
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Income",
                           "minValue": "0",
-                          "maxValue": "0",
+                          "maxValue": "999999999",
                           "valueUnit": "ZAR",
                           "description": ""
                         },
@@ -1815,25 +1770,24 @@
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
                           "minValue": "18",
-                          "maxValue": "30",
+                          "maxValue": "29",
                           "valueUnit": "year",
-                          "description": "From 18 to 29 years old"
+                          "description": "Individuals from 18 to 29 years."
+                        },
+                        {
+                          "attributeType": "EligibilityRule",
+                          "attributeName": "Education",
+                          "minValue": "4",
+                          "valueUnit": "year",
+                          "description": "Minimum 4 year degree or 3 years plus Honours (NQF level 8 equivalent)"
                         },
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Income",
-                          "minValue": "0",
-                          "maxValue": "0",
+                          "minValue": "750000",
+                          "maxValue": "999999999",
                           "valueUnit": "ZAR",
-                          "description": ""
-                        },
-                        {
-                          "attributeType": "EligibilityRule",
-                          "attributeName": "Income",
-                          "minValue": "300000",
-                          "maxValue": "9999999",
-                          "valueUnit": "ZAR",
-                          "description": ""
+                          "description": "There is no minimum income requirement."
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -2083,18 +2037,18 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
-                          "minValue": "18",
-                          "maxValue": "999",
+                          "minValue": "27",
+                          "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": "18 years and older"
+                          "description": "Individuals over the age of 18 years"
                         },
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Income",
-                          "minValue": "300000",
-                          "maxValue": "9999999",
+                          "minValue": "750000",
+                          "maxValue": "999999999",
                           "valueUnit": "ZAR",
-                          "description": ""
+                          "description": "There is no minimum income requirement this package is recommended for those earning from R750,000 per annum"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -2322,16 +2276,16 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
-                          "minValue": "18",
-                          "maxValue": "999",
+                          "minValue": "27",
+                          "maxValue": "999999999",
                           "valueUnit": "year",
                           "description": "From 18 to 30 years old"
                         },
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Income",
-                          "minValue": "750001",
-                          "maxValue": "2499999",
+                          "minValue": "0",
+                          "maxValue": "750000",
                           "valueUnit": "ZAR",
                           "description": "Earn between R750 000 and R2 500 000 per annum"
                         },
@@ -2580,10 +2534,10 @@
                         {
                           "attributeType": "EligibilityRule",
                           "attributeName": "Age",
-                          "minValue": "26",
-                          "maxValue": "56",
+                          "minValue": "30",
+                          "maxValue": "999999999",
                           "valueUnit": "year",
-                          "description": "18 years and older"
+                          "description": "Individuals over the age of 18 years"
                         },
                         {
                           "attributeType": "EligibilityRule",
@@ -2591,7 +2545,7 @@
                           "minValue": "750000",
                           "maxValue": "999999999",
                           "valueUnit": "ZAR",
-                          "description": ""
+                          "description": "There is no minimum income requirement, however this offering is recommended for those earning from R750,000 per annum"
                         },
                         {
                           "attributeType": "EligibilityRule",
