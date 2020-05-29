@@ -1,0 +1,86 @@
+{
+	"productIdentifier": 1092,
+	"name": "Unit Trusts",
+	"shortDescription": "Unit Trusts is a diversified, professionally managed portfolio of assets by investing a modest amount of money",
+	"productPricing": [],
+	"productCategory": "NGI",
+	"specialFeature": " ",
+	"salesHighlights": ["A wide range of funds offered by a top-ranked manager",
+	"The average investor does not usually have the necessary time, resources and expertise to manage their own money",
+	"Our select investment managers act as responsible stewards of your hard-earned savings",
+	"Save for a specific goal or time period, but have easy access to your money",
+	"In the event of an emergency, you can access your savings in 48 hours",
+	"Invest in either by debit order or with a lump sum"],
+	"redirect": {
+		"shouldRedirect": false,
+		"redirectUrl": null
+	},
+	"actions": [{
+		"type": "SELECT",
+		"text": "Select",
+		"environments": ["dev",
+		"ete",
+		"qa",
+		"qa_kiosk"]
+	},
+	{
+		"type": "REDIRECT",
+		"text": "Select",
+		"environments": ["prod"],
+		"value": "https://nww.nedgroupinvestments.co.za/content/NGISingleSiteContent/Local/Individual-Investor.html"
+	},
+	{
+		"type": "DETAIL",
+		"text": "Details"
+	},
+	{
+		"type": "COMPARE",
+		"text": "Compare"
+	}],
+	"productFeatures": [{
+		"name": "Ideal investment for",
+		"displayName": "Ideal investment for",
+		"description": "Save for a specific goal or time period, but have easy access to your money"
+	},
+	{
+		"name": "AdditionalDeposits",
+		"displayName": "Additional Deposits",
+		"description": "Yes"
+	},
+	{
+		"name": "AgeRestriction",
+		"displayName": "Age Restriction",
+		"description": "18 Years and older"
+	},
+	{
+		"name": "ElectronicAcces",
+		"displayName": "Electronic Access",
+		"description": "included"
+	}],
+	"eligibilityRules": [{
+		"attributeName": "Period",
+		"attributeType": "EligibilityRule",
+		"maxValue": "999999999",
+		"minValue": "0",
+		"valueUnit": "month"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "Age",
+		"minValue": "0",
+		"maxValue": "999999999",
+		"valueUnit": "year",
+		"description": "18 Years and older"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "InvestStart",
+		"minValue": "1",
+		"maxValue": "999999999",
+		"valueUnit": "ZAR",
+		"description": ""
+	}],
+	"lifeCycleStatus": "AVAILABLE",
+	"calculator": {
+		}
+}
