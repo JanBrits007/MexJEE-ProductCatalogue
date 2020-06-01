@@ -1801,7 +1801,8 @@
 					"Professional credit cards with local and international travel and lifestyle benefits",
 					"Greenbacks rewards",
 					"eNotes",
-					"No-funds alert"
+					"No-funds alert",
+					"Optional: Overdraft"
 				],
 				"eligibilityRules": [
 				  {
@@ -1834,13 +1835,6 @@
 					"valueUnit": "package",
 					"description": "Not available to trust, companies or legal entities"
 				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Education",
-					"minValue": "4",
-					"valueUnit": "year",
-					"description": "Minimum 4 year degree or 3 years plus Honours (NQF level 8 equivalent)"
-					},
 					{
 						"attributeType": "EligibilityRule",
 						"attributeName": "CreditCheck",
@@ -2096,7 +2090,8 @@
 					"Professional credit cards with local and international travel and lifestyle benefits",
 					"Greenbacks rewards",
 					"eNotes",
-					"No-funds alert"
+					"No-funds alert",
+					"Optional: Overdraft"
 				],
 				"eligibilityRules": [
 				  {
@@ -2886,7 +2881,7 @@
 						"minValue": "0",
 						"maxValue": "9999999",
 						"valueUnit": "ZAR",
-						"description": "There is no minimum income requirement, however this bundle is subject to the approval of a minimum R2,000 credit facility. All credit facilities are subject to credit and affordability checks."
+						"description": "There is no minimum income requirement, however this bundle is subject to the approval of a minimum R2,000 credit facility."
 						},
 						{
 						"attributeType": "EligibilityRule",
@@ -2902,6 +2897,11 @@
 						"valueUnit": "year",
 						"description": "Minimum 4 year degree or 3 years plus Honours (NQF level 8 equivalent)"
 						},
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "CreditCheck",
+							"description": "All credit facilities are subject to credit and affordability checks."
+						},						
 						{
 						"attributeType": "ConcurrentApplicationLimitationGroup",
 						"attributeName": "ConcurrentApplicationLimitation",
@@ -3158,7 +3158,12 @@
 							{
 								"attributeType": "EligibilityRule",
 								"attributeName": "CreditCheck",
-								"description": "This bundle is subject to the approval of a minimum R10,000 credit facility. All credit facilities are subject to credit and affordability checks"
+								"description": "All credit facilities are subject to credit and affordability checks."
+							},
+							{
+								"attributeType": "EligibilityRule",
+								"attributeName": "CreditFacility",
+								"description": "This bundle is subject to the approval of a minimum R10,000 credit facility."
 							},							
 							{
 							"attributeType": "ConcurrentApplicationLimitationGroup",
