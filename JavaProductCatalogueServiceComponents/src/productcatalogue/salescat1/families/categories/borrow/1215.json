@@ -1,217 +1,194 @@
 {
-    "productIdentifier": "1215",
-    "name": "Nedbank Small Business Credit Card",
-    "shortDescription": "Gold has never been this rewarding! Enjoy a complimentary monthly Lifestyle Rewards valued at more than your monthly Card fees. Vouchers can be redeemed at NuMetro, Zando and Takealot.com or for airtime across networks. The rewards you want are there for the taking.",
-    "redirect": {
-        "shouldRedirect": true,
-        "redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionCreditCardApplicationForm.html?"
-    },
-    "actions": [
-        {
-            "type": "SELECT",
-            "text": "Select",
-            "environments": [
-                "dev",
-                "ete",
-                "qa",
-                "qa_kiosk"
-            ]
-        },
-        {
-            "type": "REDIRECT",
-            "text": "Select",
-            "environments": [
-                "prod"
-            ],
-            "value": "https://www.nedbank.co.za/content/forms/af/cards/nedbank-credit-card-application.html/apply/check?cardType=Nedbank&formChannel=CR"
-        },
-        {
-            "type": "DETAIL",
-            "text": "Details"
-        },
-        {
-            "type": "COMPARE",
-            "text": "Compare"
-        }
-    ],
-    "productPricing": [
-        {
-            "type": "AdminFee",
-            "amount": 60.00,
-            "frequency": "Monthly",
-            "currency": "ZAR",
-            "description": "R 60.00 pm"
-        }
-    ],
-    "eligibilityRules": [
-        {
-            "attributeType": "EligibilityRuleList",
-            "description": "Is at least 18 years old;"
-        },
-        {
-            "attributeType": "EligibilityRuleList",
-            "description": "Is a South African resident or has a valid work permit;"
-        },
-        {
-            "attributeType": "EligibilityRuleList",
-            "description": "Earns R200 000 or more."
-        }
-    ],
-    "salesHighlights": [
-        "The American Express® Gold Card is perfect for everyday shopping and with its budget facility it is perfect for larger than normal purchases.",
-        "Enjoy a complimentary Lifestyle Reward when you spend R3 500 or more per month on your American Express® Gold Card. Vouchers can be redeemed at NuMetro, Zando, and Takealot.com or for Airtime across networks. To qualify for your monthly lifestyle benefit, keep your account in good standing (i.e. the account may not be in arrears or inactive) and spend at least R3 500 on your account per month your account ( cash withdrawals/transfers excluded). To redeem your benefits, visit Lifestyle Rewards (www.amexlifestyle.co.za) and enter your unique code.",
-        "Receive either a complimentary appetizer, 20% discount on food bills or a complimentary bottle of wine when paying your American Express Gold Card at participating restaurant. Click here for more info on Taste from American Express (link to: https://www.americanexpress.com/uk/network/dining/)",
-        "Exclusive Travel deals such as discounted flights and travel packages brought to you by American Express Travel.",
-        "American Express Vacations where you will receive a complimentary dining experience, spa treatment, resort credit offer or complimentary nights.",
-        "Travel Insurance: Purchase your travel tickets on your Gold Card and you and your family will receive automatic local and international cover for up to R4 million. ",
-        "Discounted car rental services and exclusive benefits at Avis and Hertz."
-    ],
-    "valueAddedServices": [
-        "You can also pay your balance over time. You can choose how much to pay; just pay in full, the minimum amount due, or anything in between - it's that simple.",
-        "A dedicated travel desk to take care of all you travel needs.",
-        "Enjoy remarkable basic worldwide protection for you, your partner, your children and your Supplementary Cardmembers which includes up to R10 million cover.",
-        "Optional Comprehensive Top Cover is also available on all travel.",
-        "Being a Gold Cardmember entitles you to invitations to Amex Experiences events.",
-        "Your American Express® Gold Cardmember entitles you to complimentary Supplementary Cards."
-    ],
-    "additionalFeatures": [
-        {
-            "As an American Express® Cardmember you will be rewarded with one of the following Lifestyle Rewards per month": [
-                "R100 worth of airtime.",
-                "R100 Zando voucher.",
-                "R100 Takealot voucher.",
-                "1 NuMetro movie ticker voucher.",
-                "Bonus MR Points- spend R10 000 within 3 months of opening your account and you will receive 5 000 bonus Membership Rewards points."
-            ],
-            "Enhanced Car Rental": [
-                "Complimentary membership to Avis Preferred Plus where you will receive a free additional driver; guaranteed single vehicle upgrade at airport locations and a free weekend voucher",
-                "Complimentary Hertz Gold Plus Rewards® membership where you will receive up to 1% discount off standard rates; o one car class upgrade on rentals of five or more consecutive days (subject to availability); and a free additional driver."
-            ]
-        }
-    ],
-    "productOnAPageWebURL": "",
-    "productAttributeGroup": [],
-    "productFeatures": [
-        {
-            "name": "fee",
-            "displayName": "Monthly Fee",
-            "description": "From R60.00"
-        },
-        {
-            "name": "income",
-            "displayName": "Income Requirement",
-            "description": "R 200 K PA"
-        },
-        {
-            "name": "repayment",
-            "displayName": "Repayment terms",
-            "description": "For ease and convenience we offer a budget facility for larger than normal purchases which clients can then pay off over 3, 6, 12, 24 or 36 months."
-        },
-        {
-            "name": "cashback",
-            "displayName": "Points or Cashback",
-            "description": "Greenbacks Rewards (optional)"
-        },
-        {
-            "name": "earnrate",
-            "displayName": "Earn Rate",
-            "description": "2 Greenbacks for every R5.00 on Amex card, 1 Greenback for every R5.00 spend on MasterCard card"
-        },
-        {
-            "name": "loyaltyprogram",
-            "displayName": "Loyalty Program",
-            "description": "Membership Rewards (Optional)"
-        },
-        {
-            "name": "internationallounges",
-            "displayName": "International Lounges",
-            "description": "No"
-        },
-        {
-            "name": "companionticket",
-            "displayName": "Companion Ticket",
-            "description": "N/A"
-        },
-        {
-            "name": "prioritypassmembership",
-            "displayName": "Priority Pass Membership",
-            "description": "N/A"
-        },
-        {
-            "name": "localairportlounge",
-            "displayName": "Local Airport Lounge",
-            "description": "N/A"
-        },
-        {
-            "name": "elitetiermemberships",
-            "displayName": "Elite Tier memberships",
-            "description": "N/A"
-        },
-        {
-            "name": "travelservicesdesk",
-            "displayName": "Travel Services Desk",
-            "description": "Online Nedbank Travel Portal with exclusive offers"
-        },
-        {
-            "name": "diningwineanddine",
-            "displayName": "Dining/ Wine & Dine",
-            "description": "No"
-        },
-        {
-            "name": "plusspafitnesscinema",
-            "displayName": "Plus/Spa & Fitness/Cinema",
-            "description": "No"
-        },
-        {
-            "name": "carhirebenefits",
-            "displayName": "Car Hire Benefits",
-            "description": "No"
-        },
-        {
-            "name": "exclusiveeventsplatform",
-            "displayName": "Exclusive Events Platform",
-            "description": "N/A"
-        },
-        {
-            "name": "concierge",
-            "displayName": "Concierge",
-            "description": "No"
-        },
-        {
-            "name": "purchaseprotection",
-            "displayName": "Purchase Protection",
-            "description": "Yes"
-        },
-        {
-            "name": "fraudprotection",
-            "displayName": "Fraud Protection",
-            "description": "Yes"
-        },
-        {
-            "name": "freecardreplacement",
-            "displayName": "Free Card Replacement",
-            "description": "No"
-        }
-    ],
-    "lifeCycleStatus": "AVAILABLE",
-    "requiredDocuments": [
-        {
-            "attributeType": "Display",
-            "attributeName": "South African bar-coded identity card or document, or passport and work permit.",
-            "isComparable": "false",
-            "valueUnit": "bool"
-        },
-        {
-            "attributeType": "Display",
-            "attributeName": "Proof of income (latest three months' bank statements reflecting income or latest three months' payslips).",
-            "isComparable": "false",
-            "valueUnit": "bool"
-        },
-        {
-            "attributeType": "Display",
-            "attributeName": "For self-employed clients the above documents as well as a letter from accountant/financial manager confirming income.",
-            "isComparable": "false",
-            "valueUnit": "bool"
-        }
-    ]
+	"productIdentifier": "1215",
+	"name": "Small Business Credit Card",
+	"shortDescription": "Unlock convenience and flexibility with your Nedbank Gold Credit Card, accepted at over 25 million stores in South Africa and internationally. If you are seeking to be rewarded for your everyday spend, choose to add Greenbacks Rewards to your credit card or support a worthy cause through our Affinities Programme at no cost to you.",
+	"redirect": {
+		"shouldRedirect": true,
+		"redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionCreditCardApplicationForm.html?"
+	},
+	"actions": [{
+		"type": "SELECT",
+		"text": "Select",
+		"environments": ["dev",
+		"ete",
+		"qa",
+		"qa_kiosk"]
+	},
+	{
+		"type": "REDIRECT",
+		"text": "Select",
+		"environments": ["prod"],
+		"value": "https://www.nedbank.co.za/content/forms/af/cards/nedbank-credit-card-application.html/apply/check?cardType=Nedbank&formChannel=CR"
+	},
+	{
+		"type": "DETAIL",
+		"text": "Details"
+	},
+	{
+		"type": "COMPARE",
+		"text": "Compare"
+	}],
+	"productPricing": [{
+		"type": "AdminFee",
+		"amount": 32.00,
+		"frequency": "Monthly",
+		"currency": "ZAR",
+		"description": "R 32.00 pm"
+	}],
+	"eligibilityRules": [{
+		"attributeType": "EligibilityRuleList",
+		"description": "is at least 18 years old;"
+	},
+	{
+		"attributeType": "EligibilityRuleList",
+		"description": "has a good credit rating;"
+	},
+	{
+		"attributeType": "EligibilityRuleList",
+		"description": "is a South African resident;"
+	},
+	{
+		"attributeType": "EligibilityRuleList",
+		"description": "has an annual income of R60 000"
+	}],
+	"salesHighlights": ["Fabulous travel discounts at <a target='_blank' href='http://www.nedbanktraveloffers.co.za'>nedbanktraveloffers.co.za</a>.",
+	"Automatic basic travel insurance cover of up to R2 000 000.",
+	"Up to 55 days' interest-free credit.",
+	"No fees on point-of-sale purchases.",
+	"Free supplementary cards for your spouse or partner.",
+	"Quick and easy contactless payment functionality.",
+	"Optional Credit life cover to ensure financial security and peace of mind in the event of death, disability, critical illness or retrenchment.",
+	"Option to join the Greenbacks Rewards Programme.",
+	"Option to join the Nedbank Affinity Programme."],
+	"valueAddedServices": [{
+		"Rewards": ["Greenbacks Rewards is easy to understand and easy to use.  Nedbank Greenbacks members earn Greenbacks on all eligible spend*. You earn unlimited Greenbacks 2X faster with the Greenbacks American Express® Credit Card and there are no expiration dates, caps or tiers.",
+		"You will earn accelerated Greenbacks with the Greenbacks American Express® credit card - 2 Greenbacks for every R5 eligible spend and 1 Greenbacks for every R5 eligible spend on the Nedbank MasterCard credit card.",
+		"You get to decide how you spend your rewards! Choose to Shop Invest or Donate your rewards. You can also spend your Greenbacks like cash with a FREE Nedbank Greenbacks SHOP Card, withdraw your Greenbacks as cash from any ATM or use your SHOP CARD internationally. The choice is entirely yours."],
+		"Affinities": ["Through the Nedbank Affinity Programme you can choose to support the development of the arts, the preservation and conservation of the environment, sports development or help orphaned and vulnerable children.",
+		["Green Affinity - Helping you support the environment at no cost to you",
+		"Children's Affinity - Helping the needy children of South Africa at no cost to you",
+		"Sport Affinity - Make sport development happen at no cost to you"]],
+		"Insurance": ["Optional Top-up travel insurance available"]
+	}],
+	"productOnAPageWebURL": "",
+	"productAttributeGroup": [],
+	"productFeatures": [{
+		"name": "fee",
+		"displayName": "Monthly Fee",
+		"description": "From R30.00"
+	},
+	{
+		"name": "income",
+		"displayName": "Income Requirement",
+		"description": "R100k pa"
+	},
+	{
+		"name": "repayment",
+		"displayName": "Repayment terms",
+		"description": "For ease and convenience we offer a budget facility for larger than normal purchases which clients can then pay off over 3, 6, 12, 24 or 36 months."
+	},
+	{
+		"name": "cashback",
+		"displayName": "Points or Cashback",
+		"description": "Greenbacks Rewards (optional)"
+	},
+	{
+		"name": "earnrate",
+		"displayName": "Earn Rate",
+		"description": "2 Greenbacks for every R5.00 on Amex card, 1 Greenback for every R5.00 spend on MasterCard card"
+	},
+	{
+		"name": "loyaltyprogram",
+		"displayName": "Loyalty Program",
+		"description": "Greenbacks Rewards (Optional)"
+	},
+	{
+		"name": "internationallounges",
+		"displayName": "International Lounges",
+		"description": "No"
+	},
+	{
+		"name": "companionticket",
+		"displayName": "Companion Ticket",
+		"description": "N/A"
+	},
+	{
+		"name": "prioritypassmembership",
+		"displayName": "Priority Pass Membership",
+		"description": "N/A"
+	},
+	{
+		"name": "localairportlounge",
+		"displayName": "Local Airport Lounge",
+		"description": "N/A"
+	},
+	{
+		"name": "elitetiermemberships",
+		"displayName": "Elite Tier memberships",
+		"description": "N/A"
+	},
+	{
+		"name": "travelservicesdesk",
+		"displayName": "Travel Services Desk",
+		"description": "Online Nedbank Travel Portal with exclusive offers"
+	},
+	{
+		"name": "diningwineanddine",
+		"displayName": "Dining/ Wine & Dine",
+		"description": "No"
+	},
+	{
+		"name": "plusspafitnesscinema",
+		"displayName": "Plus/Spa & Fitness/Cinema",
+		"description": "No"
+	},
+	{
+		"name": "carhirebenefits",
+		"displayName": "Car Hire Benefits",
+		"description": "No"
+	},
+	{
+		"name": "exclusiveeventsplatform",
+		"displayName": "Exclusive Events Platform",
+		"description": "N/A"
+	},
+	{
+		"name": "concierge",
+		"displayName": "Concierge",
+		"description": "No"
+	},
+	{
+		"name": "purchaseprotection",
+		"displayName": "Purchase Protection",
+		"description": "Yes"
+	},
+	{
+		"name": "fraudprotection",
+		"displayName": "Fraud Protection",
+		"description": "Yes"
+	},
+	{
+		"name": "freecardreplacement",
+		"displayName": "Free Card Replacement",
+		"description": "No"
+	}],
+	"lifeCycleStatus": "AVAILABLE",
+	"requiredDocuments": [{
+		"attributeType": "Display",
+		"attributeName": "South African bar-coded identity card or document, or passport and work permit.",
+		"isComparable": "false",
+		"valueUnit": "bool"
+	},
+	{
+		"attributeType": "Display",
+		"attributeName": "Proof of income (latest three months' bank statements reflecting income or latest three months' payslips).",
+		"isComparable": "false",
+		"valueUnit": "bool"
+	},
+	{
+		"attributeType": "Display",
+		"attributeName": "For self-employed clients the above documents as well as a letter from accountant/financial manager confirming income.",
+		"isComparable": "false",
+		"valueUnit": "bool"
+	}]
 }
