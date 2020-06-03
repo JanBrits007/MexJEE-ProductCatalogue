@@ -2,30 +2,29 @@
     "product": [
         {
             "productIdentifier": "1028",
-            "name": "The American Express Platinum Card",
-            "shortDescription": "Unlock convenience and flexibility with your The American Express Platinum Card, accepted at over 25 million stores in South Africa and internationally.",
+            "name": "The American Express® Platinum Card",
+            "shortDescription": "Enjoy a host of unmatched travel and lifestyle benefits. Get exclusive airline benefits and access to over 1 000 Airport Lounges around the world.",
             "productPricing": [
                 {
                     "type": "AdminFee",
-                    "amount": "60",
-                    "frequency": "monthly",
+                    "amount": "4450",
+                    "frequency": "annually",
                     "currency": "ZAR",
-                    "description": "R 60 pm"
+                    "description": "R 4450.00 pa"
                 }
             ],
             "featuresAndBenefits": [
                 {
                     "shortDescription": "",
                     "benefits": [
-                        "Up to 55 days' interest-free credit",
-                        "Enjoy zero transaction fees",
-                        "Free supplementary cards for your spouse or partner",
-                        "Quick and easy contactless payment functionality",
-                        "Automatic basic travel insurance cover of up to R2 000 000",
-                        "For ease and convenience we offer a budget facility for larger than normal purchases which clients can then pay off over 3, 6, 12, 24 or 36 months",
-                        "Optional Credit card insurance to ensure financial security and peace of mind in the event of death, disability, critical illness or retrenchment",
-                        "Option to join the Membership Rewards Programme",
-                        "Option to join the Nedbank Affinity Programme"
+                        "Enjoy privilege and prestige with the American Express® Platinum Card that offers a variety of exclusive features and added benefits.",
+                        "Receive either a complimentary appetizer, 20% discount on food bills or a complimentary bottle of wine when paying your American Express Gold Card at participating restaurant. Click here for more info (link to https://www.americanexpress.com/uk/network/dining/)",
+                        "Discounted fares on multiple airlines including Emirates, Etihad and Qatar Airways.",
+                        "Complimentary access to over 1 000 airport lounges worldwide.",
+                        "Your dedicated Platinum Concierge service to take care of your travel and lifestyle plans, dinner reservations and tickets to sold out shows.",
+                        "Complimentary membership to the Avis Presidents Club and the Hertz Gold Plus Rewards Programme.",
+                        "Extra value worldwide across various Hotel Programmes including Fine Hotels and Resorts and The Hotel Collection.",
+                        "Automatic enrolment to the Membership Reward™ Programme where you will earn 1,5 MR points for every R5 of eligible spend."
                     ]
                 }
             ],
@@ -193,7 +192,7 @@
                             "minValue": "3000",
                             "maxValue": "99999999",
                             "valueUnit": "ZAR",
-                            "description": "earn more than R200 000 annually."
+                            "description": "earn more than R750 000 annually."
                         },
                         {
                             "attributeType": "EligibilityRule",
@@ -465,8 +464,8 @@
                                 "type": "AdminFee",
                                 "description": "Free",
                                 "currency": "ZAR",
-                                "amount": "0",
-                                "frequency": "Monthly"
+                                "amount": "4500",
+                                "frequency": "annually"
                             }
                         ]
                     },
@@ -664,12 +663,12 @@
                     ]
                 },
                 {
-                    "featureIdentifier": "9999",
-                    "name": "Nedbank Membership Rewards",
-                    "mandatory": "false",
+                    "featureIdentifier": "1334",
+                    "name": "Membership Rewards™",
+                    "mandatory": "true",
                     "preSelected": "true",
-                    "shortDescription": "By joining our Membership Rewards Programme you will earn rewards when you use your credit card or one of our other transactional accounts.",
-                    "description": "Detailed description of feature",
+                    "shortDescription": "Earn points on virtually all the spend on your card and enjoy a range of fantastic rewards.",
+                    "description": "Please note you will receive an Membership Rewards™ Redemption card in order to spend you rewards.",
                     "featureGrouping": {
                         "featureGroupName": "Loyalty",
                         "featureGroupRuleForProduct": "Optional"
@@ -752,14 +751,63 @@
                 {
                     "featureIdentifier": "1465",
                     "name": "Redemption Card",
-                    "mandatory": "false",
+                    "mandatory": "true",
                     "preSelected": "true",
-                    "shortDescription": "Great news! We've made it quick and easy to redeem all the Membership Rewards you've earned with your very own Redemption Card",
-                    "description": "Accelerate your Membership Rewards into cash with the SHOP Card",
+                    "shortDescription": "What is the Redemption card?",
+                    "description": "We' have made it quick and easy to redeem and spend all the rewards you've earned using the Redemption card.",
                     "featureDisplayAdditionalInformationWidget": "No",
                     "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
                     "featureDisplayPosition": "MembershipRewards",
-                    "referenceProductID": "9999",
+                    "referenceProductID": "1334",
+                    "featurePricing": {
+                        "fee": [
+                            {
+                                "type": "AdminFee",
+                                "currency": "ZAR",
+                                "amount": "0",
+                                "frequency": "Monthly"
+                            }
+                        ]
+                    },
+                    "featureAttributeGroup": [
+                        {
+                            "attributeGroupName": "SystemRelated",
+                            "featureAttributes": {
+                                "attributeType": "Flag",
+                                "attributeName": "StraightThroughProcess",
+                                "value": "true"
+                            }
+                        },
+                        {
+                            "attributeGroupName": "coreProvisioningParameters",
+                            "featureAttributes": [
+                                {
+                                    "attributeType": "coreProvisioningParameter",
+                                    "attributeName": "LoanGroupingCode",
+                                    "valueUnit": "PER",
+                                    "value": "PER"
+                                },
+                                {
+                                    "attributeType": "coreProvisioningParameter",
+                                    "attributeName": "provisionInBranch",
+                                    "valueUnit": "boolean",
+                                    "value": "false"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "featureIdentifier": "9999",
+                    "name": "Priority Pass",
+                    "mandatory": "true",
+                    "preSelected": "true",
+                    "shortDescription": "As part of your travel privileges, we will issue you with a Priority Pass Card, which allows you complimentary access to over 1000 Priority Pass Lounges worldwide.",
+                    "description": "We' have made it quick and easy to redeem and spend all the rewards you've earned using the Redemption card.",
+                    "featureDisplayAdditionalInformationWidget": "No",
+                    "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+                    "featureDisplayPosition": "MembershipRewards",
+                    "referenceProductID": "-1",
                     "featurePricing": {
                         "fee": [
                             {
