@@ -12,99 +12,102 @@
 			"name": "Accounts",
 			"description": "Transactional banking products",
 			"filterGroups": [
-			  {
-				"filterGroupID": 1,
-				"filterGroupName": "Age",
-				"filterDisplayName": "What is your age?",
-				"filterType": "Range",
-				"filterItems": [
-				  {
-					"filterID": 1,
-					"filterDisplay": "All ages",
-					"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-					"minValue": 0,
-					"maxValue": 999
-				  },
-				  {
-					"filterID": 2,
-					"filterDisplay": "Under 18",
-					"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-					"minValue": 0,
-					"maxValue": 17
-				  },
-				  {
-					"filterID": 3,
-					"filterDisplay": "18 - 25",
-					"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-					"minValue": 18,
-					"maxValue": 25
-				  },
-				  {
-					"filterID": 4,
-					"filterDisplay": "26 - 54",
-					"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-					"minValue": 26,
-					"maxValue": 54
-				  },
-				  {
-					"filterID": 5,
-					"filterDisplay": "Over 55",
-					"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-					"minValue": 55,
-					"maxValue": 999
-				  }
-				]
-			  },
-			  {
-				"filterGroupID": 2,
-				"filterGroupName": "Income",
-				"filterDisplayName": "How much do you earn per year?",
-				"filterType": "Range",
-				"filterItems": [
-				  {
-					"filterID": 1,
-					"filterDisplay": "All income",
-					"productAttribute": "productAttributes[?(@.attributeName==='Income')]",
-					"minValue": 0,
-					"maxValue": 9999999
-				  },
-				  {
-					"filterID": 2,
-					"filterDisplay": "Student",
-					"productAttribute": "productAttributes[?(@.attributeName==='Income')]",
-					"minValue": 0,
-					"maxValue": 0
-				  },
-				  {
-					"filterID": 3,
-					"filterDisplay": "Less than R120 000",
-					"productAttribute": "productAttributes[?(@.attributeName==='Income')]",
-					"minValue": 1,
-					"maxValue": 119999
-				  },
-				  {
-					"filterID": 4,
-					"filterDisplay": "R120 000 - R300 000",
-					"productAttribute": "productAttributes[?(@.attributeName==='Income')]",
-					"minValue": 120000,
-					"maxValue": 299999
-				  },
-				  {
-					"filterID": 5,
-					"filterDisplay": "R300 000 - R750 000",
-					"productAttribute": "productAttributes[?(@.attributeName==='Income')]",
-					"minValue": 300000,
-					"maxValue": 749999
-				  },
-				  {
-					"filterID": 6,
-					"filterDisplay": "More than R750 000",
-					"productAttribute": "productAttributes[?(@.attributeName==='Income')]",
-					"minValue": 750000,
-					"maxValue": 9999999
-				  }
-				]
-			  },
+				{
+					"filterGroupID": 1,
+					"filterGroupName": "Age",
+					"filterDisplayName": "What is your age?",
+					"filterType": "Range",
+					"filterItems": [{
+						"filterID": 1,
+						"filterDisplay": "All ages",
+						"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+						"minValue": 0,
+						"maxValue": 999
+					},
+					{
+						"filterID": 2,
+						"filterDisplay": "Under 16",
+						"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+						"minValue": 0,
+						"maxValue": 15
+					},
+					{
+						"filterID": 3,
+						"filterDisplay": "16 - 17",
+						"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+						"minValue": 16,
+						"maxValue": 17
+					},
+					{
+						"filterID": 4,
+						"filterDisplay": "18 - 26",
+						"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+						"minValue": 18,
+						"maxValue": 26
+					},
+					{
+						"filterID": 5,
+						"filterDisplay": "27 - 29",
+						"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+						"minValue": 27,
+						"maxValue": 29
+					},
+					{
+						"filterID": 6,
+						"filterDisplay": "Over 30",
+						"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
+						"minValue": 30,
+						"maxValue": 999
+					}]
+				},
+				{
+					"filterGroupID": 2,
+					"filterGroupName": "Income",
+					"filterDisplayName": "How much do you earn per year?",
+					"filterType": "Range",
+					"filterItems": [{
+						"filterID": 1,
+						"filterDisplay": "All income",
+						"productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+						"minValue": 0,
+						"maxValue": 999999999
+					},
+					{
+						"filterID": 2,
+						"filterDisplay": "R0 – R35 988",
+						"productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+						"minValue": 0,
+						"maxValue": 35988
+					},
+					{
+						"filterID": 3,
+						"filterDisplay": "R36 000 - R120 000",
+						"productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+						"minValue": 36000,
+						"maxValue": 120000
+					},
+					{
+						"filterID": 4,
+						"filterDisplay": "R120 001 - R300 000",
+						"productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+						"minValue": 120001,
+						"maxValue": 300000
+					},
+					{
+						"filterID": 5,
+						"filterDisplay": "R300 001 - R750 000",
+						"productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+						"minValue": 300001,
+						"maxValue": 750000
+					},
+					{
+						"filterID": 6,
+						"filterDisplay": "More than R750 000",
+						"productAttribute": "productAttributes[?(@.attributeName==='Income')]",
+						"minValue": 750001,
+						"maxValue": 999999999
+					}]
+				},
 			  {
 				"filterGroupID": 3,
 				"filterGroupName": "Package",
