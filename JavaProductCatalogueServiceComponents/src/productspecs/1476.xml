@@ -51,9 +51,9 @@
          <attributeName>Age</attributeName>
          <isComparable>false</isComparable>
          <minValue>18</minValue>
-         <maxValue>999</maxValue>
+         <maxValue>29</maxValue>
          <valueUnit>year</valueUnit>
-         <description>be at least 18 years old.</description>
+         <description>be at least 18 years old and no older than 29 years old.</description>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -157,6 +157,11 @@
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+      <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>requiresElgiblityScoringAtIntents</attributeName>
+          <value>intent 0</value>
+      </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
@@ -402,6 +407,11 @@
          <attributeType>boolean</attributeType>
          <attributeName>ComponentSupportsDeclineReasons</attributeName>
          <value>true</value>
+      </productAttributes>
+      <productAttributes>
+          <attributeType>boolean</attributeType>
+          <attributeName>EnforceAgeValidationRules</attributeName>
+          <value>true</value>
       </productAttributes>
    </productAttributeGroup>
    <features>
