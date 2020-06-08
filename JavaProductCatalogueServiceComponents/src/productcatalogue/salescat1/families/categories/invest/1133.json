@@ -126,21 +126,38 @@
 		"displayName": "Fixed rate?",
 		"description": "Yes"
 	}],
-	"eligibilityRules": [{
+	"eligibilityRules": [	
+	{
 		"attributeType": "EligibilityRule",
 		"attributeName": "Age",
 		"minValue": "0",
-		"maxValue": "999999999",
+		"maxValue": "54",
+		"valueUnit": "year",
+		"description": "No age restrictions"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "Age",
+		"minValue": "55",
+		"maxValue": "999",
 		"valueUnit": "year",
 		"description": "No age restrictions"
 	},
 	{
 		"attributeType": "EligibilityRule",
 		"attributeName": "Period",
-		"minValue": "1",
-		"maxValue": "12",
+		"minValue": "2",
+		"maxValue": "11",
 		"valueUnit": "Period",
 		"description": "Exclusive to Nedbank Professional Banking clients"
+	},
+	{
+		"attributeName": "Period",
+		"attributeType": "EligibilityRule",
+		"description": "",
+		"maxValue": "60",
+		"minValue": "12",
+		"valueUnit": "month"
 	},
 	{
 		"attributeType": "EligibilityRule",
