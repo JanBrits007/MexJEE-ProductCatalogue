@@ -1,0 +1,174 @@
+{
+	"productIdentifier": 1473,
+	"name": "Nedbank Tax Free Fixed Deposit",
+	"shortDescription": "The Nedbank Tax Free Fixed Deposit provides you with an opportunity to invest your money for 12 months and enjoy the proceeds, tax free.",
+	"productPricing": [
+		{
+		  "type": "InterestRate",
+		  "value": "%upperRateDec-1473%",
+		  "description": "%upperRate-1473%% pa"
+		}
+	  ],  
+	"specialFeature": "12 Months",
+	"salesHighlights": ["Minimum investment amount - R1000",
+	"Minimum investment period - 12 Months",
+	"No monthly fees or commissions",
+	"Capital guaranteed"],
+	"redirect": {
+		"shouldRedirect": false,
+		"redirectUrl": null
+	},
+	"actions": [{
+		"type": "SELECT",
+		"text": "Select",
+		"environments": ["dev",
+		"ete",
+		"qa",
+		"qa_kiosk"]
+	},
+	{
+		"type": "REDIRECT",
+		"text": "Select",
+		"environments": ["prod"],
+		"value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+	},
+	{
+		"type": "DETAIL",
+		"text": "Details"
+	},
+	{
+		"type": "COMPARE",
+		"text": "Compare"
+	}],
+	"productFeatures": [{
+		"name": "Maximuminterestrate",
+		"displayName": "Maximum interest rate",
+		"description": "up to %upperRate-1473%%"
+	},
+	{
+		"name": "Investmentterm",
+		"displayName": "Investment term",
+		"description": "12 Months"
+	},
+	{
+		"name": "MinimumInvestmentAmount",
+		"displayName": "Minimum Investment Amount",
+		"description": "R 1000"
+	},
+	{
+		"name": "MinimumInvestmentPeriod",
+		"displayName": "Minimum Investment Period",
+		"description": "12 Months"
+	},
+	{
+		"name": "TermvsNotice",
+		"displayName": "Term vs Notice",
+		"description": "Term"
+	},
+	{
+		"name": "Freeaccesspriortoterm",
+		"displayName": "Free access prior to term",
+		"description": "No"
+	},
+	{
+		"name": "AdditionalDeposits",
+		"displayName": "Additional Deposits",
+		"description": "No"
+	},
+	{
+		"name": "AgeRestriction",
+		"displayName": "Age Restriction",
+		"description": "N/A."
+	},
+	{
+		"name": "Interestpaymentfrequency",
+		"displayName": "Interest payment frequency",
+		"description": "Monthly, quarterly, half-yearly or on expiry"
+	},
+	{
+		"name": "ElectronicAcces",
+		"displayName": "Electronic Access",
+		"description": "included"
+	},
+	{
+		"name": "Stoporders",
+		"displayName": "Stop orders",
+		"description": "No"
+	},
+	{
+		"name": "Statements",
+		"displayName": "Statements",
+		"description": "No"
+	},
+	{
+		"name": "Fees",
+		"displayName": "Fees",
+		"description": "No"
+	},
+	{
+		"name": "Investmentterm2",
+		"displayName": "Investment term",
+		"description": "12 months"
+	},
+	{
+		"name": "Withdrawals",
+		"displayName": "Withdrawals",
+		"description": "None"
+	},
+	{
+		"name": "Additionaldeposits",
+		"displayName": "Additional deposits",
+		"description": "None"
+	},
+	{
+		"name": "Fixedrate",
+		"displayName": "Fixed rate?",
+		"description": "Yes"
+	}],
+	"eligibilityRules": [{
+		"attributeType": "EligibilityRule",
+		"attributeName": "Age",
+		"minValue": "0",
+		"maxValue": "54",
+		"valueUnit": "year",
+		"description": "No age restrictions"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "Age",
+		"minValue": "55",
+		"maxValue": "999",
+		"valueUnit": "year",
+		"description": ""
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "InvestStart",
+		"minValue": "1000",
+		"maxValue": "99999999",
+		"valueUnit": "ZAR",
+		"description": ""
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "InvestMonthly",
+		"minValue": "99999999",
+		"maxValue": "99999999",
+		"valueUnit": "ZAR",
+		"description": ""
+	},
+	{
+		"attributeName": "Period",
+		"attributeType": "EligibilityRule",
+		"description": "Individual clients only",
+		"maxValue": "12",
+		"minValue": "12",
+		"valueUnit": "months"
+	}],
+	"lifeCycleStatus": "AVAILABLE",
+	"calculator": {
+		"term": 12,
+		"notice": 0,
+		"productType": 55
+	}
+}

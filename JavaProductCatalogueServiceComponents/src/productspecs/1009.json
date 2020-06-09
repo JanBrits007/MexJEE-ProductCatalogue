@@ -1,0 +1,236 @@
+{
+  "product": {
+    "productIdentifier": 1009,
+    "name": "Credit Card",
+    "shortDescription": "A personal Nedbank Credit Card.",
+    "productPricing": {
+      "fee": {
+        "type": "AdminFee",
+        "description": "Admin Fee",
+        "currency": "ZAR",
+        "amount": 50,
+        "frequency": "Monthly"
+      }
+    },
+    "salesHighlights": [
+      "Free Swipes",
+      "5 Free withdrawals",
+      "Free EFTs facility"
+    ],
+    "productOnAPageWebURL": "http://someurl.com/somecontentid1.html",
+    "productAttributeGroup": [
+      {
+        "attributeGroupName": "EligibilityRules",
+        "productAttributes": [
+          {
+            "attributeType": "EligibilityRule",
+            "attributeName": "Age",
+            "isComparable": "false",
+            "minValue": "18",
+            "maxValue": "999",
+            "valueUnit": "year"
+          },
+          {
+            "attributeType": "EligibilityRule",
+            "attributeName": "Income",
+            "isComparable": "false",
+            "minValue": "3000",
+            "maxValue": "99999999",
+            "valueUnit": "ZAR"
+          },
+          {
+            "attributeType": "EligibilityRule",
+            "attributeName": "NaturalPerson",
+            "isComparable": "false",
+            "valueUnit": "bool"
+          },
+          {
+            "attributeType": "EligibilityRule",
+            "attributeName": "DebitOrderRepaymentRequired",
+            "isComparable": "false",
+            "valueUnit": "bool"
+          },
+          {
+            "attributeType": "EligibilityRule",
+            "attributeName": "CreditApproval",
+            "isComparable": "false",
+            "valueUnit": "bool"
+          }
+        ]
+      },
+      {
+        "attributeGroupName": "ProductFeatures",
+        "productAttributes": [
+          {
+            "attributeType": "Feature",
+            "attributeName": "LoanAmount",
+            "isComparable": "true",
+            "minValue": "1000",
+            "maxValue": "200000",
+            "valueUnit": "ZAR"
+          },
+          {
+            "attributeType": "Feature",
+            "attributeName": "RepaymentPeriod",
+            "isComparable": "false",
+            "minValue": "12",
+            "maxValue": "60",
+            "valueUnit": "month"
+          },
+          {
+            "attributeType": "Feature",
+            "attributeName": "PaidIntoBankAcount",
+            "isComparable": "false",
+            "valueUnit": "bool"
+          }
+        ]
+      },
+      {
+        "attributeGroupName": "RequiredCompliance",
+        "productAttributes": {
+          "attributeType": "Evidence",
+          "attributeName": "FICA",
+          "isComparable": "false",
+          "valueUnit": "bool"
+        }
+      },
+      {
+        "attributeGroupName": "SystemRelated",
+        "productAttributes": {
+          "attributeType": "Flag",
+          "attributeName": "StraightThroughProcess"
+        }
+      },
+      {
+        "attributeGroupName": "productCodeMappings",
+        "productAttributes": {
+          "attributeType": "productCodeMapping",
+          "attributeName": "MDM_ProductCode"
+        }
+      },
+      {
+        "attributeGroupName": "clientInformationRequirement_GenerateOffer",
+        "productAttributes": [
+          {
+            "attributeType": "clientInformationRequirement",
+            "attributeName": "AdditionalPersonalInformation"
+          },
+          {
+            "attributeType": "clientInformationRequirement",
+            "attributeName": "MaritalStatus"
+          },
+          {
+            "attributeType": "clientInformationRequirement",
+            "attributeName": "EmploymentDetails"
+          },
+          {
+            "attributeType": "clientInformationRequirement",
+            "attributeName": "IncomeBasic"
+          },
+          {
+            "attributeType": "clientInformationRequirement",
+            "attributeName": "ExpensesBasic"
+          },
+          {
+            "attributeType": "clientInformationRequirement",
+            "attributeName": "PreOfferFinePrint"
+          }
+        ]
+      },
+      { "attributeGroupName": "clientInformationRequirement_ActivateProducts" },
+      { "attributeGroupName": "clientInformationRequirement_GatherEvidence" },
+      {
+        "attributeGroupName": "clientInformationRequirement_EnableClients",
+        "productAttributes": {
+          "attributeType": "clientInformationRequirement",
+          "attributeName": "DigitalLoginDetails"
+        }
+      },
+      { "attributeGroupName": "clientEvidenceRequirement_GenerateOffer" },
+      {
+        "attributeGroupName": "clientEvidenceRequirement_ActivateProducts",
+        "productAttributes": [
+          {
+            "attributeType": "Evidence",
+            "attributeName": "ProofOfIncome",
+            "isComparable": "false",
+            "valueUnit": "bool"
+          },
+          {
+            "attributeType": "Evidence",
+            "attributeName": "ProofOfBankAccount",
+            "isComparable": "false",
+            "valueUnit": "bool"
+          }
+        ]
+      },
+      {
+        "attributeGroupName": "clientEvidenceRequirement_GatherEvidence",
+        "productAttributes": [
+          {
+            "attributeType": "Evidence",
+            "attributeName": "ProofOfEmployment",
+            "isComparable": "false",
+            "valueUnit": "bool"
+          },
+          {
+            "attributeType": "Evidence",
+            "attributeName": "ProofOfIdentification",
+            "isComparable": "false",
+            "valueUnit": "bool"
+          },
+          {
+            "attributeType": "Evidence",
+            "attributeName": "ProofOfResidence",
+            "isComparable": "false",
+            "valueUnit": "bool"
+          },
+          {
+            "attributeType": "Evidence",
+            "attributeName": "ProofOfIncome",
+            "isComparable": "false",
+            "valueUnit": "bool"
+          }
+        ]
+      },
+      { "attributeGroupName": "clientEvidenceRequirement_EnableClients" },
+      {
+        "attributeGroupName": "productInformationRequirement_GenerateOffer",
+        "productAttributes": {
+          "attributeType": "productInformationRequirement",
+          "attributeName": "CreditCardDetails"
+        }
+      },
+      {
+        "attributeGroupName": "productInformationRequirement_ActivateProducts",
+        "productAttributes": {
+          "attributeType": "productInformationRequirement",
+          "attributeName": "CreditCardRepayment"
+        }
+      },
+      { "attributeGroupName": "productInformationRequirement_GatherEvidence" },
+      { "attributeGroupName": "productInformationRequirement_EnableClients" },
+      { "attributeGroupName": "productEvidenceRequirement_GenerateOffer" },
+      { "attributeGroupName": "productEvidenceRequirement_ActivateProducts" },
+      {
+        "attributeGroupName": "productEvidenceRequirement_GatherEvidence",
+        "productAttributes": {
+          "attributeType": "Evidence",
+          "attributeName": "SignedContract",
+          "isComparable": "false",
+          "valueUnit": "bool"
+        }
+      },
+      { "attributeGroupName": "productEvidenceRequirement_EnableClients" },
+      {
+        "attributeGroupName": "coreProvisioningParameters",
+        "productAttributes": {
+          "attributeType": "coreProvisioningParameter",
+          "attributeName": "SchemeCode",
+          "isComparable": "false",
+          "valueUnit": "string"
+        }
+      }
+    ]
+  }
+}
