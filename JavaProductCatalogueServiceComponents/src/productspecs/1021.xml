@@ -154,6 +154,11 @@
    <productAttributeGroup>
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
       <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>requiresElgiblityScoringAtIntents</attributeName>
+          <value>intent 0</value>
+      </productAttributes>
+      <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
          <value>5-10</value>
@@ -395,9 +400,9 @@
    <productAttributeGroup>
       <attributeGroupName>DecisioningControl</attributeGroupName>
       <productAttributes>
-         <attributeType>boolean</attributeType>
-         <attributeName>ComponentSupportsDeclineReasons</attributeName>
-         <value>true</value>
+          <attributeType>boolean</attributeType>
+          <attributeName>EnforceAgeValidationRules</attributeName>
+          <value>true</value>
       </productAttributes>
    </productAttributeGroup>
    <features>
@@ -442,6 +447,13 @@
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>CardDeliveryDetails|restrictOptOut=true</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
          <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
          <featureAttributes>
             <attributeType>enum</attributeType>
@@ -477,7 +489,7 @@
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=5386~allowOptOut~allowCardCollection~allowCardDelivery</attributeName>
+            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=5386~allowCardCollection~allowCardDelivery</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>   
@@ -490,7 +502,7 @@
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=4387~allowOptOut~allowCardCollection~allowCardDelivery</attributeName>
+            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=4387~allowCardCollection~allowCardDelivery</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>   
@@ -503,7 +515,7 @@
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1387~allowOptOut~allowCardCollection~allowCardDelivery</attributeName>
+            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1387~allowCardCollection~allowCardDelivery</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>   

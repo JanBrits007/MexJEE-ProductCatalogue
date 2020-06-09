@@ -7,6 +7,10 @@
          <attributeType>Compliance</attributeType>
          <attributeName>NotUnderCreditAdministrationV2</attributeName>
       </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>ConsentEducationalQualification</attributeName>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
@@ -47,9 +51,9 @@
          <attributeName>Age</attributeName>
          <isComparable>false</isComparable>
          <minValue>18</minValue>
-         <maxValue>999</maxValue>
+         <maxValue>29</maxValue>
          <valueUnit>year</valueUnit>
-         <description>be at least 18 years old.</description>
+         <description>be at least 18 years old and no older than 29 years old.</description>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -153,6 +157,11 @@
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+      <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>requiresElgiblityScoringAtIntents</attributeName>
+          <value>intent 0</value>
+      </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
@@ -399,6 +408,11 @@
          <attributeName>ComponentSupportsDeclineReasons</attributeName>
          <value>true</value>
       </productAttributes>
+      <productAttributes>
+          <attributeType>boolean</attributeType>
+          <attributeName>EnforceAgeValidationRules</attributeName>
+          <value>true</value>
+      </productAttributes>
    </productAttributeGroup>
    <features>
       <featureIdentifier>1014</featureIdentifier>
@@ -434,6 +448,13 @@
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>CreditSummaryPlaceholderV2|sideStepperDisplayName=Credit summary~activityStep=Credit Info</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>CardDeliveryDetails|restrictOptOut=true</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -485,7 +506,7 @@
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=4387~allowOptOut~allowCardCollection~allowCardDelivery</attributeName>
+            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=4387~allowCardCollection~allowCardDelivery</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>   
@@ -498,7 +519,7 @@
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1387~allowOptOut~allowCardCollection~allowCardDelivery</attributeName>
+            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1387~allowCardCollection~allowCardDelivery</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>   
