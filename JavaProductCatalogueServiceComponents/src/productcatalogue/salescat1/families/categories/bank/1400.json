@@ -1,7 +1,7 @@
 {
 	"productIdentifier": 1400,
 	"name": "Young Professional Bundle",
-	"shortDescription": "If you’re under 30 with a four-year degree, we know you are going places. Get fast-tracked into a private banking experience at a 50% reduced monthly fee. This bundle includes a credit card facility with an optional overdraft, plus all the perks you deserve.",
+	"shortDescription": "Exclusively for under 30's with a 4-year qualification, this bundle includes a credit card facility with an optional overdraft, plus all the perks at 50% of the monthly fee.",
 	"description": "If you’re under 30 with a four-year degree, we know you are going places. Get fast-tracked into a private banking experience at a 50% reduced monthly fee.~This bundle includes a credit card facility with an optional overdraft, plus all the perks you deserve.",
 	"productPricing": [{
 		"type": "AdminFee",
@@ -10,7 +10,7 @@
 		"currency": "ZAR",
 		"description": "R 180.00 pm"
 	}],
-	"specialFeature": "",
+	"specialFeature": "AGE LIMIT",
 	"additionalInfo": [
 		"Professional account with significant transnational value",
 		"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
@@ -19,37 +19,84 @@
 		"Greenbacks Card Swiper subscription",
 		"SMS notifications: eNotes and No-funds alert"
 	],
+	"detailsScreen": {
+		"component-name": "product-details",
+		"version": "2.0"
+	},
 	"salesHighlights": [
-		"Enjoy unlimited airport lounge access, travel insurance, free delivery of your forex and 50% discount on the prestigious American Express® Platinum Charge Card (for the global traveller).",
-		"Children get 4 lounge visits per year if they are on an active Dezign4me or Unlocked.me Student account.",
-		"Get exclusive benefits when using your Visa Signature credit card.",
-		"10 international airport lounge visits (including 1 guest allowance per visit) via LoungeKey.",
-		"Significantly increased travel insurance when buying airline tickets using these cards.",
-		"Purchase protection and warranties on purchases made using these cards.",
-		"24/7 emergency assistance should you need card replacement, cash or payments authorised.",
-		"24/7 concierge services for hotels, restaurants or event bookings and so much more.",
-		"Greenbacks rewards are earned on your everyday card swipes and online purchases.",
-		"Exclusive deals at unlocked.me. This includes deals on the latest tech, fashion, travel and once in a lifetime experience.",
-		"Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications up to R5 million. Apply online and qualify for 1% cash back (up to R15 000). 100% loans for vehicle finance applications. Your banker is equipped to provide you with a quick vehicle finance approval. All credit applications are subject to final credit approval.",
-		"Financial advice: Your financial growth also comes with important decisions and responsibilities. We'll give you access to a financial planner to assess your financial position and your future goals, consider different retirement scenarios, calculate the various costs and help you determine the optimal portfolio for your circumstances."
+		"sh1~A banking package that works as hard as you do",
+		"sh2~Lifestyle perks for the entire family",
+		"sh3~Unique investments to suit your lifestyle",
+		"sh4~Finance that lets you dream big",
+		"sh5~Ways to bank that suit your hours",
+		"sh6~Tailored offering for young professionals and those over 54"
 	],
+	"startApplicationScreen": {
+		"isRequired": "false"
+	},
 	"redirect": {
 		"shouldRedirect": false,
 		"redirectUrl": null
 	},
-	"actions": [{
-		"type": "REDIRECT",
-		"text": "Select",
-		"value": "https://www.nedbank.co.za/content/forms/af/nedbank/CallMeBackProfessionalBanking.html"
-	},
-	{
-		"type": "DETAIL",
-		"text": "Details"
-	},
-	{
-		"type": "COMPARE",
-		"text": "Compare"
-	}],
+	"actions": [
+		{
+			"type": "SELECT",
+			"text": "Select",
+			"environments": [
+				"dev",
+				"ete"
+			]
+		},
+		{
+			"type": "REDIRECT",
+			"text": "Select",
+			"environments": [
+				"qa",
+				"prod"
+			],
+			"value": "https://www.nedbank.co.za/content/forms/af/nedbank/CallMeBackProfessionalBanking.html"
+		},
+		{
+			"type": "DETAIL",
+			"text": "Details"
+		},
+		{
+			"type": "COMPARE",
+			"text": "Compare"
+		}
+	],
+	"applicationSteps": [
+		{
+			"index": 1,
+			"name": "Authenticate",
+			"Description": "Register to log in with your Nedbank ID."
+		},
+		{
+			"index": 2,
+			"name": "Product setup",
+			"Description": "Setup your product to suit your needs."
+		},
+		{
+			"index": 3,
+			"name": "About you",
+			"Description": "Tell us more details about you."
+		},
+		{
+			"index": 4,
+			"name": "Credit info",
+			"Description": "Only required if you need a credit facility."
+		},
+		{
+			"index": 5,
+			"name": "Finalisation",
+			"Description": "Upload documents and accept some T&Cs."
+		},
+		{
+			"index": 6,
+			"name": "Customisation",
+			"Description": "Choose your banker and card delivery."
+		}
+	],
 	"valueAddedServices": [
 		"Professional account with significant transactional value",
 		"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
@@ -111,7 +158,7 @@
 		  "attributeName": "ConcurrentApplicationLimitation",
 		  "value": "1"
 		}
-	  ],
+	],
 	"requiredDocuments": [
 		{
 			"attributeType": "Display",
@@ -122,24 +169,24 @@
 		},
 		{
 				"attributeType": "Display",
-				"attributeName": "3-Months bank statements or letter of appointment/contract",
+				"attributeName": "3-Months bank statements",
 				"isComparable": "false",
 				"valueUnit": "bool",
-				"description": "3-Months bank statements or letter of appointment/contract"
-		},
+				"description": "(we can source these for you from most banks)"
+		},		
 		{
-				"attributeType": "Display",
-				"attributeName": "You will be required to sign a declaration that you have the required level of education to qualify",
-				"isComparable": "false",
-				"valueUnit": "bool",
-				"description": "You will be required to sign a declaration that you have the required level of education to qualify"
+			"attributeType": "Display",
+			"attributeName": "Additional documents",
+			"isComparable": "false",
+			"valueUnit": "bool",
+			"description": "for overdraft and credit card applications, additional documents may be required"
 		},
 		{
 			"attributeType": "Display",
-			"attributeName": "For overdraft and credit card applications, additional documents may be required",
+			"attributeName": "Education declaration",
 			"isComparable": "false",
 			"valueUnit": "bool",
-			"description": "For overdraft and credit card applications, additional documents may be required"
+			"description": "you will be required to sign a declaration that you have the required level of education to qualify"
 		}
 	],
 	"productFeatures": [
