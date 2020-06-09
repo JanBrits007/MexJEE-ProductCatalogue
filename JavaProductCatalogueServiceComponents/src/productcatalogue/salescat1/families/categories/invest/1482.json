@@ -61,17 +61,39 @@
 	"eligibilityRules": [{
 		"attributeName": "Period",
 		"attributeType": "EligibilityRule",
-		"maxValue": "999999999",
+		"maxValue": "1",
 		"minValue": "0",
+		"valueUnit": "month"
+	},
+	{
+		"attributeName": "Period",
+		"attributeType": "EligibilityRule",
+		"maxValue": "11",
+		"minValue": "2",
+		"valueUnit": "month"
+	},
+	{
+		"attributeName": "Period",
+		"attributeType": "EligibilityRule",
+		"maxValue": "999",
+		"minValue": "12",
 		"valueUnit": "month"
 	},
 	{
 		"attributeType": "EligibilityRule",
 		"attributeName": "Age",
-		"minValue": "0",
-		"maxValue": "999999999",
+		"minValue": "18",
+		"maxValue": "54",
 		"valueUnit": "year",
 		"description": "18 Years and older"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "Age",
+		"minValue": "55",
+		"maxValue": "999",
+		"valueUnit": "year",
+		"description": ""
 	},
 	{
 		"attributeType": "EligibilityRule",
