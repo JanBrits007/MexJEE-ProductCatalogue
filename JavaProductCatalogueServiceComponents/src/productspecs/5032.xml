@@ -30,6 +30,18 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
+      <attributeGroupName>EligibilityRules</attributeGroupName>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Age</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>18</minValue>
+         <maxValue>999</maxValue>
+         <valueUnit>year</valueUnit>
+         <description>be at least 18 years old.</description>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -135,6 +147,11 @@
    <productAttributeGroup>
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
       <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>requiresElgiblityScoringAtIntents</attributeName>
+          <value>intent 0</value>
+      </productAttributes>
+      <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
          <value>5</value>
@@ -196,6 +213,14 @@
          <attributeType>bool</attributeType>
          <attributeName>isLead</attributeName>
          <value>true</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>DecisioningControl</attributeGroupName>
+      <productAttributes>
+          <attributeType>boolean</attributeType>
+          <attributeName>EnforceAgeValidationRules</attributeName>
+          <value>true</value>
       </productAttributes>
    </productAttributeGroup>
    <features>
