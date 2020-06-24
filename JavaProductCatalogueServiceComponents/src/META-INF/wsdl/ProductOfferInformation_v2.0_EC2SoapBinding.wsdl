@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ProductOfferInformation/v2" xmlns:ent2="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ProductOfferInformation/v2">
+<wsdl11:documentation xmlns:wsdl11="http://schemas.xmlsoap.org/wsdl/">This service retrieves Product offering information</wsdl11:documentation>
+  <wsdl:import location="EnterpriseContext_2008-09.wsdl" namespace="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext">
+    </wsdl:import>
+  <wsdl:import location="ProductOfferInformation__v2.wsdl" namespace="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ProductOfferInformation/v2">
+    </wsdl:import>
+  <wsdl:binding name="ProductOfferInformationEC2SOAPBinding" type="tns:iProductOfferInformation">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RetrieveProductFees">
+      <soap:operation soapAction="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ProductOfferInformation/v2/RetrieveProductFees" style="document"/>
+      <wsdl:input>
+        <soap:header message="ent2:EnterpriseContextHeader" part="enterpriseHeader" use="literal">
+        </soap:header>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="ent2:EnterpriseContextHeader" part="enterpriseHeader" use="literal">
+        </soap:header>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveProductInterestRates">
+      <soap:operation soapAction="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ProductOfferInformation/v2/RetrieveProductInterestRates" style="document"/>
+      <wsdl:input>
+        <soap:header message="ent2:EnterpriseContextHeader" part="enterpriseHeader" use="literal">
+        </soap:header>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="ent2:EnterpriseContextHeader" part="enterpriseHeader" use="literal">
+        </soap:header>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveProductOfferInformation">
+      <soap:operation soapAction="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ProductOfferInformation/v2/RetrieveProductOfferInformation" style="document"/>
+      <wsdl:input>
+        <soap:header message="ent2:EnterpriseContextHeader" part="enterpriseHeader" use="literal">
+        </soap:header>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="ent2:EnterpriseContextHeader" part="enterpriseHeader" use="literal">
+        </soap:header>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

@@ -1,0 +1,2316 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ProductOfferInformation/v2" version="2" xmlns:poi="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ProductOfferInformation/v2">
+  <xsd:element name="code" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>
+A code for the given parent element</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="description" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>
+A description for the parent element</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="featureIdentifier" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>
+The enterprise identifier for this feature</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="feeIdentifier" type="poi:FeeIdentifier_Type">
+    <xsd:annotation>
+      <xsd:documentation>
+The unique enterprise fee identifer and name</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="fieldName" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>
+The system field name commonly used to describe the product key</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="fieldValue" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>
+A data item that is used to identify a feature.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="productIdentifier" type="xsd:integer">
+    <xsd:annotation>
+      <xsd:documentation>
+A unique enterprise identifier for a given product.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="resultSet">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="resultCode" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>
+A short code indicating the outcome of the operation. The list of codes will be defined per service.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element minOccurs="0" name="resultDescription" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>
+A detailed description explaining the outcome of the operation. It must be used to return messages that can help troubleshooting error scenarios.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="sourceSystem" type="poi:System_Type">
+    <xsd:annotation>
+      <xsd:documentation>
+The Source System of the data used to populate the Data Warehouse, or a Source System that initiates an Event e.g. a Rating System.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="systemCode" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>
+The code by which the System is known.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="systemId" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>
+The unique identifier of the System.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="systemName" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>
+The textual name by which the System is known.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="Currency_Type">
+    <xsd:annotation>
+      <xsd:documentation>
+Identifies the actual denomination of a Currency Amount, such as US Dollars, Euro, Pounds Sterling, Bhat, Pesos, Escudos, Lira, etc.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="USD">
+        <xsd:annotation>
+          <xsd:documentation>
+US dollar</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="EUR">
+        <xsd:annotation>
+          <xsd:documentation>
+Euro </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AUD">
+        <xsd:annotation>
+          <xsd:documentation>
+Australian dollar</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CHF">
+        <xsd:annotation>
+          <xsd:documentation>
+Swiss franc </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DKK">
+        <xsd:annotation>
+          <xsd:documentation>
+Danish krone </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="JPY">
+        <xsd:annotation>
+          <xsd:documentation>
+Japanese yen</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NOK">
+        <xsd:annotation>
+          <xsd:documentation>
+Norwegian crown</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RUR">
+        <xsd:annotation>
+          <xsd:documentation>
+Russian ruble</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SEK">
+        <xsd:annotation>
+          <xsd:documentation>
+Swedish crown</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="INR">
+        <xsd:annotation>
+          <xsd:documentation>
+Indian rupee </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AED">
+        <xsd:annotation>
+          <xsd:documentation>
+United Arab Emirates dirham</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AFN">
+        <xsd:annotation>
+          <xsd:documentation>
+Afghan afghani </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ALL">
+        <xsd:annotation>
+          <xsd:documentation>
+Albanian lek </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AMD">
+        <xsd:annotation>
+          <xsd:documentation>
+Armenian dram </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ANG">
+        <xsd:annotation>
+          <xsd:documentation>
+Netherlands Antillean guilder</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AOA">
+        <xsd:annotation>
+          <xsd:documentation>
+Angolan kwanza </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ARS">
+        <xsd:annotation>
+          <xsd:documentation>
+Argentine peso </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AWG">
+        <xsd:annotation>
+          <xsd:documentation>
+Aruban florin </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="AZN">
+        <xsd:annotation>
+          <xsd:documentation>
+Azerbaijani manat </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BAM">
+        <xsd:annotation>
+          <xsd:documentation>
+Bosnia and Herzegovina convertible mark </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BBD">
+        <xsd:annotation>
+          <xsd:documentation>
+Barbados dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BDT">
+        <xsd:annotation>
+          <xsd:documentation>
+Bangladeshi taka </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BGN"/>
+      <xsd:enumeration value="BHD">
+        <xsd:annotation>
+          <xsd:documentation>
+Bahraini dinar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BIF">
+        <xsd:annotation>
+          <xsd:documentation>
+Burundian franc </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BMD">
+        <xsd:annotation>
+          <xsd:documentation>
+customarily known as Bermuda dollar</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BND">
+        <xsd:annotation>
+          <xsd:documentation>
+Brunei dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BOB">
+        <xsd:annotation>
+          <xsd:documentation>
+Boliviano </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BOV">
+        <xsd:annotation>
+          <xsd:documentation>
+Bolivian Mvdol (funds code)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BRL">
+        <xsd:annotation>
+          <xsd:documentation>
+Brazilian real </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BSD">
+        <xsd:annotation>
+          <xsd:documentation>
+Bahamian dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BTN">
+        <xsd:annotation>
+          <xsd:documentation>
+Bhutanese ngultrum </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BWP">
+        <xsd:annotation>
+          <xsd:documentation>
+Botswana pula </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BYR">
+        <xsd:annotation>
+          <xsd:documentation>
+Belarusian ruble</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="BZD">
+        <xsd:annotation>
+          <xsd:documentation>
+Belize dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CAD">
+        <xsd:annotation>
+          <xsd:documentation>
+Canadian dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CDF">
+        <xsd:annotation>
+          <xsd:documentation>
+Congolese franc (Democratic Republic of Congo) </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CHE">
+        <xsd:annotation>
+          <xsd:documentation>
+WIR Bank (Switzerland) complementary currency</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CLF">
+        <xsd:annotation>
+          <xsd:documentation>
+Unidad de Fomento (funds code) Chile </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CLP">
+        <xsd:annotation>
+          <xsd:documentation>
+Chilean peso, Chile </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CNY">
+        <xsd:annotation>
+          <xsd:documentation>
+Chinese yuan </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="COP">
+        <xsd:annotation>
+          <xsd:documentation>
+Colombian peso </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="COU">
+        <xsd:annotation>
+          <xsd:documentation>
+Unidad de Valor Real (Colombia)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CRC">
+        <xsd:annotation>
+          <xsd:documentation>
+Costa Rican colon </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CUC">
+        <xsd:annotation>
+          <xsd:documentation>
+Cuban convertible peso</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CUP">
+        <xsd:annotation>
+          <xsd:documentation>
+Cuban peso </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CVE">
+        <xsd:annotation>
+          <xsd:documentation>
+Cape Verde escudo </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="CZK">
+        <xsd:annotation>
+          <xsd:documentation>
+Czech koruna </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DJF">
+        <xsd:annotation>
+          <xsd:documentation>
+Djiboutian franc </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DOP">
+        <xsd:annotation>
+          <xsd:documentation>
+Dominican peso </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DZD">
+        <xsd:annotation>
+          <xsd:documentation>
+Algerian dinar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="EGP">
+        <xsd:annotation>
+          <xsd:documentation>
+Egyptian pound</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ERN">
+        <xsd:annotation>
+          <xsd:documentation>
+Eritrean nakfa </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ETB">
+        <xsd:annotation>
+          <xsd:documentation>
+Ethiopian birr </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FJD">
+        <xsd:annotation>
+          <xsd:documentation>
+Fiji dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FKP">
+        <xsd:annotation>
+          <xsd:documentation>
+Falkland Islands pound</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GBP">
+        <xsd:annotation>
+          <xsd:documentation>
+Pound sterling </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GEL">
+        <xsd:annotation>
+          <xsd:documentation>
+Georgian lari </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GHS">
+        <xsd:annotation>
+          <xsd:documentation>
+Ghanaian cedi </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GIP">
+        <xsd:annotation>
+          <xsd:documentation>
+Gibraltar pound </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GMD">
+        <xsd:annotation>
+          <xsd:documentation>
+Gambian dalasi </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GNF">
+        <xsd:annotation>
+          <xsd:documentation>
+Guinean franc </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GTQ">
+        <xsd:annotation>
+          <xsd:documentation>
+Guatemalan quetzal </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="GYD">
+        <xsd:annotation>
+          <xsd:documentation>
+Guyanese dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HKD">
+        <xsd:annotation>
+          <xsd:documentation>
+Hong Kong dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HNL">
+        <xsd:annotation>
+          <xsd:documentation>
+Honduran lempira </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HTG">
+        <xsd:annotation>
+          <xsd:documentation>
+Haitian gourde </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="HUF">
+        <xsd:annotation>
+          <xsd:documentation>
+Hungarian forint </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IDR">
+        <xsd:annotation>
+          <xsd:documentation>
+Indonesian rupiah </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ILS">
+        <xsd:annotation>
+          <xsd:documentation>
+Israeli new sheqel </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IQD">
+        <xsd:annotation>
+          <xsd:documentation>
+Iraqi dinar</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="IRR">
+        <xsd:annotation>
+          <xsd:documentation>
+Iranian rial </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ISK">
+        <xsd:annotation>
+          <xsd:documentation>
+Icelandic króna </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="JMD">
+        <xsd:annotation>
+          <xsd:documentation>
+Jamaican dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="JOD">
+        <xsd:annotation>
+          <xsd:documentation>
+Jordanian dinar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="KES">
+        <xsd:annotation>
+          <xsd:documentation>
+Kenyan shilling </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="KGS">
+        <xsd:annotation>
+          <xsd:documentation>
+Kyrgyzstani som (Kyrgyzstan)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="KHR"/>
+      <xsd:enumeration value="KMF">
+        <xsd:annotation>
+          <xsd:documentation>
+Comoro franc </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="KPW">
+        <xsd:annotation>
+          <xsd:documentation>
+North Korean won </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="KRW">
+        <xsd:annotation>
+          <xsd:documentation>
+South Korean won </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="KWD">
+        <xsd:annotation>
+          <xsd:documentation>
+Kuwaiti dinar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="KYD">
+        <xsd:annotation>
+          <xsd:documentation>
+Cayman Islands dollar</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="KZT">
+        <xsd:annotation>
+          <xsd:documentation>
+Kazakhstani tenge </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LAK">
+        <xsd:annotation>
+          <xsd:documentation>
+Lao kip (Laos)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LBP">
+        <xsd:annotation>
+          <xsd:documentation>
+Lebanese pound </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LKR">
+        <xsd:annotation>
+          <xsd:documentation>
+Sri Lanka rupee</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LRD">
+        <xsd:annotation>
+          <xsd:documentation>
+Liberian dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LSL">
+        <xsd:annotation>
+          <xsd:documentation>
+Lesotho loti</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LTL">
+        <xsd:annotation>
+          <xsd:documentation>
+Lithuanian litas </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LVL">
+        <xsd:annotation>
+          <xsd:documentation>
+Latvian lats </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="LYD">
+        <xsd:annotation>
+          <xsd:documentation>
+Libyan dinar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MAD">
+        <xsd:annotation>
+          <xsd:documentation>
+Moroccan dirham </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MDL">
+        <xsd:annotation>
+          <xsd:documentation>
+Moldovan leu </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MGA">
+        <xsd:annotation>
+          <xsd:documentation>
+Malagasy ariary </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MKD">
+        <xsd:annotation>
+          <xsd:documentation>
+Macedonian denar</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MMK">
+        <xsd:annotation>
+          <xsd:documentation>
+Myanma kyat </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MNT">
+        <xsd:annotation>
+          <xsd:documentation>
+Mongolian tugrik </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MOP">
+        <xsd:annotation>
+          <xsd:documentation>
+Macanese pataca </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MRO">
+        <xsd:annotation>
+          <xsd:documentation>
+Mauritanian ouguiya </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MUR">
+        <xsd:annotation>
+          <xsd:documentation>
+Mauritian rupee </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MVR">
+        <xsd:annotation>
+          <xsd:documentation>
+Maldivian rufiyaa </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MWK">
+        <xsd:annotation>
+          <xsd:documentation>
+Malawian kwacha </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MXN">
+        <xsd:annotation>
+          <xsd:documentation>
+Mexican peso </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MXV">
+        <xsd:annotation>
+          <xsd:documentation>
+Mexican Unidad de Inversion </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MYR">
+        <xsd:annotation>
+          <xsd:documentation>
+Malaysian ringgit </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MZN">
+        <xsd:annotation>
+          <xsd:documentation>
+Mozambican metical </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NAD">
+        <xsd:annotation>
+          <xsd:documentation>
+Namibian dollar</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NGN">
+        <xsd:annotation>
+          <xsd:documentation>
+Nigerian naira </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NIO">
+        <xsd:annotation>
+          <xsd:documentation>
+Cordoba oro </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NPR">
+        <xsd:annotation>
+          <xsd:documentation>
+Nepalese rupee </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NZD">
+        <xsd:annotation>
+          <xsd:documentation>
+New Zealand dollar Cook Islands , New Zealand, Pitcairn , Tokelau, Niue</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OMR">
+        <xsd:annotation>
+          <xsd:documentation>
+Omani rial </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PAB">
+        <xsd:annotation>
+          <xsd:documentation>
+Panamanian balboa </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PEN">
+        <xsd:annotation>
+          <xsd:documentation>
+Peruvian nuevo sol </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PGK">
+        <xsd:annotation>
+          <xsd:documentation>
+Papua New Guinean kina </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PHP">
+        <xsd:annotation>
+          <xsd:documentation>
+Philippine peso </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PKR">
+        <xsd:annotation>
+          <xsd:documentation>
+Pakistani rupee</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PLN">
+        <xsd:annotation>
+          <xsd:documentation>
+Polish zloty </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PYG">
+        <xsd:annotation>
+          <xsd:documentation>
+Paraguayan guaraní </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="QAR">
+        <xsd:annotation>
+          <xsd:documentation>
+Qatari rial </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RON">
+        <xsd:annotation>
+          <xsd:documentation>
+Romanian new leu </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RSD">
+        <xsd:annotation>
+          <xsd:documentation>
+Serbian dinar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RUB">
+        <xsd:annotation>
+          <xsd:documentation>
+Russian rouble</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="RWF">
+        <xsd:annotation>
+          <xsd:documentation>
+Rwandan franc </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SAR">
+        <xsd:annotation>
+          <xsd:documentation>
+Saudi riyal </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SBD">
+        <xsd:annotation>
+          <xsd:documentation>
+Solomon Islands dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SCR">
+        <xsd:annotation>
+          <xsd:documentation>
+Seychelles rupee </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SDG">
+        <xsd:annotation>
+          <xsd:documentation>
+Sudanese pound </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SGD">
+        <xsd:annotation>
+          <xsd:documentation>
+Singapore dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SHP">
+        <xsd:annotation>
+          <xsd:documentation>
+Saint Helena pound </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SLL">
+        <xsd:annotation>
+          <xsd:documentation>
+Sierra Leonean leone</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SOS">
+        <xsd:annotation>
+          <xsd:documentation>
+Somali shilling </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SRD">
+        <xsd:annotation>
+          <xsd:documentation>
+Surinamese dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="STD">
+        <xsd:annotation>
+          <xsd:documentation>
+São Tomé and Príncipe dobra </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SYP">
+        <xsd:annotation>
+          <xsd:documentation>
+Syrian pound </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="SZL">
+        <xsd:annotation>
+          <xsd:documentation>
+Lilangeni </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="THB">
+        <xsd:annotation>
+          <xsd:documentation>
+Thai baht (Thailand )</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TJS">
+        <xsd:annotation>
+          <xsd:documentation>
+Tajikistani somoni </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TMT">
+        <xsd:annotation>
+          <xsd:documentation>
+Turkmenistani manat </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TND">
+        <xsd:annotation>
+          <xsd:documentation>
+Tunisian dinar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TOP">
+        <xsd:annotation>
+          <xsd:documentation>
+Tongan pa?anga </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TRY">
+        <xsd:annotation>
+          <xsd:documentation>
+Turkish lira </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TTD">
+        <xsd:annotation>
+          <xsd:documentation>
+Trinidad and Tobago dollar</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TWD">
+        <xsd:annotation>
+          <xsd:documentation>
+New Taiwan dollar (Taiwan and other islands that are under the effective control of the Republic of China) (ROC)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="TZS">
+        <xsd:annotation>
+          <xsd:documentation>
+Tanzanian shilling </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UAH">
+        <xsd:annotation>
+          <xsd:documentation>
+Ukrainian hryvnia </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UGX">
+        <xsd:annotation>
+          <xsd:documentation>
+Ugandan shilling</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="USN">
+        <xsd:annotation>
+          <xsd:documentation>
+United States dollar (next day) (funds code)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="USS">
+        <xsd:annotation>
+          <xsd:documentation>
+United States dollar (same day) (funds code) </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UYU">
+        <xsd:annotation>
+          <xsd:documentation>
+Uruguayan peso </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="UZS">
+        <xsd:annotation>
+          <xsd:documentation>
+Uzbekistan som </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VEF">
+        <xsd:annotation>
+          <xsd:documentation>
+Venezuelan bolívar fuerte </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VND">
+        <xsd:annotation>
+          <xsd:documentation>
+Vietnamese d?ng (Vietnam )</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VUV">
+        <xsd:annotation>
+          <xsd:documentation>
+Vanuatu vatu </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WST">
+        <xsd:annotation>
+          <xsd:documentation>
+Samoan tala </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XAF">
+        <xsd:annotation>
+          <xsd:documentation>
+CFA franc BEAC (Cameroon, Central_African_Republic, Republic of the Congo , Chad , Equatorial Guinea , Gabon )</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XAG">
+        <xsd:annotation>
+          <xsd:documentation>
+Silver (one troy ounce)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XAU">
+        <xsd:annotation>
+          <xsd:documentation>
+Gold (one troy ounce)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XBA">
+        <xsd:annotation>
+          <xsd:documentation>
+(EURCO) (bond market unit)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XBB">
+        <xsd:annotation>
+          <xsd:documentation>
+(E.M.U.-6) (bond market unit)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XBC">
+        <xsd:annotation>
+          <xsd:documentation>
+European Unit of Account 9 (E.U.A.-9) (bond market unit)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XBD">
+        <xsd:annotation>
+          <xsd:documentation>
+European Unit of Account 17 (E.U.A.-17) (bond market unit)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XCD">
+        <xsd:annotation>
+          <xsd:documentation>
+East Caribbean dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XDR">
+        <xsd:annotation>
+          <xsd:documentation>
+International Monetary Fund </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XFU">
+        <xsd:annotation>
+          <xsd:documentation>
+International Union of Railways</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XOF">
+        <xsd:annotation>
+          <xsd:documentation>
+CFA Franc BCEAO </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XPD">
+        <xsd:annotation>
+          <xsd:documentation>
+Palladium (one troy ounce) </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XPF">
+        <xsd:annotation>
+          <xsd:documentation>
+CFP franc </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XPT">
+        <xsd:annotation>
+          <xsd:documentation>
+Platinum (one troy ounce)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XTS">
+        <xsd:annotation>
+          <xsd:documentation>
+Code reserved for testing purposes</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="XXX">
+        <xsd:annotation>
+          <xsd:documentation>
+No currency</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="YER">
+        <xsd:annotation>
+          <xsd:documentation>
+Yemeni rial </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ZAR">
+        <xsd:annotation>
+          <xsd:documentation>
+South African rand </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ZMK">
+        <xsd:annotation>
+          <xsd:documentation>
+Zambian kwacha </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ZWL">
+        <xsd:annotation>
+          <xsd:documentation>
+Zimbabwe dollar </xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Indicator">
+    <xsd:annotation>
+      <xsd:documentation>
+Used to indicate Yes or No (not boolean - 0 or 1) </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Y"/>
+      <xsd:enumeration value="N"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Percentage">
+    <xsd:annotation>
+      <xsd:documentation>
+A percentage.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:decimal"/>
+  </xsd:simpleType>
+  <xsd:complexType name="Amount_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="amount" type="xsd:decimal">
+        <xsd:annotation>
+          <xsd:documentation>
+Amount.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="currency" type="poi:Currency_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+Medium of exchange of value, used to qualify an amount.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Characteristic_Type">
+    <xsd:annotation>
+      <xsd:documentation>Characteristics used to differentiate product applied</xsd:documentation>
+    </xsd:annotation>
+<xsd:sequence minOccurs="0">
+      <xsd:element name="type" type="poi:CodeDescription_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+Characteristic type by which this product can be distinguished</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="value" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+Characteristic value</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CodeDescription_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" ref="poi:code"/>
+      <xsd:element minOccurs="0" ref="poi:description"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Condition_Type">
+    <xsd:annotation>
+      <xsd:documentation>Identifies the specific requirements that pertain to how the business of the modeled organization is conducted and includes information such as prerequisite or qualification criteria and restrictions or limits associated with the requirements.
+
+Conditions can apply to various aspects of a Financial Institution's operations, such as the sale and servicing of products or the determination of eligibility to purchase a product.</xsd:documentation>
+    </xsd:annotation>
+<xsd:sequence>
+      <xsd:element minOccurs="0" name="conditionID" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation>
+The unique identifier for the condition.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="businessDescription" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+A free-text statement in business language used to explain the content of the Condition.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="conditionValues">
+        <xsd:annotation>
+          <xsd:documentation>
+A list of condition values.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="conditionValue">
+              <xsd:annotation>
+                <xsd:documentation>
+Identifies a Condition Descriptor that defines the measurable content that applies to a Condition. A Condition Value can be numeric, textual or an indicator (Yes, No). Numeric Condition Values can be qualified by Unit Of Measure.</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" name="value" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>
+The actual value of the condition value, for example '18' if the condition value is for the minimum age</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="valueType" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>
+The type of value. The type can indicate to consuming systems how to interpret the value, if needed. For example, for a minimum age condition value, the type would be 'integer'. Valid values should be restricted to 'integer', 'decimal', 'boolean' and 'string'. The default interpreted type should be 'string' if the value type is not defined. This element is left as a non-enumerated value to allow for additional types to be conveyed, after agreement between provider and consumer.</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="valueDescription" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>
+The value description should be able to convey the business meaning of this condition to a user, for example 'Minimum Age'.</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="name" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The word or phrase used to identify (but not uniquely) the Condition.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="expression" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The expression to be used in validating the condition.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="conditionType" type="poi:CodeDescription_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+The type of condition can help classify conditions over and above grouping them. For example, the condition that an account must have a positive balance can be a type of financial condition, while the condition may fall under the group of account conditions.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="conditionGroupID" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation>
+The unique identifier of the condition group. This is the grouping to be associated with the qualifying criteria e.g. balances, limits etc.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="conditionGroupName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The name of the condition group. This is the grouping to be associated with the qualifying criteria e.g. balances, limits etc.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="effectiveFromDate" type="xsd:dateTime">
+        <xsd:annotation>
+          <xsd:documentation>
+The date on which the condition is effective from.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="effectiveToDate" type="xsd:dateTime">
+        <xsd:annotation>
+          <xsd:documentation>
+The date until which the condition is required.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FeatureAlternativeIdentifier">
+    <xsd:annotation>
+      <xsd:documentation>
+Feature Alternative Identifier identifies the various additional identifiers given to a specific product to support a Financial Institution's business activities. These could be be business defined identifiers or system defined identifiers</xsd:documentation>
+    </xsd:annotation>
+<xsd:sequence>
+      <xsd:element name="featureIDType" type="poi:CodeDescription_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+Distinguishes the type of source from which the Identifier is derived.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="featureKeys">
+        <xsd:annotation>
+          <xsd:documentation>
+The set of keys used to uniquely identify a feature.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="poi:fieldName"/>
+            <xsd:element ref="poi:fieldValue"/>
+            <xsd:element minOccurs="0" name="sequence" type="xsd:integer">
+              <xsd:annotation>
+                <xsd:documentation>
+The sequence of featureKeys if they need to be concatenated</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" ref="poi:sourceSystem"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FeatureGroup_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="featureGroupIdentifier" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The unique identifier of the feature group to which this feature belongs. The category to be associated with the feature e.g. Interest, Communication, Loyalty and Rewards.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="featureGroupName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The name of the feature group to which this feature belongs. The category to be associated with the feature e.g. Interest, Communication, Loyalty &amp; Rewards.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FeatureIdentification_Type">
+    <xsd:sequence>
+      <xsd:element name="featureIdentifier" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The enterprise feature identifier for this feature</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="featureName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The name of this feature</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="featureDescription" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The description of this feature</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Fee_Type">
+    <xsd:annotation>
+      <xsd:documentation>
+Single defintion of a service fee. ServiceFee is an extention of FeeCondition</xsd:documentation>
+    </xsd:annotation>
+<xsd:sequence>
+      <xsd:element name="feeType" type="poi:CodeDescription_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+Identifies a classification of FeeCondition according to its type, e.g. Commission</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="isMandatory" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>
+Is the Service fee optional or mandatory</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="feeBaseAmount" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+Fee amount</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="feeUnit" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+The tier or rate unit of measure. For percentage, it would be 100</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="feePercentage" type="poi:Percentage"/>
+      <xsd:element minOccurs="0" name="feeDiscountPercentage" type="poi:Percentage"/>
+      <xsd:element minOccurs="0" name="isDefaultFee" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>
+Whether this is the default fee or not</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="feeMinimumLimit" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+Minimum expected charge for a service</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="feeMaximumLimit" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+Maximum expected charge for a service</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="chargingBasis" type="poi:CodeDescription_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+Method used to calculate a charge. e.g. flat rate; per unit; gross amount based or net amount based</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="effectiveDate" type="xsd:dateTime">
+        <xsd:annotation>
+          <xsd:documentation>
+Identifies the start of the time period to which this fee relates</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="endDate" type="xsd:dateTime">
+        <xsd:annotation>
+          <xsd:documentation>
+Identifies the end of the time period to which this fee relates</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="feeDescription" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+Constructed description of what the fee value is</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FeeAmount_Type">
+    <xsd:annotation>
+      <xsd:documentation>
+Actual fee amount</xsd:documentation>
+    </xsd:annotation>
+<xsd:sequence>
+      <xsd:element minOccurs="0" name="amountType" type="poi:CodeDescription_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+FeeWithTax; FeeWithoutTax; TaxAmount; FeeWithVAT; TransactionAmount</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="frequency" type="poi:CodeDescription_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+The frequency of the fee, such as Monthly; Daily; Annual; Adhoc</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="fee" type="poi:Amount_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+Fee breakdown</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FeeIdentifier_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="feeID" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The unique enterprise fee identifer</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="feeName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+Common or descriptive name for the fee</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FeeParameter_Type">
+    <xsd:annotation>
+      <xsd:documentation>
+Array of options, e.g. for Overdraft pricing: 'ClientSegment=Business Banking';'ClientNCAStatus=Juristic';'ExistingOverdraft=Y', etc. Either indicator, amount or text would be populated for any specific parameter.</xsd:documentation>
+    </xsd:annotation>
+<xsd:sequence>
+      <xsd:element minOccurs="0" name="type" type="poi:CodeDescription_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+This is the name for the fee parameter. If an option id or mainfile code exists for the description, it can be placed in the code, e.g. code=1942; description="Surcharge"</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="indicator" type="poi:Indicator"/>
+      <xsd:element minOccurs="0" name="amount" type="poi:Amount_Type"/>
+      <xsd:element minOccurs="0" name="text" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="operator" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+Default value is "==", where equal is "=="; not equal is "!="; Less than is "&lt;"; Greater than is "&gt;"; Less than or equal is "&lt;"; Greater than or equal is "&gt;=".</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FeeTier_Type">
+    <xsd:sequence>
+      <xsd:element name="tierType" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+Tier type could be based on (monetary) Amounts or Values or Limits</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="tierTo" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+The level or tier to which this fee is applicable</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="tierFrom" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+The level or tier from which this fee is applicable</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Identifier_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="identifier" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="identifierType" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="source" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+Master source of the identifier, e.g. CAMS</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InterestRate_Type">
+    <xsd:annotation>
+      <xsd:documentation>
+Interest Rate specifies the percentage amount to be paid for the use of money. For example, as a return on capital investment or to be repaid as the price of a loan.</xsd:documentation>
+    </xsd:annotation>
+<xsd:sequence>
+      <xsd:element name="rate" type="poi:Rate_Type"/>
+      <xsd:element name="creditDebitIndicator" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+Indicates whether this instance represents a Credit Interest Rate (C) or a Debit Interest Rate (D).</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="referenceRateType" type="poi:Rate_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+Rate on which this rate is based, e.g. Prime, etc.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="effectiveInterestRate" type="poi:Percentage">
+        <xsd:annotation>
+          <xsd:documentation>
+The actual value of the rate, expressed as a percentage.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="spreadRate" type="poi:Percentage">
+        <xsd:annotation>
+          <xsd:documentation>
+The difference of the actual rate value and the reference rate value. This value may be negative.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="interestRateDescription" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+Concatenation of reference interest rate and the spread rate e.g. Prime +2%</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="effectiveDate" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>
+Date on which this rate became effective.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="endDate" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>
+Date to which this rate is applicable.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="interestCalculationBasis" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+Interest Calculation Basis specifies the method used to compute interest. For example, Simple Interest or Compound Interest.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InterestTier_Type">
+    <xsd:annotation>
+      <xsd:documentation>
+A value of RATE RANGE TYPE. Identifies a rate range as being tiered. The rate associated with a range is applied to that portion of the loan specified by the range. For example, Range 0 - 10,000 5% 10,000 - 50,000 4% 50,000 + 3% For a loan of 30,000 ZAR, a tiered range will apply a 5% charge to the first 10,000 and 4% to the remaining 20,000.</xsd:documentation>
+    </xsd:annotation>
+<xsd:sequence>
+      <xsd:element name="interestTierType" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+Tier type could be based on (monetary) Amounts or Values or Limits</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="interestTierFrom" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+Numeric value for lowest value of the tier</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="interestTierTo" type="xsd:float">
+        <xsd:annotation>
+          <xsd:documentation>
+Numeric value for highest value of the tier</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PlasticDocument_Type">
+    <xsd:annotation>
+      <xsd:documentation>
+Identifies a Documentation Item that has been created on a resin-based synthetic Material; for example, overhead transparency or a plastic ID card.</xsd:documentation>
+    </xsd:annotation>
+<xsd:sequence>
+      <xsd:element name="plasticDocumentIdentifier" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The reference assigned to the PaymentCard by the financial services company for identification and communication.In this case, the Stock Code Number</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="fileLocation" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The location and name of a file containing the text and other data of the Documentation Item. Commonly given as a computer pathname. In this instance, it is the location of the image for the card</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PricingDiscriminator_Type">
+    <xsd:annotation>
+      <xsd:documentation>
+Used to distinguish pricing plan by set attributes, e.g. ClientType, BusinessUnit/Segment, Channel, etc.</xsd:documentation>
+    </xsd:annotation>
+<xsd:sequence>
+      <xsd:element name="discriminatorType" type="poi:CodeDescription_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+Used to distinguish one pricing plan by set attributes, e.g. ClientType, BusinessUnit/Segment, Channel, etc.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="discriminatorValue" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The value which is used for the pricing plan discriminator</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PricingPlan_Type">
+    <xsd:sequence>
+      <xsd:element name="pricingPlanIdentifier" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The Enterprise Pricing Plan identifier</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="pricingPlanCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+Common code used to identify the pricing plan</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="pricingPlanName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The Common name for the pricing plan</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="pricingPlanType" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+Example BASE</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="effectiveDate" type="xsd:dateTime">
+        <xsd:annotation>
+          <xsd:documentation>
+When the pricing plan became effective</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="endDate" type="xsd:dateTime">
+        <xsd:annotation>
+          <xsd:documentation>
+Till when this pricing plan is effective</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="pricingDiscriminators" type="poi:PricingDiscriminator_Type"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ProductAlternativeIdentifier">
+    <xsd:annotation>
+      <xsd:documentation>
+Product Alternative Identifier identifies the various additional identifiers given to a specific product to support a Financial Institution's business activities. These could be be business defined identifiers or system defined identifiers</xsd:documentation>
+    </xsd:annotation>
+<xsd:sequence>
+      <xsd:element name="productIDType" type="poi:CodeDescription_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+Distinguishes the type of source from which the Identifier is derived.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="productKeys">
+        <xsd:annotation>
+          <xsd:documentation>
+The set of keys used to uniquely identify a product.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="poi:fieldName"/>
+            <xsd:element ref="poi:fieldValue"/>
+            <xsd:element minOccurs="0" name="sequence" type="xsd:integer">
+              <xsd:annotation>
+                <xsd:documentation>
+The sequence of productKeys if they need to be concatenated</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" ref="poi:sourceSystem"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ProductName_Type">
+    <xsd:annotation>
+      <xsd:documentation>
+Product name identifies the various additional labels given to a spesific product to support business activities</xsd:documentation>
+    </xsd:annotation>
+<xsd:sequence>
+      <xsd:element minOccurs="0" name="productName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+A name for the product</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="type" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The type of product name, for example: Marketing name Trademark Generic name</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Rate_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="rateId" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation>
+The unique identifier of the Rate.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="rateName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+A name by which the rate may be referred to e.g. Prime, Lending, LIBOR.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="rateCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+A code by which the rate may be referred to.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="rateType" type="poi:CodeDescription_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+Base, Applicable, Credit Interest, Debit Interest, Margin, Effective Interest, Product Interest, Exchange, etc.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="rateValue" type="xsd:decimal">
+        <xsd:annotation>
+          <xsd:documentation>
+The actual value of the rate, expressed as a percentage.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ratePeriod" type="poi:CodeDescription_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+Frequency (CDFREQMODETP) Periodicity Interval defines an interval of time between regular recurring events. For example Daily, Every 5 Days, Weekly, Quarterly, Yearly.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RateIdentifier_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="rateId" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation>
+Unique enterprise identifier for the rate</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="rateName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+Common or descriptive name for the rate</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResourceItem_Type">
+    <xsd:annotation>
+      <xsd:documentation>
+Identifies an Asset that can be used as a resource. This includes Bank Assets and assets offered as Collateral.</xsd:documentation>
+    </xsd:annotation>
+<xsd:sequence>
+      <xsd:element minOccurs="0" name="resourceItemType" type="poi:CodeDescription_Type">
+        <xsd:annotation>
+          <xsd:documentation>
+The type of resource item being referred to</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="resourceItemIdentifier" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The unique identifier of Resource Item that is owned, managed, used by, or of specific interest to the Financial Institution.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="resourceItemName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+The primary name assigned to the Resource Item. This name is used in reports and documents referring to the Resource Item.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="System_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" ref="poi:systemId"/>
+      <xsd:element minOccurs="0" ref="poi:systemName"/>
+      <xsd:element minOccurs="0" ref="poi:systemCode"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="RetrieveProductAlternativeIdentifiers">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="poi:productIdentifier"/>
+        <xsd:element minOccurs="0" name="productSystem" type="poi:System_Type"/>
+        <xsd:element minOccurs="0" name="channelType" type="poi:CodeDescription_Type">
+          <xsd:annotation>
+            <xsd:documentation>
+Self Assisted, Staff Assisted or External</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element minOccurs="0" name="productLine" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>
+Product Line for which the parameters are configured, e.g. Overdraft, CreditCards, InvestmentAccount, Life, PersonalLoan, etc.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristicFilters" type="poi:Characteristic_Type">
+          <xsd:annotation>
+            <xsd:documentation>
+Characteristics by which the results should be filtered</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RetrieveProductAlternativeIdentifiersResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" ref="poi:productIdentifier"/>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="productAlternativeIdentifiers" type="poi:ProductAlternativeIdentifier"/>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristicSets">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="identifiers" type="poi:Identifier_Type"/>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristics" type="poi:Characteristic_Type"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element ref="poi:resultSet"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RetrieveProductConditions">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="poi:productIdentifier"/>
+        <xsd:element minOccurs="0" name="channelType" type="poi:CodeDescription_Type">
+          <xsd:annotation>
+            <xsd:documentation>
+Self Assisted, Staff Assisted or External</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element minOccurs="0" name="productLine" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>
+Product Line for which the parameters are configured, e.g. Overdraft, CreditCards, InvestmentAccount, Life, PersonalLoan, etc.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="conditionFilters">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element minOccurs="0" name="businessDescription"/>
+              <xsd:element minOccurs="0" name="valueType"/>
+              <xsd:element minOccurs="0" name="valueDescription"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RetrieveProductConditionsResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" ref="poi:productIdentifier"/>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="productConditions" type="poi:Condition_Type"/>
+        <xsd:element ref="poi:resultSet"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RetrieveProductFeatures">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="poi:productIdentifier"/>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" ref="poi:featureIdentifier"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RetrieveProductFeaturesResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" ref="poi:productIdentifier"/>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="featureDetails">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="featureIdentification" type="poi:FeatureIdentification_Type"/>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="featureAlternativeIdentifiers" type="poi:FeatureAlternativeIdentifier"/>
+              <xsd:element minOccurs="0" name="featureGroup" type="poi:FeatureGroup_Type"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element ref="poi:resultSet"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RetrieveProductFees">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" name="fees" type="poi:FeeIdentifier_Type"/>
+        <xsd:element minOccurs="0" ref="poi:productIdentifier"/>
+        <xsd:element minOccurs="0" ref="poi:featureIdentifier"/>
+        <xsd:element minOccurs="0" name="channelType" type="poi:CodeDescription_Type">
+          <xsd:annotation>
+            <xsd:documentation>
+Self Assisted, Staff Assisted or External</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element minOccurs="0" name="productLine" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>
+Product Line for which the parameters are configured, e.g. Overdraft, CreditCards, InvestmentAccount, Life, PersonalLoan, etc.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristicFilters" type="poi:Characteristic_Type">
+          <xsd:annotation>
+            <xsd:documentation>
+Characteristics by which the results should be filtered</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RetrieveProductFeesResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" ref="poi:productIdentifier"/>
+        <xsd:element minOccurs="0" ref="poi:featureIdentifier"/>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="feeDetails">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element ref="poi:feeIdentifier"/>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="feeParameters" type="poi:FeeParameter_Type"/>
+              <xsd:element minOccurs="0" name="fee" type="poi:Fee_Type"/>
+              <xsd:element minOccurs="0" name="feeTotal" type="poi:FeeAmount_Type"/>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="feeTiers" type="poi:FeeTier_Type"/>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="pricingPlan" type="poi:PricingPlan_Type"/>
+              <xsd:element minOccurs="0" name="referenceRateType" type="poi:Rate_Type">
+                <xsd:annotation>
+                  <xsd:documentation>
+A standard rate with which this fee is associated</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristicsSets">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="identifiers" type="poi:Identifier_Type"/>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristics" type="poi:Characteristic_Type"/>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="feeDetails">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element ref="poi:feeIdentifier"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="feeParameters" type="poi:FeeParameter_Type"/>
+                    <xsd:element minOccurs="0" name="fee" type="poi:Fee_Type"/>
+                    <xsd:element minOccurs="0" name="feeTotal" type="poi:FeeAmount_Type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="feeTiers" type="poi:FeeTier_Type"/>
+                    <xsd:element minOccurs="0" name="referenceRateType" type="poi:Rate_Type">
+                      <xsd:annotation>
+                        <xsd:documentation>
+A standard rate with which this fee is associated</xsd:documentation>
+                      </xsd:annotation>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element ref="poi:resultSet"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RetrieveProductInterestRates">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="interestRates">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="interestRate" type="poi:RateIdentifier_Type"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element minOccurs="0" ref="poi:productIdentifier"/>
+        <xsd:element minOccurs="0" ref="poi:featureIdentifier"/>
+        <xsd:element minOccurs="0" name="channelType" type="poi:CodeDescription_Type">
+          <xsd:annotation>
+            <xsd:documentation>
+Self Assisted, Staff Assisted or External</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element minOccurs="0" name="productLine" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>
+Product Line for which the parameters are configured, e.g. Overdraft, CreditCards, InvestmentAccount, Life, PersonalLoan, etc.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristicFilters" type="poi:Characteristic_Type">
+          <xsd:annotation>
+            <xsd:documentation>
+Characteristics by which the results should be filtered</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RetrieveProductInterestRatesResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" ref="poi:productIdentifier"/>
+        <xsd:element minOccurs="0" ref="poi:featureIdentifier"/>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="interestRateDetails">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="interestRate" type="poi:InterestRate_Type"/>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="rateParameters" type="poi:Characteristic_Type">
+                <xsd:annotation>
+                  <xsd:documentation>
+Specifies the unit for which this rate is provided, e.g. Term and number of months</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="interestTiers" type="poi:InterestTier_Type">
+                <xsd:annotation>
+                  <xsd:documentation>
+Could be based on amount and/or term</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristicSets">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="identifiers" type="poi:Identifier_Type"/>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristics" type="poi:Characteristic_Type">
+                <xsd:annotation>
+                  <xsd:documentation>
+Identifying characteristics</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="interestRates">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="interestRate" type="poi:InterestRate_Type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="rateParameters" type="poi:Characteristic_Type">
+                      <xsd:annotation>
+                        <xsd:documentation>
+Specifies the unit for which this rate is provided, e.g. Term and number of months</xsd:documentation>
+                      </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="interestTiers" type="poi:InterestTier_Type"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element ref="poi:resultSet"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RetrieveProductOfferInformation">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="poi:productIdentifier"/>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="channelType" type="poi:CodeDescription_Type">
+          <xsd:annotation>
+            <xsd:documentation>
+Self Assisted, Staff Assisted or External</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element minOccurs="0" name="productLine" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>
+Product Line for which the parameters are configured, e.g. Overdraft, CreditCards, InvestmentAccount, Life, PersonalLoan, etc.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristicFilters" type="poi:Characteristic_Type">
+          <xsd:annotation>
+            <xsd:documentation>
+Characteristics by which the results should be filtered</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RetrieveProductOfferInformationResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" ref="poi:productIdentifier"/>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="productNames" type="poi:ProductName_Type"/>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="productAlternativeIdentifiers" type="poi:ProductAlternativeIdentifier"/>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="productConditions" type="poi:Condition_Type"/>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="productFeatureDetails">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element minOccurs="0" name="featureIdentification" type="poi:FeatureIdentification_Type"/>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="featureAlternativeIdentifiers" type="poi:FeatureAlternativeIdentifier"/>
+              <xsd:element minOccurs="0" name="featureGroup" type="poi:FeatureGroup_Type"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element minOccurs="0" name="productRateConditions">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="interestRates">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="interestRate" type="poi:InterestRate_Type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="rateParameters" type="poi:Characteristic_Type">
+                      <xsd:annotation>
+                        <xsd:documentation>
+Specifies the unit for which this rate is provided, e.g. Term and number of months</xsd:documentation>
+                      </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="interestTiers" type="poi:InterestTier_Type"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="feeDetails">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="feeIdentifier" type="poi:FeeIdentifier_Type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="feeParameters" type="poi:FeeParameter_Type"/>
+                    <xsd:element minOccurs="0" name="fee" type="poi:Fee_Type"/>
+                    <xsd:element minOccurs="0" name="feeTotal" type="poi:FeeAmount_Type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="feeTiers" type="poi:FeeTier_Type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="pricingPlan" type="poi:PricingPlan_Type"/>
+                    <xsd:element minOccurs="0" name="referenceRateType" type="poi:Rate_Type">
+                      <xsd:annotation>
+                        <xsd:documentation>
+A standard rate with which this fee is associated</xsd:documentation>
+                      </xsd:annotation>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="resourceItemDetails">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="resourceItem" type="poi:ResourceItem_Type"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristicSets">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="identifiers" type="poi:Identifier_Type"/>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristics" type="poi:Characteristic_Type"/>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="interestRates">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="interestRate" type="poi:InterestRate_Type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="rateParameters" type="poi:Characteristic_Type">
+                      <xsd:annotation>
+                        <xsd:documentation>
+Specifies the unit for which this rate is provided, e.g. Term and number of months</xsd:documentation>
+                      </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="interestTiers" type="poi:InterestTier_Type"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="feeDetails">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="feeIdentifier" type="poi:FeeIdentifier_Type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="feeParameters" type="poi:FeeParameter_Type"/>
+                    <xsd:element minOccurs="0" name="fee" type="poi:Fee_Type"/>
+                    <xsd:element minOccurs="0" name="feeTotal" type="poi:FeeAmount_Type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="feeTiers" type="poi:FeeTier_Type"/>
+                    <xsd:element minOccurs="0" name="referenceRateType" type="poi:Rate_Type">
+                      <xsd:annotation>
+                        <xsd:documentation>
+A standard rate with which this fee is associated</xsd:documentation>
+                      </xsd:annotation>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="resourceItemDetails">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="resourceItem" type="poi:ResourceItem_Type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="plasticDocument" type="poi:PlasticDocument_Type"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element ref="poi:resultSet"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RetrieveProductResourceItems">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="poi:productIdentifier"/>
+        <xsd:element minOccurs="0" name="channelType" type="poi:CodeDescription_Type">
+          <xsd:annotation>
+            <xsd:documentation>
+Self Assisted, Staff Assisted or External</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element minOccurs="0" name="productLine" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>
+Product Line for which the parameters are configured, e.g. Overdraft, CreditCards, InvestmentAccount, Life, PersonalLoan, etc.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristicFilters" type="poi:Characteristic_Type">
+          <xsd:annotation>
+            <xsd:documentation>
+Characteristics by which the results should be filtered</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RetrieveProductResourceItemsResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" ref="poi:productIdentifier"/>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="resourceItemDetails">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="resourceItem" type="poi:ResourceItem_Type"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristicSets">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="identifiers" type="poi:Identifier_Type"/>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="characteristics" type="poi:Characteristic_Type"/>
+              <xsd:element maxOccurs="unbounded" minOccurs="0" name="resourceItemDetails">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="resourceItem" type="poi:ResourceItem_Type"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="plasticDocument" type="poi:PlasticDocument_Type"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element ref="poi:resultSet"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

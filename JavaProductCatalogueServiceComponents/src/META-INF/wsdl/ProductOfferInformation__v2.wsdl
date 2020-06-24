@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl11:definitions xmlns:wsdl11="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ProductOfferInformation/v2" xmlns:mime="http:/schemas.xmlsoap.org/wsdl/mime/" xmlns:poi="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ProductOfferInformation/v2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<wsdl11:documentation>This service retrieves Product offering information</wsdl11:documentation>
+  <wsdl11:types>
+    <xsd:schema targetNamespace="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ProductOfferInformation/v2">
+      <xsd:include schemaLocation="ProductOfferInformation_v2_Messages.xsd"/>
+    </xsd:schema>
+  </wsdl11:types>
+  <wsdl11:message name="RetrieveProductFeesRs">
+    <wsdl11:part element="poi:RetrieveProductFeesResponse" name="RetrieveProductFeesResponse">
+    </wsdl11:part>
+  </wsdl11:message>
+  <wsdl11:message name="RetrieveProductInterestRatesRs">
+    <wsdl11:part element="poi:RetrieveProductInterestRatesResponse" name="RetrieveProductInterestRatesResponse">
+    </wsdl11:part>
+  </wsdl11:message>
+  <wsdl11:message name="RetrieveProductOfferInformationRs">
+    <wsdl11:part element="poi:RetrieveProductOfferInformationResponse" name="RetrieveProductOfferInformationResponse">
+    </wsdl11:part>
+  </wsdl11:message>
+  <wsdl11:message name="RetrieveProductInterestRatesRq">
+    <wsdl11:part element="poi:RetrieveProductInterestRates" name="RetrieveProductInterestRates">
+    </wsdl11:part>
+  </wsdl11:message>
+  <wsdl11:message name="RetrieveProductOfferInformationRq">
+    <wsdl11:part element="poi:RetrieveProductOfferInformation" name="RetrieveProductOfferInformation">
+    </wsdl11:part>
+  </wsdl11:message>
+  <wsdl11:message name="RetrieveProductFeesRq">
+    <wsdl11:part element="poi:RetrieveProductFees" name="RetrieveProductFees">
+    </wsdl11:part>
+  </wsdl11:message>
+  <wsdl11:portType name="iProductOfferInformation">
+    <wsdl11:operation name="RetrieveProductFees">
+<wsdl11:documentation>Retrieve the product specific fees</wsdl11:documentation>
+      <wsdl11:input message="poi:RetrieveProductFeesRq">
+    </wsdl11:input>
+      <wsdl11:output message="poi:RetrieveProductFeesRs">
+    </wsdl11:output>
+    </wsdl11:operation>
+    <wsdl11:operation name="RetrieveProductInterestRates">
+<wsdl11:documentation>Retrieve product specific interest rates</wsdl11:documentation>
+      <wsdl11:input message="poi:RetrieveProductInterestRatesRq">
+    </wsdl11:input>
+      <wsdl11:output message="poi:RetrieveProductInterestRatesRs">
+    </wsdl11:output>
+    </wsdl11:operation>
+    <wsdl11:operation name="RetrieveProductOfferInformation">
+<wsdl11:documentation>Retrieve information relevant to Product offering.  Characteristic sets is a Card specific requirement and not applicable to other products at this stage</wsdl11:documentation>
+      <wsdl11:input message="poi:RetrieveProductOfferInformationRq">
+    </wsdl11:input>
+      <wsdl11:output message="poi:RetrieveProductOfferInformationRs">
+    </wsdl11:output>
+    </wsdl11:operation>
+  </wsdl11:portType>
+</wsdl11:definitions>

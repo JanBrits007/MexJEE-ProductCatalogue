@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ProductOfferInformation/v2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ProductOfferInformation/v2">
+<wsdl11:documentation xmlns:wsdl11="http://schemas.xmlsoap.org/wsdl/">This service retrieves Product offering information</wsdl11:documentation>
+  <wsdl:import location="EnterpriseContext_2008-09.wsdl" namespace="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext">
+    </wsdl:import>
+  <wsdl:import location="ProductOfferInformation_v2.0_EC2SoapBinding.wsdl" namespace="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ProductOfferInformation/v2">
+    </wsdl:import>
+  <wsdl:service name="ProductOfferInformation">
+    <wsdl:port binding="tns:ProductOfferInformationEC2SOAPBinding" name="ProductOfferInformationEC2SOAPBindingPort">
+      <soap:address location="https://ssg-d.it.nednet.co.za:454/services/ent/productandservicedevelopment/productofferinformation/v2"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
