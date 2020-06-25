@@ -6,5 +6,5 @@ CommercialRelease(
   	ucd_comp_link: 'https://ucd.nednet.co.za/#component/16f9e48f-b766-6101-4c47-da4660a22160/versions',
   	deployApp: "BPMX",
 	deployProc: "BPMX",
-  	email_recipients: 'supportWAS@nedbank.co.za, suryab@nedbank.co.za'
+  	email_recipients: 'supportWAS@nedbank.co.za, suryab@nedbank.co.za, tshepisol@nedbank.co.za'
 )
