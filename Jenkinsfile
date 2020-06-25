@@ -5,7 +5,7 @@ CommercialRelease(
 	ucd_app_name: 'SysProductCatalogueServiceComponents',
   	ucd_comp_link: 'https://ucd.nednet.co.za/#component/16f9e48f-b766-6101-4c47-da4660a22160/versions',
   	deployApp: "BPMX",
-	deployProc: "BPMX",
+	deployProc: "SingleCluster",
   	email_recipients: 'supportWAS@nedbank.co.za, suryab@nedbank.co.za',
  	gitUrl: 'http://bitbucket.nednet.co.za/scm/uid6793/bpmexjee-productcataloguecache.git'
 )
