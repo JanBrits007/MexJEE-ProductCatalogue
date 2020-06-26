@@ -57,12 +57,7 @@ public class ProductOfferInformationServiceClient
       List<CharacteristicType> characteristicFilters = new ArrayList<CharacteristicType>();
       Holder<List<za.co.nednet.it.contracts.services.ent.productandservicedevelopment.productofferinformation.v2.RetrieveProductInterestRatesResponse.InterestRateDetails>> interestRateDetails= new Holder<List<za.co.nednet.it.contracts.services.ent.productandservicedevelopment.productofferinformation.v2.RetrieveProductInterestRatesResponse.InterestRateDetails>>();
       Holder<List<za.co.nednet.it.contracts.services.ent.productandservicedevelopment.productofferinformation.v2.RetrieveProductInterestRatesResponse.CharacteristicSets>> characteristicSets = new Holder<List<za.co.nednet.it.contracts.services.ent.productandservicedevelopment.productofferinformation.v2.RetrieveProductInterestRatesResponse.CharacteristicSets>>();
-
-      IProductOfferInformation port = getProductOfferInformationPort();
-      
-      mLog.info(">> port " + port + " <<");
-
-      
+   
       getProductOfferInformationPort().retrieveProductInterestRates(interestRates, productIdentifier, featureIdentifier, channelType, productLine, characteristicFilters, interestRateDetails, characteristicSets, resultSet);
 
       for(InterestRateDetails interestRate : interestRateDetails.value)
@@ -97,13 +92,13 @@ public class ProductOfferInformationServiceClient
   {
     try
     {
-      mLog.info(">> Before port <<");
+      mLog.debug("Trace 1");
 
       ProductOfferInformation service = new ProductOfferInformation();
 
       IProductOfferInformation port = (IProductOfferInformation) service.getProductOfferInformationEC2SOAPBindingPort();
 
-      mLog.info(">> After port <<");
+      mLog.debug("Trace 2");
       
       String SERVICE_URL = "";
 
@@ -115,7 +110,7 @@ public class ProductOfferInformationServiceClient
       {
         SERVICE_URL = (String) ServiceLocator.getInstance().getString("ProductOfferInformationServiceUrl");
       }
-      mLog.info("SERVICE_URL >> " + SERVICE_URL + " <<");
+      mLog.debug("Trace 3 ");
 
       String USER_NAME_TOKEN = "";
       if ( Environment.EnableDefaults )
@@ -150,9 +145,6 @@ public class ProductOfferInformationServiceClient
     }
     catch (Exception ex)
     {
-      mLog.info(">> Exception << " + ex);
-      mLog.info(">> Exception1 << " + ex.getMessage());
-
       mLog.debug("Trace 12");
       ex.printStackTrace();
     }
