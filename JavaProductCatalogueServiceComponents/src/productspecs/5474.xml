@@ -1,6 +1,6 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1474</productIdentifier>
-   <name>Unlocked.me</name>
+   <name>Unlocked.me 5474</name>
    <shortDescription>Perfect for busy students, through free digital banking, this account gives you quick and easy access to cash.</shortDescription>
    <productPricing>
       <fee>
@@ -12,6 +12,13 @@
       </fee>
    </productPricing>
    <productOnAPageWebURL>/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html</productOnAPageWebURL>
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>OverdraftDetailsNewFlow</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
@@ -185,6 +192,19 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
+      <attributeGroupName>DecisioningControl</attributeGroupName>
+      <productAttributes>
+          <attributeType>boolean</attributeType>
+          <attributeName>ComponentSupportsDeclineReasons</attributeName>
+          <value>true</value>
+      </productAttributes>
+      <productAttributes>
+          <attributeType>boolean</attributeType>
+          <attributeName>EnforceAgeValidationRules</attributeName>
+          <value>true</value>
+      </productAttributes>
+  </productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Compliance</attributeType>
@@ -246,6 +266,11 @@
          <value>specific</value>
       </productAttributes>
       <productAttributes>
+          <attributeType>enum</attributeType>
+          <attributeName>riskAnalysisMechanismIntent0</attributeName>
+          <value>automated</value>
+      </productAttributes>
+      <productAttributes>
          <attributeType>enum</attributeType>
          <attributeName>riskAnalysisMechanismIntent1</attributeName>
          <value>skip</value>
@@ -289,6 +314,11 @@
          <attributeType>boolean</attributeType>
          <attributeName>requiresSecurityAndCollatoralManagement</attributeName>
          <value>false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>requiresElgiblityScoringAtIntents</attributeName>
+         <value>intent 0|intent 1</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -500,47 +530,6 @@
          <attributeType>string</attributeType>
          <attributeName>NonStraightThroughEmail</attributeName>
          <value>pietsewinkel@cresta.co.za</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>NB313373|CC309068|CC302005|CC309509|CC321229|NB204377|NB205220|Nb176911|Nb194177|NB184928|NB159728|CC313010|CC308729|CC314525|CC312134|NB179630|CC304688|NB193245|NB198207|NB168398|NB126302|NB159019|NB191327|NB309727|NB315582|NB305583|NB305577|NB312241|NB210415|NB156180|NB205392|NB300120|NB205438|NB205406|NB189887|CC306009|CC613516|CC313055|CC309068|NB196028|NB312264|NB174006|NB171960|NB205749|CC306009|NB310082|NB097557|NB321419|CC312587|CC312574|CC301411|NB195605|NB192090|NB206361|NB211339|NB611368|cc091222|CC308790|CC614617|CC303602|CC303335|CC609830|CC315337</value> 
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>397</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>5474</value>
-      </productAttributes>
-   </productAttributeGroup>
-    <productAttributeGroup>
-      <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>NB313373|CC309068|CC302005|CC309509|CC321229|NB204377|NB205220|Nb176911|Nb194177|NB184928|NB159728|CC313010|CC308729|CC314525|CC312134|NB179630|CC304688|NB193245|NB198207|NB168398|NB126302|NB159019|NB191327|NB309727|NB315582|NB305583|NB305577|NB312241|NB210415|NB156180|NB205392|NB300120|NB205438|NB205406|NB189887|CC306009|CC613516|CC313055|CC309068|NB196028|NB312264|NB174006|NB171960|NB205749|CC306009|NB310082|NB097557|NB321419|CC312587|CC312574|CC301411|NB195605|NB192090|NB206361|NB211339|NB611368|NB122886|cc091222|CC308790|CC614617|CC303602|CC303335|CC609830|CC315337</value> 
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>397</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>5474</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>nb204377|NB205220|Nb176911|Nb194177|NB184928|NB204377|CC313010|CC308729|CC314525|CC312134|NB179630|CC304688|NB193245|NB198207|NB168398|NB126302|NB159019|NB191327|NB309727|NB315582|NB305583|NB305577|NB312241|NB210415|NB156180|NB205392|NB300120|NB205438|NB205406|NB189887|CC306009|CC613516|CC313055|CC309068|NB196028|NB312264|NB174006|NB171960|NB205749|CC306009|NB310082|NB097557|NB321419|CC312587|CC312574|CC301411|NB195605|NB192090|NB206361|NB211339|NB611368|NB209680|NB198774|NB021326|NB150295|NB156961|NB151542|NB209372|NB301456|NB168473|NB198778|NB308806|NB135692|NB191733|NB155529|NB308123|NB204411|NB192944|NB132508|NB209651||NB301931|NB184719|NB305819|NB175691|NB177191|NB203171|NB179621|NB186390|NB193245|NB198207|NB168398|NB126302|NB159019|NB191327|NB309727|NB315582|NB305583|NB305577|NB312241|NB210415|NB156180|NB205392|NB300120|NB205438|NB205406|NB189887|NB122886|NB184924|NB195325|NB029942|NB191711|NB206361|NB177606|NB193352|NB199249|NB171554|NB187571|NB053583|NB125264|NB171083|NB186075|NB186825|NB047504|NB106082|NB151308|NB156268|NB198809|NB115821|NB112245|NB165027|NB151296|NB171358|NB204869|NB114494|NB156600|nb208743|NB302277|NB168065|nb042423|nb042493|nb169201|nb050552|nb150930|nb155341|nb184803|NB310467|nb155507|nb168081|nb158434|NB196758|nb054716|NB151319|NB204962|NB205508|nb307157|nb005993|NB157621|NB309727|NB315582|NB312241|NB210415|NB156180|NB205392|NB300120|NB205438|NB205406</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>5474</value>
       </productAttributes>
    </productAttributeGroup>
    <features>
@@ -1726,6 +1715,194 @@
             <attributeType>coreProvisioningParameter</attributeType>
             <attributeName>provisionInBranch</attributeName>
             <valueUnit>boolean</valueUnit>
+            <value>true</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
+   <features>
+      <featureIdentifier>1014</featureIdentifier>
+      <name>Overdraft</name>
+      <mandatory>false</mandatory>
+      <preSelected>true</preSelected>
+      <shortDescription>Overdraft facility on a current account</shortDescription>
+      <description>Detailed description of feature</description>
+      <featureGrouping>
+         <featureGroupName>Overdraft</featureGroupName>
+         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
+      </featureGrouping>
+      <featureType>BoltOn</featureType>
+      <referenceProductID>-1</referenceProductID>
+      <featurePricing>
+         <fee>
+            <type>InitiationFee</type>
+            <description>R43</description>
+            <currency>ZAR</currency>
+            <amount>43</amount>
+            <frequency>OnceOff</frequency>
+         </fee>
+      </featurePricing>
+      <featureFulfilment>
+         <channel>selfServiceWeb</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureFulfilment>
+         <channel>staffAssisted</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+      <featureDisplayPosition>preOffer</featureDisplayPosition>
+      <featureAttributeGroup>
+         <attributeGroupName>SystemRelated</attributeGroupName>
+         <featureAttributes>
+            <attributeType>Flag</attributeType>
+            <attributeName>StraightThroughProcess</attributeName>
+            <value>true</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>legacyProductID</attributeName>
+            <valueUnit>string</valueUnit>
+            <value>1176</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>provisioningMechanism</attributeName>
+            <value>provisionToCRAG</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ClientVerificationInformation</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>AdditionalPersonalInformation</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>MaritalStatus</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>EmploymentDetails</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>IncomeDetails</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ExpensesBasic</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>PreOfferFinePrint</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>ArrangementSubmissionSalesMilestone</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>Pre-agreement Quote|nedbank-commercial-release/UnsecuredLendingContract|ARRANGEMENT|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>DocumentDescriptionStaffAssisted</attributeType>
+            <attributeName>Pre-agreement Quote|nedbank-commercial-release/UnsecuredLendingContractStaffAssisted|ARRANGEMENT|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Download</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Email</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>WetSign</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>DigitallySign</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>ElectronicallySign</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>Overdraft Application Form|nedbank-commercial-release/AppFormODStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Download</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Email</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>WetSign</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>ElectronicallySign</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>FinalApplicationQARequired</attributeName>
+            <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>requiresDEAStatement</attributeName>
+            <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>requiresSourcePaylslip</attributeName>
+            <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>requiresSalaryToBeDepositedToCurrentAccount</attributeName>
+            <value>true</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>DecisioningControl</attributeGroupName>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>ComponentSupportsDeclineReasons</attributeName>
+            <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>EnforceSingleOverdraftRule</attributeName>
             <value>true</value>
          </featureAttributes>
       </featureAttributeGroup>

@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1" xmlns:a="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1389</productIdentifier>
-   <name>Nedbank Pay-As-You-Use 5319</name>
+   <name>Nedbank Pay-As-You-Use 5389</name>
    <shortDescription>A no frills, transparent account with a flat monthly fee, pay only for what you use.</shortDescription>
    <productPricing>
       <fee>
@@ -231,16 +230,16 @@
          <value>true</value>
          <valueUnit>bool</valueUnit>
       </productAttributes>
-      <a:productAttributes>
-         <a:attributeType>string</a:attributeType>
-         <a:attributeName>EligibleDCARRanges</a:attributeName>
-         <a:value>0-100000|100001-200000</a:value>
-      </a:productAttributes>
-      <a:productAttributes>
-         <a:attributeType>string</a:attributeType>
-         <a:attributeName>EligibleSegments</a:attributeName>
-         <a:value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</a:value>
-      </a:productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EligibleDCARRanges</attributeName>
+         <value>0-100000|100001-200000</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EligibleSegments</attributeName>
+         <value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>ProductFeatures</attributeGroupName>
@@ -622,27 +621,27 @@
          <value>preVerificationProvisioning</value>
       </productAttributes>
    </productAttributeGroup>
-   <a:productAttributeGroup>
-      <a:attributeGroupName>DecisioningControl</a:attributeGroupName>
-      <a:productAttributes>
-         <a:attributeType>boolean</a:attributeType>
-         <a:attributeName>ComponentSupportsDeclineReasons</a:attributeName>
-         <a:value>true</a:value>
-      </a:productAttributes>
-   </a:productAttributeGroup>
-    <a:productAttributeGroup>
-        <a:attributeGroupName>CommunicationStrategyConfiguration</a:attributeGroupName>
-        <a:productAttributes>
-            <a:attributeType>int</a:attributeType>
-            <a:attributeName>CommunicationSystem</a:attributeName>
-            <a:value>GenCom</a:value>
-        </a:productAttributes>
-        <a:productAttributes>
-            <a:attributeType>int</a:attributeType>
-            <a:attributeName>productType</a:attributeName>
-            <a:value>EMAILSMS</a:value>
-        </a:productAttributes>
-    </a:productAttributeGroup>   
+   <productAttributeGroup>
+      <attributeGroupName>DecisioningControl</attributeGroupName>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>ComponentSupportsDeclineReasons</attributeName>
+         <value>true</value>
+      </productAttributes>
+   </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CommunicationSystem</attributeName>
+            <value>GenCom</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>productType</attributeName>
+            <value>EMAILSMS</value>
+        </productAttributes>
+    </productAttributeGroup>   
    <features>
       <featureIdentifier>1014</featureIdentifier>
       <name>Overdraft</name>
@@ -696,11 +695,11 @@
             <valueUnit>string</valueUnit>
             <value>1176</value>
          </featureAttributes>
-         <a:featureAttributes>
-            <a:attributeType>string</a:attributeType>
-            <a:attributeName>provisioningMechanism</a:attributeName>
-            <a:value>provisionToCRAG</a:value>
-         </a:featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>provisioningMechanism</attributeName>
+            <value>provisionToCRAG</value>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
@@ -734,6 +733,13 @@
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>ArrangementSubmissionSalesMilestone</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
          <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>DocumentDescription</attributeType>
@@ -764,65 +770,65 @@
             <attributeName>ElectronicallySign</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
-      <a:featureAttributeGroup>
-         <a:attributeGroupName>productDocumentPresentation_ActivateProducts</a:attributeGroupName>
-         <a:featureAttributes>
-            <a:attributeType>DocumentDescription</a:attributeType>
-            <a:attributeName>Overdraft Application Form|nedbank-commercial-release/AppFormODStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</a:attributeName>
-         </a:featureAttributes>
-         <a:featureAttributes>
-            <a:attributeType>AvailableAction</a:attributeType>
-            <a:attributeName>Download</a:attributeName>
-         </a:featureAttributes>
-         <a:featureAttributes>
-            <a:attributeType>AvailableAction</a:attributeType>
-            <a:attributeName>Email</a:attributeName>
-         </a:featureAttributes>
-         <a:featureAttributes>
-            <a:attributeType>AvailableAction</a:attributeType>
-            <a:attributeName>WetSign</a:attributeName>
-         </a:featureAttributes>
-         <a:featureAttributes>
-            <a:attributeType>AvailableAction</a:attributeType>
-            <a:attributeName>ElectronicallySign</a:attributeName>
-         </a:featureAttributes>
-      </a:featureAttributeGroup>
-      <a:featureAttributeGroup>
-         <a:attributeGroupName>BusinessProcessExecutionConfiguration</a:attributeGroupName>
-         <a:featureAttributes>
-            <a:attributeType>boolean</a:attributeType>
-            <a:attributeName>FinalApplicationQARequired</a:attributeName>
-            <a:value>true</a:value>
-         </a:featureAttributes>
-         <a:featureAttributes>
-            <a:attributeType>boolean</a:attributeType>
-            <a:attributeName>requiresDEAStatement</a:attributeName>
-            <a:value>true</a:value>
-         </a:featureAttributes>
-         <a:featureAttributes>
-            <a:attributeType>boolean</a:attributeType>
-            <a:attributeName>requiresSourcePaylslip</a:attributeName>
-            <a:value>true</a:value>
-         </a:featureAttributes>
-         <a:featureAttributes>
-            <a:attributeType>boolean</a:attributeType>
-            <a:attributeName>requiresSalaryToBeDepositedToCurrentAccount</a:attributeName>
-            <a:value>true</a:value>
-         </a:featureAttributes>
-      </a:featureAttributeGroup>
-      <a:featureAttributeGroup>
-         <a:attributeGroupName>DecisioningControl</a:attributeGroupName>
-         <a:featureAttributes>
-            <a:attributeType>boolean</a:attributeType>
-            <a:attributeName>ComponentSupportsDeclineReasons</a:attributeName>
-            <a:value>true</a:value>
-         </a:featureAttributes>
-         <a:featureAttributes>
-            <a:attributeType>boolean</a:attributeType>
-            <a:attributeName>EnforceSingleOverdraftRule</a:attributeName>
-            <a:value>true</a:value>
-         </a:featureAttributes>
-      </a:featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>Overdraft Application Form|nedbank-commercial-release/AppFormODStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Download</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Email</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>WetSign</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>ElectronicallySign</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>FinalApplicationQARequired</attributeName>
+            <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>requiresDEAStatement</attributeName>
+            <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>requiresSourcePaylslip</attributeName>
+            <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>requiresSalaryToBeDepositedToCurrentAccount</attributeName>
+            <value>true</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>DecisioningControl</attributeGroupName>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>ComponentSupportsDeclineReasons</attributeName>
+            <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>EnforceSingleOverdraftRule</attributeName>
+            <value>true</value>
+         </featureAttributes>
+      </featureAttributeGroup>
    </features>
    <features>
       <featureIdentifier>1402</featureIdentifier>
