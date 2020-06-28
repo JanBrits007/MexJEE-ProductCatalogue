@@ -41,25 +41,12 @@
             <attributeType>EligibilityRule</attributeType>
             <attributeName>Age</attributeName>
             <isComparable>false</isComparable>
-            <minValue>18</minValue>
+            <minValue>0</minValue>
             <maxValue>999</maxValue>
             <valueUnit>year</valueUnit>
             <description>be 18 years or older</description>
         </productAttributes>
     </productAttributeGroup>
-     <productAttributeGroup>
-        <attributeGroupName>DecisioningControl</attributeGroupName>
-        <productAttributes>
-            <attributeType>boolean</attributeType>
-            <attributeName>ComponentSupportsDeclineReasons</attributeName>
-            <value>true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>boolean</attributeType>
-            <attributeName>EnforceAgeValidationRules</attributeName>
-            <value>true</value>
-        </productAttributes>
-    </productAttributeGroup> 
     <productAttributeGroup>
         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
         <productAttributes>
@@ -106,11 +93,6 @@
     <productAttributeGroup>
         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
         <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>requiresElgiblityScoringAtIntents</attributeName>
-            <value>intent 0</value>
-        </productAttributes>
-        <productAttributes>
             <attributeType>int</attributeType>
             <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
             <value>5</value>
@@ -134,11 +116,6 @@
             <attributeType>enum</attributeType>
             <attributeName>riskAnalysisMechanism</attributeName>
             <value>specific</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>enum</attributeType>
-            <attributeName>riskAnalysisMechanismIntent0</attributeName>
-            <value>automated</value>
         </productAttributes>
         <productAttributes>
             <attributeType>enum</attributeType>
@@ -200,25 +177,7 @@
             <attributeName>isNoticeProduct</attributeName>
             <value>true</value>
         </productAttributes>
-        <a:productAttributes>
-            <a:attributeType>string</a:attributeType>
-            <a:attributeName>requiresElgiblityScoringAtIntents</a:attributeName>
-            <a:value>intent 0|intent 1</a:value>
-        </a:productAttributes>
     </productAttributeGroup>
-    <a:productAttributeGroup>
-       <a:attributeGroupName>DecisioningControl</a:attributeGroupName>
-       <a:productAttributes>
-          <a:attributeType>boolean</a:attributeType>
-          <a:attributeName>ComponentSupportsDeclineReasons</a:attributeName>
-          <a:value>true</a:value>
-       </a:productAttributes>
-       <a:productAttributes>
-          <a:attributeType>boolean</a:attributeType>
-          <a:attributeName>EnforceAgeValidationRules</a:attributeName>
-          <a:value>true</a:value>
-       </a:productAttributes>
-    </a:productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productCodeMappings</attributeGroupName>
         <productAttributes>
