@@ -12,19 +12,19 @@
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Evidence</attributeType>
-         <attributeName>ProofOfIdentificationClause</attributeName>
+         <attributeName>ProofOfIdentificationClauseV2</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
       <productAttributes>
          <attributeType>Evidence</attributeType>
-         <attributeName>Optional|an_overdraft_facility|LatestSalaryProofClause</attributeName>
+         <attributeName>LatestBankStatementsClauseV2</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
       <productAttributes>
          <attributeType>Evidence</attributeType>
-         <attributeName>Optional|an_overdraft_facility|LatestBankStatementsClause</attributeName>
+         <attributeName>AdditionalDocument</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
@@ -37,7 +37,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OverdraftDetailsV2|min=10000.00~max=200000.00</attributeName>
+         <attributeName>OverdraftDetailsV2|min=10000.00~max=300000.00</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -197,6 +197,11 @@
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
          <value>VerifyIdentity=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|ActivateProductsGatherProductDetails=Customisation|FinalizeFrontOfficeInteraction=Customisation</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>requiresElgiblityScoringAtIntents</attributeName>
+         <value>intent 0|intent 1</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -396,6 +401,16 @@
          <attributeName>ProvisioningPhase</attributeName>
          <value>preVerificationProvisioning</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productCategoryName</attributeName>
+         <value>PROFESSIONALBANKING</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>boolean</attributeType>
+        <attributeName>consolidatedLeadEmail</attributeName>
+        <value>true</value>
+      </productAttributes> 
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>DecisioningControl</attributeGroupName>
@@ -481,7 +496,7 @@
       </featureAttributeGroup>
    </features>
    <features>
-      <featureIdentifier>5386</featureIdentifier>
+      <featureIdentifier>1164</featureIdentifier>
       <name>Professional Cheque Card</name>
       <mandatory>false</mandatory>
       <preSelected>false</preSelected>
@@ -489,7 +504,7 @@
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=5386~allowCardCollection~allowCardDelivery</attributeName>
+            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1164~allowCardCollection~allowCardDelivery</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>   

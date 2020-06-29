@@ -16,19 +16,19 @@
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Evidence</attributeType>
-         <attributeName>ProofOfIdentificationClause</attributeName>
+         <attributeName>ProofOfIdentificationClauseV2</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
       <productAttributes>
          <attributeType>Evidence</attributeType>
-         <attributeName>Optional|an_overdraft_facility|LatestSalaryProofClause</attributeName>
+         <attributeName>LatestBankStatementsClauseV2</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
       <productAttributes>
          <attributeType>Evidence</attributeType>
-         <attributeName>Optional|an_overdraft_facility|LatestBankStatementsClause</attributeName>
+         <attributeName>EducationQualification</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
@@ -41,7 +41,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OverdraftDetailsV2|min=500.00~max=200000.00~isMandatory=true</attributeName>
+         <attributeName>OverdraftDetailsV2|min=2000.00~max=300000.00~isMandatory=true</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -75,7 +75,7 @@
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Young professional one terms and conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
+         <attributeName>Young professional one terms and conditions|nedbank-commercial-release/TermsAndConditionsProfOne|N/A|N/A|N/A|N/A</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -160,7 +160,7 @@
       <productAttributes>
           <attributeType>string</attributeType>
           <attributeName>requiresElgiblityScoringAtIntents</attributeName>
-          <value>intent 0</value>
+          <value>intent 1</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -195,7 +195,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>breadcrumbSteps</attributeName>
-         <value>Authenticate|Product Setup|About You|Finalisation|Customisation</value>
+         <value>Authenticate|Product Setup|About You|Credit Info|Finalisation|Customisation</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -400,6 +400,16 @@
          <attributeName>ProvisioningPhase</attributeName>
          <value>preVerificationProvisioning</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productCategoryName</attributeName>
+         <value>PROFESSIONALBANKING</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>boolean</attributeType>
+        <attributeName>consolidatedLeadEmail</attributeName>
+        <value>true</value>
+      </productAttributes> 
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>DecisioningControl</attributeGroupName>
