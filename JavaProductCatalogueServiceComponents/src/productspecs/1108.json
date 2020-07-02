@@ -13,8 +13,7 @@
           "description": "R 133.00 pm"
         }
       ],
-      "isMandatory": true,
-      "productFeature":[
+      "productFeature": [
         {
           "name": "Credit card",
           "key": "CreditCardDetailsV2",
@@ -31,263 +30,59 @@
             "a once-off initiation fee will be charged."
           ]
         }
-      ]
-    },
-    {
-      "featureIdentifier": "1374",
-      "name": "eNotes",
-      "mandatory": "false",
-      "preSelected": "true",
-      "shortDescription": "R0.45 per SMS",
-      "description": "Keep track of your finances with the eNotes SMS notifications, anytime, anywhere. eNotes keeps you informed about all transactions on your account.",
-      "featureGrouping": {
-        "featureGroupName": "Loyalty",
-        "featureGroupRuleForProduct": "Optional"
-      },
-      "featureType": "BoltOn",
-      "referenceProductID": "-1",
-      "featurePricing": {
-        "fee": [
-          {
-            "type": "AdminFee",
-            "description": "R0.45 per sms",
-            "currency": "ZAR",
-            "amount": "0.45",
-            "frequency": "Transactional"
-          }
-        ]
-      },
-      "featureFulfilment": [
-        {
-          "channel": "selfServiceWeb",
-          "fulfilmentType": "setting",
-          "fulfilmentInputSetting1": "N/A",
-          "fulfilmentInputSetting2": "N/A"
-        },
-        {
-          "channel": "staffAssisted",
-          "fulfilmentType": "setting",
-          "fulfilmentInputSetting1": "N/A",
-          "fulfilmentInputSetting2": "N/A"
-        }
       ],
-      "featureDisplayAdditionalInformationWidget": "No",
-      "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
-      "featureDisplayPosition": "PAID_VAS",
-      "featureAttributeGroup": [
+      "features": [
         {
-          "attributeGroupName": "SystemRelated",
-          "featureAttributes": {
-            "attributeType": "Flag",
-            "attributeName": "StraightThroughProcess",
-            "value": "True"
-          }
+          "featureIdentifier": "1164",
+          "name": "Cheque card",
+          "mandatory": "false",
+          "preSelected": "true",
+          "shortDescription": "R185 once off",
+          "description": "Keep track of your finances with the eNotes SMS notifications, anytime, anywhere. eNotes keeps you informed about all transactions on your account.",
+          "featureGrouping": {
+            "featureGroupName": "Loyalty",
+            "featureGroupRuleForProduct": "Optional"
+          },
+          "featureDisable": ["1454"]
         },
         {
-          "attributeGroupName": "coreProvisioningParameters",
-          "featureAttributes": [
-            {
-              "attributeType": "coreProvisioningParameter",
-              "attributeName": "FeatureCode",
-              "valueUnit": "string",
-              "value": "ThisisthesFeaturecode"
-            },
-            {
-              "attributeType": "coreProvisioningParameter",
-              "attributeName": "provisionInBranch",
-              "valueUnit": "boolean",
-              "value": "false"
-            },
-            {
-              "attributeType": "coreProvisioningParameter",
-              "attributeName": "legacyProductID",
-              "valueUnit": "string",
-              "value": "1179"
-            }
-          ]
+          "featureIdentifier": "1374",
+          "name": "eNotes",
+          "mandatory": "false",
+          "preSelected": "false",
+          "shortDescription": "R12 pm",
+          "description": "A Nedbank Professional cheque card lets you pay as you swipe",
+          "featureGrouping": {
+            "featureGroupName": "Loyalty",
+            "featureGroupRuleForProduct": "Optional"
+          },
+          "featureDisable": []
         },
         {
-          "attributeGroupName": "placeholder-Fullstructure",
-          "featureAttributes": {
-            "attributeType": "type",
-            "attributeName": "name",
-            "minValue": "1",
-            "maxValue": "2",
-            "valueUnit": "text",
-            "value": "some value"
-          }
-        }
-      ]
-    },
-    {
-      "featureIdentifier": "1008",
-      "name": "No Funds Alert Services",
-      "mandatory": "false",
-      "preSelected": "true",
-      "shortDescription": "R13.00 per SMS",
-      "description": "No funds alert is a service that provides a delay of the transactions being returned,due to insufficient funds in the account. Helping you save on unnecessary dishonoured penalty fees.",
-      "featureGrouping": {
-        "featureGroupName": "Loyalty",
-        "featureGroupRuleForProduct": "Optional"
-      },
-      "featureType": "BoltOn",
-      "referenceProductID": "-1",
-      "featurePricing": {
-        "fee": [
-          {
-            "type": "AdminFee",
-            "description": "R13.00 per sms",
-            "currency": "ZAR",
-            "amount": "13.00",
-            "frequency": "Transactional"
-          }
-        ]
-      },
-      "featureFulfilment": [
-        {
-          "channel": "selfServiceWeb",
-          "fulfilmentType": "setting",
-          "fulfilmentInputSetting1": "N/A",
-          "fulfilmentInputSetting2": "N/A"
+          "featureIdentifier": "1008",
+          "name": "No Funds Alert Services",
+          "mandatory": "false",
+          "preSelected": "false",
+          "shortDescription": "R13 per sms",
+          "description": "No funds alert is a service that provides a delay of the transactions being returned,due to insufficient funds in the account. Helping you save on unnecessary dishonoured penalty fees.",
+          "featureGrouping": {
+            "featureGroupName": "Loyalty",
+            "featureGroupRuleForProduct": "Optional"
+          },
+          "featureDisable": []
         },
         {
-          "channel": "staffAssisted",
-          "fulfilmentType": "setting",
-          "fulfilmentInputSetting1": "N/A",
-          "fulfilmentInputSetting2": "N/A"
-        }
-      ],
-      "featureDisplayAdditionalInformationWidget": "No",
-      "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
-      "featureDisplayPosition": "PAID_VAS",
-      "featureAttributeGroup": [
-        {
-          "attributeGroupName": "SystemRelated",
-          "featureAttributes": {
-            "attributeType": "Flag",
-            "attributeName": "StraightThroughProcess",
-            "value": "True"
-          }
-        },
-        {
-          "attributeGroupName": "coreProvisioningParameters",
-          "featureAttributes": [
-            {
-              "attributeType": "coreProvisioningParameter",
-              "attributeName": "FeatureCode",
-              "valueUnit": "string",
-              "value": "ThisisthesFeaturecode"
-            },
-            {
-              "attributeType": "coreProvisioningParameter",
-              "attributeName": "provisionInBranch",
-              "valueUnit": "boolean",
-              "value": "false"
-            },
-            {
-              "attributeType": "coreProvisioningParameter",
-              "attributeName": "legacyProductID",
-              "valueUnit": "string",
-              "value": "1213"
-            }
-          ]
-        },
-        {
-          "attributeGroupName": "placeholder-Fullstructure",
-          "featureAttributes": {
-            "attributeType": "type",
-            "attributeName": "name",
-            "minValue": "1",
-            "maxValue": "2",
-            "valueUnit": "text",
-            "value": "some value"
-          }
-        }
-      ]
-    },
-    {
-      "featureIdentifier": "1454",
-      "name": "Greenbacks Rewards Membership",
-      "mandatory": "false",
-      "preSelected": "true",
-      "shortDescription": "R23.00 per month",
-      "description": "Nedbank Greenback member, you can earn Nedbank Greenbacks on all your eligible card spend*, which you can then redeem for a variety of exciting rewards.",
-      "featureGrouping": {
-        "featureGroupName": "Loyalty",
-        "featureGroupRuleForProduct": "Optional"
-      },
-      "featureType": "BoltOn",
-      "referenceProductID": "-1",
-      "featurePricing": {
-        "fee": [
-          {
-            "type": "AdminFee",
-            "description": "R23.00 per month",
-            "currency": "ZAR",
-            "amount": "23.00",
-            "frequency": "Monthly"
-          }
-        ]
-      },
-      "featureFulfilment": [
-        {
-          "channel": "selfServiceWeb",
-          "fulfilmentType": "setting",
-          "fulfilmentInputSetting1": "N/A",
-          "fulfilmentInputSetting2": "N/A"
-        },
-        {
-          "channel": "staffAssisted",
-          "fulfilmentType": "setting",
-          "fulfilmentInputSetting1": "N/A",
-          "fulfilmentInputSetting2": "N/A"
-        }
-      ],
-      "featureDisplayAdditionalInformationWidget": "No",
-      "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
-      "featureDisplayPosition": "PAID_VAS",
-      "featureAttributeGroup": [
-        {
-          "attributeGroupName": "SystemRelated",
-          "featureAttributes": {
-            "attributeType": "Flag",
-            "attributeName": "StraightThroughProcess",
-            "value": "True"
-          }
-        },
-        {
-          "attributeGroupName": "coreProvisioningParameters",
-          "featureAttributes": [
-            {
-              "attributeType": "coreProvisioningParameter",
-              "attributeName": "FeatureCode",
-              "valueUnit": "string",
-              "value": "ThisisthesFeaturecode"
-            },
-            {
-              "attributeType": "coreProvisioningParameter",
-              "attributeName": "provisionInBranch",
-              "valueUnit": "boolean",
-              "value": "false"
-            },
-            {
-              "attributeType": "coreProvisioningParameter",
-              "attributeName": "legacyProductID",
-              "valueUnit": "string",
-              "value": ""
-            }
-          ]
-        },
-        {
-          "attributeGroupName": "placeholder-Fullstructure",
-          "featureAttributes": {
-            "attributeType": "type",
-            "attributeName": "name",
-            "minValue": "1",
-            "maxValue": "2",
-            "valueUnit": "text",
-            "value": "some value"
-          }
+          "featureIdentifier": "1454",
+          "name": "Greenbacks Rewards Membership",
+          "mandatory": "false",
+          "preSelected": "false",
+          "shortDescription": "R23 pm",
+          "description": "Nedbank Greenback member, you can earn Nedbank Greenbacks on all your eligible card spend*, which you can then redeem for a variety of exciting rewards.",
+          "featureGrouping": {
+            "featureGroupName": "Loyalty",
+            "featureGroupRuleForProduct": "Optional"
+          },
+          "featureDisable": []
         }
       ]
     }
