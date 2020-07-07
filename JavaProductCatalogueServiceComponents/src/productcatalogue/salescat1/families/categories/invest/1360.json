@@ -1,0 +1,174 @@
+{
+	"productIdentifier": 1360,
+	"name": "MoneyTrader",
+	"shortDescription": "The Nedbank MoneyTrader is a money market investment account offering highly competitive rates that are linked to money market conditions.",
+	"productPricing": [
+		{
+		  "type": "InterestRate",
+		  "value": "%upperRateDec-1360%",
+		  "description": "%upperRate-1360%% pa"
+		}
+	  ],  
+	"specialFeature": "24 hours",
+	"salesHighlights": ["Minimum investment amount - R50 000",
+	"Minimum investment period - 24 hours",
+	"No monthly fees or commissions",
+	"Initial capital fully guaranteed"],
+	"redirect": {
+		"shouldRedirect": false,
+		"redirectUrl": null
+	},
+	"actions": [{
+		"type": "SELECT",
+		"text": "Select",
+		"environments": ["dev",
+		"ete",
+		"qa",
+		"qa_kiosk"]
+	},
+	{
+		"type": "REDIRECT",
+		"text": "Select",
+		"environments": ["prod"],
+		"value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
+	},
+	{
+		"type": "DETAIL",
+		"text": "Details"
+	},
+	{
+		"type": "COMPARE",
+		"text": "Compare"
+	}],
+	"productFeatures": [{
+		"name": "Maximuminterestrate",
+		"displayName": "Maximum interest rate",
+		"description": "up to %upperRate-1360%%"
+	},
+	{
+		"name": "Investmentterm",
+		"displayName": "Investment term",
+		"description": "24 hours"
+	},
+	{
+		"name": "MinimumInvestmentAmount",
+		"displayName": "Minimum Investment Amount",
+		"description": "R 50 000"
+	},
+	{
+		"name": "MinimumInvestmentPeriod",
+		"displayName": "Minimum Investment Period",
+		"description": "24 hours"
+	},
+	{
+		"name": "TermvsNotice",
+		"displayName": "Term vs Notice",
+		"description": "Notice"
+	},
+	{
+		"name": "Freeaccesspriortoterm",
+		"displayName": "Free access prior to term",
+		"description": "Yes"
+	},
+	{
+		"name": "AdditionalDeposits",
+		"displayName": "Additional Deposits",
+		"description": "Yes"
+	},
+	{
+		"name": "AgeRestriction",
+		"displayName": "Age Restriction",
+		"description": "N/A"
+	},
+	{
+		"name": "Interestpaymentfrequency",
+		"displayName": "Interest payment frequency",
+		"description": "Monthly (Interest is calculated daily and may be paid out or capitalised)"
+	},
+	{
+		"name": "ElectronicAcces",
+		"displayName": "Electronic Access",
+		"description": "included"
+	},
+	{
+		"name": "Stoporders",
+		"displayName": "Stop orders",
+		"description": "included"
+	},
+	{
+		"name": "Statements",
+		"displayName": "Statements",
+		"description": "included"
+	},
+	{
+		"name": "Fees",
+		"displayName": "Fees",
+		"description": "Cash deposit fees"
+	},
+	{
+		"name": "Investmentterm2",
+		"displayName": "Investment term",
+		"description": "24 hours"
+	},
+	{
+		"name": "Withdrawals",
+		"displayName": "Withdrawals",
+		"description": "1 days' notice required: minimum - R5000"
+	},
+	{
+		"name": "Additionaldeposits",
+		"displayName": "Additional deposits",
+		"description": "Minimum R5000"
+	},
+	{
+		"name": "Fixedrate",
+		"displayName": "Fixed rate?",
+		"description": "No"
+	}],
+	"eligibilityRules": [{
+		"attributeName": "Period",
+		"attributeType": "EligibilityRule",
+		"description": "All individuals, Small Business Services and Business Banking clients",
+		"maxValue": "1",
+		"minValue": "0",
+		"valueUnit": "month"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "Age",
+		"minValue": "0",
+		"maxValue": "54",
+		"valueUnit": "year",
+		"description": ""
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "Age",
+		"minValue": "55",
+		"maxValue": "999",
+		"valueUnit": "year",
+		"description": "No age restrictions"
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "InvestStart",
+		"minValue": "50000",
+		"maxValue": "999999999",
+		"valueUnit": "ZAR",
+		"description": ""
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "InvestMonthly",
+		"minValue": "5000",
+		"maxValue": "99999999",
+		"valueUnit": "ZAR",
+		"description": ""
+	}],
+	"lifeCycleStatus": "AVAILABLE",
+	"calculator": {
+		"term": 0,
+		"notice": 1,
+		"productType": 31
+	}
+}

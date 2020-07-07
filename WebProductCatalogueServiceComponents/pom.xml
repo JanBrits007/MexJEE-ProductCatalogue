@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+ 
+    <artifactId>WebProductCatalogueServiceComponents</artifactId>
+    <packaging>war</packaging>
+
+    <parent>
+        <groupId>BPMX</groupId>
+        <artifactId>ProductCatalogueCache</artifactId>
+        <version>1.32.0-SNAPSHOT</version>
+    </parent>
+
+    <build>
+        <finalName>WebProductCatalogueServiceComponents</finalName>
+        <sourceDirectory>src</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>${maven.war.plugin.version}</version>
+                <configuration>
+                    <warSourceDirectory>WebContent</warSourceDirectory>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+
+        <!-- There should be no other dependencies here like 3rd party jars or was jars, all dependencies should be defined in the root pom -->
+        <dependency>
+            <groupId>BPMX</groupId>
+            <artifactId>JavaProductCatalogueServiceComponents</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>BPMX</groupId>
+            <artifactId>JavaBusinessCaseManagementDTO</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>
