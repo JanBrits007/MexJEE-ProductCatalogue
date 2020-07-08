@@ -140,6 +140,10 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
+         <attributeName>CardDeliveryDetails|restrictOptOut=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
          <attributeName>RelationshipBankerInformationV2|sideStepperDisplayName=Your relationship banker</attributeName>
       </productAttributes>
       <productAttributes>
@@ -170,6 +174,11 @@
       </productAttributes>
       <productAttributes>
          <attributeType>enum</attributeType>
+         <attributeName>riskAnalysisMechanismIntent0</attributeName>
+         <value>automated</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>enum</attributeType>
          <attributeName>riskAnalysisMechanismIntent1</attributeName>
          <value>skip</value>
       </productAttributes>
@@ -181,7 +190,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|ActivateProductsGatherProductDetails|FinalizeFrontOfficeInteraction</value>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|ActivateProductsGatherProductDetails|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -196,7 +205,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|ActivateProductsGatherProductDetails=Customisation|FinalizeFrontOfficeInteraction=Customisation</value>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Product Setup|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|ActivateProductsGatherProductDetails=Customisation|FinalizeFrontOfficeInteraction=Customisation</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -458,10 +467,6 @@
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDeliveryDetails|restrictOptOut=true</attributeName>
-         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
