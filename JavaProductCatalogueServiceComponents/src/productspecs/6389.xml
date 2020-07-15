@@ -742,7 +742,7 @@
          <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Pre-agreement Quote|nedbank-commercial-release/UnsecuredLendingContract|ARRANGEMENT|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
+            <attributeName>Pre-agreement Quote|nedbank-commercial-release/CombinedProductContract|ARRANGEMENT|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>DocumentDescriptionStaffAssisted</attributeType>
@@ -826,6 +826,39 @@
             <attributeType>boolean</attributeType>
             <attributeName>EnforceSingleOverdraftRule</attributeName>
             <value>true</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContract</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContract</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericDetails</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContract</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraftTC|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subClientsRightsAndObligations|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subSignatures|ContractComponentProductType=1014</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
