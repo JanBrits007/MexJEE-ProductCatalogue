@@ -201,6 +201,23 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 return getProductSpecificationXMLByID(substitutedProductID);
             }
         }
+        
+        if (substituteForIPSubnets != null) {
+            mLog.debug("Trace 8 >>" + substituteForIPSubnets + "<<");
+
+            // Get the business case details.
+            BusinessCaseDAO dao = new BusinessCaseDAO();
+            BusinessCaseHeader caseHeader = dao.retrieveBusinessCase(caseID);
+
+            mLog.debug("Trace 9 >>" + caseHeader.getInitiatingChannelID().toLowerCase() + "<<");
+
+            if (substituteForIPSubnets.toLowerCase().contains(caseHeader.getInitiatingChannelID().toLowerCase())) {
+                // We must substitute.
+                mLog.debug("Trace 10 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + substitutedProductID + "<< for channel >>" + caseHeader.getInitiatingChannelID() + "<<");
+
+                return getProductSpecificationXMLByID(substitutedProductID);
+            }
+        }
 
         if (bankerWhitelist != null) {
             mLog.debug("Trace 12 >>" + bankerWhitelist + "<<");
