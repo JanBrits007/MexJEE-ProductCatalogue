@@ -1732,6 +1732,84 @@
             <attributeName>provisionInBranch</attributeName>
             <valueUnit>boolean</valueUnit>
             <value>true</value>
+         </featureAttributes>         
+      </featureAttributeGroup>
+   </features>
+   <features>
+      <featureIdentifier>1014</featureIdentifier>
+      <name>Overdraft</name>
+      <mandatory>false</mandatory>
+      <preSelected>true</preSelected>
+      <shortDescription>Overdraft facility on a current account</shortDescription>
+      <description>Detailed description of feature</description>
+      <featureGrouping>
+         <featureGroupName>Overdraft</featureGroupName>
+         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
+      </featureGrouping>
+      <featureType>BoltOn</featureType>
+      <referenceProductID>-1</referenceProductID>
+      <featurePricing>
+         <fee>
+            <type>InitiationFee</type>
+            <description>R43</description>
+            <currency>ZAR</currency>
+            <amount>43</amount>
+            <frequency>OnceOff</frequency>
+         </fee>
+      </featurePricing>
+      <featureFulfilment>
+         <channel>selfServiceWeb</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureFulfilment>
+         <channel>staffAssisted</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+      <featureDisplayPosition>preOffer</featureDisplayPosition>
+      <featureAttributeGroup>
+         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+         <featureAttributes>
+            <attributeType>type</attributeType>
+            <attributeName>name</attributeName>
+            <minValue>1</minValue>
+            <maxValue>2</maxValue>
+            <valueUnit>test</valueUnit>
+            <value>some value</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>SystemRelated</attributeGroupName>
+         <featureAttributes>
+            <attributeType>Flag</attributeType>
+            <attributeName>StraightThroughProcess</attributeName>
+            <value>false</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>FeatureCode</attributeName>
+            <valueUnit>string</valueUnit>
+            <value>ThisisthesFeaturecode</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>provisionInBranch</attributeName>
+            <valueUnit>boolean</valueUnit>
+            <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>legacyProductID</attributeName>
+            <valueUnit>string</valueUnit>
+            <value>1176</value>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
