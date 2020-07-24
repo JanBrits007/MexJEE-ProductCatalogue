@@ -16,32 +16,32 @@
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ApplicationDetails|ng-component=ng-application-details~sideStepperDisplayName=Application details~child-ng-components=ng-country-of-residence,ng-marital-details,ng-employment-details,ng-education-details,ng-salary-bank-details</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>FinancialDetails|ng-component=ng-application-details~sideStepperDisplayName=Financial details~displaySummary=true~child-ng-components=ng-individual-income-details,ng-individual-debt-obligations,ng-individual-household-expenses</attributeName>
+         <attributeName>ApplicationDetails|ng-component=ng-application-details~ProceduralStepName=Application details~child-ng-components=ng-country-of-residence,ng-marital-details,ng-employment-details,ng-education-details,ng-salary-bank-details</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ClientVerificationInformation|ng-component=ng-verify-individual-identity~sideStepperDisplayName=Verify your identity</attributeName>
+         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>CreditEligibilityIncome|ng-component=ng-credit-eligibility-income~sideStepperDisplayName=Income details</attributeName>
+         <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Income details~ZOrder=100</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>clientEvidenceRequirement_GenerateOffer</attributeGroupName>
+      <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>FinancialDetails|ng-component=ng-application-details~proceduralStepNameName=Financial details~displaySummary=true~child-ng-components=ng-individual-income-details~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OverdraftDetailsNewFlow|ng-component=ng-overdraft-details~sideStepperDisplayName=Overdraft details~ZOrder=200~ContractComponentProductType=1014</attributeName>
+         <attributeName>OverdraftDetailsNewFlow|ng-component=ng-overdraft-details~ProceduralStepName=Overdraft details~ZOrder=200~ContractComponentProductType=1014</attributeName>
       </productAttributes>
        <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -262,19 +262,7 @@
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Compliance</attributeType>
-         <attributeName>MeetsMinimumProductEligibilityRequirements</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Compliance</attributeType>
-         <attributeName>IsAwareOfComparableProducts</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Compliance</attributeType>
-         <attributeName>BureauCheckConsent</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Compliance</attributeType>
-         <attributeName>CreditBureauMonitoring</attributeName>
+         <attributeName>NotUnderCreditAdministrationV2</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -372,7 +360,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -382,11 +370,16 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Your Product|GenerateOfferVerifyEligibility=Your Product|GenerateOfferGatherProductDetails=Your Product|GenerateOfferGatherClientDetails=About You|GenerateOffer=Your Offer|ActivateProductsGatherClientDetails=Customisation|ActivateProductsGatherProductDetails=Customisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
+         <value>VerifyIdentity=Your Product|GenerateOfferVerifyEligibility=Your Product|GenerateOfferGatherProductDetails=Your Product|GenerateOfferGatherClientDetails=About You|FinancialDetails=About You|GenerateOffer=Your Offer|ActivateProductsGatherClientDetails=Customisation|ActivateProductsGatherProductDetails=Customisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAVersion</attributeName>
+         <value>2.0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>consumerFrameworkVersion</attributeName>
          <value>2.0</value>
       </productAttributes>
    </productAttributeGroup>
@@ -742,7 +735,7 @@
          <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Pre-agreement Quote|nedbank-commercial-release/UnsecuredLendingContract|ARRANGEMENT|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
+            <attributeName>Pre-agreement Quote|nedbank-commercial-release/CombinedProductContract|ARRANGEMENT|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>DocumentDescriptionStaffAssisted</attributeType>
@@ -809,6 +802,11 @@
             <attributeName>requiresSourcePaylslip</attributeName>
             <value>true</value>
          </featureAttributes>
+          <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>requiresACPData</attributeName>
+            <value>true</value>
+         </featureAttributes>
          <featureAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>requiresSalaryToBeDepositedToCurrentAccount</attributeName>
@@ -826,6 +824,39 @@
             <attributeType>boolean</attributeType>
             <attributeName>EnforceSingleOverdraftRule</attributeName>
             <value>true</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContract</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContract</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericDetails</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContract</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraftTC|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subClientsRightsAndObligations|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subSignatures|ContractComponentProductType=1014</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
@@ -2082,9 +2113,39 @@
          <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>OfferTransactionalCredit|ng-component=ng-offer-transactional-credit~sideStepperDisplayName=Additional Offers~ZOrder=100~FinaliseWorkItemOnPositiveOutcome=true~ContractComponentProductType=9062</attributeName>
+            <attributeName>OfferTransactionalCredit|ng-component=ng-offer-transactional-credit~ProceduralStepName=Additional Offers~ZOrder=300~FinaliseWorkItemOnPositiveOutcome=true~ContractComponentProductType=9062~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
+      <featureAttributeGroup>
+	     <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
+	     <featureAttributes>
+	        <attributeType>clientInformationRequirement</attributeType>
+	        <attributeName>ApplicationDetails|ng-component=ng-application-details~ProceduralStepName=Application details~child-ng-components=ng-country-of-residence,ng-marital-details,ng-employment-details,ng-education-details,ng-salary-bank-details</attributeName>
+	     </featureAttributes>
+	     <featureAttributes>
+	        <attributeType>clientInformationRequirement</attributeType>
+	        <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+	     </featureAttributes>
+	     <featureAttributes>
+	        <attributeType>clientInformationRequirement</attributeType>
+	        <attributeName>Offer|ProceduralStepName=Offer~ZOrder=80</attributeName>
+	     </featureAttributes>
+   	  </featureAttributeGroup>
+   	  <featureAttributeGroup>
+	     <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+	     <featureAttributes>
+	        <attributeType>clientInformationRequirement</attributeType>
+	        <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
+	     </featureAttributes>
+	     <featureAttributes>
+	        <attributeType>clientInformationRequirement</attributeType>
+	        <attributeName>FinancialDetails|ng-component=ng-application-details~ProceduralStepName=Financial details~ZOrder=90~FinaliseWorkItemOnPositiveOutcome=true~displaySummary=true~child-ng-components=ng-individual-income-details,ng-individual-debt-obligations,ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true</attributeName>
+	     </featureAttributes>
+	     <featureAttributes>
+	        <attributeType>clientInformationRequirement</attributeType>
+	        <attributeName>Offer|ProceduralStepName=Offer~ZOrder=80</attributeName>
+	     </featureAttributes>
+   	  </featureAttributeGroup>
    </features>
    <features>
       <featureIdentifier>9063</featureIdentifier>
@@ -2094,7 +2155,7 @@
          <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>OfferConsolidationCredit|ng-component=ng-offer-consolidation-credit~sideStepperDisplayName=Additional Offers~ZOrder=100~FinaliseWorkItemOnPositiveOutcome=true~ContractComponentProductType=9063</attributeName>
+            <attributeName>OfferConsolidationCredit|ng-component=ng-offer-consolidation-credit~ProceduralStepName=Additional Offers~ZOrder=100~FinaliseWorkItemOnPositiveOutcome=true~ContractComponentProductType=9063</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
