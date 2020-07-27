@@ -24,7 +24,7 @@ public class ProductSpecificationsServiceDAO {
 		if(productSpecificationsEJB == null) {
 			mLog.debug("Trace 2");
 			InitialContext context = new InitialContext();
-			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup(ProductSpecificationsServiceRemoteInterface.class.getName());
+			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup("java:global/SysProductCatalogueServiceComponents/WebProductCatalogueServiceComponents/ProductSpecificationsEJB!za.co.nb.productcatalogue.ejb.ProductSpecificationsServiceRemoteInterface");
 		}
 		
 		return productSpecificationsEJB.getProductSpecificationXMLStringByID(pProductSpecificationID);
@@ -36,7 +36,7 @@ public class ProductSpecificationsServiceDAO {
 		if(productSpecificationsEJB == null) {
 			mLog.debug("Trace 2");
 			InitialContext context = new InitialContext();
-			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup(ProductSpecificationsServiceRemoteInterface.class.getName());
+			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup("java:global/SysProductCatalogueServiceComponents/WebProductCatalogueServiceComponents/ProductSpecificationsEJB!za.co.nb.productcatalogue.ejb.ProductSpecificationsServiceRemoteInterface");
 		}
 		
 		return productSpecificationsEJB.getProductSpecificationByIDAndArrangementID(productSpecificationID, arrangementID);
@@ -48,7 +48,7 @@ public class ProductSpecificationsServiceDAO {
 		if(productSpecificationsEJB == null) {
 			mLog.debug("Trace 2");
 			InitialContext context = new InitialContext();
-			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup(ProductSpecificationsServiceRemoteInterface.class.getName());
+			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup("java:global/SysProductCatalogueServiceComponents/WebProductCatalogueServiceComponents/ProductSpecificationsEJB!za.co.nb.productcatalogue.ejb.ProductSpecificationsServiceRemoteInterface");
 		}
 		
 		return productSpecificationsEJB.getProductSpecificationByIDAndCaseID(productSpecificationID, caseID);
@@ -60,7 +60,7 @@ public class ProductSpecificationsServiceDAO {
 		if(productSpecificationsEJB == null) {
 			mLog.debug("Trace 2");
 			InitialContext context = new InitialContext();
-			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup(ProductSpecificationsServiceRemoteInterface.class.getName());
+			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup("java:global/SysProductCatalogueServiceComponents/WebProductCatalogueServiceComponents/ProductSpecificationsEJB!za.co.nb.productcatalogue.ejb.ProductSpecificationsServiceRemoteInterface");
 		}
 
 		return productSpecificationsEJB.getProductSpecificationXMLByID(pProductSpecificationID);
@@ -72,7 +72,7 @@ public class ProductSpecificationsServiceDAO {
 		if(productSpecificationsEJB == null) {
 			mLog.debug("Trace 2");
 			InitialContext context = new InitialContext();
-			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup(ProductSpecificationsServiceRemoteInterface.class.getName());
+			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup("java:global/SysProductCatalogueServiceComponents/WebProductCatalogueServiceComponents/ProductSpecificationsEJB!za.co.nb.productcatalogue.ejb.ProductSpecificationsServiceRemoteInterface");
 		}
 		
 		return productSpecificationsEJB.getProductSpecificationXMLByID(pProductSpecificationID);
@@ -84,7 +84,8 @@ public class ProductSpecificationsServiceDAO {
 		if(productSpecificationsEJB == null) {
 			mLog.debug("Trace 2");
 			InitialContext context = new InitialContext();
-			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup(ProductSpecificationsServiceRemoteInterface.class.getName());
+//			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup(ProductSpecificationsServiceRemoteInterface.class.getName());
+			productSpecificationsEJB = (ProductSpecificationsServiceRemoteInterface)context.lookup("java:global/SysProductCatalogueServiceComponents/WebProductCatalogueServiceComponents/ProductSpecificationsEJB!za.co.nb.productcatalogue.ejb.ProductSpecificationsServiceRemoteInterface");			
 		}
 		
 		return productSpecificationsEJB.getProductSpecificationXMLByID(pProductSpecificationIDs);
