@@ -1,30 +1,28 @@
 {
     "product": [
         {
-            "productIdentifier": "1027",
-            "name": "The American Express Gold Card",
-            "shortDescription": "Gold has never been this rewarding! Enjoy a complimentary monthly Lifestyle Rewards valued at more than your monthly Card fees. Vouchers can be redeemed at NuMetro, Zando and Takealot.com or for airtime across networks. The rewards you want are there for the taking.",
+            "productIdentifier": "1490",
+            "name": "The American Express Centurion Card",
+            "shortDescription": "",
             "productPricing": [
                 {
                     "type": "AdminFee",
-                    "amount": "60",
-                    "frequency": "monthly",
+                    "amount": "",
+                    "frequency": "",
                     "currency": "ZAR",
-                    "description": "R 60 pm"
+                    "description": ""
                 }
             ],
             "featuresAndBenefits": [
                 {
                     "shortDescription": "",
-                    "benefits": [ 
-                        "You can also pay your balance over time. You can choose how much to pay; just pay in full, the minimum amount due, or anything in between - it's that simple.",
-                        "A dedicated travel desk to take care of all you travel needs.",
-                        "Enjoy remarkable basic worldwide protection for you, your partner, your children and your Supplementary Cardmembers which includes up to R10 million cover.",
-                        "Optional Comprehensive Top Cover is also available on all travel.",
-                        "Being a Gold Cardmember entitles you to invitations to Amex Experiences events.",
-                        "Your American Express Gold Cardmember entitles you to complimentary Supplementary Cards."
+                    "benefits": [
+                        
                     ]
                 }
+            ],
+            "salesHighlights": [
+               
             ],
             "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html",
             "productAttributeGroup": [
@@ -116,19 +114,31 @@
                     "productAttributes": [
                         {
                             "attributeType": "Evidence",
-                            "attributeName": "ProofOfBankAccountClauseCard",
+                            "attributeName": "ProofOfBankAccountClauseCard1",
                             "isComparable": "false",
                             "valueUnit": "bool"
                         },
                         {
                             "attributeType": "Evidence",
-                            "attributeName": "ProofOfIdentificationClauseCard",
+                            "attributeName": "ProofOfIdentificationClauseCard2",
                             "isComparable": "false",
                             "valueUnit": "bool"
                         },
                         {
                             "attributeType": "Evidence",
-                            "attributeName": "ProofOfIncomeClauseCard",
+                            "attributeName": "ProofOfIncomeClauseCard3",
+                            "isComparable": "false",
+                            "valueUnit": "bool"
+                        },
+                        {
+                            "attributeType": "Evidence",
+                            "attributeName": "ProofOfIncomeClauseCard4",
+                            "isComparable": "false",
+                            "valueUnit": "bool"
+                        },
+                        {
+                            "attributeType": "Evidence",
+                            "attributeName": "ProofOfIncomeClauseCard5",
                             "isComparable": "false",
                             "valueUnit": "bool"
                         }
@@ -190,7 +200,7 @@
                             "minValue": "3000",
                             "maxValue": "99999999",
                             "valueUnit": "ZAR",
-                            "description": "earn more than R200 000 annually."
+                            "description": "earn more than R750 000 annually."
                         },
                         {
                             "attributeType": "EligibilityRule",
@@ -269,17 +279,7 @@
                     ]
                 },
                 {
-                    "attributeGroupName": "RequiredCompliance_PrepareApplicant",
-                    "productAttributes": [
-                        {
-                            "attributeType": "Compliance",
-                            "attributeName": "NotUnderCreditAdministration"
-                        },
-                        {
-                            "attributeType": "Compliance",
-                            "attributeName": "BureauCheckConsentCard"
-                        }
-                    ]
+                    "attributeGroupName": "RequiredCompliance_PrepareApplicant"
                 },
                 {
                     "attributeGroupName": "RequiredCompliance_GenerateOffer",
@@ -375,6 +375,11 @@
                             "attributeType": "string",
                             "attributeName": "CODEngine",
                             "value": "CreditCardCOD"
+                        },
+                        {
+                            "attributeType": "string",
+                            "attributeName": "Feefilter",
+                            "value": "true"
                         }
                     ]
                 },
@@ -471,8 +476,8 @@
                                 "type": "AdminFee",
                                 "description": "Free",
                                 "currency": "ZAR",
-                                "amount": "0",
-                                "frequency": "Monthly"
+                                "amount": "4500",
+                                "frequency": "annually"
                             }
                         ]
                     },
@@ -672,9 +677,9 @@
                 {
                     "featureIdentifier": "1334",
                     "name": "Membership Rewards™",
-                    "mandatory": "false",
+                    "mandatory": "true",
                     "preSelected": "true",
-                    "shortDescription": "Earn points on virtually all the spend on your card and enjoy a range of fantastic rewards.",
+                    "shortDescription": "As part of your American Express Platinum Card, Memebership Rewards™ are automatically included at no extra cost!",
                     "description": "Please note you will receive a Membership Rewards™ Redemption card in order to spend you rewards.",
                     "featureGrouping": {
                         "featureGroupName": "Loyalty",
@@ -766,6 +771,55 @@
                     "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
                     "featureDisplayPosition": "MembershipRewards",
                     "referenceProductID": "1334",
+                    "featurePricing": {
+                        "fee": [
+                            {
+                                "type": "AdminFee",
+                                "currency": "ZAR",
+                                "amount": "0",
+                                "frequency": "Monthly"
+                            }
+                        ]
+                    },
+                    "featureAttributeGroup": [
+                        {
+                            "attributeGroupName": "SystemRelated",
+                            "featureAttributes": {
+                                "attributeType": "Flag",
+                                "attributeName": "StraightThroughProcess",
+                                "value": "true"
+                            }
+                        },
+                        {
+                            "attributeGroupName": "coreProvisioningParameters",
+                            "featureAttributes": [
+                                {
+                                    "attributeType": "coreProvisioningParameter",
+                                    "attributeName": "LoanGroupingCode",
+                                    "valueUnit": "PER",
+                                    "value": "PER"
+                                },
+                                {
+                                    "attributeType": "coreProvisioningParameter",
+                                    "attributeName": "provisionInBranch",
+                                    "valueUnit": "boolean",
+                                    "value": "false"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "featureIdentifier": "9999",
+                    "name": "Priority Pass",
+                    "mandatory": "true",
+                    "preSelected": "true",
+                    "shortDescription": "As part of your travel privileges, we will issue you with a Priority Pass Card, which allows you complimentary  access to over 1000 Priority Pass Lounges worldwide.",
+                    "description": "As part of your travel privileges, we will issue you with a Priority Pass Card, which allows you complimentary  access to over 1000 Priority Pass Lounges worldwide.",
+                    "featureDisplayAdditionalInformationWidget": "No",
+                    "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
+                    "featureDisplayPosition": "MembershipRewards",
+                    "referenceProductID": "-1",
                     "featurePricing": {
                         "fee": [
                             {

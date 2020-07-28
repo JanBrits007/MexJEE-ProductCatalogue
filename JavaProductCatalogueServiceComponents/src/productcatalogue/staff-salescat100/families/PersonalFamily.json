@@ -906,6 +906,9 @@
 				  "Free balance enquiries at self-assisted channels (Nedbank ATM, SMS banking, online banking, the Nedbank Money app)",
 				  "MyPocket - a free budgeting and savings pocket linked to your bank account. It earns you interest and gives you instant access to your money. For more info click here."
 				],
+				"startApplicationScreen": {
+					"isRequired": "false"
+				},
 				"redirect": {
 				  "shouldRedirect": false,
 				  "redirectUrl": null
@@ -3581,7 +3584,8 @@
 					"groupIdentifier": "AMERICAN_EXPRESS_CARD",
 					"name": "American Express® Card",
 					"products": [1027,
-					1028]
+					1028,
+				  1490]
 				},
 				{
 					"groupIdentifier": "SMALL_BUSINESS_CARD",
@@ -4392,6 +4396,68 @@
 							"displayName": "Free Card Replacement",
 							"description": "Yes"
 						}
+					],
+					"lifeCycleStatus": "AVAILABLE"
+				},
+				{
+					"productIdentifier": "1490",
+					"name": "The American Express® Centurion Card",
+					"shortDescription": "",
+					"redirect": {
+						"shouldRedirect": true,
+						"redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionChargeCardAmex.html?"
+					},
+					"actions": [
+						{
+							"type": "SELECT",
+							"text": "Select",
+							"environments": [
+								"dev_staff",
+								"ete_staff",
+								"qa_staff"
+							]
+						},
+						{
+							"type": "SELECT_EWCO",
+							"text": "Select",
+							"environments": [
+								"prod_staff"
+							]
+						},
+						{
+							"type": "DETAIL",
+							"text": "Details"
+						},
+						{
+							"type": "COMPARE",
+							"text": "Compare"
+						}
+					],
+					"productPricing": [
+						{
+							"type": "AdminFee",
+							"amount": 0,
+							"frequency": "",
+							"currency": "ZAR",
+							"description": ""
+						}
+					],
+					"eligibilityRules": [
+						
+					],
+					"salesHighlights": [
+						
+					],
+					"valueAddedServices": [
+						
+					],
+					"additionalFeatures": [
+						
+					],
+					"productOnAPageWebURL": "",
+					"productAttributeGroup": [],
+					"productFeatures": [
+						
 					],
 					"lifeCycleStatus": "AVAILABLE"
 				},
@@ -6363,6 +6429,69 @@
 							"displayName": "Free Card Replacement",
 							"description": "Yes"
 						}
+					],
+					"lifeCycleStatus": "AVAILABLE"
+				},
+				{
+					"productIdentifier": "1490",
+					"name": "The American Express® Centurion Card (1490)",
+					"shortDescription": "",
+					"redirect": {
+						"shouldRedirect": true,
+						"redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionChargeCardAmex.html?"
+					},
+					"actions": [
+						{
+							"type": "SELECT",
+							"text": "Select",
+							"environments": [
+								"dev_staff",
+								"ete_staff",
+								"qa_staff"
+							]
+						},
+						{
+							"type": "SELECT_EWCO",
+							"text": "Select",
+							"environments": [
+								"prod_staff"
+							]
+						},
+						{
+							"type": "DETAIL",
+							"text": "Details"
+						},
+						{
+							"type": "COMPARE",
+							"text": "Compare"
+						}
+					],
+					"specialFeature": "",
+					"productPricing": [
+						{
+							"type": "AdminFee",
+							"amount": 0,
+							"frequency": "",
+							"currency": "ZAR",
+							"description": ""
+						}
+					],
+					"eligibilityRules": [
+					
+					],
+					"salesHighlights": [
+						
+					],
+					"valueAddedServices": [
+						
+					],
+					"additionalFeatures": [
+						
+					],
+					"productOnAPageWebURL": "",
+					"productAttributeGroup": [],
+					"productFeatures": [
+						
 					],
 					"lifeCycleStatus": "AVAILABLE"
 				},
@@ -10555,7 +10684,10 @@
 			  {
 				"productIdentifier": "1099",
 				"name": "Credit card insurance",
-				"shortDescription": "We'll take care of your credit card debt should something happen to you.",
+				"shortDescription": "Make sure your credit card is paid should anything happen to you.",
+				"longDescription": [
+					"A credit card is a great way of getting money when you really need it. But, as a responsible family member, you need to make sure that you can still cover your monthly repayments should anything happen to you.",
+					"If you die, are retrenched, become disabled or if you are diagnosed with a dread disease, our credit card insurance can help to take care of the outstanding balance on your credit card."],
 				"productPricing": [
 				  {
 					"type": "AdminFee",
@@ -10566,7 +10698,14 @@
 				  }
 				],
 				"specialFeature": "",
-				"salesHighlights": [],
+				"salesHighlights": [
+					"Your credit card debt will be taken care of if you no longer can, so your family won’t have to bear the financial burden.",
+					"It is quick and easy to apply, and no medical tests are required.",
+					"You can choose from different cover options."],
+				"salesHighlightsDetails": [
+					"I use my credit card regularly.",
+					"I don’t want my family to worry about my credit card debt if anything happens to me."],
+				"salesHighlightsDetailsOption": "Is credit card insurance from Nedbank right for me?",
 				"redirect": {
 				  "shouldRedirect": false,
 				  "redirectUrl": null
