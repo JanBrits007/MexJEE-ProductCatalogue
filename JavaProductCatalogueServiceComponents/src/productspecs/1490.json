@@ -7,23 +7,19 @@
             "productPricing": [
                 {
                     "type": "AdminFee",
-                    "amount": "",
-                    "frequency": "",
+                    "amount": "37000",
+                    "frequency": "annually",
                     "currency": "ZAR",
-                    "description": ""
+                    "description": "R 37000.00 pa"
                 }
             ],
             "featuresAndBenefits": [
                 {
                     "shortDescription": "",
-                    "benefits": [
-                        
-                    ]
+                    "benefits": []
                 }
             ],
-            "salesHighlights": [
-               
-            ],
+            "salesHighlights": [],
             "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html",
             "productAttributeGroup": [
                 {
@@ -114,31 +110,31 @@
                     "productAttributes": [
                         {
                             "attributeType": "Evidence",
-                            "attributeName": "ProofOfBankAccountClauseCard1",
+                            "attributeName": "ProofOfIDClauseCard",
                             "isComparable": "false",
                             "valueUnit": "bool"
                         },
                         {
                             "attributeType": "Evidence",
-                            "attributeName": "ProofOfIdentificationClauseCard2",
+                            "attributeName": "ProofOfAssetsAndLiabilitiesClauseCard",
                             "isComparable": "false",
                             "valueUnit": "bool"
                         },
                         {
                             "attributeType": "Evidence",
-                            "attributeName": "ProofOfIncomeClauseCard3",
+                            "attributeName": "ProofOfPayslipClauseCard",
                             "isComparable": "false",
                             "valueUnit": "bool"
                         },
                         {
                             "attributeType": "Evidence",
-                            "attributeName": "ProofOfIncomeClauseCard4",
+                            "attributeName": "ProofOfBankStatementClauseCard",
                             "isComparable": "false",
                             "valueUnit": "bool"
                         },
                         {
                             "attributeType": "Evidence",
-                            "attributeName": "ProofOfIncomeClauseCard5",
+                            "attributeName": "ProofOfSelfAndCompanyBioClauseCard",
                             "isComparable": "false",
                             "valueUnit": "bool"
                         }
@@ -184,31 +180,6 @@
                 {
                     "attributeGroupName": "EligibilityRules",
                     "productAttributes": [
-                        {
-                            "attributeType": "EligibilityRule",
-                            "attributeName": "Age",
-                            "isComparable": "false",
-                            "minValue": "18",
-                            "maxValue": "999",
-                            "valueUnit": "year",
-                            "description": "18 years or older; and"
-                        },
-                        {
-                            "attributeType": "EligibilityRule",
-                            "attributeName": "Income",
-                            "isComparable": "false",
-                            "minValue": "3000",
-                            "maxValue": "99999999",
-                            "valueUnit": "ZAR",
-                            "description": "earn more than R750 000 annually."
-                        },
-                        {
-                            "attributeType": "EligibilityRule",
-                            "attributeName": "NaturalPerson",
-                            "isComparable": "false",
-                            "value": "true",
-                            "valueUnit": "bool"
-                        },
                         {
                             "attributeType": "EligibilityRule",
                             "attributeName": "DebitOrderRepaymentRequired",
@@ -257,6 +228,24 @@
                             "isComparable": "false",
                             "value": "true",
                             "valueUnit": "bool"
+                        },
+                        {
+                            "attributeType": "Feature",
+                            "attributeName": "OfferFeeFilter",
+                            "isComparable": "true",
+                            "valueUnit": "bool"
+                        },
+                        {
+                            "attributeType": "Feature",
+                            "attributeName": "OfferSummaryUniLateralIndicatorFilter",
+                            "isComparable": "true",
+                            "valueUnit": "bool"
+                        },
+                        {
+                            "attributeType": "Feature",
+                            "attributeName": "CreditRepaymentFullAmount",
+                            "isComparable": "true",
+                            "valueUnit": "bool"
                         }
                     ]
                 },
@@ -279,7 +268,17 @@
                     ]
                 },
                 {
-                    "attributeGroupName": "RequiredCompliance_PrepareApplicant"
+                    "attributeGroupName": "RequiredCompliance_PrepareApplicant",
+                    "productAttributes": [
+                        {
+                            "attributeType": "Compliance",
+                            "attributeName": "NotUnderCreditAdministration"
+                        },
+                        {
+                            "attributeType": "Compliance",
+                            "attributeName": "BureauCheckConsentCard"
+                        }
+                    ]
                 },
                 {
                     "attributeGroupName": "RequiredCompliance_GenerateOffer",
@@ -375,11 +374,6 @@
                             "attributeType": "string",
                             "attributeName": "CODEngine",
                             "value": "CreditCardCOD"
-                        },
-                        {
-                            "attributeType": "string",
-                            "attributeName": "Feefilter",
-                            "value": "true"
                         }
                     ]
                 },
