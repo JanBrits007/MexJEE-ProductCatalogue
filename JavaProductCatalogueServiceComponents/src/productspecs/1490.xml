@@ -50,6 +50,24 @@
         <attributeGroupName>EligibilityRules</attributeGroupName>
         <productAttributes>
             <attributeType>EligibilityRule</attributeType>
+            <attributeName>Age</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>18</minValue>
+            <maxValue>999</maxValue>
+            <valueUnit>year</valueUnit>
+            <description>be 18 years or older.</description>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>Income</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>60000</minValue>
+            <maxValue>99999999</maxValue>
+            <valueUnit>ZAR</valueUnit>
+            <description>earn more than R750 000 annually; and</description>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
             <attributeName>NaturalPerson</attributeName>
             <isComparable>false</isComparable>
             <value>true</value>
@@ -75,6 +93,14 @@
             <isComparable>false</isComparable>
             <value>true</value>
             <valueUnit>bool</valueUnit>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>SouthAfricanResident</attributeName>
+            <isComparable>false</isComparable>
+            <value>true</value>
+            <valueUnit>bool</valueUnit>
+            <description> be a South African resident.</description>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
