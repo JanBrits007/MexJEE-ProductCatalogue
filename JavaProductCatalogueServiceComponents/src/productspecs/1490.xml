@@ -1,23 +1,36 @@
-<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-    <productIdentifier>1028</productIdentifier>
-    <name>The American Express Platinum Card</name>
+<product 
+    xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+    <productIdentifier>1490</productIdentifier>
+    <name>The American Express Centurion Card</name>
     <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
         <productAttributes>
             <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfBankAccountClauseCard</attributeName>
+            <attributeName>ProofOfIDClauseCard</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
         <productAttributes>
             <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfIdentificationClauseCard</attributeName>
+            <attributeName>ProofOfAssetsAndLiabilitiesClauseCard</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
         <productAttributes>
             <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfIncomeClauseCard</attributeName>
+            <attributeName>ProofOfPayslipClauseCard</attributeName>
+            <isComparable>false</isComparable>
+            <valueUnit>bool</valueUnit>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>Evidence</attributeType>
+            <attributeName>ProofOfBankStatementClauseCard</attributeName>
+            <isComparable>false</isComparable>
+            <valueUnit>bool</valueUnit>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>Evidence</attributeType>
+            <attributeName>ProofOfSelfAndCompanyBioClauseCard</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
@@ -35,31 +48,6 @@
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>EligibilityRules</attributeGroupName>
-        <productAttributes>
-            <attributeType>EligibilityRule</attributeType>
-            <attributeName>Age</attributeName>
-            <isComparable>false</isComparable>
-            <minValue>18</minValue>
-            <maxValue>999</maxValue>
-            <valueUnit>year</valueUnit>
-            <description>be 18 years or older.</description>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>EligibilityRule</attributeType>
-            <attributeName>Income</attributeName>
-            <isComparable>false</isComparable>
-            <minValue>60000</minValue>
-            <maxValue>99999999</maxValue>
-            <valueUnit>ZAR</valueUnit>
-            <description>earn more than R750 000 annually; and</description>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>EligibilityRule</attributeType>
-            <attributeName>NaturalPerson</attributeName>
-            <isComparable>false</isComparable>
-            <value>true</value>
-            <valueUnit>bool</valueUnit>
-        </productAttributes>
         <productAttributes>
             <attributeType>EligibilityRule</attributeType>
             <attributeName>DebitOrderRepaymentRequired</attributeName>
@@ -259,10 +247,10 @@
             <value>true</value>
         </productAttributes>
         <productAttributes>
-			<attributeType>bool</attributeType>
-			<attributeName>FinalCaseQualityAssuranceSignatureTypeCheck</attributeName>
-			<value>true</value>
-		</productAttributes>
+            <attributeType>bool</attributeType>
+            <attributeName>FinalCaseQualityAssuranceSignatureTypeCheck</attributeName>
+            <value>true</value>
+        </productAttributes>
         <productAttributes>
             <attributeType>bool</attributeType>
             <attributeName>FinalCaseQualityAssuranceTeam</attributeName>
@@ -495,15 +483,15 @@
                 <value>5</value>
             </featureAttributes>
             <featureAttributes>
-				<attributeType>repaymentterm</attributeType>
-				<attributeName>Repayment_Term</attributeName>
-				<value>12</value>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>InstalmentPayable_Frequency</attributeType>
-				<attributeName>InstalmentPayable_Frequency</attributeName>
-				<value>Monthly</value>
-            </featureAttributes>  
+                <attributeType>repaymentterm</attributeType>
+                <attributeName>Repayment_Term</attributeName>
+                <value>12</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>InstalmentPayable_Frequency</attributeType>
+                <attributeName>InstalmentPayable_Frequency</attributeName>
+                <value>Monthly</value>
+            </featureAttributes>
         </featureAttributeGroup>
     </features>
     <features>
