@@ -7,23 +7,19 @@
             "productPricing": [
                 {
                     "type": "AdminFee",
-                    "amount": "",
-                    "frequency": "",
+                    "amount": "37000",
+                    "frequency": "annually",
                     "currency": "ZAR",
-                    "description": ""
+                    "description": "R 37000.00 pa"
                 }
             ],
             "featuresAndBenefits": [
                 {
                     "shortDescription": "",
-                    "benefits": [
-                        
-                    ]
+                    "benefits": []
                 }
             ],
-            "salesHighlights": [
-               
-            ],
+            "salesHighlights": [],
             "productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html",
             "productAttributeGroup": [
                 {
@@ -114,31 +110,31 @@
                     "productAttributes": [
                         {
                             "attributeType": "Evidence",
-                            "attributeName": "ProofOfBankAccountClauseCard1",
+                            "attributeName": "ProofOfIDClauseCard",
                             "isComparable": "false",
                             "valueUnit": "bool"
                         },
                         {
                             "attributeType": "Evidence",
-                            "attributeName": "ProofOfIdentificationClauseCard2",
+                            "attributeName": "ProofOfAssetsAndLiabilitiesClauseCard",
                             "isComparable": "false",
                             "valueUnit": "bool"
                         },
                         {
                             "attributeType": "Evidence",
-                            "attributeName": "ProofOfIncomeClauseCard3",
+                            "attributeName": "ProofOfPayslipClauseCard",
                             "isComparable": "false",
                             "valueUnit": "bool"
                         },
                         {
                             "attributeType": "Evidence",
-                            "attributeName": "ProofOfIncomeClauseCard4",
+                            "attributeName": "ProofOfBankStatementClauseCard",
                             "isComparable": "false",
                             "valueUnit": "bool"
                         },
                         {
                             "attributeType": "Evidence",
-                            "attributeName": "ProofOfIncomeClauseCard5",
+                            "attributeName": "ProofOfSelfAndCompanyBioClauseCard",
                             "isComparable": "false",
                             "valueUnit": "bool"
                         }
@@ -257,6 +253,24 @@
                             "isComparable": "false",
                             "value": "true",
                             "valueUnit": "bool"
+                        },
+                        {
+                            "attributeType": "Feature",
+                            "attributeName": "OfferFeeFilter",
+                            "isComparable": "true",
+                            "valueUnit": "bool"
+                        },
+                        {
+                            "attributeType": "Feature",
+                            "attributeName": "OfferSummaryUniLateralIndicatorFilter",
+                            "isComparable": "true",
+                            "valueUnit": "bool"
+                        },
+                        {
+                            "attributeType": "Feature",
+                            "attributeName": "CreditRepaymentFullAmount",
+                            "isComparable": "true",
+                            "valueUnit": "bool"
                         }
                     ]
                 },
@@ -279,7 +293,17 @@
                     ]
                 },
                 {
-                    "attributeGroupName": "RequiredCompliance_PrepareApplicant"
+                    "attributeGroupName": "RequiredCompliance_PrepareApplicant",
+                    "productAttributes": [
+                        {
+                            "attributeType": "Compliance",
+                            "attributeName": "NotUnderCreditAdministration"
+                        },
+                        {
+                            "attributeType": "Compliance",
+                            "attributeName": "BureauCheckConsentCard"
+                        }
+                    ]
                 },
                 {
                     "attributeGroupName": "RequiredCompliance_GenerateOffer",
@@ -375,11 +399,6 @@
                             "attributeType": "string",
                             "attributeName": "CODEngine",
                             "value": "CreditCardCOD"
-                        },
-                        {
-                            "attributeType": "string",
-                            "attributeName": "Feefilter",
-                            "value": "true"
                         }
                     ]
                 },
@@ -679,7 +698,7 @@
                     "name": "Membership Rewards™",
                     "mandatory": "true",
                     "preSelected": "true",
-                    "shortDescription": "As part of your American Express Platinum Card, Memebership Rewards™ are automatically included at no extra cost!",
+                    "shortDescription": "As part of your American Express Centurion Card, Memebership Rewards™ are automatically included at no extra cost!",
                     "description": "Please note you will receive a Membership Rewards™ Redemption card in order to spend you rewards.",
                     "featureGrouping": {
                         "featureGroupName": "Loyalty",

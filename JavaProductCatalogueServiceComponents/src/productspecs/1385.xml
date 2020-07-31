@@ -233,6 +233,19 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
+        <attributeGroupName>DecisioningControl</attributeGroupName>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>EnforceIntent0FAISAccreditationRule</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>String</attributeType>
+            <attributeName>FAISCategoryCode</attributeName>
+            <value>1.18</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
         <productAttributes>
             <attributeType>int</attributeType>
@@ -303,6 +316,16 @@
             <attributeType>string</attributeType>
             <attributeName>frontOfficeIntentSequence</attributeName>
             <value>PrepareApplicant|DetermineRelatedParties|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>requiresEligibilityScoringAtIntents</attributeName>
+            <value>intent 0|intent 1</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>riskAnalysisMechanismIntent0</attributeName>
+            <value>automated</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>

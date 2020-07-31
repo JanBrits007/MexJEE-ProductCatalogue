@@ -1,41 +1,50 @@
-<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+<product 
+    xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1490</productIdentifier>
     <name>The American Express Centurion Card</name>
     <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
         <productAttributes>
             <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfBankAccountClauseCard1</attributeName>
+            <attributeName>ProofOfIDClauseCard</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
         <productAttributes>
             <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfIdentificationClauseCard2</attributeName>
+            <attributeName>ProofOfAssetsAndLiabilitiesClauseCard</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
         <productAttributes>
             <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfIncomeClauseCard3</attributeName>
+            <attributeName>ProofOfPayslipClauseCard</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
         <productAttributes>
             <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfIncomeClauseCard4</attributeName>
+            <attributeName>ProofOfBankStatementClauseCard</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
         <productAttributes>
             <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfIncomeClauseCard5</attributeName>
+            <attributeName>ProofOfSelfAndCompanyBioClauseCard</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
+        <productAttributes>
+            <attributeType>Compliance</attributeType>
+            <attributeName>NotUnderCreditAdministration</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>Compliance</attributeType>
+            <attributeName>BureauCheckConsentCard</attributeName>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>EligibilityRules</attributeGroupName>
@@ -99,6 +108,10 @@
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>ClientVerificationInformation</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>NCCDesk</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -259,10 +272,10 @@
             <value>true</value>
         </productAttributes>
         <productAttributes>
-			<attributeType>bool</attributeType>
-			<attributeName>FinalCaseQualityAssuranceSignatureTypeCheck</attributeName>
-			<value>true</value>
-		</productAttributes>
+            <attributeType>bool</attributeType>
+            <attributeName>FinalCaseQualityAssuranceSignatureTypeCheck</attributeName>
+            <value>true</value>
+        </productAttributes>
         <productAttributes>
             <attributeType>bool</attributeType>
             <attributeName>FinalCaseQualityAssuranceTeam</attributeName>
@@ -495,15 +508,15 @@
                 <value>5</value>
             </featureAttributes>
             <featureAttributes>
-				<attributeType>repaymentterm</attributeType>
-				<attributeName>Repayment_Term</attributeName>
-				<value>12</value>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>InstalmentPayable_Frequency</attributeType>
-				<attributeName>InstalmentPayable_Frequency</attributeName>
-				<value>Monthly</value>
-            </featureAttributes>  
+                <attributeType>repaymentterm</attributeType>
+                <attributeName>Repayment_Term</attributeName>
+                <value>12</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>InstalmentPayable_Frequency</attributeType>
+                <attributeName>InstalmentPayable_Frequency</attributeName>
+                <value>Monthly</value>
+            </featureAttributes>
         </featureAttributeGroup>
     </features>
     <features>

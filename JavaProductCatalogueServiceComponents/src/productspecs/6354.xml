@@ -1,17 +1,7 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-   <productIdentifier>6389</productIdentifier>
-   <name>Nedbank Pay-As-You-Use 6389</name>
-   <shortDescription>A no frills, transparent account with a flat monthly fee, pay only for what you use.</shortDescription>
-   <productPricing>
-      <fee>
-         <type>AdminFee</type>
-         <description>Zero monthly fee</description>
-         <currency>ZAR</currency>
-         <amount>0</amount>
-         <frequency>Monthly</frequency>
-      </fee>
-   </productPricing>
-   <productOnAPageWebURL>/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html</productOnAPageWebURL>
+   <productIdentifier>6354</productIdentifier>
+   <name>Savvy Bundle Current Account</name>
+   <shortDescription>This current account forms part of the Savvy Bundle</shortDescription>
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
@@ -64,9 +54,6 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
-   </productAttributeGroup>
-   <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Evidence</attributeType>
@@ -76,7 +63,19 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>clientEvidenceRequirement_EnableClients</attributeGroupName>
+      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+      <productAttributes>
+       	<attributeType>clientInformationRequirement</attributeType>
+       	<attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>clientInformationRequirement</attributeType>
+        <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>CurrentAccountOffer|ng-component=ng-currentAccount-offer-details~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
@@ -161,9 +160,6 @@
          <attributeType>AvailableAction</attributeType>
          <attributeName>ElectronicallySign</attributeName>
       </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>productEvidenceRequirement_EnableClients</attributeGroupName>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>EligibilityRules</attributeGroupName>
@@ -631,7 +627,7 @@
          <value>true</value>
       </productAttributes>
    </productAttributeGroup>
-    <productAttributeGroup>
+   <productAttributeGroup>
         <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
         <productAttributes>
             <attributeType>int</attributeType>
@@ -657,29 +653,6 @@
       </featureGrouping>
       <featureType>BoltOn</featureType>
       <referenceProductID>-1</referenceProductID>
-      <featurePricing>
-         <fee>
-            <type>InitiationFee</type>
-            <description>R43</description>
-            <currency>ZAR</currency>
-            <amount>43</amount>
-            <frequency>OnceOff</frequency>
-         </fee>
-      </featurePricing>
-      <featureFulfilment>
-         <channel>selfServiceWeb</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureFulfilment>
-         <channel>staffAssisted</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
       <featureDisplayPosition>preOffer</featureDisplayPosition>
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
@@ -739,6 +712,21 @@
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
             <attributeName>VisibleArrangementSubmissionSalesMilestone</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+	        <attributeType>clientInformationRequirement</attributeType>
+	        <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
+	     </featureAttributes>
+	     <featureAttributes>
+	        <attributeType>clientInformationRequirement</attributeType>
+	        <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+	     </featureAttributes>
+         <featureAttributes>
+         	<attributeType>productInformationRequirement</attributeType>
+         	<attributeName>OverdraftOffer|ng-component=ng-overdraft-offer-details~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -812,7 +800,7 @@
             <attributeName>requiresSourcePaylslip</attributeName>
             <value>true</value>
          </featureAttributes>
-          <featureAttributes>
+         <featureAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>requiresACPData</attributeName>
             <value>true</value>
@@ -2112,60 +2100,6 @@
             <attributeName>legacyProductID</attributeName>
             <valueUnit>string</valueUnit>
             <value />
-         </featureAttributes>
-      </featureAttributeGroup>
-   </features>
-   <features>
-      <featureIdentifier>9062</featureIdentifier>
-      <name>Eligible for Transactional Credit</name>
-      <description>Indicates that the client should be offered to take up transactional credit</description>
-      <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>OfferTransactionalCredit|ng-component=ng-offer-transactional-credit~ProceduralStepName=Additional Offers~ZOrder=300~FinaliseWorkItemOnPositiveOutcome=true~ContractComponentProductType=9062~ActiveOnInitialWorkItemExecution=true</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
-	     <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
-	     <featureAttributes>
-	        <attributeType>clientInformationRequirement</attributeType>
-	        <attributeName>ApplicationDetails|ng-component=ng-application-details~ProceduralStepName=Application details~child-ng-components=ng-country-of-residence,ng-marital-details,ng-employment-details,ng-education-details,ng-salary-bank-details~ActiveOnInitialWorkItemExecution=true</attributeName>
-	     </featureAttributes>
-	     <featureAttributes>
-	        <attributeType>clientInformationRequirement</attributeType>
-	        <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-	     </featureAttributes>
-	     <featureAttributes>
-	        <attributeType>clientInformationRequirement</attributeType>
-	        <attributeName>Offer|ProceduralStepName=Offer~ZOrder=80</attributeName>
-	     </featureAttributes>
-   	  </featureAttributeGroup>
-   	  <featureAttributeGroup>
-	     <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
-	     <featureAttributes>
-	        <attributeType>clientInformationRequirement</attributeType>
-	        <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
-	     </featureAttributes>
-	     <featureAttributes>
-	        <attributeType>clientInformationRequirement</attributeType>
-	        <attributeName>FinancialDetails|ng-component=ng-application-details~ProceduralStepName=Financial details~ZOrder=90~FinaliseWorkItemOnPositiveOutcome=true~displaySummary=true~child-ng-components=ng-individual-income-details,ng-individual-debt-obligations,ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true</attributeName>
-	     </featureAttributes>
-	     <featureAttributes>
-	        <attributeType>clientInformationRequirement</attributeType>
-	        <attributeName>Offer|ProceduralStepName=Offer~ZOrder=80</attributeName>
-	     </featureAttributes>
-   	  </featureAttributeGroup>
-   </features>
-   <features>
-      <featureIdentifier>9063</featureIdentifier>
-      <name>Eligible for Consolidation Credit</name>
-      <description>Indicates that the client should be offered to take up consolidation credit</description>
-      <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>OfferConsolidationCredit|ng-component=ng-offer-consolidation-credit~ProceduralStepName=Additional Offers~ZOrder=100~FinaliseWorkItemOnPositiveOutcome=true~ContractComponentProductType=9063</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
