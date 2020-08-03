@@ -49,6 +49,36 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>clientInformationRequirement</attributeType>
+        <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>GenericCapabilitySelection|ng-component=ng-Generic-Capability-Selection~child-ng-components=ng-CurrentAccount-Generic-capability-slection~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>OfferSelection|ng-component=ng-Offer-Selection~ProceduralStepName=Offer~ZOrder=80</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>OfferSummery|ng-component=ng-Offer-Summery~child-ng-components=ng-CurrentAccount-Offer-Summery~ProceduralStepName=Offer~ZOrder=80</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>PresentOfferSelection</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>TransactionalProductOfferSelectionSubSection|ng-component=ng-Transactional-Product-Offer-Selection-SubSection~ZOrder=100~ContractComponentProductType=6389</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>Evidence</attributeType>
@@ -643,7 +673,7 @@
             <attributeName>productType</attributeName>
             <value>EMAILSMS</value>
         </productAttributes>
-    </productAttributeGroup>   
+    </productAttributeGroup>
    <features>
       <featureIdentifier>1014</featureIdentifier>
       <name>Overdraft</name>
@@ -732,6 +762,36 @@
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>PreOfferFinePrint</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <featureAttributes>
+          <attributeType>clientInformationRequirement</attributeType>
+          <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>clientInformationRequirement</attributeType>
+          <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+           <attributeType>productInformationRequirement</attributeType>
+           <attributeName>GenericCapabilitySelection|ng-component=ng-Generic-Capability-Selection~child-ng-components=ng-Overdraft-Generic-capability-slection~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+           <attributeType>productInformationRequirement</attributeType>
+           <attributeName>OfferSelection|ng-component=ng-Offer-Selection~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+           <attributeType>productInformationRequirement</attributeType>
+           <attributeName>OfferSummery|ng-component=ng-Offer-Summery~child-ng-components=ng-Overdtaft-Offer-Summery~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>PresentOfferSelection</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OverdraftOfferSelectionSubSection|ng-component=ng-Overdraft-Offer-Selection-SubSection~ZOrder=90~ContractComponentProductType=1014</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2160,7 +2220,7 @@
    <features>
       <featureIdentifier>9063</featureIdentifier>
       <name>Eligible for Consolidation Credit</name>
-      <description>Indicates that the client should be offered to take up consolidation credit</description>
+      <description>Indicates that the client should be offered to take up consolidation credit.</description>
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
          <featureAttributes>
