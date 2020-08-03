@@ -148,20 +148,35 @@
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
-      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-      <productAttributes>
-       	<attributeType>clientInformationRequirement</attributeType>
-       	<attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
-      </productAttributes>
-      <productAttributes>
-        <attributeType>clientInformationRequirement</attributeType>
-        <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>CreditCardOffer|ng-component=ng-credit-card-offer-details~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
+		 <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+		 <productAttributes>
+			 <attributeType>clientInformationRequirement</attributeType>
+			 <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+			 <attributeType>clientInformationRequirement</attributeType>
+			 <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>GenericCapabilitySelection|ng-component=ng-Generic-Capability-Selection~child-ng-components=ng-CreditCard-Generic-capability-slection~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>OfferSelection|ng-component=ng-Offer-Selection~ProceduralStepName=Offer~ZOrder=80</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>OfferSummery|ng-component=ng-Offer-Summery~child-ng-components=ng-CreditCard-Offer-Summery~ProceduralStepName=Offer~ZOrder=80</attributeName>
+		 </productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		 <attributeGroupName>PresentOfferSelection</attributeGroupName>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>CreditCardOfferSelectionSubSection|ng-component=ng-Credit-Card-Offer-Selection-SubSection~ZOrder=80~ContractComponentProductType=6350</attributeName>
+		 </productAttributes>
+	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
@@ -564,7 +579,7 @@
 				<attributeType>InstalmentPayable_Frequency</attributeType>
 				<attributeName>InstalmentPayable_Frequency</attributeName>
 				<value>Monthly</value>
-            </featureAttributes>  
+            </featureAttributes>
 		</featureAttributeGroup>
 	</features>
 	<features>
@@ -696,7 +711,7 @@
 		</featureGrouping>
 		<featureType>BoltOn</featureType>
 		<referenceProductID>-1</referenceProductID>
-		<featureFulfilment>			
+		<featureFulfilment>
 			<channel>selfServiceWeb</channel>
 			<fulfilmentType>setting</fulfilmentType>
 			<fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
@@ -723,80 +738,80 @@
 			<attributeGroupName>placeholder-Fullstructure</attributeGroupName>
 			<featureAttributes>
 				<attributeType>type</attributeType>
-				<attributeName>name</attributeName>							
-				<minValue>1</minValue>						
+				<attributeName>name</attributeName>
+				<minValue>1</minValue>
 				<maxValue>2</maxValue>
 				<valueUnit>text</valueUnit>
 				<value>some value</value>
 			</featureAttributes>
 		</featureAttributeGroup>
-		<featureAttributeGroup>					
-			<attributeGroupName>coreProvisioningParameters</attributeGroupName>					
+		<featureAttributeGroup>
+			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
 			<featureAttributes>
 				<attributeType>coreProvisioningParameter</attributeType>
 				<attributeName>CAMSProdCd</attributeName>
 				<valueUnit>PER</valueUnit>
 				<value>CRD</value>
 			</featureAttributes>
-			<featureAttributes>							
-				<attributeType>coreProvisioningParameter</attributeType>							
-				<attributeName>CAMSCtlAdId</attributeName>							
-				<valueUnit>PER</valueUnit>							
-				<value>C1</value>						
-			</featureAttributes>					
-			<featureAttributes>							
-				<attributeType>coreProvisioningParameter</attributeType>							
-				<attributeName>CAMSRelCd</attributeName>							
-				<valueUnit>PER</valueUnit>							
-				<value>PRI</value>						
-			</featureAttributes>					
-			<featureAttributes>							
-				<attributeType>coreProvisioningParameter</attributeType>							
-				<attributeName>CAMSSCtlSlTnPgCd</attributeName>							
-				<valueUnit>PER</valueUnit>							
-				<value>6563</value>						
-			</featureAttributes>					
-			<featureAttributes>							
-				<attributeType>coreProvisioningParameter</attributeType>							
-				<attributeName>CAMSCredLnAmt</attributeName>							
-				<valueUnit>PER</valueUnit>							
-				<value>0</value>						
-			</featureAttributes>					
-			<featureAttributes>							
-				<attributeType>coreProvisioningParameter</attributeType>							
-				<attributeName>CAMSPayMethod</attributeName>							
-				<valueUnit>PER</valueUnit>							
-				<value>MAN</value>						
-			</featureAttributes>					
-			<featureAttributes>							
-				<attributeType>coreProvisioningParameter</attributeType>							
-				<attributeName>CAMSPlasticType</attributeName>							
-				<valueUnit>PER</valueUnit>							
-				<value>AG6</value>						
-			</featureAttributes>					
-			<featureAttributes>							
-				<attributeType>coreProvisioningParameter</attributeType>							
-				<attributeName>CAMSCrdStock</attributeName>							
-				<valueUnit>PER</valueUnit>							
-				<value>AG6</value>						
-			</featureAttributes>					
-			<featureAttributes>							
-				<attributeType>coreProvisioningParameter</attributeType>							
-				<attributeName>CAMSActType</attributeName>							
-				<valueUnit>PER</valueUnit>							
-				<value>PRI</value>						
-			</featureAttributes>					
-			<featureAttributes>							
-				<attributeType>coreProvisioningParameter</attributeType>							
-				<attributeName>CAMSATrRegistrationNbr</attributeName>							
-				<valueUnit>PER</valueUnit>							
-				<value>190105</value>                 
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSCtlAdId</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>C1</value>
 			</featureAttributes>
 			<featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>		
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSRelCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>PRI</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSSCtlSlTnPgCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>6563</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSCredLnAmt</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>0</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSPayMethod</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>MAN</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSPlasticType</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>AG6</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSCrdStock</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>AG6</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSActType</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>PRI</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSATrRegistrationNbr</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>190105</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
 				<attributeName>provisionInBranch</attributeName>
 				<valueUnit>boolean</valueUnit>
-				<value>false</value>      
+				<value>false</value>
             </featureAttributes>
             <featureAttributes>
 				<attributeType>coreProvisioningParameter</attributeType>
@@ -804,14 +819,14 @@
 				<valueUnit>PER</valueUnit>
 				<value>ENG</value>
             </featureAttributes>
-            <featureAttributes> 
-                <attributeType>coreProvisioningParameter</attributeType>    
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSSolicitationCode</attributeName>
-                <valueUnit>PER</valueUnit>    
+                <valueUnit>PER</valueUnit>
                 <value>7016</value>
             </featureAttributes>
        </featureAttributeGroup>
-    </features> 
+    </features>
 	<features>
 		<featureIdentifier>1400</featureIdentifier>
 		<name>Affinity Rewards</name>
