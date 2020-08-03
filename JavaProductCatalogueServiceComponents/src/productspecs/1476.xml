@@ -166,6 +166,11 @@
    <productAttributeGroup>
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
       <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>requiresACPData</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
           <attributeType>string</attributeType>
           <attributeName>requiresElgiblityScoringAtIntents</attributeName>
           <value>intent 0</value>
@@ -198,7 +203,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|ActivateProductsGatherProductDetails|FinalizeFrontOfficeInteraction</value>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|ActivateProductsGatherProductDetails|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -213,7 +218,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Product Setup|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|ActivateProductsGatherProductDetails=Customisation|FinalizeFrontOfficeInteraction=Customisation</value>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Product Setup|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|ActivateProductsGatherProductDetails=Customisation|FinalizeFrontOfficeInteraction=Customisation</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -456,22 +461,25 @@
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>EmploymentInformationV2|displaySummary=true~sideStepperDisplayName=Employment details~PresentEmployer~WorkContactDetails</attributeName>
          </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>IncomeInformationV2|sideStepperDisplayName=Income details~activityStep=Credit Info~NettSalary~GrossSalary~SalaryAccountDetails</attributeName>
+            <attributeName>IncomeInformationV2|sideStepperDisplayName=Income details~NettSalary~GrossSalary~SalaryAccountDetails</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>DebtObligationsInformationV2|sideStepperDisplayName=Debt obligations~activityStep=Credit Info</attributeName>
+            <attributeName>DebtObligationsInformationV2|sideStepperDisplayName=Debt obligations</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>HouseholdExpensesInformationV2|sideStepperDisplayName=Household expenses~activityStep=Credit Info~TotalExpenses~DetailedExpenses</attributeName>
+            <attributeName>HouseholdExpensesInformationV2|sideStepperDisplayName=Household expenses~TotalExpenses~DetailedExpenses</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>CreditSummaryPlaceholderV2|sideStepperDisplayName=Credit summary~activityStep=Credit Info</attributeName>
-         </featureAttributes>
+            <attributeName>CreditSummaryPlaceholderV2|sideStepperDisplayName=Credit summary</attributeName>
+        </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
