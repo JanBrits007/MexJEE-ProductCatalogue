@@ -38,12 +38,22 @@ public class ProductSpecificationUtil {
 		throw new InvalidAttributeGroupException("Invalid attribute group " + attributeGroupName + ". Check the product specification for product ID " + productSpecification.getProductIdentifier());
 	}
 	
-	public String getProductOrFeatureAttributeValue(String productID, String attributeGroup, String attributeName) throws Exception {
+	public String getProductOrFeatureAttributeValue(String productID, String attributeGroup, String attributeName) throws InvalidAttributeException {
 		mLog.debug("Trace 1");
 		
 		// First get the product spec.
 		ProductSpecificationsServiceDAO dao = new ProductSpecificationsServiceDAO();
-		ProductType productSpecification = dao.getProductSpecificationXMLByID(productID);
+		
+		ProductType productSpecification;
+		
+		try {
+			productSpecification = dao.getProductSpecificationXMLByID(productID);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			
+			throw new InvalidAttributeException("Unable to retrieve product spec for ID " + productID);
+		}
 
 		mLog.debug("Trace 2");
 		
