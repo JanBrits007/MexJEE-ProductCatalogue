@@ -74,7 +74,22 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>CurrentAccountOffer|ng-component=ng-currentAccount-offer-details~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+         <attributeName>GenericCapabilitySelection|ng-component=ng-Generic-Capability-Selection~child-ng-components=ng-CurrentAccount-Generic-capability-slection~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>OfferSelection|ng-component=ng-Offer-Selection~ProceduralStepName=Offer~ZOrder=80</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>OfferSummery|ng-component=ng-Offer-Summery~child-ng-components=ng-CurrentAccount-Offer-Summery~ProceduralStepName=Offer~ZOrder=80</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>PresentOfferSelection</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>TransactionalProductOfferSelectionSubSection|ng-component=ng-Transactional-Product-Offer-Selection-SubSection~ZOrder=100~ContractComponentProductType=6389</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -427,196 +442,76 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+     <attributeGroupName>coreProvisioningParameters</attributeGroupName>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>productSystem</attributeName>
-         <value>CASA</value>
+        <attributeType>string</attributeType>
+        <attributeName>productSystem</attributeName>
+        <value>CASA</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>productType</attributeName>
-         <value>CA</value>
+        <attributeType>string</attributeType>
+        <attributeName>productType</attributeName>
+        <value>CA</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>branchCode</attributeName>
-         <value>911</value>
+        <attributeType>string</attributeType>
+        <attributeName>productTargetType</attributeName>
+        <value>CA</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>dcar</attributeName>
-         <value>51911</value>
+        <attributeType>boolean</attributeType>
+        <attributeName>supressClientCommunications</attributeName>
+        <value>false</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>schemeCode</attributeName>
-         <value>100</value>
+        <attributeType>int</attributeType>
+        <attributeName>digitalBranchCode</attributeName>
+        <value>911</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>costCode</attributeName>
-         <value>100</value>
+        <attributeType>int</attributeType>
+        <attributeName>digitalDcar</attributeName>
+        <value>51911</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>cashFeeOption</attributeName>
-         <value>34</value>
+        <attributeType>int</attributeType>
+        <attributeName>mdmAdminFieldType</attributeName>
+        <value>1004</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>newReserveBankCode</attributeName>
-         <value>19</value>
+        <attributeType>int</attributeType>
+        <attributeName>mdmSubProductCode</attributeName>
+        <value>2072</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>pricingPlan</attributeName>
-         <value>0</value>
+        <attributeType>int</attributeType>
+        <attributeName>mdmAdminSystemType</attributeName>
+        <value>1001</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>restrictedNCCompany</attributeName>
-         <value>0</value>
+        <attributeType>int</attributeType>
+        <attributeName>mdmAccountRoleType</attributeName>
+        <value>1046</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>serviceFeeFormula</attributeName>
-         <value>46</value>
+        <attributeType>int</attributeType>
+        <attributeName>productCategory</attributeName>
+        <value>00023</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>statementChargeIndicator</attributeName>
-         <value>5</value>
+        <attributeType>string</attributeType>
+        <attributeName>productSubCategory</attributeName>
+        <value>24</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>statementFrequency</attributeName>
-         <value>0</value>
+        <attributeType>string</attributeType>
+        <attributeName>welcomeEmailTemplate</attributeName>
+        <value>tp_welc_01</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>subsidiary</attributeName>
-         <value>0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>subCategory</attributeName>
-         <value>0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>subProductCategory</attributeName>
-         <value>00001</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>subStatus</attributeName>
-         <value>0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>sweepingFlag</attributeName>
-         <value>0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>swiftAddress</attributeName>
-         <value>0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>swiftStatementIndicator</attributeName>
-         <value>0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>statusCodeTellerAlert</attributeName>
-         <value>0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>truncateChequesIndicator</attributeName>
-         <value>0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>attorneyTrustAcctIndicator</attributeName>
-         <value>0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>typeOfBusiness</attributeName>
-         <value>9820</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>vipRateInd</attributeName>
-         <value>0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>noMinServiceFeeFlag</attributeName>
-         <value>0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>noCreditInterest</attributeName>
-         <value>0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>noDebitInterest</attributeName>
-         <value>0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>chequeNarrativeIndicator</attributeName>
-         <value>0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>backOfficeEmailAddress</attributeName>
-         <value>NatashaBu@Nedbank.co.za;ajits@nedbank.co.za;LindaMn@Nedbank.co.za;ThaboMokoen@Nedbank.co.za;BrigertM@Nedbank.co.za;andreasroh@nedbank.co.za</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>letUsSwitchEmailAddress</attributeName>
-         <value>NatashaBu@Nedbank.co.za;ajits@nedbank.co.za;LindaMn@Nedbank.co.za;ThaboMokoen@Nedbank.co.za;BrigertM@Nedbank.co.za;andreasroh@nedbank.co.za</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>productIdentifier</attributeName>
-         <value>1389</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>staffCashFeeOption</attributeName>
-         <value>34</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>enableDisbursement</attributeName>
-         <value>true</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>noFundsAlertIndicator</attributeName>
-         <value>1</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>statementDeliveryIndicator</attributeName>
-         <value>1</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>staffServiceFeeFormula</attributeName>
-         <value>46</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>flag</attributeType>
-         <attributeName>ProvisioningPhase</attributeName>
-         <value>preVerificationProvisioning</value>
+        <attributeType>flag</attributeType>
+        <attributeName>ProvisioningPhase</attributeName>
+        <value>preVerificationProvisioning</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -639,7 +534,7 @@
             <attributeName>productType</attributeName>
             <value>EMAILSMS</value>
         </productAttributes>
-    </productAttributeGroup>   
+    </productAttributeGroup>
    <features>
       <featureIdentifier>1014</featureIdentifier>
       <name>Overdraft</name>
@@ -715,18 +610,33 @@
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-         <featureAttributes>
-	        <attributeType>clientInformationRequirement</attributeType>
-	        <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
-	     </featureAttributes>
-	     <featureAttributes>
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <featureAttributes>
+          <attributeType>clientInformationRequirement</attributeType>
+          <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
+        </featureAttributes>
+        <featureAttributes>
 	        <attributeType>clientInformationRequirement</attributeType>
 	        <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-	     </featureAttributes>
+        </featureAttributes>
+        <featureAttributes>
+           <attributeType>productInformationRequirement</attributeType>
+           <attributeName>GenericCapabilitySelection|ng-component=ng-Generic-Capability-Selection~child-ng-components=ng-Overdraft-Generic-capability-slection~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+           <attributeType>productInformationRequirement</attributeType>
+           <attributeName>OfferSelection|ng-component=ng-Offer-Selection~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+           <attributeType>productInformationRequirement</attributeType>
+           <attributeName>OfferSummery|ng-component=ng-Offer-Summery~child-ng-components=ng-Overdtaft-Offer-Summery~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>PresentOfferSelection</attributeGroupName>
          <featureAttributes>
-         	<attributeType>productInformationRequirement</attributeType>
-         	<attributeName>OverdraftOffer|ng-component=ng-overdraft-offer-details~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OverdraftOfferSelectionSubSection|ng-component=ng-Overdraft-Offer-Selection-SubSection~ZOrder=90~ContractComponentProductType=1014</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -933,6 +843,13 @@
             <value>5.25</value>
          </featureAttributes>
       </featureAttributeGroup>
+      <featureAttributeGroup>
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>ValueAddedServicesforYourOffer|ng-component=ng-Value-Added-Services-for-Your-Offer~child-ng-components=ng-MyPocketValueAddedServiceSelector-1402~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
+      </featureAttributeGroup>
    </features>
    <features>
       <featureIdentifier>1412</featureIdentifier>
@@ -992,6 +909,13 @@
             <valueUnit>string</valueUnit>
             <value />
          </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>ValueAddedServicesforYourOffer|ng-component=ng-Value-Added-Services-for-Your-Offer~child-ng-components=ng-My-Pocket-Value-Added-Service~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
       </featureAttributeGroup>
    </features>
    <features>
@@ -1374,6 +1298,13 @@
             <value>some value</value>
          </featureAttributes>
       </featureAttributeGroup>
+      <featureAttributeGroup>
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>ValueAddedServicesforYourOffer|ng-component=ng-Value-Added-Services-for-Your-Offer~child-ng-components=ng-eNotesValueAddedServiceSelector-1374~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
+      </featureAttributeGroup>
    </features>
    <features>
       <featureIdentifier>1008</featureIdentifier>
@@ -1452,6 +1383,13 @@
             <value>some value</value>
          </featureAttributes>
       </featureAttributeGroup>
+      <featureAttributeGroup>
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>ValueAddedServicesforYourOffer|ng-component=ng-Value-Added-Services-for-Your-Offer~child-ng-components=ng-NoFundsAllertValueAddedServiceSelector-1008~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
+      </featureAttributeGroup>
    </features>
    <features>
       <featureIdentifier>1454</featureIdentifier>
@@ -1529,6 +1467,13 @@
             <valueUnit>text</valueUnit>
             <value>some value</value>
          </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>ValueAddedServicesforYourOffer|ng-component=ng-Value-Added-Services-for-Your-Offer~child-ng-components=ng-GreenbacksValueAddedServiceSelector-1454~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
       </featureAttributeGroup>
    </features>
    <features>
@@ -1686,6 +1631,13 @@
             <value>some value</value>
          </featureAttributes>
       </featureAttributeGroup>
+      <featureAttributeGroup>
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>ValueAddedServicesforYourOffer|ng-component=ng-Value-Added-Services-for-Your-Offer~child-ng-components=ng-FuneralCoverValueAddedServiceSelector-1025~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
+      </featureAttributeGroup>
    </features>
    <features>
       <featureIdentifier>1376</featureIdentifier>
@@ -1764,6 +1716,13 @@
             <attributeName>SalarySwitchingUniversal</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
+      <featureAttributeGroup>
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>ValueAddedServicesforYourOffer|ng-component=ng-Value-Added-Services-for-Your-Offer~child-ng-components=ng-SalarySwitchingValueAddedServiceSelector-1376~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
+      </featureAttributeGroup>
    </features>
    <features>
       <featureIdentifier>1380</featureIdentifier>
@@ -1819,6 +1778,13 @@
             <value>1201</value>
          </featureAttributes>
       </featureAttributeGroup>
+      <featureAttributeGroup>
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>ValueAddedServicesforYourOffer|ng-component=ng-Value-Added-Services-for-Your-Offer~child-ng-components=ng-DeitOrderSwitchingValueAddedServiceSelector-1380~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
+      </featureAttributeGroup>
    </features>
    <features>
       <featureIdentifier>219</featureIdentifier>
@@ -1859,6 +1825,13 @@
             <attributeType>AvailableAction</attributeType>
             <attributeName>Card Collection</attributeName>
          </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>ValueAddedServicesforYourOffer|ng-component=ng-Value-Added-Services-for-Your-Offer~child-ng-components=ng-InstantGoldChequeCardValueAddedServiceSelector-219~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
       </featureAttributeGroup>
    </features>
    <features>
@@ -1972,6 +1945,13 @@
             <attributeName>ATM_Limit</attributeName>
             <value>2000</value>
          </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>ValueAddedServicesforYourOffer|ng-component=ng-Value-Added-Services-for-Your-Offer~child-ng-components=ng-GoldCHequeCardValueAddedServiceSelector-1386~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
       </featureAttributeGroup>
    </features>
    <features>
@@ -2101,6 +2081,13 @@
             <valueUnit>string</valueUnit>
             <value />
          </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>ValueAddedServicesforYourOffer|ng-component=ng-Value-Added-Services-for-Your-Offer~child-ng-components=ng-AmExCardValueAddedServiceSelector-1387~ProceduralStepName=Offer~ZOrder=80</attributeName>
+        </featureAttributes>
       </featureAttributeGroup>
    </features>
 </product>
