@@ -1,36 +1,24 @@
 <product 
     xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-    <productIdentifier>1490</productIdentifier>
-    <name>The American Express Centurion Card</name>
+    <productIdentifier>1165</productIdentifier>
+    <name>NEDBANK PRIVATE WEALTH GARAGE CREDIT T1</name>
     <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
         <productAttributes>
             <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfIDClauseCard</attributeName>
+            <attributeName>ProofOfBankAccountClauseCard</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
         <productAttributes>
             <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfAssetsAndLiabilitiesClauseCard</attributeName>
+            <attributeName>ProofOfIdentificationClauseCard</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
         <productAttributes>
             <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfPayslipClauseCard</attributeName>
-            <isComparable>false</isComparable>
-            <valueUnit>bool</valueUnit>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfBankStatementClauseCard</attributeName>
-            <isComparable>false</isComparable>
-            <valueUnit>bool</valueUnit>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfSelfAndCompanyBioClauseCard</attributeName>
+            <attributeName>ProofOfIncomeClauseCard</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
@@ -47,7 +35,36 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
+        <attributeGroupName>RequiredCompliance_PrepareApplicant_LimitIncrease</attributeGroupName>
+        <productAttributes>
+            <attributeType>Compliance</attributeType>
+            <attributeName>NotUnderCreditAdministrationLimitIncrease</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>Compliance</attributeType>
+            <attributeName>BureauCheckConsentCard</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
         <attributeGroupName>EligibilityRules</attributeGroupName>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>Age</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>18</minValue>
+            <maxValue>999</maxValue>
+            <valueUnit>year</valueUnit>
+            <description>be 18 years or older.</description>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>Income</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>60000</minValue>
+            <maxValue>99999999</maxValue>
+            <valueUnit>ZAR</valueUnit>
+            <description>earn more than R60 000 a year; and</description>
+        </productAttributes>
         <productAttributes>
             <attributeType>EligibilityRule</attributeType>
             <attributeName>NaturalPerson</attributeName>
@@ -82,7 +99,7 @@
             <isComparable>false</isComparable>
             <value>true</value>
             <valueUnit>bool</valueUnit>
-            <description>on invitation only</description>
+            <description> be a South African resident.</description>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -251,17 +268,22 @@
         <productAttributes>
             <attributeType>bool</attributeType>
             <attributeName>FinalCaseQualityAssuranceRequired</attributeName>
-            <value>false</value>
+            <value>true</value>
         </productAttributes>
         <productAttributes>
             <attributeType>bool</attributeType>
             <attributeName>FinalCaseQualityAssuranceSignatureTypeCheck</attributeName>
-            <value>false</value>
+            <value>true</value>
         </productAttributes>
         <productAttributes>
             <attributeType>bool</attributeType>
             <attributeName>FinalCaseQualityAssuranceTeam</attributeName>
             <value>CreditCardFinalAssessmentVerificationTeam</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>BPMCARDOFFER</attributeName>
+            <value>BPMCARDROLE</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -329,7 +351,7 @@
         </productAttributes>
         <productAttributes>
             <attributeName>maximumCreditAvaliableZAR</attributeName>
-            <value>10000000</value>
+            <value>200000</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -521,12 +543,12 @@
         </featureAttributeGroup>
     </features>
     <features>
-        <featureIdentifier>1334</featureIdentifier>
-        <name>Membership Rewards™</name>
-        <mandatory>true</mandatory>
+        <featureIdentifier>1454</featureIdentifier>
+        <name>Nedbank Greenback Rewards</name>
+        <mandatory>false</mandatory>
         <preSelected>true</preSelected>
-        <shortDescription>As part of your American Express Platinum Card, Memebership Rewards™ are automatically included at no extra cost!</shortDescription>
-        <description>Please note you will receive a Membership Rewards™ Redemption card in order to spend you rewards.</description>
+        <shortDescription>By joining our Greenbacks Rewards Programme you will earn rewards when you use your credit card or one of our other transactional accounts.</shortDescription>
+        <description>Detailed description of feature</description>
         <featureGrouping>
             <featureGroupName>Loyalty</featureGroupName>
             <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
@@ -536,9 +558,9 @@
         <featurePricing>
             <fee>
                 <type>AdminFee</type>
-                <description>R60 per month</description>
+                <description>R23 per month</description>
                 <currency>ZAR</currency>
-                <amount>60</amount>
+                <amount>23</amount>
                 <frequency>Monthly</frequency>
             </fee>
         </featurePricing>
@@ -601,7 +623,7 @@
             <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
             <featureAttributes>
                 <attributeType>DocumentDescription</attributeType>
-                <attributeName>Rewards Terms and Conditions|nedbank-commercial-release/CreditCardAmexRewardsTermsAndConditionsUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Terms and Conditions</attributeName>
+                <attributeName>Rewards Terms and Conditions|nedbank-commercial-release/CreditCardRewardsTermsAndConditionsUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Terms and Conditions</attributeName>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>AvailableAction</attributeType>
@@ -613,17 +635,17 @@
             </featureAttributes>
             <featureAttributes>
                 <attributeType>DocTemplateName</attributeType>
-                <attributeName>CreditCardAmexRewardsTermsAndConditionsUniversal</attributeName>
+                <attributeName>CreditCardRewardsTermsAndConditionsUniversal</attributeName>
             </featureAttributes>
         </featureAttributeGroup>
     </features>
     <features>
-        <featureIdentifier>1465</featureIdentifier>
-        <name>Redemption Card</name>
+        <featureIdentifier>1333</featureIdentifier>
+        <name>Nedbank Greenbacks Shop Card</name>
         <mandatory>false</mandatory>
         <preSelected>true</preSelected>
-        <shortDescription>What is the Redemption card?</shortDescription>
-        <description>We' have made it quick and easy to redeem and spend all the rewards you've earned using the Redemption card.</description>
+        <shortDescription>SHOP card</shortDescription>
+        <description>Great news! We've made it quick and easy to redeem all the Greenbacks you've earned with your very own SHOP card</description>
         <featureGrouping>
             <featureGroupName>Loyalty</featureGroupName>
             <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
@@ -706,13 +728,13 @@
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSPlasticType</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>AR1</value>
+                <value>AG6</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSCrdStock</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>AR2</value>
+                <value>AG6</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
@@ -724,7 +746,7 @@
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSATrRegistrationNbr</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>194905</value>
+                <value>190105</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
@@ -742,136 +764,7 @@
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSSolicitationCode</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>8079</value>
-            </featureAttributes>
-        </featureAttributeGroup>
-    </features>
-    <features>
-        <featureIdentifier>9999</featureIdentifier>
-        <name>Priority Pass</name>
-        <mandatory>true</mandatory>
-        <preSelected>true</preSelected>
-        <shortDescription>As part of your travel privileges, we will issue you with a Priority Pass Card, which allows you complimentary  access to over 1000 Priority Pass Lounges worldwide.</shortDescription>
-        <description>As part of your travel privileges, we will issue you with a Priority Pass Card, which allows you complimentary  access to over 1000 Priority Pass Lounges worldwide.</description>
-        <featureGrouping>
-            <featureGroupName>Loyalty</featureGroupName>
-            <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-        </featureGrouping>
-        <featureType>BoltOn</featureType>
-        <referenceProductID>-1</referenceProductID>
-        <featureFulfilment>
-            <channel>selfServiceWeb</channel>
-            <fulfilmentType>setting</fulfilmentType>
-            <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-            <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-        </featureFulfilment>
-        <featureFulfilment>
-            <channel>staffAssisted</channel>
-            <fulfilmentType>setting</fulfilmentType>
-            <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-            <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-        </featureFulfilment>
-        <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-        <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-        <featureDisplayPosition>VAS</featureDisplayPosition>
-        <featureAttributeGroup>
-            <attributeGroupName>SystemRelated</attributeGroupName>
-            <featureAttributes>
-                <attributeType>Flag</attributeType>
-                <attributeName>StraightThroughProcess</attributeName>
-                <value>True</value>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
-            <featureAttributes>
-                <attributeType>type</attributeType>
-                <attributeName>name</attributeName>
-                <minValue>1</minValue>
-                <maxValue>2</maxValue>
-                <valueUnit>text</valueUnit>
-                <value>some value</value>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSProdCd</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>CRD</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSCtlAdId</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>C1</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSRelCd</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>PRI</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSSCtlSlTnPgCd</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>6563</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSCredLnAmt</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>0</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSPayMethod</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>MAN</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSPlasticType</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>PP5</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSCrdStock</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>AP3</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSActType</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>PRI</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSATrRegistrationNbr</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>194905</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>provisionInBranch</attributeName>
-                <valueUnit>boolean</valueUnit>
-                <value>false</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSLangCd</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>ENG</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSSolicitationCode</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>8521</value>
+                <value>7016</value>
             </featureAttributes>
         </featureAttributeGroup>
     </features>
@@ -956,62 +849,6 @@
     <features>
         <featureIdentifier>1099</featureIdentifier>
         <name>Credit card insurance</name>
-        <featureAttributeGroup>
-            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>provisionInBranch</attributeName>
-                <valueUnit>boolean</valueUnit>
-                <value>false</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>legacyProductID</attributeName>
-                <valueUnit>string</valueUnit>
-                <value />
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-            <featureAttributes>
-                <attributeType>DocumentDescription</attributeType>
-                <attributeName>FAIS Client Acknowledgement|nedbank-commercial-release/CCFAISClientAcknowledgementStaffAssisted|ARRANGEMENTS|APPLICATIONS|APPLICATIONSCREDITCARD|FAIS Client Acknowledgement</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>Download</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>Email</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>WetSign</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>ElectronicallySign</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>DocTemplateName</attributeType>
-                <attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>EligibilityRules</attributeGroupName>
-            <featureAttributes>
-                <attributeType>EligibilityRule</attributeType>
-                <attributeName>Age</attributeName>
-                <minValue>18</minValue>
-                <maxValue>64</maxValue>
-                <valueUnit>year</valueUnit>
-            </featureAttributes>
-        </featureAttributeGroup>
-    </features>
-    <features>
-        <featureIdentifier>1100</featureIdentifier>
-        <name>Payment protection plan</name>
         <featureAttributeGroup>
             <attributeGroupName>coreProvisioningParameters</attributeGroupName>
             <featureAttributes>

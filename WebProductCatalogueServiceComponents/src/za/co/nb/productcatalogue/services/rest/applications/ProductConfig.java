@@ -9,6 +9,7 @@ public class ProductConfig extends Application {
 	        Set<Class<?>> classes = new HashSet<Class<?>>();
 	        classes.add(za.co.nb.productcatalogue.services.rest.resources.ProductCatalogue.class);
 	        classes.add(za.co.nb.productcatalogue.services.rest.resources.ProductSpecifications.class);
+		  	classes.add(za.co.nb.productcatalogue.services.rest.resources.ProductRecommendation.class);
 	        return classes;
 	    }
 }
