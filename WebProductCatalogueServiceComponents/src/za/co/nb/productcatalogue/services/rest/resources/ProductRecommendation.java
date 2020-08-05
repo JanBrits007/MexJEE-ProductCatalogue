@@ -39,14 +39,13 @@ public class ProductRecommendation {
         if (answeredQuestionList != null && !answeredQuestionList.getAnsweredQuestion().isEmpty()) {
             try {
                 mLog.debug("Trace 1: request >> " + answeredQuestionList.getAnsweredQuestion().size());
-                System.out.println("Main method working");
 
                 ProductRecommendationService productRecommendationService = new ProductRecommendationService();
 
                 String productFile = "7777";
                 String questionFile = "7778";
+
                 ProductRecommendationResponse productRecommendationResponse = productRecommendationService.getRecommendations(productFile, questionFile, answeredQuestionList);
-                System.out.println("Created recommendations");
                 return Response.ok(productRecommendationResponse.toString()).build();
 
             } catch (Exception e) {
