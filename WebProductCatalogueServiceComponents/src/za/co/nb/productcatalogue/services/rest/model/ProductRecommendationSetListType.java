@@ -15,7 +15,7 @@ public class ProductRecommendationSetListType implements Serializable
 
     @JsonProperty("productRecommendationSetList")
     private ProductRecommendationSetList productRecommendationSetList;
-    private final static long serialVersionUID = -6352215004529310890L;
+    private static final long serialVersionUID = -6352215004529310890L;
 
     @JsonProperty("productRecommendationSetList")
     public ProductRecommendationSetList getProductRecommendationSetList() {

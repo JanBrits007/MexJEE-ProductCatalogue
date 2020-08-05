@@ -15,7 +15,7 @@ public class NextQuestionToAskList implements Serializable
 
     @JsonProperty("questionID")
     private String questionID;
-    private final static long serialVersionUID = -6726064017386571487L;
+    private static final long serialVersionUID = -6726064017386571487L;
 
     @JsonProperty("questionID")
     public String getQuestionID() {

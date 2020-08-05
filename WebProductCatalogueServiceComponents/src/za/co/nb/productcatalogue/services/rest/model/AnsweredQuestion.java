@@ -18,7 +18,7 @@ public class AnsweredQuestion implements Serializable
     private String questionID;
     @JsonProperty("answer")
     private String answer;
-    private final static long serialVersionUID = 6905059975993663449L;
+    private static final long serialVersionUID = 6905059975993663449L;
 
     @JsonProperty("questionID")
     public String getQuestionID() {

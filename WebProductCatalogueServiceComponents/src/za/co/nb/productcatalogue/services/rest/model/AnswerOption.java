@@ -18,7 +18,7 @@ public class AnswerOption implements Serializable
     private String answerID;
     @JsonProperty("answerDisplayValue")
     private String answerDisplayValue;
-    private final static long serialVersionUID = -246073998327621727L;
+    private static final long serialVersionUID = -246073998327621727L;
 
     @JsonProperty("answerID")
     public String getAnswerID() {

@@ -21,7 +21,7 @@ public class ProductRecommendationSet implements Serializable
     private RecommendedProductList recommendedProductList;
     @JsonProperty("nextQuestionToAskList")
     private NextQuestionToAskList nextQuestionToAskList;
-    private final static long serialVersionUID = 3516452773068833309L;
+    private static final long serialVersionUID = 3516452773068833309L;
 
     @JsonProperty("answeredQuestionList")
     public AnsweredQuestionList getAnsweredQuestionList() {

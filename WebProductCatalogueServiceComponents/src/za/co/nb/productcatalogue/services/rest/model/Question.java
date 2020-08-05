@@ -26,7 +26,7 @@ public class Question implements Serializable
     private String answerType;
     @JsonProperty("answerOptionsList")
     private AnswerOptionsList answerOptionsList;
-    private final static long serialVersionUID = 5252313354711233249L;
+    private static final long serialVersionUID = 5252313354711233249L;
 
     @JsonProperty("questionID")
     public String getQuestionID() {

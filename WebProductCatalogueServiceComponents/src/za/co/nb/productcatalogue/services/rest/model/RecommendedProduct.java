@@ -18,7 +18,7 @@ public class RecommendedProduct implements Serializable
     private String productID;
     @JsonProperty("recommendationReasons")
     private RecommendationReasons recommendationReasons;
-    private final static long serialVersionUID = 7484557766753622146L;
+    private static final long serialVersionUID = 7484557766753622146L;
 
     @JsonProperty("productID")
     public String getProductID() {

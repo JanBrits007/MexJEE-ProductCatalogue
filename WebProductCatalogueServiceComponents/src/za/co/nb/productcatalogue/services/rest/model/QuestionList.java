@@ -17,7 +17,7 @@ public class QuestionList implements Serializable
 
     @JsonProperty("question")
     private List<Question> question = null;
-    private final static long serialVersionUID = 2237129463469316481L;
+    private static final long serialVersionUID = 2237129463469316481L;
 
     @JsonProperty("question")
     public List<Question> getQuestion() {

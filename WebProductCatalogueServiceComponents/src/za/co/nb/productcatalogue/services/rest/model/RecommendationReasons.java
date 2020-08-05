@@ -15,7 +15,7 @@ public class RecommendationReasons implements Serializable
 
     @JsonProperty("recommendationReason")
     private String recommendationReason;
-    private final static long serialVersionUID = -1035926861039831479L;
+    private static final long serialVersionUID = -1035926861039831479L;
 
     @JsonProperty("recommendationReason")
     public String getRecommendationReason() {

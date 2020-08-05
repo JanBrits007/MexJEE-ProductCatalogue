@@ -17,7 +17,7 @@ public class AnswerOptionsList implements Serializable
 
     @JsonProperty("answerOption")
     private List<AnswerOption> answerOption = null;
-    private final static long serialVersionUID = -8552752394050633594L;
+    private static final long serialVersionUID = -8552752394050633594L;
 
     @JsonProperty("answerOption")
     public List<AnswerOption> getAnswerOption() {
