@@ -139,7 +139,7 @@ public class ProductSpecificationUtil {
 		mLog.debug("Trace 1 >>" + componentID + "<<,>>" + attributeGroup + "<<,>>" + attributeName + "<<");
 		
 		// First look in product attribute groups.
-		if(productSpecification.getProductIdentifier().toString().trim().equalsIgnoreCase(componentID.trim())) {
+		if(productSpecification.getProductIdentifier() != null && productSpecification.getProductIdentifier().toString().trim().equalsIgnoreCase(componentID.trim())) {
 			// This component ID matches the product ID.
 			for(ProductAttributeGroupType productAttributeGroup : productSpecification.getProductAttributeGroup()) {
 				mLog.debug("Trace 2 >>" + productAttributeGroup.getAttributeGroupName() + "<<");
@@ -167,11 +167,11 @@ public class ProductSpecificationUtil {
 		for(FeaturesType feature : productSpecification.getFeatures()) {
 			mLog.debug("Trace 6 >>" + feature.getFeatureIdentifier() + "<<");
 
-			if(feature.getFeatureIdentifier().toString().trim().equalsIgnoreCase(componentID.trim())) {
+			if(feature.getFeatureIdentifier() != null && feature.getFeatureIdentifier().toString().trim().equalsIgnoreCase(componentID.trim())) {
 				// Feature matches the component ID.
 				for(FeatureAttributeGroupType featureAttributeGroup : feature.getFeatureAttributeGroup()) {
 					mLog.debug("Trace 7 >>" + featureAttributeGroup.getAttributeGroupName() + "<<");
-					
+
 					// Now look for the attribute group.
 					if(featureAttributeGroup.getAttributeGroupName().equalsIgnoreCase(attributeGroup)) {
 						mLog.debug("Trace 8");
@@ -183,7 +183,7 @@ public class ProductSpecificationUtil {
 							if(attribute.getAttributeName().equalsIgnoreCase(attributeName)) {
 								// Found it.
 								mLog.debug("Trace 10");
-								
+
 								return attribute.getValue();
 							}
 						}
