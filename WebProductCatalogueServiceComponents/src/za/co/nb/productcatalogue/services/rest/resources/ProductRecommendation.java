@@ -63,8 +63,7 @@ public class ProductRecommendation {
                 productRecommendationResponse.setResultSet(resultSet);
 
             } catch (Exception e) {
-                mLog.debug("Trace 16");
-                e.printStackTrace();
+                mLog.debug("Trace 3: Error finding product recommendations");
 
                 resultSet.setResultCode("R01");
 
