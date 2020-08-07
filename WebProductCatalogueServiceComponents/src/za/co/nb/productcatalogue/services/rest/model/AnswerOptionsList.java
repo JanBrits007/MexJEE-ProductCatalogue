@@ -9,9 +9,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "answerOption"
-})
 public class AnswerOptionsList implements Serializable
 {
 
@@ -31,8 +28,4 @@ public class AnswerOptionsList implements Serializable
         this.answerOption = answerOption;
     }
 
-    @Override
-    public String toString() {
-        return answerOption.toString() ;
-    }
 }

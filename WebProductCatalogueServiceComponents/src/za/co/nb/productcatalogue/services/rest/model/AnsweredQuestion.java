@@ -43,11 +43,4 @@ public class AnsweredQuestion implements Serializable
         this.answer = answer;
     }
 
-    @Override
-    public String toString() {
-        return "AnsweredQuestion{" +
-                "questionID='" + questionID + '\'' +
-                ", answer='" + answer + '\'' +
-                '}';
-    }
 }

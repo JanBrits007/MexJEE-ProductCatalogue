@@ -8,9 +8,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "answeredQuestion"
-})
 public class AnsweredQuestionList implements Serializable
 {
 
@@ -26,12 +23,5 @@ public class AnsweredQuestionList implements Serializable
     @JsonProperty("answeredQuestion")
     public void setAnsweredQuestion(List<AnsweredQuestion> answeredQuestion) {
         this.answeredQuestion = answeredQuestion;
-    }
-
-    @Override
-    public String toString() {
-        return "AnsweredQuestionList{" +
-                "answeredQuestion=" + answeredQuestion +
-                '}';
     }
 }
