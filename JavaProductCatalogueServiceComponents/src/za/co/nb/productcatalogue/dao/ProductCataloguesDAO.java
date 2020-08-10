@@ -106,6 +106,8 @@ public class ProductCataloguesDAO {
 
 	private double getProductSpecificUpperRate(String productID) throws Exception {
     	mLog.debug("Trace 1");
+    	mLog.debug(">> productID << " + productID);
+
     	try{
     		List<String> productIDs = new ArrayList<String>();
 			productIDs.add("1126");
