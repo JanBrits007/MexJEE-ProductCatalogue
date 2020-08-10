@@ -70,13 +70,4 @@ public class Question implements Serializable
         this.answerOptionsList = answerOptionsList;
     }
 
-    @Override
-    public String toString() {
-        return "{" +
-                "\"questionID\":\"" + questionID + "\"" +
-                ", \"questionDisplayName\":\"" + questionDisplayName + "\"" +
-                ", \"answerType\":\"" + answerType + "\"" +
-                ", \"answerOptions\":" + answerOptionsList +
-                '}';
-    }
 }

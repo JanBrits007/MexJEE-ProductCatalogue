@@ -13,6 +13,7 @@ import za.co.nb.productcatalogue.services.rest.model.ProductRecommendationSetLis
 import za.co.nb.productcatalogue.services.rest.model.Question;
 import za.co.nb.productcatalogue.services.rest.model.QuestionList;
 import za.co.nb.productcatalogue.services.rest.model.QuestionListType;
+import za.co.nb.productcatalogue.services.rest.model.RecommendedProduct;
 
 import javax.ejb.Stateless;
 import java.util.ArrayList;
@@ -78,13 +79,14 @@ public class ProductRecommendationService {
                 recommendationSetList = new ObjectMapper().readValue(recommendationFile, ProductRecommendationSetListType.class);
                 mLog.debug("Trace 3: Find product recommendation(s)");
                 productRecommendationSet = findProduct(answeredQuestionReq);
-                productRecommendationResponse.setRecommendedProductList(productRecommendationSet.getRecommendedProductList());
+                List<RecommendedProduct> recommendedProducts = productRecommendationSet.getRecommendedProductList().getRecommendedProduct();
+                productRecommendationResponse.setRecommendedProducts(recommendedProducts);
 
                 if (productRecommendationSet.getNextQuestionToAskList().getQuestionID() != null && !productRecommendationSet.getNextQuestionToAskList().getQuestionID().isEmpty()) {
                     mLog.debug("Trace 4: Load next question list");
                     QuestionList questionList = getQuestion(questionSetFile, productRecommendationSet.getNextQuestionToAskList());
 
-                    productRecommendationResponse.setQuestionList(questionList);
+                    productRecommendationResponse.setQuestions(questionList.getQuestion());
                 }
 
                 return productRecommendationResponse;

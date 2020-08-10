@@ -27,10 +27,4 @@ public class ProductRecommendationSetListType implements Serializable
         this.productRecommendationSetList = productRecommendationSetList;
     }
 
-    @Override
-    public String toString() {
-        return "ProductRecommendationSetListType{" +
-                "productRecommendationSetList=" + productRecommendationSetList +
-                '}';
-    }
 }

@@ -29,9 +29,4 @@ public class QuestionListType implements Serializable
         this.questionList = questionList;
     }
 
-    @Override
-    public String toString() {
-        return "{" + questionList +
-                '}';
-    }
 }

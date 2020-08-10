@@ -30,11 +30,4 @@ public class QuestionList implements Serializable
     public void setQuestion(List<Question> question) {
         this.question = question;
     }
-
-    @Override
-    public String toString() {
-        if (question == null)
-            this.getQuestion();
-        return "\"questions\":" + question;
-    }
 }

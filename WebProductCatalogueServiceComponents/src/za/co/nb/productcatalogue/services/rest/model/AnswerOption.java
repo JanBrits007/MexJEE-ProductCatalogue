@@ -40,10 +40,4 @@ public class AnswerOption implements Serializable
         this.answerDisplayValue = answerDisplayValue;
     }
 
-    @Override
-    public String toString() {
-        return '{'+"\"answerID\":\"" + answerID + "\"" +
-                ", \"answerDisplayValue\":\"" + answerDisplayValue + "\"" +
-                '}';
-    }
 }

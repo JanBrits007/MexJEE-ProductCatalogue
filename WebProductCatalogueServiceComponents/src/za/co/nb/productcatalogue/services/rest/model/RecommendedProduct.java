@@ -40,11 +40,4 @@ public class RecommendedProduct implements Serializable
         this.recommendationReasons = recommendationReasons;
     }
 
-    @Override
-    public String toString() {
-        return "{" +
-                "\"productID\":\"" + productID + "\"" +
-                ",\"recommendationReasons\":" + recommendationReasons +
-                '}';
-    }
 }
