@@ -59,12 +59,4 @@ public class ProductRecommendationSet implements Serializable
         this.nextQuestionToAskList = nextQuestionToAskList;
     }
 
-    @Override
-    public String toString() {
-        return "ProductRecommendationSet{" +
-                "answeredQuestionList=" + answeredQuestionList +
-                ", recommendedProductList=" + recommendedProductList +
-                ", nextQuestionToAskList=" + nextQuestionToAskList +
-                '}';
-    }
 }

@@ -1,43 +1,41 @@
 package za.co.nb.productcatalogue.services.rest.model;
 
+import za.co.nb.dto.ResultSet;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductRecommendationResponse {
 
-    private RecommendedProductList recommendedProductList;
-    private QuestionList questionList;
+    private List<RecommendedProduct> recommendedProducts;
+    private List<Question> questions;
+    private ResultSet resultSet;
 
-    public RecommendedProductList getRecommendedProductList() {
-        if (recommendedProductList == null)
-            recommendedProductList = new RecommendedProductList();
-        return recommendedProductList;
+    public ResultSet getResultSet() {
+        return resultSet;
     }
 
-    public void setRecommendedProductList(RecommendedProductList recommendedProductList) {
-        this.recommendedProductList = recommendedProductList;
+    public void setResultSet(ResultSet resultSet) {
+        this.resultSet = resultSet;
     }
 
-    public QuestionList getQuestionList() {
-        if (questionList == null)
-            questionList = new QuestionList();
-        return questionList;
+    public List<RecommendedProduct>  getRecommendedProducts() {
+        if (recommendedProducts == null)
+            recommendedProducts = new ArrayList<>();
+        return recommendedProducts;
     }
 
-    public void setQuestionList(QuestionList questionList) {
-        this.questionList = questionList;
+    public void setRecommendedProducts(List<RecommendedProduct>  recommendedProducts) {
+        this.recommendedProducts = recommendedProducts;
     }
 
-    @Override
-    public String toString() {
-        if (recommendedProductList == null) {
-            this.getRecommendedProductList();
-        }
-        if (questionList == null) {
-            this.getQuestionList();
-        }
+    public List<Question> getQuestions() {
+        if (questions == null)
+            questions = new ArrayList<>();
+        return questions;
+    }
 
-        return "{" + recommendedProductList +
-                "," + questionList +
-                '}';
-
+    public void setQuestions(List<Question> questions) {
+        this.questions = questions;
     }
 }

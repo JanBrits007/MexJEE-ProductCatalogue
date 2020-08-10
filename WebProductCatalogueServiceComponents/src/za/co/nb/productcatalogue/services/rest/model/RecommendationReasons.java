@@ -27,8 +27,4 @@ public class RecommendationReasons implements Serializable
         this.recommendationReason = recommendationReason;
     }
 
-    @Override
-    public String toString() {
-        return "\"" + recommendationReason + "\"";
-    }
 }

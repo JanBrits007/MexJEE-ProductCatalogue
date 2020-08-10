@@ -32,11 +32,4 @@ public class RecommendedProductList implements Serializable
         this.recommendedProduct = recommendedProduct;
     }
 
-    @Override
-    public String toString() {
-        if (recommendedProduct == null) {
-            this.getRecommendedProduct();
-        }
-        return "\"recommendedProducts\":" + recommendedProduct;
-    }
 }
