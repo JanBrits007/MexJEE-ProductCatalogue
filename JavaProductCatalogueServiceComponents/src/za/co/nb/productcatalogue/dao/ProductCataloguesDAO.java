@@ -33,6 +33,8 @@ public class ProductCataloguesDAO {
 
 	private static Map<String, CachedCatalogueDetails> mCatalogueCache = new HashMap<String, CachedCatalogueDetails>();
 	
+	private static List<String> productIDs = new ArrayList<String>();
+	
 	public String readProductHierarchyFromResourceFile(String productCatalogueID) throws Exception {
     	mLog.debug("Trace 1 >>" + productCatalogueID + "<<");
 
@@ -109,26 +111,26 @@ public class ProductCataloguesDAO {
     	mLog.debug(">> productID << " + productID);
 
     	try{
-    		List<String> productIDs = new ArrayList<String>();
-			productIDs.add("1126");
-			productIDs.add("1127");
-			productIDs.add("1128");
-			productIDs.add("1130");
-			productIDs.add("1133");
-			productIDs.add("1134");
-			productIDs.add("1136");
-			productIDs.add("1139");
-			productIDs.add("1199");
-			productIDs.add("1360");
-			productIDs.add("1391");
-			productIDs.add("1392");
-			productIDs.add("1405");
-			productIDs.add("1406");
-			productIDs.add("1482");
-						
+    		
+    		productIDs.add("1126");
+    		productIDs.add("1127");
+    		productIDs.add("1128");
+    		productIDs.add("1130");
+    		productIDs.add("1133");
+    		productIDs.add("1134");
+    		productIDs.add("1136");
+    		productIDs.add("1139");
+    		productIDs.add("1199");
+    		productIDs.add("1360");
+    		productIDs.add("1391");
+    		productIDs.add("1392");
+    		productIDs.add("1405");
+    		productIDs.add("1406");
+    		productIDs.add("1482");
+    		
     		ProductOfferInformationServiceClient service = new ProductOfferInformationServiceClient();
 			double investmentRatesMap = 0;		
-
+			
 	    	//replace this line with my service.
 	    	//Environment.InvestmentsRatesMap investmentRatesMap =  dao.getEnvironment().INVESTMENTS_RATES_TABLES;
     		if(productIDs.contains(productID)){
