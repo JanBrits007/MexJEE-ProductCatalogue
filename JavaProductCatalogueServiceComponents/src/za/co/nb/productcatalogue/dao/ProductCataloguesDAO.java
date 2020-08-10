@@ -6,8 +6,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -26,6 +28,8 @@ import za.co.nb.system.pml.service.client.ProductOfferInformationServiceClient;
 public class ProductCataloguesDAO {
 
 	private final Log mLog = LogFactory.getLog(getClass());
+	
+	private static Integer syncControl = new Integer(1);
 
 	private static Map<String, CachedCatalogueDetails> mCatalogueCache = new HashMap<String, CachedCatalogueDetails>();
 	
@@ -103,20 +107,39 @@ public class ProductCataloguesDAO {
 	private double getProductSpecificUpperRate(String productID) throws Exception {
     	mLog.debug("Trace 1");
     	try{
-/*    	SystemConfiguratorDAO dao = new SystemConfiguratorDAO();
-	*/    	ProductOfferInformationServiceClient service = new ProductOfferInformationServiceClient();
-	
+    		List<String> productIDs = new ArrayList<String>();
+			productIDs.add("1126");
+			productIDs.add("1127");
+			productIDs.add("1128");
+			productIDs.add("1130");
+			productIDs.add("1133");
+			productIDs.add("1134");
+			productIDs.add("1136");
+			productIDs.add("1139");
+			productIDs.add("1199");
+			productIDs.add("1360");
+			productIDs.add("1391");
+			productIDs.add("1392");
+			productIDs.add("1405");
+			productIDs.add("1406");
+			productIDs.add("1482");
+						
+    		ProductOfferInformationServiceClient service = new ProductOfferInformationServiceClient();
+			double investmentRatesMap = 0;		
+
 	    	//replace this line with my service.
 	    	//Environment.InvestmentsRatesMap investmentRatesMap =  dao.getEnvironment().INVESTMENTS_RATES_TABLES;
-			double investmentRatesMap;		
-	    	Long investmentRates = Long.valueOf(productID);
-	    	BigInteger convertedProductID = BigInteger.valueOf(investmentRates);
-	    	Holder<BigInteger> productIdentifier = new Holder<BigInteger>();
-	    	productIdentifier.value = convertedProductID;
-	    	
-	    	investmentRatesMap = service.retrieveProductInterestRates(productIdentifier);
-	
-	    	mLog.debug("Trace 2");
+    		if(productIDs.contains(productID)){
+    	    	Long investmentRates = Long.valueOf(productID);
+    	    	BigInteger convertedProductID = BigInteger.valueOf(investmentRates);
+    	    	Holder<BigInteger> productIdentifier = new Holder<BigInteger>();
+    	    	productIdentifier.value = convertedProductID;
+    	    	
+    	    	investmentRatesMap = service.retrieveProductInterestRates(productIdentifier);
+    	
+    	    	mLog.debug("Trace 2");
+    		}
+			
 	    	
 	    	if(investmentRatesMap == 0) {
 	    		return 0.00;
@@ -443,47 +466,56 @@ public class ProductCataloguesDAO {
     	}
 	}
 	
+	
 	public String getProductCatalogueJSONByID(String pProductCatalogueID) throws Exception {
 		mLog.debug("Trace 1 >>" + pProductCatalogueID + "<<");
-
+		
 		// First check whether the catalogue is in the cache.
 		CachedCatalogueDetails cachedCatalogue = mCatalogueCache.get(pProductCatalogueID);
-		Date oneHourAgo = new Date(); 
-		oneHourAgo.setTime(oneHourAgo.getTime() - (60*60*1000));
-		if(cachedCatalogue == null || cachedCatalogue.getCacheDateTime().before(oneHourAgo)) {
-	    	mLog.debug("Trace 2");
-	    	
-			if (pProductCatalogueID.equalsIgnoreCase("all")) {
-		    	mLog.debug("Trace 3");
+		Date inLastDay = new Date(); 
+		inLastDay.setTime(inLastDay.getTime() - (24  *  60  *  60  *  1000));
+		
+		if(cachedCatalogue == null || cachedCatalogue.getCacheDateTime().before(inLastDay)) {
+		mLog.debug("Trace 2");
 		    	
-				String result = getProductCatalogAllJson(pProductCatalogueID);
-				return result;
+		if (pProductCatalogueID.equalsIgnoreCase("all")) {
+			mLog.debug("Trace 3");
+			    	
+			String result = getProductCatalogAllJson(pProductCatalogueID);
+			return result;
 			} else {
-		    	mLog.debug("Trace 4");
-				
-		    	String catalogueString = readProductHierarchyFromResourceFile(pProductCatalogueID);
-		    	
-		    	// Post process the catalogue to inject all base rate linked variable rate references.
-		    	catalogueString = injectVariableRates(catalogueString);
-
-		    	// Post process the catalogue to inject all the upper and lower rates as decimals.
-		    	catalogueString = injectUpperAndLowerRatesAsDecimal(catalogueString);
-		    	
-		    	// Post process the catalogue to inject all the upper and lower rates.
-		    	catalogueString = injectUpperAndLowerRatesAsString(catalogueString);
-		    	cachedCatalogue = new CachedCatalogueDetails();
-		    	cachedCatalogue.setCacheDateTime(new Date());
-		    	cachedCatalogue.setCatalogueContent(catalogueString);
-				mCatalogueCache.put(pProductCatalogueID, cachedCatalogue);
-		    	
-				return catalogueString;
+			    	mLog.debug("Trace 4");
+			    	synchronized (syncControl) {
+				    	String catalogueString = readProductHierarchyFromResourceFile(pProductCatalogueID);
+				    	
+				    	// Post process the catalogue to inject all base rate linked variable rate references.
+				    	catalogueString = injectVariableRates(catalogueString);
+	
+				    	// Post process the catalogue to inject all the upper and lower rates as decimals.
+				    	catalogueString = injectUpperAndLowerRatesAsDecimal(catalogueString);
+				    	
+				    	// Post process the catalogue to inject all the upper and lower rates.
+				    	catalogueString = injectUpperAndLowerRatesAsString(catalogueString);
+				    	cachedCatalogue = new CachedCatalogueDetails();
+				    	cachedCatalogue.setCacheDateTime(new Date());
+				    	cachedCatalogue.setCatalogueContent(catalogueString);
+						mCatalogueCache.put(pProductCatalogueID, cachedCatalogue);
+						
+						return catalogueString;
+			    	}
+				}
 			}
-		}
-		else {
-	    	mLog.debug("Trace 5");
-			
-	    	return cachedCatalogue.getCatalogueContent();
-		}
+			else {
+		    	mLog.debug("Trace 5");
+				
+		    	return cachedCatalogue.getCatalogueContent();
+			}
+		
+	}
+	
+	static final long DAY = 24 * 60 * 60 * 1000;
+	public boolean inLastDay(Date aDate) {
+	    return aDate.getTime() > System.currentTimeMillis() - DAY;
 	}
 
 	private String getProductCatalogAllJson(String id) throws Exception, FileNotFoundException {
