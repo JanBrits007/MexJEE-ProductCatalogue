@@ -132,6 +132,8 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         String substitutedProductID = null;
         String bankerWhitelist = null;
         String channelWhitelist = null;
+        String substituteForIPSubnets = null;
+
 
         // Now check if there are substitution rules.
         for (ProductAttributeGroupType attributeGroup : productSpec.getProductAttributeGroup()) {
@@ -158,6 +160,11 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                         mLog.debug("Trace 6.2 >>SubstituteForProductID<<,>>" + attribute.getValue() + "<<");
 
                         substitutedProductID = attribute.getValue();
+                    }
+                    else if (attribute.getAttributeName().equalsIgnoreCase("SubstituteForIPSubnets")) {
+                        mLog.debug("Trace 6.3 >>SubstituteForIPSubnets<<,>>" + attribute.getValue() + "<<");
+
+                        substituteForIPSubnets = attribute.getValue();
                     }
                 }
 
@@ -187,7 +194,28 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
             mLog.debug("Trace 9 >>" + caseHeader.getInitiatingChannelID().toLowerCase() + "<<");
 
-            if (channelWhitelist.toLowerCase().contains(caseHeader.getInitiatingChannelID().toLowerCase())) {
+            if ((caseHeader.getInitiatingChannelID() != null &&
+                    !caseHeader.getInitiatingChannelID().trim().isEmpty()) &&
+                    channelWhitelist.toLowerCase().contains(caseHeader.getInitiatingChannelID().toLowerCase())) {
+                // We must substitute.
+                mLog.debug("Trace 10 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + substitutedProductID + "<< for channel >>" + caseHeader.getInitiatingChannelID() + "<<");
+
+                return getProductSpecificationXMLByID(substitutedProductID);
+            }
+        }
+        
+        if (substituteForIPSubnets != null) {
+            mLog.debug("Trace 8 >>" + substituteForIPSubnets + "<<");
+
+            // Get the business case details.
+            BusinessCaseDAO dao = new BusinessCaseDAO();
+            BusinessCaseHeader caseHeader = dao.retrieveBusinessCase(caseID);
+
+            mLog.debug("Trace 9 >>" + caseHeader.getInitiatingChannelID().toLowerCase() + "<<");
+
+            if ((caseHeader.getInitiatingChannelID() != null &&
+                    !caseHeader.getInitiatingChannelID().trim().isEmpty()) &&
+                    channelWhitelist.toLowerCase().contains(caseHeader.getInitiatingChannelID().toLowerCase())) {
                 // We must substitute.
                 mLog.debug("Trace 10 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + substitutedProductID + "<< for channel >>" + caseHeader.getInitiatingChannelID() + "<<");
 
@@ -204,7 +232,9 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
             mLog.debug("Trace 13 >>" + caseHeader.getInitiatingStaffNBNumber().toLowerCase() + "<<");
 
-            if (bankerWhitelist.toLowerCase().contains(caseHeader.getInitiatingStaffNBNumber().toLowerCase())) {
+            if ((caseHeader.getInitiatingStaffNBNumber() != null &&
+                    !caseHeader.getInitiatingStaffNBNumber().trim().isEmpty()) &&
+                    bankerWhitelist.toLowerCase().contains(caseHeader.getInitiatingStaffNBNumber().toLowerCase())) {
                 // We must substitute.
                 mLog.debug("Trace 14 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + substitutedProductID + "<< for banker >>" + caseHeader.getInitiatingStaffNBNumber() + "<<");
 

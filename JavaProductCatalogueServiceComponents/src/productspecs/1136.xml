@@ -59,6 +59,16 @@
             <attributeName>EnforceAgeValidationRules</attributeName>
             <value>true</value>
         </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>EnforceIntent0FAISAccreditationRule</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>String</attributeType>
+            <attributeName>FAISCategoryCode</attributeName>
+            <value>1.18</value>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
@@ -196,6 +206,16 @@
             <attributeName>existingToBankClientDataReConfirmationRequired</attributeName>
             <value>false</value>
         </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>requiresEligibilityScoringAtIntents</attributeName>
+            <value>intent 0|intent 1</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>riskAnalysisMechanismIntent0</attributeName>
+            <value>automated</value>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productCodeMappings</attributeGroupName>
@@ -288,9 +308,9 @@
             <value>INVESTMENTS</value>
         </productAttributes>
         <productAttributes>
-            <attributeType>int</attributeType>
+            <attributeType>string</attributeType>
             <attributeName>productType</attributeName>
-            <value>28</value>
+            <value>DS</value>
         </productAttributes>
         <productAttributes>
             <attributeType>int</attributeType>

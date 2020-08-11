@@ -906,6 +906,9 @@
 				  "Free balance enquiries at self-assisted channels (Nedbank ATM, SMS banking, online banking, the Nedbank Money app)",
 				  "MyPocket - a free budgeting and savings pocket linked to your bank account. It earns you interest and gives you instant access to your money. For more info click here."
 				],
+				"startApplicationScreen": {
+					"isRequired": "false"
+				},
 				"redirect": {
 				  "shouldRedirect": false,
 				  "redirectUrl": null
@@ -1100,21 +1103,21 @@
 				"productIdentifier": 1176,
 				"name": "Overdraft(1176)",
 				"shortDescription": "An overdraft is a flexible credit facility linked to your transactional current account that gives you access to additional funds. It is an excellent tool to help you manage unforeseen expenses and get through those tight moments between paydays.",
-				"productPricing": [
-				  {
-					"type": "InitiationFee",
-					"amount": 152,
-					"frequency": "once",
-					"currency": "ZAR",
-					"description": "R 152.00"
-				  },
+				"productPricing": [				 
 				  {
 					"type": "AdminFee",
-					"amount": 43,
+					"amount": 49,
 					"frequency": "monthly",
 					"currency": "ZAR",
-					"description": "R 43.00 p/m"
-				  }
+					"description": "R 49.00 p/m"
+					},
+					{
+						"type": "InitiationFee",
+						"amount": 152,
+						"frequency": "once",
+						"currency": "ZAR",
+						"description": "R 152.00"
+					}
 				],
 				"specialFeature": "To apply, visit any Nedbank or call us on 0860 555 111",
 				"salesHighlights": [
@@ -1442,7 +1445,7 @@
 			  {
 				"productIdentifier": 1385,
 				"name": "Nedbank4Me(1385)",
-				"shortDescription": "Under 18? This account is tailored for kids and offers a secure way to transact and save.",
+				"shortDescription": "Under 16? This account is tailored for kids and offers a secure way to transact and save.",
 				"productPricing": [
 				  {
 					"type": "AdminFee",
@@ -3581,7 +3584,8 @@
 					"groupIdentifier": "AMERICAN_EXPRESS_CARD",
 					"name": "American Express® Card",
 					"products": [1027,
-					1028]
+					1028,
+				  1490]
 				},
 				{
 					"groupIdentifier": "SMALL_BUSINESS_CARD",
@@ -3603,25 +3607,13 @@
 				"name": "Nedbank Gold Credit Card",
 				"shortDescription": "Unlock convenience and flexibility with your Nedbank Gold Credit Card, accepted at over 25 million stores in South Africa and internationally. If you are seeking to be rewarded for your everyday spend, choose to add Greenbacks Rewards to your credit card or support a worthy cause through our Affinities Programme at no cost to you. Explore a world of shopping possibilities at over 25 million local and international merchants.",
 				"redirect": {
-				  "shouldRedirect": true,
-				  "redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionCreditCardApplicationForm.html?"
+				  "shouldRedirect": false,
+				  "redirectUrl": null
 				},
 				"actions": [
 				  {
 					"type": "SELECT",
-					"text": "Select",
-					"environments": [
-					  "dev_staff",
-					  "ete_staff",
-					  "qa_staff"
-					]
-				  },
-				  {
-					"type": "SELECT_EWCO",
-					"text": "Select",
-					"environments": [
-					  "prod_staff"
-					]
+					"text": "Select"
 				  },
 				  {
 					"type": "DETAIL",
@@ -3795,6 +3787,18 @@
 					"description": "No"
 				  }
 				],
+				"requiredDocuments": [{
+					"attributeType": "Display",
+					"attributeName": "Payslip",
+					"isComparable": "false",
+					"valueUnit": "bool"
+				},
+				{
+					"attributeType": "Display",
+					"attributeName": "Proof of ID",
+					"isComparable": "false",
+					"valueUnit": "bool"
+				}],
 				"lifeCycleStatus": "AVAILABLE"
 			  },
 			  {
@@ -3802,25 +3806,13 @@
 				"name": "Nedbank Platinum Credit Card",
 				"shortDescription": "Unlock new possibilities with your Nedbank Platinum Credit Card, with travel benefits including automatic travel insurance and complimentary Bidvest lounge visits. If you are seeking to be rewarded for your everyday spend, choose to add Greenbacks Rewards to your credit card or support a worthy cause through our Affinities Programme at no cost to you. Explore a world of shopping possibilities at over 25 million local and international merchants.",
 				"redirect": {
-				  "shouldRedirect": true,
-				  "redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionCreditCardApplicationForm.html?"
+				  "shouldRedirect": false,
+				  "redirectUrl": null
 				},
 				"actions": [
 				  {
 					"type": "SELECT",
-					"text": "Select",
-					"environments": [
-					  "dev_staff",
-					  "ete_staff",
-					  "qa_staff"
-					]
-				  },
-				  {
-					"type": "SELECT_EWCO",
-					"text": "Select",
-					"environments": [
-					  "prod_staff"
-					]
+					"text": "Select"
 				  },
 				  {
 					"type": "DETAIL",
@@ -3998,32 +3990,32 @@
 					"description": "Yes"
 				  }
 				],
+				"requiredDocuments": [{
+					"attributeType": "Display",
+					"attributeName": "Payslip",
+					"isComparable": "false",
+					"valueUnit": "bool"
+				},
+				{
+					"attributeType": "Display",
+					"attributeName": "Proof of ID",
+					"isComparable": "false",
+					"valueUnit": "bool"
+				}],
 				"lifeCycleStatus": "AVAILABLE"
 			  },
 			  {
 				"productIdentifier": "1027",
-				"name": "The American Express® Gold Card",
+				"name": "The American Express Gold Card",
 				"shortDescription": "Gold has never been this rewarding! Enjoy a complimentary monthly Lifestyle Rewards valued at more than your monthly Card fees. Vouchers can be redeemed at NuMetro, Zando and Takealot.com or for airtime across networks. The rewards you want are there for the taking.",
 				"redirect": {
-				  "shouldRedirect": true,
-				  "redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionChargeCardAmex.html?"
+				  "shouldRedirect": false,
+				  "redirectUrl": null
 				},
 				"actions": [
 				  {
 					"type": "SELECT",
-					"text": "Select",
-					"environments": [
-					  "dev_staff",
-					  "ete_staff",
-					  "qa_staff"
-					]
-				  },
-				  {
-					"type": "SELECT_EWCO",
-					"text": "Select",
-					"environments": [
-					  "prod_staff"
-					]
+					"text": "Select"
 				  },
 				  {
 					"type": "DETAIL",
@@ -4058,8 +4050,8 @@
 				  }
 				],
 				"salesHighlights": [
-				  "The American Express® Gold Card is perfect for everyday shopping and with its budget facility it is perfect for larger than normal purchases.",
-				  "Enjoy a complimentary Lifestyle Reward when you spend R3 500 or more per month on your American Express® Gold Card. Vouchers can be redeemed at NuMetro, Zando, and Takealot.com or for Airtime across networks. To qualify for your monthly lifestyle benefit, keep your account in good standing (i.e. the account may not be in arrears or inactive) and spend at least R3 500 on your account per month your account ( cash withdrawals/transfers excluded). To redeem your benefits, visit Lifestyle Rewards (www.amexlifestyle.co.za) and enter your unique code.",
+				  "The American Express Gold Card is perfect for everyday shopping and with its budget facility it is perfect for larger than normal purchases.",
+				  "Enjoy a complimentary Lifestyle Reward when you spend R3 500 or more per month on your American Express Gold Card. Vouchers can be redeemed at NuMetro, Zando, and Takealot.com or for Airtime across networks. To qualify for your monthly lifestyle benefit, keep your account in good standing (i.e. the account may not be in arrears or inactive) and spend at least R3 500 on your account per month your account ( cash withdrawals/transfers excluded). To redeem your benefits, visit Lifestyle Rewards (www.amexlifestyle.co.za) and enter your unique code.",
 				  "Receive either a complimentary appetizer, 20% discount on food bills or a complimentary bottle of wine when paying your American Express Gold Card at participating restaurant. Click here for more info on Taste from American Express (link to: https://www.americanexpress.com/uk/network/dining/)",
 				  "Exclusive Travel deals such as discounted flights and travel packages brought to you by American Express Travel.",
 				  "American Express Vacations where you will receive a complimentary dining experience, spa treatment, resort credit offer or complimentary nights.",
@@ -4072,11 +4064,11 @@
 				  "Enjoy remarkable basic worldwide protection for you, your partner, your children and your Supplementary Cardmembers which includes up to R10 million cover.",
 				  "Optional Comprehensive Top Cover is also available on all travel.",
 				  "Being a Gold Cardmember entitles you to invitations to Amex Experiences events.",
-				  "Your American Express® Gold Cardmember entitles you to complimentary Supplementary Cards."
+				  "Your American Express Gold Cardmember entitles you to complimentary Supplementary Cards."
 				],
 				"additionalFeatures": [
 					{
-						"As an American Express® Cardmember you will be rewarded with one of the following Lifestyle Rewards per month": [
+						"As an American Express Cardmember you will be rewarded with one of the following Lifestyle Rewards per month": [
 							"R100 worth of airtime.",
 							"R100 Zando voucher.",
 							"R100 Takealot voucher.",
@@ -4085,7 +4077,7 @@
 						],
 						"Enhanced Car Rental": [
 							"Complimentary membership to Avis Preferred Plus where you will receive a free additional driver; guaranteed single vehicle upgrade at airport locations and a free weekend voucher",
-							"Complimentary Hertz Gold Plus Rewards® membership where you will receive up to 1% discount off standard rates; o one car class upgrade on rentals of five or more consecutive days (subject to availability); and a free additional driver."
+							"Complimentary Hertz Gold Plus Rewards membership where you will receive up to 1% discount off standard rates; o one car class upgrade on rentals of five or more consecutive days (subject to availability); and a free additional driver."
 						]
 					}
 				],
@@ -4193,40 +4185,40 @@
 					"description": "Yes"
 				  }
 				],
+				"requiredDocuments": [{
+					"attributeType": "Display",
+					"attributeName": "Payslip",
+					"isComparable": "false",
+					"valueUnit": "bool"
+				},
+				{
+					"attributeType": "Display",
+					"attributeName": "Proof of ID",
+					"isComparable": "false",
+					"valueUnit": "bool"
+				}],
 				"lifeCycleStatus": "AVAILABLE"
 			  },
 			  {
 					"productIdentifier": "1028",
-					"name": "The American Express® Platinum Card",
+					"name": "The American Express Platinum Card",
 					"shortDescription": "Enjoy a host of unmatched travel and lifestyle benefits. Get exclusive airline benefits and access to over 1 000 Airport Lounges around the world.",
 					"redirect": {
-						"shouldRedirect": true,
-						"redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionChargeCardAmex.html?"
+						"shouldRedirect": false,
+						"redirectUrl": null
 					},
 					"actions": [
 						{
-							"type": "SELECT",
-							"text": "Select",
-							"environments": [
-								"dev_staff",
-								"ete_staff",
-								"qa_staff"
-							]
+						"type": "SELECT",
+						"text": "Select"
 						},
 						{
-							"type": "SELECT_EWCO",
-							"text": "Select",
-							"environments": [
-								"prod_staff"
-							]
+						"type": "DETAIL",
+						"text": "Details"
 						},
 						{
-							"type": "DETAIL",
-							"text": "Details"
-						},
-						{
-							"type": "COMPARE",
-							"text": "Compare"
+						"type": "COMPARE",
+						"text": "Compare"
 						}
 					],
 					"productPricing": [
@@ -4253,8 +4245,8 @@
 						}
 					],
 					"salesHighlights": [
-						"The American Express® Platinum Card is perfect for everyday shopping and with its budget facility it is perfect for larger than normal purchases.",
-						"Enjoy a complimentary Lifestyle Reward when you spend R3 500 or more per month on your American Express® Gold Card. Vouchers can be redeemed at NuMetro, Zando, and Takealot.com or for Airtime across networks. To qualify for your monthly lifestyle benefit, keep your account in good standing (i.e. the account may not be in arrears or inactive) and spend at least R3 500 on your account per month your account ( cash withdrawals/transfers excluded). To redeem your benefits, visit Lifestyle Rewards (www.amexlifestyle.co.za) and enter your unique code.",
+						"The American Express Platinum Card is perfect for everyday shopping and with its budget facility it is perfect for larger than normal purchases.",
+						"Enjoy a complimentary Lifestyle Reward when you spend R3 500 or more per month on your American Express Gold Card. Vouchers can be redeemed at NuMetro, Zando, and Takealot.com or for Airtime across networks. To qualify for your monthly lifestyle benefit, keep your account in good standing (i.e. the account may not be in arrears or inactive) and spend at least R3 500 on your account per month your account ( cash withdrawals/transfers excluded). To redeem your benefits, visit Lifestyle Rewards (www.amexlifestyle.co.za) and enter your unique code.",
 						"Receive either a complimentary appetizer, 20% discount on food bills or a complimentary bottle of wine when paying your American Express Gold Card at participating restaurant. Click here for more info on Taste from American Express (link to: https://www.americanexpress.com/uk/network/dining/)",
 						"Exclusive Travel deals such as discounted flights and travel packages brought to you by American Express Travel.",
 						"American Express Vacations where you will receive a complimentary dining experience, spa treatment, resort credit offer or complimentary nights.",
@@ -4266,7 +4258,7 @@
 						"Enjoy remarkable basic worldwide protection for you, your partner, your children and your Supplementary Cardmembers which includes up to R10 million cover.",
 						"Optional Comprehensive Top Cover is also available on all travel.",
 						"Being a Platinum Cardmember entitles you to invitations to customised or exclusive events.",
-						"Your American Express® Platinum Card entitles you to one complimentary Platinum Supplementary and four complimentary Gold Supplementary Cards!"
+						"Your American Express Platinum Card entitles you to one complimentary Platinum Supplementary and four complimentary Gold Supplementary Cards!"
 					],
 					"additionalFeatures": [
 						{
@@ -4278,15 +4270,15 @@
 							],
 							"Enhanced Car Rental": [
 								"Complimentary membership to Avis Preferred Plus where you will receive a free additional driver; guaranteed single vehicle upgrade at airport locations and a free weekend voucher.",
-								"Complimentary Hertz Gold Plus Rewards® membership where you will receive up to 1% discount off standard rates;one car class upgrade on rentals of five or more consecutive days (subject to availability); and a free additional driver."
+								"Complimentary Hertz Gold Plus Rewards membership where you will receive up to 1% discount off standard rates;one car class upgrade on rentals of five or more consecutive days (subject to availability); and a free additional driver."
 							],
 							"Airport Lounge Access": [
 								"Complimentary access to over 1 000 airport lounges worldwide including:",
 								"Priority Pass™ Lounge*;",
 								"Bidvest Premier Airport Lounges;",
-								"The Centurion® Lounges; and",
-								"The American Express® lounges.",
-								"What's more, you can each bring a guest at no cost into all American Express® and Priority Pass™ lounges when you travel."
+								"The Centurion Lounges; and",
+								"The American Express lounges.",
+								"What's more, you can each bring a guest at no cost into all American Express and Priority Pass™ lounges when you travel."
 							]
 						}
 					],
@@ -4393,15 +4385,27 @@
 							"description": "Yes"
 						}
 					],
+					"requiredDocuments": [{
+						"attributeType": "Display",
+						"attributeName": "Payslip",
+						"isComparable": "false",
+						"valueUnit": "bool"
+					},
+					{
+						"attributeType": "Display",
+						"attributeName": "Proof of ID",
+						"isComparable": "false",
+						"valueUnit": "bool"
+					}],
 					"lifeCycleStatus": "AVAILABLE"
 				},
 				{
-					"productIdentifier": "1215",
-					"name": "Small Business Credit Card",
-					"shortDescription": "Small business credit card is for start-ups, medium-sized business or a sole proprietor’s looking to build up their business’s credit record.",
+					"productIdentifier": "1490",
+					"name": "The American Express Centurion Card",
+					"shortDescription": "",
 					"redirect": {
 						"shouldRedirect": true,
-						"redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionCreditCardApplicationForm.html?"
+						"redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionChargeCardAmex.html?"
 					},
 					"actions": [
 						{
@@ -4427,6 +4431,78 @@
 						{
 							"type": "COMPARE",
 							"text": "Compare"
+						}
+					],
+					"productPricing": [
+						{
+							"type": "AdminFee",
+							"amount": 37000,
+							"frequency": "Annually",
+							"currency": "ZAR",
+							"description": "R 37000.00 pa"
+						}
+					],
+					"eligibilityRules": [],
+					"salesHighlights": [],
+					"valueAddedServices": [],
+					"additionalFeatures": [],
+					"productOnAPageWebURL": "",
+					"productAttributeGroup": [],
+					"productFeatures": [],
+					"requiredDocuments": [
+						{
+							"attributeType": "Display",
+							"attributeName": "Copy of Id (If you are a non resident of SA- copy of passport and work permit/ perm residence/temp resident permit)",
+							"isComparable": "false",
+							"valueUnit": "bool"
+						},
+						{
+							"attributeType": "Display",
+							"attributeName": "Latest Signed and dated Statement of Assets and Liabilities not older than 12 months.",
+							"isComparable": "false",
+							"valueUnit": "bool"
+						},
+						{
+							"attributeType": "Display",
+							"attributeName": "Latest 3month payslip/auditors letter confirming your income) / If self-employed- we would require IT34.",
+							"isComparable": "false",
+							"valueUnit": "bool"
+						},
+						{
+							"attributeType": "Display",
+							"attributeName": "Latest three months bank statements (stamped) where salary reflects (not your credit card  statements as this may not reflect salary).",
+							"isComparable": "false",
+							"valueUnit": "bool"
+						},
+						{
+							"attributeType": "Display",
+							"attributeName": " A mini bio of yourself and your company (if applicable) is required. Some information to include could be (educational qualifications, positions held “currently and during your working history”, if self-employed information about how long the company has been in existence as well as any personal achievements you may wish to mention.",
+							"isComparable": "false",
+							"valueUnit": "bool"
+						}
+					],
+					"lifeCycleStatus": "AVAILABLE"
+				},
+				{
+					"productIdentifier": "1215",
+					"name": "Small Business Credit Card",
+					"shortDescription": "Small business credit card is for start-ups, medium-sized business or a sole proprietor’s looking to build up their business’s credit record.",
+					"redirect": {
+						"shouldRedirect": false,
+						"redirectUrl": null
+					},
+					"actions": [
+						{
+						"type": "SELECT",
+						"text": "Select"
+						},
+						{
+						"type": "DETAIL",
+						"text": "Details"
+						},
+						{
+						"type": "COMPARE",
+						"text": "Compare"
 						}
 					],
 					"productPricing": [
@@ -4581,6 +4657,18 @@
 							"description": "No"
 						}
 					],
+					"requiredDocuments": [{
+						"attributeType": "Display",
+						"attributeName": "Payslip",
+						"isComparable": "false",
+						"valueUnit": "bool"
+					},
+					{
+						"attributeType": "Display",
+						"attributeName": "Proof of ID",
+						"isComparable": "false",
+						"valueUnit": "bool"
+					}],
 					"lifeCycleStatus": "AVAILABLE"
 				},
 				{
@@ -5624,25 +5712,13 @@
 				"name": "Nedbank Gold Credit Card (1032)",
 				"shortDescription": "Enjoy the freedom of purchasing the things you need now with the convenience of paying for them over time. Enjoy these and many other benefits with a Nedbank Credit Card.",
 				"redirect": {
-				  "shouldRedirect": true,
-				  "redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionCreditCardApplicationForm.html?"
+				  "shouldRedirect": false,
+				  "redirectUrl": null
 				},
 				"actions": [
 				  {
 					"type": "SELECT",
-					"text": "Select",
-					"environments": [
-					  "dev_staff",
-					  "ete_staff",
-					  "qa_staff"
-					]
-				  },
-				  {
-					"type": "SELECT_EWCO",
-					"text": "Select",
-					"environments": [
-					  "prod_staff"
-					]
+					"text": "Select"
 				  },
 				  {
 					"type": "DETAIL",
@@ -5678,7 +5754,7 @@
 				  {
 					"Rewards": [
 					  "Nedbank Greenbacks members earn Greenbacks on all eligible spend*. You earn unlimited Greenbacks, twice as fast with the Greenbacks American Express® Credit Card. Greenbacks Rewards is easy to understand and easy to use. You get to choose how you spend your rewards! Clients enjoy the flexibility of having two cards linked to one account - the Greenbacks American Express®™ credit card and the Nedbank MasterCard credit card.",
-					  "Clients earn accelerated Greenbacks with the Greenbacks American Express® credit card - 2 Greenbacks rewards for every R5 eligible spend and 1 Greenbacks for every R5 eligible spend on the Nedbank MasterCard credit card.",
+					  "Clients earn accelerated Greenbacks with the Greenbacks American Express credit card - 2 Greenbacks rewards for every R5 eligible spend and 1 Greenbacks for every R5 eligible spend on the Nedbank MasterCard credit card.",
 					  "Your rewards are automatically loaded onto a FREE Nedbank Greenbacks SHOP Card which you can use at over 100 000 leading stores nationwide, withdraw as cash from any ATM or use your SHOP CARD internationally. The choice is entirely yours."
 					],
 					"Affinities": [
@@ -5799,6 +5875,18 @@
 					"description": "No"
 				  }
 				],
+				"requiredDocuments": [{
+					"attributeType": "Display",
+					"attributeName": "Payslip",
+					"isComparable": "false",
+					"valueUnit": "bool"
+				},
+				{
+					"attributeType": "Display",
+					"attributeName": "Proof of ID",
+					"isComparable": "false",
+					"valueUnit": "bool"
+				}],
 				"lifeCycleStatus": "AVAILABLE"
 			  },
 			  {
@@ -5806,25 +5894,13 @@
 				"name": "Nedbank Platinum Credit Card (1034)",
 				"shortDescription": "Unlock new possibilities with your Nedbank Platinum Credit Card, with travel benefits including automatic travel insurance and complimentary Bidvest lounge visits. If you are seeking to be rewarded for your everyday spend, choose to add Greenbacks Rewards to your credit card or support a worthy cause through our Affinities Programme at no cost to you.",
 				"redirect": {
-				  "shouldRedirect": true,
-				  "redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionCreditCardApplicationForm.html?"
+				  "shouldRedirect": false,
+				  "redirectUrl": null
 				},
 				"actions": [
 				  {
 					"type": "SELECT",
-					"text": "Select",
-					"environments": [
-					  "dev_staff",
-					  "ete_staff",
-					  "qa_staff"
-					]
-				  },
-				  {
-					"type": "SELECT_EWCO",
-					"text": "Select",
-					"environments": [
-					  "prod_staff"
-					]
+					"text": "Select"
 				  },
 				  {
 					"type": "DETAIL",
@@ -5967,32 +6043,32 @@
 					"description": "Yes"
 				  }
 				],
+				"requiredDocuments": [{
+					"attributeType": "Display",
+					"attributeName": "Payslip",
+					"isComparable": "false",
+					"valueUnit": "bool"
+				},
+				{
+					"attributeType": "Display",
+					"attributeName": "Proof of ID",
+					"isComparable": "false",
+					"valueUnit": "bool"
+				}],
 				"lifeCycleStatus": "AVAILABLE"
 			  },
 			  {
 				"productIdentifier": "1027",
-				"name": "The American Express® Gold Card (1027)",
+				"name": "The American Express Gold Card (1027)",
 				"shortDescription": "Gold has never been this rewarding! Enjoy a complimentary monthly Lifestyle Rewards valued at more than your monthly Card fees. Vouchers can be redeemed at NuMetro, Zando and Takealot.com or for airtime across networks. The rewards you want are there for the taking.",
 				"redirect": {
-				  "shouldRedirect": true,
-				  "redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionChargeCardAmex.html?"
+				  "shouldRedirect": false,
+				  "redirectUrl": null
 				},
 				"actions": [
 				  {
 					"type": "SELECT",
-					"text": "Select",
-					"environments": [
-					  "dev_staff",
-					  "ete_staff",
-					  "qa_staff"
-					]
-				  },
-				  {
-					"type": "SELECT_EWCO",
-					"text": "Select",
-					"environments": [
-					  "prod_staff"
-					]
+					"text": "Select"
 				  },
 				  {
 					"type": "DETAIL",
@@ -6028,8 +6104,8 @@
 				  }
 				],
 				"salesHighlights": [
-				  "The American Express® Gold Card is perfect for everyday shopping and with its budget facility it is perfect for larger than normal purchases.",
-				  "Enjoy a complimentary Lifestyle Reward when you spend R3 500 or more per month on your American Express® Gold Card. Vouchers can be redeemed at NuMetro, Zando, and Takealot.com or for Airtime across networks. To qualify for your monthly lifestyle benefit, keep your account in good standing (i.e. the account may not be in arrears or inactive) and spend at least R3 500 on your account per month your account ( cash withdrawals/transfers excluded). To redeem your benefits, visit Lifestyle Rewards (www.amexlifestyle.co.za) and enter your unique code.",
+				  "The American Express Gold Card is perfect for everyday shopping and with its budget facility it is perfect for larger than normal purchases.",
+				  "Enjoy a complimentary Lifestyle Reward when you spend R3 500 or more per month on your American Express Gold Card. Vouchers can be redeemed at NuMetro, Zando, and Takealot.com or for Airtime across networks. To qualify for your monthly lifestyle benefit, keep your account in good standing (i.e. the account may not be in arrears or inactive) and spend at least R3 500 on your account per month your account ( cash withdrawals/transfers excluded). To redeem your benefits, visit Lifestyle Rewards (www.amexlifestyle.co.za) and enter your unique code.",
 				  "Receive either a complimentary appetizer, 20% discount on food bills or a complimentary bottle of wine when paying your American Express Gold Card at participating restaurant. Click here for more info on Taste from American Express (link to: https://www.americanexpress.com/uk/network/dining/)",
 				  "Exclusive Travel deals such as discounted flights and travel packages brought to you by American Express Travel.",
 				  "American Express Vacations where you will receive a complimentary dining experience, spa treatment, resort credit offer or complimentary nights.",
@@ -6042,11 +6118,11 @@
 				  "Enjoy remarkable basic worldwide protection for you, your partner, your children and your Supplementary Cardmembers which includes up to R10 million cover.",
 				  "Optional Comprehensive Top Cover is also available on all travel.",
 				  "Being a Gold Cardmember entitles you to invitations to Amex Experiences events.",
-				  "Your American Express® Gold Cardmember entitles you to complimentary Supplementary Cards."
+				  "Your American Express Gold Cardmember entitles you to complimentary Supplementary Cards."
 				],
 				"additionalFeatures": [
 					{
-						"As an American Express® Cardmember you will be rewarded with one of the following Lifestyle Rewards per month": [
+						"As an American Express Cardmember you will be rewarded with one of the following Lifestyle Rewards per month": [
 							"R100 worth of airtime.",
 							"R100 Zando voucher.",
 							"R100 Takealot voucher.",
@@ -6055,7 +6131,7 @@
 						],
 						"Enhanced Car Rental": [
 							"Complimentary membership to Avis Preferred Plus where you will receive a free additional driver; guaranteed single vehicle upgrade at airport locations and a free weekend voucher",
-							"Complimentary Hertz Gold Plus Rewards® membership where you will receive up to 1% discount off standard rates; o one car class upgrade on rentals of five or more consecutive days (subject to availability); and a free additional driver."
+							"Complimentary Hertz Gold Plus Rewards membership where you will receive up to 1% discount off standard rates; o one car class upgrade on rentals of five or more consecutive days (subject to availability); and a free additional driver."
 						]
 					}
 				],
@@ -6163,40 +6239,40 @@
 					"description": "Yes"
 				  }
 				],
+				"requiredDocuments": [{
+					"attributeType": "Display",
+					"attributeName": "Payslip",
+					"isComparable": "false",
+					"valueUnit": "bool"
+				},
+				{
+					"attributeType": "Display",
+					"attributeName": "Proof of ID",
+					"isComparable": "false",
+					"valueUnit": "bool"
+				}],
 				"lifeCycleStatus": "AVAILABLE"
 			  },
 			  {
 					"productIdentifier": "1028",
-					"name": "The American Express® Platinum Card (1028)",
+					"name": "The American Express Platinum Card (1028)",
 					"shortDescription": "Enjoy a host of unmatched travel and lifestyle benefits. Get exclusive airline benefits and access to over 1 000 Airport Lounges around the world.",
 					"redirect": {
-						"shouldRedirect": true,
-						"redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionChargeCardAmex.html?"
+						"shouldRedirect": false,
+						"redirectUrl": null
 					},
 					"actions": [
 						{
-							"type": "SELECT",
-							"text": "Select",
-							"environments": [
-								"dev_staff",
-								"ete_staff",
-								"qa_staff"
-							]
+						"type": "SELECT",
+						"text": "Select"
 						},
 						{
-							"type": "SELECT_EWCO",
-							"text": "Select",
-							"environments": [
-								"prod_staff"
-							]
+						"type": "DETAIL",
+						"text": "Details"
 						},
 						{
-							"type": "DETAIL",
-							"text": "Details"
-						},
-						{
-							"type": "COMPARE",
-							"text": "Compare"
+						"type": "COMPARE",
+						"text": "Compare"
 						}
 					],
 					"specialFeature": "",
@@ -6224,8 +6300,8 @@
 						}
 					],
 					"salesHighlights": [
-						"The American Express® Platinum Card is perfect for everyday shopping and with its budget facility it is perfect for larger than normal purchases.",
-						"Enjoy a complimentary Lifestyle Reward when you spend R3 500 or more per month on your American Express® Gold Card. Vouchers can be redeemed at NuMetro, Zando, and Takealot.com or for Airtime across networks. To qualify for your monthly lifestyle benefit, keep your account in good standing (i.e. the account may not be in arrears or inactive) and spend at least R3 500 on your account per month your account ( cash withdrawals/transfers excluded). To redeem your benefits, visit Lifestyle Rewards (www.amexlifestyle.co.za) and enter your unique code.",
+						"The American Express Platinum Card is perfect for everyday shopping and with its budget facility it is perfect for larger than normal purchases.",
+						"Enjoy a complimentary Lifestyle Reward when you spend R3 500 or more per month on your American Express Gold Card. Vouchers can be redeemed at NuMetro, Zando, and Takealot.com or for Airtime across networks. To qualify for your monthly lifestyle benefit, keep your account in good standing (i.e. the account may not be in arrears or inactive) and spend at least R3 500 on your account per month your account ( cash withdrawals/transfers excluded). To redeem your benefits, visit Lifestyle Rewards (www.amexlifestyle.co.za) and enter your unique code.",
 						"Receive either a complimentary appetizer, 20% discount on food bills or a complimentary bottle of wine when paying your American Express Gold Card at participating restaurant. Click here for more info on Taste from American Express (link to: https://www.americanexpress.com/uk/network/dining/)",
 						"Exclusive Travel deals such as discounted flights and travel packages brought to you by American Express Travel.",
 						"American Express Vacations where you will receive a complimentary dining experience, spa treatment, resort credit offer or complimentary nights.",
@@ -6237,7 +6313,7 @@
 						"Enjoy remarkable basic worldwide protection for you, your partner, your children and your Supplementary Cardmembers which includes up to R10 million cover.",
 						"Optional Comprehensive Top Cover is also available on all travel.",
 						"Being a Platinum Cardmember entitles you to invitations to customised or exclusive events.",
-						"Your American Express® Platinum Card entitles you to one complimentary Platinum Supplementary and four complimentary Gold Supplementary Cards!"
+						"Your American Express Platinum Card entitles you to one complimentary Platinum Supplementary and four complimentary Gold Supplementary Cards!"
 					],
 					"additionalFeatures": [
 						{
@@ -6249,15 +6325,15 @@
 							],
 							"Enhanced Car Rental": [
 								"Complimentary membership to Avis Preferred Plus where you will receive a free additional driver; guaranteed single vehicle upgrade at airport locations and a free weekend voucher.",
-								"Complimentary Hertz Gold Plus Rewards® membership where you will receive up to 1% discount off standard rates;one car class upgrade on rentals of five or more consecutive days (subject to availability); and a free additional driver."
+								"Complimentary Hertz Gold Plus Rewards membership where you will receive up to 1% discount off standard rates;one car class upgrade on rentals of five or more consecutive days (subject to availability); and a free additional driver."
 							],
 							"Airport Lounge Access": [
 								"Complimentary access to over 1 000 airport lounges worldwide including:",
 								"Priority Pass™ Lounge*;",
 								"Bidvest Premier Airport Lounges;",
-								"The Centurion® Lounges; and",
-								"The American Express® lounges.",
-								"What's more, you can each bring a guest at no cost into all American Express® and Priority Pass™ lounges when you travel."
+								"The Centurion Lounges; and",
+								"The American Express lounges.",
+								"What's more, you can each bring a guest at no cost into all American Express and Priority Pass™ lounges when you travel."
 							]
 						}
 					],
@@ -6364,15 +6440,27 @@
 							"description": "Yes"
 						}
 					],
+					"requiredDocuments": [{
+						"attributeType": "Display",
+						"attributeName": "Payslip",
+						"isComparable": "false",
+						"valueUnit": "bool"
+					},
+					{
+						"attributeType": "Display",
+						"attributeName": "Proof of ID",
+						"isComparable": "false",
+						"valueUnit": "bool"
+					}],
 					"lifeCycleStatus": "AVAILABLE"
 				},
 				{
-					"productIdentifier": "1215",
-					"name": "Small Business Credit Card (1215)",
-					"shortDescription": "Small business credit card is for start-ups, medium-sized business or a sole proprietor’s looking to build up their business’s credit record.",
+					"productIdentifier": "1490",
+					"name": "The American Express Centurion Card (1490)",
+					"shortDescription": "",
 					"redirect": {
 						"shouldRedirect": true,
-						"redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionCreditCardApplicationForm.html?"
+						"redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionChargeCardAmex.html?"
 					},
 					"actions": [
 						{
@@ -6398,6 +6486,79 @@
 						{
 							"type": "COMPARE",
 							"text": "Compare"
+						}
+					],
+					"specialFeature": "",
+					"productPricing": [
+						{
+							"type": "AdminFee",
+							"amount": 37000,
+							"frequency": "Annually",
+							"currency": "ZAR",
+							"description": "R 37000.00 pa"
+						}
+					],
+					"eligibilityRules": [],
+					"salesHighlights": [],
+					"valueAddedServices": [],
+					"additionalFeatures": [],
+					"productOnAPageWebURL": "",
+					"productAttributeGroup": [],
+					"productFeatures": [],
+					"requiredDocuments": [
+						{
+								"attributeType": "Display",
+								"attributeName": "Copy of Id (If you are a non resident of SA- copy of passport and work permit/ perm residence/temp resident permit).",
+								"isComparable": "false",
+								"valueUnit": "bool"
+						},
+						{
+								"attributeType": "Display",
+								"attributeName": "Latest Signed and dated Statement of Assets and Liabilities not older than 12 months.",
+								"isComparable": "false",
+								"valueUnit": "bool"
+						},
+						{
+								"attributeType": "Display",
+								"attributeName": "Latest 3month payslip/auditors letter confirming your income) / If self-employed- we would require IT34.",
+								"isComparable": "false",
+								"valueUnit": "bool"
+						},
+						{
+								"attributeType": "Display",
+								"attributeName": "Latest three months bank statements (stamped) where salary reflects (not your credit card  statements as this may not reflect salary).",
+								"isComparable": "false",
+								"valueUnit": "bool"
+						},
+						{
+								"attributeType": "Display",
+								"attributeName": "A mini bio of yourself and your company (if applicable) is required. Some information to include could be (educational qualifications, positions held “currently and during your working history”, if self-employed information about how long the company has been in existence as well as any personal achievements you may wish to mention.",
+								"isComparable": "false",
+								"valueUnit": "bool"
+						}
+				],
+					"lifeCycleStatus": "AVAILABLE"
+				},
+				{
+					"productIdentifier": "1215",
+					"name": "Small Business Credit Card (1215)",
+					"shortDescription": "Small business credit card is for start-ups, medium-sized business or a sole proprietor’s looking to build up their business’s credit record.",
+					"redirect": {
+						"shouldRedirect": false,
+						"redirectUrl": null
+					},
+					"actions": [
+						{
+						"type": "SELECT",
+						"text": "Select"
+						},
+						{
+						"type": "DETAIL",
+						"text": "Details"
+						},
+						{
+						"type": "COMPARE",
+						"text": "Compare"
 						}
 					],
 					"specialFeature": "",
@@ -6553,6 +6714,18 @@
 							"description": "No"
 						}
 					],
+					"requiredDocuments": [{
+						"attributeType": "Display",
+						"attributeName": "Payslip",
+						"isComparable": "false",
+						"valueUnit": "bool"
+					},
+					{
+						"attributeType": "Display",
+						"attributeName": "Proof of ID",
+						"isComparable": "false",
+						"valueUnit": "bool"
+					}],
 					"lifeCycleStatus": "AVAILABLE"
 				},
 			  {
@@ -10555,7 +10728,10 @@
 			  {
 				"productIdentifier": "1099",
 				"name": "Credit card insurance",
-				"shortDescription": "We'll take care of your credit card debt should something happen to you.",
+				"shortDescription": "Make sure your credit card is paid should anything happen to you.",
+				"longDescription": [
+					"A credit card is a great way of getting money when you really need it. But, as a responsible family member, you need to make sure that you can still cover your monthly repayments should anything happen to you.",
+					"If you die, are retrenched, become disabled or if you are diagnosed with a dread disease, our credit card insurance can help to take care of the outstanding balance on your credit card."],
 				"productPricing": [
 				  {
 					"type": "AdminFee",
@@ -10566,7 +10742,14 @@
 				  }
 				],
 				"specialFeature": "",
-				"salesHighlights": [],
+				"salesHighlights": [
+					"Your credit card debt will be taken care of if you no longer can, so your family won’t have to bear the financial burden.",
+					"It is quick and easy to apply, and no medical tests are required.",
+					"You can choose from different cover options."],
+				"salesHighlightsDetails": [
+					"I use my credit card regularly.",
+					"I don’t want my family to worry about my credit card debt if anything happens to me."],
+				"salesHighlightsDetailsOption": "Is credit card insurance from Nedbank right for me?",
 				"redirect": {
 				  "shouldRedirect": false,
 				  "redirectUrl": null

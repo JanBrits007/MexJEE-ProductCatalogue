@@ -502,17 +502,7 @@
          <a:isComparable>false</a:isComparable>
          <a:value>true</a:value>
          <a:valueUnit>bool</a:valueUnit>
-      </a:productAttributes>
-      <a:productAttributes>
-         <a:attributeType>string</a:attributeType>
-         <a:attributeName>EligibleDCARRanges</a:attributeName>
-         <a:value>0-100000|100001-200000</a:value>
-      </a:productAttributes>
-      <a:productAttributes>
-         <a:attributeType>string</a:attributeType>
-         <a:attributeName>EligibleSegments</a:attributeName>
-         <a:value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</a:value>
-      </a:productAttributes>
+      </a:productAttributes>     
    </a:productAttributeGroup>
      <a:productAttributeGroup>
         <a:attributeGroupName>CommunicationStrategyConfiguration</a:attributeGroupName>
@@ -1711,6 +1701,17 @@
          </a:featureAttributes>
       </a:featureAttributeGroup>
       <a:featureAttributeGroup>
+        <a:attributeGroupName>productInformationRequirement_GenerateOffer</a:attributeGroupName>
+        <a:featureAttributes>
+            <a:attributeType>productInformationRequirement</a:attributeType>
+            <a:attributeName>OverdraftDetailsNewFlow</a:attributeName>
+        </a:featureAttributes>
+         <a:featureAttributes>
+            <a:attributeType>productInformationRequirement</a:attributeType>
+            <a:attributeName>ArrangementCaptureSalesMilestone</a:attributeName>
+        </a:featureAttributes>
+      </a:featureAttributeGroup>
+      <a:featureAttributeGroup>
          <a:attributeGroupName>productDocumentPresentation_ActivateProducts</a:attributeGroupName>
          <a:featureAttributes>
             <a:attributeType>DocumentDescription</a:attributeType>
@@ -1800,6 +1801,19 @@
             <a:value>true</a:value>
          </a:featureAttributes>
       </a:featureAttributeGroup>
+      <a:featureAttributeGroup>
+         <a:attributeGroupName>EligibilityRules</a:attributeGroupName>
+         <a:featureAttributes>
+            <a:attributeType>string</a:attributeType>
+            <a:attributeName>EligibleDCARRanges</a:attributeName>
+            <a:value>0-100000|100001-200000</a:value>
+          </a:featureAttributes>
+          <a:featureAttributes>
+            <a:attributeType>string</a:attributeType>
+            <a:attributeName>EligibleSegments</a:attributeName>
+            <a:value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</a:value>
+          </a:featureAttributes>
+       </a:featureAttributeGroup>
    </a:features>
    <a:features>
       <a:featureIdentifier>1025</a:featureIdentifier>

@@ -17,7 +17,7 @@
         <attributeGroupName>1028_LOANAPPLICANT_clientInformationRequirement_GenerateOffer</attributeGroupName>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ClientVerificationInformation|ZOrder=103</attributeName>
+            <attributeName>ClientVerificationInformation|ZOrder=105</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -25,26 +25,26 @@
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>EmploymentBasic|ZOrder=105</attributeName>
+            <attributeName>EmploymentBasic|ZOrder=103</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>IncomeBasic|ZOrder=106</attributeName>
+            <attributeName>IncomeBasic|ZOrder=102</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>PreOfferFinePrint|ZOrder=107</attributeName>
+            <attributeName>PreOfferFinePrint|ZOrder=101</attributeName>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>1041_PRIMARY_clientInformationRequirement_GenerateOffer</attributeGroupName>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>AdditionalPersonalInformation|sideStepperDisplayName=Child's Personal Information~ZOrder=101</attributeName>
+            <attributeName>AdditionalPersonalInformation|sideStepperDisplayName=Child's Personal Information~ZOrder=107</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>IncomeBasic|sideStepperDisplayName=Child's Basic Income~ZOrder=102</attributeName>
+            <attributeName>IncomeBasic|sideStepperDisplayName=Child's Basic Income~ZOrder=106</attributeName>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -233,6 +233,24 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
+        <attributeGroupName>DecisioningControl</attributeGroupName>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>EnforceIntent0FAISAccreditationRule</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>String</attributeType>
+            <attributeName>FAISCategoryCode</attributeName>
+            <value>1.18</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>ComponentSupportsDeclineReasons</attributeName>
+            <value>true</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
         <productAttributes>
             <attributeType>int</attributeType>
@@ -303,6 +321,16 @@
             <attributeType>string</attributeType>
             <attributeName>frontOfficeIntentSequence</attributeName>
             <value>PrepareApplicant|DetermineRelatedParties|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>requiresElgiblityScoringAtIntents</attributeName>
+            <value>intent 0</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>riskAnalysisMechanismIntent0</attributeName>
+            <value>automated</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>

@@ -142,6 +142,16 @@
             <attributeName>requiresSecurityAndCollatoralManagement</attributeName>            <!-- Used by BPM to determine whether the product requires security and collatoral management to be in place. Mainly a place holder for HL later on -->
             <value>false</value>
         </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>requiresElgiblityScoringAtIntents</attributeName>
+            <value>intent 0</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>riskAnalysisMechanismIntent0</attributeName>
+            <value>automated</value>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productCodeMappings</attributeGroupName>        <!-- Used to map product codes -->
@@ -217,6 +227,24 @@
             <attributeType>string</attributeType>
             <attributeName>NonStraightThroughEmail</attributeName>
             <value>pietsewinkel@cresta.co.za</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>DecisioningControl</attributeGroupName>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>EnforceIntent0FAISAccreditationRule</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>String</attributeType>
+            <attributeName>FAISCategoryCode</attributeName>
+            <value>1.18</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>ComponentSupportsDeclineReasons</attributeName>
+            <value>true</value>
         </productAttributes>
     </productAttributeGroup>
 </product>
