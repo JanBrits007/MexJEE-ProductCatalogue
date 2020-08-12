@@ -67,7 +67,7 @@ public class ProductCatalogue {
 
     @GET
     @Path( "/invalidate" )
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces( MediaType.APPLICATION_JSON )
     public Response invalidateCache( ) {
         mLog.debug("Trace 1");
 
@@ -83,7 +83,7 @@ public class ProductCatalogue {
 
     @GET
     @Path( "/reload" )
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces( MediaType.APPLICATION_JSON )
     public Response reloadCache( ) {
         mLog.debug("Trace 1");
 
