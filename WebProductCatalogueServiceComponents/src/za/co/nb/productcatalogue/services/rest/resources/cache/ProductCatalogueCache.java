@@ -25,8 +25,6 @@ public class ProductCatalogueCache  extends AbstractProductCatalogueDAO {
 
     private final Log mLog = LogFactory.getLog(getClass());
 
-    @Inject
-    private ProductCataloguesDAO productCataloguesDAO;
 
     @PostConstruct
     public void init(){
@@ -48,14 +46,8 @@ public class ProductCatalogueCache  extends AbstractProductCatalogueDAO {
         @Schedule(hour = "7", minute = "5", second = "0", persistent = false)
     })
     public void updateCache() {
-
-        for(String productId : catalogueCache.keySet()){
-
-            String catalogueString =  retrieveRatesInjectedProductCatalog(productId);
-            putToCache(productId, catalogueString);
-
-            mLog.debug ("## ScheduledProductCacheUpdate ##: "+productId);
-        }
+        mLog.debug("pre-updateCache");
+        updateProductCatalogueCache();
     }
 
 

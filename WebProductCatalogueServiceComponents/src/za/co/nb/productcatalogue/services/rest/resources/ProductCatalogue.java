@@ -64,6 +64,36 @@ public class ProductCatalogue {
             return Response.status(Status.INTERNAL_SERVER_ERROR).build();
     	}
     }
+
+    @GET
+    @Path( "/invalidate" )
+    public Response invalidateCache( ) {
+        mLog.debug("Trace 1");
+
+        try {
+            productCataloguesDAO.invalidate();
+            return Response.ok(Status.NO_CONTENT).build();
+
+        } catch(Exception e) {
+           mLog.error("could not invalidate cache", e);
+            return Response.status(Status.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @GET
+    @Path( "/reload" )
+    public Response reloadCache( ) {
+        mLog.debug("Trace 1");
+
+        try {
+            productCataloguesDAO.reload();
+            return Response.ok(Status.NO_CONTENT).build();
+
+        } catch(Exception e) {
+            mLog.error("could not reload cache", e);
+            return Response.status(Status.INTERNAL_SERVER_ERROR).build();
+        }
+    }
     
     @POST
     @Path( "/selection" )

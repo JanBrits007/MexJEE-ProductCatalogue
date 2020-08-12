@@ -43,6 +43,18 @@ public abstract class AbstractProductCatalogueDAO extends AbstractRate {
         return catalogueString;
     }
 
+    public void updateProductCatalogueCache(){
+
+        for(String productId : catalogueCache.keySet()){
+
+            String catalogueString =  retrieveRatesInjectedProductCatalog(productId);
+            putToCache(productId, catalogueString);
+
+            mLog.debug ("## ProductCacheUpdated ##: "+productId);
+        }
+    }
+
+
     protected String readProductHierarchyFromResourceFile(String productCatalogueID) {
         mLog.debug("Trace 1 >>" + productCatalogueID + "<<");
 

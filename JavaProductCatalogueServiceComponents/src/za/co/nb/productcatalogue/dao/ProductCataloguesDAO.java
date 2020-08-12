@@ -46,6 +46,16 @@ public class ProductCataloguesDAO extends AbstractProductCatalogueDAO {
 		
 	}
 
+	public void invalidate(){
+		catalogueCache.clear();
+		mLog.debug("## ProductCatalogue CLEARED ##");
+	}
+
+	public void reload(){
+		updateProductCatalogueCache();
+		mLog.debug("## ProductCatalogue RELOADED ##");
+	}
+
 
 
 	private boolean isGreaterThan24Hours(Date cacheDate){
