@@ -67,12 +67,13 @@ public class ProductCatalogue {
 
     @GET
     @Path( "/invalidate" )
+    @Produces(MediaType.TEXT_PLAIN)
     public Response invalidateCache( ) {
         mLog.debug("Trace 1");
 
         try {
             productCataloguesDAO.invalidate();
-            return Response.ok(Status.NO_CONTENT).build();
+            return Response.ok(Status.OK).build();
 
         } catch(Exception e) {
            mLog.error("could not invalidate cache", e);
@@ -82,12 +83,13 @@ public class ProductCatalogue {
 
     @GET
     @Path( "/reload" )
+    @Produces(MediaType.TEXT_PLAIN)
     public Response reloadCache( ) {
         mLog.debug("Trace 1");
 
         try {
             productCataloguesDAO.reload();
-            return Response.ok(Status.NO_CONTENT).build();
+            return Response.ok(Status.OK).build();
 
         } catch(Exception e) {
             mLog.error("could not reload cache", e);
