@@ -1937,556 +1937,685 @@
 				],
 				"lifeCycleStatus": "AVAILABLE"
 			  },
-			  {
-				"productIdentifier": 1400,
-				"name": "Young Professional Bundle(1400)",
-				"shortDescription": "If you’re under 30 with a four-year degree, we know you are going places. Get fast-tracked into a private banking experience at a 50% reduced monthly fee. This bundle includes a credit card facility with an optional overdraft, plus all the perks you deserve.",
-				"productPricing": [
-				  {
-					"type": "AdminFee",
-					"amount": 180,
-					"frequency": "Monthly",
-					"currency": "ZAR",
-					"description": "R 180.00 pm"
-				  }
-				],
-				"specialFeature": "",
-				"salesHighlights": [
-				  "Enjoy unlimited airport lounge access, travel insurance, free delivery of your forex and 50% discount on the prestigious American Express® Platinum Charge Card (for the global traveller).",
-					"Children get 4 lounge visits per year if they are on an active Dezign4me or Unlocked.me Student account.",
-					"Get exclusive benefits when using your Visa Signature credit card.",
-					"10 international airport lounge visits (including 1 guest allowance per visit) via LoungeKey.",
-					"Significantly increased travel insurance when buying airline tickets using these cards.",
-					"Purchase protection and warranties on purchases made using these cards.",
-					"24/7 emergency assistance should you need card replacement, cash or payments authorised.",
-					"24/7 concierge services for hotels, restaurants or event bookings and so much more.",
-					"Greenbacks rewards are earned on your everyday card swipes and online purchases.",
-					"Exclusive deals at unlocked.me. This includes deals on the latest tech, fashion, travel and once in a lifetime experience.",
-					"Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications up to R5 million. Apply online and qualify for 1% cash back (up to R15 000). 100% loans for vehicle finance applications. Your banker is equipped to provide you with a quick vehicle finance approval. All credit applications are subject to final credit approval.",
-					"Financial advice: Your financial growth also comes with important decisions and responsibilities. We'll give you access to a financial planner to assess your financial position and your future goals, consider different retirement scenarios, calculate the various costs and help you determine the optimal portfolio for your circumstances."
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
+				{
+					"productIdentifier": 1400,
+					"name": "Young Professional Bundle",
+					"shortDescription": "Exclusively for under 30's with a 4-year qualification, this bundle includes a credit card facility with an optional overdraft, plus all the perks at 50% of the monthly fee.",
+					"description": "If you’re under 30 with a four-year degree, we know you are going places. Get fast-tracked into a private banking experience at a 50% reduced monthly fee.~This bundle includes a credit card facility with an optional overdraft, plus all the perks you deserve.",
+					"productPricing": [{
+						"type": "AdminFee",
+						"amount": 180.00,
+						"frequency": "Monthly",
+						"currency": "ZAR",
+						"description": "R 180.00 pm"
+					}],
+					"specialFeature": "",
+					"eligibilityNote":"Young Professional~AGE LIMIT|be between 18 and 30 years old~have a 4 year degree, honours level or NQF 8 equivalent qualification",
+					"additionalInfo": [
+						"Professional account with significant transnational value",
+						"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
+						"Nedbank Money app or Online Banking for world-class secure digital banking",
+						"Professional cheque and credit cards offering local and international perks",
+						"Greenbacks Card Swiper subscription",
+						"SMS notifications: eNotes and No-funds alert"
+					],
+					"detailsScreen": {
+						"component-name": "product-details",
+						"version": "2.0"
+					},
+					"salesHighlights": [
+						"sh1~A banking package that works as hard as you do",
+						"sh2~Lifestyle perks for the entire family",
+						"sh3~Unique investments to suit your lifestyle",
+						"sh4~Finance that lets you dream big",
+						"sh5~Ways to bank that suit your hours",
+						"sh6~Tailored offering for young professionals and those over 54"
+					],
+					"startApplicationScreen": {
+						"isRequired": "false"
+					},
+					"redirect": {
+						"shouldRedirect": false,
+						"redirectUrl": null
+					},
+					"actions": [
+						{
+							"type": "SELECT",
+							"text": "Select",
+							"environments": [
+								"dev",
+								"ete"
+							]
+						},
+						{
+							"type": "REDIRECT",
+							"text": "Select",
+							"environments": [
+								"qa",
+								"prod"
+							],
+							"value": "https://www.nedbank.co.za/content/forms/af/nedbank/CallMeBackProfessionalBanking.html"
+						},
+						{
+							"type": "DETAIL",
+							"text": "Details"
+						},
+						{
+							"type": "COMPARE",
+							"text": "Compare"
+						}
+					],
+					"applicationSteps": [
+						{
+							"index": 1,
+							"name": "Authenticate",
+							"Description": "Register to log in with your Nedbank ID."
+						},
+						{
+							"index": 2,
+							"name": "Product setup",
+							"Description": "Setup your product to suit your needs."
+						},
+						{
+							"index": 3,
+							"name": "About you",
+							"Description": "Tell us more details about you."
+						},
+						{
+							"index": 4,
+							"name": "Credit info",
+							"Description": "Only required if you need a credit facility."
+						},
+						{
+							"index": 5,
+							"name": "Finalisation",
+							"Description": "Upload documents and accept some T&Cs."
+						},
+						{
+							"index": 6,
+							"name": "Customisation",
+							"Description": "Choose your banker and card delivery."
+						}
+					],
+					"valueAddedServices": [
+						"Professional account with significant transactional value",
+						"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
+						"24/7 telephone and email support",
+						"Nedbank Money app or Online Banking for world-class secure access to your account wherever you are",
+						"Professional cheque cards offering local and international perks",
+						"Professional credit cards offering local and international travel perks",
+						"Greenbacks rewards",
+						"eNotes",
+						"No-funds alert",
+						"Optional: Overdraft"
+					],
+					"eligibilityRules": [
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Age",
+							"minValue": "18",
+							"maxValue": "26",
+							"valueUnit": "year",
+							"description": "Individuals from 18 to 29 years"
+						},	
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Age",
+							"minValue": "27",
+							"maxValue": "29",
+							"valueUnit": "year",
+							"description": ""
+							},				 			
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Education",
+							"minValue": "4",
+							"valueUnit": "year",
+							"description": "Minimum 4 year degree or 3 years plus Honours (NQF level 8 equivalent)"
+						},
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Income",
+							"minValue": "750001",
+							"maxValue": "999999999",
+							"valueUnit": "ZAR",
+							"description": "There is no minimum income requirement"
+						},				 
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Package",
+							"value": "A bundled offering",
+							"valueUnit": "package",
+							"description": "Not available to trust, companies or legal entities"
+						},
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "CreditCheck",
+							"description": "All credit facilities are subject to credit and affordability checks"
+						},
+						{
+							"attributeType": "ConcurrentApplicationLimitationGroup",
+							"attributeName": "ConcurrentApplicationLimitation",
+							"value": "1"
+						}
+					],
+					"requiredDocuments": [
+						{
+							"attributeType": "Display",
+							"attributeName": "Valid South African identity",
+							"isComparable": "false",
+							"valueUnit": "bool",
+							"description": "card/document or passport with valid permit"
+						},
+						{
+								"attributeType": "Display",
+								"attributeName": "3-Months bank statements",
+								"isComparable": "false",
+								"valueUnit": "bool",
+								"description": "(we can source these for you from most banks)"
+						},		
+						{
+							"attributeType": "Display",
+							"attributeName": "Additional documents",
+							"isComparable": "false",
+							"valueUnit": "bool",
+							"description": "for overdraft and credit card applications, additional documents may be required"
+						},
+						{
+							"attributeType": "Display",
+							"attributeName": "Education declaration",
+							"isComparable": "false",
+							"valueUnit": "bool",
+							"description": "you will be required to sign a declaration that you have the required level of education to qualify"
+						}
+					],
+					"productFeatures": [
+						{
+							"name": "Age",
+							"displayName": "Age",
+							"description": "Under 30 with a 4 year qualification"
+						},
+						{
+							"name": "fee",
+							"displayName": "Monthly Fee",
+							"description": "R 180.00"
+						},
+						{
+							"name": "Income",
+							"displayName": "Income",
+							"description": "There is no minimum income requirement"
+						},
+						{
+							"name": "RelationshipBanker",
+							"displayName": "Relationship Banker",
+							"description": "Included"
+						},
+						{
+							"name": "Chequecard",
+							"displayName": "Cheque card",
+							"description": "Professional (Platinum Greenbacks) cheque card included"
+						},
+						{
+							"name": "Nedbankatmwithdrawals",
+							"displayName": "Nedbank ATM withdrawals",
+							"description": "Unlimited ATM withdrawals"
+						},
+						{
+							"name": "Debitordersinternal",
+							"displayName": "Debit orders (Internal)",
+							"description": "Unlimited debit orders"
+						},
+						{
+							"name": "Debitordersexternal",
+							"displayName": "Debit orders (External)",
+							"description": "Unlimited debit orders"
+						},
+						{
+							"name": "Stoporders",
+							"displayName": "Stop orders",
+							"description": "Stop orders included"
+						},
+						{
+							"name": "Cardswipes",
+							"displayName": "Card swipes",
+							"description": "Unlimited swipes"
+						},
+						{
+							"name": "Cashwithdrawalsatparticipatingretailers",
+							"displayName": "Cash withdrawals",
+							"description": "Cash withdrawals at participating retailers and at a Nedbank ATM included"
+						},
+						{
+							"name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+							"displayName": "Digital banking",
+							"description": "Included"
+						},
+						{
+							"name": "AirtimewithoutAirtime",
+							"displayName": "Airtime without Airtime",
+							"description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+						},
+						{
+							"name": "SendiMali",
+							"displayName": "Send i-Mali",
+							"description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+						},
+						{
+							"name": "Creditcard",
+							"displayName": "Credit card",
+							"description": "Included"
+						},
+						{
+							"name": "Greenbacks",
+							"displayName": "Greenbacks",
+							"description": "Included"
+						},
+						{
+							"name": "Chargecard",
+							"displayName": "Charge card",
+							"description": "American Express® Platinum Charge Card available at 50% discounted annual fee (for the first year only)"
+						},
+						{
+							"name": "Electronicchannels",
+							"displayName": "Electronic channels",
+							"description": "Included"
+						},
+						{
+							"name": "eNote",
+							"displayName": "eNote",
+							"description": "Included"
+						},
+						{
+							"name": "Nofundsalert",
+							"displayName": "No-funds alert",
+							"description": "Included"
+						},
+						{
+							"name": "Internationalairportloungeaccess",
+							"displayName": "International airport lounge",
+							"description": "Ten visits per annum. One guest per visit"
+						},
+						{
+							"name": "Domesticairportloungeaccess",
+							"displayName": "Domestic airport lounge",
+							"description": "Unlimited access to Bidvest domestic and international lounges"
+						},
+						{
+							"name": "Balanceenquiry",
+							"displayName": "Balance enquiry",
+							"description": "Included on Self Service channels"
+						},
+						{
+							"name": "Forexdelivery",
+							"displayName": "Forex delivery",
+							"description": "Free forex delivery (foreign cash & travel card) at preferential rates"
+						},
+						{
+							"name": "Overdraft",
+							"displayName": "Overdraft",
+							"description": "Optional"
+						},
+						{
+							"name": "Investment",
+							"displayName": "Investment",
+							"description": "Exclusive competitive platinum investment products"
+						},
+						{
+							"name": "Insurance",
+							"displayName": "Insurance",
+							"description": "Travel insurance, purchase protection and warrantees included when paying with your Visa Signature Professional Banking Credit Card."
+						},
+						{
+							"name": "Tailoredfinancing",
+							"displayName": "Tailored financing",
+							"description": "Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications of less than R1,5 million and 100% loans for vehicle finance applications of less than R400 000.  All credit applications are subject to final credit approval and terms and conditions."
+						}
+					],
+					"lifeCycleStatus": "AVAILABLE",
+					"downloadLinks":[
+						{
+							"id": "pricingSchedule",
+							"url": "https://www.nedbank.co.za/content/dam/nedbank/Campaigns/NedbankCurrentAccPRBCharges.pdf"
+						},
+						{
+							"id": "brochure",
+							"url": "https://www.nedbank.co.za/content/dam/nedbank/site-assets/Personal/Professional/Brochures/Nedbank%20Professional%20Banking%20Brochure.pdf"
+						}
+					]
 				},
-				"actions": [
-				  {
-					"type": "SELECT_EWCO",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"valueAddedServices": [
-				  "Professional account with significant transactional value",
-					"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
-					"24/7 telephone and email support",
-					"Nedbank Money app or Online Banking for world-class secure access to your account wherever you are",
-					"Professional cheque cards offering local and international perks",
-					"Professional credit cards offering local and international travel perks",
-					"Greenbacks rewards",
-					"eNotes",
-					"No-funds alert",
-					"Optional: Overdraft"
-				],
-				"eligibilityRules": [
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "18",
-						"maxValue": "26",
-						"valueUnit": "year",
-						"description": "Individuals from 18 to 29 years."
+				{
+					"productIdentifier": 1021,
+					"name": "Professional Bundle",
+					"shortDescription": "This bundle includes a credit card with an optional overdraft, plus all the private banking perks you deserve - for a fixed monthly fee.",
+					"description": "A private banking experience that emphasises convenience, quality and flexibility at a fixed monthly fee.~This bundle includes a credit card with an optional overdraft, plus all the perks you deserve.~Up to 50% monthly fee rebates are available for those 55 years and older with Nedbank investments.",
+					"productPricing": [
+						{
+							"type": "AdminFee",
+							"amount": 360.00,
+							"frequency": "Monthly",
+							"currency": "ZAR",
+							"description": "R 360.00 pm"
+						}
+					],
+					"specialFeature": "",
+					"additionalInfo": [
+						"Professional account with significant transnational value",
+						"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
+						"Nedbank Money app or Online Banking for world-class secure digital banking",
+						"Professional cheque and credit cards offering local and international perks",
+						"Greenbacks Card Swiper subscription",
+						"SMS notifications: eNotes and No-funds alert"
+					],
+					"detailsScreen": {
+						"component-name": "product-details",
+						"version": "2.0"
 					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "27",
-						"maxValue": "29",
-						"valueUnit": "year",
-						"description": ""
+					"salesHighlights": [
+						"sh1~A banking package that works as hard as you do",
+						"sh2~Lifestyle perks for the entire family",
+						"sh3~Unique investments to suit your lifestyle",
+						"sh4~Finance that lets you dream big",
+						"sh5~Ways to bank that suit your hours",
+						"sh6~Tailored offering for young professionals and those over 54"		
+					],
+					"startApplicationScreen": {
+						"isRequired": "false"
 					},	
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Income",
-						"minValue": "750001",
-						"maxValue": "999999999",
-						"valueUnit": "ZAR",
-						"description": "There is no minimum income requirement."
-					},	
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Education",
-						"minValue": "4",
-						"valueUnit": "year",
-						"description": "Minimum 4 year degree or 3 years plus Honours (NQF level 8 equivalent)"
-					},						 
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Package",
-					"value": "A bundled offering",
-					"valueUnit": "package",
-					"description": "Not available to trust, companies or legal entities"
-				  },
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "CreditCheck",
-						"description": "All credit facilities are subject to credit and affordability checks"
+					"redirect": {
+						"shouldRedirect": false,
+						"redirectUrl": null
 					},
-				  {
-					"attributeType": "ConcurrentApplicationLimitationGroup",
-					"attributeName": "ConcurrentApplicationLimitation",
-					"value": "1"
-				  }
-				],
-				"requiredDocuments": [
-				  {
-						"attributeType": "Display",
-						"attributeName": "Valid South African identity",
-						"isComparable": "false",
-						"valueUnit": "bool",
-						"description": "card/document or passport with valid permit"
-					},
-					{
+					"actions": [
+						{
+							"type": "SELECT",
+							"text": "Select",
+							"environments": [
+								"dev",
+								"ete",
+								"qa"
+							]
+						},
+						{
+							"type": "REDIRECT",
+							"text": "Select",
+							"environments": [				
+								"prod"
+							],
+							"value": "https://www.nedbank.co.za/content/forms/af/nedbank/CallMeBackProfessionalBanking.html"
+						},
+						{
+							"type": "DETAIL",
+							"text": "Details"
+						},
+						{
+							"type": "COMPARE",
+							"text": "Compare"
+						}
+					],
+					"applicationSteps": [
+						{
+							"index": 1,
+							"name": "Authenticate",
+							"Description": "Register to log in with your Nedbank ID."
+						},
+						{
+							"index": 2,
+							"name": "Product setup",
+							"Description": "Setup your product to suit your needs."
+						},
+						{
+							"index": 3,
+							"name": "About you",
+							"Description": "Tell us more details about you."
+						},
+						{
+							"index": 4,
+							"name": "Credit info",
+							"Description": "Only required if you need a credit facility."
+						},
+						{
+							"index": 5,
+							"name": "Finalisation",
+							"Description": "Upload documents and accept some T&Cs."
+						},
+						{
+							"index": 6,
+							"name": "Customisation",
+							"Description": "Choose your banker and card delivery."
+						}
+					],
+					"valueAddedServices": [
+						"Professional account with significant transactional value",
+						"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
+						"24/7 telephone and email support",
+						"Nedbank Money app or Online Banking for world-class secure access to your account wherever you are",
+						"Professional cheque cards offering local and international perks",
+						"Professional credit cards offering local and international travel perks",
+						"Greenbacks rewards",
+						"eNotes",
+						"No-funds alert",
+						"Optional: Overdraft"
+					],
+					"eligibilityRules": [
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Age",
+							"minValue": "27",
+							"maxValue": "29",
+							"valueUnit": "year",
+							"description": "Individuals over the age of 18 years"
+						},
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Age",
+							"minValue": "30",
+							"maxValue": "999",
+							"valueUnit": "year",
+							"description": ""
+						},
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Income",
+							"minValue": "750001",
+							"maxValue": "999999999",
+							"valueUnit": "ZAR",
+							"description": "There is no minimum income requirement this package is recommended for those earning from R750,000 per annum"
+						},
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Package",
+							"value": "A bundled offering",
+							"valueUnit": "package",
+							"description": "Not available to trust, companies or legal entities"
+						},
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "CreditCheck",
+							"description": "All credit facilities are subject to credit and affordability checks"
+						},
+						{
+							"attributeType": "ConcurrentApplicationLimitationGroup",
+							"attributeName": "ConcurrentApplicationLimitation",
+							"value": "1"
+						}
+					],
+					"requiredDocuments": [
+						{
 							"attributeType": "Display",
-							"attributeName": "3-Months bank statements or letter of appointment/contract",
+							"attributeName": "Valid South African identity",
 							"isComparable": "false",
 							"valueUnit": "bool",
-							"description": "3-Months bank statements or letter of appointment/contract"
-					},
-					{
+							"description": "card/document or passport with valid permit"
+						},
+						{
 							"attributeType": "Display",
-							"attributeName": "You will be required to sign a declaration that you have the required level of education to qualify",
+							"attributeName": "3-Months bank statements",
 							"isComparable": "false",
 							"valueUnit": "bool",
-							"description": "You will be required to sign a declaration that you have the required level of education to qualify"
-					},
-					{
-						"attributeType": "Display",
-						"attributeName": "For overdraft and credit card applications, additional documents may be required",
-						"isComparable": "false",
-						"valueUnit": "bool",
-						"description": "For overdraft and credit card applications, additional documents may be required"
-				}
-				],
-				"productFeatures": [
-				  {
-					"name": "Age",
-					"displayName": "Age",
-					"description": "Under 30 with a 4 year qualification"
-				  },
-				  {
-					"name": "fee",
-					"displayName": "Monthly Fee",
-					"description": "R 180.00"
-				  },
-				  {
-					"name": "Income",
-					"displayName": "Income",
-					"description": "There is no minimum income requirement"
-				  },
-				  {
-					"name": "RelationshipBanker",
-					"displayName": "Relationship Banker",
-					"description": "Included"
-				  },
-				  {
-					"name": "Chequecard",
-					"displayName": "Cheque card",
-					"description": "Professional (Platinum Greenbacks) cheque card included"
-				  },
-				  {
-					"name": "Nedbankatmwithdrawals",
-					"displayName": "Nedbank ATM withdrawals",
-					"description": "Unlimited ATM withdrawals"
-				  },
-				  {
-					"name": "Debitordersinternal",
-					"displayName": "Debit orders (Internal)",
-					"description": "Unlimited debit orders"
-				  },
-				  {
-					"name": "Debitordersexternal",
-					"displayName": "Debit orders (External)",
-					"description": "Unlimited debit orders"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "Stop orders included"
-				  },
-				  {
-					"name": "Cardswipes",
-					"displayName": "Card swipes",
-					"description": "Unlimited swipes"
-				  },
-				  {
-					"name": "Cashwithdrawalsatparticipatingretailers",
-					"displayName": "Cash withdrawals",
-					"description": "Cash withdrawals at participating retailers and at a Nedbank ATM included"
-				  },
-				  {
-					"name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
-					"displayName": "Digital banking",
-					"description": "Included"
-				  },
-				  {
-					"name": "AirtimewithoutAirtime",
-					"displayName": "Airtime without Airtime",
-					"description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
-				  },
-				  {
-					"name": "SendiMali",
-					"displayName": "Send i-Mali",
-					"description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
-				  },
-				  {
-					"name": "Creditcard",
-					"displayName": "Credit card",
-					"description": "Included"
-				  },
-				  {
-					"name": "Greenbacks",
-					"displayName": "Greenbacks",
-					"description": "Included"
-				  },
-				  {
-					"name": "Chargecard",
-					"displayName": "Charge card",
-					"description": "American Express® Platinum Charge Card available at 50% discounted annual fee (for the first year only)"
-				  },
-				  {
-					"name": "Electronicchannels",
-					"displayName": "Electronic channels",
-					"description": "Included"
-				  },
-				  {
-					"name": "eNote",
-					"displayName": "eNote",
-					"description": "Included"
-				  },
-				  {
-					"name": "Nofundsalert",
-					"displayName": "No-funds alert",
-					"description": "Included"
-				  },
-				  {
-					"name": "Internationalairportloungeaccess",
-					"displayName": "International airport lounge",
-					"description": "Ten visits per annum. One guest per visit"
-				  },
-				  {
-					"name": "Domesticairportloungeaccess",
-					"displayName": "Domestic airport lounge",
-					"description": "Unlimited access to Bidvest domestic and international lounges"
-				  },
-				  {
-					"name": "Balanceenquiry",
-					"displayName": "Balance enquiry",
-					"description": "Included on Self Service channels"
-				  },
-				  {
-					"name": "Forexdelivery",
-					"displayName": "Forex delivery",
-					"description": "Free forex delivery (foreign cash & travel card) at preferential rates"
-				  },
-				  {
-					"name": "Overdraft",
-					"displayName": "Overdraft",
-					"description": "Optional"
-				  },
-				  {
-					"name": "Investment",
-					"displayName": "Investment",
-					"description": "Exclusive competitive platinum investment products"
-				  },
-				  {
-					"name": "Insurance",
-					"displayName": "Insurance",
-					"description": "Travel insurance, purchase protection and warrantees included when paying with your Visa Signature Professional Banking Credit Card."
-				  },
-				  {
-					"name": "Tailoredfinancing",
-					"displayName": "Tailored financing",
-					"description": "Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications of less than R1,5 million and 100% loans for vehicle finance applications of less than R400 000.  All credit applications are subject to final credit approval and terms and conditions."
-				  }
-				],
-				"lifeCycleStatus": "AVAILABLE"
-			  },
-			  {
-				"productIdentifier": 1021,
-				"name": "Professional Bundle(1021)",
-				"shortDescription": "A private banking experience that emphasises convenience, quality and flexibility at a fixed monthly fee. This bundle includes a credit card with an optional overdraft, plus all the perks you deserve. Up to 50% monthly fee rebates are available for those 55 years and older with Nedbank investments.",
-				"productPricing": [
-				  {
-					"type": "AdminFee",
-					"amount": 360,
-					"frequency": "Monthly",
-					"currency": "ZAR",
-					"description": "R 360.00 pm"
-				  }
-				],
-				"specialFeature": "",
-				"salesHighlights": [
-				  "Enjoy unlimited airport lounge access, travel insurance, free delivery of your forex and 50% discount on the prestigious American Express® Platinum Charge Card (for the global traveller).",
-					"Children get 4 lounge visits per year if they are on an active Dezign4me or Unlocked.me Student account.",
-					"Get exclusive benefits when using your Visa Signature credit card.",
-					"10 international airport lounge visits (including 1 guest allowance per visit) via LoungeKey.",
-					"Significantly increased travel insurance when buying airline tickets using these cards.",
-					"Purchase protection and warranties on purchases made using these cards.",
-					"24/7 emergency assistance should you need card replacement, cash or payments authorised.",
-					"24/7 concierge services for hotels, restaurants or event bookings and so much more.",
-					"Greenbacks rewards are earned on your everyday card swipes and online purchases.",
-					"Exclusive deals at unlocked.me. This includes deals on the latest tech, fashion, travel and once in a lifetime experience.",
-					"Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications up to R5 million. Apply online and qualify for 1% cash back (up to R15 000). 100% loans for vehicle finance applications. Your banker is equipped to provide you with a quick vehicle finance approval. All credit applications are subject to final credit approval.",
-					"Financial advice: Your financial growth also comes with important decisions and responsibilities. We'll give you access to a financial planner to assess your financial position and your future goals, consider different retirement scenarios, calculate the various costs and help you determine the optimal portfolio for your circumstances."
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
+							"description": "(we can source these for you from most banks)"
+						},
+						{
+							"attributeType": "Display",
+							"attributeName": "Additional documents",
+							"isComparable": "false",
+							"valueUnit": "bool",
+							"description": "for overdraft and credit card applications, additional documents may be required"
+						}
+					],
+					"productFeatures": [
+						{
+							"name": "Age",
+							"displayName": "Age",
+							"description": "Individuals over the age of 18 years"
+						},
+						{
+							"name": "fee",
+							"displayName": "Monthly Fee",
+							"description": "R 360.00"
+						},
+						{
+							"name": "Nedbankatmwithdrawals",
+							"displayName": "Nedbank ATM withdrawals",
+							"description": "Unlimited ATM withdrawals"
+						},
+						{
+							"name": "Debitordersinternal",
+							"displayName": "Debit orders (Internal)",
+							"description": "Unlimited debit orders"
+						},
+						{
+							"name": "Debitordersexternal",
+							"displayName": "Debit orders (External)",
+							"description": "Unlimited debit orders"
+						},
+						{
+							"name": "Stoporders",
+							"displayName": "Stop orders",
+							"description": "Stop orders included"
+						},
+						{
+							"name": "Cardswipes",
+							"displayName": "Card swipes",
+							"description": "Unlimited swipes"
+						},
+						{
+							"name": "Cashwithdrawalsatparticipatingretailers",
+							"displayName": "Cash withdrawals",
+							"description": "Cash withdrawals at participating retailers and at a Nedbank ATM included"
+						},
+						{
+							"name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+							"displayName": "Digital banking",
+							"description": "Included"
+						},
+						{
+							"name": "AirtimewithoutAirtime",
+							"displayName": "Airtime without Airtime",
+							"description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+						},
+						{
+							"name": "SendiMali",
+							"displayName": "Send i-Mali",
+							"description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+						},
+						{
+							"name": "Income",
+							"displayName": "Income",
+							"description": "No minimum income is required however, this offering is ideally suited to those earning over R750 000 per year."
+						},
+						{
+							"name": "RelationshipBanker",
+							"displayName": "Relationship Banker",
+							"description": "Included"
+						},
+						{
+							"name": "Chequecard",
+							"displayName": "Cheque card",
+							"description": "Professional (Platinum Greenbacks) cheque card included"
+						},
+						{
+							"name": "Creditcard",
+							"displayName": "Credit card",
+							"description": "Included"
+						},
+						{
+							"name": "Greenbacks",
+							"displayName": "Greenbacks",
+							"description": "Included"
+						},
+						{
+							"name": "Chargecard",
+							"displayName": "Charge card",
+							"description": "American Express® Platinum Charge Card available at 50% discounted annual fee (for the first year only)"
+						},
+						{
+							"name": "Electronicchannels",
+							"displayName": "Electronic channels",
+							"description": "Included"
+						},
+						{
+							"name": "eNote",
+							"displayName": "eNote",
+							"description": "Included"
+						},
+						{
+							"name": "Nofundsalert",
+							"displayName": "No-funds alert",
+							"description": "Included"
+						},
+						{
+							"name": "Internationalairportloungeaccess",
+							"displayName": "International airport lounge",
+							"description": "Ten visits per annum. One guest per visit"
+						},
+						{
+							"name": "Domesticairportloungeaccess",
+							"displayName": "Domestic airport lounge",
+							"description": "Unlimited access to Bidvest domestic and international lounges"
+						},
+						{
+							"name": "Balanceenquiry",
+							"displayName": "Balance enquiry",
+							"description": "Included on Self Service channels"
+						},
+						{
+							"name": "Forexdelivery",
+							"displayName": "Forex delivery",
+							"description": "Free forex delivery (foreign cash & travel card) at preferential rates"
+						},
+						{
+							"name": "Overdraft",
+							"displayName": "Overdraft",
+							"description": "Optional"
+						},
+						{
+							"name": "Investment",
+							"displayName": "Investment",
+							"description": "Exclusive competitive platinum investment products"
+						},
+						{
+							"name": "Insurance",
+							"displayName": "Insurance",
+							"description": "Travel insurance, purchase protection and warrantees included when paying with your Visa Signature Professional Banking Credit Card."
+						},
+						{
+							"name": "Tailoredfinancing",
+							"displayName": "Tailored financing",
+							"description": "Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications of less than R1,5 million and 100% loans for vehicle finance applications of less than R400 000.  All credit applications are subject to final credit approval and terms and conditions."
+						}
+					],
+					"lifeCycleStatus": "AVAILABLE",
+					"downloadLinks":[
+						{
+							"id": "pricingSchedule",
+							"url": "https://www.nedbank.co.za/content/dam/nedbank/Campaigns/NedbankCurrentAccPRBCharges.pdf"
+						},
+						{
+							"id": "brochure",
+							"url": "https://www.nedbank.co.za/content/dam/nedbank/site-assets/Personal/Professional/Brochures/Nedbank%20Professional%20Banking%20Brochure.pdf"
+						}
+					]
 				},
-				"actions": [
-				  {
-					"type": "SELECT_EWCO",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"valueAddedServices": [
-				  "Professional account with significant transactional value",
-					"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
-					"24/7 telephone and email support",
-					"Nedbank Money app or Online Banking for world-class secure access to your account wherever you are",
-					"Professional cheque cards offering local and international perks",
-					"Professional credit cards offering local and international travel perks",
-					"Greenbacks rewards",
-					"eNotes",
-					"No-funds alert",
-					"Optional: Overdraft"
-				],
-				"eligibilityRules": [
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "27",
-						"maxValue": "29",
-						"valueUnit": "year",
-						"description": "Individuals over the age of 18 years"
-					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "30",
-						"maxValue": "999",
-						"valueUnit": "year",
-						"description": ""
-					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Income",
-						"minValue": "750001",
-						"maxValue": "999999999",
-						"valueUnit": "ZAR",
-						"description": "There is no minimum income requirement this package is recommended for those earning from R750,000 per annum"
-					},
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Package",
-					"value": "A bundled offering",
-					"valueUnit": "package",
-					"description": "Not available to trust, companies or legal entities"
-					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "CreditCheck",
-						"description": "All credit facilities are subject to credit and affordability checks"
-					},
-				  {
-					"attributeType": "ConcurrentApplicationLimitationGroup",
-					"attributeName": "ConcurrentApplicationLimitation",
-					"value": "1"
-				  }
-				],
-				"requiredDocuments": [
-				  {
-						"attributeType": "Display",
-						"attributeName": "Valid South African identity",
-						"isComparable": "false",
-						"valueUnit": "bool",
-						"description": "card/document or passport with valid permit"
-					},
-					{
-							"attributeType": "Display",
-							"attributeName": "3-Months bank statements or letter of appointment/contract",
-							"isComparable": "false",
-							"valueUnit": "bool",
-							"description": "3-Months bank statements or letter of appointment/contract"
-					},
-					{
-						"attributeType": "Display",
-						"attributeName": "For overdraft and credit card applications, additional documents may be required",
-						"isComparable": "false",
-						"valueUnit": "bool",
-						"description": "For overdraft and credit card applications, additional documents may be required"
-					}
-				],
-				"productFeatures": [
-				  {
-					"name": "Age",
-					"displayName": "Age",
-					"description": "Individuals over the age of 18 years"
-				  },
-				  {
-					"name": "fee",
-					"displayName": "Monthly Fee",
-					"description": "R 360.00"
-				  },
-				  {
-					"name": "Nedbankatmwithdrawals",
-					"displayName": "Nedbank ATM withdrawals",
-					"description": "Unlimited ATM withdrawals"
-				  },
-				  {
-					"name": "Debitordersinternal",
-					"displayName": "Debit orders (Internal)",
-					"description": "Unlimited debit orders"
-				  },
-				  {
-					"name": "Debitordersexternal",
-					"displayName": "Debit orders (External)",
-					"description": "Unlimited debit orders"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "Stop orders included"
-				  },
-				  {
-					"name": "Cardswipes",
-					"displayName": "Card swipes",
-					"description": "Unlimited swipes"
-				  },
-				  {
-					"name": "Cashwithdrawalsatparticipatingretailers",
-					"displayName": "Cash withdrawals",
-					"description": "Cash withdrawals at participating retailers and at a Nedbank ATM included"
-				  },
-				  {
-					"name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
-					"displayName": "Digital banking",
-					"description": "Included"
-				  },
-				  {
-					"name": "AirtimewithoutAirtime",
-					"displayName": "Airtime without Airtime",
-					"description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
-				  },
-				  {
-					"name": "SendiMali",
-					"displayName": "Send i-Mali",
-					"description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
-				  },
-				  {
-					"name": "Income",
-					"displayName": "Income",
-					"description": "No minimum income is required however, this offering is ideally suited to those earning over R750 000 per year."
-				  },
-				  {
-					"name": "RelationshipBanker",
-					"displayName": "Relationship Banker",
-					"description": "Included"
-				  },
-				  {
-					"name": "Chequecard",
-					"displayName": "Cheque card",
-					"description": "Professional (Platinum Greenbacks) cheque card included"
-				  },
-				  {
-					"name": "Creditcard",
-					"displayName": "Credit card",
-					"description": "Included"
-				  },
-				  {
-					"name": "Greenbacks",
-					"displayName": "Greenbacks",
-					"description": "Included"
-				  },
-				  {
-					"name": "Chargecard",
-					"displayName": "Charge card",
-					"description": "American Express® Platinum Charge Card available at 50% discounted annual fee (for the first year only)"
-				  },
-				  {
-					"name": "Electronicchannels",
-					"displayName": "Electronic channels",
-					"description": "Included"
-				  },
-				  {
-					"name": "eNote",
-					"displayName": "eNote",
-					"description": "Included"
-				  },
-				  {
-					"name": "Nofundsalert",
-					"displayName": "No-funds alert",
-					"description": "Included"
-				  },
-				  {
-					"name": "Internationalairportloungeaccess",
-					"displayName": "International airport lounge",
-					"description": "Ten visits per annum. One guest per visit"
-				  },
-				  {
-					"name": "Domesticairportloungeaccess",
-					"displayName": "Domestic airport lounge",
-					"description": "Unlimited access to Bidvest domestic and international lounges"
-				  },
-				  {
-					"name": "Balanceenquiry",
-					"displayName": "Balance enquiry",
-					"description": "Included on Self Service channels"
-				  },
-				  {
-					"name": "Forexdelivery",
-					"displayName": "Forex delivery",
-					"description": "Free forex delivery (foreign cash & travel card) at preferential rates"
-				  },
-				  {
-					"name": "Overdraft",
-					"displayName": "Overdraft",
-					"description": "Optional"
-				  },
-				  {
-					"name": "Investment",
-					"displayName": "Investment",
-					"description": "Exclusive competitive platinum investment products"
-				  },
-				  {
-					"name": "Insurance",
-					"displayName": "Insurance",
-					"description": "Travel insurance, purchase protection and warrantees included when paying with your Visa Signature Professional Banking Credit Card."
-				  },
-				  {
-					"name": "Tailoredfinancing",
-					"displayName": "Tailored financing",
-					"description": "Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications of less than R1,5 million and 100% loans for vehicle finance applications of less than R400 000.  All credit applications are subject to final credit approval and terms and conditions."
-				  }
-				],
-				"lifeCycleStatus": "AVAILABLE"
-			  },
 			  {
 				"productIdentifier": 1398,
 				"name": "Professional Bundle (Bundle)",
@@ -2736,316 +2865,434 @@
 				  }
 				],
 				"lifeCycleStatus": "AVAILABLE"
-			  },
-			  {
-				"productIdentifier": 1108,
-				"name": "Professional Pay-As-You-Use(1108)",
-				"shortDescription": "A private banking experience that emphasises convenience, quality and flexibility on a pay as you use basis.",
-				"productPricing": [
-				  {
-					"type": "AdminFee",
-					"amount": 133,
-					"frequency": "Monthly",
-					"currency": "ZAR",
-					"description": "R 133.00 pm"
-				  }
-				],
-				"specialFeature": "",
-				"salesHighlights": [
-				  "Enjoy unlimited airport lounge access, travel insurance, free delivery of your forex and 50% discount on the prestigious American Express® Platinum Charge Card (for the global traveller).",
-					"Children get 4 lounge visits per year if they are on an active Dezign4me or Unlocked.me Student account.",
-					"Get exclusive benefits when using your Visa Signature credit card.",
-					"10 international airport lounge visits (including 1 guest allowance per visit) via LoungeKey.",
-					"Significantly increased travel insurance when buying airline tickets using these cards.",
-					"Purchase protection and warranties on purchases made using these cards.",
-					"24/7 emergency assistance should you need card replacement, cash or payments authorised.",
-					"24/7 concierge services for hotels, restaurants or event bookings and so much more.",
-					"Greenbacks rewards are earned on your everyday card swipes and online purchases.",
-					"Exclusive deals at unlocked.me. This includes deals on the latest tech, fashion, travel and once in a lifetime experience.",
-					"Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications up to R5 million. Apply online and qualify for 1% cash back (up to R15 000). 100% loans for vehicle finance applications. Your banker is equipped to provide you with a quick vehicle finance approval. All credit applications are subject to final credit approval.",
-					"Financial advice: Your financial growth also comes with important decisions and responsibilities. We'll give you access to a financial planner to assess your financial position and your future goals, consider different retirement scenarios, calculate the various costs and help you determine the optimal portfolio for your circumstances."
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [
-				  {
-					"type": "SELECT_EWCO",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"valueAddedServices": [
-				  "Professional account",
-					"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
-					"24/7 telephone and email support",
-					"Nedbank Money app or Online Banking for world-class secure access to your account wherever you are",
-					"Optional: Professional cheque cards offering local and international perks",
-					"Optional: Professional credit cards offering local and international travel perks",
-					"Optional: Greenbacks rewards",
-					"Optional: eNotes",
-					"Optional: No-funds alert",
-					"Optional: Overdraft"
-				],
-				"eligibilityRules": [
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "30",
-						"maxValue": "999",
-						"valueUnit": "year",
-						"description": "Individuals over the age of 18 years"
-					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Income",
-						"minValue": "750001",
-						"maxValue": "999999999",
-						"valueUnit": "ZAR",
-						"description": "There is no minimum income requirement, however this offering is recommended for those earning from R750,000 per annum"
-					},
-				  {
-						"attributeType": "EligibilityRule",
-						"attributeName": "Package",
-						"value": "A bundled offering",
-						"valueUnit": "package",
-						"description": "Not available to trust, companies or legal entities"
-					},
-					{
-							"attributeType": "EligibilityRule",
-							"attributeName": "CreditCheck",
-							"description": "All credit facilities are subject to credit and affordability checks"
-					},
-				  {
-					"attributeType": "ConcurrentApplicationLimitationGroup",
-					"attributeName": "ConcurrentApplicationLimitation",
-					"value": "1"
-				  }
-				],
-				"requiredDocuments": [
-				  {
-						"attributeType": "Display",
-						"attributeName": "Valid South African identity",
-						"isComparable": "false",
-						"valueUnit": "bool",
-						"description": "card/document or passport with valid permit"
-					},
-					{
-							"attributeType": "Display",
-							"attributeName": "3-Months bank statements",
-							"isComparable": "false",
-							"valueUnit": "bool",
-							"description": "3-Months bank statements"
-					},
-					{
-						"attributeType": "Display",
-						"attributeName": "For overdraft and credit card applications, additional documents may be required",
-						"isComparable": "false",
-						"valueUnit": "bool",
-						"description": "For overdraft and credit card applications, additional documents may be required"
-					}
-				],
-				"productFeatures": [
-				  {
-					"name": "Age",
-					"displayName": "Age",
-					"description": "Individuals over the age of 18 years"
-				  },
-				  {
-					"name": "fee",
-					"displayName": "Monthly Fee",
-					"description": "R 133.00"
-				  },
-				  {
-					"name": "Income",
-					"displayName": "Income",
-					"description": "No minimum income is required however, this offering is ideally suited to those earning over R750 000 per year."
-				  },
-				  {
-					"name": "RelationshipBanker",
-					"displayName": "Relationship Banker",
-					"description": "Included"
-				  },
-				  {
-					"name": "Chequecard",
-					"displayName": "Cheque card",
-					"description": "Professional (Platinum Greenbacks) cheque card optional"
-				  },
-				  {
-					"name": "Nedbankatmwithdrawals",
-					"displayName": "Nedbank ATM withdrawals",
-					"description": "Pay as you use"
-				  },
-				  {
-					"name": "Debitordersinternal",
-					"displayName": "Debit orders (Internal)",
-					"description": "Pay as you use"
-				  },
-				  {
-					"name": "Debitordersexternal",
-					"displayName": "Debit orders (External)",
-					"description": "Pay as you use"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "Pay as you use"
-				  },
-				  {
-					"name": "Cardswipes",
-					"displayName": "Card swipes",
-					"description": "Pay as you use"
-				  },
-				  {
-					"name": "Cashwithdrawalsatparticipatingretailers",
-					"displayName": "Cash withdrawals",
-					"description": "Pay as you use"
-				  },
-				  {
-					"name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
-					"displayName": "Digital banking",
-					"description": "Pay as you use"
-				  },
-				  {
-					"name": "AirtimewithoutAirtime",
-					"displayName": "Airtime without Airtime",
-					"description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
-				  },
-				  {
-					"name": "SendiMali",
-					"displayName": "Send i-Mali",
-					"description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
-				  },
-				  {
-					"name": "Creditcard",
-					"displayName": "Credit card",
-					"description": "Optional"
-				  },
-				  {
-					"name": "Greenbacks",
-					"displayName": "Greenbacks",
-					"description": "Optional"
-				  },
-				  {
-					"name": "Chargecard",
-					"displayName": "Charge card",
-					"description": "American Express® Platinum Charge Card available at 50% discounted annual fee (for the first year only)"
-				  },
-				  {
-					"name": "Electronicchannels",
-					"displayName": "Electronic channels",
-					"description": "Included"
-				  },
-				  {
-					"name": "eNote",
-					"displayName": "eNote",
-					"description": "Optional"
-				  },
-				  {
-					"name": "Nofundsalert",
-					"displayName": "No-funds alert",
-					"description": "Optional"
-				  },
-				  {
-					"name": "Internationalairportloungeaccess",
-					"displayName": "International airport lounge",
-					"description": "Ten visits per annum. One guest per visit"
-				  },
-				  {
-					"name": "Domesticairportloungeaccess",
-					"displayName": "Domestic airport lounge",
-					"description": "Unlimited access to Bidvest domestic and international lounges"
-				  },
-				  {
-					"name": "RelationshipBanker",
-					"displayName": "Relationship Banker",
-					"description": "Included"
-				  },
-				  {
-					"name": "Balanceenquiry",
-					"displayName": "Balance enquiry",
-					"description": "Included on Self Service channels"
-				  },
-				  {
-					"name": "Forexdelivery",
-					"displayName": "Forex delivery",
-					"description": "Free forex delivery (foreign cash & travel card) at preferential rates"
-				  },
-				  {
-					"name": "Overdraft",
-					"displayName": "Overdraft",
-					"description": "Optional"
-				  },
-				  {
-					"name": "Investment",
-					"displayName": "Investment",
-					"description": "Exclusive competitive platinum investment products "
-				  },
-				  {
-					"name": "Insurance",
-					"displayName": "Insurance",
-					"description": "Travel insurance, purchase protection and warrantees included when paying with your Visa Signature Professional Banking Credit Card."
-				  },
-				  {
-					"name": "Tailoredfinancing",
-					"displayName": "Tailored financing",
-					"description": "Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications of less than R1,5 million and 100% loans for vehicle finance applications of less than R400 000.  All credit applications are subject to final credit approval and terms and conditions."
-				  }
-				],
-				"lifeCycleStatus": "AVAILABLE"
 				},
 				{
-					"productIdentifier": 1476,
-					"name": "Young Professional One(1476)",
-					"shortDescription": "If you’re under 30 with a four-year degree, we know you are going places. Get fast-tracked into a private banking experience at a 50% reduced monthly fee. This bundle includes ONE account that pays you interest and ONE credit facility at a personalised interest rate with up to 40-days interest free, plus all the perks you deserve.",
-					"productPricing": [
-						{
+					"productIdentifier": 1108,
+					"name": "Professional Pay-As-You-Use",
+					"shortDescription": "Get all the private banking perks you deserve. A monthly maintenance fee applies, then only pay for the transactions you use.",
+					"description": "A private banking experience that emphasises convenience, quality and flexibility on a pay as you use basis.",
+					"productPricing": [{
 						"type": "AdminFee",
-						"amount": 180,
+						"amount": 133.00,
 						"frequency": "Monthly",
 						"currency": "ZAR",
-						"description": "R 180.00 pm"
-						}
-					],
+						"description": "R 133.00 pm"
+					}],
 					"specialFeature": "",
+					"additionalInfo": [
+						"Included~Professional account",
+						"Included~Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
+						"Included~Nedbank Money app or Online Banking for worldclass secure digital banking",
+						"Optional~Professional cheque and credit cards offering local and international perks",
+						"Optional~Overdraft",
+						"Optional~Greenbacks rewards Card Swiper subscription",
+						"Optional~eNotes",
+						"Optional~No-funds alert"
+					],	
+					"detailsScreen": {
+						"component-name": "product-details",
+						"version": "2.0"
+					},
 					"salesHighlights": [
-						"Enjoy unlimited airport lounge access, travel insurance, free delivery of your forex and 50% discount on the prestigious American Express® Platinum Charge Card (for the global traveller).",
-						"Children get 4 lounge visits per year if they are on an active Dezign4me or Unlocked.me Student account.",
-						"Get exclusive benefits when using your Visa Signature credit card.",
-						"10 international airport lounge visits (including 1 guest allowance per visit) via LoungeKey.",
-						"Significantly increased travel insurance when buying airline tickets using these cards.",
-						"Purchase protection and warranties on purchases made using these cards.",
-						"24/7 emergency assistance should you need card replacement, cash or payments authorised.",
-						"24/7 concierge services for hotels, restaurants or event bookings and so much more.",
-						"Greenbacks rewards are earned on your everyday card swipes and online purchases.",
-						"Exclusive deals at unlocked.me. This includes deals on the latest tech, fashion, travel and once in a lifetime experience.",						
-						"Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications up to R5 million. Apply online and qualify for 1% cash back (up to R15 000). 100% loans for vehicle finance applications. Your banker is equipped to provide you with a quick vehicle finance approval. All credit applications are subject to final credit approval.",
-						"Financial advice: Your financial growth also comes with important decisions and responsibilities. We'll give you access to a financial planner to assess your financial position and your future goals, consider different retirement scenarios, calculate the various costs and help you determine the optimal portfolio for your circumstances."
+						"sh1~A banking package that works as hard as you do",
+						"sh2~Lifestyle perks for the entire family",
+						"sh3~Unique investments to suit your lifestyle",
+						"sh4~Finance that lets you dream big",
+						"sh5~Ways to bank that suit your hours",
+						"sh6~Tailored offering for young professionals and those over 54"
 					],
+					"startApplicationScreen": {
+						"isRequired": "false"
+					},
 					"redirect": {
 						"shouldRedirect": false,
 						"redirectUrl": null
 					},
 					"actions": [
 						{
-						"type": "SELECT_EWCO",
-						"text": "Select"
+							"type": "SELECT",
+							"text": "Select",
+							"environments": [
+								"dev",
+								"ete",
+								"qa"
+							]
 						},
 						{
+							"type": "REDIRECT",
+							"text": "Select",
+							"environments": [				
+								"prod"
+							],
+							"value": "https://www.nedbank.co.za/content/forms/af/nedbank/CallMeBackProfessionalBanking.html"
+						},
+						{
+							"type": "DETAIL",
+							"text": "Details"
+						},
+						{
+							"type": "COMPARE",
+							"text": "Compare"
+						}
+					],
+					"applicationSteps": [
+						{
+							"index": 1,
+							"name": "Authenticate",
+							"Description": "Register to log in with your Nedbank ID."
+						},
+						{
+							"index": 2,
+							"name": "Product setup",
+							"Description": "Setup your product to suit your needs."
+						},
+						{
+							"index": 3,
+							"name": "About you",
+							"Description": "Tell us more details about you."
+						},
+						{
+							"index": 4,
+							"name": "Credit info",
+							"Description": "Only required if you need a credit facility."
+						},
+						{
+							"index": 5,
+							"name": "Finalisation",
+							"Description": "Upload documents and accept some T&Cs."
+						},
+						{
+							"index": 6,
+							"name": "Customisation",
+							"Description": "Choose your banker and card delivery."
+						}
+					],
+					"valueAddedServices": [
+						"Professional account",
+						"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
+						"24/7 telephone and email support",
+						"Nedbank Money app or Online Banking for world-class secure access to your account wherever you are",
+						"Optional: Professional cheque cards offering local and international perks",
+						"Optional: Professional credit cards offering local and international travel perks",
+						"Optional: Greenbacks rewards",
+						"Optional: eNotes",
+						"Optional: No-funds alert",
+						"Optional: Overdraft"
+					],
+					"eligibilityRules": [
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Age",
+							"minValue": "30",
+							"maxValue": "999",
+							"valueUnit": "year",
+							"description": "Individuals over the age of 18 years"
+						},
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Income",
+							"minValue": "750001",
+							"maxValue": "999999999",
+							"valueUnit": "ZAR",
+							"description": "There is no minimum income requirement, however this offering is recommended for those earning from R750,000 per annum"
+						},
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Package",
+							"value": "A bundled offering",
+							"valueUnit": "package",
+							"description": "Not available to trust, companies or legal entities"
+						},
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "CreditCheck",
+							"description": "All credit facilities are subject to credit and affordability checks"
+						},
+						{
+							"attributeType": "ConcurrentApplicationLimitationGroup",
+							"attributeName": "ConcurrentApplicationLimitation",
+							"value": "1"
+						}
+					],
+					"requiredDocuments": [
+						{
+							"attributeType": "Display",
+							"attributeName": "Valid South African identity",
+							"isComparable": "false",
+							"valueUnit": "bool",
+							"description": "card/document or passport with valid permit"
+						},
+						{
+							"attributeType": "Display",
+							"attributeName": "3-Months bank statements",
+							"isComparable": "false",
+							"valueUnit": "bool",
+							"description": "(we can source these for you from most banks)"
+						},
+						{
+							"attributeType": "Display",
+							"attributeName": "Additional documents",
+							"isComparable": "false",
+							"valueUnit": "bool",
+							"description": "for overdraft and credit card applications, additional documents may be required"
+						}
+						],
+					"productFeatures": [
+						{
+							"name": "Age",
+							"displayName": "Age",
+							"description": "Individuals over the age of 18 years"
+						},
+						{
+							"name": "fee",
+							"displayName": "Monthly Fee",
+							"description": "R 133.00"
+						},
+						{
+							"name": "Income",
+							"displayName": "Income",
+							"description": "No minimum income is required however, this offering is ideally suited to those earning over R750 000 per year."
+						},
+						{
+							"name": "RelationshipBanker",
+							"displayName": "Relationship Banker",
+							"description": "Included"
+						},
+						{
+							"name": "Chequecard",
+							"displayName": "Cheque card",
+							"description": "Professional (Platinum Greenbacks) cheque card optional"
+						},
+						{
+							"name": "Nedbankatmwithdrawals",
+							"displayName": "Nedbank ATM withdrawals",
+							"description": "Pay as you use"
+						},
+						{
+							"name": "Debitordersinternal",
+							"displayName": "Debit orders (Internal)",
+							"description": "Pay as you use"
+						},
+						{
+							"name": "Debitordersexternal",
+							"displayName": "Debit orders (External)",
+							"description": "Pay as you use"
+						},
+						{
+							"name": "Stoporders",
+							"displayName": "Stop orders",
+							"description": "Pay as you use"
+						},
+						{
+							"name": "Cardswipes",
+							"displayName": "Card swipes",
+							"description": "Pay as you use"
+						},
+						{
+							"name": "Cashwithdrawalsatparticipatingretailers",
+							"displayName": "Cash withdrawals",
+							"description": "Pay as you use"
+						},
+						{
+							"name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+							"displayName": "Digital banking",
+							"description": "Pay as you use"
+						},
+						{
+							"name": "AirtimewithoutAirtime",
+							"displayName": "Airtime without Airtime",
+							"description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+						},
+						{
+							"name": "SendiMali",
+							"displayName": "Send i-Mali",
+							"description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+						},
+						{
+							"name": "Creditcard",
+							"displayName": "Credit card",
+							"description": "Optional"
+						},
+						{
+							"name": "Greenbacks",
+							"displayName": "Greenbacks",
+							"description": "Optional"
+						},
+						{
+							"name": "Chargecard",
+							"displayName": "Charge card",
+							"description": "American Express® Platinum Charge Card available at 50% discounted annual fee (for the first year only)"
+						},
+						{
+							"name": "Electronicchannels",
+							"displayName": "Electronic channels",
+							"description": "Included"
+						},
+						{
+							"name": "eNote",
+							"displayName": "eNote",
+							"description": "Optional"
+						},
+						{
+							"name": "Nofundsalert",
+							"displayName": "No-funds alert",
+							"description": "Optional"
+						},
+						{
+							"name": "Internationalairportloungeaccess",
+							"displayName": "International airport lounge",
+							"description": "Ten visits per annum. One guest per visit"
+						},
+						{
+							"name": "Domesticairportloungeaccess",
+							"displayName": "Domestic airport lounge",
+							"description": "Unlimited access to Bidvest domestic and international lounges"
+						},
+						{
+							"name": "RelationshipBanker",
+							"displayName": "Relationship Banker",
+							"description": "Included"
+						},
+						{
+							"name": "Balanceenquiry",
+							"displayName": "Balance enquiry",
+							"description": "Included on Self Service channels"
+						},
+						{
+							"name": "Forexdelivery",
+							"displayName": "Forex delivery",
+							"description": "Free forex delivery (foreign cash & travel card) at preferential rates"
+						},
+						{
+							"name": "Overdraft",
+							"displayName": "Overdraft",
+							"description": "Optional"
+						},
+						{
+							"name": "Investment",
+							"displayName": "Investment",
+							"description": "Exclusive competitive platinum investment products "
+						},
+						{
+							"name": "Insurance",
+							"displayName": "Insurance",
+							"description": "Travel insurance, purchase protection and warrantees included when paying with your Visa Signature Professional Banking Credit Card."
+						},
+						{
+							"name": "Tailoredfinancing",
+							"displayName": "Tailored financing",
+							"description": "Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications of less than R1,5 million and 100% loans for vehicle finance applications of less than R400 000.  All credit applications are subject to final credit approval and terms and conditions."
+						}
+					],
+					"lifeCycleStatus": "AVAILABLE",
+					"downloadLinks":[
+						{
+							"id": "pricingSchedule",
+							"url": "https://www.nedbank.co.za/content/dam/nedbank/Campaigns/NedbankCurrentAccPRBCharges.pdf"
+						},
+						{
+							"id": "brochure",
+							"url": "https://www.nedbank.co.za/content/dam/nedbank/site-assets/Personal/Professional/Brochures/Nedbank%20Professional%20Banking%20Brochure.pdf"
+						}
+					]
+				},
+				{
+					"productIdentifier": 1476,
+					"name": "Young Professional One",
+					"shortDescription": "Exclusively for under 30's with a 4-year qualification, this bundle includes ONE account that pays you interest and ONE facility with up to 40-days interest free credit, plus all the private banking perks at a 50% reduced monthly fee.",
+					"description": "If you’re under 30 with a four-year degree, we know you are going places.~Get fast-tracked into a private banking experience at a 50% reduced monthly fee.~This bundle includes ONE account that pays you interest and ONE credit facility at a personalised interest rate with up to 40-days interest free, plus all the perks you deserve.",
+					"productPricing": [{
+						"type": "AdminFee",
+						"amount": 180.00,
+						"frequency": "Monthly",
+						"currency": "ZAR",
+						"description": "R 180.00 pm"
+					}],
+					"specialFeature": "",
+					"eligibilityNote":"Young Professional~AGE LIMIT|be between 18 and 30 years old~have a 4 year degree, honours level or NQF 8 equivalent qualification",
+					"additionalInfo": [
+						"Professional ONE account with significant transactional value and earn 0,75% interest on your positive balances",
+						"A credit facility (minimum R2,000) with up to 40-days interest free",
+						"Professional credit cards with local and international travel and lifestyle benefits",
+						"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
+								"Nedbank Money app or Online Banking for world-class secure digital banking",
+								"Greenbacks Card Swiper subscription",
+						"SMS notifications: eNotes and No-funds alert"
+					],
+					"detailsScreen": {
+						"component-name": "product-details",
+						"version": "2.0"
+					},
+					"salesHighlights": [
+						"sh1~A banking package that works as hard as you do",
+						"sh2~Lifestyle perks for the entire family",
+						"sh3~Unique investments to suit your lifestyle",
+						"sh4~Finance that lets you dream big",
+						"sh5~Ways to bank that suit your hours",
+						"sh6~Tailored offering for young professionals and those over 54"
+					],
+						"startApplicationScreen": {
+						"isRequired": "false"
+					},    
+					"redirect": {
+						"shouldRedirect": false,
+						"redirectUrl": null
+					},
+					"actions": [{
+						"type": "SELECT",
+						"text": "Select",
+						"environments": [
+							"dev",
+							"ete",
+							"qa"
+						]
+					},
+					{
+						"type": "REDIRECT",
+						"text": "Select",
+						"environments": [			
+							"prod"
+						],
+						"value": "https://www.nedbank.co.za/content/forms/af/nedbank/CallMeBackProfessionalBanking.html"
+					},
+					{
 						"type": "DETAIL",
 						"text": "Details"
-						},
-						{
+					},
+					{
 						"type": "COMPARE",
 						"text": "Compare"
+					}],
+					"applicationSteps": [
+						{
+							"index": 1,
+							"name": "Authenticate",
+							"Description": "Register to log in with your Nedbank ID."
+						},
+						{
+							"index": 2,
+							"name": "Product setup",
+							"Description": "Setup your product to suit your needs."
+						},
+						{
+							"index": 3,
+							"name": "About you",
+							"Description": "Tell us more details about you."
+						},
+						{
+							"index": 4,
+							"name": "Credit info",
+							"Description": "Only required if you need a credit facility."
+						},
+						{
+							"index": 5,
+							"name": "Finalisation",
+							"Description": "Upload documents and accept some T&Cs."
+						},
+						{
+							"index": 6,
+							"name": "Customisation",
+							"Description": "Choose your banker and card delivery."
 						}
 					],
 					"valueAddedServices": [
@@ -3093,18 +3340,18 @@
 							"description": ""
 						},
 						{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Package",
-						"value": "A bundled offering",
-						"valueUnit": "package",
-						"description": "Not available to trust, companies or legal entities"
+							"attributeType": "EligibilityRule",
+							"attributeName": "Package",
+							"value": "A bundled offering",
+							"valueUnit": "package",
+							"description": "Not available to trust, companies or legal entities"
 						},
 						{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Education",
-						"minValue": "4",
-						"valueUnit": "year",
-						"description": "Minimum 4 year degree or 3 years plus Honours (NQF level 8 equivalent)"
+							"attributeType": "EligibilityRule",
+							"attributeName": "Education",
+							"minValue": "4",
+							"valueUnit": "year",
+							"description": "Minimum 4 year degree or 3 years plus Honours (NQF level 8 equivalent)"
 						},
 						{
 							"attributeType": "EligibilityRule",
@@ -3112,9 +3359,9 @@
 							"description": "All credit facilities are subject to credit and affordability checks."
 						},						
 						{
-						"attributeType": "ConcurrentApplicationLimitationGroup",
-						"attributeName": "ConcurrentApplicationLimitation",
-						"value": "1"
+							"attributeType": "ConcurrentApplicationLimitationGroup",
+							"attributeName": "ConcurrentApplicationLimitation",
+							"value": "1"
 						}
 					],
 					"requiredDocuments": [
@@ -3127,14 +3374,14 @@
 						},
 						{
 							"attributeType": "Display",
-							"attributeName": "3-Months bank statements or letter of appointment/contract",
+							"attributeName": "3-Months bank statements",
 							"isComparable": "false",
 							"valueUnit": "bool",
-							"description": "3-Months bank statements or letter of appointment/contract"
+							"description": "(we can source these for you from most banks)"
 						},
 						{
 							"attributeType": "Display",
-							"attributeName": "You will be required to sign a declaration that you have the required level of education to qualify",
+							"attributeName": "Education declaration",
 							"isComparable": "false",
 							"valueUnit": "bool",
 							"description": "You will be required to sign a declaration that you have the required level of education to qualify"
@@ -3142,29 +3389,24 @@
 					],
 					"productFeatures": [
 						{
-						"name": "Age",
-						"displayName": "Age",
-						"description": "Under 30 with a 4 year qualification"
+							"name": "Age",
+							"displayName": "Age",
+							"description": "Under 30 with a 4 year qualification"
 						},
 						{
-						"name": "fee",
-						"displayName": "Monthly Fee",
-						"description": "R 180.00"
+							"name": "fee",
+							"displayName": "Monthly Fee",
+							"description": "R 180.00"
 						},
 						{
-						"name": "Income",
-						"displayName": "Income",
-						"description": "There is no minimum income requirement, however this bundle is subject to the approval of a minimum R2,000 credit facility."
+							"name": "Income",
+							"displayName": "Income",
+							"description": "There is no minimum income requirement, however this bundle is subject to the approval of a minimum R2,000 credit facility."
 						},
 						{
-						"name": "RelationshipBanker",
-						"displayName": "Relationship Banker",
-						"description": "Included"
-						},
-						{
-						"name": "Chequecard",
-						"displayName": "Cheque card",
-						"description": "Not applicable"
+							"name": "RelationshipBanker",
+							"displayName": "Relationship Banker",
+							"description": "Included"
 						},
 						{
 							"name": "Creditcard",
@@ -3172,398 +3414,478 @@
 							"description": "Included"
 						},
 						{
-						"name": "Nedbankatmwithdrawals",
-						"displayName": "Nedbank ATM withdrawals",
-						"description": "Unlimited ATM withdrawals"
+							"name": "Chequecard",
+							"displayName": "Cheque card",
+							"description": "Not applicable"
 						},
 						{
-						"name": "Debitordersinternal",
-						"displayName": "Debit orders (Internal)",
-						"description": "Unlimited debit orders"
+							"name": "Nedbankatmwithdrawals",
+							"displayName": "Nedbank ATM withdrawals",
+							"description": "Unlimited ATM withdrawals"
 						},
 						{
-						"name": "Debitordersexternal",
-						"displayName": "Debit orders (External)",
-						"description": "Unlimited debit orders"
+							"name": "Debitordersinternal",
+							"displayName": "Debit orders (Internal)",
+							"description": "Unlimited debit orders"
 						},
 						{
-						"name": "Stoporders",
-						"displayName": "Stop orders",
-						"description": "Stop orders included"
+							"name": "Debitordersexternal",
+							"displayName": "Debit orders (External)",
+							"description": "Unlimited debit orders"
 						},
 						{
-						"name": "Cardswipes",
-						"displayName": "Card swipes",
-						"description": "Unlimited swipes"
+							"name": "Stoporders",
+							"displayName": "Stop orders",
+							"description": "Stop orders included"
 						},
 						{
-						"name": "Cashwithdrawalsatparticipatingretailers",
-						"displayName": "Cash withdrawals",
-						"description": "Cash withdrawals at participating retailers and at a Nedbank ATM included"
+							"name": "Cardswipes",
+							"displayName": "Card swipes",
+							"description": "Unlimited swipes"
 						},
 						{
-						"name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
-						"displayName": "Digital banking",
-						"description": "Included"
+							"name": "Cashwithdrawalsatparticipatingretailers",
+							"displayName": "Cash withdrawals",
+							"description": "Cash withdrawals at participating retailers and at a Nedbank ATM included"
 						},
 						{
-						"name": "AirtimewithoutAirtime",
-						"displayName": "Airtime without Airtime",
-						"description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+							"name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+							"displayName": "Digital banking",
+							"description": "Included"
 						},
 						{
-						"name": "SendiMali",
-						"displayName": "Send i-Mali",
-						"description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+							"name": "AirtimewithoutAirtime",
+							"displayName": "Airtime without Airtime",
+							"description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+						},
+						{
+							"name": "SendiMali",
+							"displayName": "Send i-Mali",
+							"description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
 						},										
 						{
-						"name": "Greenbacks",
-						"displayName": "Greenbacks",
-						"description": "Included"
+							"name": "Greenbacks",
+							"displayName": "Greenbacks",
+							"description": "Included"
 						},
 						{
-						"name": "Chargecard",
-						"displayName": "Charge card",
-						"description": "American Express® Platinum Charge Card available at 50% discounted annual fee (for the first year only)"
+							"name": "Chargecard",
+							"displayName": "Charge card",
+							"description": "American Express® Platinum Charge Card available at 50% discounted annual fee (for the first year only)"
 						},
 						{
-						"name": "Electronicchannels",
-						"displayName": "Electronic channels",
-						"description": "Included"
+							"name": "Electronicchannels",
+							"displayName": "Electronic channels",
+							"description": "Included"
 						},
 						{
-						"name": "eNote",
-						"displayName": "eNote",
-						"description": "Included"
+							"name": "eNote",
+							"displayName": "eNote",
+							"description": "Included"
 						},
 						{
-						"name": "Nofundsalert",
-						"displayName": "No-funds alert",
-						"description": "Included"
+							"name": "Nofundsalert",
+							"displayName": "No-funds alert",
+							"description": "Included"
 						},
 						{
-						"name": "Internationalairportloungeaccess",
-						"displayName": "International airport lounge",
-						"description": "Ten visits per annum. One guest per visit"
+							"name": "Internationalairportloungeaccess",
+							"displayName": "International airport lounge",
+							"description": "Ten visits per annum. One guest per visit"
 						},
 						{
-						"name": "Domesticairportloungeaccess",
-						"displayName": "Domestic airport lounge",
-						"description": "Unlimited access to Bidvest domestic and international lounges"
+							"name": "Domesticairportloungeaccess",
+							"displayName": "Domestic airport lounge",
+							"description": "Unlimited access to Bidvest domestic and international lounges"
 						},
 						{
-						"name": "Balanceenquiry",
-						"displayName": "Balance enquiry",
-						"description": "Included on Self Service channels"
+							"name": "Balanceenquiry",
+							"displayName": "Balance enquiry",
+							"description": "Included on Self Service channels"
 						},
 						{
-						"name": "Forexdelivery",
-						"displayName": "Forex delivery",
-						"description": "Free forex delivery (foreign cash & travel card) at preferential rates"
+							"name": "Forexdelivery",
+							"displayName": "Forex delivery",
+							"description": "Free forex delivery (foreign cash & travel card) at preferential rates"
 						},
 						{
-						"name": "Overdraft",
-						"displayName": "Overdraft",
-						"description": "Credit facility included with up to 40-days interest free credit"
+							"name": "Overdraft",
+							"displayName": "Overdraft",
+							"description": "Credit facility included with up to 40-days interest free credit"
 						},
 						{
-						"name": "Investment",
-						"displayName": "Investment",
-						"description": "Exclusive competitive platinum investment products"
+							"name": "Investment",
+							"displayName": "Investment",
+							"description": "Exclusive competitive platinum investment products"
 						},
 						{
-						"name": "Insurance",
-						"displayName": "Insurance",
-						"description": "Travel insurance, purchase protection and warrantees included when paying with your Visa Signature Professional Banking Credit Card."
+							"name": "Insurance",
+							"displayName": "Insurance",
+							"description": "Travel insurance, purchase protection and warrantees included when paying with your Visa Signature Professional Banking Credit Card."
 						},
 						{
-						"name": "Tailoredfinancing",
-						"displayName": "Tailored financing",
-						"description": "Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications of less than R1,5 million and 100% loans for vehicle finance applications of less than R400 000.  All credit applications are subject to final credit approval and terms and conditions."
+							"name": "Tailoredfinancing",
+							"displayName": "Tailored financing",
+							"description": "Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications of less than R1,5 million and 100% loans for vehicle finance applications of less than R400 000.  All credit applications are subject to final credit approval and terms and conditions."
 						}
 					],
-					"lifeCycleStatus": "AVAILABLE"
-					},
-					{
-						"productIdentifier": 1478,
-						"name": "Professional One(1478)",
-						"shortDescription": "A private banking experience that emphasises convenience, quality and flexibility at a fixed monthly fee. This bundle includes one account that pays you interest and one credit facility at a personalised interest rate with up to 40-days interest free, plus all the perks you deserve. Up to 50% monthly fee rebates for those 55 year and older with Nedbank investments.",
-						"productPricing": [
-							{
+					"lifeCycleStatus": "AVAILABLE",
+					"downloadLinks":[
+						{
+							"id": "pricingSchedule",
+							"url": "https://www.nedbank.co.za/content/dam/nedbank/site-assets/Personal/Professional/2020Fees/2020PRBFees/ProfessionalONEBankingCharges.pdf"
+						},
+						{
+							"id": "brochure",
+							"url": "https://www.nedbank.co.za/content/dam/nedbank/site-assets/Personal/Professional/Brochures/Nedbank%20Professional%20Banking%20Brochure.pdf"
+						}
+					]
+				},
+				{
+					"productIdentifier": 1478,
+					"name": "Professional One",
+					"shortDescription": "This bundle includes one account that pays you interest and one facility with up to 40-days interest free credit, plus all the private banking perks you deserve - for a fixed monthly fee.",
+					"description": "A private banking experience that emphasises convenience, quality and flexibility at a fixed monthly fee.~This bundle includes one account that pays you interest and one credit facility at a personalised interest rate with up to 40-days interest free, plus all the perks you deserve.Up to 50% monthly fee rebates for those 55 year and older with Nedbank investments.",
+					"productPricing": [
+						{
 							"type": "AdminFee",
-							"amount": 360,
+							"amount": 360.00,
 							"frequency": "Monthly",
 							"currency": "ZAR",
 							"description": "R 360.00 pm"
-							}
+						}
+					],
+					"specialFeature": "",
+					"additionalInfo": [
+						"Professional ONE account with significant transnational value and earn 0,75% interest on your positive balances",
+								"A credit facility (minimum R10,000) with up to 40-days interest free",
+								"Professional credit cards with local and international travel and lifestyle benefits",
+								"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
+						"Nedbank Money app or Online Banking for world-class secure digital banking",
+						"Greenbacks Card Swiper subscription",
+						"SMS notifications: eNotes and No-funds alert"
+					],
+					"detailsScreen": {
+						"component-name": "product-details",
+						"version": "2.0"
+					},
+					"salesHighlights": [
+						"sh1~A banking package that works as hard as you do",
+						"sh2~Lifestyle perks for the entire family",
+						"sh3~Unique investments to suit your lifestyle",
+						"sh4~Finance that lets you dream big",
+						"sh5~Ways to bank that suit your hours",
+						"sh6~Tailored offering for young professionals and those over 54"		
+					],
+					"startApplicationScreen": {
+						"isRequired": "false"
+					},
+					"redirect": {
+						"shouldRedirect": false,
+						"redirectUrl": null
+					},
+						"actions": [{
+						"type": "SELECT",
+						"text": "Select",
+						"environments": [
+							"dev",
+							"ete",
+							"qa"
+						]
+					},
+					{
+						"type": "REDIRECT",
+						"text": "Select",
+						"environments": [			
+							"prod"
 						],
-						"specialFeature": "",
-						"salesHighlights": [
-							"Enjoy unlimited airport lounge access, travel insurance, free delivery of your forex and 50% discount on the prestigious American Express® Platinum Charge Card (for the global traveller).",
-							"Children get 4 lounge visits per year if they are on an active Dezign4me or Unlocked.me Student account.",
-							"Get exclusive benefits when using your Visa Signature credit card.",
-							"10 international airport lounge visits (including 1 guest allowance per visit) via LoungeKey.",
-							"Significantly increased travel insurance when buying airline tickets using these cards.",
-							"Purchase protection and warranties on purchases made using these cards.",
-							"24/7 emergency assistance should you need card replacement, cash or payments authorised.",
-							"24/7 concierge services for hotels, restaurants or event bookings and so much more.",
-							"Greenbacks rewards are earned on your everyday card swipes and online purchases.",					
-							"Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications up to R5 million. Apply online and qualify for 1% cash back (up to R15 000). 100% loans for vehicle finance applications. Your banker is equipped to provide you with a quick vehicle finance approval. All credit applications are subject to final credit approval.",
-							"Financial advice: Your financial growth also comes with important decisions and responsibilities. We'll give you access to a financial planner to assess your financial position and your future goals, consider different retirement scenarios, calculate the various costs and help you determine the optimal portfolio for your circumstances."
-						],
-						"redirect": {
-							"shouldRedirect": false,
-							"redirectUrl": null
+						"value": "https://www.nedbank.co.za/content/forms/af/nedbank/CallMeBackProfessionalBanking.html"
+					},
+					{
+						"type": "DETAIL",
+						"text": "Details"
+					},
+					{
+						"type": "COMPARE",
+						"text": "Compare"
+					}],
+					"applicationSteps": [
+						{
+							"index": 1,
+							"name": "Authenticate",
+							"Description": "Register to log in with your Nedbank ID."
 						},
-						"actions": [
-							{
-							"type": "SELECT_EWCO",
-							"text": "Select"
-							},
-							{
-							"type": "DETAIL",
-							"text": "Details"
-							},
-							{
-							"type": "COMPARE",
-							"text": "Compare"
-							}
-						],
-						"valueAddedServices": [
-							"Professional ONE account with significant transactional value and earn 0,75% interest on your positive balances",
-							"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
-							"24/7 telephone and email support",
-							"Nedbank Money app or Online Banking for world-class secure access to your account wherever you are",
-							"A credit facility with up to 40-days interest free",
-							"Professional credit cards with local and international travel and lifestyle benefits",
-							"Greenbacks rewards",
-							"eNotes",
-							"No-funds alert"
-						],
-						"eligibilityRules": [
-							{
-								"attributeType": "EligibilityRule",
-								"attributeName": "Age",
-								"minValue": "18",
-								"maxValue": "26",
-								"valueUnit": "year",
-								"description": "Individuals over the age of 18 years"
-							},
-							{
-								"attributeType": "EligibilityRule",
-								"attributeName": "Age",
-								"minValue": "27",
-								"maxValue": "29",
-								"valueUnit": "year",
-								"description": ""
-							},	
-							{
-								"attributeType": "EligibilityRule",
-								"attributeName": "Age",
-								"minValue": "30",
-								"maxValue": "999",
-								"valueUnit": "year",
-								"description": ""
-							},							
-							{
-								"attributeType": "EligibilityRule",
-								"attributeName": "Income",
-								"minValue": "750001",
-								"maxValue": "999999999",
-								"valueUnit": "ZAR",
-								"description": "There is no minimum income requirement, however this offering is recommended for those earning from R750,000 per annum"
-							},
-							{
-								"attributeType": "EligibilityRule",
-								"attributeName": "Income",
-								"minValue": "300001",
-								"maxValue": "750000",
-								"valueUnit": "ZAR",
-								"description": ""
-							},
-							{
+						{
+							"index": 2,
+							"name": "Product setup",
+							"Description": "Setup your product to suit your needs."
+						},
+						{
+							"index": 3,
+							"name": "About you",
+							"Description": "Tell us more details about you."
+						},
+						{
+							"index": 4,
+							"name": "Credit info",
+							"Description": "Only required if you need a credit facility."
+						},
+						{
+							"index": 5,
+							"name": "Finalisation",
+							"Description": "Upload documents and accept some T&Cs."
+						},
+						{
+							"index": 6,
+							"name": "Customisation",
+							"Description": "Choose your banker and card delivery."
+						}
+					],	
+					"valueAddedServices": [
+						"Professional ONE account with significant transactional value and earn 0,75% interest on your positive balances",
+						"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
+						"24/7 telephone and email support",
+						"Nedbank Money app or Online Banking for world-class secure access to your account wherever you are",
+						"A credit facility with up to 40-days interest free",
+						"Professional credit cards with local and international travel and lifestyle benefits",
+						"Greenbacks rewards",
+						"eNotes",
+						"No-funds alert"
+					],
+					"eligibilityRules": [
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Age",
+							"minValue": "18",
+							"maxValue": "26",
+							"valueUnit": "year",
+							"description": "Individuals over the age of 18 years"
+						},
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Age",
+							"minValue": "27",
+							"maxValue": "29",
+							"valueUnit": "year",
+							"description": ""
+						},	
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Age",
+							"minValue": "30",
+							"maxValue": "999",
+							"valueUnit": "year",
+							"description": ""
+						},							
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Income",
+							"minValue": "750001",
+							"maxValue": "999999999",
+							"valueUnit": "ZAR",
+							"description": "There is no minimum income requirement, however this offering is recommended for those earning from R750,000 per annum"
+						},
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "Income",
+							"minValue": "300001",
+							"maxValue": "750000",
+							"valueUnit": "ZAR",
+							"description": ""
+						},
+						{
 							"attributeType": "EligibilityRule",
 							"attributeName": "Package",
 							"value": "A bundled offering",
 							"valueUnit": "package",
 							"description": "Not available to trust, companies or legal entities"
-							},
-							{
-								"attributeType": "EligibilityRule",
-								"attributeName": "CreditCheck",
-								"description": "All credit facilities are subject to credit and affordability checks."
-							},
-							{
-								"attributeType": "EligibilityRule",
-								"attributeName": "CreditFacility",
-								"description": "This bundle is subject to the approval of a minimum R10,000 credit facility."
-							},							
-							{
+						},
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "CreditCheck",
+							"description": "All credit facilities are subject to credit and affordability checks."
+						},
+						{
+							"attributeType": "EligibilityRule",
+							"attributeName": "CreditFacility",
+							"description": "This bundle is subject to the approval of a minimum R10,000 credit facility."
+						},							
+						{
 							"attributeType": "ConcurrentApplicationLimitationGroup",
 							"attributeName": "ConcurrentApplicationLimitation",
 							"value": "1"
-							}
-						],
-						"requiredDocuments": [
-							{
-								"attributeType": "Display",
-								"attributeName": "Valid South African identity",
-								"isComparable": "false",
-								"valueUnit": "bool",
-								"description": "card/document or passport with valid permit"
-							},
-							{
-								"attributeType": "Display",
-								"attributeName": "3-Months bank statements",
-								"isComparable": "false",
-								"valueUnit": "bool",
-								"description": "3-Months bank statements"
-							}
-						],
-						"productFeatures": [
-							{
+						}
+					],
+					"requiredDocuments": [
+						{
+							"attributeType": "Display",
+							"attributeName": "Valid South African identity",
+							"isComparable": "false",
+							"valueUnit": "bool",
+							"description": "card/document or passport with valid permit"
+						},
+						{
+							"attributeType": "Display",
+							"attributeName": "3-Months bank statements",
+							"isComparable": "false",
+							"valueUnit": "bool",
+							"description": "(we can source these for you from most banks)"
+						}
+					],
+					"productFeatures": [
+						{
 							"name": "Age",
 							"displayName": "Age",
 							"description": "Individuals over the age of 18 years"
-							},
-							{
+						},
+						{
 							"name": "fee",
 							"displayName": "Monthly Fee",
 							"description": "R 360.00"
-							},
-							{
+						},
+						{
 							"name": "Income",
 							"displayName": "Income",
 							"description": "No minimum income is required however, this offering is ideally suited to those earning over R750 000 per year."
-							},
-							{
+						},
+						{
 							"name": "RelationshipBanker",
 							"displayName": "Relationship Banker",
 							"description": "Included"
-							},
-							{
+						},
+						{
 							"name": "Chequecard",
 							"displayName": "Cheque card",
 							"description": "Not applicable"
-							},
-							{
-								"name": "Creditcard",
-								"displayName": "Credit card",
-								"description": "Included"
-							},
-							{
+						},
+						{
+							"name": "Creditcard",
+							"displayName": "Credit card",
+							"description": "Included"
+						},
+						{
 							"name": "Nedbankatmwithdrawals",
 							"displayName": "Nedbank ATM withdrawals",
 							"description": "Unlimited ATM withdrawals"
-							},
-							{
+						},
+						{
 							"name": "Debitordersinternal",
 							"displayName": "Debit orders (Internal)",
 							"description": "Unlimited debit orders"
-							},
-							{
+						},
+						{
 							"name": "Debitordersexternal",
 							"displayName": "Debit orders (External)",
 							"description": "Unlimited debit orders"
-							},
-							{
+						},
+						{
 							"name": "Stoporders",
 							"displayName": "Stop orders",
 							"description": "Stop orders included"
-							},
-							{
+						},
+						{
 							"name": "Cardswipes",
 							"displayName": "Card swipes",
 							"description": "Unlimited swipes"
-							},
-							{
+						},
+						{
 							"name": "Cashwithdrawalsatparticipatingretailers",
 							"displayName": "Cash withdrawals",
 							"description": "Cash withdrawals at participating retailers and at a Nedbank ATM included"
-							},
-							{
+						},
+						{
 							"name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
 							"displayName": "Digital banking",
 							"description": "Included"
-							},
-							{
+						},
+						{
 							"name": "AirtimewithoutAirtime",
 							"displayName": "Airtime without Airtime",
 							"description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
-							},
-							{
+						},
+						{
 							"name": "SendiMali",
 							"displayName": "Send i-Mali",
 							"description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
-							},										
-							{
+						},										
+						{
 							"name": "Greenbacks",
 							"displayName": "Greenbacks",
 							"description": "Included"
-							},
-							{
+						},
+						{
 							"name": "Chargecard",
 							"displayName": "Charge card",
 							"description": "American Express® Platinum Charge Card available at 50% discounted annual fee (for the first year only)"
-							},
-							{
+						},
+						{
 							"name": "Electronicchannels",
 							"displayName": "Electronic channels",
 							"description": "Included"
-							},
-							{
+						},
+						{
 							"name": "eNote",
 							"displayName": "eNote",
 							"description": "Included"
-							},
-							{
+						},
+						{
 							"name": "Nofundsalert",
 							"displayName": "No-funds alert",
 							"description": "Included"
-							},
-							{
+						},
+						{
 							"name": "Internationalairportloungeaccess",
 							"displayName": "International airport lounge",
 							"description": "Ten visits per annum. One guest per visit"
-							},
-							{
+						},
+						{
 							"name": "Domesticairportloungeaccess",
 							"displayName": "Domestic airport lounge",
 							"description": "Unlimited access to Bidvest domestic and international lounges"
-							},
-							{
+						},
+						{
 							"name": "Balanceenquiry",
 							"displayName": "Balance enquiry",
 							"description": "Included on Self Service channels"
-							},
-							{
+						},
+						{
 							"name": "Forexdelivery",
 							"displayName": "Forex delivery",
 							"description": "Free forex delivery (foreign cash & travel card) at preferential rates"
-							},
-							{
+						},
+						{
 							"name": "Overdraft",
 							"displayName": "Overdraft",
 							"description": "Credit facility included with up to 40-days interest free credit"
-							},
-							{
+						},
+						{
 							"name": "Investment",
 							"displayName": "Investment",
 							"description": "Exclusive competitive platinum investment products"
-							},
-							{
+						},
+						{
 							"name": "Insurance",
 							"displayName": "Insurance",
 							"description": "Travel insurance, purchase protection and warrantees included when paying with your Visa Signature Professional Banking Credit Card."
-							},
-							{
+						},
+						{
 							"name": "Tailoredfinancing",
 							"displayName": "Tailored financing",
 							"description": "Tailored financing: With the support of your dedicated relationship banker, credit decisions are personalised to your unique circumstances and you can get: 100% loans for home loan applications of less than R1,5 million and 100% loans for vehicle finance applications of less than R400 000.  All credit applications are subject to final credit approval and terms and conditions."
-							}
-						],
-						"lifeCycleStatus": "AVAILABLE"
 						}
+					],
+					"lifeCycleStatus": "AVAILABLE",
+					"downloadLinks":[
+						{
+							"id": "pricingSchedule",
+							"url":"https://www.nedbank.co.za/content/dam/nedbank/site-assets/Personal/Professional/2020Fees/2020PRBFees/ProfessionalONEBankingCharges.pdf"
+						},
+						{
+							"id": "brochure",
+							"url": "https://www.nedbank.co.za/content/dam/nedbank/site-assets/Personal/Professional/Brochures/Nedbank%20Professional%20Banking%20Brochure.pdf"
+						}
+					]
+				}					
 			]
 		  },
 		  {
