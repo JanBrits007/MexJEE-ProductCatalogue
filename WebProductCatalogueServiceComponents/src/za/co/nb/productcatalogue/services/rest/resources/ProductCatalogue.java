@@ -2,6 +2,7 @@ package za.co.nb.productcatalogue.services.rest.resources;
 
 import javax.annotation.security.PermitAll;
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.OPTIONS;
@@ -25,20 +26,11 @@ import za.co.nb.productcatalogue.dto.ProductIdentifiers;
 public class ProductCatalogue {
 
 	private final Log mLog = LogFactory.getLog(getClass());
-    private ProductCataloguesDAO mProductCataloguesDAO;
-    
-    private ProductCataloguesDAO getProductCataloguesDAO() {
-    	mLog.debug("Trace 1");
 
-    	if(mProductCataloguesDAO == null) {
-        	mLog.debug("Trace 2");
-    		mProductCataloguesDAO = new ProductCataloguesDAO();
-    	}
-    	
-    	mLog.debug("Trace 3");
-    	
-    	return mProductCataloguesDAO;
-    }
+	@Inject
+    private ProductCataloguesDAO productCataloguesDAO;
+    
+
     
     @Context
     javax.ws.rs.core.Application app;
@@ -56,7 +48,7 @@ public class ProductCatalogue {
     	mLog.debug("Trace 1");
     	
     	try {
-	        String vProductCatalogueJSON = getProductCataloguesDAO().getProductCatalogueJSONByID(id);
+	        String vProductCatalogueJSON = productCataloguesDAO.getProductCatalogueJSONByID(id);
 
 	        if(vProductCatalogueJSON != null) {
 	        	mLog.debug("Trace 2");
@@ -71,6 +63,38 @@ public class ProductCatalogue {
     		e.printStackTrace();
             return Response.status(Status.INTERNAL_SERVER_ERROR).build();
     	}
+    }
+
+    @GET
+    @Path( "/invalidate" )
+    @Produces( MediaType.APPLICATION_JSON )
+    public Response invalidateCache( ) {
+        mLog.debug("Trace 1");
+
+        try {
+            productCataloguesDAO.invalidate();
+            return Response.ok(Status.OK).build();
+
+        } catch(Exception e) {
+           mLog.error("could not invalidate cache", e);
+            return Response.status(Status.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @GET
+    @Path( "/reload" )
+    @Produces( MediaType.APPLICATION_JSON )
+    public Response reloadCache( ) {
+        mLog.debug("Trace 1");
+
+        try {
+            productCataloguesDAO.reload();
+            return Response.ok(Status.OK).build();
+
+        } catch(Exception e) {
+            mLog.error("could not reload cache", e);
+            return Response.status(Status.INTERNAL_SERVER_ERROR).build();
+        }
     }
     
     @POST
