@@ -47,10 +47,16 @@ public abstract class AbstractProductCatalogueDAO extends AbstractRate {
 
         for(String productId : catalogueCache.keySet()){
 
-            String catalogueString =  retrieveRatesInjectedProductCatalog(productId);
-            putToCache(productId, catalogueString);
+            try {
 
-            mLog.debug ("## ProductCacheUpdated ##: "+productId);
+                String catalogueString = retrieveRatesInjectedProductCatalog(productId);
+                putToCache(productId, catalogueString);
+                mLog.debug ("## ProductCacheUpdated ##: "+productId);
+
+            }catch(Exception e){
+                mLog.error("Could not reload cache, product:"+productId, e);
+            }
+
         }
     }
 
