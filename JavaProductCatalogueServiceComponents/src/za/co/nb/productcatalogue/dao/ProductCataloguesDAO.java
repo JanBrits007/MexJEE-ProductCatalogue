@@ -21,11 +21,7 @@ public class ProductCataloguesDAO extends AbstractProductCatalogueDAO {
 		mLog.debug("Trace 1 >>" + pProductCatalogueID + "<<");
 		
 		// First check whether the catalogue is in the cache.
-		CachedCatalogueDetails cachedCatalogue = catalogueCache.get(pProductCatalogueID);
 
-		if(cachedCatalogue == null || isGreaterThan24Hours(cachedCatalogue.getCacheDateTime())) {
-			mLog.debug("Trace 2");
-		    	
 			if (pProductCatalogueID.equalsIgnoreCase("all")) {
 				mLog.debug("Trace 3");
 
@@ -34,37 +30,13 @@ public class ProductCataloguesDAO extends AbstractProductCatalogueDAO {
 			} else {
 				mLog.debug("Trace 4");
 				String catalogueString = retrieveRatesInjectedProductCatalog(pProductCatalogueID);
-				putToCache(pProductCatalogueID, catalogueString);
-				mLog.debug("added to cache:"+pProductCatalogueID);
 
 				return catalogueString;
 			}
-		} else {
-			mLog.debug("Trace 5");
-			return cachedCatalogue.getCatalogueContent();
-		}
-		
 	}
 
-	public void invalidate(){
-		catalogueCache.clear();
-		mLog.debug("## ProductCatalogue CLEARED ##");
-	}
-
-	public void reload(){
-		updateProductCatalogueCache();
-		mLog.debug("## ProductCatalogue RELOADED ##");
-	}
-
-
-
-	private boolean isGreaterThan24Hours(Date cacheDate){
-		Instant twentyFourHoursEarlier = Instant.now().minus( 24 , ChronoUnit.HOURS );
-
-		return cacheDate.toInstant().isBefore(twentyFourHoursEarlier);
-	}
-
-	private String getProductCatalogAllJson(String id) throws Exception, FileNotFoundException {
+	@Deprecated
+	public String getProductCatalogAllJson(String id) throws Exception, FileNotFoundException {
 		throw new Exception("The use of the database for product specifications has been deprecated. Please maintain product specifications in the relevant GIT repo.");
 	}
 

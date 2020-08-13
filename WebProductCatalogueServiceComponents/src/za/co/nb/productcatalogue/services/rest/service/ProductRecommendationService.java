@@ -4,6 +4,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.codehaus.jackson.map.ObjectMapper;
 import za.co.nb.productcatalogue.dao.ProductCataloguesDAO;
+import za.co.nb.productcatalogue.dao.dto.CachedCatalogueDetails;
 import za.co.nb.productcatalogue.services.rest.model.AnsweredQuestion;
 import za.co.nb.productcatalogue.services.rest.model.AnsweredQuestionList;
 import za.co.nb.productcatalogue.services.rest.model.NextQuestionToAskList;
@@ -14,8 +15,10 @@ import za.co.nb.productcatalogue.services.rest.model.Question;
 import za.co.nb.productcatalogue.services.rest.model.QuestionList;
 import za.co.nb.productcatalogue.services.rest.model.QuestionListType;
 import za.co.nb.productcatalogue.services.rest.model.RecommendedProduct;
+import za.co.nb.productcatalogue.services.rest.resources.cache.ProductCatalogueCache;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +33,9 @@ public class ProductRecommendationService {
 
     private ProductCataloguesDAO mProductCataloguesDAO;
     private final Log mLog = LogFactory.getLog(getClass());
+
+    @Inject
+    ProductCatalogueCache productCatalogueCache;
 
     //This sets up access to the function to retrieve JSON string from actual .JSON file
     private ProductCataloguesDAO getProductCataloguesDAO() {
@@ -53,7 +59,17 @@ public class ProductRecommendationService {
 
         try {
             mLog.debug("Trace 1: Loading JSON spec file >>" + pJsonFile);
-            return getProductCataloguesDAO().getProductCatalogueJSONByID(pJsonFile);
+            CachedCatalogueDetails cachedCatalogue = productCatalogueCache.getCatalogueCache().get(pJsonFile);
+
+            if (cachedCatalogue == null) {
+                String productJSONData =  getProductCataloguesDAO().getProductCatalogueJSONByID(pJsonFile);
+                productCatalogueCache.putToCache(pJsonFile, productJSONData);
+                return productJSONData;
+            }else{
+                return cachedCatalogue.getCatalogueContent();
+            }
+
+
         } catch (Exception e) {
             mLog.debug("Error: Could not load spec file");
             e.printStackTrace();

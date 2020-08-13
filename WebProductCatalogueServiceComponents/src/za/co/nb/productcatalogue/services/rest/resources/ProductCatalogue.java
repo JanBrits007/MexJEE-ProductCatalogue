@@ -1,5 +1,12 @@
 package za.co.nb.productcatalogue.services.rest.resources;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import za.co.nb.productcatalogue.dao.ProductCataloguesDAO;
+import za.co.nb.productcatalogue.dao.dto.CachedCatalogueDetails;
+import za.co.nb.productcatalogue.dto.ProductIdentifiers;
+import za.co.nb.productcatalogue.services.rest.resources.cache.ProductCatalogueCache;
+
 import javax.annotation.security.PermitAll;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -14,12 +21,9 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
-import za.co.nb.productcatalogue.dao.ProductCataloguesDAO;
-import za.co.nb.productcatalogue.dto.ProductIdentifiers;
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
 
 @Path( "/producthierarchy" )
 @Stateless
@@ -28,10 +32,11 @@ public class ProductCatalogue {
 	private final Log mLog = LogFactory.getLog(getClass());
 
 	@Inject
-    private ProductCataloguesDAO productCataloguesDAO;
-    
+    ProductCatalogueCache productCatalogueCache;
 
-    
+	@Inject
+    private ProductCataloguesDAO productCataloguesDAO;
+
     @Context
     javax.ws.rs.core.Application app;
     
@@ -48,21 +53,46 @@ public class ProductCatalogue {
     	mLog.debug("Trace 1");
     	
     	try {
-	        String vProductCatalogueJSON = productCataloguesDAO.getProductCatalogueJSONByID(id);
 
-	        if(vProductCatalogueJSON != null) {
-	        	mLog.debug("Trace 2");
-		        return Response.ok(vProductCatalogueJSON).build();
-	        }
-	        else {
-	        	mLog.debug("Trace 3");
-	        	return Response.ok(Status.NOT_FOUND).build();
-	        }
+            CachedCatalogueDetails cachedCatalogue = productCatalogueCache.getCatalogueCache().get(id);
+
+            if(cachedCatalogue == null || isGreaterThan24Hours(cachedCatalogue.getCacheDateTime())) {
+                mLog.debug("Trace 2");
+
+                if (id.equalsIgnoreCase("all")) {
+                    mLog.debug("Trace 3");
+                    String vProductCatalogueJSON  = productCataloguesDAO.getProductCatalogAllJson(id);
+                    return Response.ok(vProductCatalogueJSON).build();
+                } else {
+                    mLog.debug("Trace 4");
+                    String catalogueString = productCataloguesDAO.retrieveRatesInjectedProductCatalog(id);
+
+                    if(catalogueString != null) {
+                        productCatalogueCache.putToCache(id, catalogueString);
+                        mLog.debug("added to cache:"+id);
+                        return Response.ok(catalogueString).build();
+                    } else {
+                        mLog.debug("Trace 6");
+                        return Response.ok(Status.NOT_FOUND).build();
+                    }
+                }
+            } else {
+                mLog.debug("retrieved from cache, product:"+id);
+                return Response.ok(cachedCatalogue.getCatalogueContent()).build();
+            }
+
     	}
     	catch(Exception e) {
     		e.printStackTrace();
             return Response.status(Status.INTERNAL_SERVER_ERROR).build();
     	}
+    }
+
+
+    private boolean isGreaterThan24Hours(Date cacheDate){
+        Instant twentyFourHoursEarlier = Instant.now().minus( 24 , ChronoUnit.HOURS );
+
+        return cacheDate.toInstant().isBefore(twentyFourHoursEarlier);
     }
 
     @GET
@@ -72,7 +102,7 @@ public class ProductCatalogue {
         mLog.debug("Trace 1");
 
         try {
-            productCataloguesDAO.invalidate();
+            productCatalogueCache.invalidate();
             return Response.ok(Status.OK).build();
 
         } catch(Exception e) {
@@ -88,7 +118,7 @@ public class ProductCatalogue {
         mLog.debug("Trace 1");
 
         try {
-            productCataloguesDAO.reload();
+            productCatalogueCache.reload();
             return Response.ok(Status.OK).build();
 
         } catch(Exception e) {
