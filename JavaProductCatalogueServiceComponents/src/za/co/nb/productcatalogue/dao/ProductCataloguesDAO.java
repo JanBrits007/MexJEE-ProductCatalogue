@@ -1,18 +1,11 @@
 package za.co.nb.productcatalogue.dao;
 
-import java.io.FileNotFoundException;
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.util.Date;
-
-import javax.enterprise.context.RequestScoped;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import za.co.nb.productcatalogue.dao.dto.CachedCatalogueDetails;
+import java.io.FileNotFoundException;
 
-@RequestScoped
+
 public class ProductCataloguesDAO extends AbstractProductCatalogueDAO {
 
 	private final Log mLog = LogFactory.getLog(getClass());

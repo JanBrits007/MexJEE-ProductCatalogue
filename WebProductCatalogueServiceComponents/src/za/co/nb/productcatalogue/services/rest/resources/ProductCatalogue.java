@@ -7,6 +7,7 @@ import za.co.nb.productcatalogue.dao.dto.CachedCatalogueDetails;
 import za.co.nb.productcatalogue.dto.ProductIdentifiers;
 import za.co.nb.productcatalogue.services.rest.resources.cache.ProductCatalogueCache;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.security.PermitAll;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -21,8 +22,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
 import java.util.Date;
 
 @Path( "/producthierarchy" )
@@ -34,11 +34,16 @@ public class ProductCatalogue {
 	@Inject
     ProductCatalogueCache productCatalogueCache;
 
-	@Inject
     private ProductCataloguesDAO productCataloguesDAO;
 
     @Context
     javax.ws.rs.core.Application app;
+
+
+    @PostConstruct
+    public void init(){
+        productCataloguesDAO = new ProductCataloguesDAO();
+    }
     
     @OPTIONS
     @PermitAll
@@ -90,9 +95,10 @@ public class ProductCatalogue {
 
 
     private boolean isGreaterThan24Hours(Date cacheDate){
-        Instant twentyFourHoursEarlier = Instant.now().minus( 24 , ChronoUnit.HOURS );
+        Calendar twentyFourHoursEarlier = Calendar.getInstance();
+        twentyFourHoursEarlier.add(Calendar.HOUR, -24);
 
-        return cacheDate.toInstant().isBefore(twentyFourHoursEarlier);
+        return cacheDate.before(twentyFourHoursEarlier.getTime());
     }
 
     @GET

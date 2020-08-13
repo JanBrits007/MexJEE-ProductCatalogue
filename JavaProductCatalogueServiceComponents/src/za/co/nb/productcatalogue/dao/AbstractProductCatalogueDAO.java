@@ -4,14 +4,11 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
-import za.co.nb.productcatalogue.dao.dto.CachedCatalogueDetails;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.Date;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
