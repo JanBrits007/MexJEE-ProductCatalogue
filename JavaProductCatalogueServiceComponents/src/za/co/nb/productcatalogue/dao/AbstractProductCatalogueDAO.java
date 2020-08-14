@@ -4,16 +4,11 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
-import za.co.nb.productcatalogue.dao.dto.CachedCatalogueDetails;
-import za.co.nb.productcatalogue.dao.dto.CatalogueCache;
 
-import javax.inject.Inject;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.Date;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -21,11 +16,9 @@ public abstract class AbstractProductCatalogueDAO extends AbstractRate {
 
     private final Log mLog = LogFactory.getLog(getClass());
 
-    @Inject
-    @CatalogueCache
-    protected Map<String, CachedCatalogueDetails> catalogueCache;
 
-    protected String retrieveRatesInjectedProductCatalog(String productId){
+
+    public String retrieveRatesInjectedProductCatalog(String productId){
         mLog.debug("retrieve cache productCatalogue:"+productId);
 
         String catalogueString = readProductHierarchyFromResourceFile(productId);
@@ -43,16 +36,6 @@ public abstract class AbstractProductCatalogueDAO extends AbstractRate {
         return catalogueString;
     }
 
-    public void updateProductCatalogueCache(){
-
-        for(String productId : catalogueCache.keySet()){
-
-            String catalogueString =  retrieveRatesInjectedProductCatalog(productId);
-            putToCache(productId, catalogueString);
-
-            mLog.debug ("## ProductCacheUpdated ##: "+productId);
-        }
-    }
 
 
     protected String readProductHierarchyFromResourceFile(String productCatalogueID) {
@@ -141,12 +124,6 @@ public abstract class AbstractProductCatalogueDAO extends AbstractRate {
     }
 
 
-    protected void putToCache(String productId, String catalogueString){
 
-        CachedCatalogueDetails cachedCatalogue = new CachedCatalogueDetails();
-        cachedCatalogue.setCacheDateTime(new Date());
-        cachedCatalogue.setCatalogueContent(catalogueString);
-        catalogueCache.put(productId, cachedCatalogue);
-    }
 
 }
