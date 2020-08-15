@@ -81,14 +81,10 @@ public class ProductRecommendationService {
                 List<RecommendedProduct> recommendedProducts = productRecommendationSet.getRecommendedProductList().getRecommendedProduct();
                 productRecommendationResponse.setRecommendedProducts(recommendedProducts);
 
-                if (productRecommendationSet.getNextQuestionToAskList().getQuestionID() != null && !productRecommendationSet.getNextQuestionToAskList().getQuestionID().isEmpty()) {
-                    mLog.debug("Trace 4: Load next question list");
-                    QuestionList questionList = getQuestion(questionSetFile,
-                                                            productRecommendationSet.getNextQuestionToAskList(),
-                                                            answeredQuestionReq);
+                mLog.debug("Trace 4: Load questions");
+                QuestionList questionList = getQuestion(questionSetFile, productRecommendationSet);
+                productRecommendationResponse.setQuestions(questionList.getQuestion());
 
-                    productRecommendationResponse.setQuestions(questionList.getQuestion());
-                }
 
                 return productRecommendationResponse;
             } catch (Exception e) {
@@ -100,60 +96,48 @@ public class ProductRecommendationService {
     }
 
     /**
-     * @param questionFile          Spec file ID for question list
-     * @param nextQuestionToAskList Contains questionID from matching answered questions list
+     * @param questionFile             Spec file ID for question list
+     * @param productRecommendationSet Contains questionID from matched answered questions
      * @return List of questions from spec file
      */
-    private QuestionList getQuestion(String questionFile, NextQuestionToAskList nextQuestionToAskList, AnsweredQuestionList answeredQuestionReq) {
+    private QuestionList getQuestion(String questionFile, ProductRecommendationSet productRecommendationSet) {
         mLog.debug("Trace 1: Locate Product questions file");
         String questionsFile = findProductsFile(questionFile);
-        if (questionsFile != null) {
-            try {
-                QuestionList questionList = new QuestionList();
-                mLog.debug("Trace 2: Read spec file");
-                QuestionListType questionListType = new ObjectMapper().readValue(questionsFile, QuestionListType.class);
 
-                mLog.debug("Trace 3: Find next best question(s)");
+        try {
+            QuestionList questionList = new QuestionList();
+            NextQuestionToAskList nextQuestionToAskList = productRecommendationSet.getNextQuestionToAskList();
+            AnsweredQuestionList answeredQuestions = productRecommendationSet.getAnsweredQuestionList();
+
+            mLog.debug("Trace 2: Read spec file");
+            QuestionListType questionListType = new ObjectMapper().readValue(questionsFile, QuestionListType.class);
+
+            mLog.debug("Trace 3: Find next best question(s)");
+            List<Question> questionList1 = new ArrayList<>();
+            //Loop through the file containing all the questions
+            for (Question question : questionListType.getQuestionList().getQuestion()) {
+
+                Question question1 = addPrevQuestion(question, answeredQuestions);
+                if (question1.getQuestionID() != null)
+                    questionList1.add(question1);
+
                 if (!nextQuestionToAskList.getQuestionID().isEmpty()) {
-                    List<Question> questionList1 = new ArrayList<>();
-                    //Loop through the file containing all the questions
-                    for (Question question : questionListType.getQuestionList().getQuestion()) {
-                        System.out.println("Question ID in file: " + question.getQuestionID());
-
-                        for (AnsweredQuestion answeredQuestion : answeredQuestionReq.getAnsweredQuestion()) {
-                            System.out.println("Question ID requested: " + answeredQuestion.getQuestionID());
-                            if (question.getQuestionID().equals(answeredQuestion.getQuestionID())) {
-                                System.out.println("Same ID found in request");
-                                question.setAnswer(answeredQuestion.getAnswer());
-                                questionList1.add(question);
-                                break; // get out of loop if match is found
-                            }
+                    for (String qID : nextQuestionToAskList.getQuestionID()) {
+                        if (question.getQuestionID().equals(qID)) {
+                            questionList1.add(question);
+                            break; // get out of loop if match is found
                         }
-
-                        for (String qID : nextQuestionToAskList.getQuestionID()) {
-                            System.out.println("Next question ID to fetch: " + question.getQuestionID());
-                            if (question.getQuestionID().equals(qID)) {
-                                System.out.println("Same ID found");
-                                questionList1.add(question);
-                                break; // get out of loop if match is found
-                            }
-                        }
-
                     }
-//                    for (Question question : questionListType.getQuestionList().getQuestion()) {
-//                        if (question.getQuestionID().equals(nextQuestionToAskList.getQuestionID())) {
-//                            mLog.debug("Trace 4: Found matching questions");
-//                            questionList1.add(question);
-//                        }
-//                    }
-                    questionList.setQuestion(questionList1);
-                    return questionList;
                 }
-            } catch (Exception e) {
-                mLog.debug("Error: Could not get next list of questions");
-                e.printStackTrace();
+
             }
+            questionList.setQuestion(questionList1);
+            return questionList;
+        } catch (Exception e) {
+            mLog.debug("Error: Could not get next list of questions");
+            e.printStackTrace();
         }
+
         return new QuestionList();
     }
 
@@ -168,7 +152,6 @@ public class ProductRecommendationService {
                 return productRecommendationSetItem;
             }
         }
-
         return new ProductRecommendationSet();
     }
 
@@ -193,8 +176,7 @@ public class ProductRecommendationService {
 
                     if ((answeredQuestion1.getQuestionID().equals(answeredQuestion2.getQuestionID())) &&
                             (answeredQuestion1.getAnswer().equals(answeredQuestion2.getAnswer()))) {
-                        System.out.println("Found a product set match: " + answeredQuestion1.getQuestionID());
-                        mLog.debug("Trace 2: Compare individual values" + answeredQuestion1.getAnswer() + " == " + answeredQuestion2.getAnswer());
+                        mLog.debug("Trace 2: Compare individual values");
                         foundMatch = true;
                     } else //If there are answers that do not match, no need to check next question/answer pair
                         break;
@@ -207,4 +189,14 @@ public class ProductRecommendationService {
         return foundMatch;
     }
 
+    private Question addPrevQuestion(Question question, AnsweredQuestionList answeredQuestions){
+
+        for (AnsweredQuestion answeredQuestion : answeredQuestions.getAnsweredQuestion()) {
+            if (question.getQuestionID().equals(answeredQuestion.getQuestionID())) {
+                question.setAnswer(answeredQuestion.getAnswer());
+                return question;
+            }
+        }
+        return new Question();
+    }
 }
