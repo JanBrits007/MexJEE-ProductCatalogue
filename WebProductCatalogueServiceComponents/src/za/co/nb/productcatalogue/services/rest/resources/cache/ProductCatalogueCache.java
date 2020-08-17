@@ -4,9 +4,7 @@ package za.co.nb.productcatalogue.services.rest.resources.cache;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import za.co.nb.productcatalogue.dao.AbstractProductCatalogueDAO;
-import za.co.nb.productcatalogue.dao.ProductCataloguesDAO;
 import za.co.nb.productcatalogue.dao.dto.CachedCatalogueDetails;
-
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Lock;
@@ -14,9 +12,6 @@ import javax.ejb.LockType;
 import javax.ejb.Schedule;
 import javax.ejb.Schedules;
 import javax.ejb.Singleton;
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Produces;
-import javax.inject.Inject;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
