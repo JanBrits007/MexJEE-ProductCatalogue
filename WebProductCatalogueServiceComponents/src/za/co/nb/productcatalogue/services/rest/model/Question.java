@@ -3,6 +3,7 @@ package za.co.nb.productcatalogue.services.rest.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -10,13 +11,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "questionID",
-    "questionDisplayName",
-    "answerType",
-    "answerOptionsList"
+        "questionID",
+        "questionDisplayName",
+        "answerType",
+        "answerOptions",
+        "answer"
 })
-public class Question implements Serializable
-{
+public class Question implements Serializable {
 
     @JsonProperty("questionID")
     private String questionID;
@@ -24,8 +25,10 @@ public class Question implements Serializable
     private String questionDisplayName;
     @JsonProperty("answerType")
     private String answerType;
-    @JsonProperty("answerOptionsList")
-    private AnswerOptionsList answerOptionsList;
+    @JsonProperty("answerOptions")
+    private List<AnswerOption> answerOptions;
+    @JsonProperty("answer")
+    private String answer;
     private static final long serialVersionUID = 5252313354711233249L;
 
     @JsonProperty("questionID")
@@ -58,16 +61,23 @@ public class Question implements Serializable
         this.answerType = answerType;
     }
 
-    @JsonProperty("answerOptionsList")
-    public AnswerOptionsList getAnswerOptionsList() {
-        if (answerOptionsList == null)
-            answerOptionsList = new AnswerOptionsList();
-        return answerOptionsList;
+    @JsonProperty("answerOptions")
+    public List<AnswerOption> getAnswerOptions() {
+        if (answerOptions == null)
+            answerOptions = new ArrayList<>();
+        return answerOptions;
     }
 
-    @JsonProperty("answerOptionsList")
-    public void setAnswerOptionsList(AnswerOptionsList answerOptionsList) {
-        this.answerOptionsList = answerOptionsList;
+    @JsonProperty("answerOptions")
+    public void setAnswerOptions(List<AnswerOption> answerOptions) {
+        this.answerOptions = answerOptions;
     }
 
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
 }
