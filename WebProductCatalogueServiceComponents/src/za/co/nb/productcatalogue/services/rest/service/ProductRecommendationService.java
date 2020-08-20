@@ -17,8 +17,6 @@ import za.co.nb.productcatalogue.services.rest.model.QuestionListType;
 import za.co.nb.productcatalogue.services.rest.model.RecommendedProduct;
 import za.co.nb.productcatalogue.services.rest.resources.cache.ProductCatalogueCache;
 
-import javax.ejb.EJB;
-import javax.ejb.Stateless;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import java.util.ArrayList;

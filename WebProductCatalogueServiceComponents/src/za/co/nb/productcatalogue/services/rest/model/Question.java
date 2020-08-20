@@ -13,6 +13,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
         "questionID",
         "questionDisplayName",
+        "questionName",
         "answerType",
         "answerOptions",
         "answer"
@@ -23,6 +24,8 @@ public class Question implements Serializable {
     private String questionID;
     @JsonProperty("questionDisplayName")
     private String questionDisplayName;
+    @JsonProperty("questionName")
+    private String questionName;
     @JsonProperty("answerType")
     private String answerType;
     @JsonProperty("answerOptions")
@@ -49,6 +52,15 @@ public class Question implements Serializable {
     @JsonProperty("questionDisplayName")
     public void setQuestionDisplayName(String questionDisplayName) {
         this.questionDisplayName = questionDisplayName;
+    }
+
+    @JsonProperty("questionName")
+    public String getQuestionName() {
+        return questionName;
+    }
+    @JsonProperty("questionName")
+    public void setQuestionName(String questionName) {
+        this.questionName = questionName;
     }
 
     @JsonProperty("answerType")
