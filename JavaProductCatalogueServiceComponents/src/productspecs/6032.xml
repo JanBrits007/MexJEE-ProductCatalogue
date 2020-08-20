@@ -205,7 +205,7 @@
 		<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
 		<productAttributes>
 			<attributeType>DocumentDescription</attributeType>
-			<attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
+			<attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|CombindDocument|Agreement Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
@@ -352,19 +352,32 @@
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
-		<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>AccurateInformationProvidedConfirmation</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>KeepingInTouch</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YoureDone</attributeName>
-		</productAttributes>
+		 <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>GatherEvidence|ProceduralStepName=Upload documents~ZOrder=100</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>productDocumentPresentation|ProceduralStepName=Sign documents~ZOrder=90</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>DigitalActivation|ng-component=ng-digital-activation~ProceduralStepName=Digital activation~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<!--consider moving this to client level when we move to case manager pattern-->
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>KeepingInTouch|ng-component=ng-keeping-in-touch~ProceduralStepName=Keep in touch~ZOrder=70</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>AccurateInformationProvidedConfirmation|ng-component=ng-accurate-information-provided-confirmation~ProceduralStepName=Confirmation~ZOrder=60ContractComponentProductType=6032</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>YoureDone|ng-component=ng-youre-done~ProceduralStepName=HideProceduralStep~ZOrder=50</attributeName>
+		 </productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
   <attributeGroupName>productInformationRequirement_VerifyAffordabilityAndEmployment</attributeGroupName>
@@ -476,25 +489,33 @@
             <attributeType>string</attributeType>
             <attributeName>subGenericDetails</attributeName>
          </productAttributes>
+				 <productAttributes>
+		 			<attributeType>string</attributeType>
+		 			<attributeName>subClientsRightsAndObligations</attributeName>
+		 		</productAttributes>
+		 		<productAttributes>
+		 			 <attributeType>string</attributeType>
+		 			 <attributeName>subGenericTCForCreditProducts</attributeName>
+		 		</productAttributes>
+		 		<productAttributes>
+		 			 <attributeType>string</attributeType>
+		 			 <attributeName>subGenericImpConfirmation</attributeName>
+		 		</productAttributes>
+		 		<productAttributes>
+		 			 <attributeType>string</attributeType>
+		 			 <attributeName>subGenericSignatures</attributeName>
+		 		</productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
          <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
-         <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
-         </productAttributes>
-         <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>subOverdraftTC|ContractComponentProductType=1014</attributeName>
-         </productAttributes>
-         <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>subClientsRightsAndObligations|ContractComponentProductType=1014</attributeName>
-         </productAttributes>
-         <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>subSignatures|ContractComponentProductType=1014</attributeName>
-         </productAttributes>
+				 <productAttributes>
+					 <attributeType>string</attributeType>
+					 <attributeName>subCreditCard|ContractComponentProductType=6032</attributeName>
+				 </productAttributes>
+				 <productAttributes>
+					 <attributeType>string</attributeType>
+					 <attributeName>subCreditCardTC|ContractComponentProductType=6032</attributeName>
+				 </productAttributes>
     </productAttributeGroup>
 	<features>
 		<featureIdentifier>1028</featureIdentifier>
