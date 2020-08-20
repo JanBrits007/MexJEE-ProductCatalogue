@@ -3,27 +3,13 @@
     "name": "The American Express Gold Card",
     "shortDescription": "Gold has never been this rewarding! Enjoy a complimentary monthly Lifestyle Rewards valued at more than your monthly Card fees. Vouchers can be redeemed at NuMetro, Zando and Takealot.com or for airtime across networks. The rewards you want are there for the taking.",
     "redirect": {
-        "shouldRedirect": true,
-        "redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionCreditCardApplicationForm.html?"
+        "shouldRedirect": false,
+        "redirectUrl": null
     },
     "actions": [
         {
             "type": "SELECT",
-            "text": "Select",
-            "environments": [
-                "dev",
-                "ete",
-                "qa",
-                "qa_kiosk"
-            ]
-        },
-        {
-            "type": "REDIRECT",
-            "text": "Select",
-            "environments": [
-                "prod"
-            ],
-            "value": "https://www.nedbank.co.za/content/forms/af/cards/nedbank-credit-card-application.html/apply/check?cardType=Nedbank&formChannel=CR"
+            "text": "Select"
         },
         {
             "type": "DETAIL",
@@ -194,16 +180,18 @@
         }
     ],
     "lifeCycleStatus": "AVAILABLE",
-    "requiredDocuments": [{
-		"attributeType": "Display",
-		"attributeName": "Payslip",
-		"isComparable": "false",
-		"valueUnit": "bool"
-	},
-	{
-		"attributeType": "Display",
-		"attributeName": "Proof of ID",
-		"isComparable": "false",
-		"valueUnit": "bool"
-	}]
+    "requiredDocuments": [
+        {
+            "attributeType": "Display",
+            "attributeName": "Payslip",
+            "isComparable": "false",
+            "valueUnit": "bool"
+        },
+        {
+            "attributeType": "Display",
+            "attributeName": "Proof of ID",
+            "isComparable": "false",
+            "valueUnit": "bool"
+        }
+    ]
 }

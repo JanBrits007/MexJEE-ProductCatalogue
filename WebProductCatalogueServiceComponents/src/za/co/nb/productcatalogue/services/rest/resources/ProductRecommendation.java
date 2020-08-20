@@ -8,6 +8,7 @@ import za.co.nb.productcatalogue.services.rest.model.ProductRecommendationRespon
 import za.co.nb.productcatalogue.services.rest.service.ProductRecommendationService;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -19,11 +20,13 @@ import java.io.StringWriter;
 
 
 @Path("/productandservicedevelopment/productrecommendations/v1")
-@Stateless
 public class ProductRecommendation {
     private final Log mLog = LogFactory.getLog(getClass());
-    @Context
-    javax.ws.rs.core.Application app;
+
+
+    @Inject
+    ProductRecommendationService productRecommendationService;
+
 
     /**
      *
@@ -42,7 +45,6 @@ public class ProductRecommendation {
         resultSet.setResultDescription("SUCCESS");
 
         ProductRecommendationResponse productRecommendationResponse = new ProductRecommendationResponse();
-        ProductRecommendationService productRecommendationService = new ProductRecommendationService();
 
         if (answeredQuestionList.getAnsweredQuestion() != null && !answeredQuestionList.getAnsweredQuestion().isEmpty()) {
             try {
