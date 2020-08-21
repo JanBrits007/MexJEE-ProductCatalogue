@@ -23,10 +23,8 @@ import java.io.StringWriter;
 public class ProductRecommendation {
     private final Log mLog = LogFactory.getLog(getClass());
 
-
     @Inject
     ProductRecommendationService productRecommendationService;
-
 
     /**
      *

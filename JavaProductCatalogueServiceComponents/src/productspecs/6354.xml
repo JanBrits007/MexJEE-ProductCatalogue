@@ -112,15 +112,38 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>CompleteRequiredFeatureInfo</attributeName>
+         <attributeName>FaisRecordOfAdvice|ng-component=ng-fais-record-of-advice~ProceduralStepName=FAIS record of advice~ZOrder=150</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisRecordOfAdvice</attributeName>
+         <attributeName>FaisDecloration|ng-component=ng-fais-decloration~ProceduralStepName=FAIS decloration~ZOrder=140</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>VisibleArrangementSubmissionSalesMilestone</attributeName>
+         <attributeName>VisibleArrangementSubmissionSalesMilestone|ng-component=ng-visible-arrangement-submission-sales-milestone~ProceduralStepName=CMS details~ZOrder=130</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GatherEvidence</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>GatherEvidence|ng-component=ng-gather-evidence~ProceduralStepName=Upload documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>productDocumentPresentation|ProceduralStepName=Sign documents~ZOrder=90</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>DigitalActivation|ProceduralStepName=Digital activation~ZOrder=80</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>KeepingInTouch|ProceduralStepName=Keep in touch~ZOrder=70</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>AccurateInformationProvidedConfirmation|ProceduralStepName=Confirmation~ZOrder=60</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -635,8 +658,8 @@
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>VisibleArrangementSubmissionSalesMilestone</attributeName>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>VisibleArrangementSubmissionSalesMilestone|ng-component=ng-visible-arrangement-submission-sales-milestone~ProceduralStepName=CMS details~ZOrder=130</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -647,7 +670,39 @@
         </featureAttributes>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+          <attributeName>InsurancePanel|cv-parent-panel=CaseData~cv-component=Insurance_Panel~child-cv-component=widInsuranceInformation[SHOW]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankInformation[SHOW]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>EmploymentInformationPanel|cv-parent-panel=CaseData~cv-component=EmploymentInformation_Panel~child-cv-component=widEmploymentInformation[SHOW]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>BureauInformationPanel|cv-parent-panel=CaseData~cv-component=BureauInformation_Panel~child-cv-component=widBureauGateway[SHOW]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>AffordabilityInformationPanel|cv-parent-panel=CaseData~cv-component=AffordabilityInformation_Panel~child-cv-component=widAffordabilityInformation[SHOW]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>GenericCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnViewComments~cv-component=Actions_CaseActions~child-cv-component=btnSave~cv-component=Actions_CaseActions~child-cv-component=btnCancelCase~cv-component=Actions_CaseActions~child-cv-component=btnViewAuditTrails~cv-component=Actions_CaseActions~child-cv-component=btnDiarise~cv-component=Actions_CaseActions~child-cv-component=btnFlagForFraud</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>DocumentCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnOpenDocuments~cv-component=Actions_CaseActions~child-cv-component=btnRequestDocuments~cv-component=Actions_CaseActions~child-cv-component=btnAddDocuments</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>DataCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnRetrievePartyStatements~cv-component=Actions_CaseActions~child-cv-component=btnRefreshPartyData~cv-component=Actions_CaseActions~child-cv-component=btnREfreshBureauData</attributeName>
         </featureAttributes>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
@@ -1885,8 +1940,8 @@
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>Card Collection</attributeName>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Delivery of your cards~ZOrder=170~ContractComponentProductType=1386</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -1918,12 +1973,8 @@
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>Card Collection</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>Card Delivery</attributeName>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Delivery of your cards~ZOrder=170~ContractComponentProductType=1386</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
