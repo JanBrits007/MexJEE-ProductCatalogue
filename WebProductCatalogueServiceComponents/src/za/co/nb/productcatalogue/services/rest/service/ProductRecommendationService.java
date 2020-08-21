@@ -17,6 +17,7 @@ import za.co.nb.productcatalogue.services.rest.model.QuestionListType;
 import za.co.nb.productcatalogue.services.rest.model.RecommendedProduct;
 import za.co.nb.productcatalogue.services.rest.resources.cache.ProductCatalogueCache;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import java.util.ArrayList;
@@ -37,18 +38,9 @@ public class ProductRecommendationService {
     @Inject
     ProductCatalogueCache productCatalogueCache;
 
-    //This sets up access to the function to retrieve JSON string from actual .JSON file
-    private ProductCataloguesDAO getProductCataloguesDAO() {
-        mLog.debug("Trace 1");
-
-        if (mProductCataloguesDAO == null) {
-            mLog.debug("Trace 2");
-            mProductCataloguesDAO = new ProductCataloguesDAO();
-        }
-
-        mLog.debug("Trace 3");
-
-        return mProductCataloguesDAO;
+    @PostConstruct
+    public void init(){
+        mProductCataloguesDAO = new ProductCataloguesDAO();
     }
 
     /**
@@ -62,7 +54,7 @@ public class ProductRecommendationService {
             CachedCatalogueDetails cachedCatalogue = productCatalogueCache.getCatalogueCache().get(pJsonFile);
 
             if (cachedCatalogue == null) {
-                String productJSONData =  getProductCataloguesDAO().getProductCatalogueJSONByID(pJsonFile);
+                String productJSONData =  mProductCataloguesDAO.getProductCatalogueJSONByID(pJsonFile);
                 productCatalogueCache.putToCache(pJsonFile, productJSONData);
                 return productJSONData;
             }else{
