@@ -9,7 +9,6 @@ import za.co.nb.productcatalogue.services.rest.resources.cache.ProductCatalogueC
 
 import javax.annotation.PostConstruct;
 import javax.annotation.security.PermitAll;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -18,7 +17,6 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
@@ -26,7 +24,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 @Path( "/producthierarchy" )
-@Stateless
 public class ProductCatalogue {
 
 	private final Log mLog = LogFactory.getLog(getClass());
@@ -35,9 +32,6 @@ public class ProductCatalogue {
     ProductCatalogueCache productCatalogueCache;
 
     private ProductCataloguesDAO productCataloguesDAO;
-
-    @Context
-    javax.ws.rs.core.Application app;
 
 
     @PostConstruct
@@ -140,23 +134,5 @@ public class ProductCatalogue {
     public Response getProductCatalogueBySelection( ProductIdentifiers identifiers ) throws Exception {
     	throw new Exception("This API has been deprecated");
 
-/*    	
-    	mLog.debug("Trace 1");
-    	
-    	Map<String,Object> result = new HashMap<String,Object>();
-
-    	for(String id: identifiers.getIdentifiers()){
-			mLog.debug("Retrieving productID >>" + id + "<<");
-			
-			String json = getProductCataloguesDAO().findProductDetailsJSONByID(id.toString());
-			if(!Strings.isEmpty(json)) {
-		    	mLog.debug("Trace 2");
-		    	
-				result.put(id, L.fromJson(json));
-			}
-		}
-        
-    	return Response.ok(L.toJson(result)).build();
-*/    	
     }
 }
