@@ -502,7 +502,12 @@
          <a:isComparable>false</a:isComparable>
          <a:value>true</a:value>
          <a:valueUnit>bool</a:valueUnit>
-      </a:productAttributes>     
+      </a:productAttributes>
+      <a:productAttributes>
+		<a:attributeType>string</a:attributeType>
+		<a:attributeName>EligibleApplicationStatus</a:attributeName>
+		<a:value>CANCELLED|INITIATED|DECLINED</a:value>	
+	  </a:productAttributes>     
    </a:productAttributeGroup>
      <a:productAttributeGroup>
         <a:attributeGroupName>CommunicationStrategyConfiguration</a:attributeGroupName>
@@ -524,6 +529,11 @@
          <a:attributeName>ComponentSupportsDeclineReasons</a:attributeName>
          <a:value>true</a:value>
       </a:productAttributes>
+      <a:productAttributes>
+		<a:attributeType>boolean</a:attributeType>	
+		<a:attributeName>EnforceApplicationStatusValidationRules</a:attributeName>
+		<a:value>true</a:value>	
+	  </a:productAttributes>
    </a:productAttributeGroup>
    <a:features>
       <a:featureIdentifier>1402</a:featureIdentifier>
@@ -1800,6 +1810,11 @@
             <a:attributeName>EnforceSingleOverdraftRule</a:attributeName>
             <a:value>true</a:value>
          </a:featureAttributes>
+         <a:featureAttributes>
+			<a:attributeType>boolean</a:attributeType>	
+			<a:attributeName>EnforceApplicationStatusValidationRules</a:attributeName>
+			<a:value>true</a:value>	
+	  	 </a:featureAttributes>
       </a:featureAttributeGroup>
       <a:featureAttributeGroup>
          <a:attributeGroupName>EligibilityRules</a:attributeGroupName>
@@ -1813,6 +1828,11 @@
             <a:attributeName>EligibleSegments</a:attributeName>
             <a:value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</a:value>
           </a:featureAttributes>
+          <a:featureAttributes>
+			<a:attributeType>string</a:attributeType>
+			<a:attributeName>EligibleApplicationStatus</a:attributeName>
+		    <a:value>CANCELLED|INITIATED|DECLINED</a:value>	
+	      </a:featureAttributes>
        </a:featureAttributeGroup>
    </a:features>
    <a:features>
