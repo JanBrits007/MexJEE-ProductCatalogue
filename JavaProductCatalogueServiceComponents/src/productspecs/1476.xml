@@ -215,6 +215,11 @@
          <attributeName>GNBAIntentToActivityMapping</attributeName>
          <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Product Setup|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|ActivateProductsGatherProductDetails=Customisation|FinalizeFrontOfficeInteraction=Customisation</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>requiresSourceEnhancedIncomeAndAffordabilityData</attributeName>
+         <value>true</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>coreProvisioningParameters</attributeGroupName>
@@ -435,6 +440,14 @@
           <attributeType>boolean</attributeType>
           <attributeName>EnforceAgeValidationRules</attributeName>
           <value>true</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>ProductOwnership</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OwnedBySegments</attributeName>
+         <value>200~201</value> <!-- Retail~PRB -->
       </productAttributes>
    </productAttributeGroup>
    <features>
