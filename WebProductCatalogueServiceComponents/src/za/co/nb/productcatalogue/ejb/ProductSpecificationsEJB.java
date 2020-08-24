@@ -204,7 +204,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             }
         }
         
-        if (substituteForIPSubnets != null) {
+        /**if (substituteForIPSubnets != null) {
             mLog.debug("Trace 8 >>" + substituteForIPSubnets + "<<");
 
             // Get the business case details.
@@ -221,7 +221,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
                 return getProductSpecificationXMLByID(substitutedProductID);
             }
-        }
+        }**/
 
         if (bankerWhitelist != null) {
             mLog.debug("Trace 12 >>" + bankerWhitelist + "<<");
