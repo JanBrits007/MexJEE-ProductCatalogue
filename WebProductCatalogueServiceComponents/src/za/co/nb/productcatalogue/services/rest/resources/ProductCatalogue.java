@@ -9,6 +9,7 @@ import za.co.nb.productcatalogue.services.rest.resources.cache.ProductCatalogueC
 
 import javax.annotation.PostConstruct;
 import javax.annotation.security.PermitAll;
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -24,6 +25,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 @Path( "/producthierarchy" )
+@Stateless
 public class ProductCatalogue {
 
 	private final Log mLog = LogFactory.getLog(getClass());
