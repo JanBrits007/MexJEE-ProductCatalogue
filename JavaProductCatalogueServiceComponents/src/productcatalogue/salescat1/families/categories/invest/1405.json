@@ -6,7 +6,9 @@
 		{
 		  "type": "InterestRate",
 		  "value": "%upperRateDec-1405%",
-		  "description": "%upperRate-1405%% pa"
+		  "description": "%upperRate-1405%% pa",
+		  "frequency": "M",
+          "period": "3,6,12,18,24,36,60"
 		}
 	  ],  
 	"specialFeature": "1 - 60 Months",
@@ -127,7 +129,7 @@
 		"description": "No"
 	}],
 	"eligibilityRules": [{
-		"attributeName": "Period",
+		"attributeName": "Access",
 		"attributeType": "EligibilityRule",
 		"description": "",
 		"maxValue": "11",
@@ -135,7 +137,7 @@
 		"valueUnit": "month"
 	},
 	{
-		"attributeName": "Period",
+		"attributeName": "Access",
 		"attributeType": "EligibilityRule",
 		"description": "",
 		"maxValue": "60",
@@ -160,7 +162,7 @@
 	},
 	{
 		"attributeType": "EligibilityRule",
-		"attributeName": "InvestMonthly",
+		"attributeName": "Additional deposit",
 		"value": "No"
 	}],
 	"lifeCycleStatus": "AVAILABLE",
