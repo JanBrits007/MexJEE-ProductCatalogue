@@ -1,36 +1,24 @@
 <product 
     xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-    <productIdentifier>1490</productIdentifier>
-    <name>The American Express Centurion Card</name>
+    <productIdentifier>1048</productIdentifier>
+    <name>Go Banking Silver Credit</name>
     <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
         <productAttributes>
             <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfIDClauseCard</attributeName>
+            <attributeName>ProofOfBankAccountClauseCard</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
         <productAttributes>
             <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfAssetsAndLiabilitiesClauseCard</attributeName>
+            <attributeName>ProofOfIdentificationClauseCard</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
         <productAttributes>
             <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfPayslipClauseCard</attributeName>
-            <isComparable>false</isComparable>
-            <valueUnit>bool</valueUnit>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfBankStatementClauseCard</attributeName>
-            <isComparable>false</isComparable>
-            <valueUnit>bool</valueUnit>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfSelfAndCompanyBioClauseCard</attributeName>
+            <attributeName>ProofOfIncomeClauseCard</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
         </productAttributes>
@@ -48,6 +36,24 @@
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>EligibilityRules</attributeGroupName>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>Age</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>18</minValue>
+            <maxValue>999</maxValue>
+            <valueUnit>year</valueUnit>
+            <description>be 18 years or older.</description>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>Income</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>60000</minValue>
+            <maxValue>99999999</maxValue>
+            <valueUnit>ZAR</valueUnit>
+            <description>earn more than R200 000 a year; and</description>
+        </productAttributes>
         <productAttributes>
             <attributeType>EligibilityRule</attributeType>
             <attributeName>NaturalPerson</attributeName>
@@ -82,7 +88,7 @@
             <isComparable>false</isComparable>
             <value>true</value>
             <valueUnit>bool</valueUnit>
-            <description>on invitation only</description>
+            <description> be a South African resident.</description>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -251,27 +257,17 @@
         <productAttributes>
             <attributeType>bool</attributeType>
             <attributeName>FinalCaseQualityAssuranceRequired</attributeName>
-            <value>false</value>
+            <value>true</value>
         </productAttributes>
         <productAttributes>
             <attributeType>bool</attributeType>
             <attributeName>FinalCaseQualityAssuranceSignatureTypeCheck</attributeName>
-            <value>false</value>
+            <value>true</value>
         </productAttributes>
         <productAttributes>
             <attributeType>bool</attributeType>
             <attributeName>FinalCaseQualityAssuranceTeam</attributeName>
             <value>CreditCardFinalAssessmentVerificationTeam</value>
-        </productAttributes>
-        <productAttributes>
-			<attributeType>int</attributeType>
-			<attributeName>CardExposureContractType</attributeName>
-			<value>1001;1347</value>
-		</productAttributes>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>CAMSCashLimtiPercentage</attributeName>
-            <value>100</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -339,7 +335,7 @@
         </productAttributes>
         <productAttributes>
             <attributeName>maximumCreditAvaliableZAR</attributeName>
-            <value>10000000</value>
+            <value>200000</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -360,82 +356,12 @@
         <productAttributes>
             <attributeType>int</attributeType>
             <attributeName>CommunicationSystem</attributeName>
-            <value>SpecCom</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>boolean</attributeType>
-            <attributeName>staffComssOnly</attributeName>
-            <value>true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>staffCommsOnlyEmailAddress</attributeName>
-            <value>americanexpress@nedbank.co.za</value>
+            <value>GenCom</value>
         </productAttributes>
         <productAttributes>
             <attributeType>int</attributeType>
-            <attributeName>weclomeComms</attributeName>
-            <value>EMAIL</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>declineComms</attributeName>
-            <value>EMAIL</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>reminderCommsPreOffer</attributeName>
-            <value>EMAIL</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>reminderCommsPostOffer</attributeName>
-            <value>EMAIL</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>manualAssessmentComms</attributeName>
-            <value>EMAIL</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>verificationComms</attributeName>
-            <value>EMAIL</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>captivaRejectedDocComms</attributeName>
-            <value>EMAIL</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>lowerOfferComms</attributeName>
-            <value>EMAIL</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>appealComms</attributeName>
-            <value>EMAIL</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>fraudComms</attributeName>
-            <value>EMAIL</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>docsReceivedComms</attributeName>
-            <value>EMAIL</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>pendOrDocsRequiredComms</attributeName>
-            <value>EMAIL</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>cancelCaseComms</attributeName>
-            <value>EMAIL</value>
+            <attributeName>productType</attributeName>
+            <value>EMAILSMS</value>
         </productAttributes>
     </productAttributeGroup>
     <features>
@@ -603,9 +529,9 @@
     <features>
         <featureIdentifier>1334</featureIdentifier>
         <name>Membership Rewards™</name>
-        <mandatory>true</mandatory>
+        <mandatory>false</mandatory>
         <preSelected>true</preSelected>
-        <shortDescription>As part of your American Express Platinum Card, Memebership Rewards™ are automatically included at no extra cost!</shortDescription>
+        <shortDescription>Earn points on virtually all the spend on your card and enjoy a range of fantastic rewards.</shortDescription>
         <description>Please note you will receive a Membership Rewards™ Redemption card in order to spend you rewards.</description>
         <featureGrouping>
             <featureGroupName>Loyalty</featureGroupName>
@@ -616,9 +542,9 @@
         <featurePricing>
             <fee>
                 <type>AdminFee</type>
-                <description>R60 per month</description>
+                <description>R24 per month</description>
                 <currency>ZAR</currency>
-                <amount>60</amount>
+                <amount>24</amount>
                 <frequency>Monthly</frequency>
             </fee>
         </featurePricing>
@@ -823,135 +749,6 @@
                 <attributeName>CAMSSolicitationCode</attributeName>
                 <valueUnit>PER</valueUnit>
                 <value>8079</value>
-            </featureAttributes>
-        </featureAttributeGroup>
-    </features>
-    <features>
-        <featureIdentifier>9999</featureIdentifier>
-        <name>Priority Pass</name>
-        <mandatory>true</mandatory>
-        <preSelected>true</preSelected>
-        <shortDescription>As part of your travel privileges, we will issue you with a Priority Pass Card, which allows you complimentary  access to over 1000 Priority Pass Lounges worldwide.</shortDescription>
-        <description>As part of your travel privileges, we will issue you with a Priority Pass Card, which allows you complimentary  access to over 1000 Priority Pass Lounges worldwide.</description>
-        <featureGrouping>
-            <featureGroupName>Loyalty</featureGroupName>
-            <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-        </featureGrouping>
-        <featureType>BoltOn</featureType>
-        <referenceProductID>-1</referenceProductID>
-        <featureFulfilment>
-            <channel>selfServiceWeb</channel>
-            <fulfilmentType>setting</fulfilmentType>
-            <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-            <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-        </featureFulfilment>
-        <featureFulfilment>
-            <channel>staffAssisted</channel>
-            <fulfilmentType>setting</fulfilmentType>
-            <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-            <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-        </featureFulfilment>
-        <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-        <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-        <featureDisplayPosition>VAS</featureDisplayPosition>
-        <featureAttributeGroup>
-            <attributeGroupName>SystemRelated</attributeGroupName>
-            <featureAttributes>
-                <attributeType>Flag</attributeType>
-                <attributeName>StraightThroughProcess</attributeName>
-                <value>True</value>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
-            <featureAttributes>
-                <attributeType>type</attributeType>
-                <attributeName>name</attributeName>
-                <minValue>1</minValue>
-                <maxValue>2</maxValue>
-                <valueUnit>text</valueUnit>
-                <value>some value</value>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSProdCd</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>CRD</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSCtlAdId</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>C1</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSRelCd</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>PRI</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSSCtlSlTnPgCd</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>6563</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSCredLnAmt</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>0</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSPayMethod</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>MAN</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSPlasticType</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>PP5</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSCrdStock</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>AP3</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSActType</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>PRI</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSATrRegistrationNbr</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>194905</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>provisionInBranch</attributeName>
-                <valueUnit>boolean</valueUnit>
-                <value>false</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSLangCd</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>ENG</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSSolicitationCode</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>8521</value>
             </featureAttributes>
         </featureAttributeGroup>
     </features>
