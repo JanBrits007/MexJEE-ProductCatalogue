@@ -737,7 +737,55 @@
                   <value>300000</value>
                </productAttributes>
             </productAttributeGroup>
-            <features>
+            <productAttributeGroup>
+               <attributeGroupName>
+                  caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal
+               </attributeGroupName>
+               <productAttributes>
+                  <attributeType>string</attributeType>
+                  <attributeName>subYourApplicationHeader</attributeName>
+               </productAttributes>
+            </productAttributeGroup>
+            <productAttributeGroup>
+               <attributeGroupName>
+                  clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal
+               </attributeGroupName>
+               <productAttributes>
+                  <attributeType>string</attributeType>
+                  <attributeName>subGenericDetails</attributeName>
+               </productAttributes>
+               <productAttributes>
+                  <attributeType>string</attributeType>
+                  <attributeName>subClientsRightsAndObligations</attributeName>
+               </productAttributes>
+               <productAttributes>
+                  <attributeType>string</attributeType>
+                  <attributeName>subGenericTCForCreditProducts</attributeName>
+               </productAttributes>
+               <productAttributes>
+                  <attributeType>string</attributeType>
+                  <attributeName>subGenericImpConfirmation</attributeName>
+               </productAttributes>
+               <productAttributes>
+                  <attributeType>string</attributeType>
+                  <attributeName>subGenericSignatures</attributeName>
+               </productAttributes>
+            </productAttributeGroup>
+            <productAttributeGroup>
+               <attributeGroupName>
+                  productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal
+               </attributeGroupName>
+               <productAttributes>
+                  <attributeType>string</attributeType>
+                  <attributeName>subPersonalLoan|ContractComponentProductType=1146</attributeName>
+               </productAttributes>
+               <productAttributes>
+                  <attributeType>string</attributeType>
+                  <attributeName>subPLTC|ContractComponentProductType=1146</attributeName>
+               </productAttributes>
+            </productAttributeGroup>
+
+   <features>
                <featureIdentifier>1446</featureIdentifier>
                <name>Credit Life</name>
                <mandatory>false</mandatory>
@@ -860,7 +908,14 @@
                      <attributeName>NedbankInsurancePersonalProtectionPlanBrochureUniversal</attributeName>
                   </featureAttributes>
                </featureAttributeGroup>
-            </features>
+               <featureAttributeGroup>
+                  <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+                  <featureAttributes>
+                     <attributeType>string</attributeType>
+                     <attributeName>subCreditLifeInsurance|ContractComponentProductType=1446</attributeName>
+                  </featureAttributes>
+               </featureAttributeGroup>
+   </features>
             <features>
                <featureIdentifier>1447</featureIdentifier>
                <name>Own Credit Life</name>
