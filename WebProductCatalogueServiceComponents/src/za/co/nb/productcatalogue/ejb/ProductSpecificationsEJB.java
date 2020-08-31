@@ -196,7 +196,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             mLog.debug("Trace 9 >>" + caseHeader.getInitiatingChannelID().toLowerCase() + "<<");
 
             if ((caseHeader.getInitiatingChannelID() != null &&
-                    !caseHeader.getInitiatingChannelID().trim().isEmpty()) &&
+                    !caseHeader.getInitiatingChannelID().trim().isEmpty() && channelIDWhitelist != null && !channelIDWhitelist.isEmpty())  &&
                     channelIDWhitelist.contains(caseHeader.getInitiatingChannelID().toLowerCase())) {
                 // We must substitute.
                 mLog.debug("Trace 10 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + substitutedProductID + "<< for channel >>" + caseHeader.getInitiatingChannelID() + "<<");
