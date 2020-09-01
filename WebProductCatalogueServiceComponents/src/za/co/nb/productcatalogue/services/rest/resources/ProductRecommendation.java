@@ -65,7 +65,7 @@ public class ProductRecommendation {
             } catch (Exception e) {
                 mLog.debug("Trace 3: Error finding product recommendations");
 
-                resultSet.setResultCode("R01");
+                resultSet.setResultCode("R02");
 
                 StringWriter sw = new StringWriter();
                 PrintWriter pw = new PrintWriter(sw);
@@ -74,7 +74,7 @@ public class ProductRecommendation {
             }
         }
         else{
-            resultSet.setResultCode("R01");
+            resultSet.setResultCode("R03");
             resultSet.setResultDescription("INVALID REQUEST");
             productRecommendationResponse.setResultSet(resultSet);
         }
