@@ -6,7 +6,7 @@
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ApplicationDetails|ng-component=ng-application-details~ProceduralStepName=Application details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+         <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Application details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=BankDetailsComponent~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -24,14 +24,14 @@
       <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>FinancialDetails|ng-component=ng-application-details~ProceduralStepName=Financial details~displaySummary=true~child-ng-components=ng-individual-income-details~ActiveOnInitialWorkItemExecution=true</attributeName>
+         <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~displaySummary=true~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OverdraftDetailsNewFlow|ng-component=ng-overdraft-details~ProceduralStepName=Overdraft details~ZOrder=200~ContractComponentProductType=1014</attributeName>
+         <attributeName>OverdraftDetailsNewFlow|ng-component=OverdraftDetailsWidgetComponent~ProceduralStepName=Overdraft details~ZOrder=200~ContractComponentProductType=1014</attributeName>
       </productAttributes>
        <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -74,15 +74,15 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>GenericCapabilitySelection|ng-component=ng-Generic-Capability-Selection~child-ng-components=ng-CurrentAccount-Generic-capability-slection~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+         <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~child-ng-components=GenericCapabilitySelectionTransactionalProductComponent~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSelection|ng-component=ng-Offer-Selection~ProceduralStepName=Offer~ZOrder=80</attributeName>
+         <attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=Offer~ZOrder=80</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSummery|ng-component=ng-Offer-Summery~child-ng-components=ng-CurrentAccount-Offer-Summery~ProceduralStepName=Offer~ZOrder=70</attributeName>
+         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryTransactionalProductComponent~ProceduralStepName=Offer~ZOrder=70</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -97,30 +97,30 @@
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|ng-component=ng-additional-personal-information~ProceduralStepName=Personal information~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Personal information~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ComplianceInformation|ng-component=ng-compliance-information~ProceduralStepName=Compliance information~ZOrder=90</attributeName>
+         <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance information~ZOrder=90</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>EmploymentBasic|ng-component=ng-employment-information~ProceduralStepName=Employment details~ZOrder=80</attributeName>
+         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~ProceduralStepName=Employment details~ZOrder=80</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisRecordOfAdvice|ng-component=ng-fais-record-of-advice~ProceduralStepName=FAIS record of advice~ZOrder=150</attributeName>
+         <attributeName>FaisRecordOfAdvice|ng-component=ng-fais-record-of-advice~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=CallCentreStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisDecloration|ng-component=ng-fais-decloration~ProceduralStepName=FAIS decloration~ZOrder=140</attributeName>
+         <attributeName>FaisDecloration|ng-component=ng-fais-decloration~ProceduralStepName=FAIS decloration~ZOrder=140~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>VisibleArrangementSubmissionSalesMilestone|ng-component=ng-visible-arrangement-submission-sales-milestone~ProceduralStepName=CMS details~ZOrder=130</attributeName>
+         <attributeName>VisibleArrangementSubmissionSalesMilestone|ng-component=ng-visible-arrangement-submission-sales-milestone~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -455,7 +455,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>DigitalActivation|ng-component=ng-digital-activation~ProceduralStepName=Digital activation~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+         <attributeName>DigitalActivation|ng-component=ng-digital-activation~ProceduralStepName=Digital activation~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <!--consider moving this to client level when we move to case manager pattern-->
@@ -464,7 +464,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>AccurateInformationProvidedConfirmation|ng-component=ng-accurate-information-provided-confirmation~ProceduralStepName=Confirmation~ZOrder=60ContractComponentProductType=6354</attributeName>
+         <attributeName>AccurateInformationProvidedConfirmation|ng-component=ng-accurate-information-provided-confirmation~ProceduralStepName=Confirmation~ZOrder=60~ContractComponentProductType=6354</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -659,7 +659,7 @@
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>VisibleArrangementSubmissionSalesMilestone|ng-component=ng-visible-arrangement-submission-sales-milestone~ProceduralStepName=CMS details~ZOrder=130</attributeName>
+            <attributeName>VisibleArrangementSubmissionSalesMilestone|ng-component=ng-visible-arrangement-submission-sales-milestone~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -716,11 +716,11 @@
       <featureAttributeGroup>
         <attributeGroupName>productInformationRequirement_QualityAssuranceVerification</attributeGroupName>
         <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType> 
+          <attributeType>productInformationRequirement</attributeType>
           <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
         </featureAttributes>
         <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType> 
+          <attributeType>productInformationRequirement</attributeType>
           <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
@@ -1050,7 +1050,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServicesforYourOffer|ng-component=ng-Value-Added-Services-for-Your-Offer~child-ng-components=ng-My-Pocket-Value-Added-Service~ProceduralStepName=Offer~ZOrder=80</attributeName>
+          <attributeName>ValueAddedServicesforYourOffer|ng-component=ValueAddedServicesWidgetComponent~child-ng-components=ng-My-Pocket-Value-Added-Service~ProceduralStepName=Offer~ZOrder=80</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
    </features>
@@ -2030,7 +2030,7 @@
       <featureIdentifier>1386</featureIdentifier>
       <name>Gold Cheque Card</name>
       <mandatory>false</mandatory>
-      <preSelected>false</preSelected>
+      <preSelected>true</preSelected>
       <shortDescription>Short description of feature</shortDescription>
       <description>Detailed description of feature</description>
       <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>

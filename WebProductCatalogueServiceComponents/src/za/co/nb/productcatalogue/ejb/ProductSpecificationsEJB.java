@@ -133,7 +133,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         String bankerWhitelist = null;
         String channelWhitelist = null;
         String substituteForIPSubnets = null;
-
+        List<String> channelIDWhitelist = new ArrayList<>();
 
         // Now check if there are substitution rules.
         for (ProductAttributeGroupType attributeGroup : productSpec.getProductAttributeGroup()) {
@@ -156,6 +156,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                         mLog.debug("Trace 6.1 >>SubstituteForChannelIDs<<,>>" + attribute.getValue() + "<<");
 
                         channelWhitelist = attribute.getValue();
+                        channelIDWhitelist.add(channelWhitelist);
                     } else if (attribute.getAttributeName().equalsIgnoreCase("SubstituteForProductID")) {
                         mLog.debug("Trace 6.2 >>SubstituteForProductID<<,>>" + attribute.getValue() + "<<");
 
@@ -195,8 +196,8 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             mLog.debug("Trace 9 >>" + caseHeader.getInitiatingChannelID().toLowerCase() + "<<");
 
             if ((caseHeader.getInitiatingChannelID() != null &&
-                    !caseHeader.getInitiatingChannelID().trim().isEmpty()) &&
-                    channelWhitelist.toLowerCase().contains(caseHeader.getInitiatingChannelID().toLowerCase())) {
+                    !caseHeader.getInitiatingChannelID().trim().isEmpty() && channelIDWhitelist != null && !channelIDWhitelist.isEmpty())  &&
+                    channelIDWhitelist.contains(caseHeader.getInitiatingChannelID().toLowerCase())) {
                 // We must substitute.
                 mLog.debug("Trace 10 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + substitutedProductID + "<< for channel >>" + caseHeader.getInitiatingChannelID() + "<<");
 
