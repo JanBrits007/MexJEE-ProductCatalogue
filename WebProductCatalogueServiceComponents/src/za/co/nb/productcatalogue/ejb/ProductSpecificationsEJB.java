@@ -29,6 +29,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
@@ -156,7 +157,8 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                         mLog.debug("Trace 6.1 >>SubstituteForChannelIDs<<,>>" + attribute.getValue() + "<<");
 
                         channelWhitelist = attribute.getValue();
-                        channelIDWhitelist.add(channelWhitelist);
+                        String[] channelID = channelWhitelist.split("\\|");
+                        channelIDWhitelist.addAll(Arrays.asList(channelID));
                     } else if (attribute.getAttributeName().equalsIgnoreCase("SubstituteForProductID")) {
                         mLog.debug("Trace 6.2 >>SubstituteForProductID<<,>>" + attribute.getValue() + "<<");
 
