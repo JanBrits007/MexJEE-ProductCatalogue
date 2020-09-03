@@ -86,10 +86,20 @@
            <value>InvestmentJOCOD</value>
         </productAttributes>
       	<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>frontOfficeIntentSequence</attributeName>
-			<value>GenerateOfferGatherProductDetails|FinalizeFrontOfficeInteraction</value>
-		</productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence</attributeName>
+            <value>PartyHealthCheck|GenerateOfferGatherProductDetails|FinalizeFrontOfficeInteraction</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence_Unhealthy</attributeName>
+            <value>PartyHealthCheck|GenerateOfferGatherProductDetailsUnhealthy|FinalizeFrontOfficeInteraction</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence_Undetermined</attributeName>
+            <value>PartyHealthCheck|GenerateOfferGatherProductDetailsUndetermined|FinalizeFrontOfficeInteraction</value>
+        </productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeIntentSequenceStaff</attributeName>
