@@ -445,7 +445,6 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     }
 
     public static void main(String[] args) {
-        System.out.println("Trace 1");
 
         try {
             ProductSpecificationsEJB dao = new ProductSpecificationsEJB();
