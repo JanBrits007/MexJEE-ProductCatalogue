@@ -77,7 +77,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>DocTemplateName</attributeType>
-         <attributeName>ProductContract</attributeName>
+         <attributeName>TermsAndConditionsProfOne</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -198,13 +198,33 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>breadcrumbSteps</attributeName>
-         <value>Authenticate|Product Setup|About You|Credit Info|Finalisation|Customisation</value>
+         <value>Authenticate|Product Setup|About You|Finalisation|Customisation</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
          <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Product Setup|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|ActivateProductsGatherProductDetails=Customisation|FinalizeFrontOfficeInteraction=Customisation</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>requiresSourceEnhancedIncomeAndAffordabilityData</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+            <attributeType>String</attributeType>
+            <attributeName>HandleProvisioningFailureTeamName</attributeName>
+            <value>Eclipsewarroomsupport@Nedbank.co.za</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>String</attributeType>
+            <attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
+            <value>Eclipsewarroomsupport@Nedbank.co.za</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>String</attributeType>
+            <attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
+            <value>Eclipsewarroomsupport@Nedbank.co.za</value>
+        </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>coreProvisioningParameters</attributeGroupName>
@@ -415,6 +435,19 @@
       </productAttributes> 
    </productAttributeGroup>
    <productAttributeGroup>
+      <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>CommunicationSystem</attributeName>
+         <value>GenCom</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>productType</attributeName>
+         <value>EMAILSMS</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>DecisioningControl</attributeGroupName>
       <productAttributes>
          <attributeType>boolean</attributeType>
@@ -425,6 +458,14 @@
           <attributeType>boolean</attributeType>
           <attributeName>EnforceAgeValidationRules</attributeName>
           <value>true</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>ProductOwnership</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OwnedBySegments</attributeName>
+         <value>200~201</value> <!-- Retail~PRB -->
       </productAttributes>
    </productAttributeGroup>
    <features>
@@ -778,5 +819,239 @@
             <value>7016</value>
         </featureAttributes>
       </featureAttributeGroup>
-   </features>   
+   </features>
+   <features>
+      <featureIdentifier>1374</featureIdentifier>
+      <name>eNotes</name>
+      <mandatory>false</mandatory>
+      <preSelected>true</preSelected>
+      <shortDescription>Keep track of your finances with the eNotes SMS notifications, anytime, anywhere. eNotes keeps you informed about all transactions on your account.</shortDescription>
+      <description>Detailed description of feature</description>
+      <featureGrouping>
+         <featureGroupName>Loyalty</featureGroupName>
+         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
+      </featureGrouping>
+      <featureType>BoltOn</featureType>
+      <referenceProductID>-1</referenceProductID>
+      <featurePricing>
+         <fee>
+            <type>AdminFee</type>
+            <description>R0.45c per sms</description>
+            <currency>ZAR</currency>
+            <amount>0.45</amount>
+            <frequency>Transactional</frequency>
+         </fee>
+      </featurePricing>
+      <featureFulfilment>
+         <channel>selfServiceWeb</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureFulfilment>
+         <channel>staffAssisted</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+      <featureDisplayPosition>offer</featureDisplayPosition>
+      <featureAttributeGroup>
+         <attributeGroupName>SystemRelated</attributeGroupName>
+         <featureAttributes>
+            <attributeType>Flag</attributeType>
+            <attributeName>StraightThroughProcess</attributeName>
+            <value>True</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>FeatureCode</attributeName>
+            <valueUnit>string</valueUnit>
+            <value>ThisisthesFeaturecode</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>provisionInBranch</attributeName>
+            <valueUnit>boolean</valueUnit>
+            <value>false</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>legacyProductID</attributeName>
+            <valueUnit>string</valueUnit>
+            <value>1179</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+         <featureAttributes>
+            <attributeType>type</attributeType>
+            <attributeName>name</attributeName>
+            <minValue>1</minValue>
+            <maxValue>2</maxValue>
+            <valueUnit>text</valueUnit>
+            <value>some value</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
+   <features>
+      <featureIdentifier>1008</featureIdentifier>
+      <name>No Funds Alert</name>
+      <mandatory>false</mandatory>
+      <preSelected>true</preSelected>
+      <shortDescription>Electronic notifications when you have insufficient funds for an attempted debit order</shortDescription>
+      <description>Detailed description of feature</description>
+      <featureGrouping>
+         <featureGroupName>Loyalty</featureGroupName>
+         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
+      </featureGrouping>
+      <featureType>BoltOn</featureType>
+      <referenceProductID>-1</referenceProductID>
+      <featurePricing>
+         <fee>
+            <type>AdminFee</type>
+            <description>R13 per sms</description>
+            <currency>ZAR</currency>
+            <amount>13</amount>
+            <frequency>Transactional</frequency>
+         </fee>
+      </featurePricing>
+      <featureFulfilment>
+         <channel>selfServiceWeb</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureFulfilment>
+         <channel>staffAssisted</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+      <featureDisplayPosition>offer</featureDisplayPosition>
+      <featureAttributeGroup>
+         <attributeGroupName>SystemRelated</attributeGroupName>
+         <featureAttributes>
+            <attributeType>Flag</attributeType>
+            <attributeName>StraightThroughProcess</attributeName>
+            <value>True</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>FeatureCode</attributeName>
+            <valueUnit>string</valueUnit>
+            <value>ThisisthesFeaturecode</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>provisionInBranch</attributeName>
+            <valueUnit>boolean</valueUnit>
+            <value>false</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>legacyProductID</attributeName>
+            <valueUnit>string</valueUnit>
+            <value>1213</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+         <featureAttributes>
+            <attributeType>type</attributeType>
+            <attributeName>name</attributeName>
+            <minValue>1</minValue>
+            <maxValue>2</maxValue>
+            <valueUnit>text</valueUnit>
+            <value>some value</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
+   <features>
+      <featureIdentifier>1454</featureIdentifier>
+      <name>Greenbacks Rewards membership</name>
+      <mandatory>false</mandatory>
+      <preSelected>true</preSelected>
+      <shortDescription>Nedbank Greenbacks Rewards membership</shortDescription>
+      <description>Detailed description of feature</description>
+      <featureGrouping>
+         <featureGroupName>Loyalty</featureGroupName>
+         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
+      </featureGrouping>
+      <featureType>BoltOn</featureType>
+      <referenceProductID>-1</referenceProductID>
+      <featurePricing>
+         <fee>
+            <type>AdminFee</type>
+            <description>R23 per month</description>
+            <currency>ZAR</currency>
+            <amount>23</amount>
+            <frequency>Monthly</frequency>
+         </fee>
+      </featurePricing>
+      <featureFulfilment>
+         <channel>selfServiceWeb</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureFulfilment>
+         <channel>staffAssisted</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+      <featureDisplayPosition>offer</featureDisplayPosition>
+      <featureAttributeGroup>
+         <attributeGroupName>SystemRelated</attributeGroupName>
+         <featureAttributes>
+            <attributeType>Flag</attributeType>
+            <attributeName>StraightThroughProcess</attributeName>
+            <value>True</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>FeatureCode</attributeName>
+            <valueUnit>string</valueUnit>
+            <value>ThisisthesFeaturecode</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>provisionInBranch</attributeName>
+            <valueUnit>boolean</valueUnit>
+            <value>false</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>legacyProductID</attributeName>
+            <valueUnit>string</valueUnit>
+            <value />
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+         <featureAttributes>
+            <attributeType>type</attributeType>
+            <attributeName>name</attributeName>
+            <minValue>1</minValue>
+            <maxValue>2</maxValue>
+            <valueUnit>text</valueUnit>
+            <value>some value</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>    
 </product>

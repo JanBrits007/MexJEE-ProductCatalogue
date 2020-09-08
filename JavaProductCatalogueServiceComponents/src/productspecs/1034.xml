@@ -152,9 +152,13 @@
 	<productAttributeGroup>
 		<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
 		<productAttributes>
-			<attributeType>DocumentDescription</attributeType>
-			<attributeName>Contract|nedbank-commercial-release/CreditCardProductContract|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
-		</productAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>Contract|nedbank-commercial-release/CreditCardProductContract|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>DocumentExclusion</attributeType>
+            <attributeName>Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
+        </productAttributes>
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
 			<attributeName>Download</attributeName>
@@ -188,6 +192,11 @@
 			<attributeName>requiresSourcePaylslip</attributeName>
 			<value>true</value>
 		</productAttributes>
+		<productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>requiresSourceIncomeAndAffordabilityData</attributeName>
+            <value>true</value>
+        </productAttributes>
 		<productAttributes>
 			<attributeType>int</attributeType>
 			<attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
@@ -273,6 +282,26 @@
 			<attributeName>BPMCARDOFFER</attributeName>
 			<value>BPMCARDROLE</value>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CardExposureContractType</attributeName>
+			<value>1001;1347</value>
+		</productAttributes>
+		<productAttributes>
+         	<attributeType>string</attributeType>
+         	<attributeName>HandleProvisioningFailureTeamName</attributeName>
+         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
+      	</productAttributes>
+      	<productAttributes>
+         	<attributeType>int</attributeType>
+         	<attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
+         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
+      	</productAttributes>
+     	<productAttributes>
+         	<attributeType>int</attributeType>
+         	<attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
+         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
+        </productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>productCodeMappings</attributeGroupName><!-- Are these required -->
@@ -350,6 +379,19 @@
 			<attributeType>int</attributeType>
 			<attributeName>productType</attributeName>
 			<value>EMAILSMS</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>DecisioningControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>enhanceActivitiesWithTeamAllocations</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>checkStaffOnMDM</attributeName>
+			<value>true</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<features>
@@ -442,6 +484,12 @@
 				<attributeName>CAMSQpcInd</attributeName>
 				<valueUnit>ENG</valueUnit>
 				<value>Y</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSCashLimitPercentage</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>100</value>
 			</featureAttributes>
 		</featureAttributeGroup>
 		<featureAttributeGroup>

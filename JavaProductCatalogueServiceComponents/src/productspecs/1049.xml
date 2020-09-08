@@ -1,7 +1,7 @@
 <product 
     xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1049</productIdentifier>
-    <name>GO BANKING GOLD CREDIT T1</name>
+    <name>Go Banking Gold Credit</name>
     <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
         <productAttributes>
@@ -165,7 +165,11 @@
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Contract|nedbank-commercial-release/CreditCardProductContract|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
+            <attributeName>Contract|nedbank-commercial-release/CreditCardProductContract|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>DocumentExclusion</attributeType>
+            <attributeName>Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -198,6 +202,11 @@
         <productAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>requiresSourcePaylslip</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>requiresSourceIncomeAndAffordabilityData</attributeName>
             <value>true</value>
         </productAttributes>
         <productAttributes>
@@ -284,6 +293,26 @@
             <attributeType>int</attributeType>
             <attributeName>BPMCARDOFFER</attributeName>
             <value>BPMCARDROLE</value>
+        </productAttributes>
+        <productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CardExposureContractType</attributeName>
+			<value>1001;1347</value>
+		</productAttributes>
+        <productAttributes>
+         	<attributeType>string</attributeType>
+         	<attributeName>HandleProvisioningFailureTeamName</attributeName>
+         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
+      	</productAttributes>
+      	<productAttributes>
+         	<attributeType>int</attributeType>
+         	<attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
+         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
+      	</productAttributes>
+     	<productAttributes>
+         	<attributeType>int</attributeType>
+         	<attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
+         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -380,6 +409,19 @@
             <value>EMAILSMS</value>
         </productAttributes>
     </productAttributeGroup>
+    <productAttributeGroup>
+		<attributeGroupName>DecisioningControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>enhanceActivitiesWithTeamAllocations</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>checkStaffOnMDM</attributeName>
+			<value>true</value>
+		</productAttributes>
+	</productAttributeGroup>
     <features>
         <featureIdentifier>1028</featureIdentifier>
         <name>Plastic Card</name>
@@ -471,6 +513,12 @@
                 <valueUnit>ENG</valueUnit>
                 <value>Y</value>
             </featureAttributes>
+            <featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSCashLimitPercentage</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>100</value>
+			</featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>
             <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>

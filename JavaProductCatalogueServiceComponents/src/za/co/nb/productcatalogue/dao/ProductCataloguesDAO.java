@@ -43,15 +43,15 @@ public class ProductCataloguesDAO extends AbstractProductCatalogueDAO {
     	try {
     		String hierarchyJSONString = "\"%Dec%4.95%Dec%\"";
     		
-    		System.out.println(hierarchyJSONString);
+    		//System.out.println(hierarchyJSONString);
     		
 			hierarchyJSONString = hierarchyJSONString.replaceAll("\"\\%Dec\\%", "");
 
-    		System.out.println(hierarchyJSONString);
+    		//System.out.println(hierarchyJSONString);
 
 			hierarchyJSONString = hierarchyJSONString.replaceAll("\\%Dec\\%\"", "");
 
-    		System.out.println(hierarchyJSONString);
+    		//System.out.println(hierarchyJSONString);
     		
 /*    		
 			String hierarchyData = dao.readProductHierarchyFromResourceFile("SALESCAT1BaseRateTest");

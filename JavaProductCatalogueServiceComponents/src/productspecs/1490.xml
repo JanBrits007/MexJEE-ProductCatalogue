@@ -148,7 +148,11 @@
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Contract|nedbank-commercial-release/CreditCardProductContract|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
+            <attributeName>Contract|nedbank-commercial-release/CreditCardProductContract|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>DocumentExclusion</attributeType>
+            <attributeName>Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -181,6 +185,11 @@
         <productAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>requiresSourcePaylslip</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>requiresSourceIncomeAndAffordabilityData</attributeName>
             <value>true</value>
         </productAttributes>
         <productAttributes>
@@ -262,6 +271,26 @@
             <attributeType>bool</attributeType>
             <attributeName>FinalCaseQualityAssuranceTeam</attributeName>
             <value>CreditCardFinalAssessmentVerificationTeam</value>
+        </productAttributes>
+        <productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CardExposureContractType</attributeName>
+			<value>1001;1347</value>
+		</productAttributes>
+        <productAttributes>
+         	<attributeType>string</attributeType>
+         	<attributeName>HandleProvisioningFailureTeamName</attributeName>
+         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
+      	</productAttributes>
+      	<productAttributes>
+         	<attributeType>int</attributeType>
+         	<attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
+         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
+      	</productAttributes>
+     	<productAttributes>
+         	<attributeType>int</attributeType>
+         	<attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
+         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -350,14 +379,97 @@
         <productAttributes>
             <attributeType>int</attributeType>
             <attributeName>CommunicationSystem</attributeName>
-            <value>GenCom</value>
+            <value>SpecCom</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>staffComssOnly</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>staffCommsOnlyEmailAddress</attributeName>
+            <value>americanexpress@nedbank.co.za</value>
         </productAttributes>
         <productAttributes>
             <attributeType>int</attributeType>
-            <attributeName>productType</attributeName>
-            <value>EMAILSMS</value>
+            <attributeName>weclomeComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>declineComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>reminderCommsPreOffer</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>reminderCommsPostOffer</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>manualAssessmentComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>verificationComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>captivaRejectedDocComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>lowerOfferComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>appealComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>fraudComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>docsReceivedComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>pendOrDocsRequiredComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>cancelCaseComms</attributeName>
+            <value>EMAIL</value>
         </productAttributes>
     </productAttributeGroup>
+    <productAttributeGroup>
+		<attributeGroupName>DecisioningControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>enhanceActivitiesWithTeamAllocations</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>checkStaffOnMDM</attributeName>
+			<value>true</value>
+		</productAttributes>
+	</productAttributeGroup>
     <features>
         <featureIdentifier>1028</featureIdentifier>
         <name>Plastic Card</name>
@@ -449,6 +561,12 @@
                 <valueUnit>ENG</valueUnit>
                 <value>Y</value>
             </featureAttributes>
+            <featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSCashLimitPercentage</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>100</value>
+			</featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>
             <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>

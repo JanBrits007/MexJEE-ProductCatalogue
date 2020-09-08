@@ -338,6 +338,11 @@
          <attributeName>riskAnalysisMechanism</attributeName>
          <value>automated</value>
       </productAttributes>
+       <productAttributes>
+         <attributeType>enum</attributeType>
+         <attributeName>riskAnalysisMechanismIntent0</attributeName>
+         <value>automated</value>
+      </productAttributes>
       <productAttributes>
          <attributeType>enum</attributeType>
          <attributeName>riskAnalysisMechanismIntent1</attributeName>
@@ -619,6 +624,16 @@
       <attributeGroupName>DecisioningControl</attributeGroupName>
       <productAttributes>
          <attributeType>boolean</attributeType>
+         <attributeName>EnforceIntent0FAISAccreditationRule</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>FAISCategoryCode</attributeName>
+         <value>1.18</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
          <attributeName>ComponentSupportsDeclineReasons</attributeName>
          <value>true</value>
       </productAttributes>
@@ -635,7 +650,7 @@
             <attributeName>productType</attributeName>
             <value>EMAILSMS</value>
         </productAttributes>
-    </productAttributeGroup>   
+    </productAttributeGroup>
    <features>
       <featureIdentifier>1014</featureIdentifier>
       <name>Overdraft</name>
@@ -748,11 +763,7 @@
          <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Pre-agreement Quote|nedbank-commercial-release/UnsecuredLendingContract|ARRANGEMENT|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>DocumentDescriptionStaffAssisted</attributeType>
-            <attributeName>Pre-agreement Quote|nedbank-commercial-release/UnsecuredLendingContractStaffAssisted|ARRANGEMENT|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
+            <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -817,6 +828,11 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>boolean</attributeType>
+            <attributeName>requiresSourceIncomeAndAffordabilityData</attributeName>
+            <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
             <attributeName>requiresSalaryToBeDepositedToCurrentAccount</attributeName>
             <value>true</value>
          </featureAttributes>
@@ -833,6 +849,16 @@
             <attributeName>EnforceSingleOverdraftRule</attributeName>
             <value>true</value>
          </featureAttributes>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>ComponentSupportsDeclineReasons</attributeName>
+            <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>EnforceApplicationStatusValidationRules</attributeName>
+            <value>true</value>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>EligibilityRules</attributeGroupName>
@@ -846,7 +872,53 @@
             <attributeName>EligibleSegments</attributeName>
             <value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</value>
          </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleApplicationStatus</attributeName>
+            <value>CANCELLED|INITIATED|DECLINED</value>
+         </featureAttributes>
        </featureAttributeGroup>
+       <featureAttributeGroup>
+         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericDetails</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subClientsRightsAndObligations</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericTCForCreditProducts</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericImpConfirmation</attributeName>
+         </featureAttributes>
+        <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericSignatures</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraftTC|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
    </features>
    <features>
       <featureIdentifier>1402</featureIdentifier>
