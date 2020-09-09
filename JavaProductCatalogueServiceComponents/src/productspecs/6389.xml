@@ -60,11 +60,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~child-ng-components=GenericCapabilitySelectionTransactionalProductComponent~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=Offer~ZOrder=80</attributeName>
+         <attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -770,11 +766,7 @@
         </featureAttributes>
         <featureAttributes>
            <attributeType>productInformationRequirement</attributeType>
-           <attributeName>GenericCapabilitySelection|ng-component=ng-Generic-Capability-Selection~child-ng-components=ng-Overdraft-Generic-capability-slection~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-           <attributeType>productInformationRequirement</attributeType>
-           <attributeName>OfferSelection|ng-component=ng-Offer-Selection~ProceduralStepName=Offer~ZOrder=80</attributeName>
+           <attributeName>OfferSelection|ng-component=ng-Offer-Selection~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
         </featureAttributes>
         <featureAttributes>
            <attributeType>productInformationRequirement</attributeType>
@@ -2356,11 +2348,37 @@
 	     </featureAttributes>
    	  </featureAttributeGroup>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <attributeGroupName>productInformationRequirement_GenerateOfferProposals</attributeGroupName>
+        <featureAttributes>
+          <attributeType>clientInformationRequirement</attributeType>
+          <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>clientInformationRequirement</attributeType>
+          <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+        </featureAttributes>
         <featureAttributes>
            <attributeType>productInformationRequirement</attributeType>
-           <attributeName>GenericCapabilitySelection|ng-component=ng-Generic-Capability-Selection~child-ng-components=ng-consolidated-available-credit-line-generic-capability-strapline~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+           <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence</attributeName>
+            <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>breadcrumbSteps</attributeName>
+            <value>Your product|About you|Customisation|Finalisation</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>GNBAIntentToActivityMapping</attributeName>
+            <value>VerifyIdentity=Your Product|GenerateOfferVerifyEligibility=Your Product|GenerateOfferGatherProductDetails=Your Product|GenerateOfferGatherClientDetails=Your product|FinancialDetails=Your product|GenerateOfferProposals=Your product|GenerateOffer=Your product|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
+         </featureAttributes>
       </featureAttributeGroup>
    </features>
    <features>
