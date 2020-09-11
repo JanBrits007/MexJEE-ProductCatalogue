@@ -207,7 +207,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             }
         }
         
-        /**if (substituteForIPSubnets != null) {
+        if (substituteForIPSubnets != null) {
             mLog.debug("Trace 8 >>" + substituteForIPSubnets + "<<");
 
             // Get the business case details.
@@ -216,15 +216,15 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
             mLog.debug("Trace 9 >>" + caseHeader.getInitiatingChannelID().toLowerCase() + "<<");
 
-            if ((caseHeader.getInitiatingChannelID() != null &&
+            /**if ((caseHeader.getInitiatingChannelID() != null &&
                     !caseHeader.getInitiatingChannelID().trim().isEmpty()) &&
                     channelWhitelist.toLowerCase().contains(caseHeader.getInitiatingChannelID().toLowerCase())) {
                 // We must substitute.
                 mLog.debug("Trace 10 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + substitutedProductID + "<< for channel >>" + caseHeader.getInitiatingChannelID() + "<<");
 
                 return getProductSpecificationXMLByID(substitutedProductID);
-            }
-        }**/
+            }**/
+        }
 
         if (bankerWhitelist != null) {
             mLog.debug("Trace 12 >>" + bankerWhitelist + "<<");
