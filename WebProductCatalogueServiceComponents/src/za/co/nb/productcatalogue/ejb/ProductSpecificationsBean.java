@@ -10,6 +10,7 @@ import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.chann
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductattributesType;
 
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -33,12 +34,18 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
+@LocalBean
 @Stateless
-public class ProductSpecificationsEJB implements ProductSpecificationsServiceRemoteInterface {
+public class ProductSpecificationsBean implements ProductSpecificationsServiceRemoteInterface {
 
     private final Log mLog = LogFactory.getLog(getClass());
 
     private static final boolean ENABLE_XSD_VALIDATION = false;
+
+    /*
+    @Resource(name = "cache/productCatalogue")
+    DistributedObjectCache cache;
+    */
 
     public String createProductSpecificationJSON(String pCustomerXML, String pName, String pLastName, Calendar pDateOfBirth, String pIDType, String pIDNumber, String pCustomerType, String pRequiredCustomerUID) throws Exception {
         throw new Exception("The use of the DB2 database for product specifications has been deprecated. Please maintain product specifications in the relevant GIT repo.");
@@ -418,7 +425,11 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         mLog.debug("Trace 1.1 >>" + productID + "<<");
 
         try {
-            InputStream inputStream = ProductSpecificationsEJB.class.getResourceAsStream("/productspecs/" + productID + ".xml");
+            /*
+            if (cache.containsKey(productID)){
+                return (String) cache.get(productID);
+            }*/
+            InputStream inputStream = ProductSpecificationsBean.class.getResourceAsStream("/productspecs/" + productID + ".xml");
 
             if (inputStream == null) {
                 mLog.debug("Trace 2");
@@ -437,6 +448,8 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
             String XMLSpec = result.toString(StandardCharsets.UTF_8.name());
 
+           // cache.putIfAbsent(productID, XMLSpec);
+
             return XMLSpec;
         } catch (IOException e) {
             e.printStackTrace();
@@ -447,7 +460,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     public static void main(String[] args) {
 
         try {
-            ProductSpecificationsEJB dao = new ProductSpecificationsEJB();
+            ProductSpecificationsBean dao = new ProductSpecificationsBean();
 
             List<Integer> productIDs = new ArrayList<Integer>();
             productIDs.add(new Integer(1019));
