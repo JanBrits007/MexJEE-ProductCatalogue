@@ -13,7 +13,8 @@ import javax.xml.ws.Holder;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import za.co.nb.productcatalogue.ejb.ProductSpecificationsBean;
+import za.co.nb.productcatalogue.ejb.ProductSpecificationsEJB;
+import za.co.nb.productcatalogue.ejb.ProductSpecificationsEJB;
 
 
 @Stateless
@@ -22,7 +23,7 @@ import za.co.nb.productcatalogue.ejb.ProductSpecificationsBean;
 public class ChannelProductCatalogueSOAPBindingImpl {
 
 	@EJB
-	private ProductSpecificationsBean productSpecificationsBean;
+	private ProductSpecificationsEJB productSpecificationsBean;
 
 	private final Log mLog = LogFactory.getLog(getClass());
 

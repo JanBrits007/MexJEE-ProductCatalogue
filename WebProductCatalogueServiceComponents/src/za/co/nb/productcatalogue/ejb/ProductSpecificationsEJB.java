@@ -36,7 +36,7 @@ import java.util.List;
 
 @LocalBean
 @Stateless
-public class ProductSpecificationsBean implements ProductSpecificationsServiceRemoteInterface {
+public class ProductSpecificationsEJB implements ProductSpecificationsServiceRemoteInterface {
 
     private final Log mLog = LogFactory.getLog(getClass());
 
@@ -429,7 +429,7 @@ public class ProductSpecificationsBean implements ProductSpecificationsServiceRe
             if (cache.containsKey(productID)){
                 return (String) cache.get(productID);
             }*/
-            InputStream inputStream = ProductSpecificationsBean.class.getResourceAsStream("/productspecs/" + productID + ".xml");
+            InputStream inputStream = ProductSpecificationsEJB.class.getResourceAsStream("/productspecs/" + productID + ".xml");
 
             if (inputStream == null) {
                 mLog.debug("Trace 2");
@@ -460,7 +460,7 @@ public class ProductSpecificationsBean implements ProductSpecificationsServiceRe
     public static void main(String[] args) {
 
         try {
-            ProductSpecificationsBean dao = new ProductSpecificationsBean();
+            ProductSpecificationsEJB dao = new ProductSpecificationsEJB();
 
             List<Integer> productIDs = new ArrayList<Integer>();
             productIDs.add(new Integer(1019));
