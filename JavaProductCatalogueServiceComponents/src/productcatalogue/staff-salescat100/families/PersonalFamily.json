@@ -3943,7 +3943,7 @@
 			  },
 			  {
 					"groupIdentifier": "AMERICAN_EXPRESS_CARD",
-					"name": "American Express® Card",
+					"name": "American Express Card",
 					"products": [1027,
 					1028,
 				  1490]
@@ -3952,6 +3952,11 @@
 					"groupIdentifier": "SMALL_BUSINESS_CARD",
 					"name": "Small Business Credit Card",
 					"products": [1215]
+				},
+				{
+					"groupIdentifier": "NEDBANK_PRIVATE_WEALTH",
+					"name": "Nedbank Private Wealth",
+					"products": [1038]
 				},
 			  {
 				"groupIdentifier": "SAA_VOYAGER_CREDIT_CARD",
@@ -5030,6 +5035,123 @@
 						"isComparable": "false",
 						"valueUnit": "bool"
 					}],
+					"lifeCycleStatus": "AVAILABLE"
+				},
+				{
+					"productIdentifier": "1038",
+					"name": "NPW PAYU Credit Card",
+					"shortDescription": "Dual card offering consisting of the Nedbank Private Wealth Visa Infinite credit card and complimentary Nedbank Private Wealth American Express® credit card with both cards having access to one credit card account/facility which is styled as a standalone pay-as-you-use account.",
+					"redirect": {
+						"shouldRedirect": true,
+						"redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionChargeCardAmex.html?"
+					},
+					"actions": [
+						{
+							"type": "SELECT",
+							"text": "Select",
+							"environments": [
+								"dev_staff",
+								"ete_staff",
+								"qa_staff"
+							]
+						},
+						{
+							"type": "SELECT_EWCO",
+							"text": "Select",
+							"environments": [
+								"prod_staff"
+							]
+						},
+						{
+							"type": "DETAIL",
+							"text": "Details"
+						},
+						{
+							"type": "COMPARE",
+							"text": "Compare"
+						}
+					],
+					"productPricing": [
+						{
+							"type": "AdminFee",
+							"amount": 105,
+							"frequency": "Monthly",
+							"currency": "ZAR",
+							"description": "R 105.00 pm"
+						}
+					],
+					"eligibilityRules": [
+						{
+							"attributeType": "EligibilityRuleList",
+							"description": "client must already exist as a Nedbank Private Wealth client;"
+						},
+						{
+							"attributeType": "EligibilityRuleList",
+							"description": "is at least 18 years old;"
+						},
+						{
+							"attributeType": "EligibilityRuleList",
+							"description": "has a good credit rating;"
+						},
+						{
+							"attributeType": "EligibilityRuleList",
+							"description": "is a South African resident;"
+						}
+					],
+					"salesHighlights": [
+						"Competitive debit interest rate of Prime – 1%.",
+						"Up to 55 days' interest-free credit.",
+						"Flexible monthly repayments whether minimum of 5% of outstanding balance, full payment or specific amount.",
+						"No fees on point-of-sale purchases.",
+						"Free replacement cards.",
+						"Free supplementary cards linked to the primary account.",
+						"Free branch or face to face (courier) card deliveries (local deliveries).",
+						"Quick and easy contactless payment functionality at participating point of sale.",
+						"Budget facility for larger purchases over 3 to 36 months.",
+						"Optional Credit life cover to ensure financial security and peace of mind in the event of death, disability, critical illness or retrenchment.",
+						"Free and automatic membership enrolment with the Greenbacks Rewards Programme.",
+						"Manage your banking accounts on the Nedbank Private Wealth app or online banking, with access to scan to pay (cardless) transactions and card management features."
+					],
+					"valueAddedServices": [
+						"A dedicated Service Suite is available 24 hours, seven days a week, to assist with banking enquiries and lifestyle needs.",
+						"Free unlimited local and international airport lounge access for you and one guest through LoungeKey™ (simply present your Visa Infinite card and mention LoungeKey™ at reception).",
+						"A 24-hour Visa concierge service for all your personal travel and lifestyle needs, including assistance with travel bookings and information.",
+						"Visa provides Global Client Assistance when you need help in an emergency.",
+						"Through Visa, a range of travel, insurance and lifestyle benefits (including discount and special rates on accommodation, car rental, dining and airport meet-and-assist services).",
+						"Free automatic enrolment to the Nedbank Greenbacks programme:",
+						"Earn double Greenbacks points when you pay with your Nedbank Private Wealth American Express® Credit Card (unlimited Greenbacks at a rate of two Greenbacks for every R5 spend).",
+						"Earn unlimited Greenbacks at a rate of one Greenback point for every R5 spend with your Visa Infinite credit card.",
+						"Get a free American Express® Greenbacks SHOP Card. All your accumulated Greenbacks points are available immediately as cash to shop at stores, merchants or to draw as cash at a Nedbank ATM.",
+						"Free Multitrip travel insurance specifically catering for Visa Infinite cardholders provide extensive benefits for the travelling family including baggage and travel delays, trip cancellations, etc. (Visa/Chubb Insurance).  Medical cover up to US$2 500 000.",
+						"With the Nedbank Private Wealth American Express® card you receive free automatic premium travel insurance cover.  Medical cover up to R3 000 000. Top-up/additional cover at a premium available (Bryte Travel Insurance).",
+						"Visa provides extended warranty on purchased goods (double warranty up to 24 months).",
+						"Visa provides purchase protection for theft or accidental damage of purchased item."
+					],
+					"additionalFeatures": [
+						{
+							"A revolving-balance card for a start-up or new business, with a monthly minimum payment option to improve cash flow and the ability to earn Greenbacks on business spend.": [],
+							"Choose from three repayment options:": [
+								"pay a minimum of 5% of the total statement balance",
+								"pay the full outstanding amount at the statement due date, which allows you to benefit from up to 55 days interest-free credit"
+							]
+						}
+					],
+					"productOnAPageWebURL": "",
+					"productAttributeGroup": [],
+					"requiredDocuments": [
+						{
+							"attributeType": "Display",
+							"attributeName": "Proof of income, ie copy of 3 months most recent payslips or latest 3 months banking statements.",
+							"isComparable": "false",
+							"valueUnit": "bool"
+						},
+						{
+							"attributeType": "Display",
+							"attributeName": "Copy of ID",
+							"isComparable": "false",
+							"valueUnit": "bool"
+						}
+					],
 					"lifeCycleStatus": "AVAILABLE"
 				},
 				{
@@ -7087,6 +7209,106 @@
 						"isComparable": "false",
 						"valueUnit": "bool"
 					}],
+					"lifeCycleStatus": "AVAILABLE"
+				},
+				{
+					"productIdentifier": "1038",
+					"name": "NPW PAYU Credit Card (1038)",
+					"shortDescription": "Dual card offering consisting of the Nedbank Private Wealth Visa Infinite credit card and complimentary Nedbank Private Wealth American Express® credit card with both cards having access to one credit card account/facility which is styled as a standalone pay-as-you-use account.",
+					"redirect": {
+						"shouldRedirect": true,
+						"redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionChargeCardAmex.html?"
+					},
+					"actions": [
+						{
+							"type": "SELECT",
+							"text": "Select",
+							"environments": [
+								"dev_staff",
+								"ete_staff",
+								"qa_staff"
+							]
+						},
+						{
+							"type": "SELECT_EWCO",
+							"text": "Select",
+							"environments": [
+								"prod_staff"
+							]
+						},
+						{
+							"type": "DETAIL",
+							"text": "Details"
+						},
+						{
+							"type": "COMPARE",
+							"text": "Compare"
+						}
+					],
+					"specialFeature": "",
+					"productPricing": [
+						{
+							"type": "AdminFee",
+							"amount": 105,
+							"frequency": "Monthly",
+							"currency": "ZAR",
+							"description": "R 105.00 pm"
+						}
+					],
+					"salesHighlights": [
+						"Competitive debit interest rate of Prime – 1%.",
+						"Up to 55 days' interest-free credit.",
+						"Flexible monthly repayments whether minimum of 5% of outstanding balance, full payment or specific amount.",
+						"No fees on point-of-sale purchases.",
+						"Free replacement cards.",
+						"Free supplementary cards linked to the primary account.",
+						"Free branch or face to face (courier) card deliveries (local deliveries).",
+						"Quick and easy contactless payment functionality at participating point of sale.",
+						"Budget facility for larger purchases over 3 to 36 months.",
+						"Optional Credit life cover to ensure financial security and peace of mind in the event of death, disability, critical illness or retrenchment.",
+						"Free and automatic membership enrolment with the Greenbacks Rewards Programme.",
+						"Manage your banking accounts on the Nedbank Private Wealth app or online banking, with access to scan to pay (cardless) transactions and card management features."
+					],
+					"valueAddedServices": [
+						"A dedicated Service Suite is available 24 hours, seven days a week, to assist with banking enquiries and lifestyle needs.",
+						"Free unlimited local and international airport lounge access for you and one guest through LoungeKey™ (simply present your Visa Infinite card and mention LoungeKey™ at reception).",
+						"A 24-hour Visa concierge service for all your personal travel and lifestyle needs, including assistance with travel bookings and information.",
+						"Visa provides Global Client Assistance when you need help in an emergency.",
+						"Through Visa, a range of travel, insurance and lifestyle benefits (including discount and special rates on accommodation, car rental, dining and airport meet-and-assist services).",
+						"Free automatic enrolment to the Nedbank Greenbacks programme:",
+						"Earn double Greenbacks points when you pay with your Nedbank Private Wealth American Express® Credit Card (unlimited Greenbacks at a rate of two Greenbacks for every R5 spend).",
+						"Earn unlimited Greenbacks at a rate of one Greenback point for every R5 spend with your Visa Infinite credit card.",
+						"Get a free American Express® Greenbacks SHOP Card. All your accumulated Greenbacks points are available immediately as cash to shop at stores, merchants or to draw as cash at a Nedbank ATM.",
+						"Free Multitrip travel insurance specifically catering for Visa Infinite cardholders provide extensive benefits for the travelling family including baggage and travel delays, trip cancellations, etc. (Visa/Chubb Insurance).  Medical cover up to US$2 500 000.",
+						"With the Nedbank Private Wealth American Express® card you receive free automatic premium travel insurance cover.  Medical cover up to R3 000 000. Top-up/additional cover at a premium available (Bryte Travel Insurance).",
+						"Visa provides extended warranty on purchased goods (double warranty up to 24 months).",
+						"Visa provides purchase protection for theft or accidental damage of purchased item."
+					],
+					"additionalFeatures": [
+						{
+							"A revolving-balance card for a start-up or new business, with a monthly minimum payment option to improve cash flow and the ability to earn Greenbacks on business spend.": [],
+							"Choose from three repayment options:": [
+								"pay a minimum of 5% of the total statement balance",
+								"pay the full outstanding amount at the statement due date, which allows you to benefit from up to 55 days interest-free credit"
+							]
+						}
+					],
+					"productOnAPageWebURL": "",
+					"productAttributeGroup": [],
+					"requiredDocuments": [
+						{
+							"attributeType": "Display",
+							"attributeName": "Proof of income, ie copy of 3 months most recent payslips or latest 3 months banking statements.",
+							"isComparable": "false",
+							"valueUnit": "bool"
+						},
+						{
+							"attributeType": "Display",
+							"attributeName": "Copy of ID",
+							"isComparable": "false",
+							"valueUnit": "bool"
+						}
+					],
 					"lifeCycleStatus": "AVAILABLE"
 				},
 			  {
