@@ -13,6 +13,7 @@ import javax.ws.rs.OPTIONS;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -22,6 +23,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import za.co.nb.productcatalogue.dao.ProductSpecificationsJSONServiceDAO;
+import za.co.nb.productcatalogue.util.ProductSpecificationSubstitutionUtil;
 
 
 @Path( "/productSpecifications" )
@@ -61,11 +63,21 @@ public class ProductSpecifications {
     @GET
     @Path( "/{id}" )
     @Produces( MediaType.APPLICATION_JSON )
-    public Response getProductSpecificationByID( @PathParam( "id" ) String id ) {
+    public Response getProductSpecificationByID( @PathParam( "id" ) String id, @QueryParam(value="caseID")String caseID) {
     	mLog.debug("Trace 1");
-    	
+
     	try {
-	        String vProductSpecificationJSON = getProductSpecificationsDAO().getProductSpecificationJSONByID(id);
+    		String vProductSpecificationJSON;
+    		
+        	if(caseID == null) {
+        		// Just return the JSON spec as-is
+        		vProductSpecificationJSON = getProductSpecificationsDAO().getProductSpecificationJSONByID(id);
+        	}
+        	else {
+        		// Use the case ID to determine whether switching the spec out is required.
+        		ProductSpecificationSubstitutionUtil util = new ProductSpecificationSubstitutionUtil();
+    	        vProductSpecificationJSON = getProductSpecificationsDAO().getProductSpecificationJSONByID(util.substituteBusinessCaseProductIDBasedOnBusinessRules(id, caseID));    		
+        	}
 
 	        if(vProductSpecificationJSON != null) {
 	        	mLog.debug("Trace 2");
