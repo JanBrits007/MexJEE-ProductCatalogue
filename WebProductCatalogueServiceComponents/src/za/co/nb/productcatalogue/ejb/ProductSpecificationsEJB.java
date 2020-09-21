@@ -1,17 +1,20 @@
 package za.co.nb.productcatalogue.ejb;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
-import za.co.nb.productcatalogue.cases.dao.BusinessCaseDAO;
-import za.co.nb.productcatalogue.dao.ArrangementMetricsDAO;
-import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.MaintainCatalogueRequestType;
-import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductAttributeGroupType;
-import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
-import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductattributesType;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Map;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -24,18 +27,24 @@ import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.List;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import za.co.nb.onboarding.casemanagement.BusinessCaseManagementDAO;
+import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
+import za.co.nb.productcatalogue.cases.dao.BusinessCaseDAO;
+import za.co.nb.productcatalogue.dao.ArrangementMetricsDAO;
+import za.co.nb.productcatalogue.rules.handlers.BaseProductSpecificationRuleHandler;
+import za.co.nb.productcatalogue.util.ProductSpecificationSubstitutionUtil;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.MaintainCatalogueRequestType;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductAttributeGroupType;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductattributesType;
 
 @LocalBean
 @Stateless
+@TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
 public class ProductSpecificationsEJB implements ProductSpecificationsServiceRemoteInterface {
 
     private final Log mLog = LogFactory.getLog(getClass());
@@ -59,11 +68,17 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         return xmlString;
     }
 
+    
     public ProductType getProductSpecificationByIDAndArrangementID(String productSpecificationID, String arrangementID) throws Exception {
         mLog.debug("Trace 1 >>" + productSpecificationID + "<<,>>" + arrangementID + "<<");
 
-        // First get the case ID based on the arrangement ID.
+        // First check whether there are business rules that need to be run to switch out the product ID to a specific on.
+        ProductSpecificationSubstitutionUtil util = new ProductSpecificationSubstitutionUtil();
+        productSpecificationID = util.substituteArrangementProductIDBasedOnBusinessRules(productSpecificationID, arrangementID);
+        
         if (specHasSubstitutionRules(productSpecificationID)) {
+            // Next get the case ID based on the arrangement ID.
+        	// These are the pilot substitution rules
             mLog.debug("Trace 2");
 
             // Must check for case specific substitutions.
@@ -82,6 +97,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 return getProductSpecificationByIDAndCaseID(productSpecificationID, caseID);
             }
         } else {
+        	// Just return the normal spec.
             mLog.debug("Trace 5");
             return getProductSpecificationXMLByID(productSpecificationID);
         }
