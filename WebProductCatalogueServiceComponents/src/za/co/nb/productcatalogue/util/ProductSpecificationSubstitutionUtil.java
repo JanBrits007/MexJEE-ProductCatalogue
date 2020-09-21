@@ -68,6 +68,11 @@ public class ProductSpecificationSubstitutionUtil {
         BusinessCaseManagementDAO caseDAO = new BusinessCaseManagementDAO();
         
         BusinessCaseHeader businessCase = caseDAO.retrieveBusinessCase(caseID);
+
+        if(businessCase == null) {
+        	// Fallback to no substitution.
+        	return productSpecificationID;
+        }
         
         // Get the cached list of product substitutions
         Map<String, String> productSubstitutionMap = businessCase.getProductIDSubstitutionMap();
