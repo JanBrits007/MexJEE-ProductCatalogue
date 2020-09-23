@@ -87,7 +87,7 @@ public class ProductSpecificationSubstitutionUtil {
             
             // Run the rule handler to work out what the product ID should be.
             try {
-            	productSubstitutionID = ruleHandler.executeBusinessRules(productSubstitutionID, caseID);
+            	productSubstitutionID = ruleHandler.executeBusinessRules(productSpecificationID, caseID);
             }
             catch(Exception e) {
             	e.printStackTrace();
