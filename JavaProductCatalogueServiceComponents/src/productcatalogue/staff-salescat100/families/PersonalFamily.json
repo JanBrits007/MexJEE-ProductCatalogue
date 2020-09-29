@@ -5042,25 +5042,13 @@
 					"name": "NPW PAYU Credit Card",
 					"shortDescription": "Dual card offering consisting of the Nedbank Private Wealth Visa Infinite credit card and complimentary Nedbank Private Wealth American Express® credit card with both cards having access to one credit card account/facility which is styled as a standalone pay-as-you-use account.",
 					"redirect": {
-						"shouldRedirect": true,
-						"redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionChargeCardAmex.html?"
+						"shouldRedirect": false,
+						"redirectUrl": null
 					},
 					"actions": [
 						{
 							"type": "SELECT",
-							"text": "Select",
-							"environments": [
-								"dev_staff",
-								"ete_staff",
-								"qa_staff"
-							]
-						},
-						{
-							"type": "SELECT_EWCO",
-							"text": "Select",
-							"environments": [
-								"prod_staff"
-							]
+							"text": "Select"
 						},
 						{
 							"type": "DETAIL",
@@ -7216,25 +7204,13 @@
 					"name": "NPW PAYU Credit Card (1038)",
 					"shortDescription": "Dual card offering consisting of the Nedbank Private Wealth Visa Infinite credit card and complimentary Nedbank Private Wealth American Express® credit card with both cards having access to one credit card account/facility which is styled as a standalone pay-as-you-use account.",
 					"redirect": {
-						"shouldRedirect": true,
-						"redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionChargeCardAmex.html?"
+						"shouldRedirect": false,
+						"redirectUrl": null
 					},
 					"actions": [
 						{
 							"type": "SELECT",
-							"text": "Select",
-							"environments": [
-								"dev_staff",
-								"ete_staff",
-								"qa_staff"
-							]
-						},
-						{
-							"type": "SELECT_EWCO",
-							"text": "Select",
-							"environments": [
-								"prod_staff"
-							]
+							"text": "Select"
 						},
 						{
 							"type": "DETAIL",
@@ -7248,11 +7224,11 @@
 					"specialFeature": "",
 					"productPricing": [
 						{
-						"type": "AdminFee",
-						"amount": 105,
-						"frequency": "Monthly",
-						"currency": "ZAR",
-						"description": "R 105.00 pm"
+							"type": "AdminFee",
+							"amount": 105,
+							"frequency": "Monthly",
+							"currency": "ZAR",
+							"description": "R 105.00 pm"
 						}
 					],
 					"salesHighlights": [
@@ -7286,21 +7262,23 @@
 					],
 					"productOnAPageWebURL": "",
 					"productAttributeGroup": [],
-					"requiredDocuments": [{
-						"attributeType": "Display",
-						"attributeName": "Proof of income, ie copy of 3 months most recent payslips or latest 3 months banking statements.",
-						"isComparable": "false",
-						"valueUnit": "bool"
-					},
-					{
-						"attributeType": "Display",
-						"attributeName": "Copy of ID",
-						"isComparable": "false",
-						"valueUnit": "bool"
-					}],
+					"requiredDocuments": [
+						{
+							"attributeType": "Display",
+							"attributeName": "Proof of income, ie copy of 3 months most recent payslips or latest 3 months banking statements.",
+							"isComparable": "false",
+							"valueUnit": "bool"
+						},
+						{
+							"attributeType": "Display",
+							"attributeName": "Copy of ID",
+							"isComparable": "false",
+							"valueUnit": "bool"
+						}
+					],
 					"lifeCycleStatus": "AVAILABLE"
-					},
-			  {
+				},
+				{
 				"productIdentifier": "1042",
 				"name": "SAA Voyager Gold Credit Card",
 				"shortDescription": "Get extraordinary benefits with unprecedented travel rewards. This South African credit card offers you the fastest SAA Voyager Miles earn rate on your everyday spend when swiping your card for all eligible spend",
