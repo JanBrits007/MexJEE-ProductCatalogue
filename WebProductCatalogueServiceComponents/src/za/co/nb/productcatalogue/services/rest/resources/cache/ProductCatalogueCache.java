@@ -12,11 +12,14 @@ import javax.ejb.LockType;
 import javax.ejb.Schedule;
 import javax.ejb.Schedules;
 import javax.ejb.Singleton;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Singleton
+@TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
 public class ProductCatalogueCache  extends AbstractProductCatalogueDAO {
 
     private final Log mLog = LogFactory.getLog(getClass());
@@ -26,7 +29,7 @@ public class ProductCatalogueCache  extends AbstractProductCatalogueDAO {
 
     @PostConstruct
     public void init(){
-       catalogueCache = new HashMap<String, CachedCatalogueDetails>();
+       catalogueCache = new ConcurrentHashMap<String, CachedCatalogueDetails>();
     }
 
 
@@ -34,7 +37,6 @@ public class ProductCatalogueCache  extends AbstractProductCatalogueDAO {
         return catalogueCache;
     }
 
-    @Lock(LockType.WRITE)
     @Schedules({
         @Schedule(hour = "1", minute = "5", second = "0", persistent = false),
         @Schedule(hour = "7", minute = "5", second = "0", persistent = false)
@@ -62,7 +64,7 @@ public class ProductCatalogueCache  extends AbstractProductCatalogueDAO {
         }
     }
 
-    @Lock(LockType.WRITE)
+    @Lock(LockType.READ)
     public void putToCache(String productId, String catalogueString){
 
         CachedCatalogueDetails cachedCatalogue = new CachedCatalogueDetails();

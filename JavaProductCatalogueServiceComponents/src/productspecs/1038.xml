@@ -1,7 +1,7 @@
 <product 
     xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1038</productIdentifier>
-    <name>NPW Amex Gold Charge</name>
+    <name>NPW PAYU Credit Card</name>
     <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
         <productAttributes>
@@ -38,12 +38,21 @@
         <attributeGroupName>EligibilityRules</attributeGroupName>
         <productAttributes>
             <attributeType>EligibilityRule</attributeType>
+            <attributeName>NPWClient</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>18</minValue>
+            <maxValue>999</maxValue>
+            <valueUnit>year</valueUnit>
+            <description>already be an existing Nedbank Private Wealth Client;</description>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
             <attributeName>Age</attributeName>
             <isComparable>false</isComparable>
             <minValue>18</minValue>
             <maxValue>999</maxValue>
             <valueUnit>year</valueUnit>
-            <description>be 18 years or older.</description>
+            <description>be atleast 18 years or older;</description>
         </productAttributes>
         <productAttributes>
             <attributeType>EligibilityRule</attributeType>
@@ -52,7 +61,7 @@
             <minValue>60000</minValue>
             <maxValue>99999999</maxValue>
             <valueUnit>ZAR</valueUnit>
-            <description>earn more than R200 000 a year; and</description>
+            <description>have a good credit rating; and</description>
         </productAttributes>
         <productAttributes>
             <attributeType>EligibilityRule</attributeType>
@@ -154,7 +163,11 @@
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Contract|nedbank-commercial-release/CreditCardProductContract|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
+            <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>DocumentExclusion</attributeType>
+            <attributeName>Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -163,18 +176,6 @@
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
             <attributeName>Email</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>WetSign</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>DigitallySign</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>ElectronicallySign</attributeName>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -265,6 +266,11 @@
             <value>true</value>
         </productAttributes>
         <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>FinalCaseQualityAssuranceExclusion</attributeName>
+            <value>LimitIncrease</value>
+        </productAttributes>
+        <productAttributes>
             <attributeType>bool</attributeType>
             <attributeName>FinalCaseQualityAssuranceSignatureTypeCheck</attributeName>
             <value>true</value>
@@ -275,24 +281,29 @@
             <value>CreditCardFinalAssessmentVerificationTeam</value>
         </productAttributes>
         <productAttributes>
-			<attributeType>int</attributeType>
-			<attributeName>CardExposureContractType</attributeName>
-			<value>1001;1347</value>
-		</productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>BPMCARDOFFER</attributeName>
+            <value>BPMCARDROLE</value>
+        </productAttributes>
         <productAttributes>
-         	<attributeType>string</attributeType>
-         	<attributeName>HandleProvisioningFailureTeamName</attributeName>
-         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
-      	</productAttributes>
-      	<productAttributes>
-         	<attributeType>int</attributeType>
-         	<attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
-         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
-      	</productAttributes>
-     	<productAttributes>
-         	<attributeType>int</attributeType>
-         	<attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
-         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
+            <attributeType>int</attributeType>
+            <attributeName>CardExposureContractType</attributeName>
+            <value>1001;1347</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>HandleProvisioningFailureTeamName</attributeName>
+            <value>Eclipsewarroomsupport@Nedbank.co.za</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
+            <value>Eclipsewarroomsupport@Nedbank.co.za</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
+            <value>Eclipsewarroomsupport@Nedbank.co.za</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -381,12 +392,77 @@
         <productAttributes>
             <attributeType>int</attributeType>
             <attributeName>CommunicationSystem</attributeName>
-            <value>GenCom</value>
+            <value>SpecCom</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>commsAudience</attributeName>
+            <value>banker</value>
         </productAttributes>
         <productAttributes>
             <attributeType>int</attributeType>
-            <attributeName>productType</attributeName>
-            <value>EMAILSMS</value>
+            <attributeName>welcomeComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>declineComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>reminderCommsPreOffer</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>reminderCommsPostOffer</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>manualAssessmentComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>verificationComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>captivaRejectedDocComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>lowerOfferComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>appealComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>fraudComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>docsReceivedComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>pendOrDocsRequiredComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>cancelCaseComms</attributeName>
+            <value>EMAIL</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -400,6 +476,66 @@
 			<attributeType>boolean</attributeType>
 			<attributeName>checkStaffOnMDM</attributeName>
 			<value>true</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>executeCardBusinessRuleToPresentDocuments</attributeName>
+			<value>true</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>statusSetting</attributeName>
+			<value>true</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>executeArrangementCrossSellRules</attributeName>
+			<value>true</value>
+		</productAttributes>
+	</productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subNPWLogo</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+		<attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+		<poductAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericDetails</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subClientsRightsAndObligations</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericTCForCreditProducts</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericImpConfirmation</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericSignatures</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCard|ContractComponentProductType=1038</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCardTC|ContractComponentProductType=1038</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
     <features>
@@ -494,11 +630,11 @@
                 <value>Y</value>
             </featureAttributes>
             <featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>CAMSCashLimitPercentage</attributeName>
-				<valueUnit>PER</valueUnit>
-				<value>100</value>
-			</featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSCashLimitPercentage</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>100</value>
+            </featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>
             <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
@@ -571,12 +707,12 @@
         </featureAttributeGroup>
     </features>
     <features>
-        <featureIdentifier>1334</featureIdentifier>
-        <name>Membership Rewards™</name>
-        <mandatory>false</mandatory>
+        <featureIdentifier>1454</featureIdentifier>
+        <name>Nedbank Greenback Rewards</name>
+        <mandatory>true</mandatory>
         <preSelected>true</preSelected>
-        <shortDescription>Earn points on virtually all the spend on your card and enjoy a range of fantastic rewards.</shortDescription>
-        <description>Please note you will receive a Membership Rewards™ Redemption card in order to spend you rewards.</description>
+        <shortDescription>By joining our Greenbacks Rewards Programme you will earn rewards when you use your credit card or one of our other transactional accounts.</shortDescription>
+        <description>Detailed description of feature</description>
         <featureGrouping>
             <featureGroupName>Loyalty</featureGroupName>
             <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
@@ -586,9 +722,9 @@
         <featurePricing>
             <fee>
                 <type>AdminFee</type>
-                <description>R24 per month</description>
+                <description>R20 per month</description>
                 <currency>ZAR</currency>
-                <amount>24</amount>
+                <amount>20</amount>
                 <frequency>Monthly</frequency>
             </fee>
         </featurePricing>
@@ -651,7 +787,7 @@
             <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
             <featureAttributes>
                 <attributeType>DocumentDescription</attributeType>
-                <attributeName>Rewards Terms and Conditions|nedbank-commercial-release/CreditCardAmexRewardsTermsAndConditionsUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Terms and Conditions</attributeName>
+                <attributeName>Rewards Terms and Conditions|nedbank-commercial-release/CreditCardRewardsTermsAndConditionsUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Terms and Conditions</attributeName>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>AvailableAction</attributeType>
@@ -663,17 +799,17 @@
             </featureAttributes>
             <featureAttributes>
                 <attributeType>DocTemplateName</attributeType>
-                <attributeName>CreditCardAmexRewardsTermsAndConditionsUniversal</attributeName>
+                <attributeName>CreditCardRewardsTermsAndConditionsUniversal</attributeName>
             </featureAttributes>
         </featureAttributeGroup>
     </features>
     <features>
-        <featureIdentifier>1465</featureIdentifier>
-        <name>Redemption Card</name>
+        <featureIdentifier>1333</featureIdentifier>
+        <name>Nedbank Greenbacks Shop Card</name>
         <mandatory>false</mandatory>
         <preSelected>true</preSelected>
-        <shortDescription>What is the Redemption card?</shortDescription>
-        <description>We' have made it quick and easy to redeem and spend all the rewards you've earned using the Redemption card.</description>
+        <shortDescription>SHOP card</shortDescription>
+        <description>Great news! We've made it quick and easy to redeem all the Greenbacks you've earned with your very own SHOP card</description>
         <featureGrouping>
             <featureGroupName>Loyalty</featureGroupName>
             <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
@@ -756,13 +892,13 @@
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSPlasticType</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>AR1</value>
+                <value>AG6</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSCrdStock</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>AR2</value>
+                <value>AG6</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
@@ -774,7 +910,7 @@
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSATrRegistrationNbr</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>194905</value>
+                <value>190105</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
@@ -792,7 +928,7 @@
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSSolicitationCode</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>8079</value>
+                <value>7016</value>
             </featureAttributes>
         </featureAttributeGroup>
     </features>
@@ -905,70 +1041,6 @@
             <featureAttributes>
                 <attributeType>AvailableAction</attributeType>
                 <attributeName>Email</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>WetSign</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>ElectronicallySign</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>DocTemplateName</attributeType>
-                <attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>EligibilityRules</attributeGroupName>
-            <featureAttributes>
-                <attributeType>EligibilityRule</attributeType>
-                <attributeName>Age</attributeName>
-                <minValue>18</minValue>
-                <maxValue>64</maxValue>
-                <valueUnit>year</valueUnit>
-            </featureAttributes>
-        </featureAttributeGroup>
-    </features>
-    <features>
-        <featureIdentifier>1100</featureIdentifier>
-        <name>Payment protection plan</name>
-        <featureAttributeGroup>
-            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>provisionInBranch</attributeName>
-                <valueUnit>boolean</valueUnit>
-                <value>false</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>legacyProductID</attributeName>
-                <valueUnit>string</valueUnit>
-                <value />
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-            <featureAttributes>
-                <attributeType>DocumentDescription</attributeType>
-                <attributeName>FAIS Client Acknowledgement|nedbank-commercial-release/CCFAISClientAcknowledgementStaffAssisted|ARRANGEMENTS|APPLICATIONS|APPLICATIONSCREDITCARD|FAIS Client Acknowledgement</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>Download</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>Email</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>WetSign</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>ElectronicallySign</attributeName>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>DocTemplateName</attributeType>

@@ -7,7 +7,7 @@
     <parent>
         <groupId>BPMX</groupId>
         <artifactId>ProductCatalogueCache</artifactId>
-        <version>1.42.0-SNAPSHOT</version>
+        <version>1.45.0-SNAPSHOT</version>
     </parent>
 
     <build>
@@ -48,6 +48,11 @@
             <version>${project.parent.version}</version>
             <scope>compile</scope>
         </dependency>
+	    <dependency>
+	        <groupId>BPMX</groupId>
+	        <artifactId>JavaClient360InformationServiceClient</artifactId>
+            <scope>provided</scope>
+	    </dependency>
         <dependency>
             <groupId>BPMX</groupId>
             <artifactId>JavaBusinessCaseManagementDTO</artifactId>
@@ -62,5 +67,29 @@
             <artifactId>httpmime</artifactId>
             <scope>provided</scope>
         </dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+        <!-- USE for com.ibm.websphere.cache.DistributedObjectCache
+        <dependency>
+            <groupId>com.ibm.was</groupId>
+            <artifactId>com.ibm.ws.runtime</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        -->
+
     </dependencies>
 </project>

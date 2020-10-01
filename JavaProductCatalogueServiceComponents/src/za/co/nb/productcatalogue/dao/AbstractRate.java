@@ -35,6 +35,7 @@ public abstract class AbstractRate {
         productIDs.add("1392");
         productIDs.add("1405");
         productIDs.add("1406");
+        productIDs.add("1473");
         productIDs.add("1482");
     }
 

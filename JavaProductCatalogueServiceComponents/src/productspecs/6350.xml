@@ -171,15 +171,11 @@
 		 </productAttributes>
 		 <productAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>GenericCapabilitySelection|ng-component=ng-Generic-Capability-Selection~child-ng-components=ng-CreditCard-Generic-capability-slection~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+				<attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
 		 </productAttributes>
 		 <productAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>OfferSelection|ng-component=ng-Offer-Selection~ProceduralStepName=Offer~ZOrder=80</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>OfferSummery|ng-component=ng-Offer-Summery~child-ng-components=ng-CreditCard-Offer-Summery~ProceduralStepName=Offer~ZOrder=70</attributeName>
+				<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=ng-CreditCard-Offer-Summery~ProceduralStepName=Offer~ZOrder=70</attributeName>
 		 </productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -232,7 +228,7 @@
 		<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
 		<productAttributes>
 			<attributeType>DocumentDescription</attributeType>
-			<attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
+			<attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
@@ -253,6 +249,33 @@
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
 			<attributeName>ElectronicallySign</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>DocumentExclusion</attributeType>
+			<attributeName>Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>CaseConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -613,7 +636,7 @@
 			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
 			<featureAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>ValueAddedServiceConfiguration|ng-component=ng-value-added-service-configuration~child-ng-components=ng-plastic-card-value-added-service-configuration~ProceduralStepName=Offer~ZOrder=80</attributeName>
+				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-plastic-card-value-added-service-configuration~ProceduralStepName=Offer~ZOrder=80</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 		<featureAttributeGroup>
@@ -804,7 +827,7 @@
 			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
 			<featureAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>ValueAddedServiceConfiguration|ng-component=ng-value-added-service-configuration~child-ng-components=ng-nedbank-greenback-rewards-value-added-service-configuration~ProceduralStepName=Offer~ZOrder=80</attributeName>
+				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-nedbank-greenback-rewards-value-added-service-configuration~ProceduralStepName=Offer~ZOrder=80</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 		<featureAttributeGroup>
@@ -867,7 +890,7 @@
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
-    <features>
+  <features>
 		<featureIdentifier>1333</featureIdentifier>
 		<name>Nedbank Greenbacks Shop Card</name>
 		<mandatory>false</mandatory>
@@ -899,7 +922,7 @@
 			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
 			<featureAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>ValueAddedServiceConfiguration|ng-component=ng-value-added-service-configuration~child-ng-components=ng-nedbank-greenbacks-shop-card-value-added-service-configuration~ProceduralStepName=Offer~ZOrder=80</attributeName>
+				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-nedbank-greenbacks-shop-card-value-added-service-configuration~ProceduralStepName=Offer~ZOrder=80</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 		<featureAttributeGroup>
@@ -988,21 +1011,21 @@
 				<attributeName>provisionInBranch</attributeName>
 				<valueUnit>boolean</valueUnit>
 				<value>false</value>
-            </featureAttributes>
-            <featureAttributes>
+      </featureAttributes>
+      <featureAttributes>
 				<attributeType>coreProvisioningParameter</attributeType>
 				<attributeName>CAMSLangCd</attributeName>
 				<valueUnit>PER</valueUnit>
 				<value>ENG</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSSolicitationCode</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>7016</value>
-            </featureAttributes>
-       </featureAttributeGroup>
-    </features>
+      </featureAttributes>
+      <featureAttributes>
+        <attributeType>coreProvisioningParameter</attributeType>
+        <attributeName>CAMSSolicitationCode</attributeName>
+        <valueUnit>PER</valueUnit>
+        <value>7016</value>
+      </featureAttributes>
+    </featureAttributeGroup>
+  </features>
 	<features>
 		<featureIdentifier>1400</featureIdentifier>
 		<name>Affinity Rewards</name>
@@ -1044,7 +1067,7 @@
 			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
 			<featureAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>ValueAddedServiceConfiguration|ng-component=ng-value-added-service-configuration~child-ng-components=ng-affinity-rewards-value-added-service-configuration~ProceduralStepName=Offer~ZOrder=80</attributeName>
+				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-affinity-rewards-value-added-service-configuration~ProceduralStepName=Offer~ZOrder=80</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 		<featureAttributeGroup>
@@ -1095,7 +1118,7 @@
 			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
 			<featureAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>ValueAddedServiceConfiguration|ng-component=ng-value-added-service-configuration~child-ng-components=ng-credit-card-insurance-value-added-service-configuration~ProceduralStepName=Offer~ZOrder=80</attributeName>
+				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-credit-card-insurance-value-added-service-configuration~ProceduralStepName=Offer~ZOrder=80</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 		<featureAttributeGroup>

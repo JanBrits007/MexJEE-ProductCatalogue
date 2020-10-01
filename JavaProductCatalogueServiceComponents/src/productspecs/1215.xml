@@ -152,9 +152,13 @@
 	<productAttributeGroup>
 		<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
 		<productAttributes>
-			<attributeType>DocumentDescription</attributeType>
-			<attributeName>Contract|nedbank-commercial-release/CreditCardProductContract|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
-		</productAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>DocumentExclusion</attributeType>
+            <attributeName>Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
+        </productAttributes>
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
 			<attributeName>Download</attributeName>
@@ -263,6 +267,11 @@
 			<attributeName>FinalCaseQualityAssuranceRequired</attributeName>
 			<value>true</value>
 		</productAttributes>
+		<productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>FinalCaseQualityAssuranceExclusion</attributeName>
+            <value>LimitIncrease</value>
+        </productAttributes>
 		<productAttributes>
 			<attributeType>bool</attributeType>
 			<attributeName>FinalCaseQualityAssuranceSignatureTypeCheck</attributeName>
@@ -402,7 +411,67 @@
 		<productAttributes>
 			<attributeType>boolean</attributeType>
 			<attributeName>checkStaffOnMDM</attributeName>
+			<value>false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>executeCardBusinessRuleToPresentDocuments</attributeName>
 			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>statusSetting</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>executeArrangementCrossSellRules</attributeName>
+			<value>true</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+        <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subNedbankLogo</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+		<poductAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericDetails</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subClientsRightsAndObligations</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericTCForCreditProducts</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericImpConfirmation</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericSignatures</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCard|ContractComponentProductType=1215</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCardTC|ContractComponentProductType=1215</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<features>
