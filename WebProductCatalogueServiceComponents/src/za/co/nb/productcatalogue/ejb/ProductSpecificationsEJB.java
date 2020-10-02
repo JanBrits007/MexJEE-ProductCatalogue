@@ -137,6 +137,12 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         mLog.debug("Trace 1 >>" + productSpecificationID + "<<,>>" + caseID + "<<");
 
         // Get the product spec.
+        if(caseID != null){
+            ProductSpecificationSubstitutionUtil util = new ProductSpecificationSubstitutionUtil();
+            productSpecificationID = util.substituteBusinessCaseProductIDBasedOnBusinessRules(productSpecificationID, caseID);
+            mLog.debug("Trace 1.1 : substituteProductIDBasedOnBusinessRules >>" + productSpecificationID + "<<,>>" + caseID + "<<");
+        }
+
         ProductType productSpec = getProductSpecificationXMLByID(productSpecificationID);
 
         // What environment are we running in?
