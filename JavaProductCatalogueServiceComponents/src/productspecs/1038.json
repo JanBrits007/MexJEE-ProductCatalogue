@@ -2,15 +2,15 @@
     "product": [
         {
             "productIdentifier": "1038",
-            "name": "NPW Amex Gold Charge",
-            "shortDescription": "NEDBANK PRIVATE WEALTH AMEX GOLD CHARGE T1",
+            "name": "NPW PAYU Credit Card",
+            "shortDescription": "Dual card offering consisting of the Nedbank Private Wealth Visa Infinite credit card and complimentary Nedbank Private Wealth American Express® credit card with both cards having access to one credit card account/facility which is styled as a standalone pay-as-you-use account.",
             "productPricing": [
                 {
                     "type": "AdminFee",
-                    "amount": "60",
+                    "amount": "105",
                     "frequency": "monthly",
                     "currency": "ZAR",
-                    "description": "R 60 pm"
+                    "description": "R 105.00 pm"
                 }
             ],
             "featuresAndBenefits": [
@@ -24,7 +24,8 @@
                         "Automatic basic travel insurance cover of up to R2 000 000",
                         "For ease and convenience we offer a budget facility for larger than normal purchases which clients can then pay off over 3, 6, 12, 24 or 36 months",
                         "Optional Credit card insurance to ensure financial security and peace of mind in the event of death, disability, critical illness or retrenchment",
-                        "Option to join the Membership Rewards Programme"
+                        "Option to join the Greenbacks Rewards Programme",
+                        "Option to join the Nedbank Affinity Programme"
                     ]
                 }
             ],
@@ -249,6 +250,13 @@
                             "isComparable": "false",
                             "value": "true",
                             "valueUnit": "bool"
+                        },
+                        {
+                            "attributeType": "Feature",
+                            "attributeName": "isNPWPayuCreditCard",
+                            "isComparable": "true",
+                            "value": "true",
+                            "valueUnit": "bool"
                         }
                     ]
                 },
@@ -429,7 +437,7 @@
                         },
                         {
                             "attributeName": "maximumCreditAvaliableZAR",
-                            "value": "200000"
+                            "value": "1000000"
                         }
                     ]
                 },
@@ -672,12 +680,12 @@
                     ]
                 },
                 {
-                    "featureIdentifier": "1334",
-                    "name": "Membership Rewards™",
-                    "mandatory": "false",
+                    "featureIdentifier": "1454",
+                    "name": "Nedbank Greenbacks Rewards",
+                    "mandatory": "true",
                     "preSelected": "true",
-                    "shortDescription": "Earn points on virtually all the spend on your card and enjoy a range of fantastic rewards.",
-                    "description": "Please note you will receive a Membership Rewards™ Redemption card in order to spend you rewards.",
+                    "shortDescription": "By joining our Greenbacks Rewards Programme you will earn rewards when you use your credit card or one of our other transactional accounts.",
+                    "description": "As part of NPW PAYU Credit Card, you can enjoy Nedbank Greenbacks rewards at no extra cost.",
                     "featureGrouping": {
                         "featureGroupName": "Loyalty",
                         "featureGroupRuleForProduct": "Optional"
@@ -688,9 +696,9 @@
                         "fee": [
                             {
                                 "type": "AdminFee",
-                                "description": "R24.00 per month",
+                                "description": "R22.00 per month",
                                 "currency": "ZAR",
-                                "amount": "24.00",
+                                "amount": "22.00",
                                 "frequency": "Monthly"
                             }
                         ]
@@ -758,16 +766,16 @@
                     ]
                 },
                 {
-                    "featureIdentifier": "1465",
-                    "name": "Redemption Card",
+                    "featureIdentifier": "1333",
+                    "name": "Nedbank Greenbacks Shop Card",
                     "mandatory": "false",
                     "preSelected": "true",
-                    "shortDescription": "What is the Redemption card?",
-                    "description": "We' have made it quick and easy to redeem and spend all the rewards you've earned using the Redemption card.",
+                    "shortDescription": "SHOP card",
+                    "description": "Great news! We've made it quick and easy to redeem all the Greenbacks you've earned with your very own SHOP card. We're issuing you one as we speak.",
                     "featureDisplayAdditionalInformationWidget": "No",
                     "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
-                    "featureDisplayPosition": "MembershipRewards",
-                    "referenceProductID": "1334",
+                    "featureDisplayPosition": "VAS",
+                    "referenceProductID": "1454",
                     "featurePricing": {
                         "fee": [
                             {
@@ -894,108 +902,6 @@
                 {
                     "featureIdentifier": "1099",
                     "name": "Credit card insurance",
-                    "mandatory": "false",
-                    "preSelected": "true",
-                    "shortDescription": "Our Card Insurance",
-                    "description": "Detailed description of feature",
-                    "featureGrouping": {
-                        "featureGroupName": "Card Insurance",
-                        "featureGroupRuleForProduct": "OptionalIfAlternativeSelected"
-                    },
-                    "featureType": "BoltOn",
-                    "referenceProductID": "-1",
-                    "featurePricing": {
-                        "fee": [
-                            {
-                                "type": "InsurancePremium",
-                                "amount": "0",
-                                "frequency": "Monthly",
-                                "currency": "ZAR",
-                                "description": "Insurance Premium"
-                            },
-                            {
-                                "type": "InitiationFee",
-                                "amount": "10",
-                                "frequency": "OnceOff",
-                                "currency": "ZAR",
-                                "description": "Initiation Fee"
-                            }
-                        ]
-                    },
-                    "featureFulfilment": [
-                        {
-                            "channel": "selfServiceWeb",
-                            "fulfilmentType": "setting",
-                            "fulfilmentInputSetting1": "N/A",
-                            "fulfilmentInputSetting2": "N/A"
-                        },
-                        {
-                            "channel": "staffAssisted",
-                            "fulfilmentType": "setting",
-                            "fulfilmentInputSetting1": "N/A",
-                            "fulfilmentInputSetting2": "N/A"
-                        }
-                    ],
-                    "featureDisplayAdditionalInformationWidget": "No",
-                    "featureOnAPageWebURL": "/content/nedbank/desktop/gt/en/someFeaturePage.html",
-                    "featureDisplayPosition": "preOffer",
-                    "featureAttributeGroup": [
-                        {
-                            "attributeGroupName": "placeholder-Fullstructure",
-                            "featureAttributes": {
-                                "attributeType": "type",
-                                "attributeName": "name",
-                                "minValue": "1",
-                                "maxValue": "2",
-                                "valueUnit": "test",
-                                "value": "some value"
-                            }
-                        },
-                        {
-                            "attributeGroupName": "SystemRelated",
-                            "featureAttributes": {
-                                "attributeType": "Flag",
-                                "attributeName": "StraightThroughProcess",
-                                "value": "true"
-                            }
-                        },
-                        {
-                            "attributeGroupName": "coreProvisioningParameters",
-                            "featureAttributes": [
-                                {
-                                    "attributeType": "coreProvisioningParameter",
-                                    "attributeName": "LoanGroupingCode",
-                                    "valueUnit": "PER",
-                                    "value": "PER"
-                                },
-                                {
-                                    "attributeType": "coreProvisioningParameter",
-                                    "attributeName": "provisionInBranch",
-                                    "valueUnit": "boolean",
-                                    "value": "false"
-                                },
-                                {
-                                    "attributeType": "coreProvisioningParameter",
-                                    "attributeName": "legacyProductID",
-                                    "valueUnit": "string",
-                                    "value": "1087"
-                                }
-                            ]
-                        },
-                        {
-                            "attributeGroupName": "coreProvisioningParameters",
-                            "featureAttributes": {
-                                "attributeType": "coreProvisioningParameter",
-                                "attributeName": "ClientSet",
-                                "valueUnit": "33",
-                                "value": "33"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "featureIdentifier": "1100",
-                    "name": "Payment protection plan",
                     "mandatory": "false",
                     "preSelected": "true",
                     "shortDescription": "Our Card Insurance",

@@ -162,18 +162,6 @@
             <attributeType>AvailableAction</attributeType>
             <attributeName>Email</attributeName>
         </productAttributes>
-        <productAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>WetSign</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>DigitallySign</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>ElectronicallySign</attributeName>
-        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
@@ -261,6 +249,11 @@
             <attributeType>bool</attributeType>
             <attributeName>FinalCaseQualityAssuranceRequired</attributeName>
             <value>false</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>FinalCaseQualityAssuranceExclusion</attributeName>
+            <value>LimitIncrease</value>
         </productAttributes>
         <productAttributes>
             <attributeType>bool</attributeType>
@@ -467,6 +460,21 @@
 		<productAttributes>
 			<attributeType>boolean</attributeType>
 			<attributeName>checkStaffOnMDM</attributeName>
+			<value>false</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>executeCardBusinessRuleToPresentDocuments</attributeName>
+			<value>true</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>statusSetting</attributeName>
+			<value>true</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>executeArrangementCrossSellRules</attributeName>
 			<value>true</value>
 		</productAttributes>
 	</productAttributeGroup>

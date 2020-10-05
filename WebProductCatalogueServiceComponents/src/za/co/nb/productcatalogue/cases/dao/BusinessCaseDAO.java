@@ -139,33 +139,25 @@ public class BusinessCaseDAO {
 
 			mLog.debug("Trace 3");
 
-			try {
-				mLog.debug("Trace 4");
+			vPreparedStatement = vConnection.prepareStatement("select CASEDETS from CASECACHE where TXID = ? WITH UR");
+			vPreparedStatement.setString(1, caseID);
+			vResultSet = vPreparedStatement.executeQuery();
 
-				vPreparedStatement = vConnection.prepareStatement("select CASEDETS from CASECACHE where TXID = ? WITH UR");
-				vPreparedStatement.setString(1, caseID);
-				vResultSet = vPreparedStatement.executeQuery();
+			if(vResultSet != null && vResultSet.next()) {
+				Clob vClob = vResultSet.getClob("CASEDETS");
+				String JSON =  vClob.getSubString(1,(int)vClob.length());
 
-				if(vResultSet != null && vResultSet.next()) {
-					Clob vClob = vResultSet.getClob("CASEDETS");
-					String JSON =  vClob.getSubString(1,(int)vClob.length());
+				mLog.debug("Trace 5 >>" + JSON + "<<");
 
-					mLog.debug("Trace 5 >>" + JSON + "<<");
-
-					// Unmarshall the response to the object.
-					ObjectMapper objectMapper = new ObjectMapper();
-					result = objectMapper.readValue(JSON, BusinessCaseHeader.class);
-				}
-				else {
-					// Nothing cached.
-				}
+				// Unmarshall the response to the object.
+				ObjectMapper objectMapper = new ObjectMapper();
+				result = objectMapper.readValue(JSON, BusinessCaseHeader.class);
 			}
-			catch(Exception e) {
-				mLog.debug("Trace 7");
-				e.printStackTrace();
+			else {
+				// Nothing cached.
 			}
-		}
-		catch(Exception e) {
+
+		} catch(Exception e) {
 			mLog.debug("Trace 8");
 			mLog.error(e);
 			throw e;

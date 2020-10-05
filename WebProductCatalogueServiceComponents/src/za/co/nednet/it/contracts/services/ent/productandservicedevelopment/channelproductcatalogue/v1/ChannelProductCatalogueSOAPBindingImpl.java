@@ -3,53 +3,43 @@ package za.co.nednet.it.contracts.services.ent.productandservicedevelopment.chan
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.jws.WebService;
 import javax.xml.ws.Holder;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import za.co.nb.productcatalogue.dao.ProductSpecificationsServiceDAO;
+import za.co.nb.productcatalogue.ejb.ProductSpecificationsEJB;
+import za.co.nb.productcatalogue.ejb.ProductSpecificationsEJB;
 
-//@Stateless
-@javax.jws.WebService(endpointInterface = "za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.IChannelProductCatalogue", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", serviceName = "ChannelProductCatalogue", portName = "ChannelProductCatalogueSOAPBindingPort")
+
+@Stateless
+@TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
+@WebService(endpointInterface = "za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.IChannelProductCatalogue", targetNamespace = "http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1", serviceName = "ChannelProductCatalogue", portName = "ChannelProductCatalogueSOAPBindingPort")
 public class ChannelProductCatalogueSOAPBindingImpl {
 
-	private ProductSpecificationsServiceDAO mProductSpecificationsDAO;
+	@EJB
+	private ProductSpecificationsEJB productSpecificationsBean;
+
 	private final Log mLog = LogFactory.getLog(getClass());
 
-	private ProductSpecificationsServiceDAO getProductSpecificationsDAO() {
-		if (mProductSpecificationsDAO == null) {
-			mProductSpecificationsDAO = new ProductSpecificationsServiceDAO();
-		}
-
-		return mProductSpecificationsDAO;
-	}
-
-	public void retrieveProducts(String productCategoryID,
-			String productFamilyID, String productLinesID,
-			Holder<ResultSetType> resultSet,
-			Holder<ProductCatalogueType> productCatalogue) {
+	public void retrieveProducts(String productCategoryID, String productFamilyID, String productLinesID, Holder<ResultSetType> resultSet, Holder<ProductCatalogueType> productCatalogue) {
 		return;
 	}
 
-	public void getProductHierarchy(String productCatalogueID,
-			Holder<ResultSetType> resultSet,
-			Holder<ProductCatalogueType> productCatalogue) {
+	public void getProductHierarchy(String productCatalogueID, Holder<ResultSetType> resultSet, Holder<ProductCatalogueType> productCatalogue) {
 		return;
-	}
-
-	private ResultSetType createResult(String code, String reason) {
-		ResultSetType resultSetType = new ResultSetType();
-		resultSetType.setResultCode(code);
-		resultSetType.setResultDescription(reason);
-		return resultSetType;
 	}
 
 	public void getProduct(List<Integer> productIdentifier,Holder<ResultSetType> resultSet, Holder<List<ProductType>> product) {
 		mLog.debug("Trace 1");
 
 		try {
-			List<ProductType> producttype = getProductSpecificationsDAO().getProductSpecificationXMLByID(productIdentifier);
+			List<ProductType> producttype = productSpecificationsBean.getProductSpecificationXMLByID(productIdentifier);
 
 			if (producttype != null && producttype.size() > 0) {
 				mLog.debug("Trace 2");
@@ -130,14 +120,14 @@ public class ChannelProductCatalogueSOAPBindingImpl {
 		mLog.debug("Trace 1");
 
 		// First check the cache.
-		return getProductSpecificationsDAO().getProductSpecificationXMLByID(new Integer(pProductID));
+		return productSpecificationsBean.getProductSpecificationXMLByID(new Integer(pProductID));
 	}
 	
 	public void getProductByArrangementID(Integer productIdentifier, String arrangementID, Holder<ResultSetType> resultSet, Holder<ProductType> product) {
 		mLog.debug("Trace 1");
 
 		try {
-			ProductType productType = getProductSpecificationsDAO().getProductSpecificationByIDAndArrangementID("" + productIdentifier, arrangementID);
+			ProductType productType = productSpecificationsBean.getProductSpecificationByIDAndArrangementID("" + productIdentifier, arrangementID);
 
 			if (productType != null) {
 				mLog.debug("Trace 2");
@@ -187,5 +177,12 @@ public class ChannelProductCatalogueSOAPBindingImpl {
 				resultSet.value = createResult("R01", e.getMessage());
 			}
 		}
-	}	
+	}
+
+	private ResultSetType createResult(String code, String reason) {
+		ResultSetType resultSetType = new ResultSetType();
+		resultSetType.setResultCode(code);
+		resultSetType.setResultDescription(reason);
+		return resultSetType;
+	}
 }
