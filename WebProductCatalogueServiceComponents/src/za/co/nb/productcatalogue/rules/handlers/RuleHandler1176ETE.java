@@ -1,18 +1,15 @@
 package za.co.nb.productcatalogue.rules.handlers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.json.simple.JSONObject;
 
-import za.co.nb.arrangementmanagement.analysis.rrb.PersonDataCaptured;
+import za.co.nb.common.htpp.client.HttpClientUtil;
 import za.co.nb.onboarding.casemanagement.BusinessCaseManagementDAO;
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 import za.co.nb.productcatalogue.exceptions.BusinessRuleExecutionException;
-import za.co.nednet.it.contracts.data.ent.party.v3.ArrangementDetailBObjType;
-import za.co.nednet.it.contracts.data.ent.party.v3.Client360ViewResBObjType;
-import za.co.nednet.it.contracts.data.ent.party.v3.PersonDetailBObjType;
+import za.co.nb.system.config.dao.SystemConfiguratorDAO;
+import za.co.nb.system.config.environment.Environment;
 
 public class RuleHandler1176ETE extends BaseProductSpecificationRuleHandler {
 
@@ -31,8 +28,36 @@ public class RuleHandler1176ETE extends BaseProductSpecificationRuleHandler {
         if(businessCase != null && businessCase.getClientInContextECN() != null){
 
             mLog.debug("Trace 2");
-            PersonDataCaptured personDataCaptured = new PersonDataCaptured();
-            isRRBClient = personDataCaptured.isRRBClient(businessCase.getClientInContextECN());
+            SystemConfiguratorDAO systemConfiguratorDAO = new SystemConfiguratorDAO();
+            try {
+
+                mLog.debug("Trace 2.1");
+                Environment environment = systemConfiguratorDAO.getEnvironment();
+                String serviceUrl = environment.PARTY_MANAGEMENT_CLIENT_CHECK_URL.toString();
+                StringBuilder builder = new StringBuilder();
+                builder.append(serviceUrl);
+                builder.append("/rrbclient/");
+                builder.append(businessCase.getClientInContextECN());
+                serviceUrl = builder.toString();
+
+                mLog.debug("Trace 2.2 Service URL : "+serviceUrl);
+                HttpClientUtil httpUtils = new HttpClientUtil();
+                JSONObject response=httpUtils.sendGET(serviceUrl,null);
+
+                if(response != null && response.get("resultSet") != null ){
+                    String resultCode = (String)((JSONObject)response.get("resultSet")).get("resultCode");
+
+                    mLog.debug("Trace 2.3");
+                    if(resultCode.equalsIgnoreCase("R00")){
+                        mLog.debug("Trace 2.4 : Is RRB Client :"+(boolean)response.get("rrbclient"));
+                        isRRBClient = (boolean)response.get("rrbclient");
+                    }
+                }
+            } catch (Exception e) {
+                mLog.debug("Trace 2.4");
+                e.printStackTrace();
+            }
+
             if(isRRBClient){
 
                 mLog.debug("Trace 3");
