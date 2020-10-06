@@ -1,5 +1,9 @@
 package za.co.nb.productcatalogue.services.rest.applications;
 
+import za.co.nb.productcatalogue.services.rest.resources.ProductCatalogueResource;
+import za.co.nb.productcatalogue.services.rest.resources.ProductRecommendationResource;
+import za.co.nb.productcatalogue.services.rest.resources.ProductSpecificationsResource;
+
 import java.util.HashSet;
 import java.util.Set;
 import javax.ws.rs.core.Application;
@@ -7,9 +11,9 @@ public class ProductConfig extends Application {
 	  @Override
 	  	   public Set<Class<?>> getClasses() {
 	        Set<Class<?>> classes = new HashSet<Class<?>>();
-	        classes.add(za.co.nb.productcatalogue.services.rest.resources.ProductCatalogue.class);
-	        classes.add(za.co.nb.productcatalogue.services.rest.resources.ProductSpecifications.class);
-		  	classes.add(za.co.nb.productcatalogue.services.rest.resources.ProductRecommendation.class);
+	        classes.add(ProductCatalogueResource.class);
+	        classes.add(ProductSpecificationsResource.class);
+		  	classes.add(ProductRecommendationResource.class);
 	        return classes;
 	    }
 }

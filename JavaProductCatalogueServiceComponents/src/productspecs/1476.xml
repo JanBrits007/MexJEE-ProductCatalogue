@@ -198,7 +198,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|ActivateProductsGatherProductDetails|FinalizeFrontOfficeInteraction</value>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -208,12 +208,12 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>breadcrumbSteps</attributeName>
-         <value>Authenticate|Product Setup|About You|Finalisation|Customisation</value>
+         <value>Authenticate|Product Setup|About You|Customisation|Finalisation</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Product Setup|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|ActivateProductsGatherProductDetails=Customisation|FinalizeFrontOfficeInteraction=Customisation</value>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Product Setup|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherProductDetails=Customisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
       </productAttributes>
       <productAttributes>
          <attributeType>boolean</attributeType>
@@ -449,7 +449,17 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>CommunicationSystem</attributeName>
-         <value>GenCom</value>
+         <value>SpecCom</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>commsAudience</attributeName>
+         <value>customer|banker</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>welcomeComms</attributeName>
+         <value>EMAIL</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -531,7 +541,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>breadcrumbSteps</attributeName>
-            <value>Authenticate|Product Setup|About You|Credit Info|Finalisation|Customisation</value>
+            <value>Authenticate|Product Setup|About You|Credit Info|Customisation|Finalisation</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>

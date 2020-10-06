@@ -26,7 +26,7 @@ import java.util.Date;
 
 @Path( "/producthierarchy" )
 @Stateless
-public class ProductCatalogue {
+public class ProductCatalogueResource {
 
 	private final Log mLog = LogFactory.getLog(getClass());
 
