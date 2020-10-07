@@ -33,8 +33,8 @@ public class RuleHandler1176ETE extends BaseProductSpecificationRuleHandler {
 
                 mLog.debug("Trace 2.1");
                 Environment environment = systemConfiguratorDAO.getEnvironment();
-                //String serviceUrl = environment.PARTY_MANAGEMENT_CLIENT_CHECK_URL.toString();
-                String serviceUrl ="https://zeb1swn1.it.nednet.co.za:9443/WebPartyManagement/branchmanagement/v1";
+                String serviceUrl = environment.PARTY_MANAGEMENT_CLIENT_CHECK_URL.toString();
+                //String serviceUrl ="https://zeb1swn1.it.nednet.co.za:9443/WebPartyManagement/branchmanagement/v1";
                 StringBuilder builder = new StringBuilder();
                 builder.append(serviceUrl);
                 builder.append("/rrbclient/");
