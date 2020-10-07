@@ -1287,6 +1287,84 @@
       </featureAttributeGroup>
    </features>
    <features>
+      <featureIdentifier>1008</featureIdentifier>
+      <name>No Funds Alert</name>
+      <mandatory>false</mandatory>
+      <preSelected>true</preSelected>
+      <shortDescription>Electronic notifications when you have insufficient funds for an attempted debit order</shortDescription>
+      <description>Detailed description of feature</description>
+      <featureGrouping>
+         <featureGroupName>Loyalty</featureGroupName>
+         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
+      </featureGrouping>
+      <featureType>BoltOn</featureType>
+      <referenceProductID>-1</referenceProductID>
+      <featurePricing>
+         <fee>
+            <type>AdminFee</type>
+            <description>R13 per sms</description>
+            <currency>ZAR</currency>
+            <amount>13</amount>
+            <frequency>Transactional</frequency>
+         </fee>
+      </featurePricing>
+      <featureFulfilment>
+         <channel>selfServiceWeb</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureFulfilment>
+         <channel>staffAssisted</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+      <featureDisplayPosition>offer</featureDisplayPosition>
+      <featureAttributeGroup>
+         <attributeGroupName>SystemRelated</attributeGroupName>
+         <featureAttributes>
+            <attributeType>Flag</attributeType>
+            <attributeName>StraightThroughProcess</attributeName>
+            <value>True</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>FeatureCode</attributeName>
+            <valueUnit>string</valueUnit>
+            <value>ThisisthesFeaturecode</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>provisionInBranch</attributeName>
+            <valueUnit>boolean</valueUnit>
+            <value>false</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>legacyProductID</attributeName>
+            <valueUnit>string</valueUnit>
+            <value>1213</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+         <featureAttributes>
+            <attributeType>type</attributeType>
+            <attributeName>name</attributeName>
+            <minValue>1</minValue>
+            <maxValue>2</maxValue>
+            <valueUnit>text</valueUnit>
+            <value>some value</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
+   <features>
       <featureIdentifier>1454</featureIdentifier>
       <name>Loyalty and Rewards programme</name>
       <mandatory>false</mandatory>
