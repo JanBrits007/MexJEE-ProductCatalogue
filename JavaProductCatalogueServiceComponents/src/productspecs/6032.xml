@@ -149,7 +149,7 @@
 		 </productAttributes>
 		 <productAttributes>
 				<attributeType>clientInformationRequirement</attributeType>
-				<attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~ProceduralStepName=Employment details~ZOrder=80</attributeName>
+				<attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~child-ng-components=EmployerDetails~ProceduralStepName=Employment details~ZOrder=80</attributeName>
 		 </productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -254,6 +254,29 @@
 			<attributeType>DocumentExclusion</attributeType>
 			<attributeName>Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
 		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+	 <attributeGroupName>CaseConfiguration</attributeGroupName>
+	 <productAttributes>
+		 <attributeType>string</attributeType>
+		 <attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
+		 <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+	 </productAttributes>
+	 <productAttributes>
+		 <attributeType>string</attributeType>
+		 <attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
+		 <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+	 </productAttributes>
+	 <productAttributes>
+		 <attributeType>string</attributeType>
+		 <attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
+		 <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+	 </productAttributes>
+	 <productAttributes>
+		 <attributeType>string</attributeType>
+		 <attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
+		 <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+	 </productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
