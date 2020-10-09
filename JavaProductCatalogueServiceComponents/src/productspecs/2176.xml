@@ -5,17 +5,11 @@
         <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
         <productAttributes>
             <attributeType>Compliance</attributeType>
-            <attributeName>BureauCheckConsent</attributeName>
+            <attributeName>NotUnderCreditAdministrationV2</attributeName>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
-        <productAttributes>
-            <attributeType>Evidence</attributeType>
-            <attributeName>ProofOfIdentificationClauseV2</attributeName>
-            <isComparable>false</isComparable>
-            <valueUnit>bool</valueUnit>
-        </productAttributes>
         <productAttributes>
             <attributeType>Evidence</attributeType>
             <attributeName>LatestBankStatementsClauseV2</attributeName>
@@ -44,10 +38,14 @@
     <productAttributeGroup>
         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
         <productAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CreditCardDetailsV2|1021_min=5000.00~1021_max=300000.00~1400_min=2000.00~1400_max=300000.00~1108_min=5000.00~1108_max=300000.00~1476_min=2000.00~1476_max=300000.00~1478_min=10000.00~1478_max=300000.00~0_min=10000.00~0_max=300000.00</attributeName>
-        </productAttributes>
-    </productAttributeGroup>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>TransactionalProductDetailsV2</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>OverdraftDetailsV2|min=5000.00~max=300000.00~additionalInfo=true</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
         <productAttributes>
@@ -104,10 +102,6 @@
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>KeepingInTouchInformationV2|sideStepperDisplayName=Keep in touch</attributeName>
         </productAttributes>
-        <productAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDoneInformationV2|sideStepperDisplayName=What's next</attributeName>
-        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
@@ -119,12 +113,17 @@
         <productAttributes>
             <attributeType>int</attributeType>
             <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
-            <value>5</value>
+            <value>5-10</value>
         </productAttributes>
         <productAttributes>
             <attributeType>int</attributeType>
             <attributeName>ApplicationEndToEndExecutionTimeMinutes</attributeName>
             <value>90</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>enum</attributeType>
+            <attributeName>riskAnalysisMechanismIntent0</attributeName>
+            <value>automated</value>
         </productAttributes>
         <productAttributes>
             <attributeType>enum</attributeType>
@@ -143,13 +142,18 @@
         </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
+            <attributeName>CODEngine</attributeName>
+            <value>RRBCOD</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
             <attributeName>breadcrumbSteps</attributeName>
             <value>Authenticate|Product Setup|About You|Credit Info|Customisation|Finalisation</value>
         </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
             <attributeName>GNBAIntentToActivityMapping</attributeName>
-            <value>VerifyIdentity=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherProductDetails=Customisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
+            <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Product Setup|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherProductDetails=Customisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -199,29 +203,73 @@
         </productAttributes>
     </productAttributeGroup>
     <features>
-        <featureIdentifier>1489</featureIdentifier>
-        <name>Multi App Cheque/Credit Card Plastic Card</name>
-        <mandatory>true</mandatory>
-        <preSelected>true</preSelected>
-        <featureAttributeGroup>
-            <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-            <featureAttributes>
-                <attributeType>productInformationRequirement</attributeType>
-                <attributeName>CardDeliveryDetails|sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1489~restrictOptOut=true~allowCardCollection~allowCardDelivery</attributeName>
-            </featureAttributes>
-        </featureAttributeGroup>
-    </features>
-    <features>
-        <featureIdentifier>4387</featureIdentifier>
-        <name>Amex Multi App Cheque/Credit Card Plastic Card</name>
-        <mandatory>true</mandatory>
-        <preSelected>true</preSelected>
-        <featureAttributeGroup>
-            <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-            <featureAttributes>
-                <attributeType>productInformationRequirement</attributeType>
-                <attributeName>CardDeliveryDetails|sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=4387~restrictOptOut=true~allowCardCollection~allowCardDelivery</attributeName>
-            </featureAttributes>
-        </featureAttributeGroup>
-    </features>
+      <featureIdentifier>1014</featureIdentifier>
+      <name>Overdraft</name>
+      <mandatory>false</mandatory>
+      <preSelected>true</preSelected>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>PersonalInformationV2|displaySummary=true~sideStepperDisplayName=Your personal information~ResidentialAddress~PostalAddress</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ComplianceInformationV2|displaySummary=true~sideStepperDisplayName=Compliance information~MaritalStatus</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>EmploymentInformationV2|displaySummary=true~sideStepperDisplayName=Employment details~PresentEmployer~WorkContactDetails</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>IncomeInformationV2|sideStepperDisplayName=Income details~activityStep=Credit Info~NettSalary~GrossSalary~SalaryAccountDetails</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>DebtObligationsInformationV2|sideStepperDisplayName=Debt obligations~activityStep=Credit Info</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>HouseholdExpensesInformationV2|sideStepperDisplayName=Household expenses~activityStep=Credit Info~TotalExpenses~DetailedExpenses</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>CreditSummaryPlaceholderV2|sideStepperDisplayName=Credit summary~activityStep=Credit Info</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>CardDeliveryDetails|restrictOptOut=true</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>enum</attributeType>
+            <attributeName>riskAnalysisMechanismIntent2</attributeName>
+            <value>automatedManualAssessment</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>breadcrumbSteps</attributeName>
+            <value>Authenticate|Product Setup|About You|Credit Info|Customisation|Finalisation</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>leadTemplateName</attributeName>
+            <value>nedbank-commercial-release/AppFormPBStaffAssisted</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>bool</attributeType>
+            <attributeName>isLead</attributeName>
+            <value>true</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
 </product>
