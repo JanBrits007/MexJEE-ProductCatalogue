@@ -1,17 +1,18 @@
 {
-	"productIdentifier": 1400,
-	"name": "Young Professional Bundle",
-	"shortDescription": "Exclusively for under 30's with a 4-year qualification, this bundle includes a credit card facility with an optional overdraft, plus all the perks at 50% of the monthly fee.",
-	"description": "If you’re under 30 with a four-year degree, we know you are going places. Get fast-tracked into a private banking experience at a 50% reduced monthly fee.~This bundle includes a credit card facility with an optional overdraft, plus all the perks you deserve.",
-	"productPricing": [{
-		"type": "AdminFee",
-		"amount": 180.00,
-		"frequency": "Monthly",
-		"currency": "ZAR",
-		"description": "R 180.00 pm"
-	}],
+	"productIdentifier": 2176,
+	"name": "Professional Overdraft",
+	"shortDescription": "A credit facility linked to your current account, with a personalised interest rate, for extra cash flow when you need it.",
+	"description": "A credit facility linked to your current account, with a personalised interest rate, for extra cash flow when you need it.",
+	"productPricing": [
+		{
+			"type": "AdminFee",
+			"amount": 0.00,
+			"frequency": "Monthly",
+			"currency": "ZAR",
+			"description": "R 0.00 pm"
+		}
+	],
 	"specialFeature": "",
-	"eligibilityNote":"Young Professional~AGE LIMIT|be between 18 and 30 years old~have a 4 year degree, honours level or NQF 8 equivalent qualification",
 	"additionalInfo": [
 		"Professional account with significant transactional value",
 		"Dedicated relationship banker for you and your household, supported by a dedicated credit team and with access to investment, global-banking and wealth specialists",
@@ -30,11 +31,11 @@
 		"sh3~Unique investments to suit your lifestyle",
 		"sh4~Finance that lets you dream big",
 		"sh5~Ways to bank that suit your hours",
-		"sh6~Tailored offering for young professionals and those over 54"
+		"sh6~Tailored offering for young professionals and those over 54"		
 	],
 	"startApplicationScreen": {
 		"isRequired": "false"
-	},
+	},	
 	"redirect": {
 		"shouldRedirect": false,
 		"redirectUrl": null
@@ -112,27 +113,20 @@
 	],
 	"eligibilityRules": [
 		{
-		  "attributeType": "EligibilityRule",
-		  "attributeName": "Age",
-		  "minValue": "18",
-		  "maxValue": "26",
-		  "valueUnit": "year",
-		  "description": "Individuals from 18 to 29 years"
-		},	
-		{
 			"attributeType": "EligibilityRule",
 			"attributeName": "Age",
 			"minValue": "27",
 			"maxValue": "29",
 			"valueUnit": "year",
-			"description": ""
-		  },				 			
+			"description": "Individuals over the age of 18 years"
+		},
 		{
 			"attributeType": "EligibilityRule",
-			"attributeName": "Education",
-			"minValue": "4",
+			"attributeName": "Age",
+			"minValue": "30",
+			"maxValue": "999",
 			"valueUnit": "year",
-			"description": "Minimum 4 year degree or 3 years plus Honours (NQF level 8 equivalent)"
+			"description": ""
 		},
 		{
 			"attributeType": "EligibilityRule",
@@ -140,14 +134,14 @@
 			"minValue": "750001",
 			"maxValue": "999999999",
 			"valueUnit": "ZAR",
-			"description": "There is no minimum income requirement"
-		},				 
+			"description": "There is no minimum income requirement this package is recommended for those earning from R750,000 per annum"
+		},
 		{
-		  "attributeType": "EligibilityRule",
-		  "attributeName": "Package",
-		  "value": "A bundled offering",
-		  "valueUnit": "package",
-		  "description": "Not available to trust, companies or legal entities"
+			"attributeType": "EligibilityRule",
+			"attributeName": "Package",
+			"value": "A bundled offering",
+			"valueUnit": "package",
+			"description": "Not available to trust, companies or legal entities"
 		},
 		{
 			"attributeType": "EligibilityRule",
@@ -155,9 +149,9 @@
 			"description": "All credit facilities are subject to credit and affordability checks"
 		},
 		{
-		  "attributeType": "ConcurrentApplicationLimitationGroup",
-		  "attributeName": "ConcurrentApplicationLimitation",
-		  "value": "1"
+			"attributeType": "ConcurrentApplicationLimitationGroup",
+			"attributeName": "ConcurrentApplicationLimitation",
+			"value": "1"
 		}
 	],
 	"requiredDocuments": [
@@ -169,52 +163,30 @@
 			"description": "card/document or passport with valid permit"
 		},
 		{
-				"attributeType": "Display",
-				"attributeName": "3-Months bank statements",
-				"isComparable": "false",
-				"valueUnit": "bool",
-				"description": "(we can source these for you from most banks)"
-		},		
+			"attributeType": "Display",
+			"attributeName": "3-Months bank statements",
+			"isComparable": "false",
+			"valueUnit": "bool",
+			"description": "(we can source these for you from most banks)"
+		},
 		{
 			"attributeType": "Display",
 			"attributeName": "Additional documents",
 			"isComparable": "false",
 			"valueUnit": "bool",
 			"description": "for overdraft and credit card applications, additional documents may be required"
-		},
-		{
-			"attributeType": "Display",
-			"attributeName": "Education declaration",
-			"isComparable": "false",
-			"valueUnit": "bool",
-			"description": "you will be required to sign a declaration that you have the required level of education to qualify"
 		}
 	],
 	"productFeatures": [
 		{
 		  "name": "Age",
 		  "displayName": "Age",
-		  "description": "Under 30 with a 4 year qualification"
+		  "description": "Individuals over the age of 18 years"
 		},
 		{
 		  "name": "fee",
 		  "displayName": "Monthly Fee",
-		  "description": "R 180.00"
-		},
-		{
-		  "name": "Income",
-		  "displayName": "Income",
-		  "description": "There is no minimum income requirement"
-		},
-		{
-		  "name": "RelationshipBanker",
-		  "displayName": "Relationship Banker",
-		  "description": "Included"
-		},
-		{
-		  "name": "Chequecard",
-		  "displayName": "Cheque card",
-		  "description": "Professional (Platinum Greenbacks) cheque card included"
+		  "description": "R 360.00"
 		},
 		{
 		  "name": "Nedbankatmwithdrawals",
@@ -260,6 +232,21 @@
 		  "name": "SendiMali",
 		  "displayName": "Send i-Mali",
 		  "description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+		},
+		{
+		  "name": "Income",
+		  "displayName": "Income",
+		  "description": "No minimum income is required however, this offering is ideally suited to those earning over R750 000 per year."
+		},
+		{
+		  "name": "RelationshipBanker",
+		  "displayName": "Relationship Banker",
+		  "description": "Included"
+		},
+		{
+		  "name": "Chequecard",
+		  "displayName": "Cheque card",
+		  "description": "Professional (Platinum Greenbacks) cheque card included"
 		},
 		{
 		  "name": "Creditcard",
