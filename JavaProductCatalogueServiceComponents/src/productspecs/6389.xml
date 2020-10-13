@@ -58,28 +58,10 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>clientEvidenceRequirement_ActivateProducts</attributeGroupName>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>PROOFOFINCOME</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>Bank Statement</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
-   </productAttributeGroup>
-   <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GatherEvidence</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>GatherEvidence|ng-component=ng-gather-evidence~ProceduralStepName=Upload your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+         <attributeName>GatherEvidence|ng-component=UploadYourDocumentsComponent~ProceduralStepName=Upload your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -127,6 +109,25 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>KeepingInTouch|ng-component=ng-keeping-in-touch~ProceduralStepName=Keep in touch~ZOrder=120</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>GatherEvidence|ProceduralStepName=Upload your documents~ZOrder=100</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Sign documents~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>DigitalActivation|ProceduralStepName=Digital ctivation~ZOrder=80</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>AccurateInformationProvidedConfirmation|ProceduralStepName=Your declaration~ZOrder=60</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -779,6 +780,25 @@
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GatherEvidence</attributeGroupName>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>GatherEvidence|ng-component=UploadYourDocumentsComponent~ProceduralStepName=Upload your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>productDocumentPresentation|ProceduralStepName=Sign documents~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DigitalActivation|ProceduralStepName=Digital ctivation~ZOrder=80</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>AccurateInformationProvidedConfirmation|ProceduralStepName=Your declaration~ZOrder=60</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
          <attributeGroupName>PresentOfferSelection</attributeGroupName>
          <featureAttributes>
 	         <attributeType>string</attributeType>
@@ -791,6 +811,25 @@
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>VisibleArrangementSubmissionSalesMilestone|ng-component=ng-visible-arrangement-submission-sales-milestone~ProceduralStepName=CMS details~ZOrder=130</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>GatherEvidence|ProceduralStepName=Upload your documents~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Sign documents~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DigitalActivation|ProceduralStepName=Digital ctivation~ZOrder=80</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>AccurateInformationProvidedConfirmation|ProceduralStepName=Your declaration~ZOrder=60</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
