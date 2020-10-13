@@ -1,5 +1,5 @@
 <product
-        xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+    xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1015</productIdentifier>
     <name>Optimum</name>
     <shortDescription>Over 55? Maintain a R10,000 investment account and enjoy the benefits of fee reductions and the convenience of digital banking.</shortDescription>
@@ -68,21 +68,25 @@
         </productAttributes>
         <productAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>ArrangementActivationSalesMilestone</attributeName>
+            <attributeName>VisibleArrangementSubmissionSalesMilestone</attributeName>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
         <productAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>OverdraftDetails</attributeName>
+            <attributeName>OverdraftDetailsNewFlow</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ArrangementCaptureSalesMilestone</attributeName>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Nedbank Optimum terms and conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
+            <attributeName>Nedbank Optimum terms and conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -97,7 +101,7 @@
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Transactional Account Application Form|AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
+            <attributeName>Transactional Account Application Form|nedbank-commercial-release/AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -201,9 +205,9 @@
             <value>automated</value>
         </productAttributes>
         <productAttributes>
-            <attributeType>enum</attributeType>
-            <attributeName>riskAnalysisMechanismIntent0</attributeName>
-            <value>automated</value>
+          <attributeType>enum</attributeType>
+          <attributeName>riskAnalysisMechanismIntent0</attributeName>
+          <value>automated</value>
         </productAttributes>
         <productAttributes>
             <attributeType>enum</attributeType>
@@ -249,6 +253,11 @@
             <attributeType>boolean</attributeType>
             <attributeName>requiresSecurityAndCollatoralManagement</attributeName>
             <value>false</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>requiresElgiblityScoringAtIntents</attributeName>
+            <value>intent 0|intent 1</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -496,40 +505,39 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
-        <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
-        <productAttributes>
-            <attributeName>SubstituteForChannelIDs</attributeName>
-         	<value>397|378|482</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeName>SubstituteForProductID</attributeName>
-            <value>5015</value>
-        </productAttributes>
+      <attributeGroupName>DecisioningControl</attributeGroupName>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>EnforceIntent0FAISAccreditationRule</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>FAISCategoryCode</attributeName>
+         <value>1.18</value>
+      </productAttributes>
+      <productAttributes>
+          <attributeType>boolean</attributeType>
+          <attributeName>ComponentSupportsDeclineReasons</attributeName>
+          <value>true</value>
+      </productAttributes>
+      <productAttributes>
+          <attributeType>boolean</attributeType>
+          <attributeName>EnforceAgeValidationRules</attributeName>
+          <value>true</value>
+      </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
-        <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
+        <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
         <productAttributes>
-            <attributeName>SubstituteForChannelIDs</attributeName>
-        	<value>397|378|482</value>
-        </productAttributes>
-		<productAttributes>
-            <attributeName>SubstituteForIPSubnets</attributeName>
-            <value>192.168.0.0|172.238.0.0|168.142.0.0</value>
+            <attributeType>int</attributeType>
+            <attributeName>CommunicationSystem</attributeName>
+            <value>GenCom</value>
         </productAttributes>
         <productAttributes>
-            <attributeName>SubstituteForProductID</attributeName>
-            <value>5015</value>
-        </productAttributes>
-    </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
-        <productAttributes>
-            <attributeName>SubstituteForChannelIDs</attributeName>
-         	<value>397|378|482</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeName>SubstituteForProductID</attributeName>
-            <value>5015</value>
+            <attributeType>int</attributeType>
+            <attributeName>productType</attributeName>
+            <value>EMAILSMS</value>
         </productAttributes>
     </productAttributeGroup>
     <features>
@@ -750,6 +758,84 @@
                 <attributeName>legacyProductID</attributeName>
                 <valueUnit>string</valueUnit>
                 <value>1179</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+            <featureAttributes>
+                <attributeType>type</attributeType>
+                <attributeName>name</attributeName>
+                <minValue>1</minValue>
+                <maxValue>2</maxValue>
+                <valueUnit>text</valueUnit>
+                <value>some value</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+    </features>
+    <features>
+        <featureIdentifier>1008</featureIdentifier>
+        <name>No Funds Alert</name>
+        <mandatory>false</mandatory>
+        <preSelected>true</preSelected>
+        <shortDescription>Electronic notifications when you have insufficient funds for an attempted debit order</shortDescription>
+        <description>Detailed description of feature</description>
+        <featureGrouping>
+            <featureGroupName>Loyalty</featureGroupName>
+            <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
+        </featureGrouping>
+        <featureType>BoltOn</featureType>
+        <referenceProductID>-1</referenceProductID>
+        <featurePricing>
+            <fee>
+                <type>AdminFee</type>
+                <description>R13 per sms</description>
+                <currency>ZAR</currency>
+                <amount>13</amount>
+                <frequency>Transactional</frequency>
+            </fee>
+        </featurePricing>
+        <featureFulfilment>
+            <channel>selfServiceWeb</channel>
+            <fulfilmentType>setting</fulfilmentType>
+            <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+            <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+        </featureFulfilment>
+        <featureFulfilment>
+            <channel>staffAssisted</channel>
+            <fulfilmentType>setting</fulfilmentType>
+            <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+            <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+        </featureFulfilment>
+        <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+        <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+        <featureDisplayPosition>VAS</featureDisplayPosition>
+        <featureAttributeGroup>
+            <attributeGroupName>SystemRelated</attributeGroupName>
+            <featureAttributes>
+                <attributeType>Flag</attributeType>
+                <attributeName>StraightThroughProcess</attributeName>
+                <value>True</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>FeatureCode</attributeName>
+                <valueUnit>string</valueUnit>
+                <value>ThisisthesFeaturecode</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>provisionInBranch</attributeName>
+                <valueUnit>boolean</valueUnit>
+                <value>false</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>legacyProductID</attributeName>
+                <valueUnit>string</valueUnit>
+                <value>1213</value>
             </featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>
@@ -1285,43 +1371,71 @@
         <featureIdentifier>1014</featureIdentifier>
         <name>Overdraft</name>
         <mandatory>false</mandatory>
-        <preSelected>false</preSelected>
-        <shortDescription>Overdraft</shortDescription>
+        <preSelected>true</preSelected>
+        <shortDescription>Overdraft facility on a current account</shortDescription>
         <description>Detailed description of feature</description>
+        <featureGrouping>
+            <featureGroupName>Overdraft</featureGroupName>
+            <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
+        </featureGrouping>
         <featureType>BoltOn</featureType>
         <referenceProductID>-1</referenceProductID>
         <featurePricing>
             <fee>
-                <type>AdminFee</type>
-                <description>R49 per month</description>
+                <type>InitiationFee</type>
+                <description>R43</description>
                 <currency>ZAR</currency>
-                <amount>49</amount>
-                <frequency>Monthly</frequency>
+                <amount>43</amount>
+                <frequency>OnceOff</frequency>
             </fee>
         </featurePricing>
+        <featureFulfilment>
+            <channel>selfServiceWeb</channel>
+            <fulfilmentType>setting</fulfilmentType>
+            <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+            <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+        </featureFulfilment>
+        <featureFulfilment>
+            <channel>staffAssisted</channel>
+            <fulfilmentType>setting</fulfilmentType>
+            <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+            <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+        </featureFulfilment>
+        <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+        <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+        <featureDisplayPosition>preOffer</featureDisplayPosition>
         <featureAttributeGroup>
-            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+            <attributeGroupName>SystemRelated</attributeGroupName>
             <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>FeatureCode</attributeName>
-                <valueUnit>string</valueUnit>
-                <value>ThisisthesFeaturecode</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>provisionInBranch</attributeName>
-                <valueUnit>boolean</valueUnit>
+                <attributeType>Flag</attributeType>
+                <attributeName>StraightThroughProcess</attributeName>
                 <value>true</value>
             </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>legacyProductID</attributeName>
                 <valueUnit>string</valueUnit>
                 <value>1176</value>
             </featureAttributes>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>provisioningMechanism</attributeName>
+                <value>provisionToCRAG</value>
+            </featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>
             <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
+            <featureAttributes>
+                <attributeType>clientInformationRequirement</attributeType>
+                <attributeName>ClientVerificationInformation</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>clientInformationRequirement</attributeType>
+                <attributeName>AdditionalPersonalInformation</attributeName>
+            </featureAttributes>
             <featureAttributes>
                 <attributeType>clientInformationRequirement</attributeType>
                 <attributeName>MaritalStatus</attributeName>
@@ -1336,22 +1450,209 @@
             </featureAttributes>
             <featureAttributes>
                 <attributeType>clientInformationRequirement</attributeType>
-                <attributeName>ExpenseBasic</attributeName>
+                <attributeName>ExpensesBasic</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>clientInformationRequirement</attributeType>
+                <attributeName>PreOfferFinePrint</attributeName>
             </featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>
-            <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
+            <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
             <featureAttributes>
-                <attributeType>Evidence</attributeType>
-                <attributeName>3 Months Bank Statements|N/A|CLIENT|PROOFOFINCOME|Statement|Bank Statement</attributeName>
-                <valueUnit>bool</valueUnit>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>Evidence</attributeType>
-                <attributeName>1 Months Pay Slips|N/A|CLIENT|PROOFOFINCOME|Payslip|Payslip</attributeName>
-                <valueUnit>bool</valueUnit>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>VisibleArrangementSubmissionSalesMilestone</attributeName>
             </featureAttributes>
         </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>OverdraftDetailsNewFlow</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>ArrangementCaptureSalesMilestone</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+            <featureAttributes>
+                <attributeType>DocumentDescription</attributeType>
+                <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+            	<attributeType>DocumentExclusion</attributeType>
+            	<attributeName>excludeForExistingFacilityDetailsInstruction=LimitIncrease|excludeForPreNCAAgreement=False</attributeName>
+         	</featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>Download</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>Email</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>WetSign</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>DigitallySign</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>ElectronicallySign</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+            <featureAttributes>
+                <attributeType>DocumentDescription</attributeType>
+                <attributeName>Overdraft Application Form|nedbank-commercial-release/AppFormODStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>Download</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>Email</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>WetSign</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>ElectronicallySign</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+            <featureAttributes>
+                <attributeType>boolean</attributeType>
+                <attributeName>FinalApplicationQARequired</attributeName>
+                <value>true</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>boolean</attributeType>
+                <attributeName>requiresDEAStatement</attributeName>
+                <value>true</value>
+            </featureAttributes>
+            <featureAttributes>
+            	<attributeType>string</attributeType>
+            	<attributeName>DEAStatementBUID</attributeName>
+            	<value>d2f0821f-1a96-e811-a28a-00155d002916</value>
+         	</featureAttributes>
+         	<featureAttributes>
+            	<attributeType>string</attributeType>
+            	<attributeName>DEAStatementBUID_PROD</attributeName>
+            	<value>f35d558f-4430-e911-aa6b-001e67212aa8</value>
+         	</featureAttributes>
+            <featureAttributes>
+                <attributeType>boolean</attributeType>
+                <attributeName>requiresSourcePaylslip</attributeName>
+                <value>true</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>boolean</attributeType>
+                <attributeName>requiresSourceIncomeAndAffordabilityData</attributeName>
+                <value>true</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>boolean</attributeType>
+                <attributeName>requiresSalaryToBeDepositedToCurrentAccount</attributeName>
+                <value>true</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>DecisioningControl</attributeGroupName>
+            <featureAttributes>
+                <attributeType>boolean</attributeType>
+                <attributeName>ComponentSupportsDeclineReasons</attributeName>
+                <value>true</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>boolean</attributeType>
+                <attributeName>EnforceSingleOverdraftRule</attributeName>
+                <value>true</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>boolean</attributeType>
+                <attributeName>ComponentSupportsDeclineReasons</attributeName>
+                <value>true</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>boolean</attributeType>
+                <attributeName>EnforceApplicationStatusValidationRules</attributeName>
+                <value>true</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>EligibilityRules</attributeGroupName>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>EligibleDCARRanges</attributeName>
+                <value>0-100000|100001-200000</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>EligibleSegments</attributeName>
+                <value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>EligibleApplicationStatus</attributeName>
+                <value>CANCELLED|INITIATED|DECLINED</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subNedbankLogo</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericDetails</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subClientsRightsAndObligations</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericTCForCreditProducts</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericImpConfirmation</attributeName>
+         </featureAttributes>
+        <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericSignatures</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraftTC|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
     </features>
     <features>
         <featureIdentifier>1400</featureIdentifier>

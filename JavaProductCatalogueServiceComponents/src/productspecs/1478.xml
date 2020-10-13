@@ -84,7 +84,7 @@
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Professional one applicaton form|nedbank-commercial-release/AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+         <attributeName>Professional one application form|nedbank-commercial-release/AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -133,6 +133,10 @@
          <attributeName>DeclarationInformationV2|sideStepperDisplayName=Your declaration~ZOrder=200</attributeName>
       </productAttributes>
       <productAttributes>
+        <attributeType>productInformationRequirement</attributeType>
+        <attributeName>CardDeliveryDetails|sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1164~allowCardCollection~allowCardDelivery</attributeName>
+      </productAttributes>
+      <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>RelationshipBankerInformationV2|sideStepperDisplayName=Your relationship banker</attributeName>
       </productAttributes>      
@@ -147,10 +151,6 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>KeepingInTouchInformationV2|sideStepperDisplayName=Keep in touch</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDoneInformationV2|sideStepperDisplayName=What's next</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -456,6 +456,11 @@
          <attributeName>productType</attributeName>
          <value>EMAILSMS</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>emailAddress</attributeName>
+         <value>lijun@nedbank.co.za;fohnb@nedbank.co.za;mutheiwanan@nedbank.co.za;sunilp@Nedbank.co.za</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>DecisioningControl</attributeGroupName>
@@ -554,11 +559,7 @@
       <mandatory>false</mandatory>
       <preSelected>false</preSelected>
       <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDeliveryDetails|sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1164~allowCardCollection~allowCardDelivery</attributeName>
-         </featureAttributes>
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>         
       </featureAttributeGroup>
       <featureAttributeGroup>
         <attributeGroupName>coreProvisioningParameters</attributeGroupName>

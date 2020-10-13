@@ -101,7 +101,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~ProceduralStepName=Employment details~ZOrder=80</attributeName>
+         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmployerDetails~ProceduralStepName=Employment details~ZOrder=80</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -213,6 +213,42 @@
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
          <attributeName>ElectronicallySign</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+ 		<attributeGroupName>CaseConfiguration</attributeGroupName>
+ 		<productAttributes>
+ 			<attributeType>string</attributeType>
+ 			<attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
+ 			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+ 		</productAttributes>
+ 		<productAttributes>
+ 			<attributeType>string</attributeType>
+ 			<attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
+ 			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+ 		</productAttributes>
+ 		<productAttributes>
+ 			<attributeType>string</attributeType>
+ 			<attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
+ 			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+ 		</productAttributes>
+ 		<productAttributes>
+ 			<attributeType>string</attributeType>
+ 			<attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
+ 			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+ 		</productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>ArrangementEmploymentFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CreditContracts</attributeName>
+         <value>9062|9063</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -737,6 +773,13 @@
            <attributeType>productInformationRequirement</attributeType>
            <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=ng-Overdtaft-Offer-Summery~ProceduralStepName=Offer~ZOrder=60</attributeName>
         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~child-ng-components=EmployerDetails~ProceduralStepName=Employment details~ZOrder=80</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>PresentOfferSelection</attributeGroupName>
