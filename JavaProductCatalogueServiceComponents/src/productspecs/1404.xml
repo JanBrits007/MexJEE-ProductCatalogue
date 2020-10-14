@@ -237,6 +237,21 @@
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+		<productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>HandleProvisioningFailureTeamName</attributeName>
+            <value>SBSTraditional</value>
+        </productAttributes>
+		<productAttributes>
+            <attributeType>integer</attributeType>
+            <attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
+            <value>5</value>
+        </productAttributes>
+		<productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
+            <value>OverideRelationshipManager</value>
+        </productAttributes>
         <productAttributes>
             <attributeType>int</attributeType>
             <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
@@ -393,6 +408,11 @@
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+		<productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>noFundsAlertIndicator</attributeName>
+            <value>1</value>
+        </productAttributes>
         <productAttributes>
             <attributeType>int</attributeType>
             <attributeName>productSystem</attributeName>
