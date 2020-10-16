@@ -8314,2532 +8314,2715 @@
 		"name": "Invest",
 		"displayName": "Save|Invest",
 		"description": "I need my savings to work as hard as I do",
-		"productLines": [
-		  {
-			"displayName": "Investment Account",
-			"name": "InvestmentAccount",
-			"filterGroups": [
-			  {
-				"filterGroupID": 1,
-				"filterGroupName": "Age",
-				"filterDisplayName": "What is your age?",
-				"filterType": "Range",
-				"filterItems": [
-				  {
-					"filterID": 1,
-					"filterDisplay": "Younger than 55",
-					"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-					"minValue": 0,
-					"maxValue": 54
-				  },
-				  {
-					"filterID": 2,
-					"filterDisplay": "55 or older",
-					"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-					"minValue": 55,
-					"maxValue": 999
-				  }
-				]
-			  },
-			  {
-				"filterGroupID": 2,
-				"filterGroupName": "InvestStart",
-				"filterDisplayName": "How much money will you be depositing to begin with?",
-				"filterType": "TextRange",
-				"filterItems": [
-				  {
-					"filterID": 1,
-					"filterDisplay": "Initial deposit",
-					"productAttribute": "productAttributes[?(@.attributeName==='InvestStart')]",
-					"value": ""
-				  }
-				]
-			  },
-			  {
-				"filterGroupID": 3,
-				"filterGroupName": "Additional deposit",
-				"filterDisplayName": "Would you want to make more deposits once the account is opened?",
-				"filterType": "YesNo",
-				"filterItems": [
-				  {
-					"filterID": 1,
-					"filterDisplay": "Yes",
-					"productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
-					"value": "yes"
-				  },
-				  {
-					"filterID": 2,
-					"filterDisplay": "No",
-					"productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
-					"value": "no"
-				  }
-				]
-			  },
-			  {
-				"filterGroupID": 4,
-				"filterGroupName": "Access",
-				"filterDisplayName": "When do you need access to your money?",
-				"filterType": "Range",
-				"filterItems": [
-				  {
-					"filterID": 1,
-					"filterDisplay": "After 24 hours notice",
-					"productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-					"minValue": 0,
-					"maxValue": 1
-				  },
-				  {
-					"filterID": 2,
-					"filterDisplay": "After 32 days notice",
-					"productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-					"minValue": 2,
-					"maxValue": 11
-				  },
-				  {
-					"filterID": 3,
-					"filterDisplay": "At the end of my investment period",
-					"productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-					"minValue": 12,
-					"maxValue": 999
-				  }
-				]
-			  }
-			],
-			"productGroups": [
-			  {
-				"groupIdentifier": "POPULAR_PRODUCTS",
-				"name": "POPULAR CHOICES",
-				"products": [
-				  1391,
-				  1348,
-				  1392
-				]
-			  },
-			  {
-				"groupIdentifier": "ACCESS_WITHIN_24HRS",
-				"name": "ACCESS WITHIN 24HRS",
-				"products": [
-				  1360,
-				  1199,
-				  1392,
-				  1139
-				]
-			  }
-			],
-			"popularProducts": [
-			  1391,
-			  1126,
-			  1348
-			],
-			"products": [
-			  {
-				"productIdentifier": 1391,
-				"name": "32-Day Notice Account(1391)",
-				"shortDescription": "A secure, attractive method of saving funds. You earn interest above the average rate earned on 32-day notice deposits.",
-				"productPricing": [
-				  {
-					"type": "InterestRate",
-					"value": "%upperRateDec-1391%",
-					"description": "%upperRate-1391%% pa",
-					"frequency": "M",
-          "period": ""
-				  }
-				],
-				"specialFeature": "Short Term",
-				"salesHighlights": [
-				  "Minimum investment amount - R250",
-				  "Minimum investment period - 32 days",
-				  "Notice"
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [{
-				  "type": "SELECT",
-				  "text": "Select"
-				},
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"productFeatures": [
-				  {
-					"name": "Maximuminterestrate",
-					"displayName": "Maximum interest rate",
-					"description": "up to %upperRate-1391%%"
-				  },
-				  {
-					"name": "Investmentterm",
-					"displayName": "Investment term",
-					"description": "32 Days"
-				  },
-				  {
-					"name": "MinimumInvestmentAmount",
-					"displayName": "Minimum Investment Amount",
-					"description": "R 250"
-				  },
-				  {
-					"name": "MinimumInvestmentPeriod",
-					"displayName": "Minimum Investment Period",
-					"description": "32 Days"
-				  },
-				  {
-					"name": "TermvsNotice",
-					"displayName": "Term vs Notice",
-					"description": "Notice"
-				  },
-				  {
-					"name": "Freeaccesspriortoterm",
-					"displayName": "Free access prior to term",
-					"description": "Yes"
-				  },
-				  {
-					"name": "AdditionalDeposits",
-					"displayName": "Additional Deposits",
-					"description": "Yes"
-				  },
-				  {
-					"name": "AgeRestriction",
-					"displayName": "Age Restriction",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Interestpaymentfrequency",
-					"displayName": "Interest payment frequency",
-					"description": "Monthly,Capitalised"
-				  },
-				  {
-					"name": "ElectronicAcces",
-					"displayName": "Electronic Access",
-					"description": "included"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "included"
-				  },
-				  {
-					"name": "Statements",
-					"displayName": "Statements",
-					"description": "included"
-				  },
-				  {
-					"name": "Fees",
-					"displayName": "Fees",
-					"description": "Cash deposit fees"
-				  },
-				  {
-					"name": "Investmentterm2",
-					"displayName": "Investment term",
-					"description": "32 Days"
-				  },
-				  {
-					"name": "Withdrawals",
-					"displayName": "Withdrawals",
-					"description": "Minimum R100"
-				  },
-				  {
-					"name": "Additionaldeposits",
-					"displayName": "Additional deposits",
-					"description": "Minimum R100"
-				  },
-				  {
-					"name": "Fixedrate",
-					"displayName": "Fixed rate?",
-					"description": "No"
-				  }
-				],
-				"eligibilityRules": [
-				  {
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "0",
-						"maxValue": "54",
-						"valueUnit": "year",
-						"description": ""
-					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "55",
-						"maxValue": "999",
-						"valueUnit": "year",
-						"description": "No age restrictions"
-					},
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestStart",
-					"minValue": "250",
-					"maxValue": "99999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Additional deposit",
-					"minValue": "100",
-					"maxValue": "99999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeName": "Access",
-					"attributeType": "EligibilityRule",
-					"description": "All individuals, Small Business Services and Business Banking clients",
-					"maxValue": "2",
-					"minValue": "2",
-					"valueUnit": "months"
-				  }
-				],
-				"lifeCycleStatus": "AVAILABLE",
-				"calculator": {
-				  "term": 0,
-				  "notice": 32,
-				  "productType": 50
-				}
-			  },
-			  {
-				"productIdentifier": 1348,
-				"name": "Nedbank Green Fixed Deposit(1348)",
-				"shortDescription": "This fixed-term investment offers great rates and capital security for the medium to long term. The Nedbank Green Fixed Deposit lets you contribute to South Africa’s green economy at no cost or risk to you. Now that’s a savvy investment.",
-				"productPricing": [
-				  {
-					"type": "InterestRate",
-					"value": "%upperRateDec-1348%",
-					"description": "%upperRate-1348%% pa"
-				  }
-				],
-				"specialFeature": "Short Term",
-				"salesHighlights": [
-				  "Minimum investment amount - R1000",
-				  "Minimum investment period - 18 months",
-				  "Term"
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [
-				  {
-					"type": "SELECT_EWCO",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"productFeatures": [
-				  {
-					"name": "Maximuminterestrate",
-					"displayName": "Maximum interest rate",
-					"description": "up to %upperRate-1348%%"
-				  },
-				  {
-					"name": "Investmentterm",
-					"displayName": "Investment term",
-					"description": "18 - 60 Months"
-				  },
-				  {
-					"name": "MinimumInvestmentAmount",
-					"displayName": "Minimum Investment Amount",
-					"description": "R 1000"
-				  },
-				  {
-					"name": "MinimumInvestmentPeriod",
-					"displayName": "Minimum Investment Period",
-					"description": "18 Months"
-				  },
-				  {
-					"name": "TermvsNotice",
-					"displayName": "Term vs Notice",
-					"description": "Term"
-				  },
-				  {
-					"name": "Freeaccesspriortoterm",
-					"displayName": "Free access prior to term",
-					"description": "No"
-				  },
-				  {
-					"name": "AdditionalDeposits",
-					"displayName": "Additional Deposits",
-					"description": "No"
-				  },
-				  {
-					"name": "AgeRestriction",
-					"displayName": "Age Restriction",
-					"description": "< 55"
-				  },
-				  {
-					"name": "Interestpaymentfrequency",
-					"displayName": "Interest payment frequency",
-					"description": "Monthly,Quarterly,Half-yearly,Annually,Expiry"
-				  },
-				  {
-					"name": "ElectronicAcces",
-					"displayName": "Electronic Access",
-					"description": "included"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Statements",
-					"displayName": "Statements",
-					"description": "included"
-				  },
-				  {
-					"name": "Fees",
-					"displayName": "Fees",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Investmentterm2",
-					"displayName": "Investment term",
-					"description": "18,24,36 or 60 Months"
-				  },
-				  {
-					"name": "Withdrawals",
-					"displayName": "Withdrawals",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Additionaldeposits",
-					"displayName": "Additional deposits",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Fixedrate",
-					"displayName": "Fixed rate?",
-					"description": "Yes"
-				  }
-				],
-				"eligibilityRules": [
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Age",
-					"minValue": "0",
-					"maxValue": "54",
-					"valueUnit": "year",
-					"description": "less than 55 years"
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestStart",
-					"minValue": "1000",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": "Earn minimum R 1000 per annum"
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestMonthly",
-					"value": "No"
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Period",
-					"minValue": "18",
-					"maxValue": "-1",
-					"valueUnit": "Period",
-					"description": "18,24,36 or 60 Months"
-				  }
-				],
-				"lifeCycleStatus": "AVAILABLE",
-				"calculator": {
-				  "term": 60,
-				  "notice": 0,
-				  "productType": 43
-				}
-			  },
-			  {
-				"productIdentifier": 1126,
-				"name": "Fixed Deposit(1126)",
-				"shortDescription": "Looking for a lump sum, capital guaranteed investment option? Offering guaranteed interest rates for the term of your investment, the Nedbank Fixed Deposit may be the ideal short or medium term investment option for you.",
-				"productPricing": [
-				  {
-					"type": "InterestRate",
-					"value": "%upperRateDec-1126%",
-					"description": "%upperRate-1126%% pa",
-					"frequency": "M",
-          "period": "3,6,12,18,24,36,60"
-				  }
-				],
-				"specialFeature": "1-60 Months",
-				"salesHighlights": [
-				  "Minimum investment amount - R5 000",
-				  "Minimum investment period - 1 month",
-				  "No monthly fees or commissions",
-				  "Capital guaranteed",
-				  "No additional deposits allowed"
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [
-				  {
-					"type": "SELECT",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"productFeatures": [
-				  {
-					"name": "Maximuminterestrate",
-					"displayName": "Maximum interest rate",
-					"description": "up to %upperRate-1126%%"
-				  },
-				  {
-					"name": "Investmentterm",
-					"displayName": "Investment term",
-					"description": "1 - 60 Months"
-				  },
-				  {
-					"name": "MinimumInvestmentAmount",
-					"displayName": "Minimum Investment Amount",
-					"description": "R 5 000"
-				  },
-				  {
-					"name": "MinimumInvestmentPeriod",
-					"displayName": "Minimum Investment Period",
-					"description": "1 Months"
-				  },
-				  {
-					"name": "TermvsNotice",
-					"displayName": "Term vs Notice",
-					"description": "Term"
-				  },
-				  {
-					"name": "Freeaccesspriortoterm",
-					"displayName": "Free access prior to term",
-					"description": "No"
-				  },
-				  {
-					"name": "AdditionalDeposits",
-					"displayName": "Additional Deposits",
-					"description": "No"
-				  },
-				  {
-					"name": "AgeRestriction",
-					"displayName": "Age Restriction",
-					"description": "<55"
-				  },
-				  {
-					"name": "Interestpaymentfrequency",
-					"displayName": "Interest payment frequency",
-					"description": "Monthly,Quarterly,Half-yearly,Annually,Expiry"
-				  },
-				  {
-					"name": "ElectronicAcces",
-					"displayName": "Electronic Access",
-					"description": "included"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Statements",
-					"displayName": "Statements",
-					"description": "included"
-				  },
-				  {
-					"name": "Fees",
-					"displayName": "Fees",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Investmentterm2",
-					"displayName": "Investment term",
-					"description": "1 - 17 Months"
-				  },
-				  {
-					"name": "Withdrawals",
-					"displayName": "Withdrawals",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Additionaldeposits",
-					"displayName": "Additional deposits",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Fixedrate",
-					"displayName": "Fixed rate?",
-					"description": "Yes"
-				  }
-				],
-				"eligibilityRules": [
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Age",
-					"minValue": "0",
-					"maxValue": "54",
-					"valueUnit": "year",
-					"description": "All individuals younger than 55 years of age, Small Business Services and Business Banking clients"
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestStart",
-					"minValue": "5000",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Additional deposit",
-					"value": "No"
-				  },
-				  {
-						"attributeName": "Access",
-						"attributeType": "EligibilityRule",
-						"description": "",
-						"maxValue": "11",
-						"minValue": "2",
-						"valueUnit": "month"
-					},
-					{
-						"attributeName": "Access",
-						"attributeType": "EligibilityRule",
-						"description": "",
-						"maxValue": "12",
-						"minValue": "60",
-						"valueUnit": "month"
-					}
-				],
-				"lifeCycleStatus": "AVAILABLE",
-				"calculator": {
-				  "term": 60,
-				  "notice": 0,
-				  "productType": 3
-				}
-			  },
-			  {
-				"productIdentifier": 1360,
-				"name": "MoneyTrader(1360)",
-				"shortDescription": "A money market investment account offering highly competitive rates that are linked to money market conditions.",
-				"productPricing": [
-				  {
-					"type": "InterestRate",
-					"value": "%upperRateDec-1360%",
-					"description": "%upperRate-1360%% pa",
-					"frequency": "M",
-          "period": ""
-				  }
-				],
-				"specialFeature": "Short Term",
-				"salesHighlights": [
-				  "Minimum investment amount - R50 000",
-				  "Minimum investment period - 24 hours",
-				  "Notice"
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [
-				  {
-					"type": "SELECT",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"productFeatures": [
-				  {
-					"name": "Maximuminterestrate",
-					"displayName": "Maximum interest rate",
-					"description": "up to %upperRate-1360%%"
-				  },
-				  {
-					"name": "Investmentterm",
-					"displayName": "Investment term",
-					"description": "24 hours"
-				  },
-				  {
-					"name": "MinimumInvestmentAmount",
-					"displayName": "Minimum Investment Amount",
-					"description": "R 50 000"
-				  },
-				  {
-					"name": "MinimumInvestmentPeriod",
-					"displayName": "Minimum Investment Period",
-					"description": "24 hours"
-				  },
-				  {
-					"name": "TermvsNotice",
-					"displayName": "Term vs Notice",
-					"description": "Notice"
-				  },
-				  {
-					"name": "Freeaccesspriortoterm",
-					"displayName": "Free access prior to term",
-					"description": "Yes"
-				  },
-				  {
-					"name": "AdditionalDeposits",
-					"displayName": "Additional Deposits",
-					"description": "Yes"
-				  },
-				  {
-					"name": "AgeRestriction",
-					"displayName": "Age Restriction",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Interestpaymentfrequency",
-					"displayName": "Interest payment frequency",
-					"description": "Monthly"
-				  },
-				  {
-					"name": "ElectronicAcces",
-					"displayName": "Electronic Access",
-					"description": "included"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "included"
-				  },
-				  {
-					"name": "Statements",
-					"displayName": "Statements",
-					"description": "included"
-				  },
-				  {
-					"name": "Fees",
-					"displayName": "Fees",
-					"description": "Cash deposit fees"
-				  },
-				  {
-					"name": "Investmentterm2",
-					"displayName": "Investment term",
-					"description": "24 hours"
-				  },
-				  {
-					"name": "Withdrawals",
-					"displayName": "Withdrawals",
-					"description": "Minimum R5000,Balance of R50 000 must be maintained"
-				  },
-				  {
-					"name": "Additionaldeposits",
-					"displayName": "Additional deposits",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Fixedrate",
-					"displayName": "Fixed rate?",
-					"description": "No"
-				  }
-				],
-				"eligibilityRules": [
-				  {
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "0",
-						"maxValue": "54",
-						"valueUnit": "year",
-						"description": "No age restrictions"
-					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "55",
-						"maxValue": "999",
-						"valueUnit": "year",
-						"description": ""
-					},
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestStart",
-					"minValue": "50000",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Additional deposit",
-					"minValue": "5000",
-					"maxValue": "99999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Access",
-					"minValue": "0",
-					"maxValue": "1",
-					"valueUnit": "Period",
-					"description": "All individuals, Small Business Services and Business Banking clients"
-				  }
-				],
-				"lifeCycleStatus": "AVAILABLE",
-				"calculator": {
-				  "term": 0,
-				  "notice": 1,
-				  "productType": 31
-				}
-			  },
-			  {
-				"productIdentifier": 1199,
-				"name": "JustInvest(1199)",
-				"shortDescription": "A money market investment account offering competitive, tiered interest rates and access to your funds with 24 hours' notice.",
-				"productPricing": [
-				  {
-					"type": "InterestRate",
-					"value": "%upperRateDec-1199%",
-					"description": "%upperRate-1199%% pa",
-					"frequency": "M",
-          "period": ""
-				  }
-				],
-				"specialFeature": "Short Term",
-				"salesHighlights": [
-				  "Minimum investment amount - R500",
-				  "Minimum investment period - 24 hours",
-				  "Notice"
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [
-				  {
-					"type": "SELECT",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"productFeatures": [
-				  {
-					"name": "Maximuminterestrate",
-					"displayName": "Maximum interest rate",
-					"description": "up to %upperRate-1199%%"
-				  },
-				  {
-					"name": "Investmentterm",
-					"displayName": "Investment term",
-					"description": "24 hours"
-				  },
-				  {
-					"name": "MinimumInvestmentAmount",
-					"displayName": "Minimum Investment Amount",
-					"description": "R 500"
-				  },
-				  {
-					"name": "MinimumInvestmentPeriod",
-					"displayName": "Minimum Investment Period",
-					"description": "24 hours"
-				  },
-				  {
-					"name": "TermvsNotice",
-					"displayName": "Term vs Notice",
-					"description": "Notice"
-				  },
-				  {
-					"name": "Freeaccesspriortoterm",
-					"displayName": "Free access prior to term",
-					"description": "Yes"
-				  },
-				  {
-					"name": "AdditionalDeposits",
-					"displayName": "Additional Deposits",
-					"description": "Yes"
-				  },
-				  {
-					"name": "AgeRestriction",
-					"displayName": "Age Restriction",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Interestpaymentfrequency",
-					"displayName": "Interest payment frequency",
-					"description": "Daily Capitalised"
-				  },
-				  {
-					"name": "ElectronicAcces",
-					"displayName": "Electronic Access",
-					"description": "included"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "included"
-				  },
-				  {
-					"name": "Statements",
-					"displayName": "Statements",
-					"description": "included"
-				  },
-				  {
-					"name": "Fees",
-					"displayName": "Fees",
-					"description": "Cash deposit fees"
-				  },
-				  {
-					"name": "Investmentterm2",
-					"displayName": "Investment term",
-					"description": "24 hours"
-				  },
-				  {
-					"name": "Withdrawals",
-					"displayName": "Withdrawals",
-					"description": "Minimum R500,Balance of R5000 must be maintained"
-				  },
-				  {
-					"name": "Additionaldeposits",
-					"displayName": "Additional deposits",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Fixedrate",
-					"displayName": "Fixed rate?",
-					"description": "No"
-				  }
-				],
-				"eligibilityRules": [
-				  {
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "0",
-						"maxValue": "54",
-						"valueUnit": "year",
-						"description": "No age restrictions"
-					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "55",
-						"maxValue": "999",
-						"valueUnit": "year",
-						"description": ""
-					},
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestStart",
-					"minValue": "500",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Additional deposit",
-					"minValue": "500",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Access",
-					"minValue": "0",
-					"maxValue": "1",
-					"valueUnit": "Period",
-					"description": "All individuals, Small Business Services and Business Banking clients"
-				  }
-				],
-				"lifeCycleStatus": "AVAILABLE",
-				"calculator": {
-				  "term": 0,
-				  "notice": 1,
-				  "productType": 32
-				}
-			  },
-			  {
-				"productIdentifier": "1134",
-				"name": "EasyAccess Deposit(1134)",
-				"shortDescription": "Get the guaranteed returns of a fixed deposit, coupled with the flexibility of access of 50% of your capital without sacrificing your interest rate.",
-				"productPricing": [
-				  {
-					"type": "InterestRate",
-					"value": "%upperRateDec-1134%",
-					"description": "%upperRate-1134%% pa",
-					"frequency": "M",
-          "period": "12"
-				  }
-				],
-				"specialFeature": "12 months",
-				"salesHighlights": [
-				  "Minimum investment amount - R25 000",
-				  "Minimum investment period - 12 month",
-				  "No monthly fees or commissions",
-				  "Capital guaranteed",
-				  "No additional deposits allowed"
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [
-				  {
-					"type": "SELECT",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"productFeatures": [
-				  {
-					"name": "Maximuminterestrate",
-					"displayName": "Maximum interest rate",
-					"description": "up to %upperRate-1134%%"
-				  },
-				  {
-					"name": "Investmentterm",
-					"displayName": "Investment term",
-					"description": "12 Months"
-				  },
-				  {
-					"name": "MinimumInvestmentAmount",
-					"displayName": "Minimum Investment Amount",
-					"description": "R 25 000"
-				  },
-				  {
-					"name": "MinimumInvestmentPeriod",
-					"displayName": "Minimum Investment Period",
-					"description": "12 Months"
-				  },
-				  {
-					"name": "TermvsNotice",
-					"displayName": "Term vs Notice",
-					"description": "Term"
-				  },
-				  {
-					"name": "Freeaccesspriortoterm",
-					"displayName": "Free access prior to term",
-					"description": "Yes"
-				  },
-				  {
-					"name": "AdditionalDeposits",
-					"displayName": "Additional Deposits",
-					"description": "No"
-				  },
-				  {
-					"name": "AgeRestriction",
-					"displayName": "Age Restriction",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Interestpaymentfrequency",
-					"displayName": "Interest payment frequency",
-					"description": "Monthly, quarterly, half-yearly or on expiry"
-				  },
-				  {
-					"name": "ElectronicAcces",
-					"displayName": "Electronic Access",
-					"description": "included"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Statements",
-					"displayName": "Statements",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Fees",
-					"displayName": "Fees",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Investmentterm2",
-					"displayName": "Investment term",
-					"description": "12 Months"
-				  },
-				  {
-					"name": "Withdrawals",
-					"displayName": "Withdrawals",
-					"description": "Minimum R1000"
-				  },
-				  {
-					"name": "Additionaldeposits",
-					"displayName": "Additional deposits",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Fixedrate",
-					"displayName": "Fixed rate?",
-					"description": "Yes"
-				  }
-				],
-				"eligibilityRules": [
-				  {
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "0",
-						"maxValue": "54",
-						"valueUnit": "year",
-						"description": "No age restrictions"
-					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "55",
-						"maxValue": "999",
-						"valueUnit": "year",
-						"description": ""
-					},
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestStart",
-					"minValue": "25000",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Additional deposit",
-					"value": "No"
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Access",
-					"minValue": "12",
-					"maxValue": "12",
-					"valueUnit": "Period",
-					"description": "All individuals, Small Business Services and Business Banking clients"
-				  }
-				],
-				"lifeCycleStatus": "AVAILABLE",
-				"calculator": {
-				  "term": 12,
-				  "notice": 0,
-				  "productType": 17
-				}
-			  },
-			  {
-				"productIdentifier": 1136,
-				"name": "OptimumPlus(1136)",
-				"shortDescription": "For clients 55 years and over who want to invest a lump sum while enjoying capital security and a guaranteed tiered interest rate.",
-				"productPricing": [
-				  {
-					"type": "InterestRate",
-					"value": "%upperRateDec-1136%",
-					"description": "%upperRate-1136%% pa",
-					"frequency": "M",
-          "period": "3,6,12,18,24,36,60"
-				  }
-				],
-				"specialFeature": "1 - 60 Months",
-				"salesHighlights": [
-				  "Minimum investment amount - R5 000",
-				  "Minimum investment period - 1 month",
-				  "No monthly fees or commissions",
-				  "Capital guaranteed",
-				  "No additional deposits allowed"
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [
-				  {
-					"type": "SELECT",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"productFeatures": [
-				  {
-					"name": "Maximuminterestrate",
-					"displayName": "Maximum interest rate",
-					"description": "up to %upperRate-1136%%"
-				  },
-				  {
-					"name": "Investmentterm",
-					"displayName": "Investment term",
-					"description": "1 - 60 Months"
-				  },
-				  {
-					"name": "MinimumInvestmentAmount",
-					"displayName": "Minimum Investment Amount",
-					"description": "R5 000"
-				  },
-				  {
-					"name": "MinimumInvestmentPeriod",
-					"displayName": "Minimum Investment Period",
-					"description": "1 Months"
-				  },
-				  {
-					"name": "TermvsNotice",
-					"displayName": "Term vs Notice",
-					"description": "Term"
-				  },
-				  {
-					"name": "Freeaccesspriortoterm",
-					"displayName": "Free access prior to term",
-					"description": "No"
-				  },
-				  {
-					"name": "AdditionalDeposits",
-					"displayName": "Additional Deposits",
-					"description": "No"
-				  },
-				  {
-					"name": "AgeRestriction",
-					"displayName": "Age Restriction",
-					"description": "55+"
-				  },
-				  {
-					"name": "Interestpaymentfrequency",
-					"displayName": "Interest payment frequency",
-					"description": "Monthly,Quarterly,Half-yearly,Annually,Expiry"
-				  },
-				  {
-					"name": "ElectronicAcces",
-					"displayName": "Electronic Access",
-					"description": "included"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Statements",
-					"displayName": "Statements",
-					"description": "included"
-				  },
-				  {
-					"name": "Fees",
-					"displayName": "Fees",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Investmentterm2",
-					"displayName": "Investment term",
-					"description": "1 - 17 Months"
-				  },
-				  {
-					"name": "Withdrawals",
-					"displayName": "Withdrawals",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Additionaldeposits",
-					"displayName": "Additional deposits",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Fixedrate",
-					"displayName": "Fixed rate?",
-					"description": "Yes"
-				  }
-				],
-				"eligibilityRules": [
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Age",
-					"minValue": "55",
-					"maxValue": "999",
-					"valueUnit": "year",
-					"description": "Exclusively available to individual clients, 55 years or older"
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestStart",
-					"minValue": "5000",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Additional deposit",
-					"value": "No"
-				  },
-				  {
-						"attributeType": "EligibilityRule",
-						"attributeName": "Access",
-						"minValue": "2",
-						"maxValue": "11",
-						"valueUnit": "months",
-						"description": ""
-					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Access",
-						"minValue": "12",
-						"maxValue": "60",
-						"valueUnit": "months",
-						"description": ""
+		"productLines":[
+			{
+				 "displayName":"Everyday Invest",
+				 "name":"InvestmentAccount",
+				 "miniDetails":[
+						{
+							 "Heading":"Everyday investments",
+							 "displayItems":[
+									{
+										 "displayName":"What are everyday investments?",
+										 "data":[
+												"Nedbank offers a range of investment accounts,including notice,fixed and hybrid investments,with flexible periods and competitive interest rates.You can also choose when you'd like to access your money."
+										 ]
+									},
+									{
+										 "displayName":"Benefits",
+										 "data":[
+												"Investment helps you reach your short-,medium- and long-term goals.With as little as R250.00 you can start investing.Your capital is also guaranteed."
+										 ]
+									}
+							 ]
+						},
+						{
+							 "Heading":"Types of investments",
+							 "displayItems":[
+									{
+										 "displayName":"Immediate savings",
+										 "data":[
+												"Additional deposits allowed",
+												"Immediate access to one or all of your money."
+										 ]
+									},
+									{
+										 "displayName":"Notice investments",
+										 "data":[
+												"Additional deposits allowed",
+												"Access to some or all of your money within 24 hours or 32 days"
+										 ]
+									},
+									{
+										 "displayName":"Fixed investments",
+										 "data":[
+												"No additional deposits allowed",
+												"Earn the best rates and returns."
+										 ]
+									},
+									{
+										 "displayName":"Hybrid investments",
+										 "data":[
+												"No additional deposits allowed",
+												"Access a portion of your fixed-investment account within 24 hours."
+										 ]
+									}
+							 ]
 						}
-				],
-				"lifeCycleStatus": "AVAILABLE",
-				"calculator": {
-				  "term": 60,
-				  "notice": 0,
-				  "productType": 28
-				}
-			  },
-			  {
-				"productIdentifier": "1130",
-				"name": "PrimeSelect(1130)",
-				"shortDescription": "PrimeSelect has all the right ingredients : Capital security, interest rates linked to prime, access to a percentage of the funds and the option to top up your investment.",
-				"productPricing": [
-				  {
-					"type": "InterestRate",
-					"value": "%upperRateDec-1130%",
-					"description": "%upperRate-1130%% pa",
-					"frequency": "M",
-          "period": "3,9,12,36"
-				  }
-				],
-				"specialFeature": "3 - 60 months",
-				"salesHighlights": [
-				  "Minimum investment amount - R5000",
-				  "Minimum investment period - 3 month",
-				  "No monthly fees or commissions",
-				  "Initial capital fully guaranteed",
-				  "Ability to add up to 50% of your original investment",
-				  "Ability to withdraw up to 50% of your original investment",
-				  "Original capital should be minimum R1000"
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [
-				  {
-					"type": "SELECT",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"productFeatures": [
-				  {
-					"name": "Maximuminterestrate",
-					"displayName": "Maximum interest rate",
-					"description": "up to %upperRate-1130%%"
-				  },
-				  {
-					"name": "Investmentterm",
-					"displayName": "Investment term",
-					"description": "3 - 60 months"
-				  },
-				  {
-					"name": "MinimumInvestmentAmount",
-					"displayName": "Minimum Investment Amount",
-					"description": "R 5000"
-				  },
-				  {
-					"name": "MinimumInvestmentPeriod",
-					"displayName": "Minimum Investment Period",
-					"description": "3 months"
-				  },
-				  {
-					"name": "TermvsNotice",
-					"displayName": "Term vs Notice",
-					"description": "Term"
-				  },
-				  {
-					"name": "Freeaccesspriortoterm",
-					"displayName": "Free access prior to term",
-					"description": "Yes"
-				  },
-				  {
-					"name": "AdditionalDeposits",
-					"displayName": "Additional Deposits",
-					"description": "No"
-				  },
-				  {
-					"name": "AgeRestriction",
-					"displayName": "Age Restriction",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Interestpaymentfrequency",
-					"displayName": "Interest payment frequency",
-					"description": "Monthly, quarterly, half-yearly, annually or on expiry"
-				  },
-				  {
-					"name": "ElectronicAcces",
-					"displayName": "Electronic Access",
-					"description": "included"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Statements",
-					"displayName": "Statements",
-					"description": "included"
-				  },
-				  {
-					"name": "Fees",
-					"displayName": "Fees",
-					"description": "Cash deposit fees"
-				  },
-				  {
-					"name": "Investmentterm2",
-					"displayName": "Investment term",
-					"description": "3 - 60 months"
-				  },
-				  {
-					"name": "Withdrawals",
-					"displayName": "Withdrawals",
-					"description": "Max of 5 withdrawals, totalling 50% of original capital. Minimum R1 000"
-				  },
-				  {
-					"name": "Additionaldeposits",
-					"displayName": "Additional deposits",
-					"description": "Max of 5 deposits, totalling 50% of original capital"
-				  },
-				  {
-					"name": "Fixedrate",
-					"displayName": "Fixed rate?",
-					"description": "No (prime linked)"
-				  }
-				],
-				"eligibilityRules": [
-				  {
-					"attributeName": "Access",
-					"attributeType": "EligibilityRule",
-					"description": "All individuals, Small Business Services and Business Banking clients",
-					"maxValue": "12",
-					"minValue": "12",
-					"valueUnit": "Period"
-				  },
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "0",
-						"maxValue": "54",
-						"valueUnit": "year",
-						"description": "No age restrictions"
-					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "55",
-						"maxValue": "999",
-						"valueUnit": "year",
-						"description": ""
-					},
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestStart",
-					"minValue": "5000",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Additional deposit",
-					"minValue": "2500",
-					"maxValue": "99999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Display",
-					"description": ""
-				  }
-				],
-				"lifeCycleStatus": "AVAILABLE",
-				"calculator": {
-				  "term": 60,
-				  "notice": 0,
-				  "productType": 15
-				}
-			  },
-			  {
-				"productIdentifier": "1349",
-				"name": "Nedbank Green Optimum Deposit(1349)",
-				"shortDescription": "This fixed-term investment offers great rates and capital security for the medium to long term. The Nedbank Green Optimum Deposit lets you contribute to South Africa’s green economy at no cost or risk to you. Now that’s a savvy investment.",
-				"productPricing": [
-				  {
-					"type": "InterestRate",
-					"value": "%upperRateDec-1349%",
-					"description": "%upperRate-1349%% pa"
-				  }
-				],
-				"specialFeature": "Long Term",
-				"salesHighlights": [
-				  "Minimum investment amount - R1000",
-				  "Minimum investment period - 18 month",
-				  "No monthly fees or commissions",
-				  "Capital guaranteed",
-				  "No additional deposits allowed"
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [
-				  {
-					"type": "SELECT_EWCO",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"productFeatures": [
-				  {
-					"name": "Maximuminterestrate",
-					"displayName": "Maximum interest rate",
-					"description": "up to %upperRate-1349%%"
-				  },
-				  {
-					"name": "Investmentterm",
-					"displayName": "Investment term",
-					"description": "18 - 60 Months"
-				  },
-				  {
-					"name": "MinimumInvestmentAmount",
-					"displayName": "Minimum Investment Amount",
-					"description": "R 1000"
-				  },
-				  {
-					"name": "MinimumInvestmentPeriod",
-					"displayName": "Minimum Investment Period",
-					"description": "18 Months"
-				  },
-				  {
-					"name": "TermvsNotice",
-					"displayName": "Term vs Notice",
-					"description": "Term"
-				  },
-				  {
-					"name": "Freeaccesspriortoterm",
-					"displayName": "Free access prior to term",
-					"description": "No"
-				  },
-				  {
-					"name": "AdditionalDeposits",
-					"displayName": "Additional Deposits",
-					"description": "No"
-				  },
-				  {
-					"name": "AgeRestriction",
-					"displayName": "Age Restriction",
-					"description": "55 years and older. Individual clients only"
-				  },
-				  {
-					"name": "Interestpaymentfrequency",
-					"displayName": "Interest payment frequency",
-					"description": "Monthly,Quarterly,Half-yearly,Annually,Expiry"
-				  },
-				  {
-					"name": "ElectronicAcces",
-					"displayName": "Electronic Access",
-					"description": "included"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Statements",
-					"displayName": "Statements",
-					"description": "included"
-				  },
-				  {
-					"name": "Fees",
-					"displayName": "Fees",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Investmentterm2",
-					"displayName": "Investment term",
-					"description": "18,24,36 or 60 Months"
-				  },
-				  {
-					"name": "Withdrawals",
-					"displayName": "Withdrawals",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Additionaldeposits",
-					"displayName": "Additional deposits",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Fixedrate",
-					"displayName": "Fixed rate?",
-					"description": "Yes"
-				  }
-				],
-				"eligibilityRules": [
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Age",
-					"minValue": "55",
-					"maxValue": "-1",
-					"valueUnit": "year",
-					"description": "Only available to individuals who are 55 or older"
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestStart",
-					"minValue": "1000",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": "Earn minimum R 1000 per annum"
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestMonthly",
-					"value": "No"
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Period",
-					"minValue": "18",
-					"maxValue": "60",
-					"valueUnit": "Period",
-					"description": "18,24,36 or 60 Months"
-				  }
-				],
-				"lifeCycleStatus": "AVAILABLE",
-				"calculator": {
-				  "term": 12,
-				  "notice": 0,
-				  "productType": 17
-				}
-			  },
-			  {
-				"productIdentifier": "1133",
-				"name": "Platinum Fixed Deposit(1133)",
-				"shortDescription": "Fixed deposits at highly competitive interest rates – exclusively for Professional Banking clients.",
-				"productPricing": [
-				  {
-					"type": "InterestRate",
-					"value": "%upperRateDec-1133%",
-					"description": "%upperRate-1133%% pa",
-					"frequency": "M",
-          "period": "3,6,12,18,24,36,60"
-				  }
-				],
-				"specialFeature": "1 - 60 months",
-				"salesHighlights": [
-				  "Minimum investment amount - R100 000",
-				  "Minimum investment period - 1 month",
-				  "No monthly fees or commissions",
-				  "Capital guaranteed",
-				  "No additional deposits allowed"
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [
-				  {
-					"type": "SELECT",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"productFeatures": [
-				  {
-					"name": "Maximuminterestrate",
-					"displayName": "Maximum interest rate",
-					"description": "up to %upperRate-1133%%"
-				  },
-				  {
-					"name": "Investmentterm",
-					"displayName": "Investment term",
-					"description": "1 - 60 Months"
-				  },
-				  {
-					"name": "MinimumInvestmentAmount",
-					"displayName": "Minimum Investment Amount",
-					"description": "R 100 000"
-				  },
-				  {
-					"name": "MinimumInvestmentPeriod",
-					"displayName": "Minimum Investment Period",
-					"description": "1 Month"
-				  },
-				  {
-					"name": "TermvsNotice",
-					"displayName": "Term vs Notice",
-					"description": "Term"
-				  },
-				  {
-					"name": "Freeaccesspriortoterm",
-					"displayName": "Free access prior to term",
-					"description": "Yes"
-				  },
-				  {
-					"name": "AdditionalDeposits",
-					"displayName": "Additional Deposits",
-					"description": "No"
-				  },
-				  {
-					"name": "AgeRestriction",
-					"displayName": "Age Restriction",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Interestpaymentfrequency",
-					"displayName": "Interest payment frequency",
-					"description": "Monthly,Quarterly,Half-yearly,Expiry"
-				  },
-				  {
-					"name": "ElectronicAcces",
-					"displayName": "Electronic Access",
-					"description": "included"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Statements",
-					"displayName": "Statements",
-					"description": "included"
-				  },
-				  {
-					"name": "Fees",
-					"displayName": "Fees",
-					"description": "None"
-				  },
-				  {
-					"name": "Investmentterm2",
-					"displayName": "Investment term",
-					"description": "1,2,3,6, or 12 Months"
-				  },
-				  {
-					"name": "Withdrawals",
-					"displayName": "Withdrawals",
-					"description": "3 Withdrawals totalling 30% of original capital"
-				  },
-				  {
-					"name": "Additionaldeposits",
-					"displayName": "Additional deposits",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Fixedrate",
-					"displayName": "Fixed rate?",
-					"description": "Yes"
-				  }
-				],
-				"eligibilityRules": [
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "0",
-						"maxValue": "54",
-						"valueUnit": "year",
-						"description": "No age restrictions"
-					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "55",
-						"maxValue": "999",
-						"valueUnit": "year",
-						"description": ""
-					},
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestStart",
-					"minValue": "100000",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Additional deposit",
-					"value": "No"
-				  },
-				  {
-						"attributeType": "EligibilityRule",
-						"attributeName": "Access",
-						"minValue": "2",
-						"maxValue": "11",
-						"valueUnit": "Period",
-						"description": "Exclusive to Nedbank Professional Banking clients"
-					},
-					{
-						"attributeName": "Access",
-						"attributeType": "EligibilityRule",
-						"description": "",
-						"maxValue": "60",
-						"minValue": "12",
-						"valueUnit": "month"
-					}
-				],
-				"lifeCycleStatus": "AVAILABLE",
-				"calculator": {
-				  "term": 60,
-				  "notice": 0,
-				  "productType": 23
-				}
-			  },
-			  {
-				"productIdentifier": "1139",
-				"name": "Platinum Invest(1139)",
-				"shortDescription": "A money market investment account with highly competitive interest rates , exclusively for Professional Banking clients.",
-				"productPricing": [
-				  {
-					"type": "InterestRate",
-					"value": "%upperRateDec-1139%",
-					"description": "%upperRate-1139%% pa",
-					"frequency": "M",
-          "period": ""
-				  }
-				],
-				"specialFeature": "24 hours",
-				"salesHighlights": [
-				  "Minimum investment amount - R500",
-				  "Minimum investment period - 24 hours",
-				  "No monthly fees or commissions",
-				  "Initial capital fully guaranteed"
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [
-				  {
-					"type": "SELECT",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"productFeatures": [
-				  {
-					"name": "Maximuminterestrate",
-					"displayName": "Maximum interest rate",
-					"description": "up to %upperRate-1139%%"
-				  },
-				  {
-					"name": "Investmentterm",
-					"displayName": "Investment term",
-					"description": "24 hours"
-				  },
-				  {
-					"name": "MinimumInvestmentAmount",
-					"displayName": "Minimum Investment Amount",
-					"description": "R 500"
-				  },
-				  {
-					"name": "MinimumInvestmentPeriod",
-					"displayName": "Minimum Investment Period",
-					"description": "24 hours"
-				  },
-				  {
-					"name": "TermvsNotice",
-					"displayName": "Term vs Notice",
-					"description": "Term"
-				  },
-				  {
-					"name": "Freeaccesspriortoterm",
-					"displayName": "Free access prior to term",
-					"description": "No"
-				  },
-				  {
-					"name": "AdditionalDeposits",
-					"displayName": "Additional Deposits",
-					"description": "Yes"
-				  },
-				  {
-					"name": "AgeRestriction",
-					"displayName": "Age Restriction",
-					"description": "Nedbank Professional Banking clients only"
-				  },
-				  {
-					"name": "Interestpaymentfrequency",
-					"displayName": "Interest payment frequency",
-					"description": "Monthly Capitalised"
-				  },
-				  {
-					"name": "ElectronicAcces",
-					"displayName": "Electronic Access",
-					"description": "Yes"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "included"
-				  },
-				  {
-					"name": "Statements",
-					"displayName": "Statements",
-					"description": "included"
-				  },
-				  {
-					"name": "Fees",
-					"displayName": "Fees",
-					"description": "Cash deposit fees"
-				  },
-				  {
-					"name": "Investmentterm2",
-					"displayName": "Investment term",
-					"description": "24 hours"
-				  },
-				  {
-					"name": "Withdrawals",
-					"displayName": "Withdrawals",
-					"description": "1 days' notice required; minimum. R100"
-				  },
-				  {
-					"name": "Additionaldeposits",
-					"displayName": "Additional deposits",
-					"description": "Minimum R100"
-				  },
-				  {
-					"name": "Fixedrate",
-					"displayName": "Fixed rate?",
-					"description": "No"
-				  }
-				],
-				"eligibilityRules": [
-				  {
-					"attributeName": "Access",
-					"attributeType": "EligibilityRule",
-					"description": "Exclusive to Nedbank Professional Banking clients",
-					"maxValue": "1",
-					"minValue": "0",
-					"valueUnit": "month"
-				  },
-				  {
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "0",
-						"maxValue": "54",
-						"valueUnit": "year",
-						"description": "No age restrictions"
-					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "55",
-						"maxValue": "999",
-						"valueUnit": "year",
-						"description": ""
-					},
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestStart",
-					"minValue": "500",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Additional deposit",
-					"minValue": "100",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Display",
-					"description": ""
-				  }
-				],
-				"lifeCycleStatus": "AVAILABLE",
-				"calculator": {
-				  "term": 0,
-				  "notice": 1,
-				  "productType": 30
-				}
-			  },
-			  {
-				"productIdentifier": "1392",
-				"name": "Tax-free Savings(1392)",
-				"shortDescription": "The account that gives you the opportunity to save and enjoy your money tax-free.",
-				"productPricing": [
-				  {
-					"type": "InterestRate",
-					"value": "%upperRateDec-1392%",
-					"description": "%upperRate-1392%% pa",
-					"frequency": "M",
-          "period": ""
-				  }
-				],
-				"specialFeature": "24 hours",
-				"salesHighlights": [
-				  "Minimum investment amount - R500",
-				  "Minimum investment period - 24 hours",
-				  "No monthly fees or commissions",
-				  "Capital fully guaranteed"
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [
-				  {
-					"type": "SELECT",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"productFeatures": [
-				  {
-					"name": "Maximuminterestrate",
-					"displayName": "Maximum interest rate",
-					"description": "up to %upperRate-1392%%"
-				  },
-				  {
-					"name": "Investmentterm",
-					"displayName": "Investment term",
-					"description": "24 hours"
-				  },
-				  {
-					"name": "MinimumInvestmentAmount",
-					"displayName": "Minimum Investment Amount",
-					"description": "R 500"
-				  },
-				  {
-					"name": "MinimumInvestmentPeriod",
-					"displayName": "Minimum Investment Period",
-					"description": "24 hours"
-				  },
-				  {
-					"name": "TermvsNotice",
-					"displayName": "Term vs Notice",
-					"description": "Notice"
-				  },
-				  {
-					"name": "Freeaccesspriortoterm",
-					"displayName": "Free access prior to term",
-					"description": "Yes"
-				  },
-				  {
-					"name": "AdditionalDeposits",
-					"displayName": "Additional Deposits",
-					"description": "Yes"
-				  },
-				  {
-					"name": "AgeRestriction",
-					"displayName": "Age Restriction",
-					"description": "Individual clients only"
-				  },
-				  {
-					"name": "Interestpaymentfrequency",
-					"displayName": "Interest payment frequency",
-					"description": "Monthly Capitalised"
-				  },
-				  {
-					"name": "ElectronicAcces",
-					"displayName": "Electronic Access",
-					"description": "included"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "included"
-				  },
-				  {
-					"name": "Statements",
-					"displayName": "Statements",
-					"description": "included"
-				  },
-				  {
-					"name": "Fees",
-					"displayName": "Fees",
-					"description": "None"
-				  },
-				  {
-					"name": "Investmentterm2",
-					"displayName": "Investment term",
-					"description": "24 hours"
-				  },
-				  {
-					"name": "Withdrawals",
-					"displayName": "Withdrawals",
-					"description": "Minimum R50"
-				  },
-				  {
-					"name": "Additionaldeposits",
-					"displayName": "Additional deposits",
-					"description": "Minimum R50"
-				  },
-				  {
-					"name": "Fixedrate",
-					"displayName": "Fixed rate?",
-					"description": "No"
-				  }
-				],
-				"eligibilityRules": [
-				  {
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "0",
-						"maxValue": "54",
-						"valueUnit": "year",
-						"description": "No age restrictions"
-					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "55",
-						"maxValue": "999",
-						"valueUnit": "year",
-						"description": ""
-					},
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestStart",
-					"minValue": "500",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Additional deposit",
-					"minValue": "50",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeName": "Access",
-					"attributeType": "EligibilityRule",
-					"description": "Individual clients only",
-					"maxValue": "1",
-					"minValue": "0",
-					"valueUnit": "month"
-				  }
-				],
-				"lifeCycleStatus": "AVAILABLE",
-				"calculator": {
-				  "term": 0,
-				  "notice": 1,
-				  "productType": 49
-				}
-			  },
-			  {
-				"productIdentifier": "1127",
-				"name": "Money Market Investment Account(1127)",
-				"shortDescription": "Get market-related interest rates and full access to funds with this flexible, fully transactional investment account.",
-				"productPricing": [
-				  {
-					"type": "InterestRate",
-					"value": "%upperRateDec-1127%",
-					"description": "%upperRate-1127%% pa"
-				  }
-				],
-				"specialFeature": "Short Term",
-				"salesHighlights": [
-				  "Minimum investment amount - R20 000",
-				  "Minimum investment period - On demand",
-				  "Savings"
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [
-				  {
-					"type": "SELECT_EWCO",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"productFeatures": [
-				  {
-					"name": "Maximuminterestrate",
-					"displayName": "Maximum interest rate",
-					"description": "up to %upperRate-1127%%"
-				  },
-				  {
-					"name": "Investmentterm",
-					"displayName": "Investment term",
-					"description": "On demand"
-				  },
-				  {
-					"name": "MinimumInvestmentAmount",
-					"displayName": "Minimum Investment Amount",
-					"description": "R 20 000"
-				  },
-				  {
-					"name": "MinimumInvestmentPeriod",
-					"displayName": "Minimum Investment Period",
-					"description": "On demand"
-				  },
-				  {
-					"name": "TermvsNotice",
-					"displayName": "Term vs Notice",
-					"description": "Savings"
-				  },
-				  {
-					"name": "Freeaccesspriortoterm",
-					"displayName": "Free access prior to term",
-					"description": "Yes"
-				  },
-				  {
-					"name": "AdditionalDeposits",
-					"displayName": "Additional Deposits",
-					"description": "Yes"
-				  },
-				  {
-					"name": "AgeRestriction",
-					"displayName": "Age Restriction",
-					"description": "N/A"
-				  },
-				  {
-					"name": "Interestpaymentfrequency",
-					"displayName": "Interest payment frequency",
-					"description": "Monthly Capitalised"
-				  },
-				  {
-					"name": "ElectronicAcces",
-					"displayName": "Electronic Access",
-					"description": "included"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "included"
-				  },
-				  {
-					"name": "Statements",
-					"displayName": "Statements",
-					"description": "-"
-				  },
-				  {
-					"name": "Fees",
-					"displayName": "Fees",
-					"description": "Transaction charges"
-				  },
-				  {
-					"name": "Investmentterm2",
-					"displayName": "Investment term",
-					"description": "-"
-				  },
-				  {
-					"name": "Withdrawals",
-					"displayName": "Withdrawals",
-					"description": "-"
-				  },
-				  {
-					"name": "Additionaldeposits",
-					"displayName": "Additional deposits",
-					"description": "-"
-				  },
-				  {
-					"name": "Fixedrate",
-					"displayName": "Fixed rate?",
-					"description": "-"
-				  }
-				],
-				"eligibilityRules": [
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Age",
-					"minValue": "-1",
-					"maxValue": "-1",
-					"valueUnit": "year",
-					"description": "Individuals aged 18 years or older"
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestStart",
-					"minValue": "20000",
-					"maxValue": "999999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestMonthly",
-					"value": "No"
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Period",
-					"minValue": "0",
-					"maxValue": "0.9",
-					"valueUnit": "Period",
-					"description": "Any individual, clubs, non-profit organisations and trust accounts"
-				  }
-				],
-				"lifeCycleStatus": "AVAILABLE",
-				"calculator": {
-				  "term": 0,
-				  "notice": 24,
-				  "productType": 28
-				}
-			  },
-			  {
-				"productIdentifier": 1473,
-				"name": "Nedbank Tax Free Fixed Deposit",
-				"shortDescription": "The Nedbank Tax Free Fixed Deposit provides you with an opportunity to invest your money for 12 months and enjoy the proceeds, tax free.",
-				"productPricing": [
-				  {
-					"type": "InterestRate",
-					"value": "%upperRateDec-1473%",
-					"description": "%upperRate-1473%% pa",
-					"frequency": "M",
-          "period": "12"
-				  }
-				],
-				"specialFeature": "12 Months",
-				"salesHighlights": [
-				  "Minimum investment amount - R1000",
-				  "Minimum investment period - 12 Months",
-				  "No monthly fees or commissions",
-				  "Capital guaranteed"
-				],
-				"redirect": {
-				  "shouldRedirect": false,
-				  "redirectUrl": null
-				},
-				"actions": [
-				  {
-					"type": "SELECT",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  },
-				  {
-					"type": "COMPARE",
-					"text": "Compare"
-				  }
-				],
-				"productFeatures": [
-				  {
-					"name": "Maximuminterestrate",
-					"displayName": "Maximum interest rate",
-					"description": "up to %upperRate-1473%%"
-				  },
-				  {
-					"name": "Investmentterm",
-					"displayName": "Investment term",
-					"description": "12 Months"
-				  },
-				  {
-					"name": "MinimumInvestmentAmount",
-					"displayName": "Minimum Investment Amount",
-					"description": "R 1000"
-				  },
-				  {
-					"name": "MinimumInvestmentPeriod",
-					"displayName": "Minimum Investment Period",
-					"description": "12 Months"
-				  },
-				  {
-					"name": "TermvsNotice",
-					"displayName": "Term vs Notice",
-					"description": "Term"
-				  },
-				  {
-					"name": "Freeaccesspriortoterm",
-					"displayName": "Free access prior to term",
-					"description": "No"
-				  },
-				  {
-					"name": "AdditionalDeposits",
-					"displayName": "Additional Deposits",
-					"description": "No"
-				  },
-				  {
-					"name": "AgeRestriction",
-					"displayName": "Age Restriction",
-					"description": "N/A."
-				  },
-				  {
-					"name": "Interestpaymentfrequency",
-					"displayName": "Interest payment frequency",
-					"description": "Monthly, quarterly, half-yearly or on expiry"
-				  },
-				  {
-					"name": "ElectronicAcces",
-					"displayName": "Electronic Access",
-					"description": "included"
-				  },
-				  {
-					"name": "Stoporders",
-					"displayName": "Stop orders",
-					"description": "No"
-				  },
-				  {
-					"name": "Statements",
-					"displayName": "Statements",
-					"description": "No"
-				  },
-				  {
-					"name": "Fees",
-					"displayName": "Fees",
-					"description": "No"
-				  },
-				  {
-					"name": "Investmentterm2",
-					"displayName": "Investment term",
-					"description": "12 months"
-				  },
-				  {
-					"name": "Withdrawals",
-					"displayName": "Withdrawals",
-					"description": "None"
-				  },
-				  {
-					"name": "Additionaldeposits",
-					"displayName": "Additional deposits",
-					"description": "None"
-				  },
-				  {
-					"name": "Fixedrate",
-					"displayName": "Fixed rate?",
-					"description": "Yes"
-				  }
-				],
-				"eligibilityRules": [
-				  {
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "0",
-						"maxValue": "54",
-						"valueUnit": "year",
-						"description": "No age restrictions"
-					},
-					{
-						"attributeType": "EligibilityRule",
-						"attributeName": "Age",
-						"minValue": "55",
-						"maxValue": "999",
-						"valueUnit": "year",
-						"description": ""
-					},
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "InvestStart",
-					"minValue": "1000",
-					"maxValue": "99999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeType": "EligibilityRule",
-					"attributeName": "Additional deposit",
-					"minValue": "99999999",
-					"maxValue": "99999999",
-					"valueUnit": "ZAR",
-					"description": ""
-				  },
-				  {
-					"attributeName": "Access",
-					"attributeType": "EligibilityRule",
-					"description": "Individual clients only",
-					"maxValue": "12",
-					"minValue": "12",
-					"valueUnit": "months"
-				  }
-				],
-				"lifeCycleStatus": "AVAILABLE",
-				"calculator": {
-				  "term": 12,
-				  "notice": 0,
-				  "productType": 55
-				}
-			  }
-			]
-		  }
-		]
+				 ],
+				 "filterGroups":[
+						{
+							 "filterGroupID":1,
+							 "filterGroupName":"Age",
+							 "filterDisplayName":"What is your age?",
+							 "filterType":"Range",
+							 "filterItems":[
+									{
+										 "filterID":1,
+										 "filterDisplay":"Younger than 55",
+										 "productAttribute":"productAttributes[?(@.attributeName==='Age')]",
+										 "minValue":0,
+										 "maxValue":54
+									},
+									{
+										 "filterID":2,
+										 "filterDisplay":"55 or older",
+										 "productAttribute":"productAttributes[?(@.attributeName==='Age')]",
+										 "minValue":55,
+										 "maxValue":999
+									}
+							 ]
+						},
+						{
+							 "filterGroupID":2,
+							 "filterGroupName":"InvestStart",
+							 "filterDisplayName":"How much money will you be depositing to begin with?",
+							 "filterType":"TextRange",
+							 "filterItems":[
+									{
+										 "filterID":1,
+										 "filterDisplay":"Initial deposit",
+										 "productAttribute":"productAttributes[?(@.attributeName==='InvestStart')]",
+										 "value":""
+									}
+							 ]
+						},
+						{
+							 "filterGroupID":3,
+							 "filterGroupName":"Additional deposit",
+							 "filterDisplayName":"Would you want to make more deposits once the account is opened?",
+							 "filterType":"YesNo",
+							 "filterItems":[
+									{
+										 "filterID":1,
+										 "filterDisplay":"Yes",
+										 "productAttribute":"productAttributes[?(@.attributeName==='MoreDeposits')]",
+										 "value":"yes"
+									},
+									{
+										 "filterID":2,
+										 "filterDisplay":"No",
+										 "productAttribute":"productAttributes[?(@.attributeName==='MoreDeposits')]",
+										 "value":"no"
+									}
+							 ]
+						},
+						{
+							 "filterGroupID":4,
+							 "filterGroupName":"Access",
+							 "filterDisplayName":"When do you need access to your money?",
+							 "filterType":"Range",
+							 "filterItems":[
+									{
+										 "filterID":1,
+										 "filterDisplay":"After 24 hours notice",
+										 "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+										 "minValue":0,
+										 "maxValue":1
+									},
+									{
+										 "filterID":2,
+										 "filterDisplay":"After 32 days notice",
+										 "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+										 "minValue":2,
+										 "maxValue":11
+									},
+									{
+										 "filterID":3,
+										 "filterDisplay":"At the end of my investment period",
+										 "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+										 "minValue":12,
+										 "maxValue":999
+									}
+							 ]
+						}
+				 ],
+				 "productGroups":[
+						{
+							 "groupIdentifier":"POPULAR_PRODUCTS",
+							 "name":"POPULAR CHOICES",
+							 "products":[
+									1391,
+									1348,
+									1392
+							 ]
+						},
+						{
+							 "groupIdentifier":"ACCESS_WITHIN_24HRS",
+							 "name":"ACCESS WITHIN 24HRS",
+							 "products":[
+									1360,
+									1199,
+									1139
+							 ]
+						}
+				 ],
+				 "popularProducts":[
+						1391,
+						1126,
+						1348
+				 ],
+				 "products":[
+						{
+							 "productIdentifier":1391,
+							 "name":"32-Day Notice Account(1391)",
+							 "shortDescription":"A secure, attractive method of saving funds. You earn interest above the average rate earned on 32-day notice deposits.",
+							 "productPricing":[
+									{
+										 "type":"InterestRate",
+										 "value":3.25,
+										 "description":"3.25% pa",
+										 "frequency":"M",
+										 "period":""
+									}
+							 ],
+							 "specialFeature":"Short Term",
+							 "salesHighlights":[
+									"Minimum investment amount - R250",
+									"Minimum investment period - 32 days",
+									"Notice"
+							 ],
+							 "redirect":{
+									"shouldRedirect":false,
+									"redirectUrl":null
+							 },
+							 "actions":[
+									{
+										 "type":"SELECT",
+										 "text":"Select"
+									},
+									{
+										 "type":"DETAIL",
+										 "text":"Details"
+									},
+									{
+										 "type":"COMPARE",
+										 "text":"Compare"
+									}
+							 ],
+							 "productFeatures":[
+									{
+										 "name":"Maximuminterestrate",
+										 "displayName":"Maximum interest rate",
+										 "description":"up to 3.25%"
+									},
+									{
+										 "name":"Investmentterm",
+										 "displayName":"Investment term",
+										 "description":"32 Days"
+									},
+									{
+										 "name":"MinimumInvestmentAmount",
+										 "displayName":"Minimum Investment Amount",
+										 "description":"R 250"
+									},
+									{
+										 "name":"MinimumInvestmentPeriod",
+										 "displayName":"Minimum Investment Period",
+										 "description":"32 Days"
+									},
+									{
+										 "name":"TermvsNotice",
+										 "displayName":"Term vs Notice",
+										 "description":"Notice"
+									},
+									{
+										 "name":"Freeaccesspriortoterm",
+										 "displayName":"Free access prior to term",
+										 "description":"Yes"
+									},
+									{
+										 "name":"AdditionalDeposits",
+										 "displayName":"Additional Deposits",
+										 "description":"Yes"
+									},
+									{
+										 "name":"AgeRestriction",
+										 "displayName":"Age Restriction",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Interestpaymentfrequency",
+										 "displayName":"Interest payment frequency",
+										 "description":"Monthly,Capitalised"
+									},
+									{
+										 "name":"ElectronicAcces",
+										 "displayName":"Electronic Access",
+										 "description":"included"
+									},
+									{
+										 "name":"Stoporders",
+										 "displayName":"Stop orders",
+										 "description":"included"
+									},
+									{
+										 "name":"Statements",
+										 "displayName":"Statements",
+										 "description":"included"
+									},
+									{
+										 "name":"Fees",
+										 "displayName":"Fees",
+										 "description":"Cash deposit fees"
+									},
+									{
+										 "name":"Investmentterm2",
+										 "displayName":"Investment term",
+										 "description":"32 Days"
+									},
+									{
+										 "name":"Withdrawals",
+										 "displayName":"Withdrawals",
+										 "description":"Minimum R100"
+									},
+									{
+										 "name":"Additionaldeposits",
+										 "displayName":"Additional deposits",
+										 "description":"Minimum R100"
+									},
+									{
+										 "name":"Fixedrate",
+										 "displayName":"Fixed rate?",
+										 "description":"No"
+									}
+							 ],
+							 "eligibilityRules":[
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"0",
+										 "maxValue":"54",
+										 "valueUnit":"year",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"55",
+										 "maxValue":"999",
+										 "valueUnit":"year",
+										 "description":"No age restrictions"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestStart",
+										 "minValue":"250",
+										 "maxValue":"99999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Additional deposit",
+										 "minValue":"100",
+										 "maxValue":"99999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeName":"Access",
+										 "attributeType":"EligibilityRule",
+										 "description":"All individuals, Small Business Services and Business Banking clients",
+										 "maxValue":"2",
+										 "minValue":"2",
+										 "valueUnit":"months"
+									}
+							 ],
+							 "lifeCycleStatus":"AVAILABLE",
+							 "calculator":{
+									"term":0,
+									"notice":32,
+									"productType":50
+							 }
+						},
+						{
+							 "productIdentifier":1348,
+							 "name":"Nedbank Green Fixed Deposit(1348)",
+							 "shortDescription":"This fixed-term investment offers great rates and capital security for the medium to long term. The Nedbank Green Fixed Deposit lets you contribute to South Africa’s green economy at no cost or risk to you. Now that’s a savvy investment.",
+							 "productPricing":[
+									{
+										 "type":"InterestRate",
+										 "value":0.0,
+										 "description":"0.0% pa"
+									}
+							 ],
+							 "specialFeature":"Short Term",
+							 "salesHighlights":[
+									"Minimum investment amount - R1000",
+									"Minimum investment period - 18 months",
+									"Term"
+							 ],
+							 "redirect":{
+									"shouldRedirect":false,
+									"redirectUrl":null
+							 },
+							 "actions":[
+									{
+										 "type":"SELECT_EWCO",
+										 "text":"Select"
+									},
+									{
+										 "type":"DETAIL",
+										 "text":"Details"
+									},
+									{
+										 "type":"COMPARE",
+										 "text":"Compare"
+									}
+							 ],
+							 "productFeatures":[
+									{
+										 "name":"Maximuminterestrate",
+										 "displayName":"Maximum interest rate",
+										 "description":"up to 0.0%"
+									},
+									{
+										 "name":"Investmentterm",
+										 "displayName":"Investment term",
+										 "description":"18 - 60 Months"
+									},
+									{
+										 "name":"MinimumInvestmentAmount",
+										 "displayName":"Minimum Investment Amount",
+										 "description":"R 1000"
+									},
+									{
+										 "name":"MinimumInvestmentPeriod",
+										 "displayName":"Minimum Investment Period",
+										 "description":"18 Months"
+									},
+									{
+										 "name":"TermvsNotice",
+										 "displayName":"Term vs Notice",
+										 "description":"Term"
+									},
+									{
+										 "name":"Freeaccesspriortoterm",
+										 "displayName":"Free access prior to term",
+										 "description":"No"
+									},
+									{
+										 "name":"AdditionalDeposits",
+										 "displayName":"Additional Deposits",
+										 "description":"No"
+									},
+									{
+										 "name":"AgeRestriction",
+										 "displayName":"Age Restriction",
+										 "description":"< 55"
+									},
+									{
+										 "name":"Interestpaymentfrequency",
+										 "displayName":"Interest payment frequency",
+										 "description":"Monthly,Quarterly,Half-yearly,Annually,Expiry"
+									},
+									{
+										 "name":"ElectronicAcces",
+										 "displayName":"Electronic Access",
+										 "description":"included"
+									},
+									{
+										 "name":"Stoporders",
+										 "displayName":"Stop orders",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Statements",
+										 "displayName":"Statements",
+										 "description":"included"
+									},
+									{
+										 "name":"Fees",
+										 "displayName":"Fees",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Investmentterm2",
+										 "displayName":"Investment term",
+										 "description":"18,24,36 or 60 Months"
+									},
+									{
+										 "name":"Withdrawals",
+										 "displayName":"Withdrawals",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Additionaldeposits",
+										 "displayName":"Additional deposits",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Fixedrate",
+										 "displayName":"Fixed rate?",
+										 "description":"Yes"
+									}
+							 ],
+							 "eligibilityRules":[
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"0",
+										 "maxValue":"54",
+										 "valueUnit":"year",
+										 "description":"less than 55 years"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestStart",
+										 "minValue":"1000",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":"Earn minimum R 1000 per annum"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestMonthly",
+										 "value":"No"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Period",
+										 "minValue":"18",
+										 "maxValue":"-1",
+										 "valueUnit":"Period",
+										 "description":"18,24,36 or 60 Months"
+									}
+							 ],
+							 "lifeCycleStatus":"AVAILABLE",
+							 "calculator":{
+									"term":60,
+									"notice":0,
+									"productType":43
+							 }
+						},
+						{
+							 "productIdentifier":1126,
+							 "name":"Fixed Deposit(1126)",
+							 "shortDescription":"Looking for a lump sum, capital guaranteed investment option? Offering guaranteed interest rates for the term of your investment, the Nedbank Fixed Deposit may be the ideal short or medium term investment option for you.",
+							 "productPricing":[
+									{
+										 "type":"InterestRate",
+										 "value":8.2,
+										 "description":"8.2% pa",
+										 "frequency":"M",
+										 "period":"3,6,12,18,24,36,60"
+									}
+							 ],
+							 "specialFeature":"1-60 Months",
+							 "salesHighlights":[
+									"Minimum investment amount - R5 000",
+									"Minimum investment period - 1 month",
+									"No monthly fees or commissions",
+									"Capital guaranteed",
+									"No additional deposits allowed"
+							 ],
+							 "redirect":{
+									"shouldRedirect":false,
+									"redirectUrl":null
+							 },
+							 "actions":[
+									{
+										 "type":"SELECT",
+										 "text":"Select"
+									},
+									{
+										 "type":"DETAIL",
+										 "text":"Details"
+									},
+									{
+										 "type":"COMPARE",
+										 "text":"Compare"
+									}
+							 ],
+							 "productFeatures":[
+									{
+										 "name":"Maximuminterestrate",
+										 "displayName":"Maximum interest rate",
+										 "description":"up to 8.2%"
+									},
+									{
+										 "name":"Investmentterm",
+										 "displayName":"Investment term",
+										 "description":"1 - 60 Months"
+									},
+									{
+										 "name":"MinimumInvestmentAmount",
+										 "displayName":"Minimum Investment Amount",
+										 "description":"R 5 000"
+									},
+									{
+										 "name":"MinimumInvestmentPeriod",
+										 "displayName":"Minimum Investment Period",
+										 "description":"1 Months"
+									},
+									{
+										 "name":"TermvsNotice",
+										 "displayName":"Term vs Notice",
+										 "description":"Term"
+									},
+									{
+										 "name":"Freeaccesspriortoterm",
+										 "displayName":"Free access prior to term",
+										 "description":"No"
+									},
+									{
+										 "name":"AdditionalDeposits",
+										 "displayName":"Additional Deposits",
+										 "description":"No"
+									},
+									{
+										 "name":"AgeRestriction",
+										 "displayName":"Age Restriction",
+										 "description":"<55"
+									},
+									{
+										 "name":"Interestpaymentfrequency",
+										 "displayName":"Interest payment frequency",
+										 "description":"Monthly,Quarterly,Half-yearly,Annually,Expiry"
+									},
+									{
+										 "name":"ElectronicAcces",
+										 "displayName":"Electronic Access",
+										 "description":"included"
+									},
+									{
+										 "name":"Stoporders",
+										 "displayName":"Stop orders",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Statements",
+										 "displayName":"Statements",
+										 "description":"included"
+									},
+									{
+										 "name":"Fees",
+										 "displayName":"Fees",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Investmentterm2",
+										 "displayName":"Investment term",
+										 "description":"1 - 17 Months"
+									},
+									{
+										 "name":"Withdrawals",
+										 "displayName":"Withdrawals",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Additionaldeposits",
+										 "displayName":"Additional deposits",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Fixedrate",
+										 "displayName":"Fixed rate?",
+										 "description":"Yes"
+									}
+							 ],
+							 "eligibilityRules":[
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"0",
+										 "maxValue":"54",
+										 "valueUnit":"year",
+										 "description":"All individuals younger than 55 years of age, Small Business Services and Business Banking clients"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestStart",
+										 "minValue":"5000",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Additional deposit",
+										 "value":"No"
+									},
+									{
+										 "attributeName":"Access",
+										 "attributeType":"EligibilityRule",
+										 "description":"",
+										 "maxValue":"11",
+										 "minValue":"2",
+										 "valueUnit":"month"
+									},
+									{
+										 "attributeName":"Access",
+										 "attributeType":"EligibilityRule",
+										 "description":"",
+										 "maxValue":"12",
+										 "minValue":"60",
+										 "valueUnit":"month"
+									}
+							 ],
+							 "lifeCycleStatus":"AVAILABLE",
+							 "calculator":{
+									"term":60,
+									"notice":0,
+									"productType":3
+							 }
+						},
+						{
+							 "productIdentifier":1360,
+							 "name":"MoneyTrader(1360)",
+							 "shortDescription":"A money market investment account offering highly competitive rates that are linked to money market conditions.",
+							 "productPricing":[
+									{
+										 "type":"InterestRate",
+										 "value":6.8,
+										 "description":"6.8% pa",
+										 "frequency":"M",
+										 "period":""
+									}
+							 ],
+							 "specialFeature":"Short Term",
+							 "salesHighlights":[
+									"Minimum investment amount - R50 000",
+									"Minimum investment period - 24 hours",
+									"Notice"
+							 ],
+							 "redirect":{
+									"shouldRedirect":false,
+									"redirectUrl":null
+							 },
+							 "actions":[
+									{
+										 "type":"SELECT",
+										 "text":"Select"
+									},
+									{
+										 "type":"DETAIL",
+										 "text":"Details"
+									},
+									{
+										 "type":"COMPARE",
+										 "text":"Compare"
+									}
+							 ],
+							 "productFeatures":[
+									{
+										 "name":"Maximuminterestrate",
+										 "displayName":"Maximum interest rate",
+										 "description":"up to 6.8%"
+									},
+									{
+										 "name":"Investmentterm",
+										 "displayName":"Investment term",
+										 "description":"24 hours"
+									},
+									{
+										 "name":"MinimumInvestmentAmount",
+										 "displayName":"Minimum Investment Amount",
+										 "description":"R 50 000"
+									},
+									{
+										 "name":"MinimumInvestmentPeriod",
+										 "displayName":"Minimum Investment Period",
+										 "description":"24 hours"
+									},
+									{
+										 "name":"TermvsNotice",
+										 "displayName":"Term vs Notice",
+										 "description":"Notice"
+									},
+									{
+										 "name":"Freeaccesspriortoterm",
+										 "displayName":"Free access prior to term",
+										 "description":"Yes"
+									},
+									{
+										 "name":"AdditionalDeposits",
+										 "displayName":"Additional Deposits",
+										 "description":"Yes"
+									},
+									{
+										 "name":"AgeRestriction",
+										 "displayName":"Age Restriction",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Interestpaymentfrequency",
+										 "displayName":"Interest payment frequency",
+										 "description":"Monthly"
+									},
+									{
+										 "name":"ElectronicAcces",
+										 "displayName":"Electronic Access",
+										 "description":"included"
+									},
+									{
+										 "name":"Stoporders",
+										 "displayName":"Stop orders",
+										 "description":"included"
+									},
+									{
+										 "name":"Statements",
+										 "displayName":"Statements",
+										 "description":"included"
+									},
+									{
+										 "name":"Fees",
+										 "displayName":"Fees",
+										 "description":"Cash deposit fees"
+									},
+									{
+										 "name":"Investmentterm2",
+										 "displayName":"Investment term",
+										 "description":"24 hours"
+									},
+									{
+										 "name":"Withdrawals",
+										 "displayName":"Withdrawals",
+										 "description":"Minimum R5000,Balance of R50 000 must be maintained"
+									},
+									{
+										 "name":"Additionaldeposits",
+										 "displayName":"Additional deposits",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Fixedrate",
+										 "displayName":"Fixed rate?",
+										 "description":"No"
+									}
+							 ],
+							 "eligibilityRules":[
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"0",
+										 "maxValue":"54",
+										 "valueUnit":"year",
+										 "description":"No age restrictions"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"55",
+										 "maxValue":"999",
+										 "valueUnit":"year",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestStart",
+										 "minValue":"50000",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Additional deposit",
+										 "minValue":"5000",
+										 "maxValue":"99999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Access",
+										 "minValue":"0",
+										 "maxValue":"1",
+										 "valueUnit":"Period",
+										 "description":"All individuals, Small Business Services and Business Banking clients"
+									}
+							 ],
+							 "lifeCycleStatus":"AVAILABLE",
+							 "calculator":{
+									"term":0,
+									"notice":1,
+									"productType":31
+							 }
+						},
+						{
+							 "productIdentifier":1199,
+							 "name":"JustInvest(1199)",
+							 "shortDescription":"A money market investment account offering competitive, tiered interest rates and access to your funds with 24 hours' notice.",
+							 "productPricing":[
+									{
+										 "type":"InterestRate",
+										 "value":3.9,
+										 "description":"3.9% pa",
+										 "frequency":"M",
+										 "period":""
+									}
+							 ],
+							 "specialFeature":"Short Term",
+							 "salesHighlights":[
+									"Minimum investment amount - R500",
+									"Minimum investment period - 24 hours",
+									"Notice"
+							 ],
+							 "redirect":{
+									"shouldRedirect":false,
+									"redirectUrl":null
+							 },
+							 "actions":[
+									{
+										 "type":"SELECT",
+										 "text":"Select"
+									},
+									{
+										 "type":"DETAIL",
+										 "text":"Details"
+									},
+									{
+										 "type":"COMPARE",
+										 "text":"Compare"
+									}
+							 ],
+							 "productFeatures":[
+									{
+										 "name":"Maximuminterestrate",
+										 "displayName":"Maximum interest rate",
+										 "description":"up to 3.9%"
+									},
+									{
+										 "name":"Investmentterm",
+										 "displayName":"Investment term",
+										 "description":"24 hours"
+									},
+									{
+										 "name":"MinimumInvestmentAmount",
+										 "displayName":"Minimum Investment Amount",
+										 "description":"R 500"
+									},
+									{
+										 "name":"MinimumInvestmentPeriod",
+										 "displayName":"Minimum Investment Period",
+										 "description":"24 hours"
+									},
+									{
+										 "name":"TermvsNotice",
+										 "displayName":"Term vs Notice",
+										 "description":"Notice"
+									},
+									{
+										 "name":"Freeaccesspriortoterm",
+										 "displayName":"Free access prior to term",
+										 "description":"Yes"
+									},
+									{
+										 "name":"AdditionalDeposits",
+										 "displayName":"Additional Deposits",
+										 "description":"Yes"
+									},
+									{
+										 "name":"AgeRestriction",
+										 "displayName":"Age Restriction",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Interestpaymentfrequency",
+										 "displayName":"Interest payment frequency",
+										 "description":"Daily Capitalised"
+									},
+									{
+										 "name":"ElectronicAcces",
+										 "displayName":"Electronic Access",
+										 "description":"included"
+									},
+									{
+										 "name":"Stoporders",
+										 "displayName":"Stop orders",
+										 "description":"included"
+									},
+									{
+										 "name":"Statements",
+										 "displayName":"Statements",
+										 "description":"included"
+									},
+									{
+										 "name":"Fees",
+										 "displayName":"Fees",
+										 "description":"Cash deposit fees"
+									},
+									{
+										 "name":"Investmentterm2",
+										 "displayName":"Investment term",
+										 "description":"24 hours"
+									},
+									{
+										 "name":"Withdrawals",
+										 "displayName":"Withdrawals",
+										 "description":"Minimum R500,Balance of R5000 must be maintained"
+									},
+									{
+										 "name":"Additionaldeposits",
+										 "displayName":"Additional deposits",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Fixedrate",
+										 "displayName":"Fixed rate?",
+										 "description":"No"
+									}
+							 ],
+							 "eligibilityRules":[
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"0",
+										 "maxValue":"54",
+										 "valueUnit":"year",
+										 "description":"No age restrictions"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"55",
+										 "maxValue":"999",
+										 "valueUnit":"year",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestStart",
+										 "minValue":"500",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Additional deposit",
+										 "minValue":"500",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Access",
+										 "minValue":"0",
+										 "maxValue":"1",
+										 "valueUnit":"Period",
+										 "description":"All individuals, Small Business Services and Business Banking clients"
+									}
+							 ],
+							 "lifeCycleStatus":"AVAILABLE",
+							 "calculator":{
+									"term":0,
+									"notice":1,
+									"productType":32
+							 }
+						},
+						{
+							 "productIdentifier":"1134",
+							 "name":"EasyAccess Deposit(1134)",
+							 "shortDescription":"Get the guaranteed returns of a fixed deposit, coupled with the flexibility of access of 50% of your capital without sacrificing your interest rate.",
+							 "productPricing":[
+									{
+										 "type":"InterestRate",
+										 "value":4.0,
+										 "description":"4.0% pa",
+										 "frequency":"M",
+										 "period":"12"
+									}
+							 ],
+							 "specialFeature":"12 months",
+							 "salesHighlights":[
+									"Minimum investment amount - R25 000",
+									"Minimum investment period - 12 month",
+									"No monthly fees or commissions",
+									"Capital guaranteed",
+									"No additional deposits allowed"
+							 ],
+							 "redirect":{
+									"shouldRedirect":false,
+									"redirectUrl":null
+							 },
+							 "actions":[
+									{
+										 "type":"SELECT",
+										 "text":"Select"
+									},
+									{
+										 "type":"DETAIL",
+										 "text":"Details"
+									},
+									{
+										 "type":"COMPARE",
+										 "text":"Compare"
+									}
+							 ],
+							 "productFeatures":[
+									{
+										 "name":"Maximuminterestrate",
+										 "displayName":"Maximum interest rate",
+										 "description":"up to 4.0%"
+									},
+									{
+										 "name":"Investmentterm",
+										 "displayName":"Investment term",
+										 "description":"12 Months"
+									},
+									{
+										 "name":"MinimumInvestmentAmount",
+										 "displayName":"Minimum Investment Amount",
+										 "description":"R 25 000"
+									},
+									{
+										 "name":"MinimumInvestmentPeriod",
+										 "displayName":"Minimum Investment Period",
+										 "description":"12 Months"
+									},
+									{
+										 "name":"TermvsNotice",
+										 "displayName":"Term vs Notice",
+										 "description":"Term"
+									},
+									{
+										 "name":"Freeaccesspriortoterm",
+										 "displayName":"Free access prior to term",
+										 "description":"Yes"
+									},
+									{
+										 "name":"AdditionalDeposits",
+										 "displayName":"Additional Deposits",
+										 "description":"No"
+									},
+									{
+										 "name":"AgeRestriction",
+										 "displayName":"Age Restriction",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Interestpaymentfrequency",
+										 "displayName":"Interest payment frequency",
+										 "description":"Monthly, quarterly, half-yearly or on expiry"
+									},
+									{
+										 "name":"ElectronicAcces",
+										 "displayName":"Electronic Access",
+										 "description":"included"
+									},
+									{
+										 "name":"Stoporders",
+										 "displayName":"Stop orders",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Statements",
+										 "displayName":"Statements",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Fees",
+										 "displayName":"Fees",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Investmentterm2",
+										 "displayName":"Investment term",
+										 "description":"12 Months"
+									},
+									{
+										 "name":"Withdrawals",
+										 "displayName":"Withdrawals",
+										 "description":"Minimum R1000"
+									},
+									{
+										 "name":"Additionaldeposits",
+										 "displayName":"Additional deposits",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Fixedrate",
+										 "displayName":"Fixed rate?",
+										 "description":"Yes"
+									}
+							 ],
+							 "eligibilityRules":[
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"0",
+										 "maxValue":"54",
+										 "valueUnit":"year",
+										 "description":"No age restrictions"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"55",
+										 "maxValue":"999",
+										 "valueUnit":"year",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestStart",
+										 "minValue":"25000",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Additional deposit",
+										 "value":"No"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Access",
+										 "minValue":"12",
+										 "maxValue":"12",
+										 "valueUnit":"Period",
+										 "description":"All individuals, Small Business Services and Business Banking clients"
+									}
+							 ],
+							 "lifeCycleStatus":"AVAILABLE",
+							 "calculator":{
+									"term":12,
+									"notice":0,
+									"productType":17
+							 }
+						},
+						{
+							 "productIdentifier":1136,
+							 "name":"OptimumPlus(1136)",
+							 "shortDescription":"For clients 55 years and over who want to invest a lump sum while enjoying capital security and a guaranteed tiered interest rate.",
+							 "productPricing":[
+									{
+										 "type":"InterestRate",
+										 "value":8.05,
+										 "description":"8.05% pa",
+										 "frequency":"M",
+										 "period":"3,6,12,18,24,36,60"
+									}
+							 ],
+							 "specialFeature":"1 - 60 Months",
+							 "salesHighlights":[
+									"Minimum investment amount - R5 000",
+									"Minimum investment period - 1 month",
+									"No monthly fees or commissions",
+									"Capital guaranteed",
+									"No additional deposits allowed"
+							 ],
+							 "redirect":{
+									"shouldRedirect":false,
+									"redirectUrl":null
+							 },
+							 "actions":[
+									{
+										 "type":"SELECT",
+										 "text":"Select"
+									},
+									{
+										 "type":"DETAIL",
+										 "text":"Details"
+									},
+									{
+										 "type":"COMPARE",
+										 "text":"Compare"
+									}
+							 ],
+							 "productFeatures":[
+									{
+										 "name":"Maximuminterestrate",
+										 "displayName":"Maximum interest rate",
+										 "description":"up to 8.05%"
+									},
+									{
+										 "name":"Investmentterm",
+										 "displayName":"Investment term",
+										 "description":"1 - 60 Months"
+									},
+									{
+										 "name":"MinimumInvestmentAmount",
+										 "displayName":"Minimum Investment Amount",
+										 "description":"R5 000"
+									},
+									{
+										 "name":"MinimumInvestmentPeriod",
+										 "displayName":"Minimum Investment Period",
+										 "description":"1 Months"
+									},
+									{
+										 "name":"TermvsNotice",
+										 "displayName":"Term vs Notice",
+										 "description":"Term"
+									},
+									{
+										 "name":"Freeaccesspriortoterm",
+										 "displayName":"Free access prior to term",
+										 "description":"No"
+									},
+									{
+										 "name":"AdditionalDeposits",
+										 "displayName":"Additional Deposits",
+										 "description":"No"
+									},
+									{
+										 "name":"AgeRestriction",
+										 "displayName":"Age Restriction",
+										 "description":"55+"
+									},
+									{
+										 "name":"Interestpaymentfrequency",
+										 "displayName":"Interest payment frequency",
+										 "description":"Monthly,Quarterly,Half-yearly,Annually,Expiry"
+									},
+									{
+										 "name":"ElectronicAcces",
+										 "displayName":"Electronic Access",
+										 "description":"included"
+									},
+									{
+										 "name":"Stoporders",
+										 "displayName":"Stop orders",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Statements",
+										 "displayName":"Statements",
+										 "description":"included"
+									},
+									{
+										 "name":"Fees",
+										 "displayName":"Fees",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Investmentterm2",
+										 "displayName":"Investment term",
+										 "description":"1 - 17 Months"
+									},
+									{
+										 "name":"Withdrawals",
+										 "displayName":"Withdrawals",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Additionaldeposits",
+										 "displayName":"Additional deposits",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Fixedrate",
+										 "displayName":"Fixed rate?",
+										 "description":"Yes"
+									}
+							 ],
+							 "eligibilityRules":[
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"55",
+										 "maxValue":"999",
+										 "valueUnit":"year",
+										 "description":"Exclusively available to individual clients, 55 years or older"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestStart",
+										 "minValue":"5000",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Additional deposit",
+										 "value":"No"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Access",
+										 "minValue":"2",
+										 "maxValue":"11",
+										 "valueUnit":"months",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Access",
+										 "minValue":"12",
+										 "maxValue":"60",
+										 "valueUnit":"months",
+										 "description":""
+									}
+							 ],
+							 "lifeCycleStatus":"AVAILABLE",
+							 "calculator":{
+									"term":60,
+									"notice":0,
+									"productType":28
+							 }
+						},
+						{
+							 "productIdentifier":"1130",
+							 "name":"PrimeSelect(1130)",
+							 "shortDescription":"PrimeSelect has all the right ingredients : Capital security, interest rates linked to prime, access to a percentage of the funds and the option to top up your investment.",
+							 "productPricing":[
+									{
+										 "type":"InterestRate",
+										 "value":8.65,
+										 "description":"8.65% pa",
+										 "frequency":"M",
+										 "period":"3,9,12,36"
+									}
+							 ],
+							 "specialFeature":"3 - 60 months",
+							 "salesHighlights":[
+									"Minimum investment amount - R5000",
+									"Minimum investment period - 3 month",
+									"No monthly fees or commissions",
+									"Initial capital fully guaranteed",
+									"Ability to add up to 50% of your original investment",
+									"Ability to withdraw up to 50% of your original investment",
+									"Original capital should be minimum R1000"
+							 ],
+							 "redirect":{
+									"shouldRedirect":false,
+									"redirectUrl":null
+							 },
+							 "actions":[
+									{
+										 "type":"SELECT",
+										 "text":"Select"
+									},
+									{
+										 "type":"DETAIL",
+										 "text":"Details"
+									},
+									{
+										 "type":"COMPARE",
+										 "text":"Compare"
+									}
+							 ],
+							 "productFeatures":[
+									{
+										 "name":"Maximuminterestrate",
+										 "displayName":"Maximum interest rate",
+										 "description":"up to 8.65%"
+									},
+									{
+										 "name":"Investmentterm",
+										 "displayName":"Investment term",
+										 "description":"3 - 60 months"
+									},
+									{
+										 "name":"MinimumInvestmentAmount",
+										 "displayName":"Minimum Investment Amount",
+										 "description":"R 5000"
+									},
+									{
+										 "name":"MinimumInvestmentPeriod",
+										 "displayName":"Minimum Investment Period",
+										 "description":"3 months"
+									},
+									{
+										 "name":"TermvsNotice",
+										 "displayName":"Term vs Notice",
+										 "description":"Term"
+									},
+									{
+										 "name":"Freeaccesspriortoterm",
+										 "displayName":"Free access prior to term",
+										 "description":"Yes"
+									},
+									{
+										 "name":"AdditionalDeposits",
+										 "displayName":"Additional Deposits",
+										 "description":"No"
+									},
+									{
+										 "name":"AgeRestriction",
+										 "displayName":"Age Restriction",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Interestpaymentfrequency",
+										 "displayName":"Interest payment frequency",
+										 "description":"Monthly, quarterly, half-yearly, annually or on expiry"
+									},
+									{
+										 "name":"ElectronicAcces",
+										 "displayName":"Electronic Access",
+										 "description":"included"
+									},
+									{
+										 "name":"Stoporders",
+										 "displayName":"Stop orders",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Statements",
+										 "displayName":"Statements",
+										 "description":"included"
+									},
+									{
+										 "name":"Fees",
+										 "displayName":"Fees",
+										 "description":"Cash deposit fees"
+									},
+									{
+										 "name":"Investmentterm2",
+										 "displayName":"Investment term",
+										 "description":"3 - 60 months"
+									},
+									{
+										 "name":"Withdrawals",
+										 "displayName":"Withdrawals",
+										 "description":"Max of 5 withdrawals, totalling 50% of original capital. Minimum R1 000"
+									},
+									{
+										 "name":"Additionaldeposits",
+										 "displayName":"Additional deposits",
+										 "description":"Max of 5 deposits, totalling 50% of original capital"
+									},
+									{
+										 "name":"Fixedrate",
+										 "displayName":"Fixed rate?",
+										 "description":"No (prime linked)"
+									}
+							 ],
+							 "eligibilityRules":[
+									{
+										 "attributeName":"Access",
+										 "attributeType":"EligibilityRule",
+										 "description":"All individuals, Small Business Services and Business Banking clients",
+										 "maxValue":"12",
+										 "minValue":"12",
+										 "valueUnit":"Period"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"0",
+										 "maxValue":"54",
+										 "valueUnit":"year",
+										 "description":"No age restrictions"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"55",
+										 "maxValue":"999",
+										 "valueUnit":"year",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestStart",
+										 "minValue":"5000",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Additional deposit",
+										 "minValue":"2500",
+										 "maxValue":"99999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Display",
+										 "description":""
+									}
+							 ],
+							 "lifeCycleStatus":"AVAILABLE",
+							 "calculator":{
+									"term":60,
+									"notice":0,
+									"productType":15
+							 }
+						},
+						{
+							 "productIdentifier":"1349",
+							 "name":"Nedbank Green Optimum Deposit(1349)",
+							 "shortDescription":"This fixed-term investment offers great rates and capital security for the medium to long term. The Nedbank Green Optimum Deposit lets you contribute to South Africa’s green economy at no cost or risk to you. Now that’s a savvy investment.",
+							 "productPricing":[
+									{
+										 "type":"InterestRate",
+										 "value":0.0,
+										 "description":"0.0% pa"
+									}
+							 ],
+							 "specialFeature":"Long Term",
+							 "salesHighlights":[
+									"Minimum investment amount - R1000",
+									"Minimum investment period - 18 month",
+									"No monthly fees or commissions",
+									"Capital guaranteed",
+									"No additional deposits allowed"
+							 ],
+							 "redirect":{
+									"shouldRedirect":false,
+									"redirectUrl":null
+							 },
+							 "actions":[
+									{
+										 "type":"SELECT_EWCO",
+										 "text":"Select"
+									},
+									{
+										 "type":"DETAIL",
+										 "text":"Details"
+									},
+									{
+										 "type":"COMPARE",
+										 "text":"Compare"
+									}
+							 ],
+							 "productFeatures":[
+									{
+										 "name":"Maximuminterestrate",
+										 "displayName":"Maximum interest rate",
+										 "description":"up to 0.0%"
+									},
+									{
+										 "name":"Investmentterm",
+										 "displayName":"Investment term",
+										 "description":"18 - 60 Months"
+									},
+									{
+										 "name":"MinimumInvestmentAmount",
+										 "displayName":"Minimum Investment Amount",
+										 "description":"R 1000"
+									},
+									{
+										 "name":"MinimumInvestmentPeriod",
+										 "displayName":"Minimum Investment Period",
+										 "description":"18 Months"
+									},
+									{
+										 "name":"TermvsNotice",
+										 "displayName":"Term vs Notice",
+										 "description":"Term"
+									},
+									{
+										 "name":"Freeaccesspriortoterm",
+										 "displayName":"Free access prior to term",
+										 "description":"No"
+									},
+									{
+										 "name":"AdditionalDeposits",
+										 "displayName":"Additional Deposits",
+										 "description":"No"
+									},
+									{
+										 "name":"AgeRestriction",
+										 "displayName":"Age Restriction",
+										 "description":"55 years and older. Individual clients only"
+									},
+									{
+										 "name":"Interestpaymentfrequency",
+										 "displayName":"Interest payment frequency",
+										 "description":"Monthly,Quarterly,Half-yearly,Annually,Expiry"
+									},
+									{
+										 "name":"ElectronicAcces",
+										 "displayName":"Electronic Access",
+										 "description":"included"
+									},
+									{
+										 "name":"Stoporders",
+										 "displayName":"Stop orders",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Statements",
+										 "displayName":"Statements",
+										 "description":"included"
+									},
+									{
+										 "name":"Fees",
+										 "displayName":"Fees",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Investmentterm2",
+										 "displayName":"Investment term",
+										 "description":"18,24,36 or 60 Months"
+									},
+									{
+										 "name":"Withdrawals",
+										 "displayName":"Withdrawals",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Additionaldeposits",
+										 "displayName":"Additional deposits",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Fixedrate",
+										 "displayName":"Fixed rate?",
+										 "description":"Yes"
+									}
+							 ],
+							 "eligibilityRules":[
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"55",
+										 "maxValue":"-1",
+										 "valueUnit":"year",
+										 "description":"Only available to individuals who are 55 or older"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestStart",
+										 "minValue":"1000",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":"Earn minimum R 1000 per annum"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestMonthly",
+										 "value":"No"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Period",
+										 "minValue":"18",
+										 "maxValue":"60",
+										 "valueUnit":"Period",
+										 "description":"18,24,36 or 60 Months"
+									}
+							 ],
+							 "lifeCycleStatus":"AVAILABLE",
+							 "calculator":{
+									"term":12,
+									"notice":0,
+									"productType":17
+							 }
+						},
+						{
+							 "productIdentifier":"1133",
+							 "name":"Platinum Fixed Deposit(1133)",
+							 "shortDescription":"Fixed deposits at highly competitive interest rates – exclusively for Professional Banking clients.",
+							 "productPricing":[
+									{
+										 "type":"InterestRate",
+										 "value":8.1,
+										 "description":"8.1% pa",
+										 "frequency":"M",
+										 "period":"3,6,12,18,24,36,60"
+									}
+							 ],
+							 "specialFeature":"1 - 60 months",
+							 "salesHighlights":[
+									"Minimum investment amount - R100 000",
+									"Minimum investment period - 1 month",
+									"No monthly fees or commissions",
+									"Capital guaranteed",
+									"No additional deposits allowed"
+							 ],
+							 "redirect":{
+									"shouldRedirect":false,
+									"redirectUrl":null
+							 },
+							 "actions":[
+									{
+										 "type":"SELECT",
+										 "text":"Select"
+									},
+									{
+										 "type":"DETAIL",
+										 "text":"Details"
+									},
+									{
+										 "type":"COMPARE",
+										 "text":"Compare"
+									}
+							 ],
+							 "productFeatures":[
+									{
+										 "name":"Maximuminterestrate",
+										 "displayName":"Maximum interest rate",
+										 "description":"up to 8.1%"
+									},
+									{
+										 "name":"Investmentterm",
+										 "displayName":"Investment term",
+										 "description":"1 - 60 Months"
+									},
+									{
+										 "name":"MinimumInvestmentAmount",
+										 "displayName":"Minimum Investment Amount",
+										 "description":"R 100 000"
+									},
+									{
+										 "name":"MinimumInvestmentPeriod",
+										 "displayName":"Minimum Investment Period",
+										 "description":"1 Month"
+									},
+									{
+										 "name":"TermvsNotice",
+										 "displayName":"Term vs Notice",
+										 "description":"Term"
+									},
+									{
+										 "name":"Freeaccesspriortoterm",
+										 "displayName":"Free access prior to term",
+										 "description":"Yes"
+									},
+									{
+										 "name":"AdditionalDeposits",
+										 "displayName":"Additional Deposits",
+										 "description":"No"
+									},
+									{
+										 "name":"AgeRestriction",
+										 "displayName":"Age Restriction",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Interestpaymentfrequency",
+										 "displayName":"Interest payment frequency",
+										 "description":"Monthly,Quarterly,Half-yearly,Expiry"
+									},
+									{
+										 "name":"ElectronicAcces",
+										 "displayName":"Electronic Access",
+										 "description":"included"
+									},
+									{
+										 "name":"Stoporders",
+										 "displayName":"Stop orders",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Statements",
+										 "displayName":"Statements",
+										 "description":"included"
+									},
+									{
+										 "name":"Fees",
+										 "displayName":"Fees",
+										 "description":"None"
+									},
+									{
+										 "name":"Investmentterm2",
+										 "displayName":"Investment term",
+										 "description":"1,2,3,6, or 12 Months"
+									},
+									{
+										 "name":"Withdrawals",
+										 "displayName":"Withdrawals",
+										 "description":"3 Withdrawals totalling 30% of original capital"
+									},
+									{
+										 "name":"Additionaldeposits",
+										 "displayName":"Additional deposits",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Fixedrate",
+										 "displayName":"Fixed rate?",
+										 "description":"Yes"
+									}
+							 ],
+							 "eligibilityRules":[
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"0",
+										 "maxValue":"54",
+										 "valueUnit":"year",
+										 "description":"No age restrictions"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"55",
+										 "maxValue":"999",
+										 "valueUnit":"year",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestStart",
+										 "minValue":"100000",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Additional deposit",
+										 "value":"No"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Access",
+										 "minValue":"2",
+										 "maxValue":"11",
+										 "valueUnit":"Period",
+										 "description":"Exclusive to Nedbank Professional Banking clients"
+									},
+									{
+										 "attributeName":"Access",
+										 "attributeType":"EligibilityRule",
+										 "description":"",
+										 "maxValue":"60",
+										 "minValue":"12",
+										 "valueUnit":"month"
+									}
+							 ],
+							 "lifeCycleStatus":"AVAILABLE",
+							 "calculator":{
+									"term":60,
+									"notice":0,
+									"productType":23
+							 }
+						},
+						{
+							 "productIdentifier":"1139",
+							 "name":"Platinum Invest(1139)",
+							 "shortDescription":"A money market investment account with highly competitive interest rates , exclusively for Professional Banking clients.",
+							 "productPricing":[
+									{
+										 "type":"InterestRate",
+										 "value":8.9,
+										 "description":"8.9% pa",
+										 "frequency":"M",
+										 "period":""
+									}
+							 ],
+							 "specialFeature":"24 hours",
+							 "salesHighlights":[
+									"Minimum investment amount - R500",
+									"Minimum investment period - 24 hours",
+									"No monthly fees or commissions",
+									"Initial capital fully guaranteed"
+							 ],
+							 "redirect":{
+									"shouldRedirect":false,
+									"redirectUrl":null
+							 },
+							 "actions":[
+									{
+										 "type":"SELECT",
+										 "text":"Select"
+									},
+									{
+										 "type":"DETAIL",
+										 "text":"Details"
+									},
+									{
+										 "type":"COMPARE",
+										 "text":"Compare"
+									}
+							 ],
+							 "productFeatures":[
+									{
+										 "name":"Maximuminterestrate",
+										 "displayName":"Maximum interest rate",
+										 "description":"up to 8.9%"
+									},
+									{
+										 "name":"Investmentterm",
+										 "displayName":"Investment term",
+										 "description":"24 hours"
+									},
+									{
+										 "name":"MinimumInvestmentAmount",
+										 "displayName":"Minimum Investment Amount",
+										 "description":"R 500"
+									},
+									{
+										 "name":"MinimumInvestmentPeriod",
+										 "displayName":"Minimum Investment Period",
+										 "description":"24 hours"
+									},
+									{
+										 "name":"TermvsNotice",
+										 "displayName":"Term vs Notice",
+										 "description":"Term"
+									},
+									{
+										 "name":"Freeaccesspriortoterm",
+										 "displayName":"Free access prior to term",
+										 "description":"No"
+									},
+									{
+										 "name":"AdditionalDeposits",
+										 "displayName":"Additional Deposits",
+										 "description":"Yes"
+									},
+									{
+										 "name":"AgeRestriction",
+										 "displayName":"Age Restriction",
+										 "description":"Nedbank Professional Banking clients only"
+									},
+									{
+										 "name":"Interestpaymentfrequency",
+										 "displayName":"Interest payment frequency",
+										 "description":"Monthly Capitalised"
+									},
+									{
+										 "name":"ElectronicAcces",
+										 "displayName":"Electronic Access",
+										 "description":"Yes"
+									},
+									{
+										 "name":"Stoporders",
+										 "displayName":"Stop orders",
+										 "description":"included"
+									},
+									{
+										 "name":"Statements",
+										 "displayName":"Statements",
+										 "description":"included"
+									},
+									{
+										 "name":"Fees",
+										 "displayName":"Fees",
+										 "description":"Cash deposit fees"
+									},
+									{
+										 "name":"Investmentterm2",
+										 "displayName":"Investment term",
+										 "description":"24 hours"
+									},
+									{
+										 "name":"Withdrawals",
+										 "displayName":"Withdrawals",
+										 "description":"1 days' notice required; minimum. R100"
+									},
+									{
+										 "name":"Additionaldeposits",
+										 "displayName":"Additional deposits",
+										 "description":"Minimum R100"
+									},
+									{
+										 "name":"Fixedrate",
+										 "displayName":"Fixed rate?",
+										 "description":"No"
+									}
+							 ],
+							 "eligibilityRules":[
+									{
+										 "attributeName":"Access",
+										 "attributeType":"EligibilityRule",
+										 "description":"Exclusive to Nedbank Professional Banking clients",
+										 "maxValue":"1",
+										 "minValue":"0",
+										 "valueUnit":"month"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"0",
+										 "maxValue":"54",
+										 "valueUnit":"year",
+										 "description":"No age restrictions"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"55",
+										 "maxValue":"999",
+										 "valueUnit":"year",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestStart",
+										 "minValue":"500",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Additional deposit",
+										 "minValue":"100",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Display",
+										 "description":""
+									}
+							 ],
+							 "lifeCycleStatus":"AVAILABLE",
+							 "calculator":{
+									"term":0,
+									"notice":1,
+									"productType":30
+							 }
+						},
+						{
+							 "productIdentifier":"1127",
+							 "name":"Money Market Investment Account(1127)",
+							 "shortDescription":"Get market-related interest rates and full access to funds with this flexible, fully transactional investment account.",
+							 "productPricing":[
+									{
+										 "type":"InterestRate",
+										 "value":0.0,
+										 "description":"0.0% pa"
+									}
+							 ],
+							 "specialFeature":"Short Term",
+							 "salesHighlights":[
+									"Minimum investment amount - R20 000",
+									"Minimum investment period - On demand",
+									"Savings"
+							 ],
+							 "redirect":{
+									"shouldRedirect":false,
+									"redirectUrl":null
+							 },
+							 "actions":[
+									{
+										 "type":"SELECT_EWCO",
+										 "text":"Select"
+									},
+									{
+										 "type":"DETAIL",
+										 "text":"Details"
+									},
+									{
+										 "type":"COMPARE",
+										 "text":"Compare"
+									}
+							 ],
+							 "productFeatures":[
+									{
+										 "name":"Maximuminterestrate",
+										 "displayName":"Maximum interest rate",
+										 "description":"up to 0.0%"
+									},
+									{
+										 "name":"Investmentterm",
+										 "displayName":"Investment term",
+										 "description":"On demand"
+									},
+									{
+										 "name":"MinimumInvestmentAmount",
+										 "displayName":"Minimum Investment Amount",
+										 "description":"R 20 000"
+									},
+									{
+										 "name":"MinimumInvestmentPeriod",
+										 "displayName":"Minimum Investment Period",
+										 "description":"On demand"
+									},
+									{
+										 "name":"TermvsNotice",
+										 "displayName":"Term vs Notice",
+										 "description":"Savings"
+									},
+									{
+										 "name":"Freeaccesspriortoterm",
+										 "displayName":"Free access prior to term",
+										 "description":"Yes"
+									},
+									{
+										 "name":"AdditionalDeposits",
+										 "displayName":"Additional Deposits",
+										 "description":"Yes"
+									},
+									{
+										 "name":"AgeRestriction",
+										 "displayName":"Age Restriction",
+										 "description":"N/A"
+									},
+									{
+										 "name":"Interestpaymentfrequency",
+										 "displayName":"Interest payment frequency",
+										 "description":"Monthly Capitalised"
+									},
+									{
+										 "name":"ElectronicAcces",
+										 "displayName":"Electronic Access",
+										 "description":"included"
+									},
+									{
+										 "name":"Stoporders",
+										 "displayName":"Stop orders",
+										 "description":"included"
+									},
+									{
+										 "name":"Statements",
+										 "displayName":"Statements",
+										 "description":"-"
+									},
+									{
+										 "name":"Fees",
+										 "displayName":"Fees",
+										 "description":"Transaction charges"
+									},
+									{
+										 "name":"Investmentterm2",
+										 "displayName":"Investment term",
+										 "description":"-"
+									},
+									{
+										 "name":"Withdrawals",
+										 "displayName":"Withdrawals",
+										 "description":"-"
+									},
+									{
+										 "name":"Additionaldeposits",
+										 "displayName":"Additional deposits",
+										 "description":"-"
+									},
+									{
+										 "name":"Fixedrate",
+										 "displayName":"Fixed rate?",
+										 "description":"-"
+									}
+							 ],
+							 "eligibilityRules":[
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"-1",
+										 "maxValue":"-1",
+										 "valueUnit":"year",
+										 "description":"Individuals aged 18 years or older"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestStart",
+										 "minValue":"20000",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestMonthly",
+										 "value":"No"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Period",
+										 "minValue":"0",
+										 "maxValue":"0.9",
+										 "valueUnit":"Period",
+										 "description":"Any individual, clubs, non-profit organisations and trust accounts"
+									}
+							 ],
+							 "lifeCycleStatus":"AVAILABLE",
+							 "calculator":{
+									"term":0,
+									"notice":24,
+									"productType":28
+							 }
+						}
+				 ]
+			},
+			{
+				 "displayName":"Tax-Free Investments",
+				 "name":"taxfreeinvestments",
+				 "miniDetails":[
+						{
+							 "Heading":"Tax-Free Investments",
+							 "displayItems":[
+									{
+										 "displayName":"What are everyday investments?",
+										 "data":[
+												"Nedbank offers"
+										 ]
+									},
+									{
+										 "displayName":"Benefits",
+										 "data":[
+												"Investment helps you reach"
+										 ]
+									}
+							 ]
+						}
+				 ],
+				 "filterGroups":[
+						{
+							 "filterGroupID":1,
+							 "filterGroupName":"Age",
+							 "filterDisplayName":"What is your age?",
+							 "filterType":"Range",
+							 "filterItems":[
+									{
+										 "filterID":1,
+										 "filterDisplay":"Younger than 55",
+										 "productAttribute":"productAttributes[?(@.attributeName==='Age')]",
+										 "minValue":0,
+										 "maxValue":54
+									},
+									{
+										 "filterID":2,
+										 "filterDisplay":"55 or older",
+										 "productAttribute":"productAttributes[?(@.attributeName==='Age')]",
+										 "minValue":55,
+										 "maxValue":999
+									}
+							 ]
+						},
+						{
+							 "filterGroupID":2,
+							 "filterGroupName":"InvestStart",
+							 "filterDisplayName":"How much money will you be depositing to begin with?",
+							 "filterType":"TextRange",
+							 "filterItems":[
+									{
+										 "filterID":1,
+										 "filterDisplay":"Initial deposit",
+										 "productAttribute":"productAttributes[?(@.attributeName==='InvestStart')]",
+										 "value":""
+									}
+							 ]
+						},
+						{
+							 "filterGroupID":3,
+							 "filterGroupName":"Additional deposit",
+							 "filterDisplayName":"Would you want to make more deposits once the account is opened?",
+							 "filterType":"YesNo",
+							 "filterItems":[
+									{
+										 "filterID":1,
+										 "filterDisplay":"Yes",
+										 "productAttribute":"productAttributes[?(@.attributeName==='MoreDeposits')]",
+										 "value":"yes"
+									},
+									{
+										 "filterID":2,
+										 "filterDisplay":"No",
+										 "productAttribute":"productAttributes[?(@.attributeName==='MoreDeposits')]",
+										 "value":"no"
+									}
+							 ]
+						},
+						{
+							 "filterGroupID":4,
+							 "filterGroupName":"Access",
+							 "filterDisplayName":"When do you need access to your money?",
+							 "filterType":"Range",
+							 "filterItems":[
+									{
+										 "filterID":1,
+										 "filterDisplay":"After 24 hours notice",
+										 "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+										 "minValue":0,
+										 "maxValue":1
+									},
+									{
+										 "filterID":2,
+										 "filterDisplay":"After 32 days notice",
+										 "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+										 "minValue":2,
+										 "maxValue":11
+									},
+									{
+										 "filterID":3,
+										 "filterDisplay":"At the end of my investment period",
+										 "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+										 "minValue":12,
+										 "maxValue":999
+									}
+							 ]
+						}
+				 ],
+				 "productGroups":[
+						{
+							 "groupIdentifier":"POPULAR_PRODUCTS",
+							 "name":"POPULAR CHOICES",
+							 "products":[
+									
+							 ]
+						},
+						{
+							 "groupIdentifier":"ACCESS_WITHIN_24HRS",
+							 "name":"ACCESS WITHIN 24HRS",
+							 "products":[
+									
+							 ]
+						}
+				 ],
+				 "popularProducts":[
+						
+				 ],
+				 "products":[
+						{
+							 "productIdentifier":"1392",
+							 "name":"Tax-free Savings(1392)",
+							 "shortDescription":"The account that gives you the opportunity to save and enjoy your money tax-free.",
+							 "productPricing":[
+									{
+										 "type":"InterestRate",
+										 "value":6.51,
+										 "description":"6.51% pa",
+										 "frequency":"M",
+										 "period":""
+									}
+							 ],
+							 "specialFeature":"24 hours",
+							 "salesHighlights":[
+									"Minimum investment amount - R500",
+									"Minimum investment period - 24 hours",
+									"No monthly fees or commissions",
+									"Capital fully guaranteed"
+							 ],
+							 "redirect":{
+									"shouldRedirect":false,
+									"redirectUrl":null
+							 },
+							 "actions":[
+									{
+										 "type":"SELECT",
+										 "text":"Select"
+									},
+									{
+										 "type":"DETAIL",
+										 "text":"Details"
+									},
+									{
+										 "type":"COMPARE",
+										 "text":"Compare"
+									}
+							 ],
+							 "productFeatures":[
+									{
+										 "name":"Maximuminterestrate",
+										 "displayName":"Maximum interest rate",
+										 "description":"up to 6.51%"
+									},
+									{
+										 "name":"Investmentterm",
+										 "displayName":"Investment term",
+										 "description":"24 hours"
+									},
+									{
+										 "name":"MinimumInvestmentAmount",
+										 "displayName":"Minimum Investment Amount",
+										 "description":"R 500"
+									},
+									{
+										 "name":"MinimumInvestmentPeriod",
+										 "displayName":"Minimum Investment Period",
+										 "description":"24 hours"
+									},
+									{
+										 "name":"TermvsNotice",
+										 "displayName":"Term vs Notice",
+										 "description":"Notice"
+									},
+									{
+										 "name":"Freeaccesspriortoterm",
+										 "displayName":"Free access prior to term",
+										 "description":"Yes"
+									},
+									{
+										 "name":"AdditionalDeposits",
+										 "displayName":"Additional Deposits",
+										 "description":"Yes"
+									},
+									{
+										 "name":"AgeRestriction",
+										 "displayName":"Age Restriction",
+										 "description":"Individual clients only"
+									},
+									{
+										 "name":"Interestpaymentfrequency",
+										 "displayName":"Interest payment frequency",
+										 "description":"Monthly Capitalised"
+									},
+									{
+										 "name":"ElectronicAcces",
+										 "displayName":"Electronic Access",
+										 "description":"included"
+									},
+									{
+										 "name":"Stoporders",
+										 "displayName":"Stop orders",
+										 "description":"included"
+									},
+									{
+										 "name":"Statements",
+										 "displayName":"Statements",
+										 "description":"included"
+									},
+									{
+										 "name":"Fees",
+										 "displayName":"Fees",
+										 "description":"None"
+									},
+									{
+										 "name":"Investmentterm2",
+										 "displayName":"Investment term",
+										 "description":"24 hours"
+									},
+									{
+										 "name":"Withdrawals",
+										 "displayName":"Withdrawals",
+										 "description":"Minimum R50"
+									},
+									{
+										 "name":"Additionaldeposits",
+										 "displayName":"Additional deposits",
+										 "description":"Minimum R50"
+									},
+									{
+										 "name":"Fixedrate",
+										 "displayName":"Fixed rate?",
+										 "description":"No"
+									}
+							 ],
+							 "eligibilityRules":[
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"0",
+										 "maxValue":"54",
+										 "valueUnit":"year",
+										 "description":"No age restrictions"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"55",
+										 "maxValue":"999",
+										 "valueUnit":"year",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestStart",
+										 "minValue":"500",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Additional deposit",
+										 "minValue":"50",
+										 "maxValue":"999999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeName":"Access",
+										 "attributeType":"EligibilityRule",
+										 "description":"Individual clients only",
+										 "maxValue":"1",
+										 "minValue":"0",
+										 "valueUnit":"month"
+									}
+							 ],
+							 "lifeCycleStatus":"AVAILABLE",
+							 "calculator":{
+									"term":0,
+									"notice":1,
+									"productType":49
+							 }
+						},
+						{
+							 "productIdentifier":1473,
+							 "name":"Nedbank Tax Free Fixed Deposit(1473)",
+							 "shortDescription":"The Nedbank Tax Free Fixed Deposit provides you with an opportunity to invest your money for 12 months and enjoy the proceeds, tax free.",
+							 "productPricing":[
+									{
+										 "type":"InterestRate",
+										 "value":8.1,
+										 "description":"8.1% pa",
+										 "frequency":"M",
+										 "period":"12"
+									}
+							 ],
+							 "specialFeature":"12 Months",
+							 "salesHighlights":[
+									"Minimum investment amount - R1000",
+									"Minimum investment period - 12 Months",
+									"No monthly fees or commissions",
+									"Capital guaranteed"
+							 ],
+							 "redirect":{
+									"shouldRedirect":false,
+									"redirectUrl":null
+							 },
+							 "actions":[
+									{
+										 "type":"SELECT",
+										 "text":"Select"
+									},
+									{
+										 "type":"DETAIL",
+										 "text":"Details"
+									},
+									{
+										 "type":"COMPARE",
+										 "text":"Compare"
+									}
+							 ],
+							 "productFeatures":[
+									{
+										 "name":"Maximuminterestrate",
+										 "displayName":"Maximum interest rate",
+										 "description":"up to 8.1%"
+									},
+									{
+										 "name":"Investmentterm",
+										 "displayName":"Investment term",
+										 "description":"12 Months"
+									},
+									{
+										 "name":"MinimumInvestmentAmount",
+										 "displayName":"Minimum Investment Amount",
+										 "description":"R 1000"
+									},
+									{
+										 "name":"MinimumInvestmentPeriod",
+										 "displayName":"Minimum Investment Period",
+										 "description":"12 Months"
+									},
+									{
+										 "name":"TermvsNotice",
+										 "displayName":"Term vs Notice",
+										 "description":"Term"
+									},
+									{
+										 "name":"Freeaccesspriortoterm",
+										 "displayName":"Free access prior to term",
+										 "description":"No"
+									},
+									{
+										 "name":"AdditionalDeposits",
+										 "displayName":"Additional Deposits",
+										 "description":"No"
+									},
+									{
+										 "name":"AgeRestriction",
+										 "displayName":"Age Restriction",
+										 "description":"N/A."
+									},
+									{
+										 "name":"Interestpaymentfrequency",
+										 "displayName":"Interest payment frequency",
+										 "description":"Monthly, quarterly, half-yearly or on expiry"
+									},
+									{
+										 "name":"ElectronicAcces",
+										 "displayName":"Electronic Access",
+										 "description":"included"
+									},
+									{
+										 "name":"Stoporders",
+										 "displayName":"Stop orders",
+										 "description":"No"
+									},
+									{
+										 "name":"Statements",
+										 "displayName":"Statements",
+										 "description":"No"
+									},
+									{
+										 "name":"Fees",
+										 "displayName":"Fees",
+										 "description":"No"
+									},
+									{
+										 "name":"Investmentterm2",
+										 "displayName":"Investment term",
+										 "description":"12 months"
+									},
+									{
+										 "name":"Withdrawals",
+										 "displayName":"Withdrawals",
+										 "description":"None"
+									},
+									{
+										 "name":"Additionaldeposits",
+										 "displayName":"Additional deposits",
+										 "description":"None"
+									},
+									{
+										 "name":"Fixedrate",
+										 "displayName":"Fixed rate?",
+										 "description":"Yes"
+									}
+							 ],
+							 "eligibilityRules":[
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"0",
+										 "maxValue":"54",
+										 "valueUnit":"year",
+										 "description":"No age restrictions"
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Age",
+										 "minValue":"55",
+										 "maxValue":"999",
+										 "valueUnit":"year",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"InvestStart",
+										 "minValue":"1000",
+										 "maxValue":"99999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeType":"EligibilityRule",
+										 "attributeName":"Additional deposit",
+										 "minValue":"99999999",
+										 "maxValue":"99999999",
+										 "valueUnit":"ZAR",
+										 "description":""
+									},
+									{
+										 "attributeName":"Access",
+										 "attributeType":"EligibilityRule",
+										 "description":"Individual clients only",
+										 "maxValue":"12",
+										 "minValue":"12",
+										 "valueUnit":"months"
+									}
+							 ],
+							 "lifeCycleStatus":"AVAILABLE",
+							 "calculator":{
+									"term":12,
+									"notice":0,
+									"productType":55
+							 }
+						}
+				 ]
+			}
+	 ]
 	  },
 	  {
 		"name": "Forex",
