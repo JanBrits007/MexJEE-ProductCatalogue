@@ -38,12 +38,20 @@
         <attributeGroupName>EligibilityRules</attributeGroupName>
         <productAttributes>
             <attributeType>EligibilityRule</attributeType>
+            <attributeName>ExistingAccounts</attributeName>
+            <isComparable>false</isComparable>
+            <value>true</value>
+            <valueUnit>bool</valueUnit>
+            <description>must already have a Savvy Bundle current account;</description>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
             <attributeName>Age</attributeName>
             <isComparable>false</isComparable>
             <minValue>18</minValue>
             <maxValue>999</maxValue>
             <valueUnit>year</valueUnit>
-            <description>be 18 years or older.</description>
+            <description>be atleast 18 years old;</description>
         </productAttributes>
         <productAttributes>
             <attributeType>EligibilityRule</attributeType>
@@ -52,7 +60,7 @@
             <minValue>60000</minValue>
             <maxValue>99999999</maxValue>
             <valueUnit>ZAR</valueUnit>
-            <description>earn more than R200 000 a year; and</description>
+            <description>earn R60 000 or more annually;</description>
         </productAttributes>
         <productAttributes>
             <attributeType>EligibilityRule</attributeType>
@@ -88,7 +96,7 @@
             <isComparable>false</isComparable>
             <value>true</value>
             <valueUnit>bool</valueUnit>
-            <description> be a South African resident.</description>
+            <description>be a South African resident.</description>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -154,7 +162,7 @@
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Contract|nedbank-commercial-release/CreditCardProductContract|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
+            <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>DocumentExclusion</attributeType>
@@ -215,6 +223,11 @@
         </productAttributes>
         <productAttributes>
             <attributeType>enum</attributeType>
+            <attributeName>riskAnalysisMechanismIntent0</attributeName>
+            <value>automated</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>enum</attributeType>
             <attributeName>riskAnalysisMechanismIntent1</attributeName>
             <value>automated</value>
         </productAttributes>
@@ -232,6 +245,11 @@
             <attributeType>enum</attributeType>
             <attributeName>riskAnalysisMechanismIntent4</attributeName>
             <value>automated</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>requiresElgiblityScoringAtIntents</attributeName>
+            <value>intent 0</value>
         </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
@@ -284,34 +302,39 @@
             <value>CreditCardFinalAssessmentVerificationTeam</value>
         </productAttributes>
         <productAttributes>
-			<attributeType>int</attributeType>
-			<attributeName>CardExposureContractType</attributeName>
-			<value>1001;1347</value>
-		</productAttributes>
-        <productAttributes>
-         	<attributeType>string</attributeType>
-         	<attributeName>HandleProvisioningFailureTeamName</attributeName>
-         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
-      	</productAttributes>
-      	<productAttributes>
-         	<attributeType>int</attributeType>
-         	<attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
-         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
-      	</productAttributes>
-     	<productAttributes>
-         	<attributeType>int</attributeType>
-         	<attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
-         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
+            <attributeType>int</attributeType>
+            <attributeName>BPMCARDOFFER</attributeName>
+            <value>BPMCARDROLE</value>
         </productAttributes>
         <productAttributes>
-         	<attributeType>string</attributeType>
-         	<attributeName>DEAStatementBUID</attributeName>
-         	<value>3fbf9238-9fca-46f3-8967-bc236103478c</value>
+            <attributeType>int</attributeType>
+            <attributeName>CardExposureContractType</attributeName>
+            <value>1001;1347</value>
         </productAttributes>
         <productAttributes>
-         	<attributeType>string</attributeType>
-         	<attributeName>DEAStatementBUID_PROD</attributeName>
-         	<value>4ec5bd70-2670-49ba-a139-15eb30c8e79a</value>
+            <attributeType>string</attributeType>
+            <attributeName>HandleProvisioningFailureTeamName</attributeName>
+            <value>Eclipsewarroomsupport@Nedbank.co.za</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
+            <value>Eclipsewarroomsupport@Nedbank.co.za</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
+            <value>Eclipsewarroomsupport@Nedbank.co.za</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>DEAStatementBUID</attributeName>
+            <value>3fbf9238-9fca-46f3-8967-bc236103478c</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>DEAStatementBUID_PROD</attributeName>
+            <value>4ec5bd70-2670-49ba-a139-15eb30c8e79a</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -409,28 +432,88 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
-		<attributeGroupName>DecisioningControl</attributeGroupName>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>enhanceActivitiesWithTeamAllocations</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>checkStaffOnMDM</attributeName>
-			<value>true</value>
-		</productAttributes>
+        <attributeGroupName>DecisioningControl</attributeGroupName>
         <productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>executeCardBusinessRuleToPresentDocuments</attributeName>
-			<value>true</value>
-		</productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>enhanceActivitiesWithTeamAllocations</attributeName>
+            <value>true</value>
+        </productAttributes>
         <productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>statusSetting</attributeName>
-			<value>true</value>
-		</productAttributes>
-	</productAttributeGroup>
+            <attributeType>boolean</attributeType>
+            <attributeName>checkStaffOnMDM</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>executeCardBusinessRuleToPresentDocuments</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>statusSetting</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>executeArrangementCrossSellRules</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>initiateIntent0CheckSavvyBundleExistingAccounts</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>ComponentSupportsDeclineReasons</attributeName>
+            <value>true</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subNedbankLogo</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericDetails</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subClientsRightsAndObligations</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericTCForCreditProducts</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericImpConfirmation</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericSignatures</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subCreditCard|ContractComponentProductType=1350</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subCreditCardTC|ContractComponentProductType=1350</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
     <features>
         <featureIdentifier>1028</featureIdentifier>
         <name>Plastic Card</name>
@@ -523,11 +606,11 @@
                 <value>Y</value>
             </featureAttributes>
             <featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>CAMSCashLimitPercentage</attributeName>
-				<valueUnit>PER</valueUnit>
-				<value>100</value>
-			</featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSCashLimitPercentage</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>100</value>
+            </featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>
             <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
@@ -600,12 +683,12 @@
         </featureAttributeGroup>
     </features>
     <features>
-        <featureIdentifier>1334</featureIdentifier>
-        <name>Membership Rewards™</name>
-        <mandatory>false</mandatory>
+        <featureIdentifier>1454</featureIdentifier>
+        <name>Nedbank Greenback Rewards</name>
+        <mandatory>true</mandatory>
         <preSelected>true</preSelected>
-        <shortDescription>Earn points on virtually all the spend on your card and enjoy a range of fantastic rewards.</shortDescription>
-        <description>Please note you will receive a Membership Rewards™ Redemption card in order to spend you rewards.</description>
+        <shortDescription>By joining our Greenbacks Rewards Programme you will earn rewards when you use your credit card or one of our other transactional accounts.</shortDescription>
+        <description>As part of the Savvy Bundle you already enjoy Nedbank Greenbacks rewards at no extra cost.</description>
         <featureGrouping>
             <featureGroupName>Loyalty</featureGroupName>
             <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
@@ -615,9 +698,9 @@
         <featurePricing>
             <fee>
                 <type>AdminFee</type>
-                <description>R24 per month</description>
+                <description>R20 per month</description>
                 <currency>ZAR</currency>
-                <amount>24</amount>
+                <amount>20</amount>
                 <frequency>Monthly</frequency>
             </fee>
         </featurePricing>
@@ -680,7 +763,7 @@
             <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
             <featureAttributes>
                 <attributeType>DocumentDescription</attributeType>
-                <attributeName>Rewards Terms and Conditions|nedbank-commercial-release/CreditCardAmexRewardsTermsAndConditionsUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Terms and Conditions</attributeName>
+                <attributeName>Rewards Terms and Conditions|nedbank-commercial-release/CreditCardRewardsTermsAndConditionsUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Terms and Conditions</attributeName>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>AvailableAction</attributeType>
@@ -692,17 +775,17 @@
             </featureAttributes>
             <featureAttributes>
                 <attributeType>DocTemplateName</attributeType>
-                <attributeName>CreditCardAmexRewardsTermsAndConditionsUniversal</attributeName>
+                <attributeName>CreditCardRewardsTermsAndConditionsUniversal</attributeName>
             </featureAttributes>
         </featureAttributeGroup>
     </features>
     <features>
-        <featureIdentifier>1465</featureIdentifier>
-        <name>Redemption Card</name>
+        <featureIdentifier>1333</featureIdentifier>
+        <name>Nedbank Greenbacks Shop Card</name>
         <mandatory>false</mandatory>
         <preSelected>true</preSelected>
-        <shortDescription>What is the Redemption card?</shortDescription>
-        <description>We' have made it quick and easy to redeem and spend all the rewards you've earned using the Redemption card.</description>
+        <shortDescription>SHOP card</shortDescription>
+        <description>Great news! We've made it quick and easy to redeem all the Greenbacks you've earned with your very own SHOP card</description>
         <featureGrouping>
             <featureGroupName>Loyalty</featureGroupName>
             <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
@@ -785,13 +868,13 @@
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSPlasticType</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>AR1</value>
+                <value>AG6</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSCrdStock</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>AR2</value>
+                <value>AG6</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
@@ -803,7 +886,7 @@
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSATrRegistrationNbr</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>194905</value>
+                <value>190105</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
@@ -821,7 +904,7 @@
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSSolicitationCode</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>8079</value>
+                <value>7016</value>
             </featureAttributes>
         </featureAttributeGroup>
     </features>
@@ -906,62 +989,6 @@
     <features>
         <featureIdentifier>1099</featureIdentifier>
         <name>Credit card insurance</name>
-        <featureAttributeGroup>
-            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>provisionInBranch</attributeName>
-                <valueUnit>boolean</valueUnit>
-                <value>false</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>legacyProductID</attributeName>
-                <valueUnit>string</valueUnit>
-                <value />
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-            <featureAttributes>
-                <attributeType>DocumentDescription</attributeType>
-                <attributeName>FAIS Client Acknowledgement|nedbank-commercial-release/CCFAISClientAcknowledgementStaffAssisted|ARRANGEMENTS|APPLICATIONS|APPLICATIONSCREDITCARD|FAIS Client Acknowledgement</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>Download</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>Email</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>WetSign</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>ElectronicallySign</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>DocTemplateName</attributeType>
-                <attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>EligibilityRules</attributeGroupName>
-            <featureAttributes>
-                <attributeType>EligibilityRule</attributeType>
-                <attributeName>Age</attributeName>
-                <minValue>18</minValue>
-                <maxValue>64</maxValue>
-                <valueUnit>year</valueUnit>
-            </featureAttributes>
-        </featureAttributeGroup>
-    </features>
-    <features>
-        <featureIdentifier>1100</featureIdentifier>
-        <name>Payment protection plan</name>
         <featureAttributeGroup>
             <attributeGroupName>coreProvisioningParameters</attributeGroupName>
             <featureAttributes>
