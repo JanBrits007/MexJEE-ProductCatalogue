@@ -209,7 +209,7 @@
 		 <attributeGroupName>clientInformationRequirement_GatherEvidence</attributeGroupName>
 		 <productAttributes>
 				<attributeType>clientInformationRequirement</attributeType>
-				<attributeName>GatherEvidence|ng-component=ng-gather-evidence~ProceduralStepName=Upload documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+				<attributeName>GatherEvidence|ng-component=UploadYourDocumentsComponent~ProceduralStepName=Upload your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
 		 </productAttributes>
 		 <productAttributes>
 				<attributeType>productInformationRequirement</attributeType>
@@ -254,6 +254,25 @@
 			<attributeType>DocumentExclusion</attributeType>
 			<attributeName>Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
 		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		 <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+		 <productAttributes>
+				<attributeType>clientInformationRequirement</attributeType>
+				<attributeName>GatherEvidence|ProceduralStepName=Upload your documents~ZOrder=100</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Sign documents~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>DigitalActivation|ProceduralStepName=Digital ctivation~ZOrder=80</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>AccurateInformationProvidedConfirmation|ProceduralStepName=Your declaration~ZOrder=60</attributeName>
+		 </productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>CaseConfiguration</attributeGroupName>
