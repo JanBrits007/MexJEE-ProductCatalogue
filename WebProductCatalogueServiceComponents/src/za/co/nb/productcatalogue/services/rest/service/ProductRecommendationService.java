@@ -5,16 +5,7 @@ import org.apache.commons.logging.LogFactory;
 import org.codehaus.jackson.map.ObjectMapper;
 import za.co.nb.productcatalogue.dao.ProductCataloguesDAO;
 import za.co.nb.productcatalogue.dao.dto.CachedCatalogueDetails;
-import za.co.nb.productcatalogue.services.rest.model.AnsweredQuestion;
-import za.co.nb.productcatalogue.services.rest.model.AnsweredQuestionList;
-import za.co.nb.productcatalogue.services.rest.model.NextQuestionToAskList;
-import za.co.nb.productcatalogue.services.rest.model.ProductRecommendationResponse;
-import za.co.nb.productcatalogue.services.rest.model.ProductRecommendationSet;
-import za.co.nb.productcatalogue.services.rest.model.ProductRecommendationSetListType;
-import za.co.nb.productcatalogue.services.rest.model.Question;
-import za.co.nb.productcatalogue.services.rest.model.QuestionList;
-import za.co.nb.productcatalogue.services.rest.model.QuestionListType;
-import za.co.nb.productcatalogue.services.rest.model.RecommendedProduct;
+import za.co.nb.productcatalogue.dto.*;
 import za.co.nb.productcatalogue.services.rest.resources.cache.ProductCatalogueCache;
 
 import javax.annotation.PostConstruct;
@@ -83,6 +74,7 @@ public class ProductRecommendationService {
             ProductRecommendationSet productRecommendationSet;
             try {
                 mLog.debug("Trace 2: Read recommendations set from file");
+
                 recommendationSetList = new ObjectMapper().readValue(recommendationFile, ProductRecommendationSetListType.class);
                 mLog.debug("Trace 3: Find product recommendation(s)");
                 productRecommendationSet = findProduct(answeredQuestionReq);
