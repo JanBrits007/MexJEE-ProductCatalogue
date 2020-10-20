@@ -1,4 +1,4 @@
-package za.co.nb.productcatalogue.services.rest.model;
+package za.co.nb.productcatalogue.dto;
 
 import za.co.nb.dto.ResultSet;
 
