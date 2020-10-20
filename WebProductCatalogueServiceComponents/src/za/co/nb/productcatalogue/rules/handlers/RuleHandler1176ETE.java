@@ -34,13 +34,35 @@ public class RuleHandler1176ETE extends BaseProductSpecificationRuleHandler {
                 mLog.debug("Trace 2.1");
                 Environment environment = systemConfiguratorDAO.getEnvironment();
                 String serviceUrl = environment.PARTY_MANAGEMENT_CLIENT_CHECK_URL.toString();
-                //String serviceUrl ="https://zeb1swn1.it.nednet.co.za:9443/WebPartyManagement/branchmanagement/v1";
+                //String serviceUrl ="http://localhost:9082/WebPartyManagement/branchmanagement/v1";
                 StringBuilder builder = new StringBuilder();
                 builder.append(serviceUrl);
-                builder.append("/rrbclient/");
-                builder.append(businessCase.getClientInContextECN());
-                serviceUrl = builder.toString();
+                builder.append("/clientsegment?");
+                boolean partyIdPresent = false;
+                boolean bankerCodePresent = false;
+                if(businessCase.getClientInContextECN() != null && !"".equalsIgnoreCase(businessCase.getClientInContextECN())){
+                    partyIdPresent = true;
+                    builder.append("partyid=");
+                    builder.append(businessCase.getClientInContextECN());
+                }
+                if(businessCase.getInitiatingStaffNBNumber() != null && !"".equalsIgnoreCase(businessCase.getInitiatingStaffNBNumber())){
 
+                    if(partyIdPresent){
+                        builder.append("&");
+                    }
+                    bankerCodePresent = true;
+                    builder.append("bankercode=");
+                    builder.append(businessCase.getInitiatingStaffNBNumber());
+                }
+                if(caseID != null && !"".equalsIgnoreCase(caseID)){
+
+                    if(partyIdPresent || bankerCodePresent){
+                        builder.append("&");
+                    }
+                    builder.append("caseid=");
+                    builder.append(caseID);
+                }
+                serviceUrl = builder.toString();
                 mLog.debug("Trace 2.2 Service URL : "+serviceUrl);
                 HttpClientUtil httpUtils = new HttpClientUtil();
                 JSONObject response=httpUtils.sendGET(serviceUrl,null);
@@ -50,8 +72,8 @@ public class RuleHandler1176ETE extends BaseProductSpecificationRuleHandler {
 
                     mLog.debug("Trace 2.3");
                     if(resultCode.equalsIgnoreCase("R00")){
-                        mLog.debug("Trace 2.4 : Is RRB Client :"+(boolean)response.get("rrbclient"));
-                        isRRBClient = (boolean)response.get("rrbclient");
+                        mLog.debug("Trace 2.4 : Is RRB Client :"+(boolean)((JSONObject)response.get("clientSegmentResponse")).get("rrbclient"));
+                        isRRBClient = (boolean)((JSONObject)response.get("clientSegmentResponse")).get("rrbclient");
                     }
                 }
             } catch (Exception e) {
@@ -62,6 +84,7 @@ public class RuleHandler1176ETE extends BaseProductSpecificationRuleHandler {
             if(isRRBClient){
 
                 mLog.debug("Trace 3");
+                // Update CaseCache with Division and segment
                 return "2176";
             }
             else {

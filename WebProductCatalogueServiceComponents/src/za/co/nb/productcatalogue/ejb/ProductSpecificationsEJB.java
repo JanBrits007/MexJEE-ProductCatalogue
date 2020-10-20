@@ -1,14 +1,20 @@
 package za.co.nb.productcatalogue.ejb;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.List;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
+import za.co.nb.productcatalogue.cases.dao.BusinessCaseDAO;
+import za.co.nb.productcatalogue.dao.ArrangementMetricsDAO;
+import za.co.nb.productcatalogue.ejb.substitution.Banker;
+import za.co.nb.productcatalogue.ejb.substitution.Channel;
+import za.co.nb.productcatalogue.ejb.substitution.Subnet;
+import za.co.nb.productcatalogue.ejb.substitution.Substitution;
+import za.co.nb.productcatalogue.util.ProductSpecificationSubstitutionUtil;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.MaintainCatalogueRequestType;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductAttributeGroupType;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductattributesType;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -26,24 +32,14 @@ import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
-import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
-import za.co.nb.productcatalogue.cases.dao.BusinessCaseDAO;
-import za.co.nb.productcatalogue.dao.ArrangementMetricsDAO;
-import za.co.nb.productcatalogue.ejb.substitution.Banker;
-import za.co.nb.productcatalogue.ejb.substitution.Channel;
-import za.co.nb.productcatalogue.ejb.substitution.Subnet;
-import za.co.nb.productcatalogue.ejb.substitution.Substitution;
-import za.co.nb.productcatalogue.exception.InvalidAttributeException;
-import za.co.nb.productcatalogue.util.ProductSpecificationSubstitutionUtil;
-import za.co.nb.productcatalogue.util.ProductSpecificationUtil;
-import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.MaintainCatalogueRequestType;
-import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductAttributeGroupType;
-import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
-import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductattributesType;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.List;
 
 @LocalBean
 @Stateless
@@ -53,6 +49,8 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     private final Log mLog = LogFactory.getLog(getClass());
 
     private static final boolean ENABLE_XSD_VALIDATION = false;
+
+    private JuristicProductSpecificationsRemote juristicProductSpecificationsRemote;
 
     /*
     @Resource(name = "cache/productCatalogue")
@@ -435,21 +433,18 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             InputStream inputStream = ProductSpecificationsEJB.class.getResourceAsStream("/productspecs/" + productID + ".xml");
 
             if (inputStream == null) {
+
+                String productSpecificationXMLByID = getJuristicProductSpecificationsRemote().getProductSpecificationXMLByID(productID);
+                if(productSpecificationXMLByID != null)
+                    return productSpecificationXMLByID;
+
                 mLog.debug("Trace 2");
                 throw new Exception("Unable to find specification XML file for product ID " + productID);
-            }
 
-            ByteArrayOutputStream result = new ByteArrayOutputStream();
-            byte[] buffer = new byte[1024];
-            int length;
-
-            while ((length = inputStream.read(buffer)) != -1) {
-                result.write(buffer, 0, length);
             }
 
             mLog.debug("Trace 3");
-
-            String XMLSpec = result.toString(StandardCharsets.UTF_8.name());
+            String XMLSpec = IOUtils.toString(inputStream, StandardCharsets.UTF_8.name());
 
            // cache.putIfAbsent(productID, XMLSpec);
 
@@ -459,6 +454,25 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             throw new Exception("Unable to find specification XML file for product ID " + productID);
         }
     }
+
+
+    private JuristicProductSpecificationsRemote getJuristicProductSpecificationsRemote(){
+
+        if(juristicProductSpecificationsRemote != null)
+            return juristicProductSpecificationsRemote;
+
+        try {
+            InitialContext context = new InitialContext();
+            return (JuristicProductSpecificationsRemote)context.lookup("java:global/SysJuristicProductCatalogue/EJBJuristicProductCatalogue/JuristicProductSpecificationsEJB!za.co.nb.productcatalogue.ejb.JuristicProductSpecificationsRemote");
+
+
+        } catch(Exception e) {
+            throw new RuntimeException("Juristic EJB jndi lookup failed, reason:"+e.getMessage());
+        }
+    }
+
+
+
 
     public static void main(String[] args) {
 
