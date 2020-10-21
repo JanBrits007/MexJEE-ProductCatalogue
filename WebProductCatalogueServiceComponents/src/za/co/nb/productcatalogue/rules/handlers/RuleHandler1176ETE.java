@@ -7,6 +7,7 @@ import org.json.simple.JSONObject;
 import za.co.nb.common.htpp.client.HttpClientUtil;
 import za.co.nb.onboarding.casemanagement.BusinessCaseManagementDAO;
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
+import za.co.nb.onboarding.casemanagement.dto.BusinessCaseSegment;
 import za.co.nb.productcatalogue.exceptions.BusinessRuleExecutionException;
 import za.co.nb.system.config.dao.SystemConfiguratorDAO;
 import za.co.nb.system.config.environment.Environment;
@@ -74,6 +75,21 @@ public class RuleHandler1176ETE extends BaseProductSpecificationRuleHandler {
                     if(resultCode.equalsIgnoreCase("R00")){
                         mLog.debug("Trace 2.4 : Is RRB Client :"+(boolean)((JSONObject)response.get("clientSegmentResponse")).get("rrbclient"));
                         isRRBClient = (boolean)((JSONObject)response.get("clientSegmentResponse")).get("rrbclient");
+
+                        String cluster = (String)((JSONObject)response.get("clientSegmentResponse")).get("cluster");
+                        String division = (String)((JSONObject)response.get("clientSegmentResponse")).get("division");
+                        if((cluster != null && !"".equalsIgnoreCase(cluster)) ||
+                                (division != null && !"".equalsIgnoreCase(division))){
+                            BusinessCaseSegment businessCaseSegment = new BusinessCaseSegment();
+                            if(cluster != null && !"".equalsIgnoreCase(cluster)){
+                                businessCaseSegment.setCluster(cluster);
+                            }
+                            if(division != null && !"".equalsIgnoreCase(division)){
+                                businessCaseSegment.setDivision(division);
+                            }
+                            businessCase.setBusinessCaseSegment(businessCaseSegment);
+                            dao.cacheBusinessCaseDetailInDB(businessCase);
+                        }
                     }
                 }
             } catch (Exception e) {

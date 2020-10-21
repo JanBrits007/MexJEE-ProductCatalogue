@@ -116,8 +116,9 @@ public class ProductSpecificationSubstitutionUtil {
             }
             		
             // Cache the results.
+            businessCase = caseDAO.retrieveBusinessCase(caseID);
             productSubstitutionMap.put(productSpecificationID, productSubstitutionID);
-            
+            businessCase.setProductIDSubstitutionMap(productSubstitutionMap);
             // Save back to database.
             caseDAO.cacheBusinessCaseDetailInDB(businessCase);
             
