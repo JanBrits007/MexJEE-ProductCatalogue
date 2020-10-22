@@ -1,6 +1,5 @@
 package za.co.nb.productcatalogue.dao;
 
-import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +13,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import za.co.nb.productcatalogue.dto.ProductSpecificationJSON;
-import za.co.nb.productcatalogue.ejb.JuristicProductSpecificationsRemote;
+import za.co.nb.juristic.productcatalogue.remoteejb.IJuristicProductSpecifications;
 
 import javax.naming.InitialContext;
 
@@ -23,7 +22,7 @@ public class ProductSpecificationsJSONServiceDAO {
 	private final Log mLog = LogFactory.getLog(getClass());
 	private ProductSpecificationsServiceDAO mProductSpecificationsDAO;
 	private static Map<String, String> ptJSONStringCache = new HashMap<String, String>();
-	private JuristicProductSpecificationsRemote juristicProductSpecificationsRemote;
+	private IJuristicProductSpecifications juristicProductSpecificationsRemote;
 
 	private ProductSpecificationsServiceDAO getProductSpecificationsDAO() {
     	mLog.debug("Trace 1");
@@ -51,7 +50,7 @@ public class ProductSpecificationsJSONServiceDAO {
 				InputStream inputStream = ProductSpecificationsServiceDAO.class.getResourceAsStream("/productspecs/" + productID + ".json");
 				
 				if(inputStream == null) {
-					String productSpecificationJSON = getJuristicProductSpecificationsRemote().getProductSpecificationJSONByID(productID);
+					String productSpecificationJSON = getJuristicProductSpecificationsRemote().getProductSpecificationsJSON(productID);
 					if(productSpecificationJSON != null) {
 						ptJSONStringCache.put(productID, productSpecificationJSON);
 						return productSpecificationJSON;
@@ -73,14 +72,14 @@ public class ProductSpecificationsJSONServiceDAO {
 		}
 	}
 
-	private JuristicProductSpecificationsRemote getJuristicProductSpecificationsRemote(){
+	private IJuristicProductSpecifications getJuristicProductSpecificationsRemote(){
 
 		if(juristicProductSpecificationsRemote != null)
 			return juristicProductSpecificationsRemote;
 
 		try {
 			InitialContext context = new InitialContext();
-			return (JuristicProductSpecificationsRemote)context.lookup("java:global/SysJuristicProductCatalogue/EJBJuristicProductCatalogue/JuristicProductSpecificationsEJB!za.co.nb.productcatalogue.ejb.JuristicProductSpecificationsRemote");
+			return (IJuristicProductSpecifications)context.lookup("java:global/SysJuristicProductCatalogue/EJBJuristicProductCatalogue/JuristicProductSpecificationsEJB!za.co.nb.productcatalogue.ejb.JuristicProductSpecificationsRemote");
 
 
 		} catch(Exception e) {
