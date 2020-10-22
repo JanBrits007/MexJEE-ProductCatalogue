@@ -475,7 +475,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
         try {
             InitialContext context = new InitialContext();
-            return (IJuristicProductSpecifications)context.lookup("juristicProductSpecificationsRemote");
+            return (IJuristicProductSpecifications)context.lookup("java:global/SysJuristicProductCatalogue/WebJuristicProductCatalogue/JuristicProductSpecifications!za.co.nb.juristic.productcatalogue.remoteejb.IJuristicProductSpecifications");
 
 
         } catch(Exception e) {
