@@ -1,161 +1,621 @@
 {
-	"name": "Invest",
-	"displayName": "Save|Invest",
-	"description": "I need my savings to work as hard as I do",
-	"productLines": [{
-		"displayName": "Investment Account",
-		"name": "InvestmentAccount",
-		"filterGroups": [{
-			"filterGroupID": 1,
-			"filterGroupName": "Age",
-			"filterDisplayName": "What is your age?",
-			"filterType": "Range",
-			"filterItems": [{
-				"filterID": 1,
-				"filterDisplay": "Younger than 55",
-				"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-				"minValue": 0,
-				"maxValue": 54
+	"name":"Invest",
+	"displayName":"Save|Invest",
+	"description":"I need my savings to work as hard as I do",
+	"productLines":[
+	   {
+		  "displayName":"Everyday Invest",
+		  "name":"InvestmentAccount",
+		  "miniDetails":[
+			 {
+				"Heading":"Everyday investments",
+				"displayItems":[
+				   {
+					  "displayName":"What are everyday investments?",
+					  "data":[
+						 "Nedbank offers a range of investment accounts, including notice, fixed and hybrid investments, with flexible periods and competitive interest rates.You can also choose when you'd like to access your money."
+					  ]
+				   },
+				   {
+					  "displayName":"Benefits",
+					  "data":[
+						 "Investment helps you reach your short-,medium- and long-term goals.With as little as R250.00 you can start investing.Your capital is also guaranteed."
+					  ]
+				   }
+				]
+			 },
+			 {
+				"Heading":"Types of investments",
+				"displayItems":[
+				   {
+					  "displayName":"Immediate savings",
+					  "data":[
+						 "Additional deposits allowed",
+						 "Immediate access to one or all of your money."
+					  ]
+				   },
+				   {
+					  "displayName":"Notice investments",
+					  "data":[
+						 "Additional deposits allowed",
+						 "Access to some or all of your money within 24 hours or 32 days"
+					  ]
+				   },
+				   {
+					  "displayName":"Fixed investments",
+					  "data":[
+						 "No additional deposits allowed",
+						 "Earn the best rates and returns."
+					  ]
+				   },
+				   {
+					  "displayName":"Hybrid investments",
+					  "data":[
+						 "No additional deposits allowed",
+						 "Access a portion of your fixed-investment account within 24 hours."
+					  ]
+				   }
+				]
+			 }
+		  ],
+		  "filterGroups":[
+			 {
+				"filterGroupID":1,
+				"filterGroupName":"Age",
+				"filterDisplayName":"What is your age?",
+				"filterType":"Range",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"Younger than 55",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Age')]",
+					  "minValue":0,
+					  "maxValue":54
+				   },
+				   {
+					  "filterID":2,
+					  "filterDisplay":"55 or older",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Age')]",
+					  "minValue":55,
+					  "maxValue":999
+				   }
+				]
+			 },
+			 {
+				"filterGroupID":2,
+				"filterGroupName":"InvestStart",
+				"filterDisplayName":"How much would you like to deposit?",
+				"filterType":"TextRange",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"Initial deposit",
+					  "productAttribute":"productAttributes[?(@.attributeName==='InvestStart')]",
+					  "value":""
+				   }
+				]
+			 },
+			 {
+				"filterGroupID":3,
+				"filterGroupName":"Additional deposit",
+				"filterDisplayName":"Would you want to add more money once your account is open?",
+				"filterType":"YesNo",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"Yes",
+					  "productAttribute":"productAttributes[?(@.attributeName==='MoreDeposits')]",
+					  "value":"yes"
+				   },
+				   {
+					  "filterID":2,
+					  "filterDisplay":"No",
+					  "productAttribute":"productAttributes[?(@.attributeName==='MoreDeposits')]",
+					  "value":"no"
+				   }
+				]
+			 },
+			 {
+				"filterGroupID":4,
+				"filterGroupName":"Access",
+				"filterDisplayName":"How soon would you want to acces your money?",
+				"filterType":"Range",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"After 24 hours notice",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+					  "minValue":0,
+					  "maxValue":1
+				   },
+				   {
+					  "filterID":2,
+					  "filterDisplay":"After 32 days notice",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+					  "minValue":2,
+					  "maxValue":11
+				   },
+				   {
+					  "filterID":3,
+					  "filterDisplay":"At the end of my investment period",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+					  "minValue":12,
+					  "maxValue":999
+				   }
+				]
+			 }
+		  ],
+		  "popularProducts":[
+			 1391,
+			 1126,
+			 1348
+		  ],
+		  "productGroups":[
+			 {
+				"groupIdentifier":"POPULAR_PRODUCTS",
+				"name":"POPULAR CHOICES",
+				"products":[
+				   1391,
+				   1348,
+				   1392
+				]
+			 },
+			 {
+				"groupIdentifier":"ACCESS_WITHIN_24HRS",
+				"name":"ACCESS WITHIN 24HRS",
+				"products":[
+				   1360,
+				   1199,
+				   1139
+				]
+			 }
+		  ],
+		  "products":[
+			{
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1360.json"
 			},
 			{
-				"filterID": 2,
-				"filterDisplay": "55 or older",
-				"productAttribute": "productAttributes[?(@.attributeName==='Age')]",
-				"minValue": 55,
-				"maxValue": 999
-			}]
-		},
-		{
-			"filterGroupID": 2,
-			"filterGroupName": "InvestStart",
-			"filterDisplayName": "How much money will you be depositing to begin with?",
-			"filterType": "TextRange",
-			"filterItems": [{
-				"filterID": 1,
-				"filterDisplay": "Initial deposit",
-				"productAttribute": "productAttributes[?(@.attributeName==='InvestStart')]",
-				"value": ""
-			}]
-		},
-		{
-			"filterGroupID": 3,
-			"filterGroupName": "Additional deposit",
-			"filterDisplayName": "Would you want to make more deposits once the account is opened?",
-			"filterType": "YesNo",
-			"filterItems": [{
-				"filterID": 1,
-				"filterDisplay": "Yes",
-				"productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
-				"value": "yes"
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1199.json"
 			},
 			{
-				"filterID": 2,
-				"filterDisplay": "No",
-				"productAttribute": "productAttributes[?(@.attributeName==='MoreDeposits')]",
-				"value": "no"
-			}]
-		},
-		{
-			"filterGroupID": 4,
-			"filterGroupName": "Access",
-			"filterDisplayName": "When do you need access to your money?",
-			"filterType": "Range",
-			"filterItems": [{
-				"filterID": 1,
-				"filterDisplay": "After 24 hours notice",
-				"productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-				"minValue": 0,
-				"maxValue": 1
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1134.json"
 			},
 			{
-				"filterID": 2,
-				"filterDisplay": "After 32 days notice",
-				"productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-				"minValue": 2,
-				"maxValue": 11
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1139.json"
 			},
 			{
-				"filterID": 3,
-				"filterDisplay": "At the end of my investment period",
-				"productAttribute": "productAttributes[?(@.attributeName==='Period')]",
-				"minValue": 12,
-				"maxValue": 999
-			}]
-		}],
-		"popularProducts": [1391,
-		1126,
-		1348],
-		"productGroups": [{
-			"groupIdentifier": "POPULAR_PRODUCTS",
-			"name": "POPULAR CHOICES",
-			"products": [1391,
-			1348,
-			1392]
-		},
-		{
-			"groupIdentifier": "ACCESS_WITHIN_24HRS",
-			"name": "ACCESS WITHIN 24HRS",
-			"products": [1360,
-			1199,
-			1392,
-			1139]
-		}],
-		"products": [{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1360.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1199.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1134.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1349.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1133.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1139.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1392.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1127.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1405.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1406.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1128.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1348.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1126.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1136.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1391.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1473.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1092.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1089.json"
-		},
-		{
-			"fileReference": "/productcatalogue/salescat1/families/categories/invest/1482.json"
-		}]
-	}]
-}
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1133.json"
+			},
+			{
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1127.json"
+			},
+			{
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1405.json"
+			},
+			{
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1406.json"
+			},
+			{
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1128.json"
+			},
+			{
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1348.json"
+			},
+			{
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1126.json"
+			},
+			{
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1136.json"
+			},
+			{
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1391.json"
+			}
+		  ]
+	   },
+	   {
+		  "displayName":"Tax-Free Investments",
+		  "name":"TaxFreeInvestments",
+		  "miniDetails":[
+			 {
+				"Heading":"Tax-Free Investments",
+				"displayItems":[
+				   {
+					  "displayName":"What is a Tax Free investment?",
+					  "data":[
+						 "A tax-free investment is one that allows you to invest up to R36 000 during the tax year and enjoy the proceeds tax-free."
+					  ]
+				   },
+				   {
+					  "displayName":"Benefits",
+					  "data":[
+						 "Tax-free investments put you in control of your savings and encourage you to save while giving you the peace of mind that you can access your money easily.Our tax-free unit trusts are Nedgroup Investments products, made available on the Nedbank Online banking. Nedgroup Investments is a subsidiary of Nedbank Group."
+					  ]
+				   }
+				]
+			 }
+		  ],
+		  "filterGroups":[
+			 {
+				"filterGroupID":1,
+				"filterGroupName":"Age",
+				"filterDisplayName":"What is your age?",
+				"filterType":"Range",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"Younger than 55",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Age')]",
+					  "minValue":0,
+					  "maxValue":54
+				   },
+				   {
+					  "filterID":2,
+					  "filterDisplay":"55 or older",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Age')]",
+					  "minValue":55,
+					  "maxValue":999
+				   }
+				]
+			 },
+			 {
+				"filterGroupID":2,
+				"filterGroupName":"InvestStart",
+				"filterDisplayName":"How much would you like to deposit?",
+				"filterType":"TextRange",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"Initial deposit",
+					  "productAttribute":"productAttributes[?(@.attributeName==='InvestStart')]",
+					  "value":""
+				   }
+				]
+			 },
+			 {
+				"filterGroupID":3,
+				"filterGroupName":"Additional deposit",
+				"filterDisplayName":"Would you want to add more money once your account is open?",
+				"filterType":"YesNo",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"Yes",
+					  "productAttribute":"productAttributes[?(@.attributeName==='MoreDeposits')]",
+					  "value":"yes"
+				   },
+				   {
+					  "filterID":2,
+					  "filterDisplay":"No",
+					  "productAttribute":"productAttributes[?(@.attributeName==='MoreDeposits')]",
+					  "value":"no"
+				   }
+				]
+			 },
+			 {
+				"filterGroupID":4,
+				"filterGroupName":"Access",
+				"filterDisplayName":"How soon would you want to acces your money?",
+				"filterType":"Range",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"After 24 hours notice",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+					  "minValue":0,
+					  "maxValue":1
+				   },
+				   {
+					  "filterID":2,
+					  "filterDisplay":"After 32 days notice",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+					  "minValue":2,
+					  "maxValue":11
+				   },
+				   {
+					  "filterID":3,
+					  "filterDisplay":"At the end of my investment period",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+					  "minValue":12,
+					  "maxValue":999
+				   }
+				]
+			 }
+		  ],
+		  "popularProducts":[	 
+		  ],
+		  "productGroups":[
+			 {
+				"groupIdentifier":"POPULAR_PRODUCTS",
+				"name":"POPULAR CHOICES",
+				"products":[
+				   
+				]
+			 },
+			 {
+				"groupIdentifier":"ACCESS_WITHIN_24HRS",
+				"name":"ACCESS WITHIN 24HRS",
+				"products":[
+				   
+				]
+			 }
+		  ],
+		  "products":[
+			{
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1392.json"
+			},
+			{
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1473.json"
+			},
+			{
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1482.json"
+			}
+		  ]
+	   },
+	   {
+		  "displayName":"Unit Trust Investments",
+		  "name":"UnitTrust",
+		  "miniDetails":[
+			 {
+				"Heading":"Unit Trust Investments",
+				"displayItems":[
+				   {
+					  "displayName":"What are unit trusts?",
+					  "data":[
+						 "Unit trusts are pooled funds from a group of investors and these funds are invested in a diversified portfolio that may include listed shares, government and corporate bonds, listed property and other securities."
+					  ]
+				   },
+				   {
+					  "displayName":"Benefits",
+					  "data":[
+						 "With a total minimum lump sum of R10 000 or a total minimum monthly debit order of R500, you can save for a specific goal or investment period.Our unit trusts are Nedgroup Investments products made available on the Nedbank Money app. Nedgroup Investments is a subsidiary of Nedbank Group."
+					  ]
+				   }
+				]
+			 }
+		  ],
+		  "filterGroups":[
+			 {
+				"filterGroupID":1,
+				"filterGroupName":"Age",
+				"filterDisplayName":"What is your age?",
+				"filterType":"Range",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"Younger than 55",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Age')]",
+					  "minValue":0,
+					  "maxValue":54
+				   },
+				   {
+					  "filterID":2,
+					  "filterDisplay":"55 or older",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Age')]",
+					  "minValue":55,
+					  "maxValue":999
+				   }
+				]
+			 },
+			 {
+				"filterGroupID":2,
+				"filterGroupName":"InvestStart",
+				"filterDisplayName":"How much would you like to deposit?",
+				"filterType":"TextRange",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"Initial deposit",
+					  "productAttribute":"productAttributes[?(@.attributeName==='InvestStart')]",
+					  "value":""
+				   }
+				]
+			 },
+			 {
+				"filterGroupID":3,
+				"filterGroupName":"Additional deposit",
+				"filterDisplayName":"Would you want to add more money once your account is open?",
+				"filterType":"YesNo",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"Yes",
+					  "productAttribute":"productAttributes[?(@.attributeName==='MoreDeposits')]",
+					  "value":"yes"
+				   },
+				   {
+					  "filterID":2,
+					  "filterDisplay":"No",
+					  "productAttribute":"productAttributes[?(@.attributeName==='MoreDeposits')]",
+					  "value":"no"
+				   }
+				]
+			 },
+			 {
+				"filterGroupID":4,
+				"filterGroupName":"Access",
+				"filterDisplayName":"How soon would you want to acces your money?",
+				"filterType":"Range",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"After 24 hours notice",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+					  "minValue":0,
+					  "maxValue":1
+				   },
+				   {
+					  "filterID":2,
+					  "filterDisplay":"After 32 days notice",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+					  "minValue":2,
+					  "maxValue":11
+				   },
+				   {
+					  "filterID":3,
+					  "filterDisplay":"At the end of my investment period",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+					  "minValue":12,
+					  "maxValue":999
+				   }
+				]
+			 }
+		  ],
+		  "popularProducts":[ 
+		  ],
+		  "productGroups":[
+			 {
+				"groupIdentifier":"POPULAR_PRODUCTS",
+				"name":"POPULAR CHOICES",
+				"products":[
+				   
+				]
+			 },
+			 {
+				"groupIdentifier":"ACCESS_WITHIN_24HRS",
+				"name":"ACCESS WITHIN 24HRS",
+				"products":[
+				   
+				]
+			 }
+		  ],
+		  "products":[
+			{
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1092.json"
+			}
+		  ]
+	   },
+	   {
+		  "displayName":"Retirement Annuities",
+		  "name":"RetirementAnnuties",
+		  "miniDetails":[
+			 {
+				"Heading":"Retirement annuity",
+				"displayItems":[
+				   {
+					  "displayName":"What are retirement annuities?",
+					  "data":[
+						 "A retirement fund that individuals pay into instead of their employers."
+					  ]
+				   },
+				   {
+					  "displayName":"Benefits",
+					  "data":[
+						 "Retirement annuities give you flexible payment options. A minimum lump sum investment of R10 000 or monthly debit order of R500 is required. Our unit trusts are Nedgroup Investments products, made available on the Nedbank Money app. Nedgroup Investments is a subsidiary of Nedbank Group.FSCA registration number: 12/8/0037697 SARS approval number: 18/20/4/041932"
+					  ]
+				   }
+				]
+			 }
+		  ],
+		  "filterGroups":[
+			 {
+				"filterGroupID":1,
+				"filterGroupName":"Age",
+				"filterDisplayName":"What is your age?",
+				"filterType":"Range",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"Younger than 55",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Age')]",
+					  "minValue":0,
+					  "maxValue":54
+				   },
+				   {
+					  "filterID":2,
+					  "filterDisplay":"55 or older",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Age')]",
+					  "minValue":55,
+					  "maxValue":999
+				   }
+				]
+			 },
+			 {
+				"filterGroupID":2,
+				"filterGroupName":"InvestStart",
+				"filterDisplayName":"How much would you like to deposit?",
+				"filterType":"TextRange",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"Initial deposit",
+					  "productAttribute":"productAttributes[?(@.attributeName==='InvestStart')]",
+					  "value":""
+				   }
+				]
+			 },
+			 {
+				"filterGroupID":3,
+				"filterGroupName":"Additional deposit",
+				"filterDisplayName":"Would you want to add more money once your account is open?",
+				"filterType":"YesNo",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"Yes",
+					  "productAttribute":"productAttributes[?(@.attributeName==='MoreDeposits')]",
+					  "value":"yes"
+				   },
+				   {
+					  "filterID":2,
+					  "filterDisplay":"No",
+					  "productAttribute":"productAttributes[?(@.attributeName==='MoreDeposits')]",
+					  "value":"no"
+				   }
+				]
+			 },
+			 {
+				"filterGroupID":4,
+				"filterGroupName":"Access",
+				"filterDisplayName":"How soon would you want to acces your money?",
+				"filterType":"Range",
+				"filterItems":[
+				   {
+					  "filterID":1,
+					  "filterDisplay":"After 24 hours notice",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+					  "minValue":0,
+					  "maxValue":1
+				   },
+				   {
+					  "filterID":2,
+					  "filterDisplay":"After 32 days notice",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+					  "minValue":2,
+					  "maxValue":11
+				   },
+				   {
+					  "filterID":3,
+					  "filterDisplay":"At the end of my investment period",
+					  "productAttribute":"productAttributes[?(@.attributeName==='Period')]",
+					  "minValue":12,
+					  "maxValue":999
+				   }
+				]
+			 }
+		  ],
+		  "popularProducts":[	 
+		  ],
+		  "productGroups":[
+			 {
+				"groupIdentifier":"POPULAR_PRODUCTS",
+				"name":"POPULAR CHOICES",
+				"products":[
+				   
+				]
+			 },
+			 {
+				"groupIdentifier":"ACCESS_WITHIN_24HRS",
+				"name":"ACCESS WITHIN 24HRS",
+				"products":[
+				   
+				]
+			 }
+		  ],
+		  "products":[
+			{
+				"fileReference": "/productcatalogue/salescat1/families/categories/invest/1089.json"
+			}
+		  ]
+	   }
+	]
+ }
