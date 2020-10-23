@@ -1,10 +1,15 @@
 package za.co.nb.productcatalogue.rules.handlers;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 import za.co.nb.onboarding.product.services.businessexceptions.ServiceIntegrationException;
 import za.co.nb.productcatalogue.exceptions.BusinessRuleExecutionException;
@@ -12,6 +17,10 @@ import za.co.nb.services.clients.client360.Client360InformationServiceClient;
 import za.co.nednet.it.contracts.data.ent.party.v3.ArrangementDetailBObjType;
 import za.co.nednet.it.contracts.data.ent.party.v3.Client360ViewResBObjType;
 import za.co.nednet.it.contracts.data.ent.party.v3.PersonDetailBObjType;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 public abstract class BaseProductSpecificationRuleHandler {
 
@@ -122,6 +131,27 @@ public abstract class BaseProductSpecificationRuleHandler {
 		mLog.info("Trace 7 >>Unable to determine main applicant PersonDetailBObj<<");
 
 		return null;
+	}
+
+	protected boolean checkIfTagPresent(String xml, String tagName) throws IOException, SAXException, ParserConfigurationException {
+		Document doc = convertXmlStringToDocument(xml);
+
+		NodeList nodeList = doc.getElementsByTagName(tagName);
+		mLog.debug(tagName + " TagCount ::" + nodeList.getLength() + " and TagIsPresent ::" + (nodeList.getLength() > 0));
+		return nodeList.getLength() > 0;
+	}
+
+	protected String fetchValueByTagName(Document document, String tagName) {
+		mLog.debug(document.getElementsByTagName(tagName).item(0).getTextContent());
+		return document.getElementsByTagName(tagName).item(0).getTextContent();
+	}
+
+	protected Document convertXmlStringToDocument(String xml) throws ParserConfigurationException, IOException, SAXException {
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		dbf.setValidating(false);
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		Document doc = db.parse(new ByteArrayInputStream(xml.getBytes()));
+		return doc;
 	}
 	
 	public abstract String executeBusinessRules(String productIDToSubstitute, String caseID) throws BusinessRuleExecutionException;
