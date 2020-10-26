@@ -6,6 +6,10 @@
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>PrepareApplicant|ng-component=GenericProcessStartPageComponent~ZOrder=300~HideProceduralStep=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
       <productAttributes>
@@ -14,17 +18,10 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~displaySummary=true~ActiveOnInitialWorkItemExecution=true</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>ArrangementCaptureSalesMilestone</attributeName>
+         <attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -92,23 +89,23 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>GoingDigital|ng-component=ng-going-digital~ProceduralStepName=Going digital~ZOrder=160~applicableChannels=BranchStaffAssisted</attributeName>
+         <attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Going digital~ZOrder=160~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisRecordOfAdvice|ng-component=ng-fais-record-of-advice~ProceduralStepName=FAIS record of discussion/advice~ZOrder=150~applicableChannels=BranchStaffAssisted</attributeName>
+         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfAdviceIndividualComponent~ProceduralStepName=FAIS record of discussion/advice~ZOrder=150~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisDeclaration|ng-component=ng-fais-decloration~ProceduralStepName=FAIS declaration~ZOrder=140~applicableChannels=BranchStaffAssisted</attributeName>
+         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=140~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>VisibleArrangementSubmissionSalesMilestone|ng-component=ng-visible-arrangement-submission-sales-milestone~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted</attributeName>
+         <attributeName>SalesMilestone|ng-component=CmsDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>KeepingInTouch|ng-component=ng-keeping-in-touch~ProceduralStepName=Keep in touch~ZOrder=120</attributeName>
+         <attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -344,6 +341,11 @@
            <attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
            <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CODHandler</attributeName>
+            <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditLeadCODHandler</value>
+         </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
@@ -483,15 +485,15 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>DigitalActivation|ng-component=ng-digital-activation~ProceduralStepName=Digital activation~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted</attributeName>
+         <attributeName>DigitalActivation|ng-component=DigitalActivationComponent~ProceduralStepName=Digital activation~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>AccurateInformationProvidedConfirmation|ng-component=ng-accurate-information-provided-confirmation~ProceduralStepName=Confirmation~ZOrder=60~ContractComponentProductType=6389</attributeName>
+         <attributeName>AccurateInformationProvidedConfirmation|ng-component=YourDeclarationComponent~ProceduralStepName=Confirmation~ZOrder=60~ContractComponentProductType=6389</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDone|ng-component=ng-youre-done~ProceduralStepName=HideProceduralStep~ZOrder=50</attributeName>
+         <attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~ZOrder=50</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -514,6 +516,11 @@
    </productAttributeGroup>
    <productAttributeGroup>
      <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+     <productAttributes>
+       <attributeType>string</attributeType>
+       <attributeName>brand</attributeName>
+       <value>NEDBANK</value>
+      </productAttributes>
       <productAttributes>
         <attributeType>string</attributeType>
         <attributeName>productSystem</attributeName>
@@ -728,6 +735,13 @@
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
          <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -815,7 +829,7 @@
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>VisibleArrangementSubmissionSalesMilestone|ng-component=ng-visible-arrangement-submission-sales-milestone~ProceduralStepName=CMS details~ZOrder=130</attributeName>
+            <attributeName>SalesMilestone|ng-component=CmsDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -1014,6 +1028,10 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
+            <attributeName>subCondensedIncomeAndExpenses</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
             <attributeName>subClientsRightsAndObligations</attributeName>
          </featureAttributes>
          <featureAttributes>
@@ -1045,7 +1063,7 @@
       <featureIdentifier>1402</featureIdentifier>
       <name>My Pocket</name>
       <mandatory>false</mandatory>
-      <preSelected>true</preSelected>
+      <preSelected>false</preSelected>
       <shortDescription>Earn favourable interest rates</shortDescription>
       <description>Get a free budgeting and savings pocket linked to your Nedbank current account to earn interest and get instant access to your money when you need it.</description>
       <featureGrouping>
@@ -2367,7 +2385,7 @@
          <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>OfferTransactionalCredit|ng-component=ng-offer-transactional-credit~ProceduralStepName=Additional Offers~ZOrder=300~FinaliseWorkItemOnPositiveOutcome=true~ContractComponentProductType=9062~ActiveOnInitialWorkItemExecution=true</attributeName>
+            <attributeName>OfferTransactionalCredit|ng-component=AdditionalTransactionalCreditOffersComponent~ProceduralStepName=Additional Offers~ZOrder=300~FinaliseWorkItemOnPositiveOutcome=true~ContractComponentProductType=9062~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2393,7 +2411,7 @@
 	     </featureAttributes>
 	     <featureAttributes>
 	        <attributeType>clientInformationRequirement</attributeType>
-	        <attributeName>FinancialDetails|ng-component=ng-application-details~ProceduralStepName=Financial details~ZOrder=90~FinaliseWorkItemOnPositiveOutcome=true~displaySummary=true~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true</attributeName>
+	        <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90~FinaliseWorkItemOnPositiveOutcome=true~displaySummary=true~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true</attributeName>
 	     </featureAttributes>
 	     <featureAttributes>
 	        <attributeType>clientInformationRequirement</attributeType>

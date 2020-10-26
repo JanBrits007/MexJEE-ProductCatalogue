@@ -1,4 +1,4 @@
-<product 
+<product
     xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1350</productIdentifier>
     <name>Savvy Bundle Credit Card</name>
@@ -111,7 +111,7 @@
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>AdditionalPersonalInformation|postalstatement~emailstatement~mobilestatement</attributeName>
+            <attributeName>AdditionalPersonalInformation|statementdelivery=Cellphone-Email-Post</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -395,6 +395,13 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+        <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+        <value>NB184826|NB204377|CC617068|CC308734|CC321205|CC613516|CC613454|CC313619|CC322377|CC313619</value>
+      </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
         <attributeGroupName>CreditDetails</attributeGroupName>
         <productAttributes>
             <attributeName>minimumCreditAvaliableZAR</attributeName>
@@ -402,7 +409,7 @@
         </productAttributes>
         <productAttributes>
             <attributeName>maximumCreditAvaliableZAR</attributeName>
-            <value>200000</value>
+            <value>1000000</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -468,6 +475,11 @@
             <attributeName>ComponentSupportsDeclineReasons</attributeName>
             <value>true</value>
         </productAttributes>
+        <productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>performFICACheck</attributeName>
+			<value>true</value>
+		</productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>

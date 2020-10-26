@@ -3,6 +3,7 @@ package za.co.nb.productcatalogue.ejb;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import za.co.nb.juristic.productcatalogue.remoteejb.IJuristicProductSpecifications;
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 import za.co.nb.productcatalogue.cases.dao.BusinessCaseDAO;
 import za.co.nb.productcatalogue.dao.ArrangementMetricsDAO;
@@ -26,6 +27,7 @@ import javax.naming.NamingException;
 import javax.rmi.PortableRemoteObject;
 import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.JAXBIntrospector;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.transform.Source;
@@ -50,7 +52,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
     private static final boolean ENABLE_XSD_VALIDATION = false;
 
-    private JuristicProductSpecificationsRemote juristicProductSpecificationsRemote;
+    private IJuristicProductSpecifications juristicProductSpecificationsRemote;
 
     /*
     @Resource(name = "cache/productCatalogue")
@@ -284,6 +286,16 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         return productSpecifications.get(0);
     }
 
+	private static JAXBContext jaxbContext;
+	
+	private JAXBContext getJAXBContext() throws JAXBException {
+		if(jaxbContext == null) {
+			jaxbContext = JAXBContext.newInstance(ProductType.class);
+		}
+		
+		return jaxbContext;
+	}
+    
     public List<ProductType> getProductSpecificationXMLByID(List<Integer> pProductSpecificationID) throws Exception {
         mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
 
@@ -300,7 +312,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
 //			mLog.debug("Trace 2.1 >>" + xmlString + "<<");
 
-            JAXBContext jaxbContext = JAXBContext.newInstance(ProductType.class);
+            JAXBContext jaxbContext = getJAXBContext();
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
             mLog.debug("Trace 3");
@@ -434,7 +446,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
             if (inputStream == null) {
 
-                String productSpecificationXMLByID = getJuristicProductSpecificationsRemote().getProductSpecificationXMLByID(productID);
+                String productSpecificationXMLByID = getJuristicProductSpecificationsRemote().getProductSpecificationsXML(productID);
                 if(productSpecificationXMLByID != null)
                     return productSpecificationXMLByID;
 
@@ -456,14 +468,14 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     }
 
 
-    private JuristicProductSpecificationsRemote getJuristicProductSpecificationsRemote(){
+    private IJuristicProductSpecifications getJuristicProductSpecificationsRemote(){
 
         if(juristicProductSpecificationsRemote != null)
             return juristicProductSpecificationsRemote;
 
         try {
             InitialContext context = new InitialContext();
-            return (JuristicProductSpecificationsRemote)context.lookup("java:global/SysJuristicProductCatalogue/EJBJuristicProductCatalogue/JuristicProductSpecificationsEJB!za.co.nb.productcatalogue.ejb.JuristicProductSpecificationsRemote");
+            return (IJuristicProductSpecifications)context.lookup("java:global/SysJuristicProductCatalogue/WebJuristicProductCatalogue/JuristicProductSpecifications!za.co.nb.juristic.productcatalogue.remoteejb.IJuristicProductSpecifications");
 
 
         } catch(Exception e) {
