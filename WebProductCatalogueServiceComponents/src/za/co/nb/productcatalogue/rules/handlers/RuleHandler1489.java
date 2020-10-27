@@ -7,7 +7,6 @@ import za.co.nb.onboarding.casemanagement.BusinessCaseManagementDAO;
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 import za.co.nb.productcatalogue.exceptions.BusinessRuleExecutionException;
 import za.co.nb.services.clients.arrangementinformationservice.ArrangementPartyInformationServiceClient;
-import za.co.nednet.it.arrangement.helper.ArrangementUtil;
 import za.co.nednet.it.contracts.data.ent.party.v3.ArrangementDetailBObjType;
 import za.co.nednet.it.contracts.data.ent.party.v3.TCRMContractComponentBObjType;
 
