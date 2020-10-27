@@ -9,6 +9,7 @@ import za.co.nb.productcatalogue.exceptions.BusinessRuleExecutionException;
 import za.co.nb.services.clients.arrangementinformationservice.ArrangementPartyInformationServiceClient;
 import za.co.nednet.it.arrangement.helper.ArrangementUtil;
 import za.co.nednet.it.contracts.data.ent.party.v3.ArrangementDetailBObjType;
+import za.co.nednet.it.contracts.data.ent.party.v3.TCRMContractComponentBObjType;
 
 import java.util.List;
 
@@ -36,8 +37,8 @@ public class RuleHandler1489 extends BaseProductSpecificationRuleHandler {
                 mLog.debug("Trace 4");
 
                 if (arrangementDetailBObjType != null) {
-                    ArrangementUtil arrangementUtil = new ArrangementUtil();
-                    String xValueXML = arrangementUtil.getArrangementBaseContractComponentXValueXML(arrangementDetailBObjType);
+
+                    String xValueXML = getArrangementBaseContractComponentXValueXML(arrangementDetailBObjType);
                     mLog.debug("Trace 5 XValueXML value >>" + xValueXML + "<<");
 
                     Document doc = convertXmlStringToDocument(xValueXML);
@@ -62,6 +63,37 @@ public class RuleHandler1489 extends BaseProductSpecificationRuleHandler {
 
         mLog.debug("Trace 9 >>"+productIDToSubstitute+"<<");
         return productIDToSubstitute;
+    }
+
+    public String getArrangementBaseContractComponentXValueXML(ArrangementDetailBObjType pArrangement) throws Exception {
+        mLog.debug("Trace 1");
+
+        TCRMContractComponentBObjType baseContractComponent = getBaseContractComponent(pArrangement);
+
+        return getComponentXValueXML(baseContractComponent);
+    }
+
+    public TCRMContractComponentBObjType getBaseContractComponent(ArrangementDetailBObjType pArrangementDetailBObjType) {
+        mLog.debug("Trace 1");
+
+        for(TCRMContractComponentBObjType contractComponent : pArrangementDetailBObjType.getTCRMContractBObj().getTCRMContractComponentBObj()) {
+            mLog.debug("Trace 2");
+
+            if(contractComponent.getBaseIndicator().equalsIgnoreCase("Y")) {
+                return contractComponent;
+            }
+        }
+
+        mLog.debug("Trace 3");
+
+        // Problem
+        return null;
+    }
+
+    public String getComponentXValueXML(TCRMContractComponentBObjType component) {
+        mLog.debug("Trace 1");
+
+        return component.getTCRMExtension().getXCONTRACTCOMPONENTBObjExt().get(0).getXValueXML();
     }
 
 }
