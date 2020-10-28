@@ -1,6 +1,5 @@
 package za.co.nb.productcatalogue.dao;
 
-import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,16 +8,21 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import za.co.nb.productcatalogue.dto.ProductSpecificationJSON;
+import za.co.nb.juristic.productcatalogue.remoteejb.IJuristicProductSpecifications;
+
+import javax.naming.InitialContext;
 
 public class ProductSpecificationsJSONServiceDAO {
 
 	private final Log mLog = LogFactory.getLog(getClass());
 	private ProductSpecificationsServiceDAO mProductSpecificationsDAO;
 	private static Map<String, String> ptJSONStringCache = new HashMap<String, String>();
+	private IJuristicProductSpecifications juristicProductSpecificationsRemote;
 
 	private ProductSpecificationsServiceDAO getProductSpecificationsDAO() {
     	mLog.debug("Trace 1");
@@ -46,22 +50,18 @@ public class ProductSpecificationsJSONServiceDAO {
 				InputStream inputStream = ProductSpecificationsServiceDAO.class.getResourceAsStream("/productspecs/" + productID + ".json");
 				
 				if(inputStream == null) {
+					String productSpecificationJSON = getJuristicProductSpecificationsRemote().getProductSpecificationsJSON(productID);
+					if(productSpecificationJSON != null) {
+						ptJSONStringCache.put(productID, productSpecificationJSON);
+						return productSpecificationJSON;
+					}
+
 			    	mLog.debug("Trace 4");
 					throw new Exception("Unable to find specification JSON file for product ID " + productID);
 				}
-				
-				ByteArrayOutputStream result = new ByteArrayOutputStream();
-				byte[] buffer = new byte[1024];
-				int length;
-				
-				while ((length = inputStream.read(buffer)) != -1) {
-				    result.write(buffer, 0, length);
-				}
-	
-		    	mLog.debug("Trace 5");
-				
-				String JSONSpec = result.toString(StandardCharsets.UTF_8.name());
-		
+
+				String JSONSpec = IOUtils.toString(inputStream, StandardCharsets.UTF_8.name());
+
 				ptJSONStringCache.put(productID, JSONSpec);
 				
 				return JSONSpec;
@@ -69,6 +69,21 @@ public class ProductSpecificationsJSONServiceDAO {
 				e.printStackTrace();
 				throw new Exception("Unable to find specification JSON file for product ID " + productID);
 			}
+		}
+	}
+
+	private IJuristicProductSpecifications getJuristicProductSpecificationsRemote(){
+
+		if(juristicProductSpecificationsRemote != null)
+			return juristicProductSpecificationsRemote;
+
+		try {
+			InitialContext context = new InitialContext();
+			return (IJuristicProductSpecifications)context.lookup("java:global/SysJuristicProductCatalogue/EJBJuristicProductCatalogue/JuristicProductSpecificationsEJB!za.co.nb.productcatalogue.ejb.JuristicProductSpecificationsRemote");
+
+
+		} catch(Exception e) {
+			throw new RuntimeException("Juristic EJB jndi lookup failed, reason:"+e.getMessage());
 		}
 	}
 	

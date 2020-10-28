@@ -113,7 +113,7 @@
         </productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>AdditionalPersonalInformation</attributeName>
+			<attributeName>AdditionalPersonalInformation|statementdelivery=Email-Post</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -164,7 +164,7 @@
 		<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
 		<productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Contract|nedbank-commercial-release/CreditCardProductContract|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
+            <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>DocumentExclusion</attributeType>
@@ -304,20 +304,30 @@
 			<value>1001;1347</value>
 		</productAttributes>
 		<productAttributes>
-         	<attributeType>string</attributeType>
-         	<attributeName>HandleProvisioningFailureTeamName</attributeName>
-         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
-      	</productAttributes>
-      	<productAttributes>
-         	<attributeType>int</attributeType>
-         	<attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
-         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
-      	</productAttributes>
-     	<productAttributes>
-         	<attributeType>int</attributeType>
-         	<attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
-         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
-        </productAttributes>
+			<attributeType>String</attributeType>
+			<attributeName>HandleProvisioningFailureTeamName</attributeName>
+			<value>BPM Admin</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>String</attributeType>
+			<attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
+			<value>30</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>String</attributeType>
+			<attributeName>HandleProvisioningFailureEscalationTestingEmailAddress</attributeName>
+			<value>BensonM2@Nedbank.co.za</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>String</attributeType>
+			<attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
+			<value>EclipseBPMExceptionssupport@Nedbank.co.za</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>String</attributeType>
+			<attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
+			<value>EclipseBPMExceptionssupport@Nedbank.co.za</value>
+		</productAttributes>
 		<productAttributes>
          	<attributeType>string</attributeType>
          	<attributeName>DEAStatementBUID</attributeName>
@@ -463,6 +473,45 @@
 			<attributeType>boolean</attributeType>
 			<attributeName>executeArrangementCrossSellRules</attributeName>
 			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>performFICACheck</attributeName>
+			<value>true</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericDetails</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subClientsRightsAndObligations</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericTCForCreditProducts</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericImpConfirmation</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericSignatures</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCard|ContractComponentProductType=1050</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCardTC|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<features>
