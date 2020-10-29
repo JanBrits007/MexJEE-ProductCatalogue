@@ -22,7 +22,17 @@
 	},
 	"actions": [{
 		"type": "SELECT",
-		"text": "Select"
+		"text": "Select",
+		"environments": ["dev",
+		"ete",
+		"qa",
+		"qa_kiosk"]
+	},
+	{
+		"type": "REDIRECT",
+		"text": "Select",
+		"environments": ["prod"],
+		"value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html"
 	},
 	{
 		"type": "DETAIL",
