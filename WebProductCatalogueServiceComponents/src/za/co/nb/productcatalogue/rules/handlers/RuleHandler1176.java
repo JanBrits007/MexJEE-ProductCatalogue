@@ -26,7 +26,8 @@ public class RuleHandler1176 extends BaseProductSpecificationRuleHandler {
         BusinessCaseHeader businessCase = dao.retrieveBusinessCase(caseID);
 
         boolean isRRBClient = false;
-        if(businessCase != null && businessCase.getClientInContextECN() != null){
+        if(businessCase != null && businessCase.getClientInContextECN() != null && businessCase.getInitiatingChannelID() != null
+            && "397".equalsIgnoreCase(businessCase.getInitiatingChannelID())){
 
             mLog.debug("Trace 2");
             SystemConfiguratorDAO systemConfiguratorDAO = new SystemConfiguratorDAO();
