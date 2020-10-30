@@ -12,7 +12,7 @@ import za.co.nb.productcatalogue.exceptions.BusinessRuleExecutionException;
 import za.co.nb.system.config.dao.SystemConfiguratorDAO;
 import za.co.nb.system.config.environment.Environment;
 
-public class RuleHandler1176ETE extends BaseProductSpecificationRuleHandler {
+public class RuleHandler1176 extends BaseProductSpecificationRuleHandler {
 
     private final Log mLog = LogFactory.getLog(getClass());
 
@@ -26,7 +26,8 @@ public class RuleHandler1176ETE extends BaseProductSpecificationRuleHandler {
         BusinessCaseHeader businessCase = dao.retrieveBusinessCase(caseID);
 
         boolean isRRBClient = false;
-        if(businessCase != null && businessCase.getClientInContextECN() != null){
+        if(businessCase != null && businessCase.getClientInContextECN() != null && businessCase.getInitiatingChannelID() != null
+            && "397".equalsIgnoreCase(businessCase.getInitiatingChannelID())){
 
             mLog.debug("Trace 2");
             SystemConfiguratorDAO systemConfiguratorDAO = new SystemConfiguratorDAO();

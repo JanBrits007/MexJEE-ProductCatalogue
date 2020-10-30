@@ -603,6 +603,11 @@
         <value>tp_welc_01</value>
       </productAttributes>
       <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>welcomeDocumentTemplate</attributeName>
+        <value>nedbank-commercial-release/CombinedWelcomeLetter</value>
+      </productAttributes>
+      <productAttributes>
         <attributeType>flag</attributeType>
         <attributeName>ProvisioningPhase</attributeName>
         <value>preVerificationProvisioning</value>
@@ -628,6 +633,39 @@
             <attributeName>productType</attributeName>
             <value>EMAILSMS</value>
         </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+       <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+       <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>subYourApplicationHeader</attributeName>
+       </productAttributes>
+       <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>subNedbankLogo</attributeName>
+       </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+       <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+       <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>subGenericInfo</attributeName>
+       </productAttributes>
+       <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>subContactInfo</attributeName>
+       </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+       <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>subTP|ContractComponentProductType=1354</attributeName>
+       </productAttributes>
+       <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>subProfSavvyBundleCurrentAccount|ContractComponentProductType=1354</attributeName>
+       </productAttributes>
     </productAttributeGroup>
    <features>
       <featureIdentifier>1014</featureIdentifier>
@@ -987,6 +1025,35 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>subOverdraftTC|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subNedbankLogo</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericInfo</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subContactInfo</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>

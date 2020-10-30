@@ -178,18 +178,6 @@
 			<attributeType>AvailableAction</attributeType>
 			<attributeName>Email</attributeName>
 		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>WetSign</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>DigitallySign</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>ElectronicallySign</attributeName>
-		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
@@ -276,7 +264,7 @@
 		<productAttributes>
 			<attributeType>bool</attributeType>
 			<attributeName>FinalCaseQualityAssuranceRequired</attributeName>
-			<value>true</value>
+			<value>false</value>
 		</productAttributes>
 		<productAttributes>
             <attributeType>string</attributeType>
@@ -304,20 +292,30 @@
 			<value>1001;1347</value>
 		</productAttributes>
 		<productAttributes>
-         	<attributeType>string</attributeType>
-         	<attributeName>HandleProvisioningFailureTeamName</attributeName>
-         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
-      	</productAttributes>
-      	<productAttributes>
-         	<attributeType>int</attributeType>
-         	<attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
-         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
-      	</productAttributes>
-     	<productAttributes>
-         	<attributeType>int</attributeType>
-         	<attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
-         	<value>Eclipsewarroomsupport@Nedbank.co.za</value>
-        </productAttributes>
+			<attributeType>String</attributeType>
+			<attributeName>HandleProvisioningFailureTeamName</attributeName>
+			<value>BPM Admin</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>String</attributeType>
+			<attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
+			<value>30</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>String</attributeType>
+			<attributeName>HandleProvisioningFailureEscalationTestingEmailAddress</attributeName>
+			<value>BensonM2@Nedbank.co.za</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>String</attributeType>
+			<attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
+			<value>EclipseBPMExceptionssupport@Nedbank.co.za</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>String</attributeType>
+			<attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
+			<value>EclipseBPMExceptionssupport@Nedbank.co.za</value>
+		</productAttributes>
 		<productAttributes>
          	<attributeType>string</attributeType>
          	<attributeName>DEAStatementBUID</attributeName>
@@ -732,10 +730,6 @@
 		</featureAttributeGroup>
 		<featureAttributeGroup>
 			<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-			<featureAttributes>
-				<attributeType>DocumentDescription</attributeType>
-				<attributeName>Rewards Terms and Conditions|nedbank-commercial-release/CreditCardRewardsTermsAndConditionsUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Terms and Conditions</attributeName>
-			</featureAttributes>
 			<featureAttributes>
 				<attributeType>AvailableAction</attributeType>
 				<attributeName>Download</attributeName>

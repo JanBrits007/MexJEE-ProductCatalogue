@@ -42,7 +42,15 @@
             <isComparable>false</isComparable>
             <value>true</value>
             <valueUnit>bool</valueUnit>
-            <description>already exist as a Nedbank Private Wealth client;</description>
+            <description>must be an existing Nedbank Private Wealth client;</description>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>ExistingAccounts</attributeName>
+            <isComparable>false</isComparable>
+            <value>true</value>
+            <valueUnit>bool</valueUnit>
+            <description>must have a Nedbank Private Wealth Bundle current account;</description>
         </productAttributes>
         <productAttributes>
             <attributeType>EligibilityRule</attributeType>
@@ -111,7 +119,7 @@
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>AdditionalPersonalInformation|statementdelivery=Cellphone-Email-Post</attributeName>
+            <attributeName>AdditionalPersonalInformation|statementdelivery=Email-Post</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -312,19 +320,24 @@
             <value>1001;1347</value>
         </productAttributes>
         <productAttributes>
-            <attributeType>string</attributeType>
+            <attributeType>String</attributeType>
             <attributeName>HandleProvisioningFailureTeamName</attributeName>
-            <value>Eclipsewarroomsupport@Nedbank.co.za</value>
+            <value>BPM Admin</value>
         </productAttributes>
         <productAttributes>
-            <attributeType>int</attributeType>
+            <attributeType>String</attributeType>
             <attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
-            <value>Eclipsewarroomsupport@Nedbank.co.za</value>
+            <value>30</value>
         </productAttributes>
         <productAttributes>
-            <attributeType>int</attributeType>
+            <attributeType>String</attributeType>
+            <attributeName>HandleProvisioningFailureEscalationTestingEmailAddress</attributeName>
+            <value>BensonM2@Nedbank.co.za</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>String</attributeType>
             <attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
-            <value>Eclipsewarroomsupport@Nedbank.co.za</value>
+            <value>EclipseBPMExceptionssupport@Nedbank.co.za</value>
         </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
