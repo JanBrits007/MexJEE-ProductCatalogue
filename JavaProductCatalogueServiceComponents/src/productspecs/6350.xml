@@ -2,6 +2,187 @@
 	<productIdentifier>6350</productIdentifier>
 	<name>Savvy Bundle Credit Card</name>
 	<shortDescription>This credit card forms part of the Savvy Bundle</shortDescription>
+
+	<!--VerifyIdentity-->
+
+	<!--GenerateOfferVerifyEligibility-->
+
+	<!--GenerateOfferGatherProductDetails-->
+
+	<!--DetermineRelatedParties-->
+
+	<!--GenerateOfferGatherClientDetails-->
+	<productAttributeGroup>
+		<attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ClientVerificationInformation</attributeName>
+		</productAttributes>
+		<productAttributes>
+						<attributeType>clientInformationRequirement</attributeType>
+						<attributeName>NCCDesk</attributeName>
+				</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>AdditionalPersonalInformation</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>MaritalStatus</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>EmploymentDetails</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>IncomeBasicCard</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ExpensesBasicCard</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>PreOfferFinePrint</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--FinancialDetails-->
+
+	<!--GenerateApplicationOfferProposals-->
+
+	<!--GenerateOffer-->
+	<productAttributeGroup>
+		 <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+		 <productAttributes>
+			 <attributeType>clientInformationRequirement</attributeType>
+			 <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+			 <attributeType>clientInformationRequirement</attributeType>
+			 <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=ng-CreditCard-Offer-Summery~ProceduralStepName=Offer~ZOrder=60</attributeName>
+		 </productAttributes>
+	</productAttributeGroup>
+
+	<!--ActivateProductsGatherClientDetails-->
+	<productAttributeGroup>
+		 <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
+		 <productAttributes>
+				<attributeType>clientInformationRequirement</attributeType>
+				<attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Personal information~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>clientInformationRequirement</attributeType>
+				<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance information~ZOrder=90</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>clientInformationRequirement</attributeType>
+				<attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~child-ng-components=EmployerDetails~ProceduralStepName=Employment details~ZOrder=80</attributeName>
+		 </productAttributes>
+	</productAttributeGroup>
+
+	<!--ActivateProductsGatherProductDetails-->
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Going digital~ZOrder=160~applicableChannels=BranchStaffAssisted</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Credit card repayment~ZOrder=210</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>RepaymentSetup|ng-component=RepaymentSetupWidgetComponent~ProceduralStepName=Repayments setup~ZOrder=200</attributeName>
+		</productAttributes>
+		<productAttributes>
+			 <attributeType>productInformationRequirement</attributeType>
+			 <attributeName>SalesMilestone|ng-component=CmsDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--ActivateProductsGatherEvidence-->
+	<productAttributeGroup>
+		 <attributeGroupName>clientInformationRequirement_GatherEvidence</attributeGroupName>
+		 <productAttributes>
+				<attributeType>clientInformationRequirement</attributeType>
+				<attributeName>GatherEvidence|ng-component=UploadYourDocumentsComponent~ProceduralStepName=Upload your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>productDocumentPresentation|ProceduralStepName=Sign documents~ZOrder=90</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>DigitalActivation|ProceduralStepName=Digital activation~ZOrder=80</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>AccurateInformationProvidedConfirmation|ProceduralStepName=Confirmation~ZOrder=60</attributeName>
+		 </productAttributes>
+	</productAttributeGroup>
+
+	<!--ActivateProductsPresentDocuments-->
+	<productAttributeGroup>
+		 <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+		 <productAttributes>
+				<attributeType>clientInformationRequirement</attributeType>
+				<attributeName>GatherEvidence|ProceduralStepName=Upload your documents~ZOrder=100</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Sign documents~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>DigitalActivation|ProceduralStepName=Digital ctivation~ZOrder=80</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>AccurateInformationProvidedConfirmation|ProceduralStepName=Your declaration~ZOrder=60</attributeName>
+		 </productAttributes>
+	</productAttributeGroup>
+
+	<!--FinalizeFrontOfficeInteraction-->
+	<productAttributeGroup>
+		 <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>GatherEvidence|ProceduralStepName=Upload documents~ZOrder=100</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>productDocumentPresentation|ProceduralStepName=Sign documents~ZOrder=90</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>DigitalActivation|ng-component=DigitalActivationComponent~ProceduralStepName=Digital activation~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>AccurateInformationProvidedConfirmation|ng-component=YourDeclarationComponent~ProceduralStepName=Confirmation~ZOrder=60~ContractComponentProductType=6032</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~ZOrder=50</attributeName>
+		 </productAttributes>
+	</productAttributeGroup>
+
+	<!--Evidence And Compliance Requirements-->
 	<productAttributeGroup>
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
 		<productAttributes>
@@ -45,6 +226,119 @@
 			<attributeName>BureauCheckConsentCard</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
+
+	<!--Document Configuration-->
+	<productAttributeGroup>
+		<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+		<productAttributes>
+			<attributeType>DocumentDescription</attributeType>
+			<attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>CombinedDownload</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Email</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>WetSign</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>DigitallySign</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>ElectronicallySign</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>DocumentExclusion</attributeType>
+			<attributeName>Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subYourApplicationHeader</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subNedbankLogo</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericDetails</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCondensedIncomeAndExpenses</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subClientsRightsAndObligations</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericTCForCreditProducts</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericImpConfirmation</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericSignatures</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCard|ContractComponentProductType=6032</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCardTC|ContractComponentProductType=6032</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		 <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+		 <productAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subYourApplicationHeader</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subNedbankLogo</attributeName>
+		 </productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		 <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+		 <productAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subGenericInfo</attributeName>
+		 </productAttributes>
+		 <productAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subContactInfo</attributeName>
+		 </productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		 <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+		 <productAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subCredit|ContractComponentProductType=6032</attributeName>
+		 </productAttributes>
+	</productAttributeGroup>
+
+	<!--Case and Process Configuration-->
 	<productAttributeGroup>
 		<attributeGroupName>EligibilityRules</attributeGroupName>
 		<productAttributes>
@@ -103,204 +397,32 @@
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
-		<attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ClientVerificationInformation</attributeName>
-		</productAttributes>
-		<productAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>NCCDesk</attributeName>
-        </productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>AdditionalPersonalInformation</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>MaritalStatus</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>EmploymentDetails</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>IncomeBasicCard</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ExpensesBasicCard</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>PreOfferFinePrint</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		 <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
-		 <productAttributes>
-				<attributeType>clientInformationRequirement</attributeType>
-				<attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Personal information~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>clientInformationRequirement</attributeType>
-				<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance information~ZOrder=90</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>clientInformationRequirement</attributeType>
-				<attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~child-ng-components=EmployerDetailss~ProceduralStepName=Employment details~ZOrder=80</attributeName>
-		 </productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		<attributeGroupName>clientInformationRequirement_EnableClients</attributeGroupName>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>DigitalLoginDetails</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		 <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-		 <productAttributes>
-			 <attributeType>clientInformationRequirement</attributeType>
-			 <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-			 <attributeType>clientInformationRequirement</attributeType>
-			 <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=ng-CreditCard-Offer-Summery~ProceduralStepName=Offer~ZOrder=60</attributeName>
-		 </productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		 <attributeGroupName>PresentOfferSelection</attributeGroupName>
-		 <productAttributes>
-	         <attributeType>string</attributeType>
-	         <attributeName>OfferSelectionSummaryDetails</attributeName>
-	         <value>CreditCardOfferSelectionSubSection|ng-component=ng-Credit-Card-Offer-Selection-SubSection~ZOrder=80~ContractComponentProductType=6350</value>
-		 </productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Credit card repayment~ZOrder=200</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Going digital~ZOrder=160~applicableChannels=BranchStaffAssisted</attributeName>
-		</productAttributes>
-		<productAttributes>
-			 <attributeType>productInformationRequirement</attributeType>
-			 <attributeName>SalesMilestone|ng-component=CmsDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted</attributeName>
-		</productAttributes>
-		<productAttributes>
-	 		<attributeType>productInformationRequirement</attributeType>
-	 		<attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		 <attributeGroupName>clientInformationRequirement_GatherEvidence</attributeGroupName>
-		 <productAttributes>
-				<attributeType>clientInformationRequirement</attributeType>
-				<attributeName>GatherEvidence|ng-component=UploadYourDocumentsComponent~ProceduralStepName=Upload your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>productDocumentPresentation|ProceduralStepName=Sign documents~ZOrder=90</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>DigitalActivation|ProceduralStepName=Digital activation~ZOrder=80</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>AccurateInformationProvidedConfirmation|ProceduralStepName=Confirmation~ZOrder=60</attributeName>
-		 </productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-		<productAttributes>
-			<attributeType>DocumentDescription</attributeType>
-			<attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>CombinedDownload</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>Email</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>WetSign</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>DigitallySign</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>ElectronicallySign</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>DocumentExclusion</attributeType>
-			<attributeName>Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		 <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
-		 <productAttributes>
-				<attributeType>clientInformationRequirement</attributeType>
-				<attributeName>GatherEvidence|ProceduralStepName=Upload your documents~ZOrder=100</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Sign documents~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>DigitalActivation|ProceduralStepName=Digital ctivation~ZOrder=80</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>AccurateInformationProvidedConfirmation|ProceduralStepName=Your declaration~ZOrder=60</attributeName>
-		 </productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		<attributeGroupName>CaseConfiguration</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-		</productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
-            <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-        </productAttributes>
+	 <attributeGroupName>CaseConfiguration</attributeGroupName>
+	 <productAttributes>
+		 <attributeType>string</attributeType>
+		 <attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
+		 <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+	 </productAttributes>
+	 <productAttributes>
+		 <attributeType>string</attributeType>
+		 <attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
+		 <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+	 </productAttributes>
+	 <productAttributes>
+		 <attributeType>string</attributeType>
+		 <attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
+		 <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+	 </productAttributes>
+	 <productAttributes>
+		 <attributeType>string</attributeType>
+		 <attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
+		 <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+	 </productAttributes>
+	 <productAttributes>
+		 <attributeType>string</attributeType>
+		 <attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
+		 <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+	 </productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
@@ -382,7 +504,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>GatherDocumentsLiaisonTeam</attributeName>
-			<value>LiaisonTeam</value>
+			<value>PREPROD EDB Party Information Retriever</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>bool</attributeType>
@@ -397,7 +519,7 @@
 		<productAttributes>
 			<attributeType>bool</attributeType>
 			<attributeName>FinalCaseQualityAssuranceTeam</attributeName>
-			<value>CreditCardFinalAssessmentVerificationTeam</value>
+			<value>PREPROD EDB Quality Assurer</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>int</attributeType>
@@ -424,147 +546,87 @@
 			 <attributeName>consumerFrameworkVersion</attributeName>
 			 <value>2.0</value>
 		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		 <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>GatherEvidence|ProceduralStepName=Upload documents~ZOrder=100</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>productDocumentPresentation|ProceduralStepName=Sign documents~ZOrder=90</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>DigitalActivation|ng-component=DigitalActivationComponent~ProceduralStepName=Digital activation~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>AccurateInformationProvidedConfirmation|ng-component=YourDeclarationComponent~ProceduralStepName=Confirmation~ZOrder=60~ContractComponentProductType=6350</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~ZOrder=50</attributeName>
-		 </productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-	  <attributeGroupName>productInformationRequirement_VerifyAffordabilityAndEmployment</attributeGroupName>
-		<productAttributes>
-		  <attributeType>productInformationRequirement</attributeType>
-		  <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
-		</productAttributes>
-		<productAttributes>
-		  <attributeType>productInformationRequirement</attributeType>
-		  <attributeName>InsurancePanel|cv-parent-panel=CaseData~cv-component=Insurance_Panel~child-cv-component=widInsuranceInformation[SHOW]</attributeName>
-		</productAttributes>
-		<productAttributes>
-		  <attributeType>productInformationRequirement</attributeType>
-		  <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
-		</productAttributes>
-		<productAttributes>
-		  <attributeType>productInformationRequirement</attributeType>
-		  <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankInformation[SHOW]</attributeName>
-		</productAttributes>
-		<productAttributes>
-		  <attributeType>productInformationRequirement</attributeType>
-		  <attributeName>EmploymentInformationPanel|cv-parent-panel=CaseData~cv-component=EmploymentInformation_Panel~child-cv-component=widEmploymentInformation[SHOW]</attributeName>
-		</productAttributes>
-		<productAttributes>
-		  <attributeType>productInformationRequirement</attributeType>
-		  <attributeName>BureauInformationPanel|cv-parent-panel=CaseData~cv-component=BureauInformation_Panel~child-cv-component=widBureauGateway[SHOW]</attributeName>
-		</productAttributes>
-		<productAttributes>
-		  <attributeType>productInformationRequirement</attributeType>
-		  <attributeName>AffordabilityInformationPanel|cv-parent-panel=CaseData~cv-component=AffordabilityInformation_Panel~child-cv-component=widAffordabilityInformation[SHOW]</attributeName>
-		</productAttributes>
-		<productAttributes>
-		  <attributeType>productInformationRequirement</attributeType>
-		  <attributeName>GenericCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnViewComments~cv-component=Actions_CaseActions~child-cv-component=btnSave~cv-component=Actions_CaseActions~child-cv-component=btnCancelCase~cv-component=Actions_CaseActions~child-cv-component=btnViewAuditTrails~cv-component=Actions_CaseActions~child-cv-component=btnDiarise~cv-component=Actions_CaseActions~child-cv-component=btnFlagForFraud</attributeName>
-		</productAttributes>
-		<productAttributes>
-		  <attributeType>productInformationRequirement</attributeType>
-		  <attributeName>DocumentCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnOpenDocuments~cv-component=Actions_CaseActions~child-cv-component=btnRequestDocuments~cv-component=Actions_CaseActions~child-cv-component=btnAddDocuments</attributeName>
-		</productAttributes>
-		<productAttributes>
-		  <attributeType>productInformationRequirement</attributeType>
-		  <attributeName>DataCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnRetrievePartyStatements~cv-component=Actions_CaseActions~child-cv-component=btnRefreshPartyData~cv-component=Actions_CaseActions~child-cv-component=btnREfreshBureauData</attributeName>
-		</productAttributes>
-		<productAttributes>
-		  <attributeType>productInformationRequirement</attributeType>
-		  <attributeName>DiariseCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
-		</productAttributes>
-		<productAttributes>
-		  <attributeType>productInformationRequirement</attributeType>
-		  <attributeName>FraudCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-	  <attributeGroupName>productInformationRequirement_QualityAssuranceVerification</attributeGroupName>
-	  <productAttributes>
-	    <attributeType>productInformationRequirement</attributeType>
-	    <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
-	  </productAttributes>
-	  <productAttributes>
-	    <attributeType>productInformationRequirement</attributeType>
-	    <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
-	  </productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		<attributeGroupName>productCodeMappings</attributeGroupName><!-- Are these required -->
-		<productAttributes>
-			<attributeType>productCodeMapping</attributeType>
-			<attributeName>MDM_ProductCode</attributeName>
-			<value>1447</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>productCodeMapping</attributeType>
-			<attributeName>HLCore_ProductCode</attributeName>
-			<value>1447</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>productCodeMapping</attributeType>
-			<attributeName>Siyaka_ProductCode</attributeName>
-			<value>324324</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>productCodeMapping</attributeType>
-			<attributeName>CoreSystemIdentifier</attributeName>
-			<value>000</value>
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		<attributeGroupName>coreProvisioningParameters</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>spikeProductID</attributeName>
-			<value>1350</value>
+			<attributeName>CaseActivityTeamName_InvestigateFraud</attributeName>
+			<value>PREPROD EDB Fraud Investigation|Weighting=0</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>int</attributeType>
-			<attributeName>productSystem</attributeName>
-			<value>CAMS</value>
+			<attributeName>CaseActivityPriority_InvestigateFraud</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_GatherInformationAndDocuments</attributeName>
+			<value>PREPROD EDB Party Information Retriever|Weighting=0</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>int</attributeType>
-			<attributeName>productType</attributeName>
-			<value>CREDITCARD</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>flag</attributeType>
-			<attributeName>ProvisioningPhase</attributeName>
-			<value>preFICAProvisioning</value>
+			<attributeName>CaseActivityPriority_GatherInformationAndDocuments</attributeName>
+			<value>0|Weighting=0</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
-		<attributeGroupName>CreditDetails</attributeGroupName>
+		<attributeGroupName>productInformationRequirement_VerifyAffordabilityAndEmployment</attributeGroupName>
 		<productAttributes>
-			<attributeName>minimumCreditAvaliableZAR</attributeName>
-			<value>2000</value>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
 		</productAttributes>
 		<productAttributes>
-			<attributeName>maximumCreditAvaliableZAR</attributeName>
-			<value>200000</value>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>InsurancePanel|cv-parent-panel=CaseData~cv-component=Insurance_Panel~child-cv-component=widInsuranceInformation[SHOW]</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankInformation[SHOW]</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>EmploymentInformationPanel|cv-parent-panel=CaseData~cv-component=EmploymentInformation_Panel~child-cv-component=widEmploymentInformation[SHOW]</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>BureauInformationPanel|cv-parent-panel=CaseData~cv-component=BureauInformation_Panel~child-cv-component=widBureauGateway[SHOW]</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>AffordabilityInformationPanel|cv-parent-panel=CaseData~cv-component=AffordabilityInformation_Panel~child-cv-component=widAffordabilityInformation[SHOW]</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>GenericCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnViewComments~cv-component=Actions_CaseActions~child-cv-component=btnSave~cv-component=Actions_CaseActions~child-cv-component=btnCancelCase~cv-component=Actions_CaseActions~child-cv-component=btnViewAuditTrails~cv-component=Actions_CaseActions~child-cv-component=btnDiarise~cv-component=Actions_CaseActions~child-cv-component=btnFlagForFraud</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>DocumentCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnOpenDocuments~cv-component=Actions_CaseActions~child-cv-component=btnRequestDocuments~cv-component=Actions_CaseActions~child-cv-component=btnAddDocuments</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>DataCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnRetrievePartyStatements~cv-component=Actions_CaseActions~child-cv-component=btnRefreshPartyData~cv-component=Actions_CaseActions~child-cv-component=btnREfreshBureauData</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>DiariseCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>FraudCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_QualityAssuranceVerification</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -593,55 +655,86 @@
 			<value>EMAILSMS</value>
 		</productAttributes>
 	</productAttributeGroup>
+
+	<!--Offer Configuration-->
 	<productAttributeGroup>
-    <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
-    <productAttributes>
-      <attributeType>string</attributeType>
-      <attributeName>subYourApplicationHeader</attributeName>
-    </productAttributes>
+		 <attributeGroupName>PresentOfferSelection</attributeGroupName>
+		 <productAttributes>
+					 <attributeType>string</attributeType>
+					 <attributeName>OfferSelectionSummaryDetails</attributeName>
+					 <value>CreditCardOfferSelectionSubSection|ng-component=ng-Credit-Card-Offer-Selection-SubSection~ZOrder=80~ContractComponentProductType=6350</value>
+		 </productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>CreditDetails</attributeGroupName>
 		<productAttributes>
-      <attributeType>string</attributeType>
-      <attributeName>subNedbankLogo</attributeName>
-    </productAttributes>
-  </productAttributeGroup>
-  <productAttributeGroup>
-		<attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
-    <productAttributes>
-      <attributeType>string</attributeType>
-      <attributeName>subGenericDetails</attributeName>
-    </productAttributes>
-		<productAttributes>
-	 		<attributeType>string</attributeType>
-	 		<attributeName>subCondensedIncomeAndExpenses</attributeName>
+			<attributeName>minimumCreditAvaliableZAR</attributeName>
+			<value>2000</value>
 		</productAttributes>
 		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>subClientsRightsAndObligations</attributeName>
+			<attributeName>maximumCreditAvaliableZAR</attributeName>
+			<value>200000</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Provisioning Configuration-->
+	<productAttributeGroup>
+		<attributeGroupName>productCodeMappings</attributeGroupName><!-- Are these required -->
+		<productAttributes>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>MDM_ProductCode</attributeName>
+			<value>1447</value>
 		</productAttributes>
 		<productAttributes>
-			 <attributeType>string</attributeType>
-			 <attributeName>subGenericTCForCreditProducts</attributeName>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>HLCore_ProductCode</attributeName>
+			<value>1447</value>
 		</productAttributes>
 		<productAttributes>
-			 <attributeType>string</attributeType>
-			 <attributeName>subGenericImpConfirmation</attributeName>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>Siyaka_ProductCode</attributeName>
+			<value>324324</value>
 		</productAttributes>
 		<productAttributes>
-			 <attributeType>string</attributeType>
-			 <attributeName>subGenericSignatures</attributeName>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>CoreSystemIdentifier</attributeName>
+			<value>000</value>
 		</productAttributes>
-  </productAttributeGroup>
-  <productAttributeGroup>
-		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
-    <productAttributes>
-      <attributeType>string</attributeType>
-      <attributeName>subCreditCard|ContractComponentProductType=6350</attributeName>
-    </productAttributes>
-    <productAttributes>
-      <attributeType>string</attributeType>
-      <attributeName>subCreditCardTC|ContractComponentProductType=6350</attributeName>
-    </productAttributes>
-  </productAttributeGroup>
+	</productAttributeGroup>
+	<productAttributeGroup>
+	  <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+	  <productAttributes>
+	    <attributeType>string</attributeType>
+	    <attributeName>spikeProductID</attributeName>
+	    <value>1350</value>
+	  </productAttributes>
+	  <productAttributes>
+	    <attributeType>int</attributeType>
+	    <attributeName>productSystem</attributeName>
+	    <value>CAMS</value>
+	  </productAttributes>
+	  <productAttributes>
+	    <attributeType>int</attributeType>
+	    <attributeName>productType</attributeName>
+	    <value>CREDITCARD</value>
+	  </productAttributes>
+	  <productAttributes>
+	    <attributeType>flag</attributeType>
+	    <attributeName>ProvisioningPhase</attributeName>
+	    <value>preFICAProvisioning</value>
+	  </productAttributes>
+	  <productAttributes>
+	    <attributeType>string</attributeType>
+	    <attributeName>welcomeEmailTemplate</attributeName>
+	    <value>tp_welc_01</value>
+	  </productAttributes>
+	  <productAttributes>
+	    <attributeType>string</attributeType>
+	    <attributeName>welcomeDocumentTemplate</attributeName>
+	    <value>nedbank-commercial-release/CombinedWelcomeLetter</value>
+	  </productAttributes>
+	</productAttributeGroup>
+
 	<features>
 		<featureIdentifier>1028</featureIdentifier>
 		<name>Plastic Card</name>
@@ -917,7 +1010,7 @@
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
-  <features>
+	<features>
 		<featureIdentifier>1333</featureIdentifier>
 		<name>Nedbank Greenbacks Shop Card</name>
 		<mandatory>false</mandatory>
@@ -1038,21 +1131,21 @@
 				<attributeName>provisionInBranch</attributeName>
 				<valueUnit>boolean</valueUnit>
 				<value>false</value>
-      </featureAttributes>
-      <featureAttributes>
+            </featureAttributes>
+            <featureAttributes>
 				<attributeType>coreProvisioningParameter</attributeType>
 				<attributeName>CAMSLangCd</attributeName>
 				<valueUnit>PER</valueUnit>
 				<value>ENG</value>
-      </featureAttributes>
-      <featureAttributes>
-        <attributeType>coreProvisioningParameter</attributeType>
-        <attributeName>CAMSSolicitationCode</attributeName>
-        <valueUnit>PER</valueUnit>
-        <value>7016</value>
-      </featureAttributes>
-    </featureAttributeGroup>
-  </features>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSSolicitationCode</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>7016</value>
+            </featureAttributes>
+       </featureAttributeGroup>
+		 </features>
 	<features>
 		<featureIdentifier>1400</featureIdentifier>
 		<name>Affinity Rewards</name>
