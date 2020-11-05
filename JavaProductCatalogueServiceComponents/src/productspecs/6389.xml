@@ -399,6 +399,11 @@
        <attributeName>CODHandler_CreditOffer</attributeName>
        <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditOfferCODHandler</value>
      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanHandler_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
@@ -1221,6 +1226,24 @@
       </featureAttributeGroup>
 
       <!-- Case and Process Configuration -->
+      <featureAttributeGroup>
+         <attributeGroupName>EligibilityRules</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleDCARRanges</attributeName>
+            <value>0-100000|100001-200000</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleSegments</attributeName>
+            <value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleApplicationStatus</attributeName>
+            <value>CANCELLED|INITIATED|DECLINED</value>
+         </featureAttributes>
+      </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>
