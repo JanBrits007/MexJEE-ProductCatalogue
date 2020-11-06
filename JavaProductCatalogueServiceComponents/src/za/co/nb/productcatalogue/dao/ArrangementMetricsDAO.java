@@ -114,7 +114,7 @@ public class ArrangementMetricsDAO {
 			
 			mLog.debug("Trace 3");
 			
-			vPreparedStatement = vConnection.prepareStatement("select CASEID from CASEMI where (ARRID1=? OR ARRID2=? OR ARRID3=?)");
+			vPreparedStatement = vConnection.prepareStatement("select CASEID from CASEMI where (ARRID1=? OR ARRID2=? OR ARRID3=? OR ARRID4=? OR ARRID5=? OR ARRID6=?)");
 			vPreparedStatement.setString(1, arrangementID);
 			vPreparedStatement.setString(2, arrangementID);
 			vPreparedStatement.setString(3, arrangementID);
