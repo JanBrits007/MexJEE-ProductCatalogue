@@ -118,6 +118,9 @@ public class ArrangementMetricsDAO {
 			vPreparedStatement.setString(1, arrangementID);
 			vPreparedStatement.setString(2, arrangementID);
 			vPreparedStatement.setString(3, arrangementID);
+			vPreparedStatement.setString(4, arrangementID);
+			vPreparedStatement.setString(5, arrangementID);
+			vPreparedStatement.setString(6, arrangementID);
 			vResultSet = vPreparedStatement.executeQuery();
 
 			mLog.debug("Trace 4");
