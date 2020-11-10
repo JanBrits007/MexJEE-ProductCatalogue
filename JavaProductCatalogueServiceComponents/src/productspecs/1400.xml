@@ -49,6 +49,10 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>OverdraftDetailsV2|min=2000.00~max=300000.00</attributeName>
       </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>FaisConversationRecordOfAdvice</attributeName>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>EligibilityRules</attributeGroupName>
@@ -70,12 +74,16 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>EmploymentInformationV2|displaySummary=true~sideStepperDisplayName=Employment details~EmploymentType~Occupation~occupationOtherDescription~EmploymentIndustry</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ComplianceInformationV2|displaySummary=true~sideStepperDisplayName=Compliance information~PrimaryNationality~CountryOfBirth~CountryOfResidence~SourceOfFunds~FATCRS~ClientConsent</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>EmploymentInformationV2|displaySummary=true~sideStepperDisplayName=Employment details~EmploymentType~Occupation~EmploymentIndustry</attributeName>
-      </productAttributes>
+         <attributeName>FaisConversationRecordOfAdvice</attributeName>
+      </productAttributes>      
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
@@ -522,12 +530,12 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ComplianceInformationV2|displaySummary=true~sideStepperDisplayName=Compliance information~MaritalStatus~PrimaryNationality~CountryOfBirth~CountryOfResidence~SourceOfFunds~FATCRS~ClientConsent</attributeName>
+            <attributeName>EmploymentInformationV2|displaySummary=true~sideStepperDisplayName=Employment details~EmploymentType~Occupation~occupationOtherDescription~EmploymentIndustry~PresentEmployer~WorkContactDetails</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>EmploymentInformationV2|displaySummary=true~sideStepperDisplayName=Employment details~EmploymentType~Occupation~EmploymentIndustry~PresentEmployer~WorkContactDetails</attributeName>
-         </featureAttributes>
+            <attributeName>ComplianceInformationV2|displaySummary=true~sideStepperDisplayName=Compliance information~MaritalStatus~PrimaryNationality~CountryOfBirth~CountryOfResidence~SourceOfFunds~FATCRS~ClientConsent</attributeName>
+         </featureAttributes>         
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>IncomeInformationV2|sideStepperDisplayName=Income details~activityStep=Credit Info~NettSalary~GrossSalary~SalaryAccountDetails</attributeName>
