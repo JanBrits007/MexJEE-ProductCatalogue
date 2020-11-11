@@ -1,5 +1,5 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-   <productIdentifier>6019</productIdentifier>
+   <productIdentifier>1019</productIdentifier>
    <name>Savvy Plus</name>
    <shortDescription>Do your banking for a fixed monthly fee and enjoy the flexibility of adding benefits, such as an overdraft facility and Nedbank Greenbacks Rewards membership, when you need them.</shortDescription>
 
@@ -1220,6 +1220,24 @@
       </featureAttributeGroup>
 
       <!-- Case and Process Configuration -->
+      <featureAttributeGroup>
+         <attributeGroupName>EligibilityRules</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleDCARRanges</attributeName>
+            <value>0-100000|100001-200000</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleSegments</attributeName>
+            <value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleApplicationStatus</attributeName>
+            <value>CANCELLED|INITIATED|DECLINED</value>
+         </featureAttributes>
+      </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>

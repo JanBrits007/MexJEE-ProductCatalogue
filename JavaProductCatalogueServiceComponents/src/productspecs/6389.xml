@@ -1,5 +1,5 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-   <productIdentifier>6389</productIdentifier>
+   <productIdentifier>1389</productIdentifier>
    <name>Nedbank Pay-As-You-Use 6389</name>
    <shortDescription>A no frills, transparent account with a flat monthly fee, pay only for what you use.</shortDescription>
 
@@ -211,7 +211,7 @@
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Terms and Conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
+         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -275,6 +275,24 @@
          <attributeType>AvailableAction</attributeType>
          <attributeName>ElectronicallySign</attributeName>
       </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+     <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+     <productAttributes>
+       <attributeType>string</attributeType>
+       <attributeName>subYourApplicationHeader</attributeName>
+     </productAttributes>
+     <productAttributes>
+       <attributeType>string</attributeType>
+       <attributeName>subNedbankLogo</attributeName>
+     </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+     <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+     <productAttributes>
+       <attributeType>string</attributeType>
+       <attributeName>subTPTermsAndConditions|ContractComponentProductType=1389</attributeName>
+     </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
@@ -390,6 +408,11 @@
        <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
      </productAttributes>
      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent1</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.Intent1CODHandler</value>
+      </productAttributes>
+     <productAttributes>
        <attributeType>string</attributeType>
        <attributeName>CODHandler_CreditLead</attributeName>
        <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditLeadCODHandler</value>
@@ -399,6 +422,21 @@
        <attributeName>CODHandler_CreditOffer</attributeName>
        <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditOfferCODHandler</value>
      </productAttributes>
+     <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_ProductOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.ProductOfferCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent3</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.Intent3CODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanHandler_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
@@ -418,7 +456,7 @@
       <productAttributes>
          <attributeType>boolean</attributeType>
          <attributeName>requiresACPData</attributeName>
-         <value>true</value>
+         <value>false</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -715,6 +753,16 @@
         <attributeType>string</attributeType>
         <attributeName>welcomeDocumentTemplate</attributeName>
         <value>nedbank-commercial-release/CombinedWelcomeLetter</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>welcomeLetterTaxonomy</attributeName>
+        <value>AGREEMENTSDEPOSIT|Welcome Letter|Welcome Letter</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>welcomeDocumentTemplateLocked</attributeName>
+        <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
       </productAttributes>
       <productAttributes>
         <attributeType>flag</attributeType>
@@ -1189,6 +1237,10 @@
             <attributeType>string</attributeType>
             <attributeName>subOverdraftTC|ContractComponentProductType=1014</attributeName>
          </featureAttributes>
+         <featureAttributes>
+           <attributeType>string</attributeType>
+           <attributeName>Taxonomy|ARRANGEMENTS_AGREEMENTS_AGREEMENTSCREDITFACILITY_Agreement Contract</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
@@ -1221,6 +1273,24 @@
       </featureAttributeGroup>
 
       <!-- Case and Process Configuration -->
+      <featureAttributeGroup>
+         <attributeGroupName>EligibilityRules</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleDCARRanges</attributeName>
+            <value>0-100000|100001-200000</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleSegments</attributeName>
+            <value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleApplicationStatus</attributeName>
+            <value>CANCELLED|INITIATED|DECLINED</value>
+         </featureAttributes>
+      </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>
@@ -1328,7 +1398,7 @@
          <featureAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>requiresACPData</attributeName>
-            <value>true</value>
+            <value>false</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>boolean</attributeType>

@@ -1,5 +1,5 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-  <productIdentifier>6474</productIdentifier>
+  <productIdentifier>1474</productIdentifier>
   <name>Unlock.me</name>
   <shortDescription>Perfect for busy students, through free digital banking, this account gives you quick and easy access to cash.</shortDescription>
 
@@ -317,10 +317,10 @@
          <attributeType>EligibilityRule</attributeType>
          <attributeName>Age</attributeName>
          <isComparable>false</isComparable>
-         <minValue>18</minValue>
-         <maxValue>999</maxValue>
+         <minValue>16</minValue>
+         <maxValue>26</maxValue>
          <valueUnit>year</valueUnit>
-         <description>be 18 years or older</description>
+         <description>from 16 to 26 years old.</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
@@ -1220,6 +1220,24 @@
       </featureAttributeGroup>
 
       <!-- Case and Process Configuration -->
+      <featureAttributeGroup>
+         <attributeGroupName>EligibilityRules</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleDCARRanges</attributeName>
+            <value>0-100000|100001-200000</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleSegments</attributeName>
+            <value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleApplicationStatus</attributeName>
+            <value>CANCELLED|INITIATED|DECLINED</value>
+         </featureAttributes>
+      </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>
