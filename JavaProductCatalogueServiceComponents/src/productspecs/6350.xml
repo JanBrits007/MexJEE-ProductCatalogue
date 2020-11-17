@@ -69,7 +69,7 @@
 		 </productAttributes>
 		 <productAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=ng-CreditCard-Offer-Summery~ProceduralStepName=Offer~ZOrder=60</attributeName>
+				<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryCreditCardComponent~ProceduralStepName=Offer~ZOrder=60</attributeName>
 		 </productAttributes>
 	</productAttributeGroup>
 
@@ -307,6 +307,10 @@
 			<attributeType>string</attributeType>
 			<attributeName>subCreditCardTC|ContractComponentProductType=6032</attributeName>
 		</productAttributes>
+		<productAttributes>
+      <attributeType>string</attributeType>
+      <attributeName>Taxonomy|ARRANGEMENTS_AGREEMENTS_AGREEMENTSCREDITCARD_Agreement Contract</attributeName>
+		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		 <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
@@ -423,6 +427,11 @@
 		 <attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
 		 <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
 	 </productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODHandler_Intent4</attributeName>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.cde.Intent4CODHandler</value>
+		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
@@ -674,7 +683,7 @@
 		 <productAttributes>
 					 <attributeType>string</attributeType>
 					 <attributeName>OfferSelectionSummaryDetails</attributeName>
-					 <value>CreditCardOfferSelectionSubSection|ng-component=ng-Credit-Card-Offer-Selection-SubSection~ZOrder=80~ContractComponentProductType=6350</value>
+					 <value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=6350</value>
 		 </productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -745,6 +754,16 @@
 	    <attributeName>welcomeDocumentTemplate</attributeName>
 	    <value>nedbank-commercial-release/CombinedWelcomeLetter</value>
 	  </productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>welcomeLetterTaxonomy</attributeName>
+			<value>AGREEMENTSCREDITCARD|Welcome Letter|Welcome Letter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>welcomeDocumentTemplateLocked</attributeName>
+			<value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<features>

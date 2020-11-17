@@ -44,7 +44,7 @@
       <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryTransactionalProductComponent~ProceduralStepName=Offer~ZOrder=60</attributeName>
+         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryTransactionalProductBundleComponent~ProceduralStepName=Offer~ZOrder=60</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -211,7 +211,7 @@
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Terms and Conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
+         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -276,6 +276,24 @@
          <attributeName>ElectronicallySign</attributeName>
       </productAttributes>
    </productAttributeGroup>
+    <productAttributeGroup>
+      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>subYourApplicationHeader</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>subNedbankLogo</attributeName>
+      </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>subTPTermsAndConditions|ContractComponentProductType=1389</attributeName>
+      </productAttributes>
+    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
       <productAttributes>
@@ -418,7 +436,7 @@
       <productAttributes>
          <attributeType>boolean</attributeType>
          <attributeName>requiresACPData</attributeName>
-         <value>true</value>
+         <value>flase</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -572,7 +590,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>OfferSelectionSummaryDetails</attributeName>
-         <value>TransactionalProductOfferSelectionSubSection|ng-component=ng-Transactional-Product-Offer-Selection-SubSection~ZOrder=100~isBase=Y~ContractComponentProductType=6389</value>
+         <value>TransactionalProductOfferSelectionSubSection|ng-component=OfferSelectionTransactionalProductComponent~ZOrder=100~isBase=Y~ContractComponentProductType=6389</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -717,6 +735,16 @@
         <value>nedbank-commercial-release/CombinedWelcomeLetter</value>
       </productAttributes>
       <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>welcomeLetterTaxonomy</attributeName>
+        <value>AGREEMENTSDEPOSIT|Welcome Letter|Welcome Letter</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>welcomeDocumentTemplateLocked</attributeName>
+        <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
+      </productAttributes>
+      <productAttributes>
         <attributeType>flag</attributeType>
         <attributeName>ProvisioningPhase</attributeName>
         <value>preVerificationProvisioning</value>
@@ -822,6 +850,14 @@
             <attributeType>string</attributeType>
             <attributeName>GNBAIntentToActivityMapping</attributeName>
             <value>VerifyIdentity=Your Product|GenerateOfferVerifyEligibility=Your Product|GenerateOfferGatherProductDetails=Your Product|GenerateOfferGatherClientDetails=Your product|FinancialDetails=Your product|GenerateApplicationOfferProposals=Your product|GenerateOffer=Your product|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>CaseConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>DataMiningHandler</attributeName>
+            <value>classname=za.co.nb.onboarding.product.datamining.handlers.retail.RetailDataMiningHandler</value>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
@@ -1021,7 +1057,7 @@
         </featureAttributes>
         <featureAttributes>
            <attributeType>productInformationRequirement</attributeType>
-           <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=ng-Overdtaft-Offer-Summary~ProceduralStepName=Offer~ZOrder=60</attributeName>
+           <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryOverdraftComponent~ProceduralStepName=Offer~ZOrder=60</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
 
@@ -1188,6 +1224,10 @@
             <attributeType>string</attributeType>
             <attributeName>subOverdraftTC|ContractComponentProductType=1014</attributeName>
          </featureAttributes>
+         <featureAttributes>
+           <attributeType>string</attributeType>
+           <attributeName>Taxonomy|ARRANGEMENTS_AGREEMENTS_AGREEMENTSCREDITFACILITY_Agreement Contract</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
@@ -1345,7 +1385,7 @@
          <featureAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>requiresACPData</attributeName>
-            <value>true</value>
+            <value>false</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>boolean</attributeType>
@@ -1393,7 +1433,7 @@
          <featureAttributes>
            <attributeType>string</attributeType>
            <attributeName>OfferSelectionSummaryDetails</attributeName>
-           <value>OverdraftOfferSelectionSubSection|ng-component=ng-Overdraft-Offer-Selection-SubSection~ZOrder=90~ContractComponentProductType=1014</value>
+           <value>OverdraftOfferSelectionSubSection|ng-component=OfferSelectionOverdraftComponent~ZOrder=90~ContractComponentProductType=1014</value>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -1492,7 +1532,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-MyPocketValueAddedServiceSelector-1402~ProceduralStepName=Offer~ZOrder=70</attributeName>
+          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=MyPocketVASComponent-1402~ProceduralStepName=Offer~ZOrder=70</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
    </features>
@@ -1900,7 +1940,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-eNotesValueAddedServiceSelector-1374~ProceduralStepName=Offer~ZOrder=70</attributeName>
+          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=EnotesVASComponent-1374~ProceduralStepName=Offer~ZOrder=70</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -1985,7 +2025,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-NoFundsAllertValueAddedServiceSelector-1008~ProceduralStepName=Offer~ZOrder=70</attributeName>
+          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=NoFundsAlertVASComponent-1008~ProceduralStepName=Offer~ZOrder=70</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2070,7 +2110,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-GreenbacksValueAddedServiceSelector-1454~ProceduralStepName=Offer~ZOrder=70</attributeName>
+          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GreenbacksVASComponent-1454~ProceduralStepName=Offer~ZOrder=70</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2240,7 +2280,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-FuneralCoverValueAddedServiceSelector-1025~ProceduralStepName=Offer~ZOrder=70</attributeName>
+          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=FuneralCoverVASComponent-1025~ProceduralStepName=Offer~ZOrder=70</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2398,7 +2438,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-DeitOrderSwitchingValueAddedServiceSelector-1380~ProceduralStepName=Offer~ZOrder=70</attributeName>
+          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=DebitOrderSwitchingVASComponent-1380~ProceduralStepName=Offer~ZOrder=70</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2493,7 +2533,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-GoldCHequeCardValueAddedServiceSelector-1386~ProceduralStepName=Offer~ZOrder=70</attributeName>
+          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GoldChequeCardVASComponent-1386~ProceduralStepName=Offer~ZOrder=70</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2627,7 +2667,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-AmExCardValueAddedServiceSelector-1387~ProceduralStepName=Offer~ZOrder=70</attributeName>
+          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=AmexCardVASComponent-1387~ProceduralStepName=Offer~ZOrder=70</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
