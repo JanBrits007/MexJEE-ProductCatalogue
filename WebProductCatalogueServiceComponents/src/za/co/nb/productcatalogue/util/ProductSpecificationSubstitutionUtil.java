@@ -28,7 +28,7 @@ public class ProductSpecificationSubstitutionUtil {
 		} catch (ClassNotFoundException e1) {
 			// There's no rule handler.
             // Now we have to check if there is an environment specific rule handler
-            try {
+            /*try {
                 mLog.debug("Trace 2");
                 String environment = EnvironmentValue.getInstance().getString("ENVIRONMENT");
                 mLog.debug("Trace 2.1 : Environment :"+environment);
@@ -41,10 +41,10 @@ public class ProductSpecificationSubstitutionUtil {
                 // There's no rule handler. So do nothing.
                 mLog.debug("Trace 3");
                 return null;
-            }
+            }*/
             // There's no rule handler. So do nothing.
-            /*mLog.debug("Trace 3");
-            return null;*/
+            mLog.debug("Trace 3");
+            return null;
 
 		} catch (IllegalAccessException e) {
 			// There's no rule handler. So do nothing.
