@@ -12,7 +12,7 @@ import za.co.nb.productcatalogue.exceptions.BusinessRuleExecutionException;
 import za.co.nb.system.config.dao.SystemConfiguratorDAO;
 import za.co.nb.system.config.environment.Environment;
 
-public class RuleHandler1176ETE extends BaseProductSpecificationRuleHandler {
+public class RuleHandler1176 extends BaseProductSpecificationRuleHandler {
 
     private final Log mLog = LogFactory.getLog(getClass());
 
