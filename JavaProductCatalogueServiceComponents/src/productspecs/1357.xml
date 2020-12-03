@@ -14,6 +14,10 @@
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--GenerateOfferVerifyEligibility-->
@@ -161,6 +165,27 @@
          <value>2.0</value>
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanDiscriminator</attributeName>
+         <value>BRAND</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanDiscriminator</attributeName>
+         <value>CLIENT TYPE GROUPING</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
+      <productAttributes>
+      <attributeType>boolean</attributeType>
+      <attributeName>SuppressBundleExplodingOnInitialise</attributeName>
+      <value>true</value>
+   </productAttributes>
+   </productAttributeGroup>
 
    <!--Offer Configuration-->
 
@@ -168,7 +193,7 @@
 
    <features>
       <featureIdentifier>9062</featureIdentifier>
-      <name>Eligible for Transactional Credit</name>
+      <name>Additional Transactional Credit</name>
       <description>Indicates that the client should be offered to take up transactional credit</description>
 
       <!--VerifyIdentity-->
@@ -176,65 +201,70 @@
       <!--GenerateOfferVerifyEligibility-->
 
       <!--GenerateOfferGatherProductDetails-->
-      <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>OfferTransactionalCredit|ng-component=AdditionalTransactionalCreditOffersComponent~ProceduralStepName=Additional Offers~ZOrder=300~FinaliseWorkItemOnPositiveOutcome=true~ContractComponentProductType=9062~ActiveOnInitialWorkItemExecution=true</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
 
       <!--DetermineRelatedParties-->
 
       <!--GenerateOfferGatherClientDetails-->
       <featureAttributeGroup>
-       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
-       <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Application details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
-       </featureAttributes>
-       <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-       </featureAttributes>
-       <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>Offer|ProceduralStepName=Offer~ZOrder=80</attributeName>
-       </featureAttributes>
+         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Application details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>Offer|ProceduralStepName=Offer~ZOrder=80</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
 
       <!--FinancialDetails-->
       <featureAttributeGroup>
-       <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
-       <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
-       </featureAttributes>
-       <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90~FinaliseWorkItemOnPositiveOutcome=true~displaySummary=true~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true</attributeName>
-       </featureAttributes>
-       <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>Offer|ProceduralStepName=Offer~ZOrder=80</attributeName>
-       </featureAttributes>
+         <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90~FinaliseWorkItemOnPositiveOutcome=true~displaySummary=true~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>Offer|ProceduralStepName=Offer~ZOrder=80</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
 
       <!--GenerateApplicationOfferProposals-->
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-           <attributeType>productInformationRequirement</attributeType>
-           <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
 
       <!--GenerateOffer-->

@@ -54,40 +54,48 @@
 
 	<!--GenerateOffer-->
 	<productAttributeGroup>
-		 <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-		 <productAttributes>
-			 <attributeType>clientInformationRequirement</attributeType>
-			 <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-			 <attributeType>clientInformationRequirement</attributeType>
-			 <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryCreditCardComponent~ProceduralStepName=Offer~ZOrder=60</attributeName>
-		 </productAttributes>
+		<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryCreditCardComponent~ProceduralStepName=Offer~ZOrder=60</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--ActivateProductsGatherClientDetails-->
 	<productAttributeGroup>
-		 <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
-		 <productAttributes>
-				<attributeType>clientInformationRequirement</attributeType>
-				<attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Personal information~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>clientInformationRequirement</attributeType>
-				<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance information~ZOrder=90</attributeName>
-		 </productAttributes>
-		 <productAttributes>
-				<attributeType>clientInformationRequirement</attributeType>
-				<attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~child-ng-components=EmployerDetails~ProceduralStepName=Employment details~ZOrder=80</attributeName>
-		 </productAttributes>
+		<attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Personal information~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance information~ZOrder=90</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~child-ng-components=EmployerDetails~ProceduralStepName=Employment details~ZOrder=80</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--ActivateProductsGatherProductDetails-->
@@ -95,7 +103,7 @@
 		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Going digital~ZOrder=160~applicableChannels=BranchStaffAssisted</attributeName>
+			<attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Going digital~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -107,7 +115,7 @@
 		</productAttributes>
 		<productAttributes>
 			 <attributeType>productInformationRequirement</attributeType>
-			 <attributeName>SalesMilestone|ng-component=CmsDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted</attributeName>
+			 <attributeName>SalesMilestone|ng-component=CmsDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -149,7 +157,7 @@
 		 </productAttributes>
 		 <productAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>DigitalActivation|ProceduralStepName=Digital ctivation~ZOrder=80</attributeName>
+				<attributeName>DigitalActivation|ProceduralStepName=Digital activation~ZOrder=80</attributeName>
 		 </productAttributes>
 		 <productAttributes>
 				<attributeType>productInformationRequirement</attributeType>
@@ -170,7 +178,7 @@
 		 </productAttributes>
 		 <productAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>DigitalActivation|ng-component=DigitalActivationComponent~ProceduralStepName=Digital activation~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted</attributeName>
+				<attributeName>DigitalActivation|ng-component=DigitalActivationComponent~ProceduralStepName=Digital activation~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		 </productAttributes>
 		 <productAttributes>
 				<attributeType>productInformationRequirement</attributeType>
@@ -178,7 +186,7 @@
 		 </productAttributes>
 		 <productAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~ZOrder=50</attributeName>
+				<attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=CreditApplicationStatusComponent-1032~child-ng-components=CreditAccountDetails~ZOrder=50</attributeName>
 		 </productAttributes>
 	</productAttributeGroup>
 
@@ -301,11 +309,11 @@
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCard|ContractComponentProductType=6032</attributeName>
+			<attributeName>subCreditCard|ContractComponentProductType=1032</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCardTC|ContractComponentProductType=6032</attributeName>
+			<attributeName>subCreditCardTC|ContractComponentProductType=1032</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -338,7 +346,7 @@
 		 <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
 		 <productAttributes>
 				<attributeType>string</attributeType>
-				<attributeName>subCredit|ContractComponentProductType=6032</attributeName>
+				<attributeName>subCredit|ContractComponentProductType=1032</attributeName>
 		 </productAttributes>
 	</productAttributeGroup>
 
@@ -696,7 +704,7 @@
 		 <productAttributes>
 					 <attributeType>string</attributeType>
 					 <attributeName>OfferSelectionSummaryDetails</attributeName>
-					 <value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=6350</value>
+					 <value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1032</value>
 		 </productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -778,6 +786,21 @@
 			<value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
 		</productAttributes>
 	</productAttributeGroup>
+	<productAttributeGroup>
+		<!-- The _Intent2 is the phase that comes from Prince. In the case of GenerateOfferGatherProductDetails, use VASCrossSellControl_GenerateOfferGatherProductDetails -->
+		<attributeGroupName>VASCrossSellControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1454</attributeName>
+			<value>Optionality=Optional~IsTakenUp=true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1333</attributeName>
+			<value>Optionality=Optional~IsTakenUp=true</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 
 	<features>
 		<featureIdentifier>1028</featureIdentifier>
@@ -885,6 +908,13 @@
 			<featureAttributes>
 				 <attributeType>productInformationRequirement</attributeType>
 				 <attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Delivery of your cards~ZOrder=170~ContractComponentProductType=1028</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-1028~ZOrder=50</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 		<featureAttributeGroup>
@@ -1282,7 +1312,7 @@
 			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
 			<featureAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-CreditCardInsuranceValueAddedServiceSelector-1099~ProceduralStepName=Offer~ZOrder=70</attributeName>
+				<attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=ng-CreditCardInsuranceValueAddedServiceSelector-1099~ProceduralStepName=Offer~ZOrder=70</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 		<featureAttributeGroup>
