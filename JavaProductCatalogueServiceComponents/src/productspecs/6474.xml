@@ -624,7 +624,7 @@
    </productAttributeGroup>
    <productAttributeGroup>
     	<!-- The _Intent2 is the phase that comes from Prince. In the case of GenerateOfferGatherProductDetails, use VASCrossSellControl_GenerateOfferGatherProductDetails -->
-        <attributeGroupName>VASCrossSellControl_Intent2</attributeGroupName>
+        <attributeGroupName>VASCrossSellControl</attributeGroupName>
         <!-- This attribute tells the code which base contract component statuses NOT to cross-sell for. We don't cross-sell VASes on an already open TP -->
         <productAttributes>
             <attributeType>string</attributeType>
@@ -635,7 +635,7 @@
         <productAttributes>
             <attributeType>string</attributeType>
             <attributeName>VAS_1376</attributeName>
-            <value>salarySwitchingCrossSellHandlerClass=SalarySwitchingCrossSellHandler</value>
+            <value>classname=za.co.nb.offermanagement.crosssell.SalarySwitchingCrossSellHandler</value>
         </productAttributes>
         <!-- This is a basic cross-sell definition to say cross sell as optional and not defaulted to taken up -->
         <productAttributes>
