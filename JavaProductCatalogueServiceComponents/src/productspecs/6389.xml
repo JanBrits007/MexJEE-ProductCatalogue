@@ -650,61 +650,32 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-    	<!-- The _Intent2 is the phase that comes from Prince. In the case of GenerateOfferGatherProductDetails, use VASCrossSellControl_GenerateOfferGatherProductDetails -->
-        <attributeGroupName>VASCrossSellControl</attributeGroupName>
-        <!-- This attribute tells the code which base contract component statuses NOT to cross-sell for. We don't cross-sell VASes on an already open TP -->
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>DontCrossSellOnBaseComponentStatuses</attributeName>
-            <value>1012</value>
-        </productAttributes>
-        <!-- Any attribute starting with VAS_ must be cross-sold. In this instance, the logic is complex so we tell the engine to run a specific class method to determine whether the component must be cross-sold -->
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1376</attributeName>
-            <value>classname=za.co.nb.offermanagement.crosssell.SalarySwitchingCrossSellHandler</value>
-        </productAttributes>
-        <!-- This is a basic cross-sell definition to say cross sell as optional and not defaulted to taken up -->
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1380</attributeName>
-            <value>Optionality=Optional~IsTakenUp=false</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1374</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1008</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1454</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1025</attributeName>
-            <value>Optionality=Optional~IsTakenUp=false</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1402</attributeName>
-            <value>Optionality=Optional~IsTakenUp=false</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1387</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_219</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
+      <attributeGroupName>VASCrossSellControl</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>DontCrossSellOnBaseComponentStatuses</attributeName>
+         <value>1012</value><!--Open-->
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1376</attributeName><!--Salary Switching-->
+         <value>classname=za.co.nb.offermanagement.crosssell.SalarySwitchingCrossSellHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1380</attributeName><!--Debit Order Switching-->
+         <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1454</attributeName><!--Greenbacks Rewards-->
+         <value>Optionality=Optional~IsTakenUp=true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1025</attributeName><!--Funeral Cover-->
+         <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Provisioning Configuration-->
@@ -2887,6 +2858,44 @@
             <attributeName>legacyProductID</attributeName>
             <valueUnit>string</valueUnit>
             <value />
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
+   <features>
+      <featureIdentifier>1446</featureIdentifier>
+      <name>Overdrafdt Assurance</name>
+      <mandatory>false</mandatory>
+      <preSelected>true</preSelected>
+      <shortDescription>Life Insurance with credit producct</shortDescription>
+      <description>Detailed description of feature</description>
+      <featureGrouping>
+         <featureGroupName>Insurance</featureGroupName>
+         <featureGroupRuleForProduct>OptionalIfAlternativeSelected</featureGroupRuleForProduct>
+      </featureGrouping>
+      <featureType>BoltOn</featureType>
+      <referenceProductID>-1</referenceProductID>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceVASComponent-1446~ProceduralStepName=Offer~ZOrder=70</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>SystemRelated</attributeGroupName>
+         <featureAttributes>
+            <attributeType>Flag</attributeType>
+            <attributeName>StraightThroughProcess</attributeName>
+            <value>true</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>provisionInBranch</attributeName>
+            <valueUnit>boolean</valueUnit>
+            <value>false</value>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
