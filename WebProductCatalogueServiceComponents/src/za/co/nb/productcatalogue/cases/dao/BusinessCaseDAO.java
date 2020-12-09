@@ -1,7 +1,9 @@
 package za.co.nb.productcatalogue.cases.dao;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.codehaus.jackson.map.DeserializationConfig;
 import org.codehaus.jackson.map.ObjectMapper;
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 
@@ -151,6 +153,7 @@ public class BusinessCaseDAO {
 
 				// Unmarshall the response to the object.
 				ObjectMapper objectMapper = new ObjectMapper();
+				objectMapper.disable(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES);
 				result = objectMapper.readValue(JSON, BusinessCaseHeader.class);
 			}
 			else {
