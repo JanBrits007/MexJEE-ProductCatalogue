@@ -14,6 +14,7 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -41,7 +42,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FeatureAttributeGroupType", propOrder = {
     "attributeGroupName",
-    "featureAttributes"
+    "featureAttributes",
+    "action"
 })
 public class FeatureAttributeGroupType implements Serializable {
 
@@ -55,6 +57,9 @@ public class FeatureAttributeGroupType implements Serializable {
     
     @XmlElement(required = true)
     protected List<FeatureAttributesType> featureAttributes;
+
+    @XmlAttribute
+    protected String action;
 
     /**
      * Gets the value of the attributeGroupName property.
@@ -112,5 +117,12 @@ public class FeatureAttributeGroupType implements Serializable {
     public void setFeatureAttributes(List<FeatureAttributesType> featureAttributes) {
     	this.featureAttributes = featureAttributes;
     }
-    
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
+    }
 }

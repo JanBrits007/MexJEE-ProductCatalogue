@@ -12,6 +12,7 @@ import java.io.Serializable;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -49,7 +50,8 @@ import javax.xml.bind.annotation.XmlType;
     "maxValue",
     "value",
     "valueUnit",
-    "description"
+    "description",
+    "inheritFromFiles"
 })
 public class ProductattributesType implements Serializable {
 
@@ -65,6 +67,8 @@ public class ProductattributesType implements Serializable {
     protected String valueUnit;
     protected String description;
     protected String value;
+    @XmlAttribute
+    protected String inheritFromFiles;
 
     /**
      * Gets the value of the attributeType property.
@@ -256,4 +260,11 @@ public class ProductattributesType implements Serializable {
         this.value = value;
     }
 
+    public String getInheritFromFiles() {
+        return inheritFromFiles;
+    }
+
+    public void setInheritFromFiles(String inheritFromFiles) {
+        this.inheritFromFiles = inheritFromFiles;
+    }
 }

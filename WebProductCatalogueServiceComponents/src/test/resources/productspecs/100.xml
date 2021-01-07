@@ -1,0 +1,65 @@
+<product inheritFromFiles="90" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+    <productIdentifier>100</productIdentifier>
+    <name>Child</name>
+    <shortDescription></shortDescription>
+
+    <!--by default attribute action should be merge-->
+    <!--in addition we can use action="overwrite" -->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>PrepareApplicant|ng-component=GenericProcessStartPageComponent~ZOrder=300~HideProceduralStep=true</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Income details~ZOrder=100</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <!--if you find value then attributeName is your key, if you do not find value then attributeType is your key-->
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
+
+    <productAttributeGroup inheritFromFiles="80">
+        <attributeGroupName>CreditDetails</attributeGroupName>
+    </productAttributeGroup>
+
+    <features>
+        <featureIdentifier>1447</featureIdentifier>
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceVASComponent-1446~ProceduralStepName=Offer~ZOrder=70</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+    </features>
+
+    <features action="overwrite">
+        <featureIdentifier>1446</featureIdentifier>
+        <name>Own Credit Insurance</name>
+        <featureAttributeGroup>
+            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>provisionInBranch</attributeName>
+                <valueUnit>boolean</valueUnit>
+                <value>false</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>legacyProductID</attributeName>
+                <valueUnit>string</valueUnit>
+                <value />
+            </featureAttributes>
+        </featureAttributeGroup>
+    </features>
+
+</product>

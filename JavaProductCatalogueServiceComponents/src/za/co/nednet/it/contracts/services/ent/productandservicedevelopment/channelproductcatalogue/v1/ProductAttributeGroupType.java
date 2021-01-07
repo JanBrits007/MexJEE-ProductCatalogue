@@ -14,6 +14,7 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -41,7 +42,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "productAttributeGroupType", propOrder = {
     "attributeGroupName",
-    "productAttributes"
+    "productAttributes",
+    "action",
+    "inheritFromFiles"
 })
 public class ProductAttributeGroupType implements Serializable {
 
@@ -52,6 +55,10 @@ public class ProductAttributeGroupType implements Serializable {
 	@XmlElement(required = true)
     protected String attributeGroupName;
     protected List<ProductattributesType> productAttributes;
+    @XmlAttribute
+    protected String action;
+    @XmlAttribute
+    protected String inheritFromFiles;
 
     /**
      * Gets the value of the attributeGroupName property.
@@ -106,4 +113,19 @@ public class ProductAttributeGroupType implements Serializable {
         return this.productAttributes;
     }
 
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
+    }
+
+    public String getInheritFromFiles() {
+        return inheritFromFiles;
+    }
+
+    public void setInheritFromFiles(String inheritFromFiles) {
+        this.inheritFromFiles = inheritFromFiles;
+    }
 }
