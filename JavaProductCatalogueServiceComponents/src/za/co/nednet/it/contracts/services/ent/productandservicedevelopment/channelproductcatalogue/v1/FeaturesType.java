@@ -14,6 +14,7 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -66,7 +67,9 @@ import javax.xml.bind.annotation.XmlType;
     "featureDisplayAdditionalInformationWidget",
     "featureOnAPageWebURL",
     "featureDisplayPosition",
-    "featureAttributeGroup"
+    "featureAttributeGroup",
+    "action",
+    "inheritFromFiles"
 })
 public class FeaturesType implements Serializable {
 
@@ -89,6 +92,10 @@ public class FeaturesType implements Serializable {
     protected String featureOnAPageWebURL;
     protected String featureDisplayPosition;
     protected List<FeatureAttributeGroupType> featureAttributeGroup;
+    @XmlAttribute
+    protected String action;
+    @XmlAttribute
+    protected String inheritFromFiles;
 
     /**
      * Gets the value of the featureIdentifier property.
@@ -465,4 +472,19 @@ public class FeaturesType implements Serializable {
         return this.featureAttributeGroup;
     }
 
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
+    }
+
+    public String getInheritFromFiles() {
+        return inheritFromFiles;
+    }
+
+    public void setInheritFromFiles(String inheritFromFiles) {
+        this.inheritFromFiles = inheritFromFiles;
+    }
 }
