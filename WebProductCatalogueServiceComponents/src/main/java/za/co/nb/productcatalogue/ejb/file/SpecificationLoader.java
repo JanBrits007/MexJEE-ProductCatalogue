@@ -1,6 +1,7 @@
 package za.co.nb.productcatalogue.ejb.file;
 
 import za.co.nb.productcatalogue.ejb.ProductTypeJaxbContext;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.FeatureAttributeGroupType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.FeaturesType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductAttributeGroupType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
@@ -45,10 +46,13 @@ public class SpecificationLoader {
                 throw new RuntimeException("productTpe.inheritanceFromFiles property cannot be empty");
 
         ProductType parent = load(child.getInheritFromFiles());
+
         insertProductAttributeGroup(child, parent);
         insertInheritedProductAttributeGroup(child);
 
         insertFeature(child, parent);
+        insertInheritedFeature(child);
+        insertInheritedFeatureAttribGroup(child);
     }
 
     private void insertInheritedProductAttributeGroup(ProductType child) {
@@ -65,17 +69,65 @@ public class SpecificationLoader {
                 }
 
             }
+        }
+    }
 
-            /*
-            for(ProductattributesType productAttribute :productAttributeGroup.getProductAttributes()){
-                if(productAttribute.getInheritFromFiles() != null){
-                    ProductType productType = loadFile(productAttribute.getInheritFromFiles());
+
+    private void insertInheritedFeature(ProductType child) {
+
+        for(FeaturesType featuresType :child.getFeatures()){
+
+            if(featuresType.getInheritFromFiles() != null){
+                ProductType parent = loadFile(featuresType.getInheritFromFiles());
+                for(FeaturesType parentFeature :parent.getFeatures()){
+                    if(featuresType.getFeatureIdentifier().toString().equals(parentFeature.getFeatureIdentifier().toString())){
+                        featuresType.getFeatureAttributeGroup().addAll(parentFeature.getFeatureAttributeGroup());
+                        featuresType.getFeatureFulfilment().addAll(parentFeature.getFeatureFulfilment());
+                        featuresType.getFeatureGrouping().addAll(parentFeature.getFeatureGrouping());
+                        break;
+                    }
                 }
 
-            }*/
+            }
+        }
+    }
+
+
+    private void insertInheritedFeatureAttribGroup(ProductType child) {
+
+        for(FeaturesType featuresType :child.getFeatures()){
+
+            List<FeatureAttributeGroupType> tempFeatureAttributeGroups = new ArrayList<>(featuresType.getFeatureAttributeGroup());
+            for(FeatureAttributeGroupType featureAttributeGroupType : tempFeatureAttributeGroups){
+
+                if(featureAttributeGroupType.getInheritFromFiles() != null){
+
+                    if(featureAttributeGroupType.getAction() != null)
+                        throw new RuntimeException("Both InheritFromFiles and Action cannot be populated, FeatureAttributeGroupType:"+featureAttributeGroupType.getAttributeGroupName());
+
+                    ProductType parent = loadFile(featureAttributeGroupType.getInheritFromFiles());
+
+                    for(FeaturesType parentFeature :parent.getFeatures()){
+                        if(featuresType.getFeatureIdentifier().toString().equals(parentFeature.getFeatureIdentifier().toString())){
+
+                            List<FeatureAttributeGroupType> tempParentFeatureAttributeGroups = new ArrayList<>(parentFeature.getFeatureAttributeGroup());
+                            for(FeatureAttributeGroupType parentFeatureAttributeGroupType : tempParentFeatureAttributeGroups){
+
+                                if(parentFeatureAttributeGroupType.getAttributeGroupName().equals(featureAttributeGroupType.getAttributeGroupName())){
+                                    featuresType.getFeatureAttributeGroup().remove(featureAttributeGroupType);
+                                    featuresType.getFeatureAttributeGroup().add(parentFeatureAttributeGroupType);
+                                    parentFeature.getFeatureAttributeGroup().remove(parentFeatureAttributeGroupType);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
         }
     }
+
 
 
     private void insertProductAttributeGroup(ProductType child, ProductType parent){
@@ -89,16 +141,10 @@ public class SpecificationLoader {
             for(ProductAttributeGroupType productAttributeGroupParent :tempParentProductAttributeGroup) {
 
                 if (!productAttributeGroupIndex.contains(productAttributeGroupParent.getAttributeGroupName()))
-                    addProductAttribGroup(child, parent, productAttributeGroupParent);
+                    addProductAttribGroup(child, parent, null, productAttributeGroupParent);
                 else
-                    if(productAttributeGroupParent.getAttributeGroupName().equals(productAttributeGroup.getAttributeGroupName()))
-                        if(productAttributeGroup.getAction() != null){
-                            if(productAttributeGroup.getInheritFromFiles() != null)
-                                throw new RuntimeException("Both ACTION and INHERIT_FROM_FILES cannot be populated");
+                    addProductAttribGroup(child, parent, productAttributeGroup, productAttributeGroupParent);
 
-                            if(! (productAttributeGroup.getAction().equals("overwrite") || productAttributeGroup.getAction().equals("override"))  )
-                                addProductAttribGroup(child, parent, productAttributeGroupParent);
-                        }
             }
         }
 
@@ -114,22 +160,33 @@ public class SpecificationLoader {
             for(FeaturesType featureTypeParent :tempParentFeaturesTypes) {
 
                 if (!featureIndex.contains(featureTypeParent.getFeatureIdentifier().toString()))
-                    addFeature(child, parent, featureTypeParent);
+                    addFeature(child, parent, null, featureTypeParent);
                 else
-                    if(featureTypeParent.getFeatureIdentifier().toString().equals(featuresType.getFeatureIdentifier().toString()))
-                        if(featuresType.getAction() != null){
+                    addFeature(child, parent,featuresType, featureTypeParent);
 
-                            if(featuresType.getInheritFromFiles() != null)
-                                throw new RuntimeException("Both ACTION and INHERIT_FROM_FILES cannot be populated");
-
-                            if( !(featuresType.getAction().equals("overwrite")|| featuresType.getAction().equals("override")) )
-                                addFeature(child, parent, featureTypeParent);
-                        }
             }
         }
     }
 
-    private void addProductAttribGroup(ProductType child, ProductType parent, ProductAttributeGroupType productAttributeGroupParent) {
+    private void addProductAttribGroup(ProductType child, ProductType parent, ProductAttributeGroupType productAttributeGroup, ProductAttributeGroupType productAttributeGroupParent) {
+
+        if(productAttributeGroup == null){
+            addToChildProductAttrib(child, parent, productAttributeGroupParent);
+        }else if(productAttributeGroupParent.getAttributeGroupName().equals(productAttributeGroup.getAttributeGroupName()))
+           if (productAttributeGroup.getAction() == null && productAttributeGroup.getInheritFromFiles() == null){
+               ProductAttributeGroupType productAttributeGroupType = child.getProductAttributeGroup().get(child.getProductAttributeGroup().indexOf(productAttributeGroup));
+               productAttributeGroupType.getProductAttributes().addAll(productAttributeGroupParent.getProductAttributes());
+           }else if (productAttributeGroup.getAction() != null){
+                   if (productAttributeGroup.getInheritFromFiles() != null)
+                       throw new RuntimeException("Both InheritFromFiles and Action cannot be populated, ProductAttributeGroup:"+productAttributeGroup.getAttributeGroupName());
+
+                   if (!(productAttributeGroup.getAction().equals("overwrite") || productAttributeGroup.getAction().equals("override"))) {
+                       addToChildProductAttrib(child, parent, productAttributeGroupParent);
+                   }
+           }
+    }
+
+    private void addToChildProductAttrib(ProductType child, ProductType parent, ProductAttributeGroupType productAttributeGroupParent) {
         child.getProductAttributeGroup().add(productAttributeGroupParent);
         parent.getProductAttributeGroup().remove(productAttributeGroupParent);
     }
@@ -150,13 +207,48 @@ public class SpecificationLoader {
         return index;
     }
 
-    private void addFeature(ProductType child, ProductType parent, FeaturesType featureTypeParent) {
+    private void addFeature(ProductType child, ProductType parent, FeaturesType featuresType, FeaturesType featureTypeParent) {
+
+        if(featuresType == null){
+            addToChildFeature(child, parent, featureTypeParent);
+        }else if(featureTypeParent.getFeatureIdentifier().toString().equals(featuresType.getFeatureIdentifier().toString()))
+            if(featuresType.getAction() == null && featuresType.getInheritFromFiles() == null) {
+                FeaturesType feature = child.getFeatures().get(child.getFeatures().indexOf(featuresType));
+
+                feature.getFeatureGrouping().addAll(featureTypeParent.getFeatureGrouping());
+                feature.getFeatureFulfilment().addAll(featureTypeParent.getFeatureFulfilment());
+                addFeatureAttributeGroup(featureTypeParent, feature);
+
+
+            }else if(featuresType.getAction() != null) {
+
+                if (featuresType.getInheritFromFiles() != null)
+                    throw new RuntimeException("Both InheritFromFiles and Action cannot be populated, FeaturesType:"+featuresType.getFeatureIdentifier());
+
+                if (!(featuresType.getAction().equals("overwrite") || featuresType.getAction().equals("override"))) {
+                    addToChildFeature(child, parent, featureTypeParent);
+                }
+            }
+
+    }
+
+    private void addFeatureAttributeGroup(FeaturesType featureTypeParent, FeaturesType feature) {
+        for(FeatureAttributeGroupType featureAttributeGroupType : feature.getFeatureAttributeGroup()){
+
+            List<FeatureAttributeGroupType> tempFeatureAttributeGroupTypes = new ArrayList<>(featureTypeParent.getFeatureAttributeGroup());
+                for(FeatureAttributeGroupType parentFeatureAttributeGroupType  :tempFeatureAttributeGroupTypes)
+                    if(featureAttributeGroupType.getAttributeGroupName().equals(parentFeatureAttributeGroupType.getAttributeGroupName()))
+                        if(featureAttributeGroupType.getAction() != null && (featureAttributeGroupType.getAction().equals("overwrite") || featureAttributeGroupType.getAction().equals("override")))
+                            featureTypeParent.getFeatureAttributeGroup().remove(parentFeatureAttributeGroupType);
+
+        }
+        feature.getFeatureAttributeGroup().addAll(featureTypeParent.getFeatureAttributeGroup());
+    }
+
+    private void addToChildFeature(ProductType child, ProductType parent, FeaturesType featureTypeParent) {
         child.getFeatures().add(featureTypeParent);
         parent.getFeatures().remove(featureTypeParent);
     }
-
-
-
 
 
 }

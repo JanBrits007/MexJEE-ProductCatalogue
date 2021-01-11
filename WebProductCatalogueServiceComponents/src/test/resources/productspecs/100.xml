@@ -31,6 +31,16 @@
         <attributeGroupName>CreditDetails</attributeGroupName>
     </productAttributeGroup>
 
+
+    <productAttributeGroup>
+        <attributeGroupName>PresentOfferSelection</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>OfferSelectionSummaryDetails</attributeName>
+            <value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1350</value>
+        </productAttributes>
+    </productAttributeGroup>
+
     <features>
         <featureIdentifier>1447</featureIdentifier>
         <featureAttributeGroup>
@@ -59,6 +69,40 @@
                 <valueUnit>string</valueUnit>
                 <value />
             </featureAttributes>
+        </featureAttributeGroup>
+    </features>
+
+
+    <features inheritFromFiles="80">
+        <featureIdentifier>9062</featureIdentifier>
+        <name>Additional Transactional Credit</name>
+        <description>Indicates that the client should be offered to take up transactional credit</description>
+    </features>
+
+    <features>
+        <featureIdentifier>9063</featureIdentifier>
+        <name>Eligible for Consolidation Credit</name>
+        <description>Indicates that the client should be offered to take up consolidation credit.</description>
+    </features>
+
+
+
+    <features>
+        <featureIdentifier>1333</featureIdentifier>
+        <name>Nedbank Greenbacks Shop Card</name>
+        <mandatory>false</mandatory>
+        <preSelected>true</preSelected>
+        <shortDescription>SHOP card</shortDescription>
+        <description>Great news! We've made it quick and easy to redeem all the Greenbacks you've earned with your very own SHOP card</description>
+        <featureAttributeGroup action="overwrite">
+            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-NedbankGreenbacksShopCardValueAddedServiceSelector-1333~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup inheritFromFiles="80">
+            <attributeGroupName>SystemRelated</attributeGroupName>
         </featureAttributeGroup>
     </features>
 

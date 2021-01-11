@@ -43,7 +43,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "FeatureAttributeGroupType", propOrder = {
     "attributeGroupName",
     "featureAttributes",
-    "action"
+    "action",
+    "inheritFromFiles"
 })
 public class FeatureAttributeGroupType implements Serializable {
 
@@ -60,6 +61,9 @@ public class FeatureAttributeGroupType implements Serializable {
 
     @XmlAttribute
     protected String action;
+
+    @XmlAttribute
+    protected String inheritFromFiles;
 
     /**
      * Gets the value of the attributeGroupName property.
@@ -124,5 +128,13 @@ public class FeatureAttributeGroupType implements Serializable {
 
     public void setAction(String action) {
         this.action = action;
+    }
+
+    public String getInheritFromFiles() {
+        return inheritFromFiles;
+    }
+
+    public void setInheritFromFiles(String inheritFromFiles) {
+        this.inheritFromFiles = inheritFromFiles;
     }
 }

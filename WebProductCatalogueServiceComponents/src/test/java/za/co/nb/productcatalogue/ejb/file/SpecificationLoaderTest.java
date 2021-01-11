@@ -3,39 +3,75 @@ package za.co.nb.productcatalogue.ejb.file;
 
 import org.junit.Assert;
 import org.junit.Test;
+import za.co.nb.productcatalogue.ejb.ProductTypeJaxbContext;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
+
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import java.io.StringWriter;
 
 public class SpecificationLoaderTest {
 
     @Test
-    public void inheritanceTest() {
+    public void inheritanceTest() throws JAXBException {
         SpecificationLoader specificationLoader = new SpecificationLoader();
         ProductType productType = specificationLoader.load("100");
 
         Assert.assertNotNull("productType - Object expected", productType);
-
-        Assert.assertEquals("2 productAttribGroup expected", productType.getProductAttributeGroup().size(), 2);
+        Assert.assertEquals("4 productAttribGroup expected",  4, productType.getProductAttributeGroup().size());
 
         //overwriteProductAttrib
-        Assert.assertEquals("productAttribGroup - overwrite expected", productType.getProductAttributeGroup().get(0).getAction(), "overwrite");
-        Assert.assertEquals("productAttribGroup - clientInformationRequirement_VerifyIdentity expected", productType.getProductAttributeGroup().get(0).getAttributeGroupName(), "clientInformationRequirement_VerifyIdentity");
-        Assert.assertEquals("productAttribGroup - overwrite 4 - items expected", productType.getProductAttributeGroup().get(0).getProductAttributes().size(), 4);
+        Assert.assertEquals("productAttribGroup - overwrite expected",  "overwrite", productType.getProductAttributeGroup().get(0).getAction());
+        Assert.assertEquals("productAttribGroup - clientInformationRequirement_VerifyIdentity expected" ,"clientInformationRequirement_VerifyIdentity", productType.getProductAttributeGroup().get(0).getAttributeGroupName());
+        Assert.assertEquals("productAttribGroup - overwrite 4 - items expected", 4, productType.getProductAttributeGroup().get(0).getProductAttributes().size());
+
+
+        Assert.assertEquals("productAttribGroup - inherit - DEFAULT - PresentOfferSelection expected", "PresentOfferSelection", productType.getProductAttributeGroup().get(2).getAttributeGroupName());
+        Assert.assertEquals("productAttribGroup - inherit - DEFAULT - PresentOfferSelection - 2 - items expected", 2, productType.getProductAttributeGroup().get(2).getProductAttributes().size());
+
 
         //inheritProductAttrib
-        Assert.assertEquals("productAttribGroup - inherit - productInformationRequirement_PresentOffer expected", productType.getProductAttributeGroup().get(1).getAttributeGroupName(), "productInformationRequirement_PresentOffer");
-        Assert.assertEquals("productAttribGroup - inherit - 2 - items expected", productType.getProductAttributeGroup().get(1).getProductAttributes().size(), 2);
-        Assert.assertEquals("3 features expected", productType.getFeatures().size(), 3);
+        Assert.assertEquals("productAttribGroup - inherit - productInformationRequirement_PresentOffer expected", "productInformationRequirement_PresentOffer", productType.getProductAttributeGroup().get(3).getAttributeGroupName());
+        Assert.assertEquals("productAttribGroup - inherit - 2 - items expected", 2, productType.getProductAttributeGroup().get(3).getProductAttributes().size());
+        Assert.assertEquals("5 features expected", 6, productType.getFeatures().size());
+
+        Assert.assertEquals("productAttribGroup - inherit - CreditDetails - expected", "CreditDetails", productType.getProductAttributeGroup().get(1).getAttributeGroupName());
+        Assert.assertEquals("productAttribGroup - inherit - CreditDetails - 2 - items expected", 2, productType.getProductAttributeGroup().get(1).getProductAttributes().size());
 
         //overwriteFeature
-        Assert.assertEquals("feature (1446) - overwrite expected", productType.getFeatures().get(1).getAction(), "overwrite");
-        Assert.assertEquals("feature (1446) - overwrite - identifier 1446 expected", (long) productType.getFeatures().get(1).getFeatureIdentifier(), 1446);
-        Assert.assertEquals("feature (1446) - Own Credit Insurance expected", productType.getFeatures().get(1).getName(), "Own Credit Insurance");
-        Assert.assertEquals("feature (1446) - overwrite - 1 item expected", productType.getFeatures().get(1).getFeatureAttributeGroup().size(), 1);
+        Assert.assertEquals("feature (1446) - overwrite expected", "overwrite", productType.getFeatures().get(1).getAction());
+        Assert.assertEquals("feature (1446) - overwrite - identifier 1446 expected", 1446, (long) productType.getFeatures().get(1).getFeatureIdentifier());
+        Assert.assertEquals("feature (1446) - Own Credit Insurance expected", "Own Credit Insurance", productType.getFeatures().get(1).getName());
+        Assert.assertEquals("feature (1446) - overwrite - 1 item expected", 1, productType.getFeatures().get(1).getFeatureAttributeGroup().size());
 
         //inheritFeature
-        Assert.assertEquals("feature (1445) - inherit - feature expected", (long) productType.getFeatures().get(2).getFeatureIdentifier(), 1445);
-        Assert.assertEquals("feature (1445) - inherit - 1 item expected", productType.getFeatures().get(2).getFeatureAttributeGroup().size(), 1);
+        Assert.assertEquals("feature (1333) - inherit - feature expected", 1333, (long) productType.getFeatures().get(4).getFeatureIdentifier());
+        Assert.assertEquals("feature (1333) - inherit - 2 item expected", 2, productType.getFeatures().get(4).getFeatureAttributeGroup().size());
+        Assert.assertEquals("feature (1333) - overwrite - featureAttributeGroup - productInformationRequirement_PresentOffer expected", "productInformationRequirement_PresentOffer", productType.getFeatures().get(4).getFeatureAttributeGroup().get(0).getAttributeGroupName());
+        Assert.assertEquals("feature (1333) - overwrite - featureAttributeGroup - productInformationRequirement_PresentOffer - 1 item expected", 1, productType.getFeatures().get(4).getFeatureAttributeGroup().get(0).getFeatureAttributes().size());
+        Assert.assertTrue("feature (1333) - overwrite - featureAttributeGroup - productInformationRequirement_PresentOffer - ValueAddedServiceConfiguration expected", productType.getFeatures().get(4).getFeatureAttributeGroup().get(0).getFeatureAttributes().get(0).getAttributeName().contains("ValueAddedServiceConfiguration"));
 
+        Assert.assertEquals("feature (1333) - inherit - featureAttributeGroup - SystemRelated expected", "SystemRelated", productType.getFeatures().get(4).getFeatureAttributeGroup().get(1).getAttributeGroupName());
+        Assert.assertEquals("feature (1333) - inherit - featureAttributeGroup - SystemRelated - 1 item expected", 1, productType.getFeatures().get(4).getFeatureAttributeGroup().get(1).getFeatureAttributes().size());
+        Assert.assertTrue("feature (1333) - inherit - featureAttributeGroup - SystemRelated - StraightThroughProcess expected", productType.getFeatures().get(4).getFeatureAttributeGroup().get(1).getFeatureAttributes().get(0).getAttributeName().contains("StraightThroughProcess"));
+
+
+
+        Assert.assertEquals("feature (1445) - inherit - feature expected", 1445, (long) productType.getFeatures().get(5).getFeatureIdentifier());
+        Assert.assertEquals("feature (1445) - inherit - 1 item expected", 1, productType.getFeatures().get(5).getFeatureAttributeGroup().size());
+
+        Assert.assertEquals("feature (9063) - inherit - DEFAULT - feature expected", 9063, (long) productType.getFeatures().get(3).getFeatureIdentifier());
+        Assert.assertEquals("feature (9063) - inherit - DEFAULT - 1 item expected", 1, productType.getFeatures().get(3).getFeatureAttributeGroup().size());
+
+        Assert.assertEquals("feature (9062) - inherit - feature expected", 9062, (long) productType.getFeatures().get(2).getFeatureIdentifier());
+        Assert.assertEquals("feature (9062) - inherit - 6 item expected", 6, productType.getFeatures().get(2).getFeatureAttributeGroup().size());
+
+        Marshaller marshaller = ProductTypeJaxbContext.getJAXBContext().createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        StringWriter sw = new StringWriter();
+        marshaller.marshal(productType, sw);
+
+        System.out.println(sw.toString());
     }
 
 
