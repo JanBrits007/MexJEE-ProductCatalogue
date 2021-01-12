@@ -318,6 +318,11 @@
          	<attributeName>DEAStatementBUID_PROD</attributeName>
          	<value>4ec5bd70-2670-49ba-a139-15eb30c8e79a</value>
         </productAttributes>
+        <productAttributes>
+         	<attributeType>string</attributeType>
+         	<attributeName>ArrangementMandatoryAPO</attributeName>
+         	<value>T2|T3</value>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
@@ -442,7 +447,7 @@
 		</productAttributes>
         <productAttributes>
 			<attributeType>boolean</attributeType>
-			<attributeName>ArrangementMandatoryAPOCheck=T1~T2~T3</attributeName>
+			<attributeName>ArrangementMandatoryAPOCheck</attributeName>
 			<value>true</value>
 		</productAttributes>
 	</productAttributeGroup>
@@ -450,8 +455,8 @@
 		<attributeGroupName>ArrangementConfiguration</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>RequiredDataFilter_ActivateProductsGatherProductDetails</attributeName>
-			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementMandatoryAPOCheck</value>
+			<attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementMandatoryAPOFilter</value>
 		</productAttributes>
     </productAttributeGroup>
     <features>
