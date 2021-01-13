@@ -203,7 +203,7 @@
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Compliance</attributeType>
-         <attributeName>NotUnderCreditAdministrationV2</attributeName>
+         <attributeName>PersonalInformationProcessingConsent</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -227,11 +227,11 @@
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Terms and Conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
+         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
-         <attributeName>Download</attributeName>
+         <attributeName>CombinedDownload</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -273,7 +273,7 @@
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Client FAIS Record of Advice|nedbank-commercial-release/FAISRecordOfAdviceStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+         <attributeName>Client FAIS Record of Advice|nedbank-commercial-release/CombinedFAISUniversal|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -323,6 +323,35 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subProfPAYU|ContractComponentProductType=1019</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISUniversal</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subYourApplicationHeader</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subNedbankLogo</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISUniversal</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subGenericDetails</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subGenericSignatures</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISUniversal</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1019</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -2188,7 +2217,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GreenbacksVASComponent-1454~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GreenbacksComponent-1454~ProceduralStepName=Your offer~ZOrder=70</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2358,7 +2387,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=FuneralCoverVASComponent-1025~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+          <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=NedbankInsuranceFuneralPlanComponent-1025~ProceduralStepName=Your offer~ZOrder=65</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2438,7 +2467,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-SalarySwitchingValueAddedServiceSelector-1376~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-SalarySwitchingComponent-1376~ProceduralStepName=Your offer~ZOrder=70</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2530,7 +2559,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=DebitOrderSwitchingVASComponent-1380~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=DebitOrderSwitchingComponent-1380~ProceduralStepName=Your offer~ZOrder=70</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2901,7 +2930,7 @@
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceVASComponent-1446~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceComponent-1446~ProceduralStepName=Your offer~ZOrder=65</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>

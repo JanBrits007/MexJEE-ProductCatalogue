@@ -14,6 +14,7 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -55,7 +56,8 @@ import javax.xml.bind.annotation.XmlType;
     "salesHighlights",
     "productOnAPageWebURL",
     "productAttributeGroup",
-    "features"
+    "features",
+    "inheritFromFiles"
 })
 @XmlRootElement(name="product")
 public class ProductType implements Serializable {
@@ -71,6 +73,8 @@ public class ProductType implements Serializable {
     protected String productOnAPageWebURL;
     protected List<ProductAttributeGroupType> productAttributeGroup;
     protected List<FeaturesType> features;
+    @XmlAttribute
+    protected String inheritFromFiles;
 
     /**
      * Gets the value of the productIdentifier property.
@@ -307,4 +311,11 @@ public class ProductType implements Serializable {
     	this.features = features;
     }
 
+    public String getInheritFromFiles() {
+        return inheritFromFiles;
+    }
+
+    public void setInheritFromFiles(String inheritFromFiles) {
+        this.inheritFromFiles = inheritFromFiles;
+    }
 }
