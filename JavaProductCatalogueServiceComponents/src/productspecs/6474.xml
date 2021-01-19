@@ -224,7 +224,7 @@
 
    <!--Document Configuration-->
    <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
          <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
@@ -247,10 +247,10 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Transactional Account Application Form|nedbank-commercial-release/AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+         <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -270,7 +270,7 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
          <attributeName>Client FAIS Record of Advice|nedbank-commercial-release/CombinedFAISUniversal|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
@@ -352,6 +352,35 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1474</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subYourApplicationHeader</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subNedbankLogo</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subGenericDetails</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subGenericSignatures</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subTP|ContractComponentProductType=1474</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -1204,7 +1233,7 @@
 
       <!--Document Configuration-->
       <featureAttributeGroup>
-         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+         <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
          <featureAttributes>
             <attributeType>DocumentDescription</attributeType>
             <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
@@ -1231,10 +1260,10 @@
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
-         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+         <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
          <featureAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Overdraft Application Form|nedbank-commercial-release/AppFormODStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+            <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -1326,6 +1355,35 @@
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subNedbankLogo</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericInfo</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericSignatures</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
@@ -2506,7 +2564,7 @@
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
-         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+         <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
          <featureAttributes>
             <attributeType>DocumentDescription</attributeType>
             <attributeName>Salary Switching Letter|nedbank-commercial-release/SalarySwitchingUniversal|N/A|N/A|N/A|N/A</attributeName>
