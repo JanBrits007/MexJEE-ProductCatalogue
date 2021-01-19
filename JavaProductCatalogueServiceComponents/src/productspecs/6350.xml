@@ -268,6 +268,29 @@
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
+		<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+		<productAttributes>
+			<attributeType>DocumentDescription</attributeType>
+			<attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Download</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Email</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>WetSign</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>ElectronicallySign</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
 		<attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -348,6 +371,35 @@
 				<attributeType>string</attributeType>
 				<attributeName>subCredit|ContractComponentProductType=1350</attributeName>
 		 </productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subYourApplicationHeader</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subNedbankLogo</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericDetails</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericSignatures</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCard|ContractComponentProductType=1350</attributeName>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Case and Process Configuration-->
@@ -1350,6 +1402,8 @@
 	<features>
 		<featureIdentifier>1099</featureIdentifier>
 		<name>Credit card insurance</name>
+
+		<!--GenerateOffer-->
 		<featureAttributeGroup>
 			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
 			<featureAttributes>
@@ -1357,21 +1411,8 @@
 				<attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=ng-CreditCardInsuranceComponent-1099~ProceduralStepName=Your offer~ZOrder=65</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
-		<featureAttributeGroup>
-			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
-			<featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>provisionInBranch</attributeName>
-				<valueUnit>boolean</valueUnit>
-				<value>false</value>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>legacyProductID</attributeName>
-				<valueUnit>string</valueUnit>
-				<value />
-			</featureAttributes>
-		</featureAttributeGroup>
+
+		<!--Document Configuration-->
 		<featureAttributeGroup>
 			<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
 			<featureAttributes>
@@ -1397,6 +1438,29 @@
 			<featureAttributes>
 				<attributeType>DocTemplateName</attributeType>
 				<attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+			<featureAttributes>
+				<attributeType>DocumentDescription</attributeType>
+				<attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>Download</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>Email</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>WetSign</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>ElectronicallySign</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 		<featureAttributeGroup>
@@ -1441,7 +1505,38 @@
 			</featureAttributes>
 		</featureAttributeGroup>
 		<featureAttributeGroup>
-		    <attributeGroupName>EligibilityRules</attributeGroupName>
+			<attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subYourApplicationHeader</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subNedbankLogo</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subGenericInfo</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subGenericSignatures</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subCreditLifeInsurance|ContractComponentProductType=1099</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+
+		<!--Case and Process Configuration-->
+		<featureAttributeGroup>
+			<attributeGroupName>EligibilityRules</attributeGroupName>
 			<featureAttributes>
 				<attributeType>EligibilityRule</attributeType>
 				<attributeName>Age</attributeName>
@@ -1450,5 +1545,23 @@
 				<valueUnit>year</valueUnit>
 			</featureAttributes>
 		</featureAttributeGroup>
+
+		<!--Provisioning Configuration-->
+		<featureAttributeGroup>
+			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>provisionInBranch</attributeName>
+				<valueUnit>boolean</valueUnit>
+				<value>false</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>legacyProductID</attributeName>
+				<valueUnit>string</valueUnit>
+				<value />
+			</featureAttributes>
+		</featureAttributeGroup>
+
 	</features>
 </product>
