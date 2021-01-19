@@ -11,7 +11,9 @@ import za.co.nb.productcatalogue.ejb.substitution.Banker;
 import za.co.nb.productcatalogue.ejb.substitution.Channel;
 import za.co.nb.productcatalogue.ejb.substitution.Subnet;
 import za.co.nb.productcatalogue.ejb.substitution.Substitution;
+import za.co.nb.productcatalogue.exception.InvalidAttributeException;
 import za.co.nb.productcatalogue.util.ProductSpecificationSubstitutionUtil;
+import za.co.nb.productcatalogue.util.ProductSpecificationUtil;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.MaintainCatalogueRequestType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductAttributeGroupType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
@@ -74,6 +76,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     
     public ProductType getProductSpecificationByIDAndArrangementID(String productSpecificationID, String arrangementID) throws Exception {
         mLog.debug("Trace 1 >>" + productSpecificationID + "<<,>>" + arrangementID + "<<");
+
 
         // First check whether there are business rules that need to be run to switch out the product ID to a specific on.
         ProductSpecificationSubstitutionUtil util = new ProductSpecificationSubstitutionUtil();
@@ -504,6 +507,20 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public  String crossSellProductSubstitution(ProductType productSpec, String initiatingStaffNBNumber, String environment) throws InvalidAttributeException {
+
+        ProductSpecificationUtil specUtil = new ProductSpecificationUtil();
+        String substituteForWhiteListedNBNumbers = specUtil.getProductAttributeValue(productSpec, "OfferCrossSellSubstitutionRules" + environment, "SubstituteForWhiteListedNBNumbers");
+        if(initiatingStaffNBNumber != null && substituteForWhiteListedNBNumbers.toLowerCase().contains(initiatingStaffNBNumber.toLowerCase())){
+            String substituteForProductID = specUtil.getProductAttributeValue(productSpec, "OfferCrossSellSubstitutionRules" + environment, "SubstituteForProductID");
+            mLog.debug("Found substituteForProductID:"+substituteForProductID);
+            return substituteForProductID;
+
+        }
+
+        return null;
     }
 
 }
