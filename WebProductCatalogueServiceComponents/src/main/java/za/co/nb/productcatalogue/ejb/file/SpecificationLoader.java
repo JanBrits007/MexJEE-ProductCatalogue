@@ -105,29 +105,32 @@ public class SpecificationLoader {
                     if(featureAttributeGroupType.getAction() != null)
                         throw new RuntimeException("Both InheritFromFiles and Action cannot be populated, FeatureAttributeGroupType:"+featureAttributeGroupType.getAttributeGroupName());
 
-                    ProductType parent = loadFile(featureAttributeGroupType.getInheritFromFiles());
-
-                    for(FeaturesType parentFeature :parent.getFeatures()){
-                        if(featuresType.getFeatureIdentifier().toString().equals(parentFeature.getFeatureIdentifier().toString())){
-
-                            List<FeatureAttributeGroupType> tempParentFeatureAttributeGroups = new ArrayList<>(parentFeature.getFeatureAttributeGroup());
-                            for(FeatureAttributeGroupType parentFeatureAttributeGroupType : tempParentFeatureAttributeGroups){
-
-                                if(parentFeatureAttributeGroupType.getAttributeGroupName().equals(featureAttributeGroupType.getAttributeGroupName())){
-                                    featuresType.getFeatureAttributeGroup().remove(featureAttributeGroupType);
-                                    featuresType.getFeatureAttributeGroup().add(parentFeatureAttributeGroupType);
-                                    parentFeature.getFeatureAttributeGroup().remove(parentFeatureAttributeGroupType);
-                                    break;
-                                }
-                            }
-                        }
-                    }
+                    insertInheritedFeatureAttribGroupParent(featuresType, featureAttributeGroupType);
                 }
             }
 
         }
     }
 
+    private void insertInheritedFeatureAttribGroupParent(FeaturesType featuresType, FeatureAttributeGroupType featureAttributeGroupType) {
+        ProductType parent = loadFile(featureAttributeGroupType.getInheritFromFiles());
+
+        for(FeaturesType parentFeature :parent.getFeatures()){
+            if(featuresType.getFeatureIdentifier().toString().equals(parentFeature.getFeatureIdentifier().toString())){
+
+                List<FeatureAttributeGroupType> tempParentFeatureAttributeGroups = new ArrayList<>(parentFeature.getFeatureAttributeGroup());
+                for(FeatureAttributeGroupType parentFeatureAttributeGroupType : tempParentFeatureAttributeGroups){
+
+                    if(parentFeatureAttributeGroupType.getAttributeGroupName().equals(featureAttributeGroupType.getAttributeGroupName())){
+                        featuresType.getFeatureAttributeGroup().remove(featureAttributeGroupType);
+                        featuresType.getFeatureAttributeGroup().add(parentFeatureAttributeGroupType);
+                        parentFeature.getFeatureAttributeGroup().remove(parentFeatureAttributeGroupType);
+                        break;
+                    }
+                }
+            }
+        }
+    }
 
 
     private void insertProductAttributeGroup(ProductType child, ProductType parent){

@@ -224,7 +224,7 @@
 
    <!--Document Configuration-->
    <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
          <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
@@ -247,10 +247,10 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Transactional Account Application Form|nedbank-commercial-release/AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+         <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -270,7 +270,7 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
          <attributeName>Client FAIS Record of Advice|nedbank-commercial-release/CombinedFAISUniversal|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
@@ -352,6 +352,35 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1474</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subYourApplicationHeader</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subNedbankLogo</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subGenericDetails</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subGenericSignatures</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subTP|ContractComponentProductType=1474</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -681,32 +710,37 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-        <attributeGroupName>VASCrossSellControl</attributeGroupName>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>DontCrossSellOnBaseComponentStatuses</attributeName>
-            <value>1012</value><!--Open-->
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1376</attributeName><!--Salary Switching-->
-            <value>classname=za.co.nb.offermanagement.crosssell.SalarySwitchingCrossSellHandler</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1380</attributeName><!--Debit Order Switching-->
-            <value>Optionality=Optional~IsTakenUp=false</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1454</attributeName><!--Greenbacks Rewards-->
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1025</attributeName><!--Funeral Cover-->
-            <value>Optionality=Optional~IsTakenUp=false</value>
-        </productAttributes>
+      <attributeGroupName>VASCrossSellControl</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>DontCrossSellOnBaseComponentStatuses</attributeName>
+         <value>1012</value><!--Open-->
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1376</attributeName><!--Salary Switching-->
+         <value>classname=za.co.nb.offermanagement.crosssell.SalarySwitchingCrossSellHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1380</attributeName><!--Debit Order Switching-->
+         <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1454</attributeName><!--Greenbacks Rewards-->
+         <value>Optionality=Optional~IsTakenUp=true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1025</attributeName><!--Funeral Cover-->
+         <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_219</attributeName><!--Instant Gold Cheque Card-->
+         <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Provisioning Configuration-->
@@ -1204,7 +1238,7 @@
 
       <!--Document Configuration-->
       <featureAttributeGroup>
-         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+         <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
          <featureAttributes>
             <attributeType>DocumentDescription</attributeType>
             <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
@@ -1231,10 +1265,10 @@
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
-         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+         <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
          <featureAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Overdraft Application Form|nedbank-commercial-release/AppFormODStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+            <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -1326,6 +1360,35 @@
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subNedbankLogo</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericInfo</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericSignatures</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
@@ -2216,7 +2279,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GreenbacksVASComponent-1454~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GreenbacksComponent-1454~ProceduralStepName=Your offer~ZOrder=70</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2386,7 +2449,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=FuneralCoverVASComponent-1025~ProceduralStepName=Your offer~ZOrder=65</attributeName>
+          <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=NedbankInsuranceFuneralPlanComponent-1025~ProceduralStepName=Your offer~ZOrder=65</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2466,7 +2529,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-SalarySwitchingValueAddedServiceSelector-1376~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-SalarySwitchingComponent-1376~ProceduralStepName=Your offer~ZOrder=70</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2506,7 +2569,7 @@
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
-         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+         <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
          <featureAttributes>
             <attributeType>DocumentDescription</attributeType>
             <attributeName>Salary Switching Letter|nedbank-commercial-release/SalarySwitchingUniversal|N/A|N/A|N/A|N/A</attributeName>
@@ -2558,7 +2621,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=DebitOrderSwitchingVASComponent-1380~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=DebitOrderSwitchingComponent-1380~ProceduralStepName=Your offer~ZOrder=70</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2929,7 +2992,7 @@
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceVASComponent-1446~ProceduralStepName=Your offer~ZOrder=65</attributeName>
+            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceComponent-1446~ProceduralStepName=Your offer~ZOrder=65</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
