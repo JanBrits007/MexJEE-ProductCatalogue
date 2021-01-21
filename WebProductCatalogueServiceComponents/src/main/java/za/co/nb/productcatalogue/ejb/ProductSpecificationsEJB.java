@@ -3,6 +3,7 @@ package za.co.nb.productcatalogue.ejb;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import za.co.nb.common.helper.namespacebinding.CachedNameSpaceBindingHelper;
 import za.co.nb.juristic.productcatalogue.remoteejb.IJuristicProductSpecifications;
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 import za.co.nb.productcatalogue.cases.dao.BusinessCaseDAO;
@@ -93,10 +94,13 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             String caseID = dao.retrieveCaseIDByArrangementID(arrangementID);
 
             if (caseID == null) {
-                mLog.debug("Trace 3");
-
-                // No case ID so we can only return the normal spec.
-                return getProductSpecificationXMLByID(productSpecificationID);
+                if(CachedNameSpaceBindingHelper.getDirectNameSpaceBinding("product.catalogue.exception.case.lookup.arrangement.enabled", "false").equals("true")){
+                    throw new RuntimeException("ProductSpecificationEJB: Missing Arrangement-to-Case Mapping, arrangement:"+arrangementID);
+                }else {
+                    mLog.debug("Trace 3");
+                    // No case ID so we can only return the normal spec.
+                    return getProductSpecificationXMLByID(productSpecificationID);
+                }
             } else {
                 mLog.debug("Trace 4 >>" + caseID + "<<");
 
