@@ -129,7 +129,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ExpensesBasicCard</attributeName>
+			<attributeName>ExpensesBasicCard|HideClientBureauData</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -467,6 +467,11 @@
 			<attributeName>performFICACheck</attributeName>
 			<value>true</value>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>creditRepaymentScreenBypassCheck</attributeName>
+			<value>true</value>
+		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
@@ -669,7 +674,7 @@
 	<features>
 		<featureIdentifier>9992</featureIdentifier>
 		<name>Hub Club services</name>
-		<mandatory>false</mandatory>
+		<mandatory>true</mandatory>
 		<preSelected>true</preSelected>
 		<shortDescription>By joining our Greenbacks Rewards Programme you will earn rewards when you use your credit card or one of our other transactional accounts.</shortDescription>
 		<description>Detailed description of feature</description>

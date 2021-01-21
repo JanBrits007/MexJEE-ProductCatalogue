@@ -33,28 +33,14 @@
       ],
       "features": [
         {
-          "featureIdentifier": "1164",
-          "name": "Cheque card",
-          "mandatory": "false",
-          "preSelected": "true",
-          "shortDescription": "R185 once off",
-          "description": "Linked to your current account, your cheque card includes travel,reward and lifestyle perks. Secondary cards are free",
-          "featureGrouping": {
-            "featureGroupName": "Loyalty",
-            "featureGroupRuleForProduct": "Optional"
-          },
-          "featureDisable": ["1454"],
-          "additionalFeature": ["1387","4387"]
-        },
-        {
           "featureIdentifier": "1374",
-          "name": "eNotes",
+          "name": "eNotes alerts",
           "mandatory": "false",
           "preSelected": "false",
           "shortDescription": "R12 pm",
-          "description": "SMS notifications to ensure you are informed of transactions on your account.",
+          "description": "Get notified by SMS every time a transaction happens on your account.",
           "featureGrouping": {
-            "featureGroupName": "Loyalty",
+            "featureGroupName": "Keep track of your cash",
             "featureGroupRuleForProduct": "Optional"
           },
           "featureDisable": [],
@@ -62,33 +48,48 @@
         },
         {
           "featureIdentifier": "1008",
-          "name": "No Funds Alert Services",
+          "name": "No-Funds Alert services",
           "mandatory": "false",
           "preSelected": "false",
-          "shortDescription": "R10 per sms",
-          "description": "SMS notification to ensure you are informed should your account be low on funds.",
+          "shortDescription": "R10 per SMS",
+          "description": "Get notified by SMS when you don't have enough funds to pay your debit orders.",
           "featureGrouping": {
-            "featureGroupName": "Loyalty",
+            "featureGroupName": "Keep track of your cash",
             "featureGroupRuleForProduct": "Optional"
           },
           "featureDisable": [],
           "additionalFeature": []
         },
         {
+          "featureIdentifier": "1164",
+          "name": "Cheque card",
+          "mandatory": "false",
+          "preSelected": "true",
+          "shortDescription": "R185 once off",
+          "description": "Linked to your current account, your cheque card includes lots of travel, reward and lifestyle perks. Get a second card for free!",
+          "featureGrouping": {
+            "featureGroupName": "Bank account cards",
+            "featureGroupRuleForProduct": "Optional"
+          },
+          "featureDisable": ["1454"],
+          "additionalFeature": ["4387"]
+        },
+        {
           "featureIdentifier": "1454",
-          "name": "Greenbacks Rewards Membership",
+          "name": "Earn as you swipe",
           "mandatory": "false",
           "preSelected": "false",
           "shortDescription": "R24 pm",
-          "description": "Monthly subscription to the Greenbacks reward programme – earn on swipes and redeem as cash, fees or get deals in app.",
+          "description": "Every time you use a Nedbank cheque or credit card online or instore, you’ll earn Greenbacks that you can spend at any store or convert to cash at a Nedbank ATM. Earn double your Greenbacks when using your American Express credit card.",
           "featureGrouping": {
-            "featureGroupName": "Loyalty",
+            "featureGroupName": "Join the Greenbacks Programme",
             "featureGroupRuleForProduct": "Optional"
           },
           "featureDisable": [],
-          "additionalFeature": []
+          "additionalFeature": ["1387"]
         }
-      ]
+      ],
+      "includes": ["Dedicated relationship banker"]
     }
   ]
 }

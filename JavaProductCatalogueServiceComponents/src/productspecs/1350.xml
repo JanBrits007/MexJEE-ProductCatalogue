@@ -1,5 +1,4 @@
-<product
-    xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1350</productIdentifier>
     <name>Savvy Bundle Credit Card</name>
     <productAttributeGroup>
@@ -111,7 +110,7 @@
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>AdditionalPersonalInformation|statementdelivery=Email-Post</attributeName>
+            <attributeName>AdditionalPersonalInformation|statementdelivery=Cellphone-Email-Post</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -341,6 +340,11 @@
             <attributeName>DEAStatementBUID_PROD</attributeName>
             <value>4ec5bd70-2670-49ba-a139-15eb30c8e79a</value>
         </productAttributes>
+        <productAttributes>
+         	<attributeType>string</attributeType>
+         	<attributeName>ArrangementMandatoryAPO</attributeName>
+         	<value>T2|T3</value>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
@@ -400,11 +404,48 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
-      <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-        <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-        <value>NB184826|NB204377|CC617068|CC308734|CC321205|CC613516|CC613454|CC313619|CC322377|CC313619|NB108763|NB318045|NB179630</value>
-      </productAttributes>
+        <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>NB184826|NB204377|CC617068|CC308734|CC321205|CC613516|CC613454|CC313619|CC322377|CC309510|NB108763|NB318045|NB179630|CC321229|CC615981|CC310911|CC315366|NB191101|NB097557|NB313976|NB160703|NB158741|NB151977|NB182299|CC301543|NB116572|CC313109|NB313373|NB313109|NB148184|NB146743|NB165915|NB159728|NB305906|NB313976|CC306009</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>6350</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>NB184826|NB204377|CC617068|CC308734|CC321205|CC613516|CC613454|CC313619|CC322377|CC309510|NB108763|NB318045|NB179630|CC321229|CC615981|CC310911|CC315366|NB191101|NB097557|NB313976|NB160703|NB158741|NB151977|NB182299|CC301543|NB116572|CC313109|NB313373|NB313109|NB148184|NB146743|NB165915|NB159728|NB305906|NB313976|CC306009</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>6350</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>OfferCrossSellSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>NB184826|NB204377|CC617068|CC308734|CC321205|CC613516|CC613454|CC313619|CC322377|CC309510|NB108763|NB318045|NB179630|CC321229|CC615981|CC310911|CC315366|NB191101|NB097557|NB313976|NB160703|NB158741|NB151977|NB182299|CC301543|NB116572|CC313109|NB313373|NB313109|NB148184|NB146743|NB165915|NB159728|NB313976|CC306009</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>6350</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>OfferCrossSellSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>NB184826|NB204377|CC617068|CC308734|CC321205|CC613516|CC613454|CC313619|CC322377|CC309510|NB108763|NB318045|NB179630|CC321229|CC615981|CC310911|CC315366|NB191101|NB097557|NB313976|NB160703|NB158741|NB151977|NB182299|CC301543|NB116572|CC313109|NB313373|NB313109|NB148184|NB146743|NB165915|NB159728|NB313976|CC306009</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>6350</value>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>CreditDetails</attributeGroupName>
@@ -484,6 +525,24 @@
 			<attributeType>boolean</attributeType>
 			<attributeName>performFICACheck</attributeName>
 			<value>true</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>creditRepaymentScreenBypassCheck</attributeName>
+			<value>true</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>ArrangementMandatoryAPOCheck</attributeName>
+			<value>true</value>
+		</productAttributes>
+	</productAttributeGroup>
+    <productAttributeGroup>
+		<attributeGroupName>ArrangementConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementMandatoryAPOFilter</value>
 		</productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>

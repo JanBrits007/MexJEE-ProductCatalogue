@@ -1,0 +1,109 @@
+<product inheritFromFiles="90" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+    <productIdentifier>100</productIdentifier>
+    <name>Child</name>
+    <shortDescription></shortDescription>
+
+    <!--by default attribute action should be merge-->
+    <!--in addition we can use action="overwrite" -->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>PrepareApplicant|ng-component=GenericProcessStartPageComponent~ZOrder=300~HideProceduralStep=true</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Income details~ZOrder=100</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <!--if you find value then attributeName is your key, if you do not find value then attributeType is your key-->
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
+
+    <productAttributeGroup inheritFromFiles="80">
+        <attributeGroupName>CreditDetails</attributeGroupName>
+    </productAttributeGroup>
+
+
+    <productAttributeGroup>
+        <attributeGroupName>PresentOfferSelection</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>OfferSelectionSummaryDetails</attributeName>
+            <value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1350</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <features>
+        <featureIdentifier>1447</featureIdentifier>
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceVASComponent-1446~ProceduralStepName=Offer~ZOrder=70</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+    </features>
+
+    <features action="overwrite">
+        <featureIdentifier>1446</featureIdentifier>
+        <name>Own Credit Insurance</name>
+        <featureAttributeGroup>
+            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>provisionInBranch</attributeName>
+                <valueUnit>boolean</valueUnit>
+                <value>false</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>legacyProductID</attributeName>
+                <valueUnit>string</valueUnit>
+                <value />
+            </featureAttributes>
+        </featureAttributeGroup>
+    </features>
+
+
+    <features inheritFromFiles="80">
+        <featureIdentifier>9062</featureIdentifier>
+        <name>Additional Transactional Credit</name>
+        <description>Indicates that the client should be offered to take up transactional credit</description>
+    </features>
+
+    <features>
+        <featureIdentifier>9063</featureIdentifier>
+        <name>Eligible for Consolidation Credit</name>
+        <description>Indicates that the client should be offered to take up consolidation credit.</description>
+    </features>
+
+
+
+    <features>
+        <featureIdentifier>1333</featureIdentifier>
+        <name>Nedbank Greenbacks Shop Card</name>
+        <mandatory>false</mandatory>
+        <preSelected>true</preSelected>
+        <shortDescription>SHOP card</shortDescription>
+        <description>Great news! We've made it quick and easy to redeem all the Greenbacks you've earned with your very own SHOP card</description>
+        <featureAttributeGroup action="overwrite">
+            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-NedbankGreenbacksShopCardValueAddedServiceSelector-1333~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup inheritFromFiles="80">
+            <attributeGroupName>SystemRelated</attributeGroupName>
+        </featureAttributeGroup>
+    </features>
+
+</product>
