@@ -71,10 +71,6 @@
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryCreditCardComponent~ProceduralStepName=Your offer~ZOrder=60</attributeName>
 		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
 	</productAttributeGroup>
 
 	<!--ActivateProductsGatherClientDetails-->
@@ -91,10 +87,6 @@
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -291,6 +283,29 @@
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
+		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+		<productAttributes>
+			<attributeType>DocumentDescription</attributeType>
+			<attributeName>Client FAIS Record of Advice|nedbank-commercial-release/CombinedFAISUniversal|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Download</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Email</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>WetSign</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>ElectronicallySign</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
 		<attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -399,6 +414,35 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subCreditCard|ContractComponentProductType=1350</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subYourApplicationHeader</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subNedbankLogo</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericDetails</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericSignatures</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1350</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
