@@ -43,6 +43,10 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>OverdraftDetailsV2|min=2000.00~max=300000.00~isMandatory=true</attributeName>
       </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisConversationRecordOfAdvice</attributeName>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>EligibilityRules</attributeGroupName>
@@ -64,12 +68,16 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>EmploymentInformationV2|displaySummary=true~sideStepperDisplayName=Employment details~EmploymentType~Occupation~occupationOtherDescription~EmploymentIndustry</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ComplianceInformationV2|displaySummary=true~sideStepperDisplayName=Compliance information~PrimaryNationality~CountryOfBirth~CountryOfResidence~SourceOfFunds~FATCRS~ClientConsent</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>EmploymentInformationV2|displaySummary=true~sideStepperDisplayName=Employment details~EmploymentType~Occupation~EmploymentIndustry</attributeName>
-      </productAttributes>
+         <attributeName>FaisConversationRecordOfAdvice</attributeName>
+      </productAttributes>      
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
@@ -144,7 +152,7 @@
       </productAttributes>
       <productAttributes>
         <attributeType>productInformationRequirement</attributeType>
-        <attributeName>CardDeliveryDetails|sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1164~allowCardCollection~allowCardDelivery</attributeName>
+        <attributeName>CardDeliveryDetails|sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1164~allowCardCollection~allowCardDelivery~restrictOptOut=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -268,6 +276,36 @@
          <attributeName>dcar</attributeName>
          <value>51911</value>
       </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAdminFieldType</attributeName>
+         <value>1004</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmSubProductCode</attributeName>
+         <value>2047</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAccountRoleType</attributeName>
+         <value>1046</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAdminSystemType</attributeName>
+         <value>1001</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>productCategory</attributeName>
+         <value>00016</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productSubCategory</attributeName>
+         <value>24</value>
+       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>schemeCode</attributeName>
@@ -511,12 +549,12 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ComplianceInformationV2|displaySummary=true~sideStepperDisplayName=Compliance information~MaritalStatus~PrimaryNationality~CountryOfBirth~CountryOfResidence~SourceOfFunds~FATCRS~ClientConsent</attributeName>
+            <attributeName>EmploymentInformationV2|displaySummary=true~sideStepperDisplayName=Employment details~EmploymentType~Occupation~occupationOtherDescription~EmploymentIndustry~PresentEmployer~WorkContactDetails</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>EmploymentInformationV2|displaySummary=true~sideStepperDisplayName=Employment details~EmploymentType~Occupation~EmploymentIndustry~PresentEmployer~WorkContactDetails</attributeName>
-         </featureAttributes>
+            <attributeName>ComplianceInformationV2|displaySummary=true~sideStepperDisplayName=Compliance information~MaritalStatus~PrimaryNationality~CountryOfBirth~CountryOfResidence~SourceOfFunds~FATCRS~ClientConsent</attributeName>
+         </featureAttributes>         
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>IncomeInformationV2|sideStepperDisplayName=Income details~activityStep=Credit Info~NettSalary~GrossSalary~SalaryAccountDetails</attributeName>
@@ -536,6 +574,10 @@
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DeclarationInformationV2|sideStepperDisplayName=Your declaration~ZOrder=200</attributeName>
+         </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>KeepingInTouchInformationV2|sideStepperDisplayName=Keep in touch</attributeName>

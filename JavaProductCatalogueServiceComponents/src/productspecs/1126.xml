@@ -11,7 +11,7 @@
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>AdditionalPersonalInformation</attributeName>
+            <attributeName>AdditionalPersonalInformation|statementdelivery=Cellphone-Email-Post</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -48,6 +48,14 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
+      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementMaintainStatusAndInvestmentTransferInFilter</value>
+      </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
         <attributeGroupName>DecisioningControl</attributeGroupName>
         <productAttributes>
             <attributeType>boolean</attributeType>
@@ -64,11 +72,11 @@
         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>Payment</attributeName>
+            <attributeName>Payment|ZOrder=5</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>InvestmentPayout</attributeName>
+            <attributeName>InvestmentPayout|ZOrder=4</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>productInformationRequirement</attributeType>
@@ -93,7 +101,7 @@
         <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
         <productAttributes>
             <attributeType>Compliance</attributeType>
-            <attributeName>ConsentProcessFaisDisclaimer</attributeName>
+            <attributeName>IsAwareOfComparableProducts</attributeName>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>

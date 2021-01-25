@@ -364,6 +364,14 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
+        <attributeGroupName>ArrangementConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredDataFilter_GenerateOffer</attributeName>
+            <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementIncomeExpenseFilter</value>
+        </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -399,6 +407,36 @@
          <attributeType>int</attributeType>
          <attributeName>dcar</attributeName>
          <value>51911</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAdminFieldType</attributeName>
+         <value>1004</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmSubProductCode</attributeName>
+         <value>2050</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAdminSystemType</attributeName>
+         <value>1001</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAccountRoleType</attributeName>
+         <value>1046</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>productCategory</attributeName>
+         <value>00001</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productSubCategory</attributeName>
+         <value>4</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -555,6 +593,11 @@
          <attributeName>noFundsAlertIndicator</attributeName>
          <value>1</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>flag</attributeType>
+         <attributeName>ProvisioningPhase</attributeName>
+         <value>preVerificationProvisioning</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>SystemRelated</attributeGroupName>
@@ -587,17 +630,50 @@
             <value>EMAILSMS</value>
         </productAttributes>
     </productAttributeGroup>
-    <productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
       <productAttributes>
-        <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-        <value>NB184826|NB204377|CC617068|CC308734|CC321205|CC613516|CC613454|CC313619|CC322377|CC309510|NB108763|NB318045|NB179630|CC321229</value>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>NB184826|NB204377|CC617068|CC308734|CC321205|CC613516|CC613454|CC313619|CC322377|CC309510|NB108763|NB318045|NB179630|CC321229|CC615981|CC310911|CC315366|NB191101|NB097557|NB313976|NB160703|NB158741|NB151977|CC301543|NB116572|CC313109|NB313373|NB313109|NB305906|NB313976|CC306009</value>
       </productAttributes>
       <productAttributes>
-        <attributeName>SubstituteForProductID</attributeName>
-        <value>6474</value>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>6474</value>
       </productAttributes>
-    </productAttributeGroup>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>NB184826|NB204377|CC617068|CC308734|CC321205|CC613516|CC613454|CC313619|CC322377|CC309510|NB108763|NB318045|NB179630|CC321229|CC615981|CC310911|CC315366|NB191101|NB097557|NB313976|NB160703|NB158741|NB151977|CC301543|NB116572|CC313109|NB313373|NB313109|NB305906|NB313976|CC306009</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>6474</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>NB184826|NB204377|CC617068|CC308734|CC321205|CC613516|CC613454|CC313619|CC322377|CC309510|NB108763|NB318045|NB179630|CC321229|CC615981|CC310911|CC315366|NB191101|NB097557|NB313976|NB160703|NB158741|NB151977|NB182299|CC301543|NB116572|CC313109|NB313373|NB313109|NB148184|NB146743|NB165915|NB159728|NB313976|CC306009</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>6019</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>NB184826|NB204377|CC617068|CC308734|CC321205|CC613516|CC613454|CC313619|CC322377|CC309510|NB108763|NB318045|NB179630|CC321229|CC615981|CC310911|CC315366|NB191101|NB097557|NB313976|NB160703|NB158741|NB151977|NB182299|CC301543|NB116572|CC313109|NB313373|NB313109|NB148184|NB146743|NB165915|NB159728|NB313976|CC306009</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>6019</value>
+      </productAttributes>
+   </productAttributeGroup>
    <features>
       <featureIdentifier>1402</featureIdentifier>
       <name>My Pocket</name>
@@ -656,12 +732,6 @@
             <attributeName>provisionInBranch</attributeName>
             <valueUnit>boolean</valueUnit>
             <value>false</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>legacyProductID</attributeName>
-            <valueUnit>string</valueUnit>
-            <value></value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -1676,7 +1746,7 @@
         <featureAttributes>
             <attributeType>productATMLimit</attributeType>
             <attributeName>ATM_Limit</attributeName>
-            <value>2000</value>
+            <value>1500</value>
         </featureAttributes>
       </featureAttributeGroup>
    </features>
@@ -2018,7 +2088,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>EligibleSegments</attributeName>
-            <value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</value>
+            <value>200~213|200~227|200~228|200~229|200~216|200~217|200~231|200~201|200~214|200~226|200~302|200~306|200~205|200~202|200~203|200~206|200~207|200~208|200~209|200~204|200~210|200~211|200~212|200~410</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>

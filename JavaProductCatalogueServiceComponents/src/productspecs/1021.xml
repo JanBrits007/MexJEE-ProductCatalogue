@@ -39,6 +39,10 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>OverdraftDetailsV2|min=5000.00~max=300000.00</attributeName>
       </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisConversationRecordOfAdvice</attributeName>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>EligibilityRules</attributeGroupName>
@@ -57,6 +61,10 @@
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>PersonalInformationV2|displaySummary=true~sideStepperDisplayName=Your personal information~ResidentialAddress~PostalAddress</attributeName>
+      </productAttributes>      
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>EmploymentInformationV2|displaySummary=true~sideStepperDisplayName=Employment details~EmploymentType~Occupation~occupationOtherDescription~EmploymentIndustry</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -64,7 +72,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>EmploymentInformationV2|displaySummary=true~sideStepperDisplayName=Employment details~EmploymentType~Occupation~EmploymentIndustry</attributeName>
+         <attributeName>FaisConversationRecordOfAdvice</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -269,6 +277,36 @@
          <attributeName>dcar</attributeName>
          <value>51911</value>
       </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAdminFieldType</attributeName>
+         <value>1004</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmSubProductCode</attributeName>
+         <value>2054</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAccountRoleType</attributeName>
+         <value>1046</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAdminSystemType</attributeName>
+         <value>1001</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>productCategory</attributeName>
+         <value>00016</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productSubCategory</attributeName>
+         <value>21</value>
+       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>schemeCode</attributeName>
@@ -514,14 +552,14 @@
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>PersonalInformationV2|displaySummary=true~sideStepperDisplayName=Your personal information~ResidentialAddress~PostalAddress</attributeName>
+         </featureAttributes>         
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>EmploymentInformationV2|displaySummary=true~sideStepperDisplayName=Employment details~EmploymentType~Occupation~occupationOtherDescription~EmploymentIndustry~PresentEmployer~WorkContactDetails</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>ComplianceInformationV2|displaySummary=true~sideStepperDisplayName=Compliance information~MaritalStatus~PrimaryNationality~CountryOfBirth~CountryOfResidence~SourceOfFunds~FATCRS~ClientConsent</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>EmploymentInformationV2|displaySummary=true~sideStepperDisplayName=Employment details~EmploymentType~Occupation~EmploymentIndustry~PresentEmployer~WorkContactDetails</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -542,6 +580,10 @@
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DeclarationInformationV2|sideStepperDisplayName=Your declaration~ZOrder=200</attributeName>
+         </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>KeepingInTouchInformationV2|sideStepperDisplayName=Keep in touch</attributeName>

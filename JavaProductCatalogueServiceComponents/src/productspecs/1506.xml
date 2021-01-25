@@ -119,7 +119,7 @@
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>AdditionalPersonalInformation|statementdelivery=Email-Post</attributeName>
+            <attributeName>AdditionalPersonalInformation|statementdelivery=Cellphone-Email-Post</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -183,18 +183,6 @@
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
             <attributeName>Email</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>WetSign</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>DigitallySign</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>ElectronicallySign</attributeName>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -292,7 +280,7 @@
         <productAttributes>
             <attributeType>bool</attributeType>
             <attributeName>FinalCaseQualityAssuranceRequired</attributeName>
-            <value>true</value>
+            <value>false</value>
         </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
@@ -302,7 +290,7 @@
         <productAttributes>
             <attributeType>bool</attributeType>
             <attributeName>FinalCaseQualityAssuranceSignatureTypeCheck</attributeName>
-            <value>true</value>
+            <value>false</value>
         </productAttributes>
         <productAttributes>
             <attributeType>bool</attributeType>
@@ -348,6 +336,11 @@
             <attributeType>string</attributeType>
             <attributeName>DEAStatementBUID_PROD</attributeName>
             <value>4ec5bd70-2670-49ba-a139-15eb30c8e79a</value>
+        </productAttributes>
+        <productAttributes>
+         	<attributeType>string</attributeType>
+         	<attributeName>ArrangementMandatoryAPO</attributeName>
+         	<value>T2|T3</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -436,12 +429,77 @@
         <productAttributes>
             <attributeType>int</attributeType>
             <attributeName>CommunicationSystem</attributeName>
-            <value>GenCom</value>
+            <value>SpecCom</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>commsAudience</attributeName>
+            <value>banker</value>
         </productAttributes>
         <productAttributes>
             <attributeType>int</attributeType>
-            <attributeName>productType</attributeName>
-            <value>EMAILSMS</value>
+            <attributeName>welcomeComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>declineComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>reminderCommsPreOffer</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>reminderCommsPostOffer</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>manualAssessmentComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>verificationComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>captivaRejectedDocComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>lowerOfferComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>appealComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>fraudComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>docsReceivedComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>pendOrDocsRequiredComms</attributeName>
+            <value>EMAIL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>cancelCaseComms</attributeName>
+            <value>EMAIL</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -485,6 +543,24 @@
 			<attributeType>boolean</attributeType>
 			<attributeName>performFICACheck</attributeName>
 			<value>true</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>creditRepaymentScreenBypassCheck</attributeName>
+			<value>true</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>ArrangementMandatoryAPOCheck</attributeName>
+			<value>true</value>
+		</productAttributes>
+	</productAttributeGroup>
+    <productAttributeGroup>
+		<attributeGroupName>ArrangementConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementMandatoryAPOFilter</value>
 		</productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
