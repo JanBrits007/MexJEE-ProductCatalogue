@@ -56,6 +56,10 @@
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
 		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+		</productAttributes>
+		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
 		</productAttributes>
@@ -790,10 +794,6 @@
           <attributeType>productInformationRequirement</attributeType>
           <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankAccountDetails[SHOW]</attributeName>
         </productAttributes>
-		 <productAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-			  <attributeName>LoanConsolidationCashflowPanel|cv-parent-panel=CaseData~cv-component=ConsolidationCashflow_Panel~child-cv-component=widLoanConsolidation[READONLY]~child-cv-component=widCashFlowDetails[READONLY]</attributeName>
-        </productAttributes>
 		<productAttributes>
           <attributeType>productInformationRequirement</attributeType>
           <attributeName>LastOfferPanel|cv-parent-panel=CaseData~cv-component=LastOffer_Panel~child-cv-component=widLastOfferDetails[READONLY]</attributeName>
@@ -857,6 +857,29 @@
 		<productAttributes>
 			<attributeName>maximumCreditAvaliableZAR</attributeName>
 			<value>200000</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>VASCrossSellControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1454</attributeName><!--Greenbacks-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1333</attributeName><!--Greenbacks Shop Card-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1099</attributeName><!--Credit Card Insurance-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1028</attributeName><!--Plastic Card-->
+			<value>Optionality=Optional~IsTakenUp=true</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -925,29 +948,6 @@
 			<attributeType>string</attributeType>
 			<attributeName>welcomeDocumentTemplateLocked</attributeName>
 			<value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		<attributeGroupName>VASCrossSellControl</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1454</attributeName><!--Greenbacks-->
-			<value>Optionality=Optional~IsTakenUp=true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1333</attributeName><!--Greenbacks Shop Card-->
-			<value>Optionality=Optional~IsTakenUp=true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1099</attributeName><!--Credit Card Insurance-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1028</attributeName><!--Plastic Card-->
-			<value>Optionality=Optional~IsTakenUp=true</value>
 		</productAttributes>
 	</productAttributeGroup>
 
