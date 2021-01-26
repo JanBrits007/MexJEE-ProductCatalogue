@@ -191,7 +191,11 @@
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Compliance</attributeType>
-         <attributeName>NotUnderCreditAdministrationV2</attributeName>
+         <attributeName>PersonalInformationProcessingConsent</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FinancialHealthConsent</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -858,8 +862,12 @@
       <featureAttributeGroup>
          <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
          <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+         </featureAttributes>
+         <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -874,6 +882,10 @@
       <!--FinancialDetails-->
       <featureAttributeGroup>
          <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+         </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
@@ -891,6 +903,10 @@
       <!--GenerateApplicationOfferProposals-->
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+         </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
@@ -1125,7 +1141,11 @@
 
       <!--GenerateOffer-->
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+         </featureAttributes>
         <featureAttributes>
           <attributeType>clientInformationRequirement</attributeType>
           <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
@@ -1469,10 +1489,6 @@
 		<featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
           <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankAccountDetails[SHOW]</attributeName>
-        </featureAttributes>
-		 <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>LoanConsolidationCashflowPanel|cv-parent-panel=CaseData~cv-component=ConsolidationCashflow_Panel~child-cv-component=widLoanConsolidation[READONLY]~child-cv-component=widCashFlowDetails[READONLY]</attributeName>
         </featureAttributes>
 		<featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
