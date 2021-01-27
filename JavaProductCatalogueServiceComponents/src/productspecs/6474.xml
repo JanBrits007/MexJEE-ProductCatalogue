@@ -18,10 +18,6 @@
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Your income details~ZOrder=100</attributeName>
       </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
    </productAttributeGroup>
 
    <!--GenerateOfferVerifyEligibility-->
@@ -50,10 +46,6 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryTransactionalProductComponent~ProceduralStepName=Your offer~ZOrder=60</attributeName>
       </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
    </productAttributeGroup>
 
    <!--ActivateProductsGatherClientDetails-->
@@ -70,10 +62,6 @@
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -205,6 +193,10 @@
          <attributeType>Compliance</attributeType>
          <attributeName>PersonalInformationProcessingConsent</attributeName>
       </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FinancialHealthConsent</attributeName>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>RequiredCompliance_GenerateOffer</attributeGroupName>
@@ -231,7 +223,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
-         <attributeName>CombinedDownload</attributeName>
+         <attributeName>Download</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -859,10 +851,6 @@
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>OfferTransactionalCredit|ng-component=AdditionalTransactionalCreditOffersComponent~ProceduralStepName=Extra perks with your account~ZOrder=300~ContractComponentProductType=9062~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-         </featureAttributes>
       </featureAttributeGroup>
 
       <!--DetermineRelatedParties-->
@@ -871,8 +859,12 @@
       <featureAttributeGroup>
          <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
          <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+         </featureAttributes>
+         <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -882,15 +874,15 @@
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
          </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-         </featureAttributes>
       </featureAttributeGroup>
 
       <!--FinancialDetails-->
       <featureAttributeGroup>
          <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+         </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
@@ -903,15 +895,15 @@
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
          </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-         </featureAttributes>
       </featureAttributeGroup>
 
       <!--GenerateApplicationOfferProposals-->
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+         </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
@@ -923,10 +915,6 @@
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <!--GenerateOffer-->
@@ -1150,7 +1138,11 @@
 
       <!--GenerateOffer-->
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+         </featureAttributes>
         <featureAttributes>
           <attributeType>clientInformationRequirement</attributeType>
           <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
@@ -1250,7 +1242,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
-            <attributeName>CombinedDownload</attributeName>
+            <attributeName>Download</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -1428,66 +1420,125 @@
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_VerifyAffordabilityAndEmployment</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>InsurancePanel|cv-parent-panel=CaseData~cv-component=Insurance_Panel~child-cv-component=widInsuranceInformation[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankInformation[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>EmploymentInformationPanel|cv-parent-panel=CaseData~cv-component=EmploymentInformation_Panel~child-cv-component=widEmploymentInformation[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>BureauInformationPanel|cv-parent-panel=CaseData~cv-component=BureauInformation_Panel~child-cv-component=widBureauGateway[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>AffordabilityInformationPanel|cv-parent-panel=CaseData~cv-component=AffordabilityInformation_Panel~child-cv-component=widAffordabilityInformation[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>GenericCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnViewComments~cv-component=Actions_CaseActions~child-cv-component=btnSave~cv-component=Actions_CaseActions~child-cv-component=btnCancelCase~cv-component=Actions_CaseActions~child-cv-component=btnViewAuditTrails~cv-component=Actions_CaseActions~child-cv-component=btnDiarise~cv-component=Actions_CaseActions~child-cv-component=btnFlagForFraud</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>DocumentCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnOpenDocuments~cv-component=Actions_CaseActions~child-cv-component=btnRequestDocuments~cv-component=Actions_CaseActions~child-cv-component=btnAddDocuments</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>DataCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnRetrievePartyStatements~cv-component=Actions_CaseActions~child-cv-component=btnRefreshPartyData~cv-component=Actions_CaseActions~child-cv-component=btnREfreshBureauData</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>DiariseCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>FraudCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_VerifyAffordabilityAndEmployment</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>InsurancePanel|cv-parent-panel=CaseData~cv-component=Insurance_Panel~child-cv-component=widInsuranceInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>EmploymentInformationPanel|cv-parent-panel=CaseData~cv-component=EmploymentInformation_Panel~child-cv-component=widEmploymentInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>BureauInformationPanel|cv-parent-panel=CaseData~cv-component=BureauInformation_Panel~child-cv-component=widBureauGateway[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>AffordabilityInformationPanel|cv-parent-panel=CaseData~cv-component=AffordabilityInformation_Panel~child-cv-component=widAffordabilityInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>GenericCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnViewComments~cv-component=Actions_CaseActions~child-cv-component=btnSave~cv-component=Actions_CaseActions~child-cv-component=btnCancelCase~cv-component=Actions_CaseActions~child-cv-component=btnViewAuditTrails~cv-component=Actions_CaseActions~child-cv-component=btnDiarise~cv-component=Actions_CaseActions~child-cv-component=btnFlagForFraud</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DocumentCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnOpenDocuments~cv-component=Actions_CaseActions~child-cv-component=btnRequestDocuments~cv-component=Actions_CaseActions~child-cv-component=btnAddDocuments</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DataCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnRetrievePartyStatements~cv-component=Actions_CaseActions~child-cv-component=btnRefreshPartyData~cv-component=Actions_CaseActions~child-cv-component=btnREfreshBureauData</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DiariseCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>FraudCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_QualityAssuranceVerification</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_AssessCreditApplication</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>EmploymentInformationPanel|cv-parent-panel=CaseData~cv-component=EmploymentInformation_Panel~child-cv-component=widEmploymentInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>RelatedPartyInformation|cv-parent-panel=CaseData~cv-component=RelatedPartyInformation_Panel~child-cv-component=widRelatedPartyInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>InternalInformation|cv-parent-panel=CaseData~cv-component=InternalInformation_Panel~child-cv-component=widNedBankProducts[SHOW]~child-cv-component=widNedbankRetailRecoveriesInformation[SHOW]~child-cv-component=widNedbankInternalInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>BureauInformationPanel|cv-parent-panel=CaseData~cv-component=BureauInformation_Panel~child-cv-component=widBureauGateway[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>CollateralInformation|cv-parent-panel=CaseData~cv-component=CollateralInformation_Panel~child-cv-component=widProposedCollateral[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>AffordabilityInformationPanel|cv-parent-panel=CaseData~cv-component=AffordabilityInformation_Panel~child-cv-component=widAffordabilityInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>GenericCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnViewComments~cv-component=Actions_CaseActions~child-cv-component=btnSave~cv-component=Actions_CaseActions~child-cv-component=btnCancelCase~cv-component=Actions_CaseActions~child-cv-component=btnViewAuditTrails~cv-component=Actions_CaseActions~child-cv-component=btnDiarise~cv-component=Actions_CaseActions~child-cv-component=btnFlagForFraud</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DocumentCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnOpenDocuments~cv-component=Actions_CaseActions~child-cv-component=btnRequestDocuments~cv-component=Actions_CaseActions~child-cv-component=btnAddDocuments</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DataCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnRetrievePartyStatements~cv-component=Actions_CaseActions~child-cv-component=btnRefreshPartyData~cv-component=Actions_CaseActions~child-cv-component=btnREfreshBureauData</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DiariseCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>FraudCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_QualityAssuranceVerification</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widFinalAssessment[SHOW]~child-cv-component=widVerificationException[SHOW]~child-cv-component=widFinalAssessmentIndicators[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>AccountPanel|cv-parent-panel=CaseData~cv-component=AccountSetup_Panel~child-cv-component=widAccountSetup[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankAccountDetails[SHOW]</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>

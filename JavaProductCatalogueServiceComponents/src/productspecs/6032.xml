@@ -56,6 +56,10 @@
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
 		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+		</productAttributes>
+		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
 		</productAttributes>
@@ -70,10 +74,6 @@
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryCreditCardComponent~ProceduralStepName=Your offer~ZOrder=60</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -91,10 +91,6 @@
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -244,7 +240,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
-			<attributeName>CombinedDownload</attributeName>
+			<attributeName>Download</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
@@ -272,6 +268,29 @@
 		<productAttributes>
 			<attributeType>DocumentDescription</attributeType>
 			<attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Download</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Email</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>WetSign</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>ElectronicallySign</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+		<productAttributes>
+			<attributeType>DocumentDescription</attributeType>
+			<attributeName>Client FAIS Record of Advice|nedbank-commercial-release/CombinedFAISUniversal|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
@@ -399,6 +418,35 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subCreditCard|ContractComponentProductType=1032</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subYourApplicationHeader</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subNedbankLogo</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericDetails</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subGenericSignatures</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1032</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -746,10 +794,6 @@
           <attributeType>productInformationRequirement</attributeType>
           <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankAccountDetails[SHOW]</attributeName>
         </productAttributes>
-		 <productAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-			  <attributeName>LoanConsolidationCashflowPanel|cv-parent-panel=CaseData~cv-component=ConsolidationCashflow_Panel~child-cv-component=widLoanConsolidation[READONLY]~child-cv-component=widCashFlowDetails[READONLY]</attributeName>
-        </productAttributes>
 		<productAttributes>
           <attributeType>productInformationRequirement</attributeType>
           <attributeName>LastOfferPanel|cv-parent-panel=CaseData~cv-component=LastOffer_Panel~child-cv-component=widLastOfferDetails[READONLY]</attributeName>
@@ -813,6 +857,29 @@
 		<productAttributes>
 			<attributeName>maximumCreditAvaliableZAR</attributeName>
 			<value>200000</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>VASCrossSellControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1454</attributeName><!--Greenbacks-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1333</attributeName><!--Greenbacks Shop Card-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1099</attributeName><!--Credit Card Insurance-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1028</attributeName><!--Plastic Card-->
+			<value>Optionality=Optional~IsTakenUp=true</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -881,24 +948,6 @@
 			<attributeType>string</attributeType>
 			<attributeName>welcomeDocumentTemplateLocked</attributeName>
 			<value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		<attributeGroupName>VASCrossSellControl</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1454</attributeName><!--Greenbacks-->
-			<value>Optionality=Optional~IsTakenUp=true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1333</attributeName><!--Greenbacks Shop Card-->
-			<value>Optionality=Optional~IsTakenUp=true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1099</attributeName><!--Credit Card Insurance-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -1537,7 +1586,7 @@
 			<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
 			<featureAttributes>
 				<attributeType>string</attributeType>
-				<attributeName>subCreditLifeInsurance|ContractComponentProductType=1099</attributeName>
+				<attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1099</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 

@@ -18,10 +18,6 @@
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Your income details~ZOrder=100</attributeName>
       </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
    </productAttributeGroup>
 
    <!--GenerateOfferVerifyEligibility-->
@@ -50,10 +46,6 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryTransactionalProductBundleComponent~ProceduralStepName=Your offer~ZOrder=60</attributeName>
       </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
    </productAttributeGroup>
 
    <!--ActivateProductsGatherClientDetails-->
@@ -70,10 +62,6 @@
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -203,7 +191,11 @@
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Compliance</attributeType>
-         <attributeName>NotUnderCreditAdministrationV2</attributeName>
+         <attributeName>PersonalInformationProcessingConsent</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FinancialHealthConsent</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -231,7 +223,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
-         <attributeName>CombinedDownload</attributeName>
+         <attributeName>Download</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -862,10 +854,6 @@
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>OfferTransactionalCredit|ng-component=AdditionalTransactionalCreditOffersComponent~ProceduralStepName=Extra perks with your account~ZOrder=300~ContractComponentProductType=9062~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-         </featureAttributes>
       </featureAttributeGroup>
 
       <!--DetermineRelatedParties-->
@@ -874,8 +862,12 @@
       <featureAttributeGroup>
          <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
          <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+         </featureAttributes>
+         <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -885,15 +877,15 @@
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
          </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-         </featureAttributes>
       </featureAttributeGroup>
 
       <!--FinancialDetails-->
       <featureAttributeGroup>
          <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+         </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
@@ -906,15 +898,15 @@
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
          </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-         </featureAttributes>
       </featureAttributeGroup>
 
       <!--GenerateApplicationOfferProposals-->
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+         </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
@@ -926,10 +918,6 @@
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <!--GenerateOffer-->
@@ -1153,7 +1141,11 @@
 
       <!--GenerateOffer-->
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+         </featureAttributes>
         <featureAttributes>
           <attributeType>clientInformationRequirement</attributeType>
           <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
@@ -1252,7 +1244,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
-            <attributeName>CombinedDownload</attributeName>
+            <attributeName>Download</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -1497,10 +1489,6 @@
 		<featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
           <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankAccountDetails[SHOW]</attributeName>
-        </featureAttributes>
-		 <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>LoanConsolidationCashflowPanel|cv-parent-panel=CaseData~cv-component=ConsolidationCashflow_Panel~child-cv-component=widLoanConsolidation[READONLY]~child-cv-component=widCashFlowDetails[READONLY]</attributeName>
         </featureAttributes>
 		<featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
