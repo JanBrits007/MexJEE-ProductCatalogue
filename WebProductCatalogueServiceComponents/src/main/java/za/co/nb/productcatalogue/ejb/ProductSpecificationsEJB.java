@@ -3,6 +3,7 @@ package za.co.nb.productcatalogue.ejb;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import za.co.nb.common.helper.namespacebinding.CachedNameSpaceBindingHelper;
 import za.co.nb.juristic.productcatalogue.remoteejb.IJuristicProductSpecifications;
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 import za.co.nb.productcatalogue.cases.dao.BusinessCaseDAO;
@@ -11,7 +12,9 @@ import za.co.nb.productcatalogue.ejb.substitution.Banker;
 import za.co.nb.productcatalogue.ejb.substitution.Channel;
 import za.co.nb.productcatalogue.ejb.substitution.Subnet;
 import za.co.nb.productcatalogue.ejb.substitution.Substitution;
+import za.co.nb.productcatalogue.exception.InvalidAttributeException;
 import za.co.nb.productcatalogue.util.ProductSpecificationSubstitutionUtil;
+import za.co.nb.productcatalogue.util.ProductSpecificationUtil;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.MaintainCatalogueRequestType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductAttributeGroupType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
@@ -75,6 +78,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     public ProductType getProductSpecificationByIDAndArrangementID(String productSpecificationID, String arrangementID) throws Exception {
         mLog.debug("Trace 1 >>" + productSpecificationID + "<<,>>" + arrangementID + "<<");
 
+
         // First check whether there are business rules that need to be run to switch out the product ID to a specific on.
         ProductSpecificationSubstitutionUtil util = new ProductSpecificationSubstitutionUtil();
         productSpecificationID = util.substituteArrangementProductIDBasedOnBusinessRules(productSpecificationID, arrangementID);
@@ -90,10 +94,13 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             String caseID = dao.retrieveCaseIDByArrangementID(arrangementID);
 
             if (caseID == null) {
-                mLog.debug("Trace 3");
-
-                // No case ID so we can only return the normal spec.
-                return getProductSpecificationXMLByID(productSpecificationID);
+                if(CachedNameSpaceBindingHelper.getDirectNameSpaceBinding("product.catalogue.exception.case.lookup.arrangement.enabled", "false").equals("true")){
+                    throw new RuntimeException("ProductSpecificationEJB: Missing Arrangement-to-Case Mapping, arrangement:"+arrangementID);
+                }else {
+                    mLog.debug("Trace 3");
+                    // No case ID so we can only return the normal spec.
+                    return getProductSpecificationXMLByID(productSpecificationID);
+                }
             } else {
                 mLog.debug("Trace 4 >>" + caseID + "<<");
 
@@ -504,6 +511,20 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public  String crossSellProductSubstitution(ProductType productSpec, String initiatingStaffNBNumber, String environment) throws InvalidAttributeException {
+
+        ProductSpecificationUtil specUtil = new ProductSpecificationUtil();
+        String substituteForWhiteListedNBNumbers = specUtil.getProductAttributeValue(productSpec, "OfferCrossSellSubstitutionRules" + environment, "SubstituteForWhiteListedNBNumbers");
+        if(initiatingStaffNBNumber != null && substituteForWhiteListedNBNumbers.toLowerCase().contains(initiatingStaffNBNumber.toLowerCase())){
+            String substituteForProductID = specUtil.getProductAttributeValue(productSpec, "OfferCrossSellSubstitutionRules" + environment, "SubstituteForProductID");
+            mLog.debug("Found substituteForProductID:"+substituteForProductID);
+            return substituteForProductID;
+
+        }
+
+        return null;
     }
 
 }

@@ -9,6 +9,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import za.co.nb.productcatalogue.ejb.ProductSpecificationsServiceRemoteInterface;
+import za.co.nb.productcatalogue.exception.InvalidAttributeException;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
 
 public class ProductSpecificationsServiceDAO {
@@ -89,5 +90,9 @@ public class ProductSpecificationsServiceDAO {
 		}
 		
 		return productSpecificationsEJB.getProductSpecificationXMLByID(pProductSpecificationIDs);
+	}
+
+	public String crossSellProductSubstitution(ProductType productSpec, String initiatingStaffNBNumber, String environment) throws InvalidAttributeException {
+		return productSpecificationsEJB.crossSellProductSubstitution(productSpec, initiatingStaffNBNumber, environment);
 	}
 }

@@ -3,6 +3,8 @@ package za.co.nb.productcatalogue.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -19,6 +21,8 @@ public class ArrangementMetricsDAO {
 	
 	// We use the same database as product catalogue.
 	private static final String JNDI = "jdbc/productCatalogue";
+	
+	private static Map<String, String> arrangementsToCaseIDCacheMap = new HashMap<String, String>();
 	
 	private Object lookupObject(String pJNDI) throws NamingException {
 		mLog.debug("Trace 1");
@@ -101,8 +105,19 @@ public class ArrangementMetricsDAO {
 	}
 	
 	public String retrieveCaseIDByArrangementID(String arrangementID) throws Exception {
-		mLog.debug("Trace 1 >>" + arrangementID + "<<");
+		mLog.debug("Trace 1.0 >>" + arrangementID + "<<,>>" + arrangementsToCaseIDCacheMap.keySet().size() + "<<");
 
+		// First check whether the mapping is in the in-memory cache.
+		String caseID = arrangementsToCaseIDCacheMap.get(arrangementID);
+
+		mLog.debug("Trace 1.1 >>" + caseID + "<<");
+		
+		if(caseID != null) {
+			mLog.debug("Trace 1.2 >>" + caseID + "<<");
+			// Found it in the cache.
+			return caseID;
+		}
+		
 		PreparedStatement vPreparedStatement = null;
 		ResultSet vResultSet = null;
 		Connection vConnection = null;
@@ -126,8 +141,14 @@ public class ArrangementMetricsDAO {
 			mLog.debug("Trace 4");
 
 			if(vResultSet.next()) {
-				mLog.debug("Trace 5 >>" + vResultSet.getString("CASEID") + "<<");
-				return vResultSet.getString("CASEID");
+				String dbCaseID = vResultSet.getString("CASEID");
+				
+				mLog.debug("Trace 5 >>" + arrangementID + "<<,>>" + dbCaseID + "<<");
+				
+				// Put the case ID in the map.
+				arrangementsToCaseIDCacheMap.put(arrangementID, dbCaseID);
+				
+				return dbCaseID;
 			}
 		}
 		finally {
