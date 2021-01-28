@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.ejb.Remote;
 
+import za.co.nb.productcatalogue.exception.InvalidAttributeException;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
 
 @Remote
@@ -20,5 +21,7 @@ public interface ProductSpecificationsServiceRemoteInterface {
 	public ProductType getProductSpecificationXMLByID(int pProductSpecificationID) throws Exception;
 	
 	public List<ProductType> getProductSpecificationXMLByID(List<Integer> pProductSpecificationID) throws Exception;
-	
+
+    String crossSellProductSubstitution(ProductType productSpec, String initiatingStaffNBNumber, String environment) throws InvalidAttributeException;
+
 }

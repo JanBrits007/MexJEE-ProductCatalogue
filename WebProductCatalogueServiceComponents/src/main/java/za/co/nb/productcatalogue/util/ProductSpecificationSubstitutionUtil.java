@@ -139,8 +139,13 @@ public class ProductSpecificationSubstitutionUtil {
 
     	// First check whether this product ID has a handler defined for it.
         BaseProductSpecificationRuleHandler ruleHandler = getProductSubstitutionRuleHandler(productSpecificationID);
-        
-        if(ruleHandler == null) {
+
+        BusinessCaseHeader businessCaseHeader = new BusinessCaseManagementDAO().retrieveBusinessCase(caseID);
+        boolean subsMap = false;
+        if(businessCaseHeader != null && businessCaseHeader.getProductIDSubstitutionMap().get(productSpecificationID) != null)
+            subsMap = true;
+
+        if(!subsMap && ruleHandler == null) {
         	// There's no rule handler to switch out the product ID.
         	return productSpecificationID;
         }
