@@ -6,10 +6,24 @@
 		"shouldRedirect": true,
 		"redirectUrl": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/info/campaigns/homeloans-1-percent-cash-back.html?cmpid=psea:goo:hml:home%20loans::nat&gclid=EAIaIQobChMIm9e2-6_u2QIVbwHTCh0hEA1zEAAYASAAEgKo5fD_BwE"
 	},
-	"actions": [
+	"actions": [	
 		{
 			"type": "SELECT",
-			"text": "Select"
+			"text": "Select",
+			"environments": [
+				"dev",
+				"ete",
+				"qa",
+				"qa_kiosk"
+			]
+		},
+		{
+			"type": "REDIRECT",
+			"text": "Select",
+			"environments": [
+				"prod"
+			],
+			"value": "https://applynow.nedsecure.co.za/DigitalHomeloanApplication/Navigation/Index?aoheader"
 		},
 		{
 			"type": "DETAIL",
