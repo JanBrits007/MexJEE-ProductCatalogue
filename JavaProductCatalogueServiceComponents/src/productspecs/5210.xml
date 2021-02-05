@@ -19,14 +19,22 @@
       <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~child-ng-components=financialDetailsConfirmation~displaySummary=true~ActiveOnInitialWorkItemExecution=true</attributeName>
+         <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Are these details correct?~child-ng-components=financialDetailsConfirmation~displaySummary=true~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
+     <productAttributes>
+        <attributeType>productInformationRequirement</attributeType>
+        <attributeName>OfferSelection|ProceduralStepName=Your offer~ZOrder=80</attributeName>
+      </productAttributes>
+     <productAttributes>
+        <attributeType>productInformationRequirement</attributeType>
+        <attributeName>OfferSummary|ProceduralStepName=Review~ZOrder=70</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
       <productAttributes>
         <attributeType>productInformationRequirement</attributeType>
-        <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+        <attributeName>FinancialDetails|ProceduralStepName=Are these details correct?~ZOrder=90</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -34,7 +42,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryHomeLoanReAdvanceProductComponent~ProceduralStepName=Offer~ZOrder=70</attributeName>
+         <attributeName>OfferSummary|ng-component=PreApprovedOfferReviewComponent~child-ng-components=OfferProductSummaryHomeLoanReAdvanceProductComponent~ProceduralStepName=Review~ZOrder=70</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
