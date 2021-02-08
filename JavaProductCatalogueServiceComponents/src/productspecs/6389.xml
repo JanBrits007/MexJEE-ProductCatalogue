@@ -57,7 +57,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmployerDetails~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
+         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -79,6 +79,10 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfAdviceIndividualComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=140~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -107,7 +111,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisDeclaration|ProceduralStepName=FAIS declaration~ZOrder=60</attributeName>
+         <attributeName>AccurateInformationProvidedConfirmation|ProceduralStepName=Your declaration~ZOrder=60</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -124,11 +128,11 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>DigitalActivation|ProceduralStepName=Get activated on the app~ZOrder=80</attributeName>
+         <attributeName>DigitalActivation|ng-component=DigitalActivationComponent~ProceduralStepName=Get activated on the app~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisDeclaration|ProceduralStepName=FAIS declaration~ZOrder=60</attributeName>
+         <attributeName>AccurateInformationProvidedConfirmation|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=60~ContractComponentProductType=1019</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -137,23 +141,7 @@
       <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>GatherEvidence|ProceduralStepName=Upload documents~ZOrder=100</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>productDocumentPresentation|ProceduralStepName=Signing the paperwork~ZOrder=90</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>DigitalActivation|ng-component=DigitalActivationComponent~ProceduralStepName=Get activated on the app~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=Confirmation~ZOrder=60~ContractComponentProductType=1389</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=TransactionalProductAccountDetails~ZOrder=50</attributeName>
+         <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=TransactionalProductAccountDetails~ZOrder=50</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -202,7 +190,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>Compliance</attributeType>
-         <attributeName>FaisDeclaration</attributeName>
+         <attributeName>AccurateInformationProvidedConfirmation</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>Compliance</attributeType>
@@ -261,7 +249,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISUniversal|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+         <attributeName>Client FAIS Record of Advice|nedbank-commercial-release/CombinedFAISUniversal|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -1196,7 +1184,7 @@
          <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
+            <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -1226,7 +1214,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>FaisDeclaration|ProceduralStepName=FAIS declaration~ZOrder=60</attributeName>
+            <attributeName>AccurateInformationProvidedConfirmation|ProceduralStepName=Your declaration~ZOrder=60</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -1243,11 +1231,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>DigitalActivation|ProceduralStepName=Get activated on the app~ZOrder=80</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>FaisDeclaration|ProceduralStepName=FAIS declaration~ZOrder=60</attributeName>
+            <attributeName>AccurateInformationProvidedConfirmation|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=60~ContractComponentProductType=1019</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -1256,7 +1240,7 @@
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~child-ng-components=CreditApplicationStatusComponent-1014~child-ng-components=OverdraftAccountDetails~ZOrder=50</attributeName>
+            <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=CreditApplicationStatusComponent-1014~child-ng-components=OverdraftAccountDetails~ZOrder=50</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 

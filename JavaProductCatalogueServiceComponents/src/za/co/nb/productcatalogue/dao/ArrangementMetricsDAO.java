@@ -21,7 +21,20 @@ public class ArrangementMetricsDAO {
 	
 	// We use the same database as product catalogue.
 	private static final String JNDI = "jdbc/productCatalogue";
-	
+
+	private static final String SQL_CASEID_BY_ARRANGEMENT_ID = "SELECT CASEID FROM BPMF.CASEMI WHERE ARRID1=? " +
+			"UNION " +
+			"SELECT CASEID FROM BPMF.CASEMI WHERE ARRID2=? " +
+			"UNION " +
+			"SELECT CASEID FROM BPMF.CASEMI WHERE ARRID3=? " +
+			"UNION " +
+			"SELECT CASEID FROM BPMF.CASEMI WHERE ARRID4=? " +
+			"UNION " +
+			"SELECT CASEID FROM BPMF.CASEMI WHERE ARRID5=? " +
+			"UNION " +
+			"SELECT CASEID FROM BPMF.CASEMI WHERE ARRID6=? ";
+
+
 	private static Map<String, String> arrangementsToCaseIDCacheMap = new HashMap<String, String>();
 	
 	private Object lookupObject(String pJNDI) throws NamingException {
@@ -129,7 +142,7 @@ public class ArrangementMetricsDAO {
 			
 			mLog.debug("Trace 3");
 			
-			vPreparedStatement = vConnection.prepareStatement("select CASEID from CASEMI where (ARRID1=? OR ARRID2=? OR ARRID3=? OR ARRID4=? OR ARRID5=? OR ARRID6=?)");
+			vPreparedStatement = vConnection.prepareStatement(SQL_CASEID_BY_ARRANGEMENT_ID);
 			vPreparedStatement.setString(1, arrangementID);
 			vPreparedStatement.setString(2, arrangementID);
 			vPreparedStatement.setString(3, arrangementID);
