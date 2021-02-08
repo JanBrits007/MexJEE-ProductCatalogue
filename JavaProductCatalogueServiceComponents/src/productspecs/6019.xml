@@ -53,11 +53,11 @@
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Let’s get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
+         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmployerDetails~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -265,7 +265,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Client FAIS Record of Advice|nedbank-commercial-release/CombinedFAISUniversal|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISUniversal|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -282,6 +282,24 @@
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
          <attributeName>ElectronicallySign</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subYourApplicationHeader</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subNedbankLogo</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subTPTermsAndConditions|ContractComponentProductType=1019</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -314,7 +332,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subProfPAYU|ContractComponentProductType=1019</attributeName>
+         <attributeName>subPAYU|ContractComponentProductType=1019</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -429,42 +447,47 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-     <attributeGroupName>CaseConfiguration</attributeGroupName>
- 		 <productAttributes>
- 			<attributeType>string</attributeType>
- 			<attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
- 			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
- 		</productAttributes>
- 		 <productAttributes>
- 			<attributeType>string</attributeType>
- 			<attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
- 			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
- 		</productAttributes>
- 		<productAttributes>
- 			<attributeType>string</attributeType>
- 			<attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
- 			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
- 		</productAttributes>
- 		 <productAttributes>
-       <attributeType>string</attributeType>
- 			 <attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
- 			 <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
- 		 </productAttributes>
-     <productAttributes>
-       <attributeType>string</attributeType>
-       <attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
-       <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-     </productAttributes>
-     <productAttributes>
-       <attributeType>string</attributeType>
-       <attributeName>CODHandler_CreditLead</attributeName>
-       <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditLeadCODHandler</value>
-     </productAttributes>
-     <productAttributes>
-       <attributeType>string</attributeType>
-       <attributeName>CODHandler_CreditOffer</attributeName>
-       <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditOfferCODHandler</value>
-     </productAttributes>
+      <attributeGroupName>CaseConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent1</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.Intent1CODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_CreditLead</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditLeadCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_CreditOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditOfferCODHandler</value>
+      </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_ProductOffer</attributeName>
@@ -679,17 +702,17 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-        <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>CommunicationSystem</attributeName>
-            <value>GenCom</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>productType</attributeName>
-            <value>EMAILSMS</value>
-        </productAttributes>
+      <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>CommunicationSystem</attributeName>
+         <value>GenCom</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>productType</attributeName>
+         <value>EMAILSMS</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Offer Configuration-->
@@ -917,6 +940,7 @@
             <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
+
       <!--GenerateOffer-->
 
       <!--ActivateProductsGatherClientDetails-->
@@ -979,53 +1003,53 @@
 
       <!--GenerateOfferGatherClientDetails-->
       <featureAttributeGroup>
-       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
-       <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
-       </featureAttributes>
-       <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-       </featureAttributes>
-       <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
-       </featureAttributes>
+         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
 
       <!--FinancialDetails-->
       <featureAttributeGroup>
-       <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
-       <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
-       </featureAttributes>
-       <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90~FinaliseWorkItemOnPositiveOutcome=true~displaySummary=true~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
-       </featureAttributes>
-       <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
-       </featureAttributes>
+         <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90~FinaliseWorkItemOnPositiveOutcome=true~displaySummary=true~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
 
       <!--GenerateApplicationOfferProposals-->
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-           <attributeType>productInformationRequirement</attributeType>
-           <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <!--GenerateOffer-->
 
@@ -1143,22 +1167,22 @@
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
          </featureAttributes>
-        <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-           <attributeType>productInformationRequirement</attributeType>
-           <attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-           <attributeType>productInformationRequirement</attributeType>
-           <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryOverdraftComponent~ProceduralStepName=Your offer~ZOrder=60</attributeName>
-        </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryOverdraftComponent~ProceduralStepName=Your offer~ZOrder=60</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
 
       <!--ActivateProductsGatherClientDetails-->
@@ -1234,7 +1258,7 @@
 
       <!--Document Configuration-->
       <featureAttributeGroup>
-         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+         <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
          <featureAttributes>
             <attributeType>DocumentDescription</attributeType>
             <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
@@ -1261,7 +1285,7 @@
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
-         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+         <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
          <featureAttributes>
             <attributeType>DocumentDescription</attributeType>
             <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
@@ -1330,6 +1354,10 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>subOverdraftTC|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>Taxonomy|ARRANGEMENTS_AGREEMENTS_AGREEMENTSCREDITFACILITY_Agreement Contract</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -1419,66 +1447,125 @@
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_VerifyAffordabilityAndEmployment</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>InsurancePanel|cv-parent-panel=CaseData~cv-component=Insurance_Panel~child-cv-component=widInsuranceInformation[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankInformation[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>EmploymentInformationPanel|cv-parent-panel=CaseData~cv-component=EmploymentInformation_Panel~child-cv-component=widEmploymentInformation[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>BureauInformationPanel|cv-parent-panel=CaseData~cv-component=BureauInformation_Panel~child-cv-component=widBureauGateway[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>AffordabilityInformationPanel|cv-parent-panel=CaseData~cv-component=AffordabilityInformation_Panel~child-cv-component=widAffordabilityInformation[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>GenericCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnViewComments~cv-component=Actions_CaseActions~child-cv-component=btnSave~cv-component=Actions_CaseActions~child-cv-component=btnCancelCase~cv-component=Actions_CaseActions~child-cv-component=btnViewAuditTrails~cv-component=Actions_CaseActions~child-cv-component=btnDiarise~cv-component=Actions_CaseActions~child-cv-component=btnFlagForFraud</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>DocumentCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnOpenDocuments~cv-component=Actions_CaseActions~child-cv-component=btnRequestDocuments~cv-component=Actions_CaseActions~child-cv-component=btnAddDocuments</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>DataCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnRetrievePartyStatements~cv-component=Actions_CaseActions~child-cv-component=btnRefreshPartyData~cv-component=Actions_CaseActions~child-cv-component=btnREfreshBureauData</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>DiariseCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>FraudCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_VerifyAffordabilityAndEmployment</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>InsurancePanel|cv-parent-panel=CaseData~cv-component=Insurance_Panel~child-cv-component=widInsuranceInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>EmploymentInformationPanel|cv-parent-panel=CaseData~cv-component=EmploymentInformation_Panel~child-cv-component=widEmploymentInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>BureauInformationPanel|cv-parent-panel=CaseData~cv-component=BureauInformation_Panel~child-cv-component=widBureauGateway[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>AffordabilityInformationPanel|cv-parent-panel=CaseData~cv-component=AffordabilityInformation_Panel~child-cv-component=widAffordabilityInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>GenericCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnViewComments~cv-component=Actions_CaseActions~child-cv-component=btnSave~cv-component=Actions_CaseActions~child-cv-component=btnCancelCase~cv-component=Actions_CaseActions~child-cv-component=btnViewAuditTrails~cv-component=Actions_CaseActions~child-cv-component=btnDiarise~cv-component=Actions_CaseActions~child-cv-component=btnFlagForFraud</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DocumentCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnOpenDocuments~cv-component=Actions_CaseActions~child-cv-component=btnRequestDocuments~cv-component=Actions_CaseActions~child-cv-component=btnAddDocuments</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DataCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnRetrievePartyStatements~cv-component=Actions_CaseActions~child-cv-component=btnRefreshPartyData~cv-component=Actions_CaseActions~child-cv-component=btnREfreshBureauData</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DiariseCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>FraudCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_QualityAssuranceVerification</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_AssessCreditApplication</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>EmploymentInformationPanel|cv-parent-panel=CaseData~cv-component=EmploymentInformation_Panel~child-cv-component=widEmploymentInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>RelatedPartyInformation|cv-parent-panel=CaseData~cv-component=RelatedPartyInformation_Panel~child-cv-component=widRelatedPartyInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>InternalInformation|cv-parent-panel=CaseData~cv-component=InternalInformation_Panel~child-cv-component=widNedBankProducts[SHOW]~child-cv-component=widNedbankRetailRecoveriesInformation[SHOW]~child-cv-component=widNedbankInternalInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>BureauInformationPanel|cv-parent-panel=CaseData~cv-component=BureauInformation_Panel~child-cv-component=widBureauGateway[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>CollateralInformation|cv-parent-panel=CaseData~cv-component=CollateralInformation_Panel~child-cv-component=widProposedCollateral[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>AffordabilityInformationPanel|cv-parent-panel=CaseData~cv-component=AffordabilityInformation_Panel~child-cv-component=widAffordabilityInformation[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>GenericCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnViewComments~cv-component=Actions_CaseActions~child-cv-component=btnSave~cv-component=Actions_CaseActions~child-cv-component=btnCancelCase~cv-component=Actions_CaseActions~child-cv-component=btnViewAuditTrails~cv-component=Actions_CaseActions~child-cv-component=btnDiarise~cv-component=Actions_CaseActions~child-cv-component=btnFlagForFraud</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DocumentCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnOpenDocuments~cv-component=Actions_CaseActions~child-cv-component=btnRequestDocuments~cv-component=Actions_CaseActions~child-cv-component=btnAddDocuments</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DataCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnRetrievePartyStatements~cv-component=Actions_CaseActions~child-cv-component=btnRefreshPartyData~cv-component=Actions_CaseActions~child-cv-component=btnREfreshBureauData</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>DiariseCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>FraudCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_QualityAssuranceVerification</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widFinalAssessment[SHOW]~child-cv-component=widVerificationException[SHOW]~child-cv-component=widFinalAssessmentIndicators[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>AccountPanel|cv-parent-panel=CaseData~cv-component=AccountSetup_Panel~child-cv-component=widAccountSetup[SHOW]</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankAccountDetails[SHOW]</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
@@ -1512,7 +1599,6 @@
             <attributeName>requiresSalaryToBeDepositedToCurrentAccount</attributeName>
             <value>true</value>
          </featureAttributes>
-
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>baseCBOActivityList</attributeName>
@@ -1558,7 +1644,6 @@
             <attributeName>CaseActivityPriority_CBOFinalizeCase</attributeName>
             <value>0|Weighting=0</value>
          </featureAttributes>
-
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>CaseActivityTeamName_InvestigateFraud</attributeName>
@@ -1570,14 +1655,14 @@
             <value>0|Weighting=0</value>
          </featureAttributes>
          <featureAttributes>
-           <attributeType>string</attributeType>
-           <attributeName>CaseActivityTeamName_GatherInformationAndDocuments</attributeName>
-           <value>PREPROD EDB Party Information Retriever|Weighting=0</value>
+            <attributeType>string</attributeType>
+            <attributeName>CaseActivityTeamName_GatherInformationAndDocuments</attributeName>
+            <value>PREPROD EDB Party Information Retriever|Weighting=0</value>
          </featureAttributes>
          <featureAttributes>
-           <attributeType>int</attributeType>
-           <attributeName>CaseActivityPriority_GatherInformationAndDocuments</attributeName>
-           <value>0|Weighting=0</value>
+            <attributeType>int</attributeType>
+            <attributeName>CaseActivityPriority_GatherInformationAndDocuments</attributeName>
+            <value>0|Weighting=0</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -1598,9 +1683,9 @@
       <featureAttributeGroup>
          <attributeGroupName>PresentOfferSelection</attributeGroupName>
          <featureAttributes>
-           <attributeType>string</attributeType>
-           <attributeName>OfferSelectionSummaryDetails</attributeName>
-           <value>OverdraftOfferSelectionSubSection|ng-component=OfferSelectionOverdraftComponent~ZOrder=90~ContractComponentProductType=1014</value>
+            <attributeType>string</attributeType>
+            <attributeName>OfferSelectionSummaryDetails</attributeName>
+            <value>OverdraftOfferSelectionSubSection|ng-component=OfferSelectionOverdraftComponent~ZOrder=90~ContractComponentProductType=1014</value>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -2097,11 +2182,11 @@
       <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
       <featureDisplayPosition>VAS</featureDisplayPosition>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=EnotesVASComponent-1374~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=EnotesVASComponent-1374~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
@@ -2182,11 +2267,11 @@
       <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
       <featureDisplayPosition>VAS</featureDisplayPosition>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=NoFundsAlertVASComponent-1008~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=NoFundsAlertVASComponent-1008~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
@@ -2267,11 +2352,11 @@
       <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
       <featureDisplayPosition>VAS</featureDisplayPosition>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GreenbacksComponent-1454~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GreenbacksComponent-1454~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
@@ -2352,11 +2437,11 @@
       <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
       <featureDisplayPosition>summary</featureDisplayPosition>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-AffinityProgrammesValueAddedServiceSelector-1400~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-AffinityProgrammesValueAddedServiceSelector-1400~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
@@ -2437,11 +2522,11 @@
       <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
       <featureDisplayPosition>VAS</featureDisplayPosition>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=NedbankInsuranceFuneralPlanComponent-1025~ProceduralStepName=Your offer~ZOrder=65</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=NedbankInsuranceFuneralPlanComponent-1025~ProceduralStepName=Your offer~ZOrder=65</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
@@ -2517,11 +2602,11 @@
       <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
       <featureDisplayPosition>VAS</featureDisplayPosition>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=SalarySwitchingComponent-1376~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=SalarySwitchingComponent-1376~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
@@ -2609,11 +2694,11 @@
       <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
       <featureDisplayPosition>VAS</featureDisplayPosition>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=DebitOrderSwitchingComponent-1380~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=DebitOrderSwitchingComponent-1380~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
@@ -2663,11 +2748,11 @@
       <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
       <featureDisplayPosition>preOffer</featureDisplayPosition>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-InstantGoldChequeCardValueAddedServiceSelector-219~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-InstantGoldChequeCardValueAddedServiceSelector-219~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
@@ -2718,11 +2803,11 @@
       <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
       <featureDisplayPosition>preOffer</featureDisplayPosition>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GoldChequeCardVASComponent-1386~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GoldChequeCardVASComponent-1386~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
@@ -2859,11 +2944,11 @@
       <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
       <featureDisplayPosition>VAS</featureDisplayPosition>
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=AmexCardVASComponent-1387~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=AmexCardVASComponent-1387~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
