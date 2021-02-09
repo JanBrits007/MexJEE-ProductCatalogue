@@ -12,7 +12,7 @@
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets review your details ~child-ng-components=ng-sub-heading~child-ng-components=ng-marital-details-approved-loan~child-ng-components=ng-employment-type-approved-loan~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+         <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets review your details~child-ng-components=ng-sub-heading~child-ng-components=ng-marital-details-approved-loan~child-ng-components=ng-employment-type-approved-loan~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -211,6 +211,13 @@
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
          <attributeName>ElectronicallySign</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+     <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>AccurateInformationProvidedConfirmation|ng-component=ng-accurate-information-provided-confirmation~ProceduralStepName=You’re almost done~child-ng-components=debitOrderMandate~child-ng-components=creditAndFraudCheckMandate~child-ng-components=honesty~ZOrder=60</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -443,25 +450,13 @@
       <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>GatherEvidence|ProceduralStepName=Upload documents~ZOrder=100</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>productDocumentPresentation|ProceduralStepName=Sign documents~ZOrder=90</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
          <attributeName>DigitalActivation|ng-component=ng-digital-activation~ProceduralStepName=Digital activation~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <!--consider moving this to client level when we move to case manager pattern-->
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>KeepingInTouch|ng-component=ng-keeping-in-touch~ProceduralStepName=Keep in touch~ZOrder=70</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>AccurateInformationProvidedConfirmation|ng-component=ng-accurate-information-provided-confirmation~ProceduralStepName=Confirmation~ZOrder=60~ContractComponentProductType=6389</attributeName>
-      </productAttributes>
+      </productAttributes>    
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>YoureDone|ng-component=ng-youre-done~ProceduralStepName=HideProceduralStep~ZOrder=50</attributeName>
