@@ -117,6 +117,18 @@
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
+       <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>LatestBankStatementsClauseV2</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+       <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>NedbankBondAccountNumber</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_EnableClients</attributeGroupName>
@@ -143,81 +155,67 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>AccurateInformationProvidedConfirmation|ng-component=YourDeclarationComponent~ProceduralStepName=You're almost done~ZOrder=60</attributeName>
       </productAttributes>
-   </productAttributeGroup>
+   </productAttributeGroup> 
    <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-      <productAttributes>
-         <attributeType>DocumentDescription</attributeType>
-         <attributeName>Terms and Conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Download</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Email</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Preview</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>DocTemplateName</attributeType>
-         <attributeName>ProductContract</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-      <productAttributes>
-         <attributeType>DocumentDescription</attributeType>
-         <attributeName>Application Form|nedbank-commercial-release/AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Download</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Email</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>WetSign</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>ElectronicallySign</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-      <productAttributes>
-         <attributeType>DocumentDescription</attributeType>
-         <attributeName>Client FAIS Record of Advice|nedbank-commercial-release/FAISRecordOfAdviceStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Download</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Email</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>WetSign</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>ElectronicallySign</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+      <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
      <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
+         <attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Signing the paperwork~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
          <attributeName>AccurateInformationProvidedConfirmation|ng-component=ng-accurate-information-provided-confirmation~ProceduralStepName=You’re almost done~child-ng-components=debitOrderMandate~child-ng-components=creditAndFraudCheckMandate~child-ng-components=honesty~ZOrder=60</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+       <productAttributes>
+         <attributeType>DocumentDescription</attributeType>
+         <attributeName>Terms and Conditions|nedbank-commercial-release/MBReadvancedAgreementProductContractUniversalEng|N/A|N/A|N/A|N/A</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>PresentHtml</attributeName>
+      </productAttributes>   
+   </productAttributeGroup>
+    <productAttributeGroup>
+      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/MBReadvancedAgreementProductContractUniversalEng</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subYourApplicationHeader</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subNedbankLogo</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/MBReadvancedAgreementProductContractUniversalEng</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subGenericInfo</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subContactInfo</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/MBReadvancedAgreementProductContractUniversalEng</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subHLGeneric|ContractComponentProductType=1210</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subHLTermsandCondition|ContractComponentProductType=1210</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+    <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/MBReadvancedAgreementProductContractUniversalEng_PresentHtml</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subHLTermsandCondition|ContractComponentProductType=1210</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
