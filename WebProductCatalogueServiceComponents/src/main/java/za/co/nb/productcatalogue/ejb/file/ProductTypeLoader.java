@@ -29,7 +29,7 @@ public class ProductTypeLoader {
             return (ProductType) unmarshaller.unmarshal(inputStream);
         } catch (Exception e) {
             e.printStackTrace();
-            throw new RuntimeException("Unable to find specification XML file for product ID " + XmlString);
+            throw new RuntimeException("Unable to find specification XML file, reason:"+ e.getMessage());
         }
 
     }
