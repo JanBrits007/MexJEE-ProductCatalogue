@@ -1,11 +1,7 @@
 package za.co.nb.productcatalogue.util;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
 import za.co.nb.productcatalogue.dao.ProductSpecificationsServiceDAO;
 import za.co.nb.productcatalogue.exception.InvalidAttributeException;
 import za.co.nb.productcatalogue.exception.InvalidAttributeGroupException;
@@ -15,6 +11,9 @@ import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.chann
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductAttributeGroupType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductattributesType;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductSpecificationUtil {
 
@@ -67,8 +66,23 @@ public class ProductSpecificationUtil {
 
 		// We can return only one. Return the first one.
 		return values.get(0);
-	}	
-	
+	}
+
+	public ProductattributesType getProductAttributes(ProductType productSpecification, String attributeGroup, String attributeName) throws InvalidAttributeException {
+
+		for(ProductAttributeGroupType productAttributeGroup :productSpecification.getProductAttributeGroup()) {
+
+			if (productAttributeGroup.getAttributeGroupName().equalsIgnoreCase(attributeGroup)) {
+				return productAttributeGroup.getProductAttributes()
+						.stream().parallel()
+						.filter(productAttributes -> productAttributes.getAttributeName().equals(attributeName)).findAny()
+						.orElseThrow(() -> new InvalidAttributeException("Invalid product specification attribute for product ID " + productSpecification.getProductIdentifier() + " with attribute group " + attributeGroup + " and attribute name " + attributeName));
+			}
+		}
+
+		throw new InvalidAttributeException("Invalid product specification attribute for product ID " + productSpecification.getProductIdentifier() + " with attribute group " + attributeGroup + " and attribute name " + attributeName);
+	}
+
 	public List<String> getProductOrFeatureAttributeValues(ProductType productSpecification, String attributeGroup, String attributeName) throws InvalidAttributeException {
 		mLog.debug("Trace 1 >>" + attributeGroup + "<<,>>" + attributeName + "<<");
 		
