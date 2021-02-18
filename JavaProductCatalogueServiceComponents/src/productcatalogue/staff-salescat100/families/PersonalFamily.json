@@ -6797,7 +6797,13 @@
 					"text": "Details"
 				  }
 				],
-				"lifeCycleStatus": "AVAILABLE"
+				"lifeCycleStatus": "AVAILABLE",
+				"applicationInitilizationContext":[
+					{
+						"contextType": "CHECK_GHOST_OFFER",
+						"contextValue": "true"
+					}
+				]
 			  }
 			]
 		  },
@@ -6868,7 +6874,7 @@
 					},
 					"actions": [
 							{
-								"type": "SELECT",
+								"type": "SELECT_GHOST",
 								"text": "Select",
 								"environments": [
 									"dev_staff",
@@ -6928,31 +6934,26 @@
 					"applicationSteps": [
 						{
 							"index": 1,
-							"name": "Authenticate",
-							"Description": "Let’s make sure that your information is secured by authenticating you."
-						},
-						{
-							"index": 2,
 							"name": "Choose extras",
 							"Description": "We may need additional details to tailor your product for you."
 						},
 						{
-							"index": 3,
+							"index": 2,
 							"name": "Credit info",
 							"Description": "Here's where you tell us how much you need and select your payment term."
 						},
 						{
-							"index": 4,
+							"index": 3,
 							"name": "About you",
 							"Description": "Confirm your personal details and any additional info that we may need. "
 						},
 						{
-							"index": 5,
+							"index": 4,
 							"name": "Customise",
 							"Description": "Choose your preferences, including card delivery and how staying in touch."
 						},
 						{
-							"index": 6,
+							"index": 5,
 							"name": "Finishing up",
 							"Description": "Finish the paperwork and get your loan!"
 						}
@@ -6961,7 +6962,13 @@
 					"lifeCycleStatus": "AVAILABLE",
 					"startApplicationScreen": {
 							"isRequired": "false"
-					}
+					},
+					"applicationInitilizationContext":[
+						{
+							"contextType": "CHECK_GHOST_OFFER",
+							"contextValue": "true"
+						}
+					]
 				},
 				{
 					"productIdentifier": "1141",
