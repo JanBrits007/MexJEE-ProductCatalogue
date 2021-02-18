@@ -1,6 +1,8 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1210</productIdentifier>
    <name>Home Loan Re-Advance 5210</name>
+   
+   <!--VerifyIdentity-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
       <productAttributes>
@@ -8,6 +10,8 @@
          <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--GenerateOfferGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
@@ -15,6 +19,8 @@
          <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets review your details~child-ng-components=ng-sub-heading~child-ng-components=ng-marital-details-approved-loan~child-ng-components=ng-employment-type-approved-loan~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--FinancialDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
       <productAttributes>
@@ -30,6 +36,8 @@
         <attributeName>OfferSummary|ProceduralStepName=Review~ZOrder=70</attributeName>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--GenerateOffer-->
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
       <productAttributes>
@@ -45,6 +53,8 @@
          <attributeName>OfferSummary|ng-component=PreApprovedOfferReviewComponent~child-ng-components=OfferProductSummaryHomeLoanReAdvanceProductComponent~ProceduralStepName=Review~ZOrder=70</attributeName>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--Need to verify-->
    <productAttributeGroup>
       <attributeGroupName>PresentOfferSelection</attributeGroupName>
       <productAttributes>
@@ -53,6 +63,8 @@
          <value>HomeLoanReAdvanceOfferSelectionSubSection|ng-component=ng-Home-Loan-Re-Advance-Offer-Selection-SubSection~ZOrder=100~isBase=Y~ContractComponentProductType=1209</value>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--ActivateProductsGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
@@ -68,24 +80,13 @@
          <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~ProceduralStepName=Employment details~ZOrder=80</attributeName>
       </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>clientEvidenceRequirement_ActivateProducts</attributeGroupName>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>PROOFOFINCOME</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>Bank Statement</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-   </productAttributeGroup>
+
+   <!--Need to verify-->
    <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
    </productAttributeGroup>
+
+   <!--ActivateProductsGatherEvidence-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GatherEvidence</attributeGroupName>
       <productAttributes>
@@ -109,18 +110,8 @@
          <attributeName>AccurateInformationProvidedConfirmation|ProceduralStepName=Your declaration~ZOrder=60</attributeName>
       </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>ProofOfIdentificationClause</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>clientEvidenceRequirement_EnableClients</attributeGroupName>
-   </productAttributeGroup>
+
+   <!--ActivateProductsGatherProductDetails--> 
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
@@ -144,75 +135,115 @@
          <attributeName>AccurateInformationProvidedConfirmation|ng-component=YourDeclarationComponent~ProceduralStepName=You're almost done~ZOrder=60</attributeName>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--ActivateProductsPresentDocuments-->
    <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-      <productAttributes>
-         <attributeType>DocumentDescription</attributeType>
-         <attributeName>Terms and Conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
+      <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+     <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Signing the paperwork~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
       <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Download</attributeName>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>AccurateInformationProvidedConfirmation|ng-component=ng-accurate-information-provided-confirmation~ProceduralStepName=You’re almost done~child-ng-components=debitOrderMandate~child-ng-components=creditAndFraudCheckMandate~child-ng-components=honesty~ZOrder=60</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>clientEvidenceRequirement_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>PROOFOFINCOME</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
       </productAttributes>
       <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Email</attributeName>
+         <attributeType>Evidence</attributeType>
+         <attributeName>Bank Statement</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
       </productAttributes>
+   </productAttributeGroup>
+
+   <!--Evidence And Compliance Requirements-->
+   <productAttributeGroup>
+      <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
       <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Preview</attributeName>
+         <attributeType>Evidence</attributeType>
+         <attributeName>ProofOfIdentificationClause</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
       </productAttributes>
-      <productAttributes>
-         <attributeType>DocTemplateName</attributeType>
-         <attributeName>ProductContract</attributeName>
+       <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>LatestBankStatementsClauseV2</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+       <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>NedbankBondAccountNumber</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-      <productAttributes>
+      <attributeGroupName>clientEvidenceRequirement_EnableClients</attributeGroupName>
+   </productAttributeGroup>   
+
+   <!--Document Configuration-->
+   <productAttributeGroup>
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Application Form|nedbank-commercial-release/AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+         <attributeName>Terms and Conditions|nedbank-commercial-release/MBReadvancedAgreementProductContractUniversalEng|N/A|N/A|N/A|N/A</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
-         <attributeName>Download</attributeName>
+         <attributeName>PresentHtml</attributeName>
+      </productAttributes>   
+   </productAttributeGroup>
+    <productAttributeGroup>
+      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/MBReadvancedAgreementProductContractUniversalEng</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subYourApplicationHeader</attributeName>
       </productAttributes>
       <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Email</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>WetSign</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>ElectronicallySign</attributeName>
+         <attributeType>string</attributeType>
+         <attributeName>subNedbankLogo</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/MBReadvancedAgreementProductContractUniversalEng</attributeGroupName>
       <productAttributes>
-         <attributeType>DocumentDescription</attributeType>
-         <attributeName>Client FAIS Record of Advice|nedbank-commercial-release/FAISRecordOfAdviceStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+         <attributeType>string</attributeType>
+         <attributeName>subGenericInfo</attributeName>
       </productAttributes>
       <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Download</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Email</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>WetSign</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>ElectronicallySign</attributeName>
+         <attributeType>string</attributeType>
+         <attributeName>subContactInfo</attributeName>
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/MBReadvancedAgreementProductContractUniversalEng</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subHLGeneric|ContractComponentProductType=1210</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subHLTermsandCondition|ContractComponentProductType=1210</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+    <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/MBReadvancedAgreementProductContractUniversalEng_PresentHtml</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subHLTermsandCondition|ContractComponentProductType=1210</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
      <productAttributes>
@@ -220,9 +251,12 @@
          <attributeName>AccurateInformationProvidedConfirmation|ng-component=ng-accurate-information-provided-confirmation~ProceduralStepName=You are almost done~child-ng-components=debitOrderMandate~child-ng-components=creditAndFraudCheckMandate~child-ng-components=honesty~ZOrder=60</attributeName>
       </productAttributes>
    </productAttributeGroup>
+   
    <productAttributeGroup>
       <attributeGroupName>productEvidenceRequirement_EnableClients</attributeGroupName>
    </productAttributeGroup>
+
+   <!-- Case and Process Configuration -->
    <productAttributeGroup>
       <attributeGroupName>EligibilityRules</attributeGroupName>
       <productAttributes>
