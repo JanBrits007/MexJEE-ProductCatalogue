@@ -11,9 +11,6 @@ public class ProductTypeCacheEJB {
 
     private HashMap<String, ProductType> productTypeHashMap;
 
-   // @Resource(name = "cache/productCatalogue")
-   // DistributedObjectCache cache;
-
     @PostConstruct
     public void init(){
         productTypeHashMap = new HashMap<>();
@@ -22,26 +19,20 @@ public class ProductTypeCacheEJB {
 
 
     public void put(String key, ProductType productType){
-
-        //cache.put(key, productType);
         productTypeHashMap.put(key, productType);
     }
 
     public ProductType  get(String key){
 
-       //return (ProductType) cache.get(key);
        return productTypeHashMap.get(key);
     }
 
     public boolean contains(String key){
-        //return cache.containsKey(key);
         return productTypeHashMap.containsKey(key);
     }
 
 
     public void invalidate(){
-
-        //cache.clear();
         productTypeHashMap.clear();
     }
 }
