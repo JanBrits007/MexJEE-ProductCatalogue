@@ -8,7 +8,7 @@
 	},
 	"actions": [	
 		{
-			"type": "SELECT",
+			"type": "SELECT_GHOST",
 			"text": "Select",
 			"environments": [
 				"dev",
@@ -105,5 +105,11 @@
 	"lifeCycleStatus": "AVAILABLE",
 	"startApplicationScreen": {
 		"isRequired": "false"
-	}
+	},
+	"applicationInitilizationContext":[
+		{
+			"contextType": "CHECK_GHOST_OFFER",
+			"contextValue": "true"
+		}
+	]
 }

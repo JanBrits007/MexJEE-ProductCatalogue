@@ -1,6 +1,8 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1210</productIdentifier>
    <name>Home Loan Re-Advance 5210</name>
+   
+   <!--VerifyIdentity-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
       <productAttributes>
@@ -8,6 +10,8 @@
          <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--GenerateOfferGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
@@ -15,6 +19,8 @@
          <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets review your details~child-ng-components=ng-sub-heading~child-ng-components=ng-marital-details-approved-loan~child-ng-components=ng-employment-type-approved-loan~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--FinancialDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
       <productAttributes>
@@ -30,6 +36,8 @@
         <attributeName>OfferSummary|ProceduralStepName=Review~ZOrder=70</attributeName>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--GenerateOffer-->
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
       <productAttributes>
@@ -45,6 +53,8 @@
          <attributeName>OfferSummary|ng-component=PreApprovedOfferReviewComponent~child-ng-components=OfferProductSummaryHomeLoanReAdvanceProductComponent~ProceduralStepName=Review~ZOrder=70</attributeName>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--Need to verify-->
    <productAttributeGroup>
       <attributeGroupName>PresentOfferSelection</attributeGroupName>
       <productAttributes>
@@ -53,6 +63,8 @@
          <value>HomeLoanReAdvanceOfferSelectionSubSection|ng-component=ng-Home-Loan-Re-Advance-Offer-Selection-SubSection~ZOrder=100~isBase=Y~ContractComponentProductType=1209</value>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--ActivateProductsGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
@@ -68,24 +80,13 @@
          <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~ProceduralStepName=Employment details~ZOrder=80</attributeName>
       </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>clientEvidenceRequirement_ActivateProducts</attributeGroupName>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>PROOFOFINCOME</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>Bank Statement</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-   </productAttributeGroup>
+
+   <!--Need to verify-->
    <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
    </productAttributeGroup>
+
+   <!--ActivateProductsGatherEvidence-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GatherEvidence</attributeGroupName>
       <productAttributes>
@@ -109,6 +110,62 @@
          <attributeName>AccurateInformationProvidedConfirmation|ProceduralStepName=Your declaration~ZOrder=60</attributeName>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--ActivateProductsGatherProductDetails--> 
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>GoingDigital|ng-component=ng-going-digital~ProceduralStepName=Going digital~ZOrder=160~applicableChannels=BranchStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisRecordOfAdvice|ng-component=ng-fais-record-of-advice~ProceduralStepName=FAIS record of discussion/advice~ZOrder=150~applicableChannels=BranchStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisDeclaration|ng-component=ng-fais-decloration~ProceduralStepName=FAIS declaration~ZOrder=140~applicableChannels=BranchStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>VisibleArrangementSubmissionSalesMilestone|ng-component=ng-visible-arrangement-submission-sales-milestone~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>AccurateInformationProvidedConfirmation|ng-component=YourDeclarationComponent~ProceduralStepName=You're almost done~ZOrder=60</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--ActivateProductsPresentDocuments-->
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+     <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Signing the paperwork~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>AccurateInformationProvidedConfirmation|ng-component=ng-accurate-information-provided-confirmation~ProceduralStepName=You’re almost done~child-ng-components=debitOrderMandate~child-ng-components=creditAndFraudCheckMandate~child-ng-components=honesty~ZOrder=60</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>clientEvidenceRequirement_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>PROOFOFINCOME</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>Bank Statement</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--Evidence And Compliance Requirements-->
    <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
       <productAttributes>
@@ -132,41 +189,9 @@
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_EnableClients</attributeGroupName>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>GoingDigital|ng-component=ng-going-digital~ProceduralStepName=Going digital~ZOrder=160~applicableChannels=BranchStaffAssisted</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisRecordOfAdvice|ng-component=ng-fais-record-of-advice~ProceduralStepName=FAIS record of discussion/advice~ZOrder=150~applicableChannels=BranchStaffAssisted</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisDeclaration|ng-component=ng-fais-decloration~ProceduralStepName=FAIS declaration~ZOrder=140~applicableChannels=BranchStaffAssisted</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>VisibleArrangementSubmissionSalesMilestone|ng-component=ng-visible-arrangement-submission-sales-milestone~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>AccurateInformationProvidedConfirmation|ng-component=YourDeclarationComponent~ProceduralStepName=You're almost done~ZOrder=60</attributeName>
-      </productAttributes>
-   </productAttributeGroup> 
-   <productAttributeGroup>
-      <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
-     <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Signing the paperwork~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>AccurateInformationProvidedConfirmation|ng-component=ng-accurate-information-provided-confirmation~ProceduralStepName=You’re almost done~child-ng-components=debitOrderMandate~child-ng-components=creditAndFraudCheckMandate~child-ng-components=honesty~ZOrder=60</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
+   </productAttributeGroup>   
+
+   <!--Document Configuration-->
    <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
        <productAttributes>
@@ -221,6 +246,8 @@
    <productAttributeGroup>
       <attributeGroupName>productEvidenceRequirement_EnableClients</attributeGroupName>
    </productAttributeGroup>
+
+   <!-- Case and Process Configuration -->
    <productAttributeGroup>
       <attributeGroupName>EligibilityRules</attributeGroupName>
       <productAttributes>
