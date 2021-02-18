@@ -121,7 +121,7 @@ public class RuleHandler1176 extends BaseProductSpecificationRuleHandler {
 
     @Override
     public String executeBusinessRules(String productIDToSubstitute, String caseID) throws BusinessRuleExecutionException {
-        mLog.info("Trace 1 >>" + productIDToSubstitute + "<<,>>" + caseID + "<<");
+        mLog.debug("Trace 1 >>" + productIDToSubstitute + "<<,>>" + caseID + "<<");
 
         // First get the list of arracgements allocated to the case.
         BusinessCaseManagementDAO dao = new BusinessCaseManagementDAO();
@@ -130,17 +130,17 @@ public class RuleHandler1176 extends BaseProductSpecificationRuleHandler {
 
         if(businessCase != null && businessCase.getClientInContextECN() != null && businessCase.getInitiatingChannelID() != null
                 && "397".equalsIgnoreCase(businessCase.getInitiatingChannelID())) {
-            mLog.info("New RuleHandler>>>>>>>>>>");
+            mLog.debug("Trace 2");
             BusinessCaseSegment businessCaseSegment = businessCase.getBusinessCaseSegment();
             if(businessCaseSegment != null && businessCaseSegment.getCluster() != null && businessCaseSegment.getDivision() != null){
                 if(businessCaseSegment.getCluster().equalsIgnoreCase("200") &&
                     businessCaseSegment.getDivision().equalsIgnoreCase("201")){
-                    mLog.info("Returning 2176>>>>>>>");
+                    mLog.debug("Trace 3");
                     return "2176";
                 }
             }
         }
-
+        mLog.debug("Trace 4");
         return productIDToSubstitute;
     }
 }
