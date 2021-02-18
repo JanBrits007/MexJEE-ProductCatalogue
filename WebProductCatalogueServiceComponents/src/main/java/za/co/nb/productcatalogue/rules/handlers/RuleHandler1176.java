@@ -12,11 +12,13 @@ import za.co.nb.productcatalogue.exceptions.BusinessRuleExecutionException;
 import za.co.nb.system.config.dao.SystemConfiguratorDAO;
 import za.co.nb.system.config.environment.Environment;
 
+import java.util.HashMap;
+
 public class RuleHandler1176 extends BaseProductSpecificationRuleHandler {
 
     private final Log mLog = LogFactory.getLog(getClass());
 
-    @Override
+    /*@Override
     public String executeBusinessRules(String productIDToSubstitute, String caseID) throws BusinessRuleExecutionException {
         mLog.debug("Trace 1 >>" + productIDToSubstitute + "<<,>>" + caseID + "<<");
 
@@ -66,8 +68,10 @@ public class RuleHandler1176 extends BaseProductSpecificationRuleHandler {
                 }
                 serviceUrl = builder.toString();
                 mLog.debug("Trace 2.2 Service URL : "+serviceUrl);
+                HashMap<String, String> requestProperties = new HashMap();
+                requestProperties.put("Content-Type", "application/json");
                 HttpClientUtil httpUtils = new HttpClientUtil();
-                JSONObject response=httpUtils.sendGET(serviceUrl,null);
+                JSONObject response=httpUtils.sendGET(serviceUrl,requestProperties);
 
                 if(response != null && response.get("resultSet") != null ){
                     String resultCode = (String)((JSONObject)response.get("resultSet")).get("resultCode");
@@ -113,6 +117,30 @@ public class RuleHandler1176 extends BaseProductSpecificationRuleHandler {
             mLog.debug("Trace 5");
             return productIDToSubstitute;
         }
-    }
+    }*/
 
+    @Override
+    public String executeBusinessRules(String productIDToSubstitute, String caseID) throws BusinessRuleExecutionException {
+        mLog.info("Trace 1 >>" + productIDToSubstitute + "<<,>>" + caseID + "<<");
+
+        // First get the list of arracgements allocated to the case.
+        BusinessCaseManagementDAO dao = new BusinessCaseManagementDAO();
+
+        BusinessCaseHeader businessCase = dao.retrieveBusinessCase(caseID);
+
+        if(businessCase != null && businessCase.getClientInContextECN() != null && businessCase.getInitiatingChannelID() != null
+                && "397".equalsIgnoreCase(businessCase.getInitiatingChannelID())) {
+            mLog.info("New RuleHandler>>>>>>>>>>");
+            BusinessCaseSegment businessCaseSegment = businessCase.getBusinessCaseSegment();
+            if(businessCaseSegment != null && businessCaseSegment.getCluster() != null && businessCaseSegment.getDivision() != null){
+                if(businessCaseSegment.getCluster().equalsIgnoreCase("200") &&
+                    businessCaseSegment.getDivision().equalsIgnoreCase("201")){
+                    mLog.info("Returning 2176>>>>>>>");
+                    return "2176";
+                }
+            }
+        }
+
+        return productIDToSubstitute;
+    }
 }
