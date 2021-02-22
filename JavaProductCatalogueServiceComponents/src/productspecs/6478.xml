@@ -18,7 +18,15 @@
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200</attributeName>
+         <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=10000.00~max=300000.00~isMandatory=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>OptionalExtras|ng-component=ValueAddedServicesV2Component~ProceduralStepName=Optional extras for you~ZOrder=100~isMandatory=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>WhatYouWillGet|ng-component=ProductSetupSummaryComponent~ProceduralStepName=What you'll get~ZOrder=50~isMandatory=true</attributeName>
       </productAttributes>
       <!--productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -34,11 +42,7 @@
 
    <!--GenerateOfferGatherClientDetails-->
    <productAttributeGroup>
-      <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~child-ng-components=ng-consent-capture~ZOrder=100</attributeName>
-      </productAttributes>
+      <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>      
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>FaisConversationRecordOfAdvice</attributeName>
@@ -385,6 +389,19 @@
          <value>200~201</value> <!-- Retail~PRB -->
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>CaseConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent1</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.rrb.Intent1RRBCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_ProductOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.RRBGenerateOfferCODHandler</value>
+      </productAttributes>
+   </productAttributeGroup>
 
    <!--Offer Configuration-->
 
@@ -625,6 +642,13 @@
          <attributeType>boolean</attributeType>
          <attributeName>consolidatedLeadEmail</attributeName>
          <value>true</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>FaisConversationRecordOfAdvice</attributeName>
       </productAttributes>
    </productAttributeGroup>
 

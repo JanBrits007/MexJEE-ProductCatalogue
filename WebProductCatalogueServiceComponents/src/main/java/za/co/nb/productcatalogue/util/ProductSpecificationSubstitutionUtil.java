@@ -62,27 +62,30 @@ public class ProductSpecificationSubstitutionUtil {
     	// First check whether this product ID has a handler defined for it.
         BaseProductSpecificationRuleHandler ruleHandler = getProductSubstitutionRuleHandler(productSpecificationID);
         
-        if(ruleHandler == null) {
-        	// There's no rule handler to switch out the product ID.
-        	return productSpecificationID;
-        }
 
-        // We have a handler. Need to determine whether it has already been run and the results have been cached in case DB.
-        ArrangementMetricsDAO dao = new ArrangementMetricsDAO();
-        
-        String caseID;
         
         try {
-        	caseID = dao.retrieveCaseIDByArrangementID(arrangementID);
-        }
-        catch(Exception e) {
+            String caseID = new ArrangementMetricsDAO().retrieveCaseIDByArrangementID(arrangementID);
+
+            BusinessCaseHeader businessCaseHeader = new BusinessCaseManagementDAO().retrieveBusinessCase(caseID);
+            boolean subsMap = false;
+            if(businessCaseHeader != null && businessCaseHeader.getProductIDSubstitutionMap().get(productSpecificationID) != null)
+                subsMap = true;
+
+
+            if(!subsMap && ruleHandler == null) {
+                // There's no rule handler to switch out the product ID.
+                return productSpecificationID;
+            }
+
+            return substituteBusinessCaseProductIDBasedOnBusinessRules(productSpecificationID, caseID, ruleHandler);
+        } catch(Exception e) {
         	e.printStackTrace();
-        	
+
         	// Got a problem. Fallback to no substitution.
 			return productSpecificationID;
         }
 
-        return substituteBusinessCaseProductIDBasedOnBusinessRules(productSpecificationID, caseID, ruleHandler);
     }
 
     private String substituteBusinessCaseProductIDBasedOnBusinessRules(String productSpecificationID, String caseID, BaseProductSpecificationRuleHandler ruleHandler) {

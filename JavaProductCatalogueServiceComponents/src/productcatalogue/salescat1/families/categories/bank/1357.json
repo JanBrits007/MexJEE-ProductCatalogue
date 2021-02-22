@@ -1,30 +1,28 @@
 {
-	"productIdentifier": 1019,
-	"name": "Savvy Plus",
-	"shortDescription": "Do your banking for a fixed monthly fee and enjoy the flexibility of adding benefits, such as an overdraft facility and Nedbank Greenbacks Rewards membership, when you need them.",
+	"productIdentifier": 1357,
+	"name": "Savvy Bundle",
+	"shortDescription": "Get the ultimate! This offer includes unlimited transactions, a platinum cheque and credit card and so much more.",
 	"productPricing": [{
 		"type": "AdminFee",
-		"amount": 115,
+		"amount": 220,
 		"frequency": "Monthly",
 		"currency": "ZAR",
-		"description": "R115.00 pm"
+		"description": "R220.00 pm"
 	}],
 	"specialFeature": "",
-	"salesHighlights": ["A gold cheque card",
+	"salesHighlights": ["Platinum cheque and credit cards.",
+	"American Express® cheque and credit cards.",
+	"The option of an overdraft facility.",
+	"Nedbank Greenbacks Money Management membership with double Greenbacks when using your American Express® cards.",
+	"Greenbacks SHOP Card.",
+	"Free digital banking through online banking, the Nedbank Money app and Cellphone Banking.",
 	"Unlimited card swipes.",
-	"Unlimited deposits at cash-accepting Nedbank ATMs.",
+	"Unlimited deposits at cash-accepting ATMs.",
+	"Unlimited Nedbank ATM cash withdrawals.",
 	"Unlimited cash withdrawals at point-of-sale devices at participating retailers.",
-	"Four free monthly withdrawals at Nedbank ATMs.",
 	"Unlimited debit orders.",
 	"Unlimited stop orders.",
-	"Free digital banking through online banking, the Nedbank Money app and Cellphone Banking.",
-	"SMS notifications (eNotes).",
-	"eStatements.",
-	"Access to the mobile-based Nedbank MobiMoney Account.",
-	"Access to MyPocket – a free budgeting and savings pocket linked to your account.",
-	"Nedbank Greenbacks Money Management membership.",
-	"The option of an overdraft facility.",
-	"Access to Send-iMail to send money quickly and securely to any South African cellphone."],
+	"Unlimited account payments and interaccount transfers on self-service channels."],
 	"redirect": {
 		"shouldRedirect": false,
 		"redirectUrl": null
@@ -63,20 +61,21 @@
 			"Description": "Finish the paperwork and activate your product!"
 		}
 	],
-	"valueAddedServices": ["eNotes (SMS) - Free",
-	"No funds alert - R10.00 per sms",
-	"MyPocket - Available",
+	"valueAddedServices": ["eNotes (SMS) - Included",
+	"No funds alert - Included",
+	"MyPocket - Included",
 	"Salary Switching - Available",
 	"Debit Order Switching - Available",
-	"Overdraft - Available",
-	"Nedbank Greenbacks Rewards Membership - R24 per month",
+	"Platinum credit card - Included",
+	"Overdraft - Facility fee included",
+	"Nedbank Greenbacks Rewards Membership - Included",
 	"Amex Card - Available",
 	"Affinity Programmes - Available",
 	"Nedbank Insurance Funeral Plan - Available"],
 	"productFeatures": [{
 		"name": "fee",
 		"displayName": "Monthly Fee",
-		"description": "R110.00"
+		"description": "R200.00"
 	},
 	{
 		"name": "Age",
@@ -86,12 +85,12 @@
 	{
 		"name": "Chequecard",
 		"displayName": "Cheque Card",
-		"description": "Gold cheque card included"
+		"description": "Platinum cheque card included"
 	},
 	{
 		"name": "Nedbankatmwithdrawals",
 		"displayName": "Nedbank ATM withdrawals",
-		"description": "First four Nedbank withdrawals included"
+		"description": "Nedbank ATM withdrawals included"
 	},
 	{
 		"name": "Debitordersinternal",
@@ -116,7 +115,7 @@
 	{
 		"name": "Cashwithdrawalsatparticipatingretailers",
 		"displayName": "Cash withdrawals",
-		"description": "Unlimited cash withdrawals at participating retailers point-of-sale included"
+		"description": "Unlimited cash withdrawals at participating retailers and at a Nedbank ATM included"
 	},
 	{
 		"name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
@@ -136,7 +135,7 @@
 	{
 		"name": "Domesticairportloungeaccess",
 		"displayName": "Domestic airport lounge",
-		"description": "n/a"
+		"description": "Twelve domestic lounge visits per annum"
 	},
 	{
 		"name": "Income",
@@ -151,17 +150,12 @@
 	{
 		"name": "Creditcard",
 		"displayName": "Credit card",
-		"description": "n/a"
+		"description": "Included"
 	},
 	{
 		"name": "Greenbacks",
 		"displayName": "Greenbacks",
-		"description": "Optional"
-	},
-	{
-		"name": "Chargecard",
-		"displayName": "Charge card",
-		"description": "n/a"
+		"description": "Included"
 	},
 	{
 		"name": "Electronicchannels",
@@ -176,12 +170,7 @@
 	{
 		"name": "Nofundsalert",
 		"displayName": "No-funds alert",
-		"description": "Optional"
-	},
-	{
-		"name": "Internationalairportloungeaccess",
-		"displayName": "International airport lounge",
-		"description": "n/a"
+		"description": "Included"
 	},
 	{
 		"name": "Balanceenquiry",
@@ -189,29 +178,9 @@
 		"description": "Included on Self Service channels"
 	},
 	{
-		"name": "Forexdelivery",
-		"displayName": "Forex delivery",
-		"description": "n/a"
-	},
-	{
 		"name": "Overdraft",
 		"displayName": "Overdraft",
-		"description": "n/a"
-	},
-	{
-		"name": "Investment",
-		"displayName": "Investment",
-		"description": "n/a"
-	},
-	{
-		"name": "Insurance",
-		"displayName": "Insurance",
-		"description": "n/a"
-	},
-	{
-		"name": "Tailoredfinancing",
-		"displayName": "Tailored financing",
-		"description": "n/a"
+		"description": "Included"
 	}],
 	"eligibilityRules": [{
 		"attributeType": "EligibilityRule",
@@ -240,6 +209,14 @@
 	{
 		"attributeType": "EligibilityRule",
 		"attributeName": "Income",
+		"minValue": "750001",
+		"maxValue": "999999999",
+		"valueUnit": "ZAR",
+		"description": ""
+	},
+	{
+		"attributeType": "EligibilityRule",
+		"attributeName": "Income",
 		"minValue": "300001",
 		"maxValue": "750000",
 		"valueUnit": "ZAR",
@@ -255,16 +232,8 @@
 	},
 	{
 		"attributeType": "EligibilityRule",
-		"attributeName": "Income",
-		"minValue": "36000",
-		"maxValue": "120000",
-		"valueUnit": "ZAR",
-		"description": ""
-	},
-	{
-		"attributeType": "EligibilityRule",
 		"attributeName": "Package",
-		"value": "An account only",
+		"value": "A bundled offering",
 		"valueUnit": "package"
 	},
 	{
