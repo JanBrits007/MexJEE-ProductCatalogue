@@ -246,8 +246,8 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     public ProductType getProductSpecificationXMLByID(String pProductSpecificationID) throws Exception {
         mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
 
-        List<Integer> productIDs = new ArrayList<Integer>();
-        productIDs.add(new Integer(pProductSpecificationID));
+        List<String> productIDs = new ArrayList<String>();
+        productIDs.add(pProductSpecificationID);
 
         List<ProductType> productSpecifications = getProductSpecificationXMLByID(productIDs);
 
@@ -274,15 +274,28 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 		
 		return jaxbContext;
 	}
+
+    public List<ProductType> getProductSpecificationXMLByID(List pProductSpecificationID) throws Exception {
+        mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
+
+    	List<String> productIDs = new ArrayList<String>();
+    	
+    	for(Object object: pProductSpecificationID) {
+    		productIDs.add(object.toString());
+    	}
+
+        mLog.debug("Trace 2 >>" + productIDs + "<<");
+    	
+    	return getProductSpecificationXMLsByStringIDs(productIDs);
+    }
     
-    public List<ProductType> getProductSpecificationXMLByID(List<Integer> pProductSpecificationID) throws Exception {
+    public List<ProductType> getProductSpecificationXMLsByStringIDs(List<String> pProductSpecificationID) throws Exception {
         mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
 
         List<ProductType> products = new ArrayList<ProductType>();
 
-        for (Integer id : pProductSpecificationID) {
+        for (String productId : pProductSpecificationID) {
 
-            String productId = String.valueOf(id);
             mLog.debug("Trace 2 >> productId:" + productId + "<<");
 
             if(productTypeCacheEJB.contains(productId)){
