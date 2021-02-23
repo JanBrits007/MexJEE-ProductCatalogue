@@ -345,6 +345,16 @@
          	<attributeName>ArrangementMandatoryAPO</attributeName>
          	<value>T2|T3</value>
         </productAttributes>
+        <productAttributes>
+         	<attributeType>string</attributeType>
+         	<attributeName>balanceTransferAllowedSupplier</attributeName>
+         	<value>STD BANK - MASTER CARD|FNB CREDIT CARD</value>
+        </productAttributes>
+        <productAttributes>
+         	<attributeType>string</attributeType>
+         	<attributeName>balanceTransferInterestRate</attributeName>
+         	<value>11.90</value>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
@@ -532,6 +542,11 @@
         <productAttributes>
 			<attributeType>boolean</attributeType>
 			<attributeName>ArrangementMandatoryAPOCheck</attributeName>
+			<value>true</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>balanceTransferAllowed</attributeName>
 			<value>true</value>
 		</productAttributes>
 	</productAttributeGroup>
@@ -821,6 +836,12 @@
                 <valueUnit>string</valueUnit>
                 <value />
             </featureAttributes>
+            <featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>ProvisioningPhase</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>preFICAProvisioning</value>
+			</featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>
             <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
@@ -980,6 +1001,12 @@
                 <valueUnit>PER</valueUnit>
                 <value>7016</value>
             </featureAttributes>
+            <featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>ProvisioningPhase</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>preFICAProvisioning</value>
+			</featureAttributes>
         </featureAttributeGroup>
     </features>
     <features>
@@ -1047,6 +1074,12 @@
                 <valueUnit>string</valueUnit>
                 <value />
             </featureAttributes>
+            <featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>ProvisioningPhase</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>preFICAProvisioning</value>
+			</featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>
             <attributeGroupName>placeholder-Fullstructure</attributeGroupName>

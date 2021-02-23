@@ -12302,28 +12302,14 @@
 			  {
 				"productIdentifier": "1464",
 				"name": "Nedbank TravelCard",
-				"shortDescription": "The Travel Card allows you to lock in your rate at the point of purchase, shielding you against currency fluctuations while travelling.",
+				"shortDescription": "The Nedbank Travel Card is a prepaid card, enabling you to transact seamlessly without having to carry cash while you travel abroad. The card is accepted around the globe, and you can load up to eight international currencies with locked-in exchange rates. All ages can apply.",
 				"productPricing": [],
 				"specialFeature": "Visit any forex branch",
 				"salesHighlights": [
-				  "A card that adapts to your needs",
-				  "The Nedbank Travel Card can be loaded with up to 8 different currencies at the same time, depending on your requirements.",
-				  "Secured and protected with chip, Pin and signature",
-				  "Your card comes with a five-digit PIN to ensure that no unauthorised person will be able to access your funds. ",
-				  "Free additional card",
-				  "When you purchase the Nedbank Travel Card, Nedbank will issue an additional card to you at no charge. This can be used as backup if the primary card is lost, stolen or damaged.",
-				  "Control",
-				  "Once you have downloaded the Nedbank App Suiteâ„¢ from your app store, you will be able to register the card on the Travel Card widget in the app, and view your balances and transaction history while travelling.",
-				  "Global card acceptance",
-				  "The Nedbank Travel Card is issued in association with Mastercard and is accepted globally at more than 34 million ATMs and merchant point-of-sale locations.",
-				  "Remote topup",
-				  "If you need to top up your Nedbank Travel Card while you are abroad, simply send an email to Nedbank RetailFX@nedbank.co.za and we will proccess your request.",
-				  "Emergency cash",
-				  "Should both cards be lost or stolen while you are travelling, call the Nedbank Contact Centre on 0860 555 111 and Nedbank will arrange emergency cash through one of our international Mastercard partners.",
-				  "Reloadable",
-				  "Your Nedbank Travel Card has a three-year lifespan. You will be able to reload your card multiple times if you travel again within the three year period.",
-				  "Free cashout",
-				  "No fees are charged when you cash out your card on return. "
+					"You can load up to eight international currencies with locked-in exchange rates.",
+					"With the Nedbank app or Online Banking you can:|manage your currency;|transfer the money on your card into your transactional account;|block your lost or stolen card; and|freeze your misplaced card and unfreeze it once you have found it.",
+					"When you use your card, it will automatically use the currency of the country you are visiting.",
+					"You can also get a backup card for free."
 				],
 				"redirect": {
 				  "shouldRedirect": false,
@@ -12381,7 +12367,18 @@
 					"description": "Cross-currency conversion fee - 4%"
 				  }
 				],
-				"eligibilityRules": [],
+				"eligibilityRules": [
+					{
+						"attributeType": "EligibilityRule",
+						"attributeName": "Features",
+						"description": "South African residents with a valid passport, travelling from South Africa by road, sea*, air* or rail* (* you will need to give proof of travel)."
+					},
+					{
+						"attributeType": "EligibilityRule",
+						"attributeName": "Features",
+						"description": "Foreign nationals with a valid study, work or spousal permit."
+					}
+				],
 				"lifeCycleStatus": "AVAILABLE"
 			  },
 			  {
@@ -12504,35 +12501,41 @@
 			  {
 				"productIdentifier": "1227",
 				"name": "Foreign Currency Account",
-				"shortDescription": "A Foreign Currency Account allows you to invest funds in major foreign currencies, USD, GBP, EUR",
+				"shortDescription": "With a Nedbank Foreign Currency Account you can save for travelling, invest or hedge your currency in eight currencies without having to pay monthly fees.",
 				"productPricing": [],
-				"specialFeature": "Visit any forex branch",
+				"specialFeature": "",
 				"salesHighlights": [
-				  "Affordable â€“ You can invest a minimum opening balance of 100 USD, GBP or EUR",
-				  "Peace of mind â€“ You may protect your investment against currency fluctuations without having to move funds offshore",
-				  "Cost-effective â€“ There are no monthly maintenance fees",
-				  "Convenience â€“ You can transfer funds in a foreign currency to an account held at an overseas bank (subject to exchange control regulations)"
+					"You need only R1 500 in any of the eight international currencies to open an FCA.",
+					"You can protect your investment against currency fluctuations without having to move money offshore.",
+					"You can transfer money in a foreign currency to an account at an overseas bank (depending on exchange control regulations).",
+					"You pay no monthly maintenance fees.",
+					"You can buy currency and later transfer it to your Nedbank Travel Card when you travel.",
+					"You can view your account balances and transaction history on the Nedbank Money app and Online Banking."
 				],
 				"redirect": {
 				  "shouldRedirect": false,
 				  "redirectUrl": null
 				},
-				"actions": [
-				  {
-					"type": "SELECT_EWCO",
-					"text": "Select"
-				  },
-				  {
-					"type": "DETAIL",
-					"text": "Details"
-				  }
-				],
+				"actions": [{
+					"type": "REDIRECT",
+					"text": "Select",
+					"value": "https://www.nedbank.co.za/content/forms/af/nedbank/Foreign-Currency-Account-Application.html"
+				},
+				{
+				"type": "DETAIL",
+				"text": "Details"
+				}],
 				"productFeatures": [
 				  {
 					"name": "MinimumCharge",
 					"displayName": "Minimum charge",
 					"description": "There are no monthly maintenance fees."
 				  }
+				],
+				"valueAddedServices": [
+					"You can invest R1 million a year (single discretionary allowance) without needing a tax compliance status letter (also known as a tax clearance certificate) from the South African Revenue Services (SARS).",
+					"You can have up to R10 million a year extra in foreign investment, but you will need a tax compliance status  letter from SARS.",
+					"To deposit or withdraw money into or from your FCA, please send an email with your account number and the value of the transaction to FCA@nedbank.co.za."
 				],
 				"eligibilityRules": [
 				  {
