@@ -8,8 +8,8 @@ import za.co.nb.juristic.productcatalogue.remoteejb.IJuristicProductSpecificatio
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 import za.co.nb.productcatalogue.cases.dao.BusinessCaseDAO;
 import za.co.nb.productcatalogue.dao.ArrangementMetricsDAO;
-import za.co.nb.productcatalogue.ejb.file.RawSpecString;
-import za.co.nb.productcatalogue.ejb.file.ProductTypeLoader;
+import za.co.nb.productcatalogue.ejb.util.RawSpecString;
+import za.co.nb.productcatalogue.ejb.util.ProductTypeLoader;
 import za.co.nb.productcatalogue.ejb.substitution.Banker;
 import za.co.nb.productcatalogue.ejb.substitution.Channel;
 import za.co.nb.productcatalogue.ejb.substitution.Subnet;
@@ -22,6 +22,7 @@ import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.chann
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductattributesType;
 
+import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -59,9 +60,20 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
     private IJuristicProductSpecifications juristicProductSpecificationsRemote;
     private ProductTypeLoader productTypeInheritanceLoader = new ProductTypeLoader();
+    private final ProductSpecificationUtil specUtil = new ProductSpecificationUtil();
 
     @EJB
     ProductTypeCacheEJB productTypeCacheEJB;
+
+    @EJB
+    DynamicWhitelistBean dynamicWhitelistBean;
+
+    private String environment;
+
+    @PostConstruct
+    public void init(){
+        environment = CachedNameSpaceBindingHelper.getNameSpaceBinding("ENVIRONMENT","ETE");
+    }
 
     public String getProductSpecificationXMLStringByID(String pProductSpecificationID) throws Exception {
         mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
@@ -333,9 +345,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 RawSpecString rawSpecString = readProductSpecificationFromResourceFile(productId);
 
                 if(!rawSpecString.isJuristic()){
-                    ProductType productType = productTypeInheritanceLoader.load(rawSpecString.getXmlString());
-                    productTypeCacheEJB.put(productId, productType);
-                    products.add(productType);
+                    cacheRetailProductType(products, productId, rawSpecString);
                     continue;
                 }else {
                     ProductType productType = (ProductType) JAXBIntrospector.getValue(jaxbUnmarshaller.unmarshal(new ByteArrayInputStream(rawSpecString.getXmlString().getBytes())));
@@ -369,6 +379,28 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
         return products;
     }
+
+    private void cacheRetailProductType(List<ProductType> products, String productId, RawSpecString rawSpecString) {
+        ProductType productType = productTypeInheritanceLoader.load(rawSpecString.getXmlString());
+        injectDynamicStaffList(productType, productId);
+
+        productTypeCacheEJB.put(productId, productType);
+        products.add(productType);
+    }
+
+    private void injectDynamicStaffList(ProductType productType, String productId){
+        try {
+            ProductattributesType productAttributes = specUtil.getProductAttributes(productType, "InitialisationSubstitutionRules" + environment, "SubstituteForWhiteListedNBNumbers");
+            if(productAttributes.getValue().contains("${{dynamicStaffList}}")){
+                String staffList = dynamicWhitelistBean.getStaffList(productId);
+                mLog.debug("staffList:" + staffList);
+                productAttributes.setValue(staffList);
+            }
+
+        }catch (InvalidAttributeException e){}
+    }
+
+
 
     public String maintainCatalogueOperations(MaintainCatalogueRequestType maintainCatalogueRequest) throws Exception {
         throw new Exception("The use of the database for product specifications has been deprecated. Please maintain product specifications in the relevant GIT repo.");

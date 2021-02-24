@@ -1,10 +1,9 @@
-package za.co.nb.productcatalogue.ejb.file;
+package za.co.nb.productcatalogue.ejb.util;
 
 
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;
-import za.co.nb.productcatalogue.ejb.ProductTypeJaxbContext;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
 
 import javax.xml.bind.JAXBException;
