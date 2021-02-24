@@ -509,6 +509,11 @@
    <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
       <productAttributes>
+         <attributeType>Boolean</attributeType>
+         <attributeName>ProductSupportsCreditCardRepaymentFromNewAccount</attributeName>
+         <value>True</value>
+      </productAttributes>
+      <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementEmploymentFilter</value>
@@ -1751,6 +1756,220 @@
             <attributeType>string</attributeType>
             <attributeName>provisioningMechanism</attributeName>
             <value>provisionToCRAG</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
+   <features>
+      <featureIdentifier>1333</featureIdentifier>
+      <name>Nedbank Greenbacks Shop Card</name>
+      <mandatory>false</mandatory>
+      <preSelected>true</preSelected>
+      <shortDescription>SHOP card</shortDescription>
+      <description>Great news! We've made it quick and easy to redeem all the Greenbacks you've earned with your very own SHOP card</description>
+      <featureGrouping>
+         <featureGroupName>Loyalty</featureGroupName>
+         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
+      </featureGrouping>
+      <featureType>BoltOn</featureType>
+      <referenceProductID>-1</referenceProductID>
+      <featureFulfilment>
+         <channel>selfServiceWeb</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureFulfilment>
+         <channel>staffAssisted</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+      <featureDisplayPosition>VAS</featureDisplayPosition>
+      <featureAttributeGroup>
+         <attributeGroupName>SystemRelated</attributeGroupName>
+         <featureAttributes>
+            <attributeType>Flag</attributeType>
+            <attributeName>StraightThroughProcess</attributeName>
+            <value>True</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+         <featureAttributes>
+            <attributeType>type</attributeType>
+            <attributeName>name</attributeName>
+            <minValue>1</minValue>
+            <maxValue>2</maxValue>
+            <valueUnit>text</valueUnit>
+            <value>some value</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSProdCd</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>CRD</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSCtlAdId</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>C1</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSRelCd</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>PRI</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSSCtlSlTnPgCd</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>6563</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSCredLnAmt</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSPayMethod</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>MAN</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSPlasticType</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>AG6</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSCrdStock</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>AG6</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSActType</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>PRI</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSATrRegistrationNbr</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>190105</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>provisionInBranch</attributeName>
+            <valueUnit>boolean</valueUnit>
+            <value>false</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSLangCd</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>ENG</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSSolicitationCode</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>7016</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
+   <features>
+      <featureIdentifier>1400</featureIdentifier>
+      <name>Affinity Rewards</name>
+      <mandatory>false</mandatory>
+      <preSelected>false</preSelected>
+      <shortDescription>Through our programmes you can support the arts, environmental conservation initiatives or sports or help needy children, at no cost to you. You choose the affinity programme you'd like to support.</shortDescription>
+      <description>Detailed description of feature</description>
+      <featureGrouping>
+         <featureGroupName>Loyalty</featureGroupName>
+         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
+      </featureGrouping>
+      <featureType>BoltOn</featureType>
+      <referenceProductID>-1</referenceProductID>
+      <featurePricing>
+         <fee>
+            <type>AdminFee</type>
+            <description />
+            <currency>ZAR</currency>
+            <amount>0</amount>
+            <frequency>Monthly</frequency>
+         </fee>
+      </featurePricing>
+      <featureFulfilment>
+         <channel>selfServiceWeb</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureFulfilment>
+         <channel>staffAssisted</channel>
+         <fulfilmentType>setting</fulfilmentType>
+         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+      </featureFulfilment>
+      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+      <featureDisplayPosition>summary</featureDisplayPosition>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-AffinityRewardsValueAddedServiceSelector-1400~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>SystemRelated</attributeGroupName>
+         <featureAttributes>
+            <attributeType>Flag</attributeType>
+            <attributeName>StraightThroughProcess</attributeName>
+            <value>True</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>FeatureCode</attributeName>
+            <valueUnit>string</valueUnit>
+            <value>ThisisthesFeaturecode</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>provisionInBranch</attributeName>
+            <valueUnit>boolean</valueUnit>
+            <value>false</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>legacyProductID</attributeName>
+            <valueUnit>string</valueUnit>
+            <value />
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+         <featureAttributes>
+            <attributeType>type</attributeType>
+            <attributeName>name</attributeName>
+            <minValue>1</minValue>
+            <maxValue>2</maxValue>
+            <valueUnit>text</valueUnit>
+            <value>some value</value>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
