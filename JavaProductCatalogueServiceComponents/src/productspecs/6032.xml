@@ -75,6 +75,10 @@
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryCreditCardComponent~ProceduralStepName=Your offer~ZOrder=60</attributeName>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--ActivateProductsGatherClientDetails-->
@@ -92,6 +96,10 @@
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80</attributeName>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--ActivateProductsGatherProductDetails-->
@@ -104,10 +112,6 @@
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=210</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>RepaymentSetup|ng-component=RepaymentSetupWidgetComponent~ProceduralStepName=Repayments setup~ZOrder=200</attributeName>
 		</productAttributes>
 		<productAttributes>
 			 <attributeType>productInformationRequirement</attributeType>
@@ -136,7 +140,7 @@
 		 </productAttributes>
 		 <productAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>AccurateInformationProvidedConfirmation|ProceduralStepName=Your declaration~ZOrder=60</attributeName>
+				<attributeName>FaisDeclaration|ProceduralStepName=FAIS declaration~ZOrder=60</attributeName>
 		 </productAttributes>
 	</productAttributeGroup>
 
@@ -157,7 +161,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>AccurateInformationProvidedConfirmation|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=60~ContractComponentProductType=1032</attributeName>
+			<attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=60~ContractComponentProductType=1032</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -274,7 +278,7 @@
 		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
 		<productAttributes>
 			<attributeType>DocumentDescription</attributeType>
-			<attributeName>Client FAIS Record of Advice|nedbank-commercial-release/CombinedFAISUniversal|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+			<attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISUniversal|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
@@ -730,7 +734,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CaseActivityTeamName_InvestigateFraud</attributeName>
-			<value>PREPROD EDB Fraud Investigation|Weighting=0</value>
+			<value>PREPROD EDB Fraud Investigation|Weighting=1</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>int</attributeType>
@@ -856,6 +860,36 @@
 			<attributeName>PricingPlanDiscriminator</attributeName>
 			<value>Client Risk Tier</value>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>1454</attributeType>
+			<attributeName>ProductRuleHandler_Greenbacks</attributeName>
+			<value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.GreenBacksRule</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>1333</attributeType>
+			<attributeName>ProductRuleHandler_ShopCard</attributeName>
+			<value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ShopCardRule</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>1334</attributeType>
+			<attributeName>ProductRuleHandler_MembershipReward</attributeName>
+			<value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.MembershipRewardRule</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>1465</attributeType>
+			<attributeName>ProductRuleHandler_RedemptionCard</attributeName>
+			<value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.RedemptionRule</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>1099</attributeType>
+			<attributeName>ProductRuleHandler_BalanceProtectionPlan</attributeName>
+			<value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>1100</attributeType>
+			<attributeName>ProductRuleHandler_PaymentProtectionPlan</attributeName>
+			<value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Offer Configuration-->
@@ -893,6 +927,11 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>VAS_1099</attributeName><!--Credit Card Insurance-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1447</attributeName><!--Own Credit Insurance-->
 			<value>Optionality=Optional~IsTakenUp=false</value>
 		</productAttributes>
 		<productAttributes>
@@ -1599,10 +1638,6 @@
 			</featureAttributes>
 			<featureAttributes>
 				<attributeType>string</attributeType>
-				<attributeName>subCardPaymentProtectionPlan|ContractComponentProductType=1099</attributeName>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>string</attributeType>
 				<attributeName>subStandardDisclosures|ContractComponentProductType=1099</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
@@ -1636,7 +1671,7 @@
 			</featureAttributes>
 		</featureAttributeGroup>
 		<featureAttributeGroup>
-			<attributeGroupName>Contract|nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+			<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 			<featureAttributes>
 				<attributeType>string</attributeType>
 				<attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1099</attributeName>

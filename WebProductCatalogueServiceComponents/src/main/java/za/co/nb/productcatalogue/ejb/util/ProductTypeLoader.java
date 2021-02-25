@@ -1,34 +1,34 @@
-package za.co.nb.productcatalogue.ejb.file;
+package za.co.nb.productcatalogue.ejb.util;
 
-import za.co.nb.productcatalogue.ejb.ProductTypeJaxbContext;
+import org.apache.commons.io.IOUtils;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.FeatureAttributeGroupType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.FeaturesType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductAttributeGroupType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
-import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductattributesType;
 
 import javax.xml.bind.Unmarshaller;
+import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpecificationLoader {
+public class ProductTypeLoader {
 
-    public ProductType load(String productID) {
-        ProductType productType = loadFile(productID);
+    public ProductType load(String xmlString) {
+        ProductType productType = toProductType(xmlString);
         loadParent(productType);
         return productType;
     }
 
-    private ProductType loadFile(String productID){
+    private ProductType toProductType(String XmlString){
         try{
-            InputStream inputStream = SpecificationLoader.class.getResourceAsStream("/productspecs/" + productID + ".xml");
             Unmarshaller unmarshaller = ProductTypeJaxbContext.getJAXBContext().createUnmarshaller();
-
+            InputStream inputStream = new ByteArrayInputStream(XmlString.getBytes());
             return (ProductType) unmarshaller.unmarshal(inputStream);
         } catch (Exception e) {
             e.printStackTrace();
-            throw new RuntimeException("Unable to find specification XML file for product ID " + productID);
+            throw new RuntimeException("Unable to find specification XML file, reason:"+ e.getMessage());
         }
 
     }
@@ -45,14 +45,24 @@ public class SpecificationLoader {
             if(child.getInheritFromFiles().trim().isEmpty())
                 throw new RuntimeException("productTpe.inheritanceFromFiles property cannot be empty");
 
-        ProductType parent = load(child.getInheritFromFiles());
+            String xmlString = loadRawFile(child.getInheritFromFiles());
+            ProductType parent = load(xmlString);
 
-        insertProductAttributeGroup(child, parent);
-        insertInheritedProductAttributeGroup(child);
+            insertProductAttributeGroup(child, parent);
+            insertInheritedProductAttributeGroup(child);
 
-        insertFeature(child, parent);
-        insertInheritedFeature(child);
-        insertInheritedFeatureAttribGroup(child);
+            insertFeature(child, parent);
+            insertInheritedFeature(child);
+            insertInheritedFeatureAttribGroup(child);
+    }
+
+    private String loadRawFile(String productId) {
+        try{
+            InputStream inputStream = ProductTypeLoader.class.getResourceAsStream("/productspecs/" + productId + ".xml");
+            return IOUtils.toString(inputStream, StandardCharsets.UTF_8.name());
+        }catch(Exception e){
+            throw new RuntimeException("Failed to load Child File:"+productId+".xml");
+        }
     }
 
     private void insertInheritedProductAttributeGroup(ProductType child) {
@@ -60,7 +70,8 @@ public class SpecificationLoader {
         for(ProductAttributeGroupType productAttributeGroup :child.getProductAttributeGroup()){
 
             if(productAttributeGroup.getInheritFromFiles() != null){
-                ProductType parent = loadFile(productAttributeGroup.getInheritFromFiles());
+                String xmlString = loadRawFile(productAttributeGroup.getInheritFromFiles());
+                ProductType parent = toProductType(xmlString);
                 for(ProductAttributeGroupType parentProductAttributeGroupType :parent.getProductAttributeGroup()){
                     if(productAttributeGroup.getAttributeGroupName().equals(parentProductAttributeGroupType.getAttributeGroupName())){
                         productAttributeGroup.getProductAttributes().addAll(parentProductAttributeGroupType.getProductAttributes());
@@ -78,7 +89,8 @@ public class SpecificationLoader {
         for(FeaturesType featuresType :child.getFeatures()){
 
             if(featuresType.getInheritFromFiles() != null){
-                ProductType parent = loadFile(featuresType.getInheritFromFiles());
+                String xmlString = loadRawFile(featuresType.getInheritFromFiles());
+                ProductType parent = toProductType(xmlString);
                 for(FeaturesType parentFeature :parent.getFeatures()){
                     if(featuresType.getFeatureIdentifier().toString().equals(parentFeature.getFeatureIdentifier().toString())){
                         featuresType.getFeatureAttributeGroup().addAll(parentFeature.getFeatureAttributeGroup());
@@ -113,7 +125,8 @@ public class SpecificationLoader {
     }
 
     private void insertInheritedFeatureAttribGroupParent(FeaturesType featuresType, FeatureAttributeGroupType featureAttributeGroupType) {
-        ProductType parent = loadFile(featureAttributeGroupType.getInheritFromFiles());
+        String xmlString = loadRawFile(featureAttributeGroupType.getInheritFromFiles());
+        ProductType parent = toProductType(xmlString);
 
         for(FeaturesType parentFeature :parent.getFeatures()){
             if(featuresType.getFeatureIdentifier().toString().equals(parentFeature.getFeatureIdentifier().toString())){

@@ -8,14 +8,15 @@
 	},
 	"actions": [	
 		{
-			"type": "SELECT",
+			"type": "SELECT_PRE_APPROVED",
 			"text": "Select",
 			"environments": [
 				"dev",
 				"ete",
 				"qa",
 				"qa_kiosk"
-			]
+			],
+			"value": "https://applynow.nedsecure.co.za/DigitalHomeloanApplication/Navigation/Index?aoheader"
 		},
 		{
 			"type": "REDIRECT",
@@ -73,37 +74,43 @@
 		{
 			"index": 1,
 			"name": "Authenticate",
-			"Description": "Register to log in with your Nedbank ID."
+			"Description": "Let’s make sure that your information is secured by authenticating you."
 		},
 		{
 			"index": 2,
-			"name": "Product setup",
-			"Description": "Setup your product to suit your needs."
+			"name": "Choose extras",
+			"Description": "We may need additional details to tailor your product for you."
 		},
 		{
 			"index": 3,
-			"name": "About you",
-			"Description": "Tell us more details about you."
+			"name": "Credit info",
+			"Description": "Here's where you tell us how much you need and select your payment term."
 		},
 		{
 			"index": 4,
-			"name": "Credit info",
-			"Description": "Only required if you need a credit facility."
+			"name": "About you",
+			"Description": "Confirm your personal details and any additional info that we may need. "
 		},
 		{
 			"index": 5,
-			"name": "Customisation",
-			"Description": "Choose your banker and card delivery."
+			"name": "Customise",
+			"Description": "Choose your preferences, including card delivery and how staying in touch."
 		},
 		{
 			"index": 6,
-			"name": "Finalisation",
-			"Description": "Upload documents and accept some T&Cs."
+			"name": "Finishing up",
+			"Description": "Finish the paperwork and get your loan!"
 		}
 	],
 	"productPricing": [],
 	"lifeCycleStatus": "AVAILABLE",
 	"startApplicationScreen": {
 		"isRequired": "false"
-	}
+	},
+	"applicationInitilizationContext":[
+		{
+			"contextType": "CHECK_GHOST_OFFER",
+			"contextValue": "HomeLoanReAdvance"
+		}
+	]
 }

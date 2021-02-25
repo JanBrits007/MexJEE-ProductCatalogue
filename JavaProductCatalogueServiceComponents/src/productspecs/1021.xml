@@ -57,6 +57,14 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
+   <attributeGroupName>CaseConfiguration</attributeGroupName>
+   <productAttributes>
+      <attributeType>string</attributeType>
+      <attributeName>CaptureFinancialDetails_FinaliseCase</attributeName>
+      <value>classname=za.co.nb.onboarding.product.phaserules.handlers.financialdetails.FinaliseCaseFinancialDetailsRuleHandler</value>
+   </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>      
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -515,6 +523,11 @@
          <attributeName>emailAddress</attributeName>
          <value>lijun@nedbank.co.za;fohnb@nedbank.co.za;mutheiwanan@nedbank.co.za;sunilp@Nedbank.co.za</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>pendDocsLiaisonComms</attributeName>
+         <value>EMAIL</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>DecisioningControl</attributeGroupName>
@@ -585,6 +598,22 @@
             <attributeName>CreditSummaryPlaceholderV2|sideStepperDisplayName=Credit summary~activityStep=Credit Info</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
+      <!--FinancialDetails-->
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>IncomeInformationV2|sideStepperDisplayName=Income details~activityStep=Credit Info~NettSalary~GrossSalary~SalaryAccountDetails</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>DebtObligationsInformationV2|sideStepperDisplayName=Debt obligations~activityStep=Credit Info</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>HouseholdExpensesInformationV2|sideStepperDisplayName=Household expenses~activityStep=Credit Info~TotalExpenses~DetailedExpenses</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
@@ -622,6 +651,14 @@
             <value>true</value>
          </featureAttributes>
       </featureAttributeGroup>
+      <!--<featureAttributeGroup>
+         <attributeGroupName>CaseConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>DataMiningHandler</attributeName>
+            <value>classname=za.co.nb.onboarding.product.datamining.handlers.rrb.RRBDataMiningHandler</value>
+         </featureAttributes>
+      </featureAttributeGroup>-->
    </features>
    <features>
       <featureIdentifier>1164</featureIdentifier>

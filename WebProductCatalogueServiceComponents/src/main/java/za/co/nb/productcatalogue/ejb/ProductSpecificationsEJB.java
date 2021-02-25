@@ -8,6 +8,8 @@ import za.co.nb.juristic.productcatalogue.remoteejb.IJuristicProductSpecificatio
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 import za.co.nb.productcatalogue.cases.dao.BusinessCaseDAO;
 import za.co.nb.productcatalogue.dao.ArrangementMetricsDAO;
+import za.co.nb.productcatalogue.ejb.util.RawSpecString;
+import za.co.nb.productcatalogue.ejb.util.ProductTypeLoader;
 import za.co.nb.productcatalogue.ejb.substitution.Banker;
 import za.co.nb.productcatalogue.ejb.substitution.Channel;
 import za.co.nb.productcatalogue.ejb.substitution.Subnet;
@@ -20,6 +22,8 @@ import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.chann
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductattributesType;
 
+import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
@@ -43,7 +47,6 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.List;
 
 @LocalBean
@@ -56,22 +59,26 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     private static final boolean ENABLE_XSD_VALIDATION = false;
 
     private IJuristicProductSpecifications juristicProductSpecificationsRemote;
+    private ProductTypeLoader productTypeInheritanceLoader = new ProductTypeLoader();
+    private final ProductSpecificationUtil specUtil = new ProductSpecificationUtil();
 
-    /*
-    @Resource(name = "cache/productCatalogue")
-    DistributedObjectCache cache;
-    */
+    @EJB
+    ProductTypeCacheEJB productTypeCacheEJB;
 
-    public String createProductSpecificationJSON(String pCustomerXML, String pName, String pLastName, Calendar pDateOfBirth, String pIDType, String pIDNumber, String pCustomerType, String pRequiredCustomerUID) throws Exception {
-        throw new Exception("The use of the DB2 database for product specifications has been deprecated. Please maintain product specifications in the relevant GIT repo.");
+    @EJB
+    DynamicWhitelistBean dynamicWhitelistBean;
+
+    private String environment;
+
+    @PostConstruct
+    public void init(){
+        environment = CachedNameSpaceBindingHelper.getNameSpaceBinding("ENVIRONMENT","ETE");
     }
 
     public String getProductSpecificationXMLStringByID(String pProductSpecificationID) throws Exception {
         mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
-
-        String xmlString = readProductSpecificationFromResourceFile(pProductSpecificationID);
-
-        return xmlString;
+        RawSpecString rawSpecString = readProductSpecificationFromResourceFile(pProductSpecificationID);
+        return rawSpecString.getXmlString();
     }
 
     
@@ -156,17 +163,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
         ProductType productSpec = getProductSpecificationXMLByID(productSpecificationID);
 
-        // What environment are we running in?
-        Object objref = null;
-
-        try {
-            objref = lookupObject("ENVIRONMENT");
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new Exception("Environment string namespace binding not defined in server");
-        }
-
-        String environment = (String) PortableRemoteObject.narrow(objref, String.class);
+        String environment = CachedNameSpaceBindingHelper.getNameSpaceBinding("ENVIRONMENT", "ETE");
 
         mLog.debug("Trace 2 >>" + environment + "<<");
 
@@ -174,7 +171,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         Substitution substitutionRule = getSubstitutionRules(productSpec, environment);
 
         if(substitutionRule == null)
-            return getProductSpecificationXMLByID(productSpecificationID);
+            return productSpec;
 
         // Must we substitute the product spec?
         if (substitutionRule instanceof Channel) {// subs Channel
@@ -183,9 +180,11 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             // Get the business case details.
             mLog.debug("Trace 9 >>" + caseHeader.getInitiatingChannelID() + "<<");
 
-            if ((caseHeader.getInitiatingChannelID() != null &&
-                    !caseHeader.getInitiatingChannelID().trim().isEmpty() && channel.getChannelIDWhitelist() != null && !channel.getChannelIDWhitelist().isEmpty())  &&
-                    channel.getChannelIDWhitelist().contains(caseHeader.getInitiatingChannelID().toLowerCase())) {
+            if ((caseHeader.getInitiatingChannelID() != null
+                    && !caseHeader.getInitiatingChannelID().trim().isEmpty()
+                    && channel.getChannelIDWhitelist() != null
+                    && !channel.getChannelIDWhitelist().isEmpty())
+                    && channel.getChannelIDWhitelist().contains(caseHeader.getInitiatingChannelID().toLowerCase())) {
                 // We must substitute.
                 mLog.debug("Trace 10 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + channel.getProductId() + "<< for channel >>" + caseHeader.getInitiatingChannelID() + "<<");
 
@@ -197,32 +196,17 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             mLog.debug("Trace 12 >>" + banker + "<<");
             mLog.debug("Trace 13 >>" + caseHeader.getInitiatingStaffNBNumber() + "<<");
 
-            if ((caseHeader.getInitiatingStaffNBNumber() != null &&
-                    !caseHeader.getInitiatingStaffNBNumber().trim().isEmpty()) &&
-                    banker.getType().toLowerCase().contains(caseHeader.getInitiatingStaffNBNumber().toLowerCase())) {
+            if ((caseHeader.getInitiatingStaffNBNumber() != null
+                    && !caseHeader.getInitiatingStaffNBNumber().trim().isEmpty())
+                    && banker.getType().toLowerCase().contains(caseHeader.getInitiatingStaffNBNumber().toLowerCase())) {
                 // We must substitute.
                 mLog.debug("Trace 14 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + banker.getProductId() + "<< for banker >>" + caseHeader.getInitiatingStaffNBNumber() + "<<");
 
                 return getProductSpecificationXMLByID(banker.getProductId());
             }
         }
-        /**
-        else if (substitutionRule instanceof Subnet) {
-            mLog.debug("Trace 8 >>" + substitutionRule + "<<");
 
-            mLog.debug("Trace 9 >>" + caseHeader.getInitiatingChannelID() + "<<");
-
-            if ((caseHeader.getInitiatingChannelID() != null &&
-                    !caseHeader.getInitiatingChannelID().trim().isEmpty()) &&
-                    substitutionRule.getType().toLowerCase().contains(caseHeader.getInitiatingChannelID().toLowerCase())) {
-                // We must substitute.
-                mLog.debug("Trace 10 Substituting product ID >>" + productSpecificationID + "<< for product ID >>" + substitutionRule.getProductId() + "<< for channel >>" + caseHeader.getInitiatingChannelID() + "<<");
-
-                return getProductSpecificationXMLByID(substitutionRule.getProductId());
-            }
-        }**/
-
-        return getProductSpecificationXMLByID(productSpecificationID);
+        return productSpec;
     }
 
 
@@ -274,8 +258,8 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     public ProductType getProductSpecificationXMLByID(String pProductSpecificationID) throws Exception {
         mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
 
-        List<Integer> productIDs = new ArrayList<Integer>();
-        productIDs.add(new Integer(pProductSpecificationID));
+        List<String> productIDs = new ArrayList<String>();
+        productIDs.add(pProductSpecificationID);
 
         List<ProductType> productSpecifications = getProductSpecificationXMLByID(productIDs);
 
@@ -302,20 +286,37 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 		
 		return jaxbContext;
 	}
-    
-    public List<ProductType> getProductSpecificationXMLByID(List<Integer> pProductSpecificationID) throws Exception {
+
+    public List<ProductType> getProductSpecificationXMLByID(List pProductSpecificationID) throws Exception {
         mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
 
-        ArrayList<ProductType> products = new ArrayList<ProductType>();
+    	List<String> productIDs = new ArrayList<String>();
+    	
+    	for(Object object: pProductSpecificationID) {
+    		productIDs.add(object.toString());
+    	}
 
-        for (Integer id : pProductSpecificationID) {
-            mLog.debug("Trace 2 >>" + id + "<<");
+        mLog.debug("Trace 2 >>" + productIDs + "<<");
+    	
+    	return getProductSpecificationXMLsByStringIDs(productIDs);
+    }
+    
+    public List<ProductType> getProductSpecificationXMLsByStringIDs(List<String> pProductSpecificationID) throws Exception {
+        mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
 
-            za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ObjectFactory objectFactory = new za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ObjectFactory();
-            ProductType prdType = objectFactory.createProductType();
+        List<ProductType> products = new ArrayList<ProductType>();
 
-            // We now only read from files.
-            String xmlString = readProductSpecificationFromResourceFile(id);
+        for (String productId : pProductSpecificationID) {
+
+            mLog.debug("Trace 2 >> productId:" + productId + "<<");
+
+            if(productTypeCacheEJB.contains(productId)){
+                ProductType productType = productTypeCacheEJB.get(productId);
+                mLog.debug("## CACHE ## productType:"+productType);
+                products.add(productType);
+                continue;
+            }
+
 
 //			mLog.debug("Trace 2.1 >>" + xmlString + "<<");
 
@@ -340,13 +341,16 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 }
 
                 mLog.debug("Trace 3.4");
+                // We now only read from files.
+                RawSpecString rawSpecString = readProductSpecificationFromResourceFile(productId);
 
-                Object schemaObject = JAXBIntrospector.getValue(jaxbUnmarshaller.unmarshal(new ByteArrayInputStream(xmlString.getBytes())));
-
-                mLog.debug("Trace 4");
-
-                prdType = (ProductType) schemaObject;
-                products.add(prdType);
+                if(!rawSpecString.isJuristic()){
+                    cacheRetailProductType(products, productId, rawSpecString);
+                    continue;
+                }else {
+                    ProductType productType = (ProductType) JAXBIntrospector.getValue(jaxbUnmarshaller.unmarshal(new ByteArrayInputStream(rawSpecString.getXmlString().getBytes())));
+                    products.add(productType);
+                }
 
                 mLog.debug("Trace 4.1");
             } catch (Exception e) {
@@ -356,7 +360,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 // Schema validator is a mess. It returns no stack trace on the exception. Need to specifically handle it.
                 if (e != null && e.getCause() != null) {
                     mLog.debug("Trace 4.3 >>" + e.getCause().getMessage() + "<<");
-                    throw new Exception("Schema validation failure for spec " + id + ". " + e.getCause().getMessage());
+                    throw new Exception("Schema validation failure for spec " + productId + ". " + e.getCause().getMessage());
                 }
 
                 mLog.debug("Trace 4.4");
@@ -376,13 +380,36 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         return products;
     }
 
+    private void cacheRetailProductType(List<ProductType> products, String productId, RawSpecString rawSpecString) {
+        ProductType productType = productTypeInheritanceLoader.load(rawSpecString.getXmlString());
+        injectDynamicStaffList(productType, productId);
+
+        productTypeCacheEJB.put(productId, productType);
+        products.add(productType);
+    }
+
+    private void injectDynamicStaffList(ProductType productType, String productId){
+        try {
+            ProductattributesType productAttributes = specUtil.getProductAttributes(productType, "InitialisationSubstitutionRules" + environment, "SubstituteForWhiteListedNBNumbers");
+            if(productAttributes.getValue().contains("${{dynamicStaffList}}")){
+                String staffList = dynamicWhitelistBean.getStaffList(productId);
+                mLog.debug("staffList:" + staffList);
+                productAttributes.setValue(staffList);
+            }
+
+        }catch (InvalidAttributeException e){}
+    }
+
+
+
     public String maintainCatalogueOperations(MaintainCatalogueRequestType maintainCatalogueRequest) throws Exception {
         throw new Exception("The use of the database for product specifications has been deprecated. Please maintain product specifications in the relevant GIT repo.");
     }
 
     private String readProductSpecificationFromResourceFile(Integer productID) throws Exception {
         mLog.debug("Trace 1");
-        return readProductSpecificationFromResourceFile(productID.toString());
+        RawSpecString rawSpecString = readProductSpecificationFromResourceFile(productID.toString());
+        return rawSpecString.getXmlString();
     }
 
     private Object lookupObject(String pJNDI) throws NamingException {
@@ -436,7 +463,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         }
     }
 
-    private String readProductSpecificationFromResourceFile(String productID) throws Exception {
+    private RawSpecString readProductSpecificationFromResourceFile(String productID) throws Exception {
         mLog.debug("Trace 1 >>" + productID + "<<");
 
         // Look for a string binding that switches this product spec out for another.
@@ -455,7 +482,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
                 String productSpecificationXMLByID = getJuristicProductSpecificationsRemote().getProductSpecificationsXML(productID);
                 if(productSpecificationXMLByID != null)
-                    return productSpecificationXMLByID;
+                    return new RawSpecString(true, productSpecificationXMLByID);
 
                 mLog.debug("Trace 2");
                 throw new Exception("Unable to find specification XML file for product ID " + productID);
@@ -467,7 +494,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
            // cache.putIfAbsent(productID, XMLSpec);
 
-            return XMLSpec;
+            return new RawSpecString(false, XMLSpec);
         } catch (IOException e) {
             e.printStackTrace();
             throw new Exception("Unable to find specification XML file for product ID " + productID);

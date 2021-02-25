@@ -1,21 +1,28 @@
-package za.co.nb.productcatalogue.ejb.file;
+package za.co.nb.productcatalogue.ejb.util;
 
 
+import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;
-import za.co.nb.productcatalogue.ejb.ProductTypeJaxbContext;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.StringWriter;
+import java.nio.charset.StandardCharsets;
 
 public class SpecificationLoaderTest {
 
     @Test
-    public void inheritanceTest() throws JAXBException {
-        SpecificationLoader specificationLoader = new SpecificationLoader();
-        ProductType productType = specificationLoader.load("100");
+    public void inheritanceTest() throws JAXBException, IOException {
+        ProductTypeLoader specificationLoader = new ProductTypeLoader();
+
+        String productId = "100";
+        InputStream inputStream = ProductTypeLoader.class.getResourceAsStream("/productspecs/" + productId + ".xml");
+        String xmlString = IOUtils.toString(inputStream, StandardCharsets.UTF_8.name());
+        ProductType productType = specificationLoader.load(xmlString);
 
         Assert.assertNotNull("productType - Object expected", productType);
         Assert.assertEquals("4 productAttribGroup expected",  4, productType.getProductAttributeGroup().size());

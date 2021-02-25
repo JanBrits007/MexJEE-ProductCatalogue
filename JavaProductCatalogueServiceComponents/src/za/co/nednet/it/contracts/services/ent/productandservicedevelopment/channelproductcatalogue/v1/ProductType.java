@@ -318,4 +318,13 @@ public class ProductType implements Serializable {
     public void setInheritFromFiles(String inheritFromFiles) {
         this.inheritFromFiles = inheritFromFiles;
     }
+
+    @Override
+    public String toString() {
+        return "ProductType{" +
+                "productIdentifier=" + productIdentifier +
+                ", name='" + name + '\'' +
+                ", shortDescription='" + shortDescription + '\'' +
+                '}';
+    }
 }

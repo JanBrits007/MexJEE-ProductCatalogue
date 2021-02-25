@@ -1,26 +1,23 @@
 {
 	"productIdentifier": "1464",
 	"name": "Nedbank Travel Card",
-	"shortDescription": "The Nedbank Travel Card offers you a safe, convenient and affordable way to access your money when you travel. It allows you to load up to 8 international currencies at locked-in exchange rates.",
+	"shortDescription": "The Nedbank Travel Card is a prepaid card, enabling you to transact seamlessly without having to carry cash while you travel abroad. The card is accepted around the globe, and you can load up to eight international currencies with locked-in exchange rates. All ages can apply.",
 	"productPricing": [],
-	"specialFeature": "Visit any forex branch",
-	"salesHighlights": ["Load up to 8 international currencies with locked-in exchange rate.",
-	"The card will automatically use the currency of the country where you are using the card.",
-	"Get a free back-up card.",
-	"We will arrange emergency cash for you should you lose both your cards.",
-	"No commission charged when you cash out your card on returning from your travels.",
-	"Reloadable and has a life span of 3 years.",
-	"Accepted globally at more than 34 million ATMs and merchant point-of-sale (POS) locations.",
-	"Remotely top-up your funds by emailing retailfx@nedbank.co.za with your request.",
-	"View your transactions on the Nedbank Money app"],
+	"specialFeature": "Apply Now",
+	"salesHighlights": [
+		"You can load up to eight international currencies with locked-in exchange rates.",
+		"With the Nedbank app or Online Banking you can:|manage your currency;|transfer the money on your card into your transactional account;|block your lost or stolen card; and|freeze your misplaced card and unfreeze it once you have found it.",
+		"When you use your card, it will automatically use the currency of the country you are visiting.",
+		"You can also get a backup card for free."
+	],
 	"redirect": {
 		"shouldRedirect": false,
 		"redirectUrl": null
 	},
 	"actions": [{
 		"type": "REDIRECT",
-		"text": "Branch locator",
-		"value": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/personal/tools-and-guidance/branch-locator.html"
+		"text": "Select",
+        "value": "https://www.nedbank.co.za/content/forms/af/nedbank/TravelCardApplication.html"
 	},
 	{
 		"type": "DETAIL",
@@ -66,6 +63,17 @@
 		"displayName": "Cross-currency conversion fee",
 		"description": "Cross-currency conversion fee - 4%"
 	}],
-	"eligibilityRules": [],
+	"eligibilityRules": [
+		{
+			"attributeType": "EligibilityRule",
+			"attributeName": "Features",
+			"description": "South African residents with a valid passport, travelling from South Africa by road, sea*, air* or rail* (* you will need to give proof of travel)."
+		},
+		{
+			"attributeType": "EligibilityRule",
+			"attributeName": "Features",
+			"description": "Foreign nationals with a valid study, work or spousal permit."
+		}
+	],
 	"lifeCycleStatus": "AVAILABLE"
 }
