@@ -597,54 +597,18 @@
             <attributeType>string</attributeType>
             <attributeName>DontCrossSellOnBaseComponentStatuses</attributeName>
             <value>1012</value>
-        </productAttributes>
-        <!-- Any attribute starting with VAS_ must be cross-sold. In this instance, the logic is complex so we tell the engine to run a specific class method to determine whether the component must be cross-sold -->
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1376</attributeName>
-            <value>classname=za.co.nb.offermanagement.crosssell.SalarySwitchingCrossSellHandler</value>
-        </productAttributes>
+        </productAttributes>      
         <!-- This is a basic cross-sell definition to say cross sell as optional and not defaulted to taken up -->
         <productAttributes>
             <attributeType>string</attributeType>
-            <attributeName>VAS_1380</attributeName>
-            <value>Optionality=Optional~IsTakenUp=false</value>
+            <attributeName>VAS_1083</attributeName>
+            <value>Optionality=Mandatory~IsTakenUp=true</value>
         </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
-            <attributeName>VAS_1374</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1008</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1454</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1025</attributeName>
-            <value>Optionality=Optional~IsTakenUp=false</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1402</attributeName>
-            <value>Optionality=Optional~IsTakenUp=false</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1387</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_219</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
+            <attributeName>VAS_1098</attributeName>
+            <value>Optionality=Mandatory~IsTakenUp=true</value>
+        </productAttributes>  
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>CaseConfiguration</attributeGroupName>
@@ -686,10 +650,6 @@
       <preSelected>true</preSelected>
       <shortDescription>Home Owners Cover</shortDescription>
       <description>Home Owners Cover</description>
-      <featureGrouping>
-         <featureGroupName>Overdraft</featureGroupName>
-         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-      </featureGrouping>
       <featureType>BoltOn</featureType>
       <referenceProductID>-1</referenceProductID>
       <featureAttributeGroup>
@@ -699,21 +659,7 @@
             <attributeName>StraightThroughProcess</attributeName>
             <value>true</value>
          </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>legacyProductID</attributeName>
-            <valueUnit>string</valueUnit>
-            <value>1176</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>provisioningMechanism</attributeName>
-            <value>provisionToCRAG</value>
-         </featureAttributes>
-      </featureAttributeGroup>
+      </featureAttributeGroup>     
       <featureAttributeGroup>
          <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
          <featureAttributes>
@@ -754,11 +700,7 @@
       <mandatory>true</mandatory>
       <preSelected>true</preSelected>
       <shortDescription>Life Cover</shortDescription>
-      <description>Life Cover</description>
-      <featureGrouping>
-         <featureGroupName>Overdraft</featureGroupName>
-         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-      </featureGrouping>
+      <description>Life Cover</description>   
       <featureType>BoltOn</featureType>
       <referenceProductID>-1</referenceProductID>
       <featureAttributeGroup>
@@ -768,21 +710,7 @@
             <attributeName>StraightThroughProcess</attributeName>
             <value>true</value>
          </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>legacyProductID</attributeName>
-            <valueUnit>string</valueUnit>
-            <value>1176</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>provisioningMechanism</attributeName>
-            <value>provisionToCRAG</value>
-         </featureAttributes>
-      </featureAttributeGroup>
+      </featureAttributeGroup> 
       <featureAttributeGroup>
          <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
          <featureAttributes>
