@@ -74,7 +74,7 @@ public class ProductSpecificationUtil {
 
 			if (productAttributeGroup.getAttributeGroupName().equalsIgnoreCase(attributeGroup)) {
 				return productAttributeGroup.getProductAttributes()
-						.stream().parallel()
+						.stream()
 						.filter(productAttributes -> productAttributes.getAttributeName().equals(attributeName)).findAny()
 						.orElseThrow(() -> new InvalidAttributeException("Invalid product specification attribute for product ID " + productSpecification.getProductIdentifier() + " with attribute group " + attributeGroup + " and attribute name " + attributeName));
 			}

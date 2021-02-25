@@ -1,4 +1,4 @@
-package za.co.nb.productcatalogue.ejb;
+package za.co.nb.productcatalogue.ejb.util;
 
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
 

@@ -6,7 +6,16 @@
 
 package za.co.nb.productcatalogue.services.rest.resources;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import za.co.nb.common.helper.namespacebinding.CachedNameSpaceBindingHelper;
+import za.co.nb.productcatalogue.dao.ProductSpecificationsJSONServiceDAO;
+import za.co.nb.productcatalogue.ejb.ProductTypeCacheEJB;
+import za.co.nb.productcatalogue.util.ProductSpecificationSubstitutionUtil;
+
+import javax.annotation.PostConstruct;
 import javax.annotation.security.PermitAll;
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ws.rs.GET;
 import javax.ws.rs.OPTIONS;
@@ -14,16 +23,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
-import za.co.nb.productcatalogue.dao.ProductSpecificationsJSONServiceDAO;
-import za.co.nb.productcatalogue.util.ProductSpecificationSubstitutionUtil;
 
 
 @Path( "/productSpecifications" )
@@ -33,26 +35,13 @@ public class ProductSpecificationsResource {
     /**
      * The name of this class
      */
-    public static final String className = ProductSpecificationsResource.class.getName();
+
 	private final Log mLog = LogFactory.getLog(getClass());
 
     private ProductSpecificationsJSONServiceDAO mProductSpecificationsDAO;
-    
-    private ProductSpecificationsJSONServiceDAO getProductSpecificationsDAO() {
-    	mLog.debug("Trace 1");
-    	
-    	if(mProductSpecificationsDAO == null) {
-        	mLog.debug("Trace 2");
-    		mProductSpecificationsDAO = new ProductSpecificationsJSONServiceDAO();
-    	}
-    	
-    	mLog.debug("Trace 3");
-    	
-    	return mProductSpecificationsDAO;
-    }
-    
-    @Context
-    javax.ws.rs.core.Application app;
+
+    @EJB
+	ProductTypeCacheEJB productTypeCacheEJB;
     
     @OPTIONS
     @PermitAll
@@ -93,4 +82,23 @@ public class ProductSpecificationsResource {
             return Response.status(Status.INTERNAL_SERVER_ERROR).build();
     	}
     }
+
+	private ProductSpecificationsJSONServiceDAO getProductSpecificationsDAO() {
+		mLog.debug("Trace 1");
+
+		if(mProductSpecificationsDAO == null) {
+			mLog.debug("Trace 2");
+			mProductSpecificationsDAO = new ProductSpecificationsJSONServiceDAO();
+		}
+
+		mLog.debug("Trace 3");
+
+		return mProductSpecificationsDAO;
+	}
+
+	@GET
+	@Path("/cache/invalidate")
+	public void invalidate(){
+    	productTypeCacheEJB.invalidate();
+	}
 }
