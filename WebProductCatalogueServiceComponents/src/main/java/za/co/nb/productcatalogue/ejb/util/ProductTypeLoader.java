@@ -1,7 +1,6 @@
-package za.co.nb.productcatalogue.ejb.file;
+package za.co.nb.productcatalogue.ejb.util;
 
 import org.apache.commons.io.IOUtils;
-import za.co.nb.productcatalogue.ejb.ProductTypeJaxbContext;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.FeatureAttributeGroupType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.FeaturesType;
 import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductAttributeGroupType;

@@ -1,4 +1,4 @@
-package za.co.nb.productcatalogue.ejb.file;
+package za.co.nb.productcatalogue.ejb.util;
 
 public class RawSpecString {
 

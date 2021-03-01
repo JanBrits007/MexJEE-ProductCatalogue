@@ -12,7 +12,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -509,16 +509,6 @@
    <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
       <productAttributes>
-         <attributeType>Boolean</attributeType>
-         <attributeName>ProductSupportsCreditCardRepaymentFromNewAccount</attributeName>
-         <value>True</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditRepaymentFilter</value>
-      </productAttributes>
-      <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementEmploymentFilter</value>
@@ -537,36 +527,6 @@
          <attributeType>string</attributeType>
          <attributeName>PricingPlanDiscriminator</attributeName>
          <value>CLIENT TYPE GROUPING</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1454</attributeType>
-         <attributeName>ProductRuleHandler_Greenbacks</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.GreenBacksRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1333</attributeType>
-         <attributeName>ProductRuleHandler_ShopCard</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ShopCardRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1334</attributeType>
-         <attributeName>ProductRuleHandler_MembershipReward</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.MembershipRewardRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1465</attributeType>
-         <attributeName>ProductRuleHandler_RedemptionCard</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.RedemptionRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1099</attributeType>
-         <attributeName>ProductRuleHandler_BalanceProtectionPlan</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1100</attributeType>
-         <attributeName>ProductRuleHandler_PaymentProtectionPlan</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -729,22 +689,7 @@
       <attributeGroupName>DecisioningControl</attributeGroupName>
       <productAttributes>
          <attributeType>boolean</attributeType>
-         <attributeName>EnforceIntent0FAISAccreditationRule</attributeName>
-         <value>true</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>String</attributeType>
-         <attributeName>FAISCategoryCode</attributeName>
-         <value>1.18</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>boolean</attributeType>
          <attributeName>ComponentSupportsDeclineReasons</attributeName>
-         <value>true</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>boolean</attributeType>
-         <attributeName>EnforceAgeValidationRules</attributeName>
          <value>true</value>
       </productAttributes>
    </productAttributeGroup>
@@ -1319,7 +1264,7 @@
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=CreditApplicationStatusComponent-1014~child-ng-components=OverdraftAccountDetails-1014~ZOrder=50</attributeName>
+            <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=CreditApplicationStatusComponent-1014~child-ng-components=OverdraftAccountDetails~ZOrder=50</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -1519,7 +1464,7 @@
         <attributeGroupName>productInformationRequirement_VerifyAffordabilityAndEmployment</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]~child-cv-component=widVerificationHistory[READONLY]</attributeName>
+          <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
         </featureAttributes>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
@@ -1537,6 +1482,18 @@
           <attributeType>productInformationRequirement</attributeType>
           <attributeName>EmploymentInformationPanel|cv-parent-panel=CaseData~cv-component=EmploymentInformation_Panel~child-cv-component=widEmploymentInformation[SHOW]</attributeName>
         </featureAttributes>
+        <featureAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>RelatedPartyInformation|cv-parent-panel=CaseData~cv-component=RelatedPartyInformation_Panel~child-cv-component=widRelatedPartyInformation[SHOW]</attributeName>
+      </featureAttributes>
+      <featureAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>InternalInformation|cv-parent-panel=CaseData~cv-component=InternalInformation_Panel~child-cv-component=widNedBankProducts[SHOW]~child-cv-component=widNedbankRetailRecoveriesInformation[SHOW]~child-cv-component=widNedbankInternalInformation[SHOW]</attributeName>
+       </featureAttributes>
+      <featureAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>CollateralInformation|cv-parent-panel=CaseData~cv-component=CollateralInformation_Panel~child-cv-component=widProposedCollateral[SHOW]</attributeName>
+       </featureAttributes>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
           <attributeName>BureauInformationPanel|cv-parent-panel=CaseData~cv-component=BureauInformation_Panel~child-cv-component=widBureauGateway[SHOW]</attributeName>
@@ -1625,7 +1582,7 @@
         <attributeGroupName>productInformationRequirement_QualityAssuranceVerification</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widFinalAssessment[SHOW]~child-cv-component=widVerificationException[SHOW]~child-cv-component=widFinalAssessmentIndicators[SHOW]~child-cv-component=widVerificationHistory[READONLY]</attributeName>
+          <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widFinalAssessment[SHOW]~child-cv-component=widVerificationException[SHOW]~child-cv-component=widFinalAssessmentIndicators[SHOW]</attributeName>
         </featureAttributes>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
@@ -1771,220 +1728,6 @@
             <attributeType>string</attributeType>
             <attributeName>provisioningMechanism</attributeName>
             <value>provisionToCRAG</value>
-         </featureAttributes>
-      </featureAttributeGroup>
-   </features>
-   <features>
-      <featureIdentifier>1333</featureIdentifier>
-      <name>Nedbank Greenbacks Shop Card</name>
-      <mandatory>false</mandatory>
-      <preSelected>true</preSelected>
-      <shortDescription>SHOP card</shortDescription>
-      <description>Great news! We've made it quick and easy to redeem all the Greenbacks you've earned with your very own SHOP card</description>
-      <featureGrouping>
-         <featureGroupName>Loyalty</featureGroupName>
-         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-      </featureGrouping>
-      <featureType>BoltOn</featureType>
-      <referenceProductID>-1</referenceProductID>
-      <featureFulfilment>
-         <channel>selfServiceWeb</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureFulfilment>
-         <channel>staffAssisted</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-      <featureDisplayPosition>VAS</featureDisplayPosition>
-      <featureAttributeGroup>
-         <attributeGroupName>SystemRelated</attributeGroupName>
-         <featureAttributes>
-            <attributeType>Flag</attributeType>
-            <attributeName>StraightThroughProcess</attributeName>
-            <value>True</value>
-         </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
-         <featureAttributes>
-            <attributeType>type</attributeType>
-            <attributeName>name</attributeName>
-            <minValue>1</minValue>
-            <maxValue>2</maxValue>
-            <valueUnit>text</valueUnit>
-            <value>some value</value>
-         </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>CAMSProdCd</attributeName>
-            <valueUnit>PER</valueUnit>
-            <value>CRD</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>CAMSCtlAdId</attributeName>
-            <valueUnit>PER</valueUnit>
-            <value>C1</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>CAMSRelCd</attributeName>
-            <valueUnit>PER</valueUnit>
-            <value>PRI</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>CAMSSCtlSlTnPgCd</attributeName>
-            <valueUnit>PER</valueUnit>
-            <value>6563</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>CAMSCredLnAmt</attributeName>
-            <valueUnit>PER</valueUnit>
-            <value>0</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>CAMSPayMethod</attributeName>
-            <valueUnit>PER</valueUnit>
-            <value>MAN</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>CAMSPlasticType</attributeName>
-            <valueUnit>PER</valueUnit>
-            <value>AG6</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>CAMSCrdStock</attributeName>
-            <valueUnit>PER</valueUnit>
-            <value>AG6</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>CAMSActType</attributeName>
-            <valueUnit>PER</valueUnit>
-            <value>PRI</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>CAMSATrRegistrationNbr</attributeName>
-            <valueUnit>PER</valueUnit>
-            <value>190105</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>provisionInBranch</attributeName>
-            <valueUnit>boolean</valueUnit>
-            <value>false</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>CAMSLangCd</attributeName>
-            <valueUnit>PER</valueUnit>
-            <value>ENG</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>CAMSSolicitationCode</attributeName>
-            <valueUnit>PER</valueUnit>
-            <value>7016</value>
-         </featureAttributes>
-      </featureAttributeGroup>
-   </features>
-   <features>
-      <featureIdentifier>1400</featureIdentifier>
-      <name>Affinity Rewards</name>
-      <mandatory>false</mandatory>
-      <preSelected>false</preSelected>
-      <shortDescription>Through our programmes you can support the arts, environmental conservation initiatives or sports or help needy children, at no cost to you. You choose the affinity programme you'd like to support.</shortDescription>
-      <description>Detailed description of feature</description>
-      <featureGrouping>
-         <featureGroupName>Loyalty</featureGroupName>
-         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-      </featureGrouping>
-      <featureType>BoltOn</featureType>
-      <referenceProductID>-1</referenceProductID>
-      <featurePricing>
-         <fee>
-            <type>AdminFee</type>
-            <description />
-            <currency>ZAR</currency>
-            <amount>0</amount>
-            <frequency>Monthly</frequency>
-         </fee>
-      </featurePricing>
-      <featureFulfilment>
-         <channel>selfServiceWeb</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureFulfilment>
-         <channel>staffAssisted</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-      <featureDisplayPosition>summary</featureDisplayPosition>
-      <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-AffinityRewardsValueAddedServiceSelector-1400~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>SystemRelated</attributeGroupName>
-         <featureAttributes>
-            <attributeType>Flag</attributeType>
-            <attributeName>StraightThroughProcess</attributeName>
-            <value>True</value>
-         </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>FeatureCode</attributeName>
-            <valueUnit>string</valueUnit>
-            <value>ThisisthesFeaturecode</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>provisionInBranch</attributeName>
-            <valueUnit>boolean</valueUnit>
-            <value>false</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>legacyProductID</attributeName>
-            <valueUnit>string</valueUnit>
-            <value />
-         </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
-         <featureAttributes>
-            <attributeType>type</attributeType>
-            <attributeName>name</attributeName>
-            <minValue>1</minValue>
-            <maxValue>2</maxValue>
-            <valueUnit>text</valueUnit>
-            <value>some value</value>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
@@ -3336,7 +3079,7 @@
    </features>
    <features>
       <featureIdentifier>1446</featureIdentifier>
-      <name>Overdraft Assurance</name>
+      <name>Overdrafdt Assurance</name>
       <mandatory>false</mandatory>
       <preSelected>true</preSelected>
       <shortDescription>Life Insurance with credit producct</shortDescription>

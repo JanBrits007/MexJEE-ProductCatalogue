@@ -9,6 +9,10 @@
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
+       <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--GenerateOfferVerifyEligibility-->
@@ -27,6 +31,10 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>FaisConversationRecordOfAdvice</attributeName>
+      </productAttributes>
+       <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -62,15 +70,15 @@
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80</attributeName>
       </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--ActivateProductsGatherProductDetails-->
    <productAttributeGroup>
-      <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>AccurateInformationProvidedConfirmation|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=200~ContractComponentProductType=1478</attributeName>
-      </productAttributes>
+      <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>      
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170</attributeName>
@@ -86,6 +94,10 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfAdviceIndividualComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=60~ContractComponentProductType=1478</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -111,10 +123,6 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>DigitalActivation|ProceduralStepName=Get activated on the app~ZOrder=80</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisDeclaration|ProceduralStepName=FAIS declaration~ZOrder=60</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -712,7 +720,7 @@
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>FaisConversationRecordOfAdvice</attributeName>
-      </productAttributes>
+      </productAttributes>     
    </productAttributeGroup>
 
    <features>

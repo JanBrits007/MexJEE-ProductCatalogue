@@ -1,6 +1,6 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1474</productIdentifier>
-   <name>Unlock.me</name>
+   <name>Unlocked.me</name>
    <shortDescription>(6474) Perfect for busy students, through free digital banking, this account gives you quick and easy access to cash.</shortDescription>
 
    <!--VerifyIdentity-->
@@ -512,6 +512,11 @@
          <attributeType>Boolean</attributeType>
          <attributeName>ProductSupportsCreditCardRepaymentFromNewAccount</attributeName>
          <value>True</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditRepaymentFilter</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -3062,7 +3067,7 @@
    </features>
    <features>
       <featureIdentifier>1386</featureIdentifier>
-      <name>Gold Cheque Card</name>
+      <name>Cheque Card</name>
       <mandatory>false</mandatory>
       <preSelected>true</preSelected>
       <shortDescription>Short description of feature</shortDescription>
