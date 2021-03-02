@@ -324,7 +324,6 @@ public class ProductType implements Serializable {
         return "ProductType{" +
                 "productIdentifier=" + productIdentifier +
                 ", name='" + name + '\'' +
-                ", shortDescription='" + shortDescription + '\'' +
                 '}';
     }
 }
