@@ -16,13 +16,16 @@ public class ProductSpecificationSubstitutionUtil {
     private final Log mLog = LogFactory.getLog(getClass());
 
     private BaseProductSpecificationRuleHandler getProductSubstitutionRuleHandler(String productSpecificationID) {
-		BaseProductSpecificationRuleHandler ruleHandler;
+	    mLog.debug("Trace 1 >>" + productSpecificationID + "<<");
+
+    	BaseProductSpecificationRuleHandler ruleHandler;
 		
 		try {
-		    mLog.debug("Trace 1");
 			Class theClass = Class.forName("za.co.nb.productcatalogue.rules.handlers.RuleHandler" + productSpecificationID);
 
 			ruleHandler = (BaseProductSpecificationRuleHandler)theClass.newInstance();
+
+		    mLog.debug("Trace 2 >>" + ruleHandler.getClass().getName() + "<<");
 			
 			return ruleHandler;
 		} catch (ClassNotFoundException e1) {
@@ -59,42 +62,55 @@ public class ProductSpecificationSubstitutionUtil {
     }
     
     public String substituteArrangementProductIDBasedOnBusinessRules(String productSpecificationID, String arrangementID) {
+        mLog.debug("Trace 1 >>" + productSpecificationID + "<<,>>" + arrangementID + "<<");
+        
     	// First check whether this product ID has a handler defined for it.
         BaseProductSpecificationRuleHandler ruleHandler = getProductSubstitutionRuleHandler(productSpecificationID);
-        
-
         
         try {
             String caseID = new ArrangementMetricsDAO().retrieveCaseIDByArrangementID(arrangementID);
 
             BusinessCaseHeader businessCaseHeader = new BusinessCaseManagementDAO().retrieveBusinessCase(caseID);
             boolean subsMap = false;
-            if(businessCaseHeader != null && businessCaseHeader.getProductIDSubstitutionMap().get(productSpecificationID) != null)
+            if(businessCaseHeader != null && businessCaseHeader.getProductIDSubstitutionMap().get(productSpecificationID) != null) {
+                mLog.debug("Trace 2");
                 subsMap = true;
-
+            }
 
             if(!subsMap && ruleHandler == null) {
+                mLog.debug("Trace 3");
+            	
                 // There's no rule handler to switch out the product ID.
                 return productSpecificationID;
             }
 
-            return substituteBusinessCaseProductIDBasedOnBusinessRules(productSpecificationID, caseID, ruleHandler);
+            mLog.debug("Trace 4");
+            
+            String productIDToSubstitute = substituteBusinessCaseProductIDBasedOnBusinessRules(productSpecificationID, caseID, ruleHandler);
+
+            mLog.debug("Trace 5 >>" + productIDToSubstitute + "<<");
+            		
+            return productIDToSubstitute;
         } catch(Exception e) {
+            mLog.debug("Trace 6");
         	e.printStackTrace();
 
         	// Got a problem. Fallback to no substitution.
 			return productSpecificationID;
         }
-
     }
 
     private String substituteBusinessCaseProductIDBasedOnBusinessRules(String productSpecificationID, String caseID, BaseProductSpecificationRuleHandler ruleHandler) {
-        // Get the case details via DAO.
+        mLog.debug("Trace 1");
+
+    	// Get the case details via DAO.
         BusinessCaseManagementDAO caseDAO = new BusinessCaseManagementDAO();
         
         BusinessCaseHeader businessCase = caseDAO.retrieveBusinessCase(caseID);
 
         if(businessCase == null) {
+            mLog.debug("Trace 1.1");
+            
         	// Fallback to no substitution.
         	return productSpecificationID;
         }
