@@ -9,6 +9,10 @@
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
+       <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--GenerateOfferVerifyEligibility-->
@@ -27,6 +31,10 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>FaisConversationRecordOfAdvice</attributeName>
+      </productAttributes>
+       <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -52,15 +60,19 @@
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~RemoveStatementDelivery=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
+         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~RemoveEmployedSince=true~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -82,7 +94,7 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfAdviceIndividualComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
+      </productAttributes>      
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>SalesMilestone|ng-component=CmsDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
@@ -108,10 +120,6 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>DigitalActivation|ProceduralStepName=Get activated on the app~ZOrder=80</attributeName>
       </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisDeclaration|ProceduralStepName=FAIS declaration~ZOrder=60</attributeName>
-      </productAttributes>
    </productAttributeGroup>
 
    <!--ActivateProductsPresentDocuments-->
@@ -131,7 +139,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>AccurateInformationProvidedConfirmation|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=10~ContractComponentProductType=1478</attributeName>
+         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=10~ContractComponentProductType=1478</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -140,7 +148,7 @@
       <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=TransactionalProductAccountDetails~ZOrder=50~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-219~GetInTouch=true~child-ng-components=ContactUsComponent</attributeName>
+         <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=NoFeeTransactionalProductAccountDetails~ZOrder=50~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-219~GetInTouch=true~child-ng-components=ContactUsComponent</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -402,6 +410,11 @@
          <attributeName>consumerFrameworkVersion</attributeName>
          <value>2.0</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>baseCBOActivityList</attributeName>
+         <value>ConfigureArrangement|CBOFinalizeCase</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
@@ -464,6 +477,21 @@
          <attributeName>CODHandler_ProductOffer</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.cde.rrb.Intent2RRBCODHandler</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent4</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.rrb.Intent4RRBCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <!--<productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>-->
    </productAttributeGroup>
 
    <!--Offer Configuration-->
@@ -712,7 +740,7 @@
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>FaisConversationRecordOfAdvice</attributeName>
-      </productAttributes>
+      </productAttributes>     
    </productAttributeGroup>
 
    <features>

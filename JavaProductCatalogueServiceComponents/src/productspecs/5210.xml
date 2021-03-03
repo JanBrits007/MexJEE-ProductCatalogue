@@ -25,7 +25,7 @@
       <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Are these details correct?~child-ng-components=financialDetailsConfirmation~readOnly=true~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+         <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Are these details correct?~child-ng-components=financialDetailsConfirmation~displaySummary=true~readOnly=true~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
      <productAttributes>
         <attributeType>productInformationRequirement</attributeType>
@@ -67,7 +67,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSummary|ng-component=PreApprovedOfferReviewComponent~child-ng-components=OfferProductSummaryHomeLoanReAdvanceProductComponent~ProceduralStepName=Review~ZOrder=70</attributeName>
+         <attributeName>OfferSummary|ng-component=PreApprovedOfferReviewComponent~child-ng-components=CreditLifeInsurance-1098~child-ng-components=PropertyInsurance-1083~ProceduralStepName=Review~ZOrder=70</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -132,7 +132,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>DisclosureWidgetComponent|ng-component=DisclosureWidgetComponent-confirmation~ProceduralStepName=You're almost done~child-ng-components=debitOrderMandate~child-ng-components=creditAndFraudCheckMandate~child-ng-components=honesty~ZOrder=80</attributeName>
+         <attributeName>DisclosureWidgetComponent|ng-component=DisclosureWidgetComponent~ProceduralStepName=You're almost done~child-ng-components=debitOrderMandate~child-ng-components=creditAndFraudCheckMandate~child-ng-components=honesty~ZOrder=80</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -150,16 +150,7 @@
       <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>DigitalActivation|ng-component=ng-digital-activation~ProceduralStepName=Digital activation~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <!--consider moving this to client level when we move to case manager pattern-->
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>KeepingInTouch|ng-component=ng-keeping-in-touch~ProceduralStepName=Keep in touch~ZOrder=70</attributeName>
-      </productAttributes>    
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDone|ng-component=ng-youre-done~ProceduralStepName=HideProceduralStep~ZOrder=50</attributeName>
+         <attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~child-ng-components=PreApprovedLoanComponent-1210~child-ng-components=DocumentationComponent-1210~child-ng-components=LocateBranchComponent~child-ng-components=ContactUsComponent~child-ng-components=EmailUsComponent~ZOrder=50</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -489,12 +480,12 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>breadcrumbSteps</attributeName>
-         <value>Your product|About you|Customisation|Finalisation</value>
+         <value>Authenticate|Choose extras|Credit info|About you|Finalisation</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Your Product|GenerateOfferVerifyEligibility=Your Product|GenerateOfferGatherClientDetails=Your product|FinancialDetails=Your product|GenerateOffer=Your product|ReevaluateOffer=Your product|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
+         <value>VerifyIdentity=Choose extras|GenerateOfferVerifyEligibility=Choose extras|GenerateOfferGatherClientDetails=Choose extras|FinancialDetails=Credit info|GenerateOffer=Credit info|ReevaluateOffer=Credit info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Finalisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -598,52 +589,16 @@
             <attributeName>DontCrossSellOnBaseComponentStatuses</attributeName>
             <value>1012</value>
         </productAttributes>
-        <!-- Any attribute starting with VAS_ must be cross-sold. In this instance, the logic is complex so we tell the engine to run a specific class method to determine whether the component must be cross-sold -->
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1376</attributeName>
-            <value>classname=za.co.nb.offermanagement.crosssell.SalarySwitchingCrossSellHandler</value>
-        </productAttributes>
         <!-- This is a basic cross-sell definition to say cross sell as optional and not defaulted to taken up -->
         <productAttributes>
             <attributeType>string</attributeType>
-            <attributeName>VAS_1380</attributeName>
-            <value>Optionality=Optional~IsTakenUp=false</value>
+            <attributeName>VAS_1083</attributeName>
+            <value>Optionality=Mandatory~IsTakenUp=true</value>
         </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
-            <attributeName>VAS_1374</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1008</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1454</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1025</attributeName>
-            <value>Optionality=Optional~IsTakenUp=false</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1402</attributeName>
-            <value>Optionality=Optional~IsTakenUp=false</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1387</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_219</attributeName>
-            <value>Optionality=Optional~IsTakenUp=true</value>
+            <attributeName>VAS_1098</attributeName>
+            <value>Optionality=Mandatory~IsTakenUp=true</value>
         </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -657,6 +612,11 @@
          <attributeType>string</attributeType>
          <attributeName>GenerateOfferGatherClientDetails_AffordabilityMiningHandler</attributeName>
          <value>classname=za.co.nb.onboarding.product.affordabilitymining.handlers.retail.PreApprovedOfferAffordabilityMiningHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_FinancialDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.hl.FinancialDetailsHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -686,10 +646,6 @@
       <preSelected>true</preSelected>
       <shortDescription>Home Owners Cover</shortDescription>
       <description>Home Owners Cover</description>
-      <featureGrouping>
-         <featureGroupName>Overdraft</featureGroupName>
-         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-      </featureGrouping>
       <featureType>BoltOn</featureType>
       <referenceProductID>-1</referenceProductID>
       <featureAttributeGroup>
@@ -698,20 +654,6 @@
             <attributeType>Flag</attributeType>
             <attributeName>StraightThroughProcess</attributeName>
             <value>true</value>
-         </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>legacyProductID</attributeName>
-            <valueUnit>string</valueUnit>
-            <value>1176</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>provisioningMechanism</attributeName>
-            <value>provisionToCRAG</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -745,6 +687,11 @@
             <attributeType>boolean</attributeType>
             <attributeName>requiresSalaryToBeDepositedToCurrentAccount</attributeName>
             <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>propertyInsurance</attributeName>
+            <value>1083</value>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
@@ -755,10 +702,6 @@
       <preSelected>true</preSelected>
       <shortDescription>Life Cover</shortDescription>
       <description>Life Cover</description>
-      <featureGrouping>
-         <featureGroupName>Overdraft</featureGroupName>
-         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-      </featureGrouping>
       <featureType>BoltOn</featureType>
       <referenceProductID>-1</referenceProductID>
       <featureAttributeGroup>
@@ -767,20 +710,6 @@
             <attributeType>Flag</attributeType>
             <attributeName>StraightThroughProcess</attributeName>
             <value>true</value>
-         </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>legacyProductID</attributeName>
-            <valueUnit>string</valueUnit>
-            <value>1176</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>provisioningMechanism</attributeName>
-            <value>provisionToCRAG</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -814,6 +743,11 @@
             <attributeType>boolean</attributeType>
             <attributeName>requiresSalaryToBeDepositedToCurrentAccount</attributeName>
             <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>creditInsurance</attributeName>
+            <value>1098</value>
          </featureAttributes>
       </featureAttributeGroup>
    </features>

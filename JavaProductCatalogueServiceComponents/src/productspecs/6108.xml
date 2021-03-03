@@ -1,15 +1,11 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-   <productIdentifier>1400</productIdentifier>
-   <name>Young Professional Bundle</name>
+   <productIdentifier>1108</productIdentifier>
+   <name>Professional Pay-As-You-Use</name>
    <productAttributeGroup>
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Compliance</attributeType>
          <attributeName>NotUnderCreditAdministrationV2</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Compliance</attributeType>
-         <attributeName>ConsentEducationalQualification</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -32,12 +28,6 @@
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>EducationQualification</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
@@ -47,7 +37,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OverdraftDetailsV2|min=2000.00~max=300000.00</attributeName>
+         <attributeName>OverdraftDetailsV2|min=5000.00~max=300000.00</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -61,9 +51,9 @@
          <attributeName>Age</attributeName>
          <isComparable>false</isComparable>
          <minValue>18</minValue>
-         <maxValue>29</maxValue>
+         <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>be at least 18 years old and no older than 29 years old.</description>
+         <description>be at least 18 years old.</description>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -83,13 +73,13 @@
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>FaisConversationRecordOfAdvice</attributeName>
-      </productAttributes>      
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Young professional bundle terms and conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
+         <attributeName>Professional pay-as-you-use terms and conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -108,7 +98,7 @@
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Young professional bundle application form|nedbank-commercial-release/AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+         <attributeName>Professional pay-as-you-use application form|nedbank-commercial-release/AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -157,13 +147,9 @@
          <attributeName>DeclarationInformationV2|sideStepperDisplayName=Your declaration~ZOrder=200</attributeName>
       </productAttributes>
       <productAttributes>
-        <attributeType>productInformationRequirement</attributeType>
-        <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1164~allowCardCollection~allowCardDelivery</attributeName>
-      </productAttributes>
-      <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>RelationshipBankerInformationV2|sideStepperDisplayName=Your relationship banker</attributeName>
-      </productAttributes>
+      </productAttributes>      
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>FaisRecordOfAdvice~RecordOfDiscussion</attributeName>
@@ -282,36 +268,36 @@
          <attributeName>dcar</attributeName>
          <value>51911</value>
       </productAttributes>
-       <productAttributes>
+      <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>mdmAdminFieldType</attributeName>
          <value>1004</value>
-       </productAttributes>
-       <productAttributes>
+      </productAttributes>
+      <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>mdmSubProductCode</attributeName>
-         <value>2055</value>
-       </productAttributes>
-       <productAttributes>
+         <value>1089</value>
+      </productAttributes>
+      <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>mdmAccountRoleType</attributeName>
          <value>1046</value>
-       </productAttributes>
-       <productAttributes>
+      </productAttributes>
+      <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>mdmAdminSystemType</attributeName>
          <value>1001</value>
-       </productAttributes>
-       <productAttributes>
+      </productAttributes>
+      <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>productCategory</attributeName>
          <value>00016</value>
-       </productAttributes>
-       <productAttributes>
+      </productAttributes>
+      <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>productSubCategory</attributeName>
-         <value>22</value>
-       </productAttributes>
+         <value>0</value>
+      </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>schemeCode</attributeName>
@@ -525,11 +511,6 @@
          <attributeName>pendDocsLiaisonComms</attributeName>
          <value>EMAIL</value>
       </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>declineComms</attributeName>
-         <value>SMS</value>
-      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>DecisioningControl</attributeGroupName>
@@ -552,6 +533,17 @@
          <value>200~201</value> <!-- Retail~PRB -->
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
+	  <productAttributes>
+            <attributeName>SubstituteForIPSubnets</attributeName>
+            <value>192.168.0.0|172.238.0.0|168.142.0.0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>5389</value>
+      </productAttributes>
+   </productAttributeGroup>   
    <features>
       <featureIdentifier>0</featureIdentifier>
       <featureType>BundledProduct</featureType>
@@ -582,7 +574,7 @@
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>ComplianceInformationV2|displaySummary=true~sideStepperDisplayName=Compliance information~MaritalStatus~PrimaryNationality~CountryOfBirth~CountryOfResidence~SourceOfFunds~FATCRS~ClientConsent</attributeName>
-         </featureAttributes>         
+         </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>IncomeInformationV2|sideStepperDisplayName=Income details~activityStep=Credit Info~NettSalary~GrossSalary~SalaryAccountDetails</attributeName>
@@ -644,7 +636,11 @@
       <mandatory>false</mandatory>
       <preSelected>false</preSelected>
       <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>         
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1164~allowCardCollection~allowCardDelivery</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
@@ -726,7 +722,7 @@
             <valueUnit>string</valueUnit>
             <value>1055</value>
         </featureAttributes>
-      </featureAttributeGroup>
+    </featureAttributeGroup>
    </features>   
    <features>
       <featureIdentifier>4387</featureIdentifier>
@@ -820,7 +816,7 @@
             <valueUnit>string</valueUnit>
             <value>1055</value>
         </featureAttributes>
-      </featureAttributeGroup>
+     </featureAttributeGroup>
    </features>   
    <features>
       <featureIdentifier>1387</featureIdentifier>
@@ -1149,5 +1145,5 @@
             <value>some value</value>
          </featureAttributes>
       </featureAttributeGroup>
-   </features>    
+   </features>   
 </product>

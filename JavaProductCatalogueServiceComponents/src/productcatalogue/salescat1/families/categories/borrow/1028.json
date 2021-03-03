@@ -6,37 +6,21 @@
     "extraFeatureTextLine": "Enjoy privilege and prestige with the American Express Platinum Credit Card that offers a variety of exclusive features and added benefits.",
 	"extraTexts": false,
     "redirect": {
-        "shouldRedirect": true,
-        "redirectUrl": "https://nedbank.co.za/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionCreditCardApplicationForm.html?"
-    },
-    "actions": [
-        {
-            "type": "SELECT",
-            "text": "Select",
-            "environments": [
-                "dev",
-                "ete",
-                "qa",
-                "qa_kiosk"
-            ]
-        },
-        {
-            "type": "REDIRECT",
-            "text": "Select",
-            "environments": [
-                "prod"
-            ],
-            "value": "https://www.nedbank.co.za/content/forms/af/cards/nedbank-credit-card-application.html/apply/check?cardType=Nedbank&formChannel=CR"
-        },
-        {
-            "type": "DETAIL",
-            "text": "Details"
-        },
-        {
-            "type": "COMPARE",
-            "text": "Compare"
-        }
-    ],
+		"shouldRedirect": false,
+		"redirectUrl": null
+	},
+	"actions": [{
+		"type": "SELECT",
+		"text": "Select"
+	},
+	{
+		"type": "DETAIL",
+		"text": "Details"
+	},
+	{
+		"type": "COMPARE",
+		"text": "Compare"
+	}],
     "productPricing": [
         {
             "type": "AdminFee",
