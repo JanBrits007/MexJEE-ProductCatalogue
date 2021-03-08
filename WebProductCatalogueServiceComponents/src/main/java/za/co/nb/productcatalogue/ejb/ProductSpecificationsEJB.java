@@ -382,15 +382,16 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
     private void cacheRetailProductType(List<ProductType> products, String productId, RawSpecString rawSpecString) {
         ProductType productType = productTypeInheritanceLoader.load(rawSpecString.getXmlString());
-        injectDynamicStaffList(productType, productId);
+        injectDynamicStaffList(productType, "InitialisationSubstitutionRules" + environment, productId);
+        injectDynamicStaffList(productType,"OfferCrossSellSubstitutionRules" + environment, productId);
 
         productTypeCacheEJB.put(productId, productType);
         products.add(productType);
     }
 
-    private void injectDynamicStaffList(ProductType productType, String productId){
+    private void injectDynamicStaffList(ProductType productType, String rule, String productId){
         try {
-            ProductattributesType productAttributes = specUtil.getProductAttributes(productType, "InitialisationSubstitutionRules" + environment, "SubstituteForWhiteListedNBNumbers");
+            ProductattributesType productAttributes = specUtil.getProductAttributes(productType, rule, "SubstituteForWhiteListedNBNumbers");
             if(productAttributes.getValue().contains("${{dynamicStaffList}}")){
                 String staffList = dynamicWhitelistBean.getStaffList(productId);
                 mLog.debug("staffList:" + staffList);

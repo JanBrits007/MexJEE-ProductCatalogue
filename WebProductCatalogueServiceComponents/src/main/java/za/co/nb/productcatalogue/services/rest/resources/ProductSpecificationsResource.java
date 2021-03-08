@@ -98,7 +98,9 @@ public class ProductSpecificationsResource {
 
 	@GET
 	@Path("/cache/invalidate")
-	public void invalidate(){
+	public Response invalidate(){
     	productTypeCacheEJB.invalidate();
+
+    	return Response.ok().build();
 	}
 }

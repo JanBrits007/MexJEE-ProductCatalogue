@@ -135,7 +135,11 @@ public class RuleHandler1176 extends BaseProductSpecificationRuleHandler {
             if(businessCaseSegment != null && businessCaseSegment.getCluster() != null && businessCaseSegment.getDivision() != null){
                 if(businessCaseSegment.getCluster().equalsIgnoreCase("200") &&
                     businessCaseSegment.getDivision().equalsIgnoreCase("201")){
-                    mLog.debug("Trace 3");
+                    mLog.debug("Trace 3.0>>");
+                    businessCase.setCodHandlerRRB("true");
+                    mLog.debug("Trace 3.1>> Setting CodHandlerRRB");
+                    dao.cacheBusinessCaseDetailInDB(businessCase);
+
                     return "2176";
                 }
             }
