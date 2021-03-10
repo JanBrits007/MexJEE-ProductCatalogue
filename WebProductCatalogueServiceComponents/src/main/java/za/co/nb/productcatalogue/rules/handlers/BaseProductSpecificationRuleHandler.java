@@ -26,12 +26,13 @@ public abstract class BaseProductSpecificationRuleHandler {
 
 	private static final String MAIN_APPLICANT_ROLE_TYPE = "1041";
 	private final Log mLog = LogFactory.getLog(getClass());
+	private static final Client360InformationServiceClient client360Client = new Client360InformationServiceClient();
 	
 	protected Client360ViewResBObjType retrieveBasicNCMClient360ByArrangementIDs(List<String> arrangementIDs) throws ServiceIntegrationException {
 		mLog.debug("Trace 1");
 		
 		// Retrieve the 360 of this case.
-		Client360InformationServiceClient client360Client = new Client360InformationServiceClient();
+
 		Client360ViewResBObjType client360DTO;
 		
 		try {
