@@ -101,13 +101,11 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             String caseID = dao.retrieveCaseIDByArrangementID(arrangementID);
 
             if (caseID == null) {
-                if(CachedNameSpaceBindingHelper.getDirectNameSpaceBinding("product.catalogue.exception.case.lookup.arrangement.enabled", "false").equals("true")){
-                    throw new RuntimeException("ProductSpecificationEJB: Missing Arrangement-to-Case Mapping, arrangement:"+arrangementID);
-                }else {
-                    mLog.debug("Trace 3");
-                    // No case ID so we can only return the normal spec.
-                    return getProductSpecificationXMLByID(productSpecificationID);
-                }
+
+                mLog.debug("Trace 3");
+                // No case ID so we can only return the normal spec.
+                return getProductSpecificationXMLByID(productSpecificationID);
+
             } else {
                 mLog.debug("Trace 4 >>" + caseID + "<<");
 
