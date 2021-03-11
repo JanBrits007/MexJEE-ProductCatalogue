@@ -38,6 +38,11 @@
 		<!-- Add the jar, war and ejb dependencies here eg. -->
 		<dependency>
 			<groupId>BPMX</groupId>
+			<artifactId>JavaProductCatalogueServiceComponents</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>BPMX</groupId>
 			<artifactId>WebProductCatalogueServiceComponents</artifactId>
 			<type>war</type>
 			<version>${project.parent.version}</version>
@@ -47,9 +52,25 @@
 	        <artifactId>JavaClient360InformationServiceClient</artifactId>
 	    </dependency>
 		<dependency>
+			<groupId>BPMX</groupId>
+			<artifactId>CR1Common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>BPMX</groupId>
+			<artifactId>JavaSystemConfigurator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>BPMX</groupId>
+			<artifactId>JavaArrangementInformationServiceClient</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
 			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
