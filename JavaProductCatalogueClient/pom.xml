@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>JavaProductCatalogueServiceComponents</artifactId>
+	<artifactId>JavaProductCatalogueClient</artifactId>
 	<packaging>jar</packaging>
 
 	<parent>
@@ -13,12 +13,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>BPMX</groupId>
-			<artifactId>JavaProductCatalogueClient</artifactId>
-			<version>${project.parent.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>BPMX</groupId>
-			<artifactId>JavaProductDevelopmentServiceClient</artifactId>
+			<artifactId>JavaCommonDTO</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
@@ -42,19 +37,6 @@
 		</dependency>
 	</dependencies>
 
-	<build>
-		<finalName>JavaProductCatalogueServiceComponents</finalName>
-		<sourceDirectory>src</sourceDirectory>
-		<resources>
-			<resource>
-				<directory>src</directory>
-				<excludes>
-					<exclude>**/*.java</exclude>
-				</excludes>
-			</resource>
-		</resources>
-	</build>
 
-	<!-- There should be no dependencies here, all dependencies should be defined in the root pom -->
 
 </project>
