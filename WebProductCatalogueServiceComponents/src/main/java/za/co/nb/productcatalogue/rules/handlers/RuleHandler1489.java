@@ -15,6 +15,7 @@ import java.util.List;
 public class RuleHandler1489 extends BaseProductSpecificationRuleHandler {
 
     private final Log mLog = LogFactory.getLog(getClass());
+    private static final  ArrangementPartyInformationServiceClient partyInformationServiceClient = new ArrangementPartyInformationServiceClient();
 
     @Override
     public String executeBusinessRules(String productIDToSubstitute, String caseID) throws BusinessRuleExecutionException {
@@ -28,7 +29,7 @@ public class RuleHandler1489 extends BaseProductSpecificationRuleHandler {
 
             List<String> arrangementIDs = businessCaseHeader.getArrangementIDs();
             mLog.debug("Trace 3 >>"+arrangementIDs+"<<");
-            ArrangementPartyInformationServiceClient partyInformationServiceClient = new ArrangementPartyInformationServiceClient();
+
             for (String arrangementID : arrangementIDs) {
                 String[] arrangementBusinessContexts = new String[]{"Basic Details"};
                 ArrangementDetailBObjType arrangementDetailBObjType = partyInformationServiceClient.retrieveArrangement(arrangementID, arrangementBusinessContexts);

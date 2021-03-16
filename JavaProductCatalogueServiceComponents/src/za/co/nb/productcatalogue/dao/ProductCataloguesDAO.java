@@ -42,28 +42,18 @@ public class ProductCataloguesDAO extends AbstractProductCatalogueDAO {
 
     	try {
     		String hierarchyJSONString = "\"%Dec%4.95%Dec%\"";
-    		
-    		//System.out.println(hierarchyJSONString);
+
     		
 			hierarchyJSONString = hierarchyJSONString.replaceAll("\"\\%Dec\\%", "");
 
-    		//System.out.println(hierarchyJSONString);
-
 			hierarchyJSONString = hierarchyJSONString.replaceAll("\\%Dec\\%\"", "");
 
-    		//System.out.println(hierarchyJSONString);
-    		
 /*    		
 			String hierarchyData = dao.readProductHierarchyFromResourceFile("SALESCAT1BaseRateTest");
-			
-			System.out.println("Trace 1 >>" + hierarchyData + "<<");
+
 
 			hierarchyData = dao.injectUpperAndLowerRatesAsString(hierarchyData);
-			hierarchyData = dao.injectUpperAndLowerRatesAsDecimal(hierarchyData);
-
-			System.out.println("Trace 2 >>" + hierarchyData + "<<");
-
-//	        System.out.println("Trace 9 >>" + hierarchyData + "<<");
+			hierarchyData = dao.injectUpperAndLowerRatesAsDecimal(hierarchyData);;
 */	        
 /*    		
 			InputStream inputStream = ProductSpecificationsServiceDAO.class.getResourceAsStream("/productcatalogue/SALESCATSelfV2.json");
@@ -96,14 +86,10 @@ public class ProductCataloguesDAO extends AbstractProductCatalogueDAO {
     		int counter = 0;
     		
     		while (matcher.find()) {
-    			System.out.println(matcher.group(0));
-    			System.out.println(dao.extractFilenameFromFileReference(matcher.group(0)));
     			resourceData = matcher.replaceFirst("" + counter++);
-        		System.out.println(">>" + resourceData + "<<");
         		matcher = pattern.matcher(resourceData);
     		}
-    		
-    		System.out.println(">>" + resourceData + "<<");
+
 */    		
 		} catch (Exception e) {
 			e.printStackTrace();
