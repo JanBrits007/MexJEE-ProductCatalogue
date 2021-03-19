@@ -5,7 +5,6 @@ import org.apache.commons.logging.LogFactory;
 import za.co.nb.system.config.dao.SystemConfiguratorDAO;
 import za.co.nb.system.config.environment.Environment;
 import za.co.nb.system.pml.service.client.ProductOfferInformationServiceClient;
-import za.co.nedbank.cr1.common.helper.mLog;
 
 import javax.xml.ws.Holder;
 import java.math.BigInteger;

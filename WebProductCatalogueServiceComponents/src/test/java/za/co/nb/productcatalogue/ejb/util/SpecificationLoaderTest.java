@@ -78,7 +78,6 @@ public class SpecificationLoaderTest {
         StringWriter sw = new StringWriter();
         marshaller.marshal(productType, sw);
 
-        System.out.println(sw.toString());
     }
 
 
