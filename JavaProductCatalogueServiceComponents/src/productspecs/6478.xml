@@ -718,7 +718,14 @@
 
       <!--DetermineRelatedParties-->
 
-      <!--GenerateOfferGatherClientDetails-->
+       <!--GenerateOfferGatherClientDetails-->
+      <featureAttributeGroup>
+        <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>      
+        <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+        </featureAttributes>
+      </featureAttributeGroup>
 
       <!--FinancialDetails-->
       <featureAttributeGroup>
@@ -832,13 +839,13 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>breadcrumbSteps</attributeName>
-            <value>Authenticate|Product Setup|About You|Credit Info|Customisation|Finalisation</value>
+            <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
          </featureAttributes>
 
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>frontOfficeIntentSequence</attributeName>
-            <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+            <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
