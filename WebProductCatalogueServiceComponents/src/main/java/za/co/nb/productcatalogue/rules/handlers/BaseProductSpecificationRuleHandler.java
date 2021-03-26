@@ -26,12 +26,13 @@ public abstract class BaseProductSpecificationRuleHandler {
 
 	private static final String MAIN_APPLICANT_ROLE_TYPE = "1041";
 	private final Log mLog = LogFactory.getLog(getClass());
+	private static final Client360InformationServiceClient client360Client = new Client360InformationServiceClient();
 	
 	protected Client360ViewResBObjType retrieveBasicNCMClient360ByArrangementIDs(List<String> arrangementIDs) throws ServiceIntegrationException {
 		mLog.debug("Trace 1");
 		
 		// Retrieve the 360 of this case.
-		Client360InformationServiceClient client360Client = new Client360InformationServiceClient();
+
 		Client360ViewResBObjType client360DTO;
 		
 		try {
@@ -64,19 +65,19 @@ public abstract class BaseProductSpecificationRuleHandler {
 	}
 	
 	private String getMainApplicantPartyID(ArrangementDetailBObjType arrangement) throws Exception {
-		mLog.info("Trace 1");
+		mLog.debug("Trace 1");
 
 		for (int i = 0; i < arrangement.getTCRMContractBObj().getTCRMContractComponentBObj().size(); i++) {
-			mLog.info("Trace 2");
+			mLog.debug("Trace 2");
 
 			if (arrangement.getTCRMContractBObj().getTCRMContractComponentBObj().get(i).getBaseIndicator().equalsIgnoreCase("Y")) {
-				mLog.info("Trace 3");
+				mLog.debug("Trace 3");
 
 				for (int j = 0; j < arrangement.getTCRMContractBObj().getTCRMContractComponentBObj().get(i).getTCRMContractPartyRoleBObj().size(); j++) {
-					mLog.info("Trace 4");
+					mLog.debug("Trace 4");
 
 					if (arrangement.getTCRMContractBObj().getTCRMContractComponentBObj().get(i).getTCRMContractPartyRoleBObj().get(j).getRoleType().equalsIgnoreCase(MAIN_APPLICANT_ROLE_TYPE)) {
-						mLog.info("Trace 5");
+						mLog.debug("Trace 5");
 
 						if (arrangement.getTCRMContractBObj().getTCRMContractComponentBObj().get(i).getTCRMContractPartyRoleBObj().get(j).getTCRMPersonBObj() != null) {
 							// It's a person
@@ -93,34 +94,34 @@ public abstract class BaseProductSpecificationRuleHandler {
 			}
 		}
 
-		mLog.info("Trace 8");
+		mLog.debug("Trace 8");
 
 		// Shouldn't get here.
 		throw new Exception("Unable to determine main applicant Party Number");
 	}
 	
 	protected PersonDetailBObjType getMainApplicantPersonDetailBObj(ArrangementDetailBObjType arrangement, List<PersonDetailBObjType> relatedPersons) throws Exception {
-		mLog.info("Trace 1");
+		mLog.debug("Trace 1");
 
 		String vMainApplicantPartyID = getMainApplicantPartyID(arrangement);
 
-		mLog.info("Trace 1.1 >>" + vMainApplicantPartyID + "<<");
+		mLog.debug("Trace 1.1 >>" + vMainApplicantPartyID + "<<");
 
 		// Look for the PersonDetailBOb for the main applicant
 		if (relatedPersons != null && relatedPersons.size() > 0) {
 			for (int i = 0; i < relatedPersons.size(); i++) {
-				mLog.info("Trace 2 >>" + relatedPersons.get(i).getTCRMPersonBObj().getPartyId() + "<<,>>" + vMainApplicantPartyID + "<<");
+				mLog.debug("Trace 2 >>" + relatedPersons.get(i).getTCRMPersonBObj().getPartyId() + "<<,>>" + vMainApplicantPartyID + "<<");
 
-				mLog.info("Trace 2.1 >>" + (relatedPersons.get(i).getTCRMPersonBObj().getPartyId() == vMainApplicantPartyID) + "<<");
+				mLog.debug("Trace 2.1 >>" + (relatedPersons.get(i).getTCRMPersonBObj().getPartyId() == vMainApplicantPartyID) + "<<");
 
 				if (relatedPersons.get(i).getTCRMPersonBObj().getPartyId().toString().equalsIgnoreCase(vMainApplicantPartyID.toString())) {
-					mLog.info("Trace 5");
+					mLog.debug("Trace 5");
 					// Found the correct person.
 					return relatedPersons.get(i);
 				}
 			}
 
-			mLog.info("Trace 6");
+			mLog.debug("Trace 6");
 
 			// Shouldn't get here. Just return the first one.
 			if (relatedPersons != null && relatedPersons.size() > 0) {
@@ -128,7 +129,7 @@ public abstract class BaseProductSpecificationRuleHandler {
 			}
 		}
 
-		mLog.info("Trace 7 >>Unable to determine main applicant PersonDetailBObj<<");
+		mLog.debug("Trace 7 >>Unable to determine main applicant PersonDetailBObj<<");
 
 		return null;
 	}

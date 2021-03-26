@@ -57,6 +57,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     private final Log mLog = LogFactory.getLog(getClass());
 
     private static final boolean ENABLE_XSD_VALIDATION = false;
+    private static final String DYNAMIC_STAFF_MARkER = "${{dynamicStaffList}}";
 
     private IJuristicProductSpecifications juristicProductSpecificationsRemote;
     private ProductTypeLoader productTypeInheritanceLoader = new ProductTypeLoader();
@@ -67,6 +68,9 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
     @EJB
     DynamicWhitelistBean dynamicWhitelistBean;
+
+    @EJB
+    DynamicPropertyBean dynamicPropertyBean;
 
     private String environment;
 
@@ -101,13 +105,11 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             String caseID = dao.retrieveCaseIDByArrangementID(arrangementID);
 
             if (caseID == null) {
-                if(CachedNameSpaceBindingHelper.getDirectNameSpaceBinding("product.catalogue.exception.case.lookup.arrangement.enabled", "false").equals("true")){
-                    throw new RuntimeException("ProductSpecificationEJB: Missing Arrangement-to-Case Mapping, arrangement:"+arrangementID);
-                }else {
-                    mLog.debug("Trace 3");
-                    // No case ID so we can only return the normal spec.
-                    return getProductSpecificationXMLByID(productSpecificationID);
-                }
+
+                mLog.debug("Trace 3");
+                // No case ID so we can only return the normal spec.
+                return getProductSpecificationXMLByID(productSpecificationID);
+
             } else {
                 mLog.debug("Trace 4 >>" + caseID + "<<");
 
@@ -360,7 +362,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 // Schema validator is a mess. It returns no stack trace on the exception. Need to specifically handle it.
                 if (e != null && e.getCause() != null) {
                     mLog.debug("Trace 4.3 >>" + e.getCause().getMessage() + "<<");
-                    throw new Exception("Schema validation failure for spec " + productId + ". " + e.getCause().getMessage());
+                    throw new Exception("ProductSpec lookup failure: product: " + productId + ", reason:" + e.getCause().getMessage());
                 }
 
                 mLog.debug("Trace 4.4");
@@ -384,6 +386,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         ProductType productType = productTypeInheritanceLoader.load(rawSpecString.getXmlString());
         injectDynamicStaffList(productType, "InitialisationSubstitutionRules" + environment, productId);
         injectDynamicStaffList(productType,"OfferCrossSellSubstitutionRules" + environment, productId);
+        injectDynamicProperty(productType, rawSpecString);
 
         productTypeCacheEJB.put(productId, productType);
         products.add(productType);
@@ -392,7 +395,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     private void injectDynamicStaffList(ProductType productType, String rule, String productId){
         try {
             ProductattributesType productAttributes = specUtil.getProductAttributes(productType, rule, "SubstituteForWhiteListedNBNumbers");
-            if(productAttributes.getValue().contains("${{dynamicStaffList}}")){
+            if(productAttributes.getValue().contains(DYNAMIC_STAFF_MARkER)){
                 String staffList = dynamicWhitelistBean.getStaffList(productId);
                 mLog.debug("staffList:" + staffList);
                 productAttributes.setValue(staffList);
@@ -401,17 +404,27 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         }catch (InvalidAttributeException e){}
     }
 
+    private void injectDynamicProperty(ProductType productType, RawSpecString rawSpecString){
 
+	    if(!rawSpecString.getXmlString().contains("${{"))
+	        return;
 
-    public String maintainCatalogueOperations(MaintainCatalogueRequestType maintainCatalogueRequest) throws Exception {
-        throw new Exception("The use of the database for product specifications has been deprecated. Please maintain product specifications in the relevant GIT repo.");
+        productType.getProductAttributeGroup().forEach(productAttributeGroupType ->
+            productAttributeGroupType.getProductAttributes().forEach(productAttributesType -> {
+                if(productAttributesType.getValue() != null && !productAttributesType.getValue().contains(DYNAMIC_STAFF_MARkER)) {
+                    if (productAttributesType.getValue().contains("${{")) {
+
+                        mLog.debug("find dynamic value:" + productAttributesType.getValue());
+                        String propertyValue = dynamicPropertyBean.getProperty(productAttributesType.getValue());
+                        mLog.debug("found dynamic value:" + propertyValue);
+                        productAttributesType.setValue(propertyValue);
+                    }
+                }
+            })
+        );
+
     }
 
-    private String readProductSpecificationFromResourceFile(Integer productID) throws Exception {
-        mLog.debug("Trace 1");
-        RawSpecString rawSpecString = readProductSpecificationFromResourceFile(productID.toString());
-        return rawSpecString.getXmlString();
-    }
 
     private Object lookupObject(String pJNDI) throws NamingException {
         mLog.debug("Trace 1");
