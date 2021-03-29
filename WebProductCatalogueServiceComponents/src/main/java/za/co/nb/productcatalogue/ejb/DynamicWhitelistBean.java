@@ -1,5 +1,7 @@
 package za.co.nb.productcatalogue.ejb;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import za.co.nb.common.helper.namespacebinding.CachedNameSpaceBindingHelper;
 import za.co.nb.system.config.whitelist.dto.StaffResponse;
 import za.co.nb.system.config.whitelist.service.WhitelistServiceRemote;
@@ -14,8 +16,12 @@ import javax.ejb.TransactionAttributeType;
 @TransactionAttribute(TransactionAttributeType.NEVER)
 public class DynamicWhitelistBean {
 
+    private final Log mLog = LogFactory.getLog(getClass());
+
     @EJB(lookup = "java:global/SysSystemConfigurator/WebSystemConfigurator/WhitelistServiceBean!za.co.nb.system.config.whitelist.service.WhitelistServiceRemote")
     WhitelistServiceRemote whitelistServiceRemote;
+
+
 
     private String environment;
 
@@ -25,6 +31,7 @@ public class DynamicWhitelistBean {
     }
 
     public String getStaffList(String productId){
+        mLog.debug("find whitelist product:"+productId);
         StaffResponse productStaff = whitelistServiceRemote.getProductStaff(productId, environment);
         return productStaff.getProductStaff().getStaffList();
     }
