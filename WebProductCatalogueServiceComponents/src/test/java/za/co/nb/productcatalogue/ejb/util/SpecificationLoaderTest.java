@@ -15,6 +15,23 @@ import java.nio.charset.StandardCharsets;
 
 public class SpecificationLoaderTest {
 
+
+    @Test
+    public void rrbInheritanceTest() throws JAXBException, IOException {
+        ProductTypeLoader specificationLoader = new ProductTypeLoader();
+
+        String productId = "80";
+        InputStream inputStream = ProductTypeLoader.class.getResourceAsStream("/productspecs/rrb/" + productId + ".xml");
+        String xmlString = IOUtils.toString(inputStream, StandardCharsets.UTF_8.name());
+        ProductType productType = specificationLoader.load(xmlString);
+
+        Marshaller marshaller = ProductTypeJaxbContext.getJAXBContext().createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        StringWriter sw = new StringWriter();
+        marshaller.marshal(productType, sw);
+        System.out.println(sw);
+    }
+
     @Test
     public void inheritanceTest() throws JAXBException, IOException {
         ProductTypeLoader specificationLoader = new ProductTypeLoader();
