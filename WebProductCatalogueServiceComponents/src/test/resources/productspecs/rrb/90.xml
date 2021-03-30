@@ -1,0 +1,102 @@
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+    <productIdentifier>90</productIdentifier>
+    <name>Parent</name>
+    <shortDescription></shortDescription>
+
+    <!--by default attribute action should be merge-->
+    <!--in addition we can use action="overwrite" -->
+    <productAttributeGroup>
+        <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>HideProceduralStep=true</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryTransactionalProductComponent~ProceduralStepName=Your offer~ZOrder=60</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
+
+
+    <productAttributeGroup>
+        <attributeGroupName>PresentOfferSelection</attributeGroupName>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>LastOfferPanel|cv-parent-panel=CaseData~cv-component=LastOffer_Panel~child-cv-component=widLastOfferDetails[READONLY]</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
+
+
+
+    <!--new features can be defined and will be included in teh list-->
+    <!--will include all features from base product-->
+    <!--will extend features by overriding / including attribute groups-->
+
+    <features>
+        <featureIdentifier>1446</featureIdentifier>
+
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceVASComponent-1446~ProceduralStepName=Offer~ZOrder=70</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+    </features>
+
+    <features>
+        <featureIdentifier>1445</featureIdentifier>
+
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceVASComponent-1446~ProceduralStepName=Offer~ZOrder=70</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+    </features>
+
+    <features>
+        <featureIdentifier>9063</featureIdentifier>
+
+        <featureAttributeGroup>
+            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>provisionInBranch</attributeName>
+                <valueUnit>boolean</valueUnit>
+                <value>false</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>legacyProductID</attributeName>
+                <valueUnit>string</valueUnit>
+                <value />
+            </featureAttributes>
+        </featureAttributeGroup>
+    </features>
+
+    <features>
+        <featureIdentifier>1333</featureIdentifier>
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>ProceduralStepName=Your offer~ZOrder=70</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+    </features>
+
+
+
+</product>
