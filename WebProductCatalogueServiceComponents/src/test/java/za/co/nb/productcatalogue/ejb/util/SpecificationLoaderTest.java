@@ -36,7 +36,7 @@ public class SpecificationLoaderTest {
     public void inheritanceTest() throws JAXBException, IOException {
         ProductTypeLoader specificationLoader = new ProductTypeLoader();
 
-        String productId = "100";
+        String productId = "Transactional_RRB_1389";
         InputStream inputStream = ProductTypeLoader.class.getResourceAsStream("/productspecs/" + productId + ".xml");
         String xmlString = IOUtils.toString(inputStream, StandardCharsets.UTF_8.name());
         ProductType productType = specificationLoader.load(xmlString);
