@@ -171,16 +171,26 @@ public class ProductTypeLoader {
         List<FeaturesType> tempChildFeaturesTypes = new ArrayList<>(child.getFeatures());
 
         List<String> featureIndex = getFeatureIndex(tempChildFeaturesTypes);
-        for(FeaturesType featuresType :tempChildFeaturesTypes){
-            List<FeaturesType> tempParentFeaturesTypes = new ArrayList<>(parent.getFeatures());
-            for(FeaturesType featureTypeParent :tempParentFeaturesTypes) {
 
-                if (!featureIndex.contains(featureTypeParent.getFeatureIdentifier().toString()))
-                    addFeature(child, parent, null, featureTypeParent);
-                else
-                    addFeature(child, parent,featuresType, featureTypeParent);
+        if(featureIndex.isEmpty()) {
+            insertParentFeature(child, parent, featureIndex, null);
+        }else {
+            for (FeaturesType childFeaturesType : tempChildFeaturesTypes) {
 
+                insertParentFeature(child, parent, featureIndex, childFeaturesType);
             }
+        }
+    }
+
+    private void insertParentFeature(ProductType child, ProductType parent, List<String> featureIndex, FeaturesType childFeaturesType) {
+        List<FeaturesType> tempParentFeaturesTypes = new ArrayList<>(parent.getFeatures());
+        for(FeaturesType featureTypeParent : tempParentFeaturesTypes) {
+
+            if (!featureIndex.contains(featureTypeParent.getFeatureIdentifier().toString()))
+                addFeature(child, parent, null, featureTypeParent);
+            else
+                addFeature(child, parent, childFeaturesType, featureTypeParent);
+
         }
     }
 

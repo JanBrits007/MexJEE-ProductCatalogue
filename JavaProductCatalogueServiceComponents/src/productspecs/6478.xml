@@ -42,7 +42,7 @@
 
    <!--GenerateOfferGatherClientDetails-->
    <productAttributeGroup>
-      <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>      
+      <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>FaisConversationRecordOfAdvice</attributeName>
@@ -246,6 +246,24 @@
          <attributeName>ElectronicallySign</attributeName>
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+     <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+     <productAttributes>
+       <attributeType>string</attributeType>
+       <attributeName>subYourApplicationHeader</attributeName>
+     </productAttributes>
+     <productAttributes>
+       <attributeType>string</attributeType>
+       <attributeName>subNedbankLogo</attributeName>
+     </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+     <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+     <productAttributes>
+       <attributeType>string</attributeType>
+       <attributeName>subTPTermsAndConditions|ContractComponentProductType=1389</attributeName>
+     </productAttributes>
+   </productAttributeGroup>
 
    <!--Case and Process Configuration -->
    <productAttributeGroup>
@@ -402,22 +420,37 @@
          <value>200~201</value> <!-- Retail~PRB -->
       </productAttributes>
    </productAttributeGroup>
+
+   <!--<productAttributeGroup>
+      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_FinancialDetails</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementPreApprovedIncomeDebtExpenseFilter</value>
+      </productAttributes>
+   </productAttributeGroup>-->
+
    <productAttributeGroup>
       <attributeGroupName>CaseConfiguration</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Intent1</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.rrb.Intent1RRBCODHandler</value>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.Intent1CODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_ProductOffer</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.rrb.Intent2RRBCODHandler</value>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.ProductOfferCODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Intent4</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.cde.rrb.Intent4RRBCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_FinancialDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.UpfrontOfferCODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -736,7 +769,7 @@
          <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>IncomeInformationV2|ng-component=IncomeWidgetV2Component~ProceduralStepName=Income details~activityStep=Credit Info~NettSalary~GrossSalary~SalaryAccountDetails~ZOrder=90</attributeName>
+            <attributeName>IncomeInformationV2|ng-component=IncomeWidgetV2Component~ProceduralStepName=Income details~activityStep=Credit Info~ZOrder=90~NettSalary=true~GrossSalary=true~SalaryAccountDetails=true</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -744,7 +777,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>HouseholdExpensesInformationV2|ng-component=HouseholdExpensesComponent~ProceduralStepName=Household expenses~activityStep=Credit Info~TotalExpenses~DetailedExpenses~ZOrder=70</attributeName>
+            <attributeName>HouseholdExpensesInformationV2|ng-component=HouseholdExpensesComponent~ProceduralStepName=Household expenses~activityStep=Credit Info~TotalExpenses=true~DetailedExpenses=true~ZOrder=70</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -758,12 +791,12 @@
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right?~ZOrder=90</attributeName>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80</attributeName>
+            <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80~child-ng-components=OverdraftDetailsV2Component</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -831,6 +864,120 @@
       <!--Evidence And Compliance Requirements-->
 
       <!--Document Configuration-->
+      <featureAttributeGroup>
+         <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+         <featureAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Download</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Email</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>WetSign</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>DigitallySign</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>ElectronicallySign</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subNedbankLogo</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericDetails</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subRRBIncomeAndExpenses</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subClientsRightsAndObligations</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericTCForCreditProducts</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericImpConfirmation</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericSignatures</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraftTC|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+           <attributeType>string</attributeType>
+           <attributeName>Taxonomy|ARRANGEMENTS_AGREEMENTS_AGREEMENTSCREDITFACILITY_Agreement Contract</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <featureAttributeGroup>
+         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subNedbankLogo</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericInfo</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subContactInfo</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subRRBODFeatures|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
 
       <!-- Case and Process Configuration -->
       <featureAttributeGroup>
