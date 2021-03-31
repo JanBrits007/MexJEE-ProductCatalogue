@@ -246,6 +246,24 @@
          <attributeName>ElectronicallySign</attributeName>
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+     <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+     <productAttributes>
+       <attributeType>string</attributeType>
+       <attributeName>subYourApplicationHeader</attributeName>
+     </productAttributes>
+     <productAttributes>
+       <attributeType>string</attributeType>
+       <attributeName>subNedbankLogo</attributeName>
+     </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+     <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+     <productAttributes>
+       <attributeType>string</attributeType>
+       <attributeName>subTPTermsAndConditions|ContractComponentProductType=1389</attributeName>
+     </productAttributes>
+   </productAttributeGroup>
 
    <!--Case and Process Configuration -->
    <productAttributeGroup>
@@ -417,13 +435,12 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Intent1</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.rrb.Intent1RRBCODHandler</value>
-      <!--<value>classname=za.co.nb.offermanagement.cod.handler.cde.Intent1CODHandler</value>-->
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.Intent1CODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_ProductOffer</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.rrb.Intent2RRBCODHandler</value>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.ProductOfferCODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -433,7 +450,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_FinancialDetails</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.rrb.FinancialDetailsRRBHandler</value>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.UpfrontOfferCODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -775,7 +792,7 @@
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>FinancialSummary|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90~displaySummary=true~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
+            <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
@@ -847,6 +864,120 @@
       <!--Evidence And Compliance Requirements-->
 
       <!--Document Configuration-->
+      <featureAttributeGroup>
+         <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+         <featureAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Download</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Email</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>WetSign</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>DigitallySign</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>ElectronicallySign</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subNedbankLogo</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericDetails</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subRRBIncomeAndExpenses</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subClientsRightsAndObligations</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericTCForCreditProducts</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericImpConfirmation</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericSignatures</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraftTC|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+           <attributeType>string</attributeType>
+           <attributeName>Taxonomy|ARRANGEMENTS_AGREEMENTS_AGREEMENTSCREDITFACILITY_Agreement Contract</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <featureAttributeGroup>
+         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subNedbankLogo</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericInfo</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subContactInfo</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subRRBODFeatures|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
 
       <!-- Case and Process Configuration -->
       <featureAttributeGroup>
