@@ -730,6 +730,21 @@
          <attributeName>VAS_1454</attributeName><!--Greenbacks Rewards-->
          <value>Optionality=Optional~IsTakenUp=true</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1164</attributeName><!--Cheque Card-->
+         <value>Optionality=Mandatory~IsTakenUp=true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1387</attributeName><!--Shop Card-->
+         <value>Optionality=Mandatory~IsTakenUp=true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_4387</attributeName>
+         <value>Optionality=Mandatory~IsTakenUp=true</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <productAttributeGroup>
@@ -738,6 +753,11 @@
          <attributeType>1454</attributeType>
          <attributeName>ProductRuleHandler_Greenbacks</attributeName>
          <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.GreenBacksRule</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>1387</attributeType>
+         <attributeName>ProductRuleHandler_ShopCard</attributeName>
+         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ShopCardRule</value>
       </productAttributes>
    </productAttributeGroup>
 
