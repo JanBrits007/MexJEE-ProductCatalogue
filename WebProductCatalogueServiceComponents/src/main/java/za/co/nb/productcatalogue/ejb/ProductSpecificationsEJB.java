@@ -383,7 +383,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     }
 
     private void cacheRetailProductType(List<ProductType> products, String productId, RawSpecString rawSpecString) {
-        ProductType productType = productTypeInheritanceLoader.load(rawSpecString.getXmlString());
+        ProductType productType = productTypeInheritanceLoader.load(rawSpecString.getXmlString(), true);
         injectDynamicStaffList(productType, "InitialisationSubstitutionRules" + environment, productId);
         injectDynamicStaffList(productType,"OfferCrossSellSubstitutionRules" + environment, productId);
         injectDynamicProperty(productType, rawSpecString);

@@ -23,7 +23,7 @@ public class SpecificationLoaderTest {
         String productId = "Transactional_RRB_1389";
         InputStream inputStream = ProductTypeLoader.class.getResourceAsStream("/productspecs/" + productId + ".xml");
         String xmlString = IOUtils.toString(inputStream, StandardCharsets.UTF_8.name());
-        ProductType productType = specificationLoader.load(xmlString);
+        ProductType productType = specificationLoader.load(xmlString, false);
 
         Marshaller marshaller = ProductTypeJaxbContext.getJAXBContext().createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
@@ -39,7 +39,7 @@ public class SpecificationLoaderTest {
         String productId = "100";
         InputStream inputStream = ProductTypeLoader.class.getResourceAsStream("/productspecs/" + productId + ".xml");
         String xmlString = IOUtils.toString(inputStream, StandardCharsets.UTF_8.name());
-        ProductType productType = specificationLoader.load(xmlString);
+        ProductType productType = specificationLoader.load(xmlString, false);
 
         Assert.assertNotNull("productType - Object expected", productType);
         Assert.assertEquals("4 productAttribGroup expected",  4, productType.getProductAttributeGroup().size());

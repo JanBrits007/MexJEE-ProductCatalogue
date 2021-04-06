@@ -15,10 +15,41 @@ import java.util.List;
 
 public class ProductTypeLoader {
 
-    public ProductType load(String xmlString) {
+    public ProductType load(String xmlString, boolean removeInheritance) {
         ProductType productType = toProductType(xmlString);
         loadParent(productType);
+
+        if(removeInheritance)
+            removeInheritanceAttributes(productType);
+
         return productType;
+    }
+
+    private void removeInheritanceAttributes(ProductType productType) {
+
+        productType.setInheritFromFiles(null);
+        removeAttributesProduct(productType.getProductAttributeGroup());
+        removeAttributesFeatures(productType.getFeatures());
+
+    }
+
+    private void removeAttributesFeatures(List<FeaturesType> features) {
+        features.forEach(featuresType -> {
+            featuresType.setAction(null);
+            featuresType.setInheritFromFiles(null);
+            featuresType.getFeatureAttributeGroup().forEach(featureAttributeGroupType -> {
+                featureAttributeGroupType.setAction(null);
+                featureAttributeGroupType.setInheritFromFiles(null);
+            });
+        });
+
+    }
+
+    private void removeAttributesProduct(List<ProductAttributeGroupType> productAttributeGroup) {
+        productAttributeGroup.forEach(productAttributeGroupType -> {
+            productAttributeGroupType.setAction(null);
+            productAttributeGroupType.setInheritFromFiles(null);
+        });
     }
 
     private ProductType toProductType(String XmlString){
@@ -46,7 +77,7 @@ public class ProductTypeLoader {
                 throw new RuntimeException("productTpe.inheritanceFromFiles property cannot be empty");
 
             String xmlString = loadRawFile(child.getInheritFromFiles());
-            ProductType parent = load(xmlString);
+            ProductType parent = load(xmlString, true);
 
             insertProductAttributeGroup(child, parent);
             insertInheritedProductAttributeGroup(child);
