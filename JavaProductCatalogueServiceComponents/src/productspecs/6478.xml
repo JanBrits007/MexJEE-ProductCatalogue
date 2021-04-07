@@ -730,6 +730,21 @@
          <attributeName>VAS_1454</attributeName><!--Greenbacks Rewards-->
          <value>Optionality=Optional~IsTakenUp=true</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1164</attributeName><!--Cheque Card-->
+         <value>Optionality=Mandatory~IsTakenUp=true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1387</attributeName><!--Shop Card-->
+         <value>Optionality=Mandatory~IsTakenUp=true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_4387</attributeName>
+         <value>Optionality=Mandatory~IsTakenUp=true</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <productAttributeGroup>
@@ -738,6 +753,11 @@
          <attributeType>1454</attributeType>
          <attributeName>ProductRuleHandler_Greenbacks</attributeName>
          <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.GreenBacksRule</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>1387</attributeType>
+         <attributeName>ProductRuleHandler_ShopCard</attributeName>
+         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ShopCardRule</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -769,19 +789,15 @@
          <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>IncomeInformationV2|ng-component=IncomeWidgetV2Component~ProceduralStepName=Income details~activityStep=Credit Info~ZOrder=90~NettSalary=true~GrossSalary=true~SalaryAccountDetails=true</attributeName>
+            <attributeName>IncomeInformationV2|ng-component=IncomeWidgetV2Component~ProceduralStepName=Income details~ZOrder=90~NettSalary=true~GrossSalary=true~SalaryAccountDetails=true</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>DebtObligationsInformationV2|ng-component=DebtObligationsWidgetComponent~ProceduralStepName=Debt obligations~activityStep=Credit Info~ZOrder=80</attributeName>
+            <attributeName>DebtObligationsInformationV2|ng-component=DebtObligationsWidgetComponent~ProceduralStepName=Debt obligations~ZOrder=80</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>HouseholdExpensesInformationV2|ng-component=HouseholdExpensesComponent~ProceduralStepName=Household expenses~activityStep=Credit Info~TotalExpenses=true~DetailedExpenses=true~ZOrder=70</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>CreditSummaryPlaceholderV2|sideStepperDisplayName=Credit summary~activityStep=Credit Info</attributeName>
+            <attributeName>HouseholdExpensesInformationV2|ng-component=HouseholdExpensesComponent~ProceduralStepName=Household expenses~TotalExpenses=true~DetailedExpenses=true~ZOrder=70</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 

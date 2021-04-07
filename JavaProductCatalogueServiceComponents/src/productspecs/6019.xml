@@ -158,9 +158,9 @@
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Evidence</attributeType>
-         <attributeName>ProofOfIdentificationClause</attributeName>
+         <attributeName>We need proof of your identity in the form of: South African bar-coded identity card or document, or passport and work permit.</attributeName>
          <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
+         <valueUnit>string</valueUnit>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -1693,6 +1693,16 @@
             <attributeName>CaseActivityPriority_GatherInformationAndDocuments</attributeName>
             <value>0|Weighting=0</value>
          </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CaseActivityTeamName_CBOVerifyApplicantAndIncome</attributeName>
+            <value>CBOVerificationTeam|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CaseActivityTeamName_ConfirmVerificationQuality</attributeName>
+            <value>CBOVerificationTeam|Weighting=0</value>
+         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>DecisioningControl</attributeGroupName>
@@ -2991,13 +3001,6 @@
       <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
       <featureDisplayPosition>preOffer</featureDisplayPosition>
       <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-InstantGoldChequeCardValueAddedServiceSelector-219~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
@@ -3045,13 +3048,6 @@
       <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
       <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
       <featureDisplayPosition>preOffer</featureDisplayPosition>
-      <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GoldChequeCardVASComponent-1386~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>

@@ -356,12 +356,9 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
                 mLog.debug("Trace 4.1");
             } catch (Exception e) {
-                mLog.debug("Trace 4.2");
-                e.printStackTrace();
-
                 // Schema validator is a mess. It returns no stack trace on the exception. Need to specifically handle it.
                 if (e != null && e.getCause() != null) {
-                    mLog.debug("Trace 4.3 >>" + e.getCause().getMessage() + "<<");
+                    mLog.warn("ProductId >>" +productId+" failure, reason:"+ e.getMessage() + "<<");
                     throw new Exception("ProductSpec lookup failure: product: " + productId + ", reason:" + e.getCause().getMessage());
                 }
 
@@ -383,7 +380,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     }
 
     private void cacheRetailProductType(List<ProductType> products, String productId, RawSpecString rawSpecString) {
-        ProductType productType = productTypeInheritanceLoader.load(rawSpecString.getXmlString());
+        ProductType productType = productTypeInheritanceLoader.load(rawSpecString.getXmlString(), true);
         injectDynamicStaffList(productType, "InitialisationSubstitutionRules" + environment, productId);
         injectDynamicStaffList(productType,"OfferCrossSellSubstitutionRules" + environment, productId);
         injectDynamicProperty(productType, rawSpecString);
