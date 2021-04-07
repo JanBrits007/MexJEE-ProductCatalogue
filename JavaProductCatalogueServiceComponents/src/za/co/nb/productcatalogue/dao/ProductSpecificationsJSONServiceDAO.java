@@ -14,6 +14,7 @@ import org.apache.commons.logging.LogFactory;
 
 import za.co.nb.productcatalogue.dto.ProductSpecificationJSON;
 import za.co.nb.juristic.productcatalogue.remoteejb.IJuristicProductSpecifications;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
 
 import javax.naming.InitialContext;
 
@@ -48,20 +49,41 @@ public class ProductSpecificationsJSONServiceDAO {
 			mLog.debug("Trace 3 >>Loading from resource file<<");
 			try {
 				InputStream inputStream = ProductSpecificationsServiceDAO.class.getResourceAsStream("/productspecs/" + productID + ".json");
-				
+				mLog.debug("Trace 4a");
+				inputStream = null;
 				if(inputStream == null) {
 					String productSpecificationJSON = getJuristicProductSpecificationsRemote().getProductSpecificationsJSON(productID);
 					if(productSpecificationJSON != null) {
 						ptJSONStringCache.put(productID, productSpecificationJSON);
+                        mLog.debug("Trace 4 JU");
+                        //mLog.debug("Trace 4 JU" + productSpecificationJSON);
 						return productSpecificationJSON;
 					}
 
-			    	mLog.debug("Trace 4");
+					// load parent spec if not found
+					ProductType product = getProductSpecificationsDAO().getProductSpecificationXMLByID(productID);
+					mLog.debug("Trace 4b" + product);
+					Integer parentProduct = product.getProductIdentifier();
+					mLog.debug("Trace 4c" + parentProduct);
+					String productIdentifier = Integer.toString(parentProduct);
+					mLog.debug("Trace 4d" + productIdentifier);
+                    InputStream inputStream2 = ProductSpecificationsServiceDAO.class.getResourceAsStream("/productspecs/" + productIdentifier + ".json");
+
+					mLog.debug("Trace 4e");
+                    if(inputStream2 != null) {
+                        String JSONParentSpec = IOUtils.toString(inputStream2, StandardCharsets.UTF_8.name());
+                        mLog.debug("Trace 4f using parent: " + productIdentifier);
+                        //mLog.debug("Trace 4f" + JSONParentSpec);
+                        ptJSONStringCache.put(productID, JSONParentSpec);
+
+                        return JSONParentSpec;
+                    }
 					throw new Exception("Unable to find specification JSON file for product ID " + productID);
 				}
 
 				String JSONSpec = IOUtils.toString(inputStream, StandardCharsets.UTF_8.name());
-
+                mLog.debug("Trace 4g using product: " + productID);
+                //mLog.debug("Trace 4g" + JSONSpec);
 				ptJSONStringCache.put(productID, JSONSpec);
 				
 				return JSONSpec;
