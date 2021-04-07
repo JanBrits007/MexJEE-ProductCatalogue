@@ -50,7 +50,7 @@ public class ProductSpecificationsJSONServiceDAO {
 			try {
 				InputStream inputStream = ProductSpecificationsServiceDAO.class.getResourceAsStream("/productspecs/" + productID + ".json");
 				mLog.debug("Trace 4a");
-				inputStream = null;
+
 				if(inputStream == null) {
 					String productSpecificationJSON = getJuristicProductSpecificationsRemote().getProductSpecificationsJSON(productID);
 					if(productSpecificationJSON != null) {
