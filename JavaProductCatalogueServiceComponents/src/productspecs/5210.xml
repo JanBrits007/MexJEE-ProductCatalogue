@@ -11,6 +11,15 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--GenerateOfferGatherProductDetails  -->
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~applicableChannels=NoCurrentChannels</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--GenerateOfferGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
@@ -121,6 +130,10 @@
    <!--ActivateProductsGatherProductDetails--> 
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~applicableChannels=NoCurrentChannels</attributeName>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--ActivateProductsPresentDocuments-->
@@ -132,7 +145,7 @@
       </productAttributes>
         <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>productDocumentPresentation|ng-component=ViewDocumentsComponent~ProceduralStepName=Terms and conditions~ZOrder=90~ActiveOnInitialWorkItemExecution=true~applicableChannels=WebSelfAssisted</attributeName>
+         <attributeName>viewProductDocumentPresentation|ng-component=ViewDocumentsComponent~ProceduralStepName=Terms and conditions~ZOrder=90~ActiveOnInitialWorkItemExecution=true~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -504,7 +517,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ReevaluateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ReevaluateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -514,7 +527,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Choose extras|GenerateOfferVerifyEligibility=Choose extras|GenerateOfferGatherClientDetails=Choose extras|FinancialDetails=Credit info|GenerateOffer=Credit info|ReevaluateOffer=Credit info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Finalisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
+         <value>VerifyIdentity=Choose extras|GenerateOfferVerifyEligibility=Choose extras|GenerateOfferGatherProductDetails=Choose extras|GenerateOfferGatherClientDetails=Choose extras|FinancialDetails=Credit info|GenerateOffer=Credit info|ReevaluateOffer=Credit info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Finalisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -525,6 +538,31 @@
          <attributeType>string</attributeType>
          <attributeName>consumerFrameworkVersion</attributeName>
          <value>2.0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>baseCBOActivityList</attributeName>
+         <value>ConfigureArrangement|CBOFinalizeCase</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CaseActivityTeamName_ConfigureArrangement</attributeName>
+         <value>System|Weighting=0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>CaseActivityPriority_ConfigureArrangement</attributeName>
+         <value>0|Weighting=0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CaseActivityTeamName_CBOFinalizeCase</attributeName>
+         <value>CBOFinalizeCase|Weighting=0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>CaseActivityPriority_CBOFinalizeCase</attributeName>
+         <value>0|Weighting=0</value>
       </productAttributes>
    </productAttributeGroup>  
    <productAttributeGroup>
@@ -671,6 +709,11 @@
          <attributeType>string</attributeType>
          <attributeName>CODHandler_FinalizeFrontOffice</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.hl.HLRAFinalizeFrontOfficeHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent4</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.cde.Intent4CODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
