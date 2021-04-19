@@ -1,7 +1,7 @@
 <product inheritFromFiles="Transactional_Retail" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-   <productIdentifier>1019</productIdentifier>
-   <name>Savvy Plus</name>
-   <shortDescription>(Transactional_Retail_6019) Do your banking for a fixed monthly fee and enjoy the flexibility of adding benefits, such as an overdraft facility and Nedbank Greenbacks Rewards membership, when you need them.</shortDescription>
+   <productIdentifier>1389</productIdentifier>
+   <name>Nedbank Pay-As-You-Use</name>
+   <shortDescription>(Transactional_Retail_1389) A no frills, transparent account with a flat monthly fee, pay only for what you use.</shortDescription>
 
    <!-- Case and Process Configuration -->
    <productAttributeGroup action="overwrite">
@@ -10,10 +10,10 @@
          <attributeType>EligibilityRule</attributeType>
          <attributeName>Age</attributeName>
          <isComparable>false</isComparable>
-         <minValue>18</minValue>
+         <minValue>16</minValue>
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>be 18 years or older</description>
+         <description>be 16 years or older</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
@@ -72,7 +72,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>spikeProductID</attributeName>
-         <value>1019</value>
+         <value>1389</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -107,7 +107,7 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>mdmSubProductCode</attributeName>
-         <value>1862</value>
+         <value>2051</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -122,12 +122,12 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>productCategory</attributeName>
-         <value>00023</value>
+         <value>00001</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>productSubCategory</attributeName>
-         <value>24</value>
+         <value>2</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -138,6 +138,16 @@
          <attributeType>string</attributeType>
          <attributeName>welcomeDocumentTemplate</attributeName>
          <value>nedbank-commercial-release/CombinedWelcomeLetter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>welcomeLetterTaxonomy</attributeName>
+         <value>AGREEMENTSDEPOSIT|Welcome Letter|Welcome Letter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>welcomeDocumentTemplateLocked</attributeName>
+         <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
       </productAttributes>
       <productAttributes>
          <attributeType>flag</attributeType>
