@@ -254,14 +254,18 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
         mLog.debug("BankerRule:"+banker);
 
-        if ((caseHeader.getInitiatingStaffNBNumber() != null
-                && !caseHeader.getInitiatingStaffNBNumber().trim().isEmpty())
-                && banker.getType().toLowerCase().contains(caseHeader.getInitiatingStaffNBNumber().toLowerCase())) {
+        if(caseHeader != null){
 
-            mLog.debug("PRODUCT_ID >>" + productSpec.getProductIdentifier() + "<< SUBSTITUTED_TO >>" + banker.getProductId() + "<< BANKER >>" + caseHeader.getInitiatingStaffNBNumber() + "<<");
+            if ((caseHeader.getInitiatingStaffNBNumber() != null
+                    && !caseHeader.getInitiatingStaffNBNumber().trim().isEmpty())
+                    && banker.getType().toLowerCase().contains(caseHeader.getInitiatingStaffNBNumber().toLowerCase())) {
 
-            return true;
+                mLog.debug("PRODUCT_ID >>" + productSpec.getProductIdentifier() + "<< SUBSTITUTED_TO >>" + banker.getProductId() + "<< BANKER >>" + caseHeader.getInitiatingStaffNBNumber() + "<<");
+
+                return true;
+            }
         }
+
         return false;
     }
 
