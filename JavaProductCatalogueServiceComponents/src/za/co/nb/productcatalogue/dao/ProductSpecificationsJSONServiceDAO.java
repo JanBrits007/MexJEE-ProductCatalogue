@@ -1,5 +1,13 @@
 package za.co.nb.productcatalogue.dao;
 
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import za.co.nb.juristic.productcatalogue.remoteejb.IJuristicProductSpecifications;
+import za.co.nb.productcatalogue.dto.ProductSpecificationJSON;
+import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
+
+import javax.naming.InitialContext;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,16 +15,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
-import za.co.nb.productcatalogue.dto.ProductSpecificationJSON;
-import za.co.nb.juristic.productcatalogue.remoteejb.IJuristicProductSpecifications;
-import za.co.nednet.it.contracts.services.ent.productandservicedevelopment.channelproductcatalogue.v1.ProductType;
-
-import javax.naming.InitialContext;
 
 public class ProductSpecificationsJSONServiceDAO {
 
@@ -52,12 +50,17 @@ public class ProductSpecificationsJSONServiceDAO {
 				mLog.debug("Trace 4a");
 
 				if(inputStream == null) {
-					String productSpecificationJSON = getJuristicProductSpecificationsRemote().getProductSpecificationsJSON(productID);
-					if(productSpecificationJSON != null) {
-						ptJSONStringCache.put(productID, productSpecificationJSON);
-                        mLog.debug("Trace 4 JU");
-                        //mLog.debug("Trace 4 JU" + productSpecificationJSON);
-						return productSpecificationJSON;
+					try {
+						String productSpecificationJSON = getJuristicProductSpecificationsRemote().getProductSpecificationsJSON(productID);
+						if(productSpecificationJSON != null) {
+							ptJSONStringCache.put(productID, productSpecificationJSON);
+                        	mLog.debug("Trace 4 JU");
+                        	//mLog.debug("Trace 4 JU" + productSpecificationJSON);
+							return productSpecificationJSON;
+						}
+					} catch (Exception e) {
+						// exception caught
+						mLog.debug("Trace 4JU exception : " + e.getMessage());
 					}
 
 					// load parent spec if not found
