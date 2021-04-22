@@ -5,7 +5,7 @@
 		"shortDescription": "Under 16? This account is tailored for kids and offers a secure way to transact and save.",
 		"productPricing": [{
 			"type": "AdminFee",
-			"description": "Free",
+			"description": "Zero monthly fee",
 			"currency": "ZAR",
 			"amount": "0.00",
 			"frequency": "Monthly"
@@ -409,7 +409,7 @@
 			"featureIdentifier": "1402",
 			"name": "Free MyPocket",
 			"mandatory": "false",
-			"preSelected": "false",
+			"preSelected": "true",
 			"shortDescription": "Earn favourable interest rates",
 			"description": "Get a free budgeting and savings pocket linked to your Nedbank current account to earn interest and get instant access to your money when you need it.",
 			"featureGrouping": {
@@ -716,7 +716,7 @@
 			"featureIdentifier": "1374",
 			"name": "eNotes",
 			"mandatory": "false",
-			"preSelected": "false",
+			"preSelected": "true",
 			"shortDescription": "Free",
 			"description": "Keep track of your finances with the eNotes SMS notifications, anytime, anywhere. eNotes keeps you informed about all transactions on your account.",
 			"featureGrouping": {
@@ -1195,6 +1195,19 @@
 					"valueUnit": "boolean",
 					"value": "true"
 				}]
+			},
+			{
+				"attributeGroupName": "productInformationRequirement_ActivateProducts",
+				"featureAttributes": [
+					{ 
+						"attributeType": "AvailableAction",
+						"attributeName": "Card Collection" 
+					},
+					{ 
+						"attributeType": "AvailableAction",
+						"attributeName": "Card Delivery" 
+					}
+				]
 			}]
 		}]
 	}]

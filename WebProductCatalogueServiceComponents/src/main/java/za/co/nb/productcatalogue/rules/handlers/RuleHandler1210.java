@@ -52,8 +52,7 @@ public class RuleHandler1210 extends BaseProductSpecificationRuleHandler {
 	        Object objref = lookupObject("ENVIRONMENT");
 	        String environment = (String) PortableRemoteObject.narrow(objref, String.class);
 
-			if(environment.equalsIgnoreCase("ete") || environment.equalsIgnoreCase("qa")) {
-				// This is a retail application.
+            if(environment.equalsIgnoreCase("ete") || environment.equalsIgnoreCase("qa") || environment.equalsIgnoreCase("prod")) {				// This is a retail application.
 				return "5210";
 			}
 			else {
