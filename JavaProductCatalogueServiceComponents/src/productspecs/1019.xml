@@ -606,7 +606,38 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
+   </productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{dynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>6019</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{dynamicStaffListForSpecInheritance}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1019</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
          <value>${{dynamicStaffList}}</value>
@@ -620,11 +651,11 @@
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{dynamicStaffList}}</value>
+         <value>${{dynamicStaffListForSpecInheritance}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>6019</value>
+         <value>Transactional_Retail_1019</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
