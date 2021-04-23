@@ -708,7 +708,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     }
 
 
-    public String initialisationProductSubstitution(ProductType productSpec, String initiatingStaffNBNumber) throws InvalidAttributeGroupException {
+    public String initialiseBankerProductSubstitution(ProductType productSpec, String initiatingStaffNBNumber) throws InvalidAttributeGroupException {
 
         List<Banker> bankers = getMultiSubstitutionRules(productSpec, "InitialisationSubstitutionRules");
         return processMultiSubstitution(initiatingStaffNBNumber, productSpec, bankers);
