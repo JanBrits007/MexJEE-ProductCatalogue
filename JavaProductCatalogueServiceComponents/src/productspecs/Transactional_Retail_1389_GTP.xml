@@ -1,58 +1,28 @@
-<product inheritFromFiles="Transactional_Retail" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+<product inheritFromFiles="Transactional_Retail_1389" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1389</productIdentifier>
    <name>Nedbank Pay-As-You-Use</name>
-   <shortDescription>(Transactional_Retail_1389) A no frills, transparent account with a flat monthly fee, pay only for what you use.</shortDescription>
+   <shortDescription>(Transactional_Retail_1389_GTP) A no frills, transparent account with a flat monthly fee, pay only for what you use.</shortDescription>
 
    <!-- Case and Process Configuration -->
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>EligibilityRules</attributeGroupName>
+   <productAttributeGroup>
+      <attributeGroupName>GTPPilotSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <attributeName>Age</attributeName>
-         <isComparable>false</isComparable>
-         <minValue>16</minValue>
-         <maxValue>999</maxValue>
-         <valueUnit>year</valueUnit>
-         <description>be 16 years or older</description>
+         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
+         <value>${{GTPTestEmailOverideList}}</value>
       </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>GTPPilotSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <attributeName>Income</attributeName>
-         <isComparable>false</isComparable>
-         <minValue>0</minValue>
-         <maxValue>99999999</maxValue>
-         <valueUnit>ZAR</valueUnit>
+         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
+         <value>${{GTPTestEmailOverideList}}</value>
       </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>GTPPilotSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <attributeName>NaturalPerson</attributeName>
-         <isComparable>false</isComparable>
-         <value>true</value>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <attributeName>CreditApproval</attributeName>
-         <isComparable>false</isComparable>
-         <value>true</value>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <attributeName>NotUnderCreditAdministration</attributeName>
-         <isComparable>false</isComparable>
-         <value>true</value>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>EligibleDCARRanges</attributeName>
-         <value>0-100000|100001-200000</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>EligibleSegments</attributeName>
-         <value>${{RetailEligibleSegments}}</value>
+         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
+         <value>${{GTPTestEmailOverideList}}</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -82,7 +52,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>productTargetType</attributeName>
-         <value>CA</value>
+         <value>MP</value>
       </productAttributes>
       <productAttributes>
          <attributeType>boolean</attributeType>
@@ -158,34 +128,6 @@
          <attributeType>string</attributeType>
          <attributeName>noFundsAlertIndicator</attributeName>
          <value>1</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>productCodeMappings</attributeGroupName>
-      <productAttributes>
-         <attributeType>productCodeMapping</attributeType>
-         <attributeName>MDM_ProductCode</attributeName>
-         <value>1033</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productCodeMapping</attributeType>
-         <attributeName>CASACore_ProductCode</attributeName>
-         <value>1033</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productCodeMapping</attributeType>
-         <attributeName>CoreSystemIdentifier</attributeName>
-         <value>000</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <!--Offer Configuration-->
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>PresentOfferSelection</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferSelectionSummaryDetails</attributeName>
-         <value>TransactionalProductOfferSelectionSubSection|ng-component=OfferSelectionTransactionalProductComponent~ZOrder=100~isBase=Y~ContractComponentProductType=1389</value>
       </productAttributes>
    </productAttributeGroup>
 
