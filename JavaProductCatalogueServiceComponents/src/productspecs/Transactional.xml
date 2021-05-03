@@ -1,7 +1,7 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1001</productIdentifier>
-   <name>Nedbank Pay-As-You-Use</name>
-   <shortDescription>(6389) A no frills, transparent account with a flat monthly fee, pay only for what you use.</shortDescription>
+   <name>Base Transactional Specification</name>
+   <shortDescription>Base Transactional Specification</shortDescription>
 
    <!--VerifyIdentity-->
    <productAttributeGroup>
@@ -151,6 +151,10 @@
    <!--FinalizeFrontOfficeInteraction-->
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>LetsGetDigital|ng-component=LetsGetDigitalComponent~applicableChannels=WebSelfAssisted~ZOrder=60</attributeName>
+      </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=TransactionalProductAccountDetails~ZOrder=50</attributeName>
@@ -447,7 +451,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>EligibleSegments</attributeName>
-         <value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</value>
+         <value>${{RetailEligibleSegments}}</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -666,7 +670,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>

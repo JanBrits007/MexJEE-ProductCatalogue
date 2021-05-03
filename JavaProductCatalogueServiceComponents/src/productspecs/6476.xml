@@ -1,6 +1,6 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-   <productIdentifier>1478</productIdentifier>
-   <name>Professional One</name>
+   <productIdentifier>1476</productIdentifier>
+   <name>Young Professional One</name>
 
    <!--VerifyIdentity-->
    <productAttributeGroup>
@@ -139,11 +139,11 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=10~ContractComponentProductType=1478~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=10~ContractComponentProductType=1476~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YourDeclared|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=10~ContractComponentProductType=1478~applicableChannels=WebSelfAssisted</attributeName>
+         <attributeName>YourDeclared|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=10~ContractComponentProductType=1476~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -165,7 +165,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>Compliance</attributeType>
-         <attributeName>FinancialHealthConsent</attributeName>
+         <attributeName>ConsentEducationalQualification</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -179,6 +179,12 @@
       <productAttributes>
          <attributeType>Evidence</attributeType>
          <attributeName>LatestBankStatementsClauseV2</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>EducationQualification</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
@@ -208,7 +214,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Professional one application form|nedbank-commercial-release/AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+         <attributeName>Young professional one application form|nedbank-commercial-release/AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -251,6 +257,7 @@
          <attributeName>ElectronicallySign</attributeName>
       </productAttributes>
    </productAttributeGroup>
+   
    <productAttributeGroup>
       <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
       <productAttributes>
@@ -295,11 +302,11 @@
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subTP|ContractComponentProductType=1478</attributeName>
+         <attributeName>subTP|ContractComponentProductType=1476</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subProfOne|ContractComponentProductType=1478</attributeName>
+         <attributeName>subYoungProfOne|ContractComponentProductType=1476</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -311,9 +318,9 @@
          <attributeName>Age</attributeName>
          <isComparable>false</isComparable>
          <minValue>18</minValue>
-         <maxValue>999</maxValue>
+         <maxValue>29</maxValue>
          <valueUnit>year</valueUnit>
-         <description>be at least 18 years old.</description>
+         <description>be at least 18 years old and no older than 29 years old.</description>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -502,16 +509,6 @@
       </productAttributes>-->
    </productAttributeGroup>
 
-   <!--Decline Configuration-->
-   <productAttributeGroup>
-      <attributeGroupName>DeclineParameters_GenerateOffer</attributeGroupName>
-      <productAttributes>
-         <attributeType>Boolean</attributeType>
-         <attributeName>SkipGenerateOfDeclineWorkItem</attributeName>
-         <value>True</value>
-      </productAttributes>
-   </productAttributeGroup>
-
    <!--Offer Configuration-->
 
    <!--Provisioning Configuration-->
@@ -550,7 +547,7 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>mdmSubProductCode</attributeName>
-         <value>2049</value>
+         <value>2047</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -570,7 +567,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>productSubCategory</attributeName>
-         <value>23</value>
+         <value>24</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -855,7 +852,7 @@
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISUniversal</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1478</attributeName>
+         <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1476</attributeName>
       </productAttributes>
    </productAttributeGroup>
     
@@ -878,7 +875,7 @@
         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>      
         <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=ng-employment-type-approved-loan~showIncomeSource=true~child-ng-components=ng-employment-details~hideEmployedSince=true</attributeName>
+            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=ng-employment-type-approved-loan~showIncomeSource=true~child-ng-components=ng-employment-details</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
 
@@ -1162,7 +1159,7 @@
    </features>
    <features>
       <featureIdentifier>1164</featureIdentifier>
-      <name>Professional One Cheque Card</name>
+      <name>Young Professional One Cheque Card</name>
       <mandatory>false</mandatory>
       <preSelected>false</preSelected>
       <featureAttributeGroup>
@@ -1252,7 +1249,7 @@
    </features>   
    <features>
       <featureIdentifier>4387</featureIdentifier>
-      <name>Professional One Amex Card</name>
+      <name>Young Professional Amex Card</name>
       <mandatory>false</mandatory>
       <preSelected>false</preSelected>
       <featureAttributeGroup>
