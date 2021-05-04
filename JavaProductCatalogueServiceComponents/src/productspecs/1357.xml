@@ -112,7 +112,7 @@
          <minValue>18</minValue>
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>be 18 years or older</description>
+         <description>be 18 or older</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
@@ -371,6 +371,11 @@
             <attributeType>string</attributeType>
             <attributeName>frontOfficeIntentSequence</attributeName>
             <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+            <value>GenerateApplicationOfferProposals|FinancialDetails|GenerateOfferGatherClientDetails</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>

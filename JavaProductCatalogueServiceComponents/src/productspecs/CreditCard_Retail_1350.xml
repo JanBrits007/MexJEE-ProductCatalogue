@@ -1,0 +1,143 @@
+<product inheritFromFiles="CreditCard_Retail" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+	<productIdentifier>1350</productIdentifier>
+	<name>Savvy Bundle Credit Card</name>
+	<shortDescription>(CreditCard_Retail_1350) This credit card forms part of the Savvy Bundle</shortDescription>
+
+	<!--Case and Process Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Age</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>18</minValue>
+			<maxValue>999</maxValue>
+			<valueUnit>year</valueUnit>
+			<description>be 18 years or older.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>60000</minValue>
+			<maxValue>99999999</maxValue>
+			<valueUnit>ZAR</valueUnit>
+			<description>earn more than R60 000 a year; and</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NaturalPerson</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>DebitOrderRepaymentRequired</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>CreditApproval</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NotUnderCreditAdministration</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>SouthAfricanResident</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+			<description> be a South African resident.</description>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Offer Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>PresentOfferSelection</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferSelectionSummaryDetails</attributeName>
+			<value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1350</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Provisioning Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productCodeMappings</attributeGroupName>
+		<productAttributes>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>MDM_ProductCode</attributeName>
+			<value>1447</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>HLCore_ProductCode</attributeName>
+			<value>1447</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>Siyaka_ProductCode</attributeName>
+			<value>324324</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>CoreSystemIdentifier</attributeName>
+			<value>000</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>coreProvisioningParameters</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>spikeProductID</attributeName>
+			<value>1350</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>productSystem</attributeName>
+			<value>CAMS</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>productType</attributeName>
+			<value>CREDITCARD</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>flag</attributeType>
+			<attributeName>ProvisioningPhase</attributeName>
+			<value>preFICAProvisioning</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>welcomeEmailTemplate</attributeName>
+			<value>me_dynamic_welcome_01</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>welcomeDocumentTemplate</attributeName>
+			<value>nedbank-commercial-release/CombinedWelcomeLetter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>welcomeLetterTaxonomy</attributeName>
+			<value>AGREEMENTSCREDITCARD|Welcome Letter|Welcome Letter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>welcomeDocumentTemplateLocked</attributeName>
+			<value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+</product>

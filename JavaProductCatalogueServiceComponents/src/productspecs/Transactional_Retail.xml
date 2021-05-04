@@ -539,7 +539,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>EligibleSegments</attributeName>
-            <value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</value>
+            <value>${{RetailEligibleSegments}}</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
@@ -559,7 +559,7 @@
         <attributeGroupName>productInformationRequirement_VerifyAffordabilityAndEmployment</attributeGroupName>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]~child-cv-component=widVerificationHistory[READONLY]</attributeName>
+          <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[SHOW]~child-cv-component=widVerificationHistory[READONLY]</attributeName>
         </featureAttributes>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
@@ -599,11 +599,11 @@
         </featureAttributes>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>DiariseCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+          <attributeName>DiariseCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[SHOW]</attributeName>
         </featureAttributes>
         <featureAttributes>
           <attributeType>productInformationRequirement</attributeType>
-          <attributeName>FraudCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+          <attributeName>FraudCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[SHOW]</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -654,11 +654,11 @@
          </featureAttributes>
          <featureAttributes>
            <attributeType>productInformationRequirement</attributeType>
-           <attributeName>DiariseCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+           <attributeName>DiariseCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[SHOW]</attributeName>
          </featureAttributes>
          <featureAttributes>
            <attributeType>productInformationRequirement</attributeType>
-           <attributeName>FraudCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+           <attributeName>FraudCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[SHOW]</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -711,7 +711,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>baseCBOActivityList</attributeName>
-            <value>CreditDecisionDetermineOffer|ConfigureArrangement|ConfirmVerificationQuality|CBOFinalizeCase</value>
+            <value>CreditDecisionDetermineOffer|ConfigureArrangement|CBOFinalizeCase</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
@@ -731,6 +731,16 @@
          <featureAttributes>
             <attributeType>int</attributeType>
             <attributeName>CaseActivityPriority_ConfigureArrangement</attributeName>
+            <value>0|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CaseActivityTeamName_CBOVerifyApplicantAndIncome</attributeName>
+            <value>CBOVerificationTeam|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CaseActivityPriority_CBOVerifyApplicantAndIncome</attributeName>
             <value>0|Weighting=0</value>
          </featureAttributes>
          <featureAttributes>

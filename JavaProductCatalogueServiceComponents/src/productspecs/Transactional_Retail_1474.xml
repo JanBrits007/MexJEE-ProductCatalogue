@@ -3,6 +3,15 @@
    <name>Unlocked.me</name>
    <shortDescription>(Transactional_Retail_1474) Perfect for busy students, through free digital banking, this account gives you quick and easy access to cash.</shortDescription>
 
+   <!--VerifyIdentity-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!-- Case and Process Configuration -->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>EligibilityRules</attributeGroupName>
@@ -52,7 +61,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>EligibleSegments</attributeName>
-         <value>200~213|200~227|200~228|200~229|200~216|200~217|200~231</value>
+         <value>${{RetailEligibleSegments}}</value>
       </productAttributes>
    </productAttributeGroup>
 
