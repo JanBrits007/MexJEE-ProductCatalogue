@@ -167,7 +167,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
         // Now check if there are substitution rules.
 
-        if(!isSubstitutionEnabled(productSpec))
+        if(!isSubstitutionEnabled(productSpec) || isSubstitutionMapped(caseHeader, productSpecificationID))
             return productSpec;
 
         //RUN GNBA 1.0
@@ -183,14 +183,24 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
     }
 
+    private boolean isSubstitutionMapped(BusinessCaseHeader businessCaseHeader, String productSpecificationID){
+        if(!businessCaseHeader.getProductIDSubstitutionMap().isEmpty()){
+            String productId = businessCaseHeader.getProductIDSubstitutionMap().get(productSpecificationID);
+            if(productId == null)
+                return true;
+
+            return productId.equals(productSpecificationID);
+        }
+
+        return false;
+
+    }
+
     private boolean isSubstitutionRulesProductAttributesEmpty(ProductType productSpec){
         mLog.debug("pre-isSubstitutionRulesProductAttributesEmpty");
         try {
             ProductAttributeGroupType productAttributeGroup= specUtil.getProductAttributeGroupValues(productSpec, "SubstitutionRules" + environment);
-            if(productAttributeGroup.getProductAttributes().isEmpty())
-                return true;
-
-            return false;
+            return productAttributeGroup.getProductAttributes().isEmpty();
         }catch (InvalidAttributeGroupException iae){ }
 
         return false;
