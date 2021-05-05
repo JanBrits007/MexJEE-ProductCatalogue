@@ -150,6 +150,10 @@
    <!--FinalizeFrontOfficeInteraction-->
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+       <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>LetsGetDigital|ng-component=LetsGetDigitalComponent~applicableChannels=WebSelfAssisted~ZOrder=60</attributeName>
+      </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=NoFeeTransactionalProductAccountDetails~ZOrder=50~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-219~GetInTouch=true~child-ng-components=LocateBranchComponent~child-ng-components=ContactUsComponent~child-ng-components=CallMeBackComponent~child-ng-components=BankerDetailComponent~child-ng-components=CompleteCaseComponent</attributeName>
@@ -414,6 +418,26 @@
          <attributeType>string</attributeType>
          <attributeName>baseCBOActivityList</attributeName>
          <value>ConfigureArrangement|CBOFinalizeCase</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CaseActivityTeamName_ConfigureArrangement</attributeName>
+         <value>System|Weighting=0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>CaseActivityPriority_ConfigureArrangement</attributeName>
+         <value>0|Weighting=0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CaseActivityTeamName_CBOFinalizeCase</attributeName>
+         <value>System|Weighting=0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>CaseActivityPriority_CBOFinalizeCase</attributeName>
+         <value>0|Weighting=0</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -1103,7 +1127,91 @@
             <attributeName>breadcrumbSteps</attributeName>
             <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
          </featureAttributes>
-
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>baseCBOActivityList</attributeName>
+            <value>CreditDecisionDetermineOffer|ConfigureArrangement|CBOFinalizeCase</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CaseActivityTeamName_CreditDecisionDetermineOffer</attributeName>
+            <value>CreditDecisionDetermineOfferTeam|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CaseActivityPriority_CreditDecisionDetermineOffer</attributeName>
+            <value>0|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CaseActivityTeamName_ConfigureArrangement</attributeName>
+            <value>System|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CaseActivityPriority_ConfigureArrangement</attributeName>
+            <value>0|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CaseActivityTeamName_CBOVerifyApplicantAndIncome</attributeName>
+            <value>RRB Party Information Verifier|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CaseActivityPriority_CBOVerifyApplicantAndIncome</attributeName>
+            <value>0|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CaseActivityTeamName_ConfirmVerificationQuality</attributeName>
+            <value>RRB Quality Assurer|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CaseActivityPriority_ConfirmVerificationQuality</attributeName>
+            <value>0|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CaseActivityTeamName_CBOFinalizeCase</attributeName>
+            <value>System|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CaseActivityPriority_CBOFinalizeCase</attributeName>
+            <value>0|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CaseActivityTeamName_InvestigateFraud</attributeName>
+            <value>RRB Fraud Investigation|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CaseActivityPriority_InvestigateFraud</attributeName>
+            <value>0|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CaseActivityTeamName_GatherInformationAndDocuments</attributeName>
+            <value>RRB Party Information Retriever|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CaseActivityPriority_GatherInformationAndDocuments</attributeName>
+            <value>0|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CaseActivityTeamName_CBOAssessCreditApplication</attributeName>
+            <value>RRB Credit Assessor|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CaseActivityPriority_CBOAssessCreditApplication</attributeName>
+            <value>0|Weighting=0</value>
+         </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>frontOfficeIntentSequence</attributeName>
