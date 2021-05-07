@@ -3,6 +3,38 @@
    <name>Savvy Bundle Current Account</name>
    <shortDescription>(Transactional_Retail_1354) This current account forms part of the Savvy Bundle</shortDescription>
 
+   <!--VerifyIdentity-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--Evidence And Compliance Requirements-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>We need proof of your identity in the form of: South African bar-coded identity card or document, or passport and work permit.</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>Your latest three months' payslips or three months/ bank statements.</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>If you're self-employed you'll also need a letter from your accountant or financial manager confirming your income.</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!-- Case and Process Configuration -->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>EligibilityRules</attributeGroupName>
@@ -188,5 +220,20 @@
          <value>TransactionalProductOfferSelectionSubSection|ng-component=OfferSelectionTransactionalProductComponent~ZOrder=100~isBase=Y~ContractComponentProductType=1354</value>
       </productAttributes>
    </productAttributeGroup>
+
+   <features>
+      <featureIdentifier>9062</featureIdentifier>
+      <name>Additional Transactional Credit</name>
+      <description>Indicates that the client should be offered to take up transactional credit</description>
+
+      <!--VerifyIdentity-->
+
+      <!--GenerateOfferVerifyEligibility-->
+
+      <!--GenerateOfferGatherProductDetails-->
+      <featureAttributeGroup action="overwrite">
+         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+      </featureAttributeGroup>
+   </features>
 
 </product>
