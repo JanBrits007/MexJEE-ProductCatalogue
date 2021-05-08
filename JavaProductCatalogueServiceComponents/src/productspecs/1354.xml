@@ -533,20 +533,32 @@
          <value>preVerificationProvisioning</value>
       </productAttributes>
    </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
-    </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
-    </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
-    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>CaseConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ArrangementBundleCaseHandler</attributeName>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
+   </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
          <value>${{dynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForIPSubnets</attributeName>
+         <value>${{InternalNetworkIPRanges}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -560,6 +572,10 @@
          <value>${{dynamicStaffList}}</value>
       </productAttributes>
       <productAttributes>
+         <attributeName>SubstituteForIPSubnets</attributeName>
+         <value>${{InternalNetworkIPRanges}}</value>
+      </productAttributes>
+      <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
          <value>Transactional_Retail_1354</value>
       </productAttributes>
@@ -569,6 +585,10 @@
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
          <value>${{dynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForIPSubnets</attributeName>
+         <value>${{InternalNetworkIPRanges}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
