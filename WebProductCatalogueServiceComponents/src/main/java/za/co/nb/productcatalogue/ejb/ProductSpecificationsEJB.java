@@ -184,16 +184,18 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     }
 
     private boolean isSubstitutionMapped(BusinessCaseHeader businessCaseHeader, String productSpecificationID){
-        if(businessCaseHeader != null && !businessCaseHeader.getProductIDSubstitutionMap().isEmpty()){
+        if(businessCaseHeader == null)
+            return false;
+
+        if (!businessCaseHeader.getProductIDSubstitutionMap().isEmpty()) {
             String productId = businessCaseHeader.getProductIDSubstitutionMap().get(productSpecificationID);
-            if(productId == null)
+            if (productId == null)
                 return true;
-
             return productId.equals(productSpecificationID);
+        } else if (businessCaseHeader.getProductIDSubstitutionMap().isEmpty()) {
+            return true;
         }
-
         return false;
-
     }
 
     private boolean isSubstitutionRulesProductAttributesEmpty(ProductType productSpec){
