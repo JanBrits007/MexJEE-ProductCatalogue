@@ -1,0 +1,97 @@
+{
+	"productIdentifier": "1210",
+	"name": "Request additional funds",
+	"shortDescription": "We may be able to offer you some additional cash on your existing home loan account",
+	"redirect": {
+		"shouldRedirect": true,
+		"redirectUrl": "https://www.nedbank.co.za/content/nedbank/desktop/gt/en/info/campaigns/homeloans-1-percent-cash-back.html?cmpid=psea:goo:hml:home%20loans::nat&gclid=EAIaIQobChMIm9e2-6_u2QIVbwHTCh0hEA1zEAAYASAAEgKo5fD_BwE"
+	},
+	"actions": [	
+		{
+			"type": "SELECT_PRE_APPROVED",
+			"text": "Select",		
+			"value": "https://applynow.nedsecure.co.za/DigitalHomeloanApplication/Navigation/Index?aoheader"
+		},
+		{
+			"type": "DETAIL",
+			"text": "Details"
+		}
+	],
+	"specialFeature": "Min loan: R100 000",
+	"requiredDocuments": [
+		{
+			"attributeType": "Display",
+			"attributeName": "An email address.",
+			"isComparable": "false",
+			"valueUnit": "bool"
+		},
+		{
+			"attributeType": "Display",
+			"attributeName": "Your bank details.",
+			"isComparable": "false",
+			"valueUnit": "bool"
+		},
+		{
+			"attributeType": "Display",
+			"attributeName": "Your financial details - income, expenses, assets and liabilities.",
+			"isComparable": "false",
+			"valueUnit": "bool"
+		},
+		{
+			"attributeType": "Display",
+			"attributeName": "Your Nedbank bond account number.",
+			"isComparable": "false",
+			"valueUnit": "bool"
+		},
+		{
+			"attributeType": "Display",
+			"attributeName": "A copy of your South African ID card/document - ensure you have a legible, clear copy of both sides of the card.",
+			"isComparable": "false",
+			"valueUnit": "bool"
+		},
+		{
+			"attributeType": "Display",
+			"attributeName": "Proof of income.",
+			"isComparable": "false",
+			"valueUnit": "bool"
+		}
+	],
+	"applicationSteps": [
+		{
+			"index": 1,
+			"name": "Authenticate",
+			"Description": "Let’s make sure that your information is secured by authenticating you."
+		},
+		{
+			"index": 2,
+			"name": "Choose extras",
+			"Description": "We may need additional details to tailor your product for you."
+		},
+		{
+			"index": 3,
+			"name": "Credit info",
+			"Description": "Here's where you tell us how much you need and select your payment term."
+		},
+		{
+			"index": 4,
+			"name": "About you",
+			"Description": "Confirm your personal details and any additional info that we may need. "
+		},
+		{
+			"index": 6,
+			"name": "Finishing up",
+			"Description": "Finish the paperwork and get your loan!"
+		}
+	],
+	"productPricing": [],
+	"lifeCycleStatus": "AVAILABLE",
+	"startApplicationScreen": {
+		"isRequired": "false"
+	},
+	"applicationInitilizationContext":[
+		{
+			"contextType": "CHECK_GHOST_OFFER",
+			"contextValue": "HomeLoanReAdvance"
+		}
+	]
+}
