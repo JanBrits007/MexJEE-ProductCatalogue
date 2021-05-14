@@ -82,10 +82,10 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--9062 - Additional Transactional Credit-->
    <features>
       <featureIdentifier>9062</featureIdentifier>
       <name>Additional Transactional Credit</name>
-      <description>Indicates that the client should be offered to take up transactional credit</description>
 
       <!--VerifyIdentity-->
 
@@ -226,30 +226,11 @@
          </featureAttributes>
       </featureAttributeGroup>
    </features>
+
+   <!--1014 - Overdraft-->
    <features>
       <featureIdentifier>1014</featureIdentifier>
       <name>Overdraft</name>
-      <mandatory>false</mandatory>
-      <preSelected>true</preSelected>
-      <shortDescription>Overdraft facility on a current account</shortDescription>
-      <description>Detailed description of feature</description>
-      <featureGrouping>
-         <featureGroupName>Overdraft</featureGroupName>
-         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-      </featureGrouping>
-      <featureType>BoltOn</featureType>
-      <featureFulfilment>
-         <channel>selfServiceWeb</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureFulfilment>
-         <channel>staffAssisted</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
 
       <!--VerifyIdentity-->
 
@@ -310,22 +291,22 @@
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
          </featureAttributes>
-        <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>clientInformationRequirement</attributeType>
-          <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-           <attributeType>productInformationRequirement</attributeType>
-           <attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-           <attributeType>productInformationRequirement</attributeType>
-           <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryOverdraftComponent~ProceduralStepName=Your offer~ZOrder=60</attributeName>
-        </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=See something you like?~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryOverdraftComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
 
       <!--ActivateProductsGatherClientDetails-->
@@ -866,34 +847,13 @@
          </featureAttributes>
       </featureAttributeGroup>
    </features>
+
+   <!--1333 - Nedbank Greenbacks Shop Card-->
    <features>
       <featureIdentifier>1333</featureIdentifier>
       <name>Nedbank Greenbacks Shop Card</name>
-      <mandatory>false</mandatory>
-      <preSelected>true</preSelected>
-      <shortDescription>SHOP card</shortDescription>
-      <description>Great news! We've made it quick and easy to redeem all the Greenbacks you've earned with your very own SHOP card</description>
-      <featureGrouping>
-         <featureGroupName>Loyalty</featureGroupName>
-         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-      </featureGrouping>
-      <featureType>BoltOn</featureType>
-      <referenceProductID>-1</referenceProductID>
-      <featureFulfilment>
-         <channel>selfServiceWeb</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureFulfilment>
-         <channel>staffAssisted</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-      <featureDisplayPosition>VAS</featureDisplayPosition>
+
+      <!-- Case and Process Configuration -->
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>
@@ -902,17 +862,8 @@
             <value>True</value>
          </featureAttributes>
       </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
-         <featureAttributes>
-            <attributeType>type</attributeType>
-            <attributeName>name</attributeName>
-            <minValue>1</minValue>
-            <maxValue>2</maxValue>
-            <valueUnit>text</valueUnit>
-            <value>some value</value>
-         </featureAttributes>
-      </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
       <featureAttributeGroup>
          <attributeGroupName>coreProvisioningParameters</attributeGroupName>
          <featureAttributes>
@@ -995,43 +946,13 @@
          </featureAttributes>
       </featureAttributeGroup>
    </features>
+
+   <!--1402 - My Pocket-->
    <features>
       <featureIdentifier>1402</featureIdentifier>
       <name>My Pocket</name>
-      <mandatory>false</mandatory>
-      <preSelected>false</preSelected>
-      <shortDescription>Earn favourable interest rates</shortDescription>
-      <description>Get a free budgeting and savings pocket linked to your Nedbank current account to earn interest and get instant access to your money when you need it.</description>
-      <featureGrouping>
-         <featureGroupName>Saving</featureGroupName>
-         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-      </featureGrouping>
-      <featureType>BoltOn</featureType>
-      <referenceProductID>-1</referenceProductID>
-      <featurePricing>
-         <fee>
-            <type>AdminFee</type>
-            <description>Available</description>
-            <currency>ZAR</currency>
-            <amount>0</amount>
-            <frequency>Monthly</frequency>
-         </fee>
-      </featurePricing>
-      <featureFulfilment>
-         <channel>selfServiceWeb</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureFulfilment>
-         <channel>staffAssisted</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-      <featureDisplayPosition>VAS</featureDisplayPosition>
+
+      <!-- Case and Process Configuration -->
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>
@@ -1040,6 +961,8 @@
             <value>false</value>
          </featureAttributes>
       </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
       <featureAttributeGroup>
          <attributeGroupName>coreProvisioningParameters</attributeGroupName>
          <featureAttributes>
@@ -1061,60 +984,23 @@
             <value />
          </featureAttributes>
       </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>currentFeatureInformation</attributeGroupName>
-         <featureAttributes>
-            <attributeType>Information</attributeType>
-            <attributeName>InterestRate</attributeName>
-            <valueUnit>Decimal</valueUnit>
-            <value>5.25</value>
-         </featureAttributes>
-      </featureAttributeGroup>
    </features>
+
+   <!--1374 - eNotes-->
    <features>
       <featureIdentifier>1374</featureIdentifier>
       <name>eNotes</name>
-      <mandatory>false</mandatory>
-      <preSelected>true</preSelected>
-      <shortDescription>Included</shortDescription>
-      <description>Keep track of your finances with the eNotes SMS notifications, anytime, anywhere. eNotes keeps you informed about all transactions on your account.</description>
-      <featureGrouping>
-         <featureGroupName>Loyalty</featureGroupName>
-         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-      </featureGrouping>
-      <featureType>BoltOn</featureType>
-      <referenceProductID>-1</referenceProductID>
-      <featurePricing>
-         <fee>
-            <type>AdminFee</type>
-            <description>R0.45c per sms</description>
-            <currency>ZAR</currency>
-            <amount>0.45</amount>
-            <frequency>Transactional</frequency>
-         </fee>
-      </featurePricing>
-      <featureFulfilment>
-         <channel>selfServiceWeb</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureFulfilment>
-         <channel>staffAssisted</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-      <featureDisplayPosition>VAS</featureDisplayPosition>
+
+      <!--GenerateOffer-->
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=EnotesVASComponent-1374~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=EnotesVASComponent-1374~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
+
+      <!-- Case and Process Configuration -->
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>
@@ -1123,6 +1009,8 @@
             <value>True</value>
          </featureAttributes>
       </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
       <featureAttributeGroup>
          <attributeGroupName>coreProvisioningParameters</attributeGroupName>
          <featureAttributes>
@@ -1144,62 +1032,23 @@
             <value>1179</value>
          </featureAttributes>
       </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
-         <featureAttributes>
-            <attributeType>type</attributeType>
-            <attributeName>name</attributeName>
-            <minValue>1</minValue>
-            <maxValue>2</maxValue>
-            <valueUnit>text</valueUnit>
-            <value>some value</value>
-         </featureAttributes>
-      </featureAttributeGroup>
    </features>
+
+   <!--1008 - No Funds Alert Services-->
    <features>
       <featureIdentifier>1008</featureIdentifier>
       <name>No Funds Alert Services</name>
-      <mandatory>false</mandatory>
-      <preSelected>true</preSelected>
-      <shortDescription>Included</shortDescription>
-      <description>No funds alert is a service that provides a delay of the transactions being returned,due to insufficient funds in the account. Helping you save on unnecessary dishonoured penalty fees.</description>
-      <featureGrouping>
-         <featureGroupName>Loyalty</featureGroupName>
-         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-      </featureGrouping>
-      <featureType>BoltOn</featureType>
-      <referenceProductID>-1</referenceProductID>
-      <featurePricing>
-         <fee>
-            <type>AdminFee</type>
-            <description>R13 per sms</description>
-            <currency>ZAR</currency>
-            <amount>13</amount>
-            <frequency>Transactional</frequency>
-         </fee>
-      </featurePricing>
-      <featureFulfilment>
-         <channel>selfServiceWeb</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureFulfilment>
-         <channel>staffAssisted</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-      <featureDisplayPosition>VAS</featureDisplayPosition>
+
+      <!--GenerateOffer-->
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=NoFundsAlertVASComponent-1008~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=NoFundsAlertVASComponent-1008~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
+
+      <!-- Case and Process Configuration -->
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>
@@ -1208,6 +1057,8 @@
             <value>True</value>
          </featureAttributes>
       </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
       <featureAttributeGroup>
          <attributeGroupName>coreProvisioningParameters</attributeGroupName>
          <featureAttributes>
@@ -1229,62 +1080,23 @@
             <value>1213</value>
          </featureAttributes>
       </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
-         <featureAttributes>
-            <attributeType>type</attributeType>
-            <attributeName>name</attributeName>
-            <minValue>1</minValue>
-            <maxValue>2</maxValue>
-            <valueUnit>text</valueUnit>
-            <value>some value</value>
-         </featureAttributes>
-      </featureAttributeGroup>
    </features>
+
+   <!--1454 - Greenbacks Rewards Membership-->
    <features>
       <featureIdentifier>1454</featureIdentifier>
       <name>Greenbacks Rewards Membership</name>
-      <mandatory>false</mandatory>
-      <preSelected>true</preSelected>
-      <shortDescription>Included</shortDescription>
-      <description>Nedbank Greenback member, you can earn Nedbank Greenbacks on all your eligible card spend*, which you can then redeem for a variety of exciting rewards.</description>
-      <featureGrouping>
-         <featureGroupName>Loyalty</featureGroupName>
-         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-      </featureGrouping>
-      <featureType>BoltOn</featureType>
-      <referenceProductID>-1</referenceProductID>
-      <featurePricing>
-         <fee>
-            <type>AdminFee</type>
-            <description>R23 per month</description>
-            <currency>ZAR</currency>
-            <amount>23</amount>
-            <frequency>Monthly</frequency>
-         </fee>
-      </featurePricing>
-      <featureFulfilment>
-         <channel>selfServiceWeb</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureFulfilment>
-         <channel>staffAssisted</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-      <featureDisplayPosition>VAS</featureDisplayPosition>
+
+      <!--GenerateOffer-->
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GreenbacksComponent-1454~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GreenbacksComponent-1454~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
+
+      <!-- Case and Process Configuration -->
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>
@@ -1293,6 +1105,8 @@
             <value>True</value>
          </featureAttributes>
       </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
       <featureAttributeGroup>
          <attributeGroupName>coreProvisioningParameters</attributeGroupName>
          <featureAttributes>
@@ -1314,62 +1128,23 @@
             <value />
          </featureAttributes>
       </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
-         <featureAttributes>
-            <attributeType>type</attributeType>
-            <attributeName>name</attributeName>
-            <minValue>1</minValue>
-            <maxValue>2</maxValue>
-            <valueUnit>text</valueUnit>
-            <value>some value</value>
-         </featureAttributes>
-      </featureAttributeGroup>
    </features>
+
+   <!--1025 - Funeral Cover-->
    <features>
       <featureIdentifier>1025</featureIdentifier>
       <name>Funeral Cover</name>
-      <mandatory>false</mandatory>
-      <preSelected>false</preSelected>
-      <shortDescription />
-      <description>The Nedbank Insurance Funeral Plan provides cover that will help you to secure a dignified funeral for yourself or your family members. If you choose this option, we'll get in touch with you to finalise the sale.</description>
-      <featureGrouping>
-         <featureGroupName>Loyalty</featureGroupName>
-         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-      </featureGrouping>
-      <featureType>BoltOn</featureType>
-      <referenceProductID>-1</referenceProductID>
-      <featurePricing>
-         <fee>
-            <type>AdminFee</type>
-            <description />
-            <currency>ZAR</currency>
-            <amount>0</amount>
-            <frequency>Monthly</frequency>
-         </fee>
-      </featurePricing>
-      <featureFulfilment>
-         <channel>selfServiceWeb</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureFulfilment>
-         <channel>staffAssisted</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-      <featureDisplayPosition>VAS</featureDisplayPosition>
+
+      <!--GenerateOffer-->
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=NedbankInsuranceFuneralPlanComponent-1025~ProceduralStepName=Your offer~ZOrder=65</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=NedbankInsuranceFuneralPlanComponent-1025~ProceduralStepName=Optional extras for you~ZOrder=65</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
+
+      <!--FinalizeFrontOfficeInteraction-->
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
          <featureAttributes>
@@ -1377,6 +1152,8 @@
             <attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~child-ng-components=FuneralCoverProvisionInBranchComponent-1025~ZOrder=50</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
+
+      <!-- Case and Process Configuration -->
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>
@@ -1385,6 +1162,8 @@
             <value>True</value>
          </featureAttributes>
       </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
       <featureAttributeGroup>
          <attributeGroupName>coreProvisioningParameters</attributeGroupName>
          <featureAttributes>
@@ -1406,50 +1185,23 @@
             <value>1390</value>
          </featureAttributes>
       </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
-         <featureAttributes>
-            <attributeType>type</attributeType>
-            <attributeName>name</attributeName>
-            <minValue>1</minValue>
-            <maxValue>2</maxValue>
-            <valueUnit>text</valueUnit>
-            <value>some value</value>
-         </featureAttributes>
-      </featureAttributeGroup>
    </features>
+
+   <!--1376 - Salary Switching-->
    <features>
       <featureIdentifier>1376</featureIdentifier>
       <name>Salary Switching</name>
-      <mandatory>false</mandatory>
-      <preSelected>false</preSelected>
-      <shortDescription />
-      <description>Our free salary switching service will provide you with a confirmation of banking details to take to your employer for a quicker and simpler switch. Your overdraft will activate once your first salary is deplosited.</description>
-      <featureGrouping>
-         <featureGroupName>Salary Switching</featureGroupName>
-         <featureGroupRuleForProduct>OptionalIfAlternativeSelected</featureGroupRuleForProduct>
-      </featureGrouping>
-      <featureType>BoltOn</featureType>
-      <referenceProductID>-1</referenceProductID>
-      <featurePricing>
-         <fee>
-            <type>InitiationFee</type>
-            <description>Initiation Fee</description>
-            <currency>ZAR</currency>
-            <amount>0</amount>
-            <frequency>OnceOff</frequency>
-         </fee>
-      </featurePricing>
-      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-      <featureDisplayPosition>VAS</featureDisplayPosition>
+
+      <!--GenerateOffer-->
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=SalarySwitchingComponent-1376~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=SalarySwitchingComponent-1376~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
+
+      <!--FinalizeFrontOfficeInteraction-->
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
          <featureAttributes>
@@ -1457,35 +1209,8 @@
             <attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~child-ng-components=SalarySwitchingProvisionInBranchComponent-1376~ZOrder=50</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>SystemRelated</attributeGroupName>
-         <featureAttributes>
-            <attributeType>Flag</attributeType>
-            <attributeName>StraightThroughProcess</attributeName>
-            <value>true</value>
-         </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>LoanGroupingCode</attributeName>
-            <valueUnit>PER</valueUnit>
-            <value>PER</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>provisionInBranch</attributeName>
-            <valueUnit>boolean</valueUnit>
-            <value>true</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>legacyProductID</attributeName>
-            <valueUnit>string</valueUnit>
-            <value />
-         </featureAttributes>
-      </featureAttributeGroup>
+
+      <!--Document Configuration-->
       <featureAttributeGroup>
          <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
          <featureAttributes>
@@ -1509,46 +1234,8 @@
             <attributeName>SalarySwitchingUniversal</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
-   </features>
-   <features>
-      <featureIdentifier>1380</featureIdentifier>
-      <name>Debit Order Switching</name>
-      <mandatory>false</mandatory>
-      <preSelected>false</preSelected>
-      <shortDescription />
-      <description>If this is going to be your main account, we can, where possible, help you move your debit orders to your new Nedbank account for free,or you can download the MoneyApp and do it yourself.</description>
-      <featureGrouping>
-         <featureGroupName>Debit Order Switching</featureGroupName>
-         <featureGroupRuleForProduct>OptionalIfAlternativeSelected</featureGroupRuleForProduct>
-      </featureGrouping>
-      <featureType>BoltOn</featureType>
-      <referenceProductID>-1</referenceProductID>
-      <featurePricing>
-         <fee>
-            <type>InitiationFee</type>
-            <description>Initiation Fee</description>
-            <currency>ZAR</currency>
-            <amount>0</amount>
-            <frequency>OnceOff</frequency>
-         </fee>
-      </featurePricing>
-      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-      <featureDisplayPosition>VAS</featureDisplayPosition>
-      <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=DebitOrderSwitchingComponent-1380~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~child-ng-components=DebitOrderSwitchingProvisionInBranchComponent-1380~ZOrder=50</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
+
+      <!-- Case and Process Configuration -->
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>
@@ -1557,6 +1244,65 @@
             <value>true</value>
          </featureAttributes>
       </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>LoanGroupingCode</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>PER</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>provisionInBranch</attributeName>
+            <valueUnit>boolean</valueUnit>
+            <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>legacyProductID</attributeName>
+            <valueUnit>string</valueUnit>
+            <value />
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
+
+   <!--1380 - Debit Order Switching-->
+   <features>
+      <featureIdentifier>1380</featureIdentifier>
+      <name>Debit Order Switching</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=DebitOrderSwitchingComponent-1380~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--FinalizeFrontOfficeInteraction-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~child-ng-components=DebitOrderSwitchingProvisionInBranchComponent-1380~ZOrder=50</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!-- Case and Process Configuration -->
+      <featureAttributeGroup>
+         <attributeGroupName>SystemRelated</attributeGroupName>
+         <featureAttributes>
+            <attributeType>Flag</attributeType>
+            <attributeName>StraightThroughProcess</attributeName>
+            <value>true</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
       <featureAttributeGroup>
          <attributeGroupName>coreProvisioningParameters</attributeGroupName>
          <featureAttributes>
@@ -1579,23 +1325,31 @@
          </featureAttributes>
       </featureAttributeGroup>
    </features>
+
+   <!--219 - Instant Gold Cheque Card-->
    <features>
       <featureIdentifier>219</featureIdentifier>
       <name>Instant Gold Cheque Card</name>
-      <mandatory>false</mandatory>
-      <preSelected>false</preSelected>
-      <shortDescription>Short description of feature</shortDescription>
-      <description>Detailed description of feature</description>
-      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-      <featureDisplayPosition>preOffer</featureDisplayPosition>
+
+      <!--GenerateOffer-->
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-InstantGoldChequeCardValueAddedServiceSelector-219~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-InstantGoldChequeCardValueAddedServiceSelector-219~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
+
+      <!--ActivateProductsGatherProductDetails-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~ProceduralStepName=Getting your cards~ZOrder=170~ContractComponentProductType=219</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--FinalizeFrontOfficeInteraction-->
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
          <featureAttributes>
@@ -1603,6 +1357,8 @@
             <attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~child-ng-components=InstantGoldChequeCardProvisionInBranchComponent-219~child-ng-components=CardCollectionNotificationComponent-219~ZOrder=50</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
+
+      <!-- Case and Process Configuration -->
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>
@@ -1611,6 +1367,8 @@
             <value>true</value>
          </featureAttributes>
       </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
       <featureAttributeGroup>
          <attributeGroupName>coreProvisioningParameters</attributeGroupName>
          <featureAttributes>
@@ -1626,31 +1384,41 @@
             <value>true</value>
          </featureAttributes>
       </featureAttributeGroup>
+   </features>
+
+   <!--1386 - Gold Cheque Card-->
+   <features>
+      <featureIdentifier>1386</featureIdentifier>
+      <name>Gold Cheque Card</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GoldChequeCardVASComponent-1386~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--ActivateProductsGatherProductDetails-->
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~ProceduralStepName=Getting your cards~ZOrder=170~ContractComponentProductType=219</attributeName>
+            <attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170~ContractComponentProductType=1386</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
-   </features>
-   <features>
-      <featureIdentifier>1386</featureIdentifier>
-      <name>Gold Cheque Card</name>
-      <mandatory>false</mandatory>
-      <preSelected>true</preSelected>
-      <shortDescription>Short description of feature</shortDescription>
-      <description>Detailed description of feature</description>
-      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-      <featureDisplayPosition>preOffer</featureDisplayPosition>
+
+      <!--FinalizeFrontOfficeInteraction-->
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GoldChequeCardVASComponent-1386~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-1386~ZOrder=50</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
+
+      <!-- Case and Process Configuration -->
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>
@@ -1659,20 +1427,8 @@
             <value>true</value>
          </featureAttributes>
       </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170~ContractComponentProductType=1386</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDone|ng-component=WhatIsNextComponent~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-1386~ZOrder=50</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
       <featureAttributeGroup>
          <attributeGroupName>coreProvisioningParameters</attributeGroupName>
          <featureAttributes>
@@ -1757,41 +1513,22 @@
          </featureAttributes>
       </featureAttributeGroup>
    </features>
+
+   <!--1387 - Amex Card-->
    <features>
       <featureIdentifier>1387</featureIdentifier>
       <name>Amex Card</name>
-      <mandatory>false</mandatory>
-      <preSelected>true</preSelected>
-      <shortDescription />
-      <description>Accelerate your Greenbacks rewards with the Amex Card</description>
-      <featureGrouping>
-         <featureGroupName>Loyalty</featureGroupName>
-         <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-      </featureGrouping>
-      <featureType>BoltOn</featureType>
-      <referenceProductID>-1</referenceProductID>
-      <featureFulfilment>
-         <channel>selfServiceWeb</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureFulfilment>
-         <channel>staffAssisted</channel>
-         <fulfilmentType>setting</fulfilmentType>
-         <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-         <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-      </featureFulfilment>
-      <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-      <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-      <featureDisplayPosition>VAS</featureDisplayPosition>
+
+      <!--GenerateOffer-->
       <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=AmexCardVASComponent-1387~ProceduralStepName=Your offer~ZOrder=70</attributeName>
-        </featureAttributes>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=AmexCardVASComponent-1387~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
+
+      <!-- Case and Process Configuration -->
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>
@@ -1800,17 +1537,8 @@
             <value>True</value>
          </featureAttributes>
       </featureAttributeGroup>
-      <featureAttributeGroup>
-         <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
-         <featureAttributes>
-            <attributeType>type</attributeType>
-            <attributeName>name</attributeName>
-            <minValue>1</minValue>
-            <maxValue>2</maxValue>
-            <valueUnit>text</valueUnit>
-            <value>some value</value>
-         </featureAttributes>
-      </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
       <featureAttributeGroup>
          <attributeGroupName>coreProvisioningParameters</attributeGroupName>
          <featureAttributes>
@@ -1893,26 +1621,22 @@
          </featureAttributes>
       </featureAttributeGroup>
    </features>
+
+   <!--1446 - Overdraft Assurance-->
    <features>
       <featureIdentifier>1446</featureIdentifier>
       <name>Overdraft Assurance</name>
-      <mandatory>false</mandatory>
-      <preSelected>true</preSelected>
-      <shortDescription>Life Insurance with credit producct</shortDescription>
-      <description>Detailed description of feature</description>
-      <featureGrouping>
-         <featureGroupName>Insurance</featureGroupName>
-         <featureGroupRuleForProduct>OptionalIfAlternativeSelected</featureGroupRuleForProduct>
-      </featureGrouping>
-      <featureType>BoltOn</featureType>
-      <referenceProductID>-1</referenceProductID>
+
+      <!--GenerateOffer-->
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceComponent-1446~ProceduralStepName=Your offer~ZOrder=65</attributeName>
+            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceComponent-1446~ProceduralStepName=Optional extras for you~ZOrder=65</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
+
+      <!-- Case and Process Configuration -->
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>
@@ -1921,6 +1645,8 @@
             <value>true</value>
          </featureAttributes>
       </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
       <featureAttributeGroup>
          <attributeGroupName>coreProvisioningParameters</attributeGroupName>
          <featureAttributes>
