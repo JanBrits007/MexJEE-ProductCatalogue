@@ -184,7 +184,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     }
 
     private boolean isSubstitutionMapped(BusinessCaseHeader businessCaseHeader, String productSpecificationID){
-        if(businessCaseHeader == null)
+        if(businessCaseHeader == null || productSpecificationID.equals("1310"))
             return false;
 
         if (!businessCaseHeader.getProductIDSubstitutionMap().isEmpty()) {
