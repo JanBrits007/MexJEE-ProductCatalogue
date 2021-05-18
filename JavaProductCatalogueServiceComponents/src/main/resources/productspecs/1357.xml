@@ -1,0 +1,410 @@
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+   <productIdentifier>1357</productIdentifier>
+   <name>Savvy Bundle</name>
+   <shortDescription>Get the ultimate! This offer includes unlimited transactions, a platinum cheque and credit card and so much more.</shortDescription>
+
+   <!--VerifyIdentity-->
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>PrepareApplicant|ng-component=GenericProcessStartPageComponent~ZOrder=300~HideProceduralStep=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--GenerateOfferVerifyEligibility-->
+
+   <!--GenerateOfferGatherProductDetails-->
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--DetermineRelatedParties-->
+
+   <!--GenerateOfferGatherClientDetails-->
+
+   <!--FinancialDetails-->
+
+   <!--GenerateApplicationOfferProposals-->
+
+   <!--GenerateOffer-->
+
+   <!--ActivateProductsGatherClientDetails-->
+
+   <!--ActivateProductsGatherProductDetails-->
+
+   <!--ActivateProductsGatherEvidence-->
+
+   <!--ActivateProductsPresentDocuments-->
+
+   <!--FinalizeFrontOfficeInteraction-->
+
+   <!--Evidence And Compliance Requirements-->
+   <productAttributeGroup>
+      <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>We need proof of your identity in the form of: South African bar-coded identity card or document, or passport and work permit.</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>Your latest three months' payslips or three months/ bank statements.</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>If you're self-employed you'll also need a letter from your accountant or financial manager confirming your income.</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>PersonalInformationProcessingConsent</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FinancialHealthConsent</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>RequiredCompliance_GenerateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FraudCheckConsent</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FaisDeclaration</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FAISComplianceConfirmation</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--Document Configuration-->
+
+   <!--Case and Process Configuration-->
+   <productAttributeGroup>
+      <attributeGroupName>EligibilityRules</attributeGroupName>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Age</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>18</minValue>
+         <maxValue>999</maxValue>
+         <valueUnit>year</valueUnit>
+         <description>be 18 or older</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Income</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>0</minValue>
+         <maxValue>99999999</maxValue>
+         <valueUnit>ZAR</valueUnit>
+         <description>earn R3 000 or more per month</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>NaturalPerson</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>CreditApproval</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>NotUnderCreditAdministration</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>frontOfficeIntentSequence</attributeName>
+        <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Choose Extras|About you|Customise|Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAVersion</attributeName>
+         <value>2.0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>consumerFrameworkVersion</attributeName>
+         <value>2.0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>requiresGoodForCreditLeadCheck</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
+         <value>5</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>ApplicationEndToEndExecutionTimeMinutes</attributeName>
+         <value>90</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>CaseConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent1</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.Intent1CODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_CreditLead</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditLeadCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_CreditOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditOfferCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_ProductOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.ProductOfferCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanHandler_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Recalculate</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.RecalcCODHandler</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanDiscriminator</attributeName>
+         <value>BRAND</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanDiscriminator</attributeName>
+         <value>CLIENT TYPE GROUPING</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>SuppressBundleExplodingOnInitialise</attributeName>
+         <value>true</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>DecisioningControl</attributeGroupName>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>EnforceIntent0FAISAccreditationRule</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>FAISCategoryCode</attributeName>
+         <value>1.18</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>ComponentSupportsDeclineReasons</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>EnforceAgeValidationRules</attributeName>
+         <value>true</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+
+   <!--Offer Configuration-->
+
+   <!--Provisioning Configuration-->
+   <productAttributeGroup>
+      <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+      <productAttributes>
+         <attributeType>Bool</attributeType>
+         <attributeName>excludeFromWelcomeLetterProductList</attributeName>
+         <value>true</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <features>
+      <featureIdentifier>9062</featureIdentifier>
+      <name>Additional Transactional Credit</name>
+      <description>Indicates that the client should be offered to take up transactional credit</description>
+
+      <!--VerifyIdentity-->
+
+      <!--GenerateOfferVerifyEligibility-->
+
+      <!--GenerateOfferGatherProductDetails-->
+
+      <!--DetermineRelatedParties-->
+
+      <!--GenerateOfferGatherClientDetails-->
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-employment-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>Offer|ProceduralStepName=Offer~ZOrder=80</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--FinancialDetails-->
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90~FinaliseWorkItemOnPositiveOutcome=true~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>Offer|ProceduralStepName=Offer~ZOrder=80</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--GenerateApplicationOfferProposals-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ProceduralStepName=Application details~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--GenerateOffer-->
+
+      <!--ActivateProductsGatherClientDetails-->
+
+      <!--ActivateProductsGatherProductDetails-->
+
+      <!--ActivateProductsGatherEvidence-->
+
+      <!--ActivateProductsPresentDocuments-->
+
+      <!--FinalizeFrontOfficeInteraction-->
+
+      <!--Case and Process Configuration -->
+      <featureAttributeGroup>
+         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence</attributeName>
+            <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+            <value>GenerateApplicationOfferProposals|FinancialDetails|GenerateOfferGatherClientDetails</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>breadcrumbSteps</attributeName>
+            <value>Choose Extras|About you|Customise|Finishing up</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>GNBAIntentToActivityMapping</attributeName>
+            <value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialDetails=Choose Extras|GenerateApplicationOfferProposals=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>CaseConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>DataMiningHandler</attributeName>
+            <value>classname=za.co.nb.onboarding.product.datamining.handlers.retail.RetailDataMiningHandler</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
+   <features>
+      <featureIdentifier>0</featureIdentifier>
+      <featureType>BundledProduct</featureType>
+      <referenceProductID>1350</referenceProductID>
+   </features>
+   <features>
+      <featureIdentifier>0</featureIdentifier>
+      <featureType>BundledProduct</featureType>
+      <referenceProductID>1354</referenceProductID>
+   </features>
+</product>
