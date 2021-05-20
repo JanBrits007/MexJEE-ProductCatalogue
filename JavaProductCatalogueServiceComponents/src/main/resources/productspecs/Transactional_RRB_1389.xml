@@ -1,141 +1,106 @@
 <product inheritFromFiles="Transactional_RRB" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-   <productIdentifier>Transactional_RRB_1389</productIdentifier>
-   <name>Nedbank Pay As You Use</name>
-   <shortDescription>Nedbank Pay As You Use for RRB</shortDescription>
+   <productIdentifier>1478</productIdentifier>
+   <name>Professional One</name>
+   <shortDescription>(Transactional_RRB_1478) Professional One</shortDescription>
+
+   <!--GenerateOfferGatherProductDetails-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=10000.00~max=300000.00~isMandatory=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!-- Case and Process Configuration -->
+   <productAttributeGroup inheritFromFiles="Transactional_Retail_1389">
+      <attributeGroupName>EligibilityRules</attributeGroupName>
+   </productAttributeGroup>
+
+   <!--Offer Configuration-->
+   <productAttributeGroup inheritFromFiles="Transactional_Retail">
+      <attributeGroupName>VASCrossSellControl</attributeGroupName>
+   </productAttributeGroup>
 
    <!--Provisioning Configuration-->
-   <productAttributeGroup action="overwrite">
+   <productAttributeGroup inheritFromFiles="Transactional_Retail_1389">
       <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>brand</attributeName>
-         <value>NEDBANK</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>productSystem</attributeName>
-         <value>DAM</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>spikeProductID</attributeName>
-         <value>1389</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>productType</attributeName>
-         <value>CA</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>productTargetType</attributeName>
-         <value>CA</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>boolean</attributeType>
-         <attributeName>supressClientCommunications</attributeName>
-         <value>false</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>digitalBranchCode</attributeName>
-         <value>911</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>digitalDcar</attributeName>
-         <value>51911</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>mdmAdminFieldType</attributeName>
-         <value>1004</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>mdmSubProductCode</attributeName>
-         <value>2051</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>mdmAdminSystemType</attributeName>
-         <value>1001</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>mdmAccountRoleType</attributeName>
-         <value>1046</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>productCategory</attributeName>
-         <value>00001</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>productSubCategory</attributeName>
-         <value>2</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>welcomeEmailTemplate</attributeName>
-         <value>me_dynamic_welcome_01</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>welcomeDocumentTemplate</attributeName>
-         <value>nedbank-commercial-release/CombinedWelcomeLetter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>welcomeLetterTaxonomy</attributeName>
-         <value>AGREEMENTSDEPOSIT|Welcome Letter|Welcome Letter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>welcomeDocumentTemplateLocked</attributeName>
-         <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>flag</attributeType>
-         <attributeName>ProvisioningPhase</attributeName>
-         <value>preVerificationProvisioning</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>noFundsAlertIndicator</attributeName>
-         <value>1</value>
-      </productAttributes>
    </productAttributeGroup>
 
+   <!--1333 - Nedbank Greenbacks Shop Card-->
+   <features inheritFromFiles="Transactional_Retail">
+      <featureIdentifier>1333</featureIdentifier>
+      <name>Nedbank Greenbacks Shop Card</name>
+   </features>
 
-   <!--ActivateProductsGatherProductDetails-->
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfAdviceIndividualComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>RelationshipBanker|ng-component=RelationshipBankerComponent~ProceduralStepName=select your relationship banker~ZOrder=140</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>SalesMilestone|ng-component=CmsDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
+   <!--1402 - My Pocket-->
+   <features inheritFromFiles="Transactional_Retail">
+      <featureIdentifier>1402</featureIdentifier>
+      <name>My Pocket</name>
+   </features>
+
+   <!--1374 - eNotes-->
+   <features inheritFromFiles="Transactional_Retail">
+      <featureIdentifier>1374</featureIdentifier>
+      <name>eNotes</name>
+   </features>
+
+   <!--1008 - No Funds Alert Services-->
+   <features inheritFromFiles="Transactional_Retail">
+      <featureIdentifier>1008</featureIdentifier>
+      <name>No Funds Alert Services</name>
+   </features>
+
+   <!--1454 - Greenbacks Rewards Membership-->
+   <features inheritFromFiles="Transactional_Retail">
+      <featureIdentifier>1454</featureIdentifier>
+      <name>Greenbacks Rewards Membership</name>
+   </features>
+
+   <!--1025 - Funeral Cover-->
+   <features inheritFromFiles="Transactional_Retail">
+      <featureIdentifier>1025</featureIdentifier>
+      <name>Funeral Cover</name>
+   </features>
+
+   <!--1376 - Salary Switching-->
+   <features inheritFromFiles="Transactional_Retail">
+      <featureIdentifier>1376</featureIdentifier>
+      <name>Salary Switching</name>
+   </features>
+
+   <!--1380 - Debit Order Switching-->
+   <features inheritFromFiles="Transactional_Retail">
+      <featureIdentifier>1380</featureIdentifier>
+      <name>Debit Order Switching</name>
+   </features>
+
+   <!--219 - Instant Gold Cheque Card-->
+   <features inheritFromFiles="Transactional_Retail">
+      <featureIdentifier>219</featureIdentifier>
+      <name>Instant Gold Cheque Card</name>
+   </features>
+
+   <!--1386 - Gold Cheque Card-->
+   <features inheritFromFiles="Transactional_Retail">
+      <featureIdentifier>1386</featureIdentifier>
+      <name>Gold Cheque Card</name>
+   </features>
+
+   <!--1387 - Amex Card-->
+   <features inheritFromFiles="Transactional_Retail">
+      <featureIdentifier>1387</featureIdentifier>
+      <name>Amex Card</name>
+   </features>
+
+   <!--1446 - Overdraft Assurance-->
+   <features inheritFromFiles="Transactional_Retail">
+      <featureIdentifier>1446</featureIdentifier>
+      <name>Overdraft Assurance</name>
+   </features>
 
 </product>
