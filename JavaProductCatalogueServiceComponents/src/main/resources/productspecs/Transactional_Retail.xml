@@ -4,6 +4,23 @@
    <shortDescription>Generic retail transactional product to be inherited from</shortDescription>
 
 
+   <!--VerifyIdentity-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~HideProceduralStep=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Your income details~ZOrder=100~HideProceduralStep=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--Offer Configuration-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>VASCrossSellControl</attributeGroupName>
@@ -209,7 +226,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>breadcrumbSteps</attributeName>
-            <value>Choose Extras|About you|Customise|Finishing up</value>
+            <value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
@@ -249,6 +266,7 @@
 
       <!--GenerateOfferGatherClientDetails-->
       <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=SalaryBankDetails~child-ng-components=ConsentCapture~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
