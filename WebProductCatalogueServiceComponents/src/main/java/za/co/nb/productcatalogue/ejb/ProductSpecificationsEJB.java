@@ -555,21 +555,19 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         try {
             List<ProductAttributeGroupType> multiProductAttributeGroupValues = specUtil.getMultiProductAttributeGroupValues(productType, rule);
 
-            multiProductAttributeGroupValues.forEach(productAttributeGroupType -> {
+            multiProductAttributeGroupValues
+                    .forEach(productAttributeGroupType -> productAttributeGroupType.getProductAttributes()
+                            .forEach(productAttributes -> {
 
-                productAttributeGroupType.getProductAttributes().forEach(productAttributes -> {
+                              if(productAttributes.getAttributeName().equals( "SubstituteForWhiteListedNBNumbers") &&
+                                      productAttributes.getValue().contains(DYNAMIC_STAFF_MARkER)){
 
-                  if(productAttributes.getAttributeName().equals( "SubstituteForWhiteListedNBNumbers") &&
-                          productAttributes.getValue().contains(DYNAMIC_STAFF_MARkER)){
-
-                      String staffList = dynamicWhitelistBean.getStaffList(productId);
-                        mLog.debug("staffList:" + staffList);
-                        productAttributes.setValue(staffList);
-                    }
-                });
-
-            });
-
+                                  String staffList = dynamicWhitelistBean.getStaffList(productId);
+                                    mLog.debug("staffList:" + staffList);
+                                    productAttributes.setValue(staffList);
+                                }
+                            })
+                    );
 
         }catch (InvalidAttributeGroupException ignored){}
     }
