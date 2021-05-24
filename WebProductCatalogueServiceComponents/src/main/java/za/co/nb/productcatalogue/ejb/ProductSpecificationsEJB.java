@@ -553,14 +553,23 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
     private void injectDynamicStaffList(ProductType productType, String rule, String productId){
         try {
-            ProductattributesType productAttributes = specUtil.getProductAttributes(productType, rule, "SubstituteForWhiteListedNBNumbers");
-            if(productAttributes.getValue().contains(DYNAMIC_STAFF_MARkER)){
-                String staffList = dynamicWhitelistBean.getStaffList(productId);
-                mLog.debug("staffList:" + staffList);
-                productAttributes.setValue(staffList);
-            }
+            List<ProductAttributeGroupType> multiProductAttributeGroupValues = specUtil.getMultiProductAttributeGroupValues(productType, rule);
 
-        }catch (InvalidAttributeException e){}
+            multiProductAttributeGroupValues
+                    .forEach(productAttributeGroupType -> productAttributeGroupType.getProductAttributes()
+                            .forEach(productAttributes -> {
+
+                              if(productAttributes.getAttributeName().equals( "SubstituteForWhiteListedNBNumbers") &&
+                                      productAttributes.getValue().contains(DYNAMIC_STAFF_MARkER)){
+
+                                  String staffList = dynamicWhitelistBean.getStaffList(productId);
+                                    mLog.debug("staffList:" + staffList);
+                                    productAttributes.setValue(staffList);
+                                }
+                            })
+                    );
+
+        }catch (InvalidAttributeGroupException ignored){}
     }
 
     private void injectDynamicProperty(ProductType productType, RawSpecString rawSpecString){

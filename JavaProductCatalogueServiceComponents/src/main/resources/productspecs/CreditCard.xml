@@ -8,11 +8,7 @@
 		<attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Your income details~ZOrder=100</attributeName>
+			<attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~HideProceduralStep=true</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -25,6 +21,10 @@
 	<!--GenerateOfferGatherProductDetails-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
@@ -753,7 +753,7 @@
 		<productAttributes>
 			 <attributeType>string</attributeType>
 			 <attributeName>breadcrumbSteps</attributeName>
-			 <value>Choose Extras|About you|Customise|Finishing up</value>
+			 <value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
 		</productAttributes>
 		<productAttributes>
 			 <attributeType>string</attributeType>
