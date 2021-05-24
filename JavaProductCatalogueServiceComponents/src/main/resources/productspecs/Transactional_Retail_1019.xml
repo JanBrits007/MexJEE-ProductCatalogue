@@ -1,7 +1,20 @@
 <product inheritFromFiles="Transactional_Retail" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1019</productIdentifier>
    <name>Savvy Plus</name>
-   <shortDescription>(Transactional_Retail_6019) Do your banking for a fixed monthly fee and enjoy the flexibility of adding benefits, such as an overdraft facility and Nedbank Greenbacks Rewards membership, when you need them.</shortDescription>
+   <shortDescription>(Transactional_Retail_1019) Do your banking for a fixed monthly fee and enjoy the flexibility of adding benefits, such as an overdraft facility and Nedbank Greenbacks Rewards membership, when you need them.</shortDescription>
+
+   <!--Document Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subTP|ContractComponentProductType=1019</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subSavvyPlus|ContractComponentProductType=1019</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
 
    <!-- Case and Process Configuration -->
    <productAttributeGroup action="overwrite">
