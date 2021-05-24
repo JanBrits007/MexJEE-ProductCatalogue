@@ -545,7 +545,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         ProductType productType = productTypeInheritanceLoader.load(rawSpecString.getXmlString(), true);
         injectDynamicStaffList(productType, "InitialisationSubstitutionRules" + environment, productId);
         injectDynamicStaffList(productType,"OfferCrossSellSubstitutionRules" + environment, productId);
-        injectDynamicProperty(productType, rawSpecString);
+        injectDynamicProperty(productType);
 
         productTypeCacheEJB.put(productId, productType);
         products.add(productType);
@@ -572,24 +572,35 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
         }catch (InvalidAttributeGroupException ignored){}
     }
 
-    private void injectDynamicProperty(ProductType productType, RawSpecString rawSpecString){
-
-	    if(!rawSpecString.getXmlString().contains("${{"))
-	        return;
+    private void injectDynamicProperty(ProductType productType){
 
         productType.getProductAttributeGroup().forEach(productAttributeGroupType ->
             productAttributeGroupType.getProductAttributes().forEach(productAttributesType -> {
                 if(productAttributesType.getValue() != null && !productAttributesType.getValue().contains(DYNAMIC_STAFF_MARkER)) {
                     if (productAttributesType.getValue().contains("${{")) {
 
-                        mLog.debug("find dynamic value:" + productAttributesType.getValue());
+                        mLog.debug("find [productAttributesType] dynamic value:" + productAttributesType.getValue());
                         String propertyValue = dynamicPropertyBean.getProperty(productAttributesType.getValue());
-                        mLog.debug("found dynamic value:" + propertyValue);
+                        mLog.debug("found [productAttributesType] dynamic value:" + propertyValue);
                         productAttributesType.setValue(propertyValue);
                     }
                 }
             })
         );
+
+        productType.getFeatures()
+            .forEach(featuresType -> featuresType.getFeatureAttributeGroup()
+                .forEach(featureAttributeGroupType -> featureAttributeGroupType.getFeatureAttributes()
+                    .forEach(featureAttributesType -> {
+                        if(featureAttributesType.getValue() != null && featureAttributesType.getValue().contains("${{")){
+                            mLog.debug("find [featureAttributesType] dynamic value:" + featureAttributesType.getValue());
+                            String propertyValue = dynamicPropertyBean.getProperty(featureAttributesType.getValue());
+                            mLog.debug("found [featureAttributesType] dynamic value:" + propertyValue);
+                            featureAttributesType.setValue(propertyValue);
+                        }
+                    })
+                )
+            );
 
     }
 
