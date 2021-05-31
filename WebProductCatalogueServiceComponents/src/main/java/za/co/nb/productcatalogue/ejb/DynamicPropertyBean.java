@@ -30,7 +30,7 @@ public class DynamicPropertyBean {
     public String parseProperty(String key){
         mLog.debug("pre-parser:"+key);
         key =  key.substring(key.lastIndexOf("{")+1, key.indexOf("}"));
-        mLog.error("post-parser:["+key+"]");
+        mLog.debug("post-parser:["+key+"]");
         return key;
     }
 }
