@@ -802,6 +802,48 @@
          <value>EMAILSMS</value>
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>GTPPilotSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
+         <value>${{GTPTestEmailOverideList}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>GTPPilotSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
+         <value>${{GTPTestEmailOverideList}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>GTPPilotSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
+         <value>${{EDBTestEmailOverideList}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>EDBPilotSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
+         <value>${{EDBTestEmailOverideList}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>EDBPilotSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
+         <value>${{EDBTestEmailOverideList}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <!--productAttributeGroup> Not implementing this whitelisting for PROD
+      <attributeGroupName>EDBPilotSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
+         <value>${{GTPTestEmailOverideList}}</value>
+      </productAttributes>
+   </productAttributeGroup-->
 
    <!--Offer Configuration-->
    <productAttributeGroup>
