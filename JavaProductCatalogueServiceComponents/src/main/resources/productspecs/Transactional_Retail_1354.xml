@@ -243,6 +243,32 @@
       <featureAttributeGroup action="overwrite">
          <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
       </featureAttributeGroup>
+
+
+      <!--GenerateOfferGatherClientDetails-->
+      <featureAttributeGroup action="overwrite">
+         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>NCCDesk|ng-component=NCCDeskWidgetComponent~ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted~ActiveOnInitialWorkItemExecution=true</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=SalaryBankDetails~child-ng-components=ConsentCapture~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
    </features>
 
 </product>
