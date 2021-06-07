@@ -1,6 +1,28 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1032</productIdentifier>
 	<name>Nedbank Gold Credit Card</name>
+
+	<productAttributeGroup>
+		<attributeGroupName>SubstitutionRulesETE</attributeGroupName>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>SubstitutionRulesQA</attributeGroupName>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+			<value>${{EDBPhase2dynamicStaffList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>CreditCard_Retail_1032_Simulation</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<productAttributeGroup>
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
 		<productAttributes>
@@ -30,7 +52,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>Compliance</attributeType>
-			<attributeName>BureauCheckConsentCard</attributeName>
+			<attributeName>BureauCheckConsent</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -41,7 +63,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>Compliance</attributeType>
-			<attributeName>BureauCheckConsentCard</attributeName>
+			<attributeName>BureauCheckConsent</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -434,15 +456,6 @@
 			<value>CREDITCARD</value>
 		</productAttributes>
 	</productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
-    </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
-    </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
-    </productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
 		<productAttributes>
@@ -555,6 +568,14 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subCreditCardTC|ContractComponentProductType=1032</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>CaseConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>ArrangementBundleCaseHandler</attributeName>
+			<value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<features>

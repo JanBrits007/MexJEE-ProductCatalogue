@@ -141,7 +141,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+			<attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true~ContractComponentProductType=1032</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -749,7 +749,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeIntentSequence</attributeName>
-			<value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+			<value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -1029,6 +1029,13 @@
 			<attributeType>1100</attributeType>
 			<attributeName>ProductRuleHandler_PaymentProtectionPlan</attributeName>
 			<value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>EDBPhase2PilotSubstitutionRulesETE</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
+			<value>${{EDBPhase2TestEmailOverideList}}</value>
 		</productAttributes>
 	</productAttributeGroup>
 
