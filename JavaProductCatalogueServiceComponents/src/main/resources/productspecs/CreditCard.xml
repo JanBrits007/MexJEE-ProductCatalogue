@@ -3,9 +3,15 @@
 	<name>Base Credit Card Specification</name>
 	<shortDescription>Base Credit Card Specification</shortDescription>
 
+	<!--GenerateOfferVerifyEligibility-->
+
 	<!--VerifyIdentity-->
 	<productAttributeGroup>
 		<attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+		<productAttributes><!--This is only here while whitelisting will move to browse on roll out-->
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>PrepareApplicant|ng-component=GenericProcessStartPageComponent~ZOrder=300~HideProceduralStep=true</attributeName>
+		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~HideProceduralStep=true</attributeName>
@@ -16,18 +22,20 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-	<!--GenerateOfferVerifyEligibility-->
-
 	<!--GenerateOfferGatherProductDetails-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=2000</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
