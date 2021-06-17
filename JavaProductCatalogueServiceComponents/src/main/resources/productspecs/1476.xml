@@ -83,7 +83,7 @@
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Young professional one terms and conditions|nedbank-commercial-release/TermsAndConditionsProfOne|N/A|N/A|N/A|N/A</attributeName>
+         <attributeName>Young professional one terms and conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -95,7 +95,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>DocTemplateName</attributeType>
-         <attributeName>TermsAndConditionsProfOne</attributeName>
+         <attributeName>ProductContract</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -564,7 +564,7 @@
          <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.rrb.InitialiseBusinessCaseHandlerRetailRRB</value>
       </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
+   <!-- <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
@@ -574,22 +574,20 @@
          <attributeName>SubstituteForProductID</attributeName>
          <value>Transactional_RRB_1476</value>
       </productAttributes>
-   </productAttributeGroup>
+   </productAttributeGroup> -->
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>NB184826|CC616275|CC314532|CC314526|CC314529|NB108763|NB112478|CC310911|NB302834|CC315366|NB171731|NB176441|NB127481|CC305487|CC306491|CC322481|CC312620|CC306015</value>
-         <!--<value>CC616275|CC314532|CC314529</value>
-         <value>${{dynamicStaffList}}</value>-->
+         <value>${{dynamicStaffList}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForIPSubnets</attributeName>
-         <value>192.168.0.0|172.238.0.0|168.142.0.0|172.28.0.0</value>
+         <value>${{InternalNetworkIPRanges}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>6476</value>
+         <value>Transactional_RRB_1476</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>

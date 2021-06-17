@@ -37,10 +37,11 @@ public class ProductCatalogueCache  extends AbstractProductCatalogueDAO {
         return catalogueCache;
     }
 
+    /*
     @Schedules({
         @Schedule(hour = "1", minute = "5", second = "0", persistent = false),
         @Schedule(hour = "7", minute = "5", second = "0", persistent = false)
-    })
+    })*/
     public void updateCache() {
         mLog.debug("pre-updateCache");
         updateProductCatalogueCache();

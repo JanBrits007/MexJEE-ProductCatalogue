@@ -3,9 +3,15 @@
 	<name>Base Credit Card Specification</name>
 	<shortDescription>Base Credit Card Specification</shortDescription>
 
+	<!--GenerateOfferVerifyEligibility-->
+
 	<!--VerifyIdentity-->
 	<productAttributeGroup>
 		<attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+		<productAttributes><!--This is only here while whitelisting will move to browse on roll out-->
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>PrepareApplicant|ng-component=GenericProcessStartPageComponent~ZOrder=300~HideProceduralStep=true</attributeName>
+		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~HideProceduralStep=true</attributeName>
@@ -16,18 +22,20 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-	<!--GenerateOfferVerifyEligibility-->
-
 	<!--GenerateOfferGatherProductDetails-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=2000</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -38,11 +46,15 @@
 		<attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=SalaryBankDetails~child-ng-components=ConsentCapture~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+			<attributeName>NCCDesk|ng-component=NCCDeskWidgetComponent~ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted~ActiveOnInitialWorkItemExecution=true</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=SalaryBankDetails~child-ng-components=ConsentCapture~ZOrder=100</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -63,7 +75,11 @@
 		<attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -83,12 +99,65 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<!--FinancialExtendedDetails-->
+	<productAttributeGroup>
+		<attributeGroupName>clientInformationRequirement_FinancialExtendedDetails</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>GiveUsMoreDetailsLongForm|ng-component=GiveUsMoreDetailsLongFormComponent~ProceduralStepName=Your payslip details~ZOrder=95~HideProceduralStep=true</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>PayslipIncomeDetails|ng-component=PayslipIncomeDetailsComponent~ProceduralStepName=Income details~ZOrder=94</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>OtherIncomeDetails|ng-component=OtherIncomeDetailsComponent~ProceduralStepName=Other Income details~ZOrder=94</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>DebtObligationsDetails|ng-component=DebtObligationsDetailsComponent~ProceduralStepName=Debt obligations~ZOrder=92</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>MonthlyExpensesDetails|ng-component=MonthlyExpensesDetailsComponent~ProceduralStepName=Monthly expenses details~ZOrder=91</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--GenerateApplicationOfferProposals-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -100,7 +169,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+			<attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true~ContractComponentProductType=1032</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -113,7 +182,11 @@
 		<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -167,7 +240,7 @@
 		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160</attributeName>
+			<attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -179,7 +252,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120</attributeName>
+			<attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -242,7 +315,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=CreditApplicationStatusComponent-1032~child-ng-components=CreditAccountDetails~HideProceduralStep=true~ZOrder=50</attributeName>
+			<attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=CreditApplicationStatusComponent-1032~child-ng-components=CreditAccountDetails~HideProceduralStep=true~ZOrder=50</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -251,32 +324,38 @@
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
 		<productAttributes>
 			<attributeType>Evidence</attributeType>
-			<attributeName>ProofOfBankAccountClauseCard</attributeName>
+			<attributeName>We need proof of your identity in the form of: South African bar-coded identity card or document, or passport and work permit.</attributeName>
 			<isComparable>false</isComparable>
-			<valueUnit>bool</valueUnit>
+			<valueUnit>string</valueUnit>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>Evidence</attributeType>
-			<attributeName>ProofOfIdentificationClauseCard</attributeName>
+			<attributeName>Payslips for the last 3 months</attributeName>
 			<isComparable>false</isComparable>
-			<valueUnit>bool</valueUnit>
+			<valueUnit>string</valueUnit>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>Evidence</attributeType>
-			<attributeName>ProofOfIncomeClauseCard</attributeName>
+			<attributeName>3 months bank statements</attributeName>
 			<isComparable>false</isComparable>
-			<valueUnit>bool</valueUnit>
+			<valueUnit>string</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>Evidence</attributeType>
+			<attributeName>A letter form you accountant or financial manager (if  you're self employed)</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>string</valueUnit>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
 		<productAttributes>
 			<attributeType>Compliance</attributeType>
-			<attributeName>NotUnderCreditAdministration</attributeName>
+			<attributeName>PersonalInformationProcessingConsent</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>Compliance</attributeType>
-			<attributeName>BureauCheckConsentCard</attributeName>
+			<attributeName>FinancialHealthConsent</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -538,7 +617,7 @@
 			<attributeType>EligibilityRule</attributeType>
 			<attributeName>Income</attributeName>
 			<isComparable>false</isComparable>
-			<minValue>60000</minValue>
+			<minValue>50000</minValue>
 			<maxValue>99999999</maxValue>
 			<valueUnit>ZAR</valueUnit>
 			<description>earn more than R60 000 a year; and</description>
@@ -607,6 +686,11 @@
 		 <attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
 		 <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
 	 </productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODHandler_WebDecisionEngine</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.cde.DecisionEngineCODHandler</value>
+		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent1</attributeName>
@@ -703,7 +787,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeIntentSequence</attributeName>
-			<value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+			<value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -983,6 +1067,13 @@
 			<attributeType>1100</attributeType>
 			<attributeName>ProductRuleHandler_PaymentProtectionPlan</attributeName>
 			<value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>EDBPhase2PilotSubstitutionRulesETE</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
+			<value>${{EDBPhase2TestEmailOverideList}}</value>
 		</productAttributes>
 	</productAttributeGroup>
 
