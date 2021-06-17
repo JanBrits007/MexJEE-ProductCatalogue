@@ -1,0 +1,85 @@
+<product inheritFromFiles="Transactional_Retail_1019" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+   <productIdentifier>1019</productIdentifier>
+   <name>Savvy Plus</name>
+   <shortDescription>(Transactional_Retail_1019_Simulation) Do your banking for a fixed monthly fee and enjoy the flexibility of adding benefits, such as an overdraft facility and Nedbank Greenbacks Rewards membership, when you need them.</shortDescription>
+
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>CaseConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_WebDecisionEngine</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.DecisionEngineCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent1</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.CreditCardSimulationIntent1CODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_CreditLead</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditLeadCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_CreditOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.CreditCardSimulationCreditOfferCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_ProductOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.CreditCardSimulationProductOfferCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent3</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.CreditCardSimulationIntent3CODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent4</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.cde.V3Intent4CODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanHandler_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Recalculate</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.CreditCardSimulationRecalcCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_FinancialDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.FinancialDetailsHandler</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+</product>
