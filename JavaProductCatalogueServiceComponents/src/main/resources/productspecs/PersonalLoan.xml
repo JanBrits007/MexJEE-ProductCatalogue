@@ -1,7 +1,7 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-	<productIdentifier>1002</productIdentifier>
-	<name>Base Credit Card Specification</name>
-	<shortDescription>Base Credit Card Specification</shortDescription>
+	<productIdentifier>1003</productIdentifier>
+	<name>Base Personal Loan Specification</name>
+	<shortDescription>Base Personal Loan Specification</shortDescription>
 
 	<!--GenerateOfferVerifyEligibility-->
 
@@ -27,7 +27,7 @@
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=2000</attributeName>
+			<attributeName>NeedForYourLoan|ng-component=NeedForYourLoanComponent~ProceduralStepName=Need for your loan~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -46,11 +46,7 @@
 		<attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>NCCDesk|ng-component=NCCDeskWidgetComponent~ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted~ActiveOnInitialWorkItemExecution=true</attributeName>
+			<attributeName>NeedForYourLoan|ProceduralStepName=Need for your loan~ZOrder=160</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -75,11 +71,7 @@
 		<attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+			<attributeName>NeedForYourLoan|ProceduralStepName=Need for your loan~ZOrder=160</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -104,11 +96,7 @@
 		<attributeGroupName>clientInformationRequirement_FinancialExtendedDetails</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+			<attributeName>NeedForYourLoan|ProceduralStepName=Need for your loan~ZOrder=160</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -153,11 +141,7 @@
 		<attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+			<attributeName>NeedForYourLoan|ProceduralStepName=Need for your loan~ZOrder=160</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -182,7 +166,7 @@
 		<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
+			<attributeName>NeedForYourLoan|ProceduralStepName=Need for your loan~ZOrder=160</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -240,11 +224,19 @@
 		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+			<attributeName>LoanDisbursal|ng-component=LoanDisbursalComponent~ProceduralStepName=Get your cash~ZOrder=320</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=210</attributeName>
+			<attributeName>LoanDeposit|ng-component=LoanDepositComponent~ProceduralStepName=Repaying your loan~ZOrder=310</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>LoanRepayment|ng-component=LoanRepaymentComponent~ProceduralStepName=DebiCheck debit order setup~ZOrder=300</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			 <attributeType>productInformationRequirement</attributeType>
@@ -617,10 +609,10 @@
 			<attributeType>EligibilityRule</attributeType>
 			<attributeName>Income</attributeName>
 			<isComparable>false</isComparable>
-			<minValue>5000</minValue>
+			<minValue>50000</minValue>
 			<maxValue>99999999</maxValue>
 			<valueUnit>ZAR</valueUnit>
-			<description>earn R5 000 or more per month.</description>
+			<description>earn more than R60 000 a year; and</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -649,6 +641,14 @@
 			<isComparable>false</isComparable>
 			<value>true</value>
 			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>SouthAfricanResident</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+			<description> be a South African resident.</description>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -686,12 +686,12 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent1</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.Intent1CODHandler</value>
+			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.PersonalLoanSimulationIntent1CODHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>CODHandler_CreditLead</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditLeadCODHandler</value>
+			<attributeName>CODHandler_CreditOffer</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.PersonalLoanSimulationCreditOfferCODHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -1092,23 +1092,6 @@
 	<productAttributeGroup>
 		<attributeGroupName>VASCrossSellControl</attributeGroupName>
 		<!--[Inheritance] - Add cross sell controll here -->
-	</productAttributeGroup>
-
-	<!--Decline Configuration-->
-	<productAttributeGroup>
-		<attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
-		<productAttributes>
-			<attributeType>declineCodeMapping</attributeType>
-			<attributeName>1061|child-ng-components=ContinueWithChequeAccountOnlyDeclineAction</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>assesmentOutcomeMapping</attributeType>
-			<attributeName>SomeDeclineOutcome|child-ng-components=XXXDeclineAction</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>xValueXMLFlagMapping</attributeType>
-			<attributeName>AppealAllowed|child-ng-components=AppealDeclineAction</attributeName>
-		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Provisioning Configuration-->
