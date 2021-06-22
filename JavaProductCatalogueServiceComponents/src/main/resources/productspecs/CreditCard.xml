@@ -650,14 +650,6 @@
 			<value>true</value>
 			<valueUnit>bool</valueUnit>
 		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>SouthAfricanResident</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-			<description> be a South African resident.</description>
-		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 	 <attributeGroupName>CaseConfiguration</attributeGroupName>
@@ -1100,6 +1092,23 @@
 	<productAttributeGroup>
 		<attributeGroupName>VASCrossSellControl</attributeGroupName>
 		<!--[Inheritance] - Add cross sell controll here -->
+	</productAttributeGroup>
+
+	<!--Decline Configuration-->
+	<productAttributeGroup>
+		<attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+		<productAttributes>
+			<attributeType>declineCodeMapping</attributeType>
+			<attributeName>1061|child-ng-components=ContinueWithChequeAccountOnlyDeclineAction</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>assesmentOutcomeMapping</attributeType>
+			<attributeName>SomeDeclineOutcome|child-ng-components=XXXDeclineAction</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>xValueXMLFlagMapping</attributeType>
+			<attributeName>AppealAllowed|child-ng-components=AppealDeclineAction</attributeName>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Provisioning Configuration-->
