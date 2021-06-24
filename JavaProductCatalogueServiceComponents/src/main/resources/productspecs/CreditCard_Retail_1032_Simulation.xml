@@ -3,6 +3,50 @@
 	<name>Gold Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1032_Simulation) This credit card forms part of the Savvy Bundle</shortDescription>
 
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1019~Transactional_Retail_1019_Simulation</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1354~Transactional_Retail_1354</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1357~1357</value><!--this is done since there is actually no substitution needed for this product (savvy bundle)-->
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1389~Transactional_Retail_1389_Simulation</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1474~Transactional_Retail_1474</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1032~CreditCard_Retail_1032</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1350~CreditCard_Retail_1350</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1034~CreditCard_Retail_1034_Simulation</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--Case and Process Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>CaseConfiguration</attributeGroupName>
@@ -39,27 +83,27 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent1</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditCardSimulationIntent1CODHandler</value>
+			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.CreditCardSimulationIntent1CODHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_CreditOffer</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditCardSimulationCreditOfferCODHandler</value>
+			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.CreditCardSimulationCreditOfferCODHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_ProductOffer</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditCardSimulationProductOfferCODHandler</value>
+			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.CreditCardSimulationProductOfferCODHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent3</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditCardSimulationIntent3CODHandler</value>
+			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.CreditCardSimulationIntent3CODHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent4</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.cde.CreditCardSimulationIntent4CODHandler</value>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.cde.V3Intent4CODHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -69,7 +113,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Recalculate</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditCardSimulationRecalcCODHandler</value>
+			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.CreditCardSimulationRecalcCODHandler</value>
 		</productAttributes>
 	</productAttributeGroup>
 
