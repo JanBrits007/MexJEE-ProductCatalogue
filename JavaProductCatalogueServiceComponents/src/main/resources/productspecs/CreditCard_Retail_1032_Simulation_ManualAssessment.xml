@@ -28,6 +28,15 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<!--GenerateOffer-->
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>DummyData</attributeName> <!--this is here simply so that FE completes the offer work item need to fix this later-->
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--FinalizeFrontOfficeInteraction-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
@@ -37,7 +46,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=ManualAssessmentNotificationComponent~HideProceduralStep=true~ZOrder=50</attributeName>
+			<attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=CreditApplicationComponent~HideProceduralStep=true~ZOrder=50</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -47,7 +56,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeIntentSequence</attributeName>
-			<value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|ActivateProductsGatherClientDetails|ActivateProductsGatherEvidence|FinalizeFrontOfficeInteraction</value>
+			<value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherEvidence|FinalizeFrontOfficeInteraction</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
