@@ -13,6 +13,31 @@
         </fee>
     </productPricing>
     <productOnAPageWebURL>/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html</productOnAPageWebURL>
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>NB184826</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForIPSubnets</attributeName>
+            <value>${{InternalNetworkIPRanges}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>Transactional_Retail_1385</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>CaseConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>ArrangementBundleCaseHandler</attributeName>
+            <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
+        </productAttributes>
+    </productAttributeGroup>
+
     <productAttributeGroup>
         <attributeGroupName>1028_LOANAPPLICANT_clientInformationRequirement_GenerateOffer</attributeGroupName>
         <productAttributes>
