@@ -35,10 +35,6 @@
    <!--GenerateOfferGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>FaisConversationRecordOfAdvice</attributeName>
-      </productAttributes>
    </productAttributeGroup>
 
    <!--FinancialDetails-->
@@ -185,7 +181,15 @@
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
+         <attributeName>DigitalAcknowledgement</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
          <attributeName>Download</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Preview</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -515,7 +519,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_WebDecisionEngine</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.DecisionEngineCODHandler</value>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.DecisionEngineCODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -831,11 +835,7 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>FaisConversationRecordOfAdvice</attributeName>
-      </productAttributes>     
+      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>  
    </productAttributeGroup>
 
    <productAttributeGroup>
@@ -946,6 +946,10 @@
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=ng-employment-type-approved-loan~showIncomeSource=true~child-ng-components=ng-employment-details~hideEmployedSince=true</attributeName>
         </featureAttributes>
+        <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FaisConversationRecordOfAdvice</attributeName>
+       </featureAttributes>
       </featureAttributeGroup>
 
       <!--FinancialDetails-->

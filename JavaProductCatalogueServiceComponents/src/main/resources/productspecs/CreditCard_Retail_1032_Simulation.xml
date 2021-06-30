@@ -1,7 +1,7 @@
 <product inheritFromFiles="CreditCard_Retail_1032" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1032</productIdentifier>
 	<name>Gold Credit Card</name>
-	<shortDescription>(CreditCard_Retail_1032_Simulation) This credit card forms part of the Savvy Bundle</shortDescription>
+	<shortDescription>(CreditCard_Retail_1032_Simulation) This is the gold credit card with CDE simulation</shortDescription>
 
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
@@ -78,12 +78,17 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_WebDecisionEngine</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.DecisionEngineCODHandler</value>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.DecisionEngineCODHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent1</attributeName>
 			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.CreditCardSimulationIntent1CODHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODHandler_FinancialExtendedDetails</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.FinancialExtendedDetailsHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
