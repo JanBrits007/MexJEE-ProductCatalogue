@@ -38,11 +38,24 @@
    </productAttributeGroup>
 
    <!--FinancialDetails-->
-
+    <productAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+         <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>SkipFinancialDetails|ng-component=SkipFinancialDetails</attributeName>
+         </productAttributes>
+    </productAttributeGroup>
    <!--GenerateApplicationOfferProposals-->
 
    <!--GenerateOffer-->
-
+    <productAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>SkipOffer|ng-component=SkipOffer</attributeName>
+         </productAttributes>
+    </productAttributeGroup>
+    
    <!--ActivateProductsGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
@@ -377,7 +390,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -387,7 +400,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Product Setup|GenerateOffer=Product Setup|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
