@@ -59,6 +59,11 @@
          <attributeName>VAS_1402</attributeName><!--My Pocket-->
          <value>Optionality=Optional~IsTakenUp=true</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1374</attributeName><!--eNotes-->
+         <value>Optionality=Optional~IsTakenUp=true</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup action="overwrite">
       <attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
@@ -221,6 +226,15 @@
       <!--ActivateProductsPresentDocuments-->
 
       <!--FinalizeFrontOfficeInteraction-->
+
+      <!--Decline Configuration-->
+      <featureAttributeGroup>
+         <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>1061|child-ng-components=ContinueWithoutCreditDeclineAction</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
 
       <!--Case and Process Configuration -->
       <featureAttributeGroup>
@@ -815,6 +829,34 @@
            <attributeType>int</attributeType>
            <attributeName>CaseActivityPriority_GatherInformationAndDocuments</attributeName>
            <value>0|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence</attributeName>
+            <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+            <value>GenerateApplicationOfferProposals|FinancialDetails|GenerateOfferGatherClientDetails</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>breadcrumbSteps</attributeName>
+            <value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>GNBAIntentToActivityMapping</attributeName>
+            <value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialDetails=Choose Extras|GenerateApplicationOfferProposals=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>CaseConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>DataMiningHandler</attributeName>
+            <value>classname=za.co.nb.onboarding.product.datamining.handlers.retail.RetailDataMiningHandler</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
