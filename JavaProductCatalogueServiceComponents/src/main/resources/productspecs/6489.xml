@@ -251,7 +251,6 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <!--<attributeName>Client FAIS Record of Advice|nedbank-commercial-release/FAISRecordOfAdviceStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>-->
          <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
       </productAttributes>
       <productAttributes>
@@ -271,7 +270,52 @@
          <attributeName>ElectronicallySign</attributeName>
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+      <productAttributes>
+        <attributeType>DocumentDescription</attributeType>
+        <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>AvailableAction</attributeType>
+        <attributeName>Download</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>AvailableAction</attributeType>
+        <attributeName>Email</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>AvailableAction</attributeType>
+        <attributeName>WetSign</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>AvailableAction</attributeType>
+        <attributeName>DigitallySign</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>AvailableAction</attributeType>
+        <attributeName>ElectronicallySign</attributeName>
+      </productAttributes>
+    </productAttributeGroup>
    
+   <productAttributeGroup>
+      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subYourApplicationHeader</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subNedbankLogo</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subTPTermsAndConditions|ContractComponentProductType=1021</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
       <productAttributes>
@@ -289,6 +333,28 @@
       <productAttributes>
         <attributeType>string</attributeType>
         <attributeName>Taxonomy|ARRANGEMENTS_AGREEMENTS_AGREEMENTSCREDITCARD_Agreement Contract</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subYourApplicationHeader</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subNedbankLogo</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subGenericInfo</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+        <attributeName>subContactInfo</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -675,11 +741,11 @@
          <attributeName>RequiredDataFilter_FinancialDetails</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementIncomeExpenseFilterV2</value>
       </productAttributes>
-      <productAttributes>
+      <!-- <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementProductContractFilter</value>
-      </productAttributes>
+      </productAttributes> -->
    </productAttributeGroup>
 
    <productAttributeGroup>
@@ -717,9 +783,84 @@
       <mandatory>true</mandatory>
       <preSelected>true</preSelected>
       <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+        <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       </featureAttributeGroup>
-   </features>
+      <featureAttributeGroup>
+        <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+        <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSProdCd</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>CRD</value>
+        </featureAttributes>
+        <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSActCoid</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>101</value>
+        </featureAttributes>
+        <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSCppmMlgMetCd</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>REG</value>
+        </featureAttributes>
+        <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSCtlAdId</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>C1</value>
+        </featureAttributes>
+        <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSRelCd</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>PRI</value>
+        </featureAttributes>
+        <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSPayMethod</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>MAN</value>
+        </featureAttributes>
+        <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSActType</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>PRI</value>
+        </featureAttributes>
+        <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSATrRegistrationNbr</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>194905</value>
+        </featureAttributes>
+        <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSLangCd</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>ENG</value>
+        </featureAttributes>
+        <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSNcaInd</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>Y</value>
+        </featureAttributes>
+        <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSQpcInd</attributeName>
+            <valueUnit>ENG</valueUnit>
+            <value>Y</value>
+        </featureAttributes>
+        <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSCashLimitPercentage</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>100</value>
+        </featureAttributes>
+      </featureAttributeGroup>
+  </features>
    <features>
       <featureIdentifier>4387</featureIdentifier>
       <name>Amex Multi App Cheque/Credit Card Plastic Card</name>

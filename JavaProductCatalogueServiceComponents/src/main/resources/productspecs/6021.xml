@@ -308,7 +308,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subProfOne|ContractComponentProductType=1021</attributeName>
+         <attributeName>subProfBundle|ContractComponentProductType=1021</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -400,7 +400,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Product Setup|GenerateOffer=Product Setup|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -898,6 +898,11 @@
          <value>True</value>
       </productAttributes>
       <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditRepaymentFilter</value>
+      </productAttributes>
+      <productAttributes>
          <attributeType>1454</attributeType>
          <attributeName>ProductRuleHandler_Greenbacks</attributeName>
          <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.GreenBacksRule</value>
@@ -937,11 +942,11 @@
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
       </productAttributes>
-      <productAttributes>
+      <!-- <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementProductContractFilter</value>
-      </productAttributes>
+      </productAttributes> -->
    </productAttributeGroup>
 
    <productAttributeGroup>
