@@ -3,6 +3,15 @@
    <name>Nedbank4Me</name>
    <shortDescription>(Transactional_Retail_1385) Nedbank4Me</shortDescription>
 
+   <!--VerifyIdentity-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--Determine Related Parties-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_DetermineRelatedParties</attributeGroupName>
@@ -136,6 +145,84 @@
          <attributeName>EligibleSegments</attributeName>
          <value>${{RetailEligibleSegments}}</value>
       </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>CaseConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_WebDecisionEngine</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.DecisionEngineCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent1</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.Intent1CODHandler</value>
+      </productAttributes>
+      <!--productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_CreditLead</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditLeadCODHandler</value>
+      </productAttributes-->
+      <!--productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_CreditOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditOfferCODHandler</value>
+      </productAttributes-->
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_ProductOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.ProductOfferCODHandler</value>
+      </productAttributes>
+      <!--productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent3</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.Intent3CODHandler</value>
+      </productAttributes-->
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent4</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.cde.Intent4CODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanHandler_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
+      </productAttributes>
+      <!--productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Recalculate</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.RecalcCODHandler</value>
+      </productAttributes-->
+      <!--productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_FinancialDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.FinancialDetailsHandler</value>
+      </productAttributes-->
    </productAttributeGroup>
    <productAttributeGroup action="overwrite">
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>

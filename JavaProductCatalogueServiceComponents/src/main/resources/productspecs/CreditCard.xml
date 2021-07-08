@@ -87,11 +87,15 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
+			<attributeName>Yodlee|ng-component=YodleeIntroductionComponent~ProceduralStepName=Yodlee~ZOrder=90~YodleePortalURL</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
+			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=80~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>Offer|ProceduralStepName=Your offer~ZOrder=70</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -102,6 +106,35 @@
 	<!--GenerateApplicationOfferProposals-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true~ContractComponentProductType=1032</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--GenerateRevisedApplicationOfferProposals-->
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_GenerateRevisedApplicationOfferProposals</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
@@ -655,7 +688,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_WebDecisionEngine</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.DecisionEngineCODHandler</value>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.DecisionEngineCODHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -873,6 +906,26 @@
 		<productAttributes>
 			<attributeType>int</attributeType>
 			<attributeName>CaseActivityPriority_CBOVerifyApplicantAndIncome</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CBOAssessCreditApplication</attributeName>
+			<value>EDB Credit Assessor|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CBOAssessCreditApplication</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CBOPresentRevisedOffer</attributeName>
+			<value>EDB Credit Assessor|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CBOPresentRevisedOffer</attributeName>
 			<value>0|Weighting=0</value>
 		</productAttributes>
 	</productAttributeGroup>
