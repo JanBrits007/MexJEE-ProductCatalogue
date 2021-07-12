@@ -43,10 +43,6 @@
    <!--GenerateOfferGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>FaisConversationRecordOfAdvice</attributeName>
-      </productAttributes>
    </productAttributeGroup>
 
    <!--FinancialDetails-->
@@ -54,7 +50,14 @@
    <!--GenerateApplicationOfferProposals-->
 
    <!--GenerateOffer-->
-
+    <productAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>SkipOffer|ng-component=SkipOffer</attributeName>
+         </productAttributes>
+    </productAttributeGroup>
+    
    <!--ActivateProductsGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
@@ -139,11 +142,11 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=10~ContractComponentProductType=1021~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=10~ContractComponentProductType=1108~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YourDeclared|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=10~ContractComponentProductType=1021~applicableChannels=WebSelfAssisted</attributeName>
+         <attributeName>YourDeclared|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=10~ContractComponentProductType=1108~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -295,11 +298,11 @@
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subTP|ContractComponentProductType=1021</attributeName>
+         <attributeName>subTP|ContractComponentProductType=1108</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subProfOne|ContractComponentProductType=1021</attributeName>
+         <attributeName>subProfPAYU|ContractComponentProductType=1108</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -381,7 +384,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -391,7 +394,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -560,6 +563,11 @@
          <attributeName>CODHandler_Recalculate</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.cde.RecalcCODHandler</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CaptureFinancialDetails_FinaliseCase</attributeName>
+         <value>classname=za.co.nb.onboarding.product.phaserules.handlers.financialdetails.FinaliseCaseFinancialDetailsRuleHandler</value>
+      </productAttributes>
       <!--<productAttributes>
          <attributeType>string</attributeType>
          <attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
@@ -615,7 +623,7 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>mdmSubProductCode</attributeName>
-         <value>2049</value>
+         <value>1089</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -635,7 +643,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>productSubCategory</attributeName>
-         <value>23</value>
+         <value>0</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -839,11 +847,7 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>FaisConversationRecordOfAdvice</attributeName>
-      </productAttributes>     
+      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>   
    </productAttributeGroup>
 
    <productAttributeGroup>
@@ -888,6 +892,11 @@
          <value>True</value>
       </productAttributes>
       <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditRepaymentFilter</value>
+      </productAttributes>
+      <productAttributes>
          <attributeType>1454</attributeType>
          <attributeName>ProductRuleHandler_Greenbacks</attributeName>
          <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.GreenBacksRule</value>
@@ -927,11 +936,11 @@
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
       </productAttributes>
-      <productAttributes>
+      <!-- <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementProductContractFilter</value>
-      </productAttributes>
+      </productAttributes> -->
    </productAttributeGroup>
 
    <productAttributeGroup>
@@ -960,7 +969,7 @@
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1021</attributeName>
+         <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1108</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <features>
