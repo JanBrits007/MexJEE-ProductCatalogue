@@ -43,10 +43,6 @@
    <!--GenerateOfferGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>FaisConversationRecordOfAdvice</attributeName>
-      </productAttributes>
    </productAttributeGroup>
 
    <!--FinancialDetails-->
@@ -54,7 +50,14 @@
    <!--GenerateApplicationOfferProposals-->
 
    <!--GenerateOffer-->
-
+    <productAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>SkipOffer|ng-component=SkipOffer</attributeName>
+         </productAttributes>
+    </productAttributeGroup>
+    
    <!--ActivateProductsGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
@@ -139,11 +142,11 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=10~ContractComponentProductType=1021~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=10~ContractComponentProductType=1108~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YourDeclared|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=10~ContractComponentProductType=1021~applicableChannels=WebSelfAssisted</attributeName>
+         <attributeName>YourDeclared|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=10~ContractComponentProductType=1108~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -295,11 +298,11 @@
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subTP|ContractComponentProductType=1021</attributeName>
+         <attributeName>subTP|ContractComponentProductType=1108</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subProfOne|ContractComponentProductType=1021</attributeName>
+         <attributeName>subProfPAYU|ContractComponentProductType=1108</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -620,7 +623,7 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>mdmSubProductCode</attributeName>
-         <value>2049</value>
+         <value>1089</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -640,7 +643,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>productSubCategory</attributeName>
-         <value>23</value>
+         <value>0</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -844,11 +847,7 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>FaisConversationRecordOfAdvice</attributeName>
-      </productAttributes>     
+      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>   
    </productAttributeGroup>
 
    <productAttributeGroup>
@@ -937,11 +936,11 @@
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
       </productAttributes>
-      <productAttributes>
+      <!-- <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementProductContractFilter</value>
-      </productAttributes>
+      </productAttributes> -->
    </productAttributeGroup>
 
    <productAttributeGroup>
@@ -970,7 +969,7 @@
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1021</attributeName>
+         <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1108</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <features>
