@@ -3,6 +3,15 @@
 	<name>Credit Card</name>
 	<shortDescription>(CreditCard_Retail_ManualAssessmentWithLongForm) This spec file defines the manual assessment with long form (to be used for appeal) Scenario which other specs will inherit</shortDescription>
 
+	<!--AppealWithLongForm-->
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_AppealWithLongForm</attributeGroupName>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>YourAppeal|ng-component=YourAppeal~ProceduralStepName=Your appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--Case and Process Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
@@ -24,7 +33,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>GNBAIntentToActivityMapping</attributeName>
-			<value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialDetails=Choose Extras|GenerateApplicationOfferProposals=Choose Extras|GenerateOffer=Choose Extras|FinancialExtendedDetails=About you|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+			<value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialDetails=Choose Extras|GenerateApplicationOfferProposals=Choose Extras|GenerateOffer=Choose Extras|AppealWithLongForm=About you|FinancialExtendedDetails=About you|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
 		</productAttributes>
 	</productAttributeGroup>
 
