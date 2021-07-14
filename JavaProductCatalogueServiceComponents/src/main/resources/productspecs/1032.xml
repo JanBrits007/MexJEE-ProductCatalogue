@@ -3,6 +3,14 @@
 	<name>Nedbank Gold Credit Card</name>
 
 	<productAttributeGroup>
+		<attributeGroupName>CaseConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>ArrangementBundleCaseHandler</attributeName>
+			<value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
 		<attributeGroupName>SubstitutionRulesETE</attributeGroupName>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -81,10 +89,10 @@
 			<attributeType>EligibilityRule</attributeType>
 			<attributeName>Income</attributeName>
 			<isComparable>false</isComparable>
-			<minValue>60000</minValue>
+			<minValue>5000</minValue>
 			<maxValue>99999999</maxValue>
 			<valueUnit>ZAR</valueUnit>
-			<description>earn more than R60 000 a year; and</description>
+			<description>earn R5 000 or more per month.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -113,14 +121,6 @@
 			<isComparable>false</isComparable>
 			<value>true</value>
 			<valueUnit>bool</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>SouthAfricanResident</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-			<description> be a South African resident.</description>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -568,14 +568,6 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subCreditCardTC|ContractComponentProductType=1032</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		<attributeGroupName>CaseConfiguration</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>ArrangementBundleCaseHandler</attributeName>
-			<value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<features>
