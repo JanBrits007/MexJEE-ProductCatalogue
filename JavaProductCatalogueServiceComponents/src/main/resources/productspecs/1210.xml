@@ -297,6 +297,35 @@
          <attributeName>subHLTermsandCondition|ContractComponentProductType=1210</attributeName>
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subCaseAuditData</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subFinancialDetailsAuditData</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subEvidenceAuditData</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subClientAuditData</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subHomeLoans|ContractComponentProductType=1210</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
 
    <productAttributeGroup>
       <attributeGroupName>productEvidenceRequirement_EnableClients</attributeGroupName>
@@ -428,7 +457,7 @@
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
-     <productAttributes>
+      <productAttributes>
          <attributeType>String</attributeType>
          <attributeName>HandlePreApprovedOfferDeclineRetentionTestingEmailAddress</attributeName>
          <value>KhathutsheloM@Nedbank.co.za;thapeloc@nedbank.co.za</value>
@@ -567,6 +596,46 @@
          <attributeType>int</attributeType>
          <attributeName>CaseActivityPriority_CBOFinalizeCase</attributeName>
          <value>0|Weighting=0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>time</attributeType>
+         <attributeName>WeekdayProvisioningWindowOpenTime</attributeName>
+         <value>07:05</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>time</attributeType>
+         <attributeName>WeekdayProvisioningWindowCloseTime</attributeName>
+         <value>19:30</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>time</attributeType>
+         <attributeName>SaterdayProvisioningWindowOpenTime</attributeName>
+         <value>07:05</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>time</attributeType>
+         <attributeName>SaterdayProvisioningWindowCloseTime</attributeName>
+         <value>13:55</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>time</attributeType>
+         <attributeName>SundayProvisioningWindowOpenTime</attributeName>
+         <value>00:00</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>time</attributeType>
+         <attributeName>SubdayProvisioningWindowCloseTime</attributeName>
+         <value>00:00</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>time</attributeType>
+         <attributeName>HolidayProvisioningWindowOpenTime</attributeName>
+         <value>00:00:00</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>time</attributeType>
+         <attributeName>HolidayProvisioningWindowCloseTime</attributeName>
+         <value>00:00</value>
       </productAttributes>
    </productAttributeGroup>  
    <productAttributeGroup>
@@ -732,7 +801,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAPhaseHandlers_FinalizeFrontOfficeInteraction</attributeName>
-         <value>classnames=FinalizeFrontOfficeInteractionPhaseHandler~za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.hlra.FinalizeFrontOfficeInteractionHLRAHandler</value>
+         <value>classnames=za.co.nb.onboarding.product.services.phasehandlers.hlra.FinalizeFrontOfficeInteraction~za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.hlra.FinalizeFrontOfficeInteractionHLRAHandler</value>
       </productAttributes>      
    </productAttributeGroup>
    <features>
@@ -752,6 +821,16 @@
             <value>true</value>
          </featureAttributes>
       </featureAttributeGroup>
+
+      <!--Document Configuration-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subPropertyInsurance|ContractComponentProductType=1083</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
       <featureAttributeGroup>
          <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
          <featureAttributes>
@@ -808,6 +887,16 @@
             <value>true</value>
          </featureAttributes>
       </featureAttributeGroup>
+
+      <!--Document Configuration-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subCreditLifeInsurance|ContractComponentProductType=1098</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
       <featureAttributeGroup>
          <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
          <featureAttributes>
