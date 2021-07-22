@@ -71,11 +71,19 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
+         <attributeName>TransactionalProductInformationBroadcast|ng-component=TransactionalProductInformationBroadcastComponent~ZOrder=400~</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
          <attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~restrictOptOut=true~ProceduralStepName=Getting your cards~ZOrder=170</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>GettingTheApp|ng-component=GettingTheAppComponent~ProceduralStepName=Getting the app~ZOrder=155~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -88,6 +96,10 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>NedbankID|ng-component=StaffAssistedNedbankIdComponent~ProceduralStepName=Nedbank ID~ZOrder=110~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -558,6 +570,11 @@
          <attributeType>string</attributeType>
          <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementComplianceInformationFilter</value>
+      </productAttributes>
+       <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNEDIDFilter</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
