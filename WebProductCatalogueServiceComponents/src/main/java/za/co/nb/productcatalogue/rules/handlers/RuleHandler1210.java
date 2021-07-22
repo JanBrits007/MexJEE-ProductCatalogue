@@ -7,6 +7,8 @@ import javax.rmi.PortableRemoteObject;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import za.co.nb.onboarding.casemanagement.BusinessCaseManagementDAO;
+import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 
 import za.co.nb.productcatalogue.exceptions.BusinessRuleExecutionException;
 
@@ -48,6 +50,11 @@ public class RuleHandler1210 extends BaseProductSpecificationRuleHandler {
 
 		// For the home loan spike, substitute 1210 for 5210 in ETE.
 		try {
+                BusinessCaseManagementDAO dao = new BusinessCaseManagementDAO();
+		BusinessCaseHeader businessCase = dao.retrieveBusinessCase(caseID);
+                if(businessCase.getClientInContextPartyType().equalsIgnoreCase("O")){
+                    return "7210";
+                }
 	        // What environment are we running in?
 	        Object objref = lookupObject("ENVIRONMENT");
 	        String environment = (String) PortableRemoteObject.narrow(objref, String.class);
