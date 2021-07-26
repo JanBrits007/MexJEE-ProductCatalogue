@@ -55,16 +55,8 @@ public class RuleHandler1210 extends BaseProductSpecificationRuleHandler {
                 if(businessCase.getClientInContextPartyType().equalsIgnoreCase("O")){
                     return "7210";
                 }
-	        // What environment are we running in?
-	        Object objref = lookupObject("ENVIRONMENT");
-	        String environment = (String) PortableRemoteObject.narrow(objref, String.class);
 
-            if(environment.equalsIgnoreCase("ete") || environment.equalsIgnoreCase("qa") || environment.equalsIgnoreCase("prod")) {				// This is a retail application.
-				return "5210";
-			}
-			else {
 				return productIDToSubstitute;
-			}
 		}
 		catch(Exception e) {
 			// Got a problem.
