@@ -247,6 +247,13 @@
 			<attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>RuleHandlers_ActivateProductsGatherProductDetails</attributeGroupName>
+		<productAttributes>
+			<attributeName>GNBAPhaseHandler_ActivateProductsGatherProductDetails</attributeName>
+			<value>SkipDebicheck</value>
+		</productAttributes>
+	</productAttributeGroup>
 
 	<!--ActivateProductsGatherEvidence-->
 	<productAttributeGroup>
@@ -1097,6 +1104,31 @@
         <attributeGroupName>VASCrossSellControl</attributeGroupName>
     </productAttributeGroup>
 
+	<!--Decline Configuration-->
+	<productAttributeGroup>
+		<attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+		<productAttributes>
+			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+			<attributeName>ChallengeWithLongForm|child-ng-components=ChallengeWithLongFormDeclineAction</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+			<attributeName>AppealWithLongForm|child-ng-components=AppealWithLongFormDeclineAction</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+			<attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+			<attributeName>TryAgain|child-ng-components=TryAgainDeclineAction</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>declineCodeMapping</attributeType>
+			<attributeName>1061|child-ng-components=LeaveApplicationDeclineAction</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
 		<!--Provisioning Configuration-->
     <productAttributeGroup>
         <attributeGroupName>productCodeMappings</attributeGroupName><!-- Are these required -->
@@ -1386,4 +1418,4 @@
             </featureAttributes>
         </featureAttributeGroup>
     </features>
-		</product>
+</product>
