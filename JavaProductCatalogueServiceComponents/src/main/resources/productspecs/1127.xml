@@ -11,15 +11,15 @@
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>AdditionalPersonalInformation</attributeName>
+            <attributeName>AdditionalPersonalInformation|statementdelivery=Cellphone-Email-Post</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>EmploymentDetails</attributeName>
+            <attributeName>EmploymentBasic</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>SourceOfWealth</attributeName>
+            <attributeName>IncomeBasic</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -53,13 +53,6 @@
         <productAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>ArrangementActivationSalesMilestone</attributeName>
-        </productAttributes>
-    </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-        <productAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>InvestmentDetails</attributeName>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -164,6 +157,11 @@
     <productAttributeGroup>
         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
         <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>productFamily</attributeName>
+            <value>investments</value>
+        </productAttributes>
+        <productAttributes>
             <attributeType>int</attributeType>
             <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
             <value>5</value>
@@ -176,7 +174,7 @@
         <productAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>requiresClientVerificationViaQA</attributeName>            <!-- Use to indicate whether XDS-based client verification should be executed -->
-            <value>true</value>
+            <value>True</value>
         </productAttributes>
         <productAttributes>
             <attributeType>enum</attributeType>
@@ -237,6 +235,11 @@
             <attributeType>string</attributeType>
             <attributeName>CODEngine</attributeName>
             <value>InvestmentsCOD</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>existingToBankClientDataReConfirmationRequired</attributeName>
+            <value>false</value>
         </productAttributes>
         <productAttributes>
             <attributeType>boolean</attributeType>
@@ -332,7 +335,7 @@
         <productAttributes>
             <attributeType>string</attributeType>
             <attributeName>welcomeDocumentTemplate</attributeName>
-            <value>nedbank-commercial-release/CombinedWelcomeLetter</value>
+            <value>nedbank-commercial-release/AppFormMoneyMarketStaffAssisted</value>
         </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
