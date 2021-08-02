@@ -11,15 +11,15 @@
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>AdditionalPersonalInformation</attributeName>
+            <attributeName>AdditionalPersonalInformation|statementdelivery=Cellphone-Email-Post</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>EmploymentDetails</attributeName>
+            <attributeName>EmploymentBasic</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>SourceOfWealth</attributeName>
+            <attributeName>IncomeBasic</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -56,20 +56,17 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
-        <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-        <productAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>InvestmentDetails</attributeName>
-        </productAttributes>
-    </productAttributeGroup>
-    <productAttributeGroup>
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Terms and Conditions|nedbank-commercial-release/InvestmentTermsAndConditions|N/A|N/A|N/A|N/A</attributeName>
+            <attributeName>Terms and Conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>DocumentDescriptionStaffAssisted</attributeType>
+            <attributeName>Terms and Conditions|nedbank-commercial-release/ProductContractStaffAssisted|N/A|N/A|N/A|N/A</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -88,7 +85,7 @@
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Application Form|nedbank-commercial-release/InvestmentApplicationStaffAssisted|ARRANGEMENT|AGREEMENTS|AGREEMENTSINVESTMENT|Agreement Contract</attributeName>
+            <attributeName>Application Form|nedbank-commercial-release/AppFormMoneyMarketStaffAssisted|ARRANGEMENT|AGREEMENTS|AGREEMENTSINVESTMENT|Agreement Contract</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -164,6 +161,11 @@
     <productAttributeGroup>
         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
         <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>productFamily</attributeName>
+            <value>investments</value>
+        </productAttributes>
+        <productAttributes>
             <attributeType>int</attributeType>
             <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
             <value>5</value>
@@ -176,7 +178,7 @@
         <productAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>requiresClientVerificationViaQA</attributeName>            <!-- Use to indicate whether XDS-based client verification should be executed -->
-            <value>true</value>
+            <value>True</value>
         </productAttributes>
         <productAttributes>
             <attributeType>enum</attributeType>
@@ -237,6 +239,11 @@
             <attributeType>string</attributeType>
             <attributeName>CODEngine</attributeName>
             <value>InvestmentsCOD</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>existingToBankClientDataReConfirmationRequired</attributeName>
+            <value>false</value>
         </productAttributes>
         <productAttributes>
             <attributeType>boolean</attributeType>
