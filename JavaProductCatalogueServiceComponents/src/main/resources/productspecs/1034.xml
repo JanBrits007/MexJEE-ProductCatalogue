@@ -3,6 +3,14 @@
 	<name>Nedbank Platinum Credit Card</name>
 
 	<productAttributeGroup>
+		<attributeGroupName>CaseConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>ArrangementBundleCaseHandler</attributeName>
+			<value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
 		<attributeGroupName>SubstitutionRulesETE</attributeGroupName>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -13,6 +21,17 @@
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+			<value>${{EDBPhase2dynamicStaffList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>CreditCard_Retail_1034_Simulation</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>LimitIncreaseSubstitutionRulesETE</attributeGroupName>
 		<productAttributes>
 			<attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
 			<value>${{EDBPhase2dynamicStaffList}}</value>

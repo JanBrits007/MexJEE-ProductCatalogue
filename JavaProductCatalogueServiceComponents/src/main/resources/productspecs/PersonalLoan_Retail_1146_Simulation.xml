@@ -1,50 +1,10 @@
-<product inheritFromFiles="CreditCard_Retail_1032" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-	<productIdentifier>1032</productIdentifier>
-	<name>Gold Credit Card</name>
-	<shortDescription>(CreditCard_Retail_1032_Simulation) This is the gold credit card with CDE simulation</shortDescription>
+<product inheritFromFiles="PersonalLoan_Retail_1146" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+	<productIdentifier>1146</productIdentifier>
+	<name>Base Personal Loan Specification</name>
+	<shortDescription>(PersonalLoan_Retail_1146_Simulation)</shortDescription>
 
-	<productAttributeGroup action="overwrite">
+	<productAttributeGroup inheritFromFiles="PersonalLoan_Retail_1146_Simulation">
 		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1019~Transactional_Retail_1019_Simulation</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1354~Transactional_Retail_1354</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1357~1357</value><!--this is done since there is actually no substitution needed for this product (savvy bundle)-->
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1389~Transactional_Retail_1389_Simulation</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1474~Transactional_Retail_1474</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1032~CreditCard_Retail_1032</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1350~CreditCard_Retail_1350</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1034~CreditCard_Retail_1034_Simulation</value>
-		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Offer Configuration-->
@@ -70,17 +30,18 @@
 			<attributeName>VAS_1447</attributeName><!--Own Credit Insurance-->
 			<value>Optionality=Optional~IsTakenUp=false</value>
 		</productAttributes>
-
 	</productAttributeGroup>
 
 	<!--Case and Process Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>CaseConfiguration</attributeGroupName>
+		<!--
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CDE_SimulationETE</attributeName>
 			<value>${{CDE_Simulation}}</value>
 		</productAttributes>
+		-->
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
@@ -114,7 +75,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent1</attributeName>
-			<value>${{CreditCard_Gold_Intent1CODHandler}}</value>
+			<value>${{CreditCard_Platinum_Intent1CODHandler}}</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -123,23 +84,28 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
+			<attributeName>CODHandler_AppealWithLongForm</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
 			<attributeName>CODHandler_CreditOffer</attributeName>
-			<value>${{CreditCard_Gold_CreditOfferCODHandler}}</value>
+			<value>${{CreditCard_Platinum_CreditOfferCODHandler}}</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_ProductOffer</attributeName>
-			<value>${{CreditCard_Gold_ProductOfferCODHandler}}</value>
+			<value>${{CreditCard_Platinum_ProductOfferCODHandler}}</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent3</attributeName>
-			<value>${{CreditCard_Gold_Intent3CODHandler}}</value>
+			<value>${{CreditCard_Platinum_Intent3CODHandler}}</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent4</attributeName>
-			<value>${{CreditCard_Gold_Intent4CODHandler}}</value>
+			<value>${{CreditCard_Platinum_Intent4CODHandler}}</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -149,7 +115,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Recalculate</attributeName>
-			<value>${{CreditCard_Gold_RecalcCODHandler}}</value>
+			<value>${{CreditCard_Platinum_RecalcCODHandler}}</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
