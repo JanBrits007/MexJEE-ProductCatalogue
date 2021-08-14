@@ -12,6 +12,15 @@
 
     <build>
         <finalName>WebProductCatalogueServiceComponents</finalName>
+        <resources>
+            <resource>
+                <filtering>true</filtering>
+                <includes>
+                    <include>index.html</include>
+                </includes>
+                <directory>src/main/webapp</directory>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
