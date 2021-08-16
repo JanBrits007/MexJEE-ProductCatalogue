@@ -89,7 +89,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120</attributeName>
+         <attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -144,7 +144,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=NoFeeTransactionalProductAccountDetails~ZOrder=50~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-219~GetInTouch=true~child-ng-components=LocateBranchComponent~child-ng-components=ContactUsComponent~child-ng-components=CallMeBackComponent~child-ng-components=BankerDetailComponent~child-ng-components=CompleteCaseComponent~child-ng-components=VisitTheBranchNotificationComponent</attributeName>
+         <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=NoFeeTransactionalProductAccountDetails~ZOrder=50~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-219~GetInTouch=true~child-ng-components=LocateBranchComponent~child-ng-components=ContactUsComponent~child-ng-components=CallMeBackComponent~child-ng-components=BankerDetailComponent~child-ng-components=CompleteCaseComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=FatcaTinValidationComponent~ProceduralStepName=You're all set!</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -539,7 +539,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Intent4</attributeName>
-         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.cde.Intent4RRBCODHandler</value>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.cde.V3Intent4CODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -909,6 +909,11 @@
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementConversionFilter</value>
       </productAttributes>
+      <!--<productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_PresentDocuments</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementSigningPaperFilter</value>
+      </productAttributes>-->
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CreditContracts</attributeName>
@@ -918,6 +923,16 @@
          <attributeType>string</attributeType>
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFatcaTinFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementProductContractFilter</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -1186,6 +1201,10 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>subRRBODFeatures|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subRRBODHeader|ContractComponentProductType=1014</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 

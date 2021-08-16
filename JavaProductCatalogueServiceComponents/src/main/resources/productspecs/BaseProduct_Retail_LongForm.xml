@@ -1,7 +1,7 @@
-<product inheritFromFiles="CreditCard_Retail_1032_Simulation" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-	<productIdentifier>1002</productIdentifier>
-	<name>Credit Card</name>
-	<shortDescription>(CreditCard_Retail_LongForm) This spec file defines the log form Scenario which other specs will inherit</shortDescription>
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+	<productIdentifier>1000</productIdentifier>
+	<name>Base Product</name>
+	<shortDescription>(BaseProduct_Retail_LongForm) This spec file defines the long form Scenario which other specs will inherit</shortDescription>
 
 	<!--FinancialExtendedDetails-->
 	<productAttributeGroup>
@@ -40,7 +40,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90</attributeName>
+			<attributeName>LongFormFinancialDetails|ng-component=LongFormFinancialDetailsComponent~ProceduralStepName=Your Financial details~ZOrder=90~child-ng-components=PayslipIncomeDetails~child-ng-components=OtherIncomeDetails~child-ng-components=DebtObligationsDetails~child-ng-components=MonthlyExpensesDetails</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -53,7 +53,7 @@
 	</productAttributeGroup>
 
 	<!--Case and Process Configuration-->
-	<productAttributeGroup action="overwrite">
+	<productAttributeGroup>
 		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>

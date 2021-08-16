@@ -102,7 +102,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120</attributeName>
+         <attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -157,7 +157,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=NoFeeTransactionalProductAccountDetails~ZOrder=50~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-219~GetInTouch=true~child-ng-components=LocateBranchComponent~child-ng-components=ContactUsComponent~child-ng-components=CallMeBackComponent~child-ng-components=BankerDetailComponent~child-ng-components=CompleteCaseComponent~child-ng-components=VisitTheBranchNotificationComponent</attributeName>
+         <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=NoFeeTransactionalProductAccountDetails~ZOrder=50~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-219~GetInTouch=true~child-ng-components=LocateBranchComponent~child-ng-components=ContactUsComponent~child-ng-components=CallMeBackComponent~child-ng-components=BankerDetailComponent~child-ng-components=CompleteCaseComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=FatcaTinValidationComponent~ProceduralStepName=You're all set!</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -552,7 +552,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Intent4</attributeName>
-         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.cde.Intent4RRBCODHandler</value>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.cde.V3Intent4CODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -868,21 +868,38 @@
          <attributeName>VAS_1374</attributeName><!--E Notes-->
          <value>Optionality=Optional~IsTakenUp=true</value>
       </productAttributes>
-      <productAttributes>
+      <!--<productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>VAS_1454</attributeName><!--Greenbacks Rewards-->
+         <attributeName>VAS_1454</attributeName>
          <value>Optionality=Optional~IsTakenUp=true</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>VAS_1164</attributeName><!--Cheque Card-->
+         <attributeName>VAS_1164</attributeName>
          <value>Optionality=Mandatory~IsTakenUp=true</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>VAS_1387</attributeName><!--Shop Card-->
+         <attributeName>VAS_1387</attributeName>
          <value>Optionality=Mandatory~IsTakenUp=true</value>
+      </productAttributes>-->
+      <!--Greenbacks Rewards-->
+      <!--<productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1454</attributeName>
+         <value>classname=za.co.nb.offermanagement.crosssell.GreenBackCrossSellHandler</value>
+      </productAttributes>-->
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1164</attributeName><!--Cheque Card-->
+         <value>classname=za.co.nb.offermanagement.crosssell.BundledProductCrossSellHandler</value>
       </productAttributes>
+      <!--Shop Card-->
+      <!--<productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1387</attributeName>
+         <value>classname=za.co.nb.offermanagement.crosssell.BundledProductCrossSellHandler</value>
+      </productAttributes>-->
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>VAS_4387</attributeName>
@@ -932,6 +949,11 @@
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementConversionFilter</value>
       </productAttributes>
+      <!--<productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_PresentDocuments</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementSigningPaperFilter</value>
+      </productAttributes>-->
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CreditContracts</attributeName>
@@ -942,11 +964,16 @@
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
       </productAttributes>
-      <!-- <productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFatcaTinFilter</value>
+      </productAttributes>
+      <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementProductContractFilter</value>
-      </productAttributes> -->
+      </productAttributes>
    </productAttributeGroup>
 
    <productAttributeGroup>
