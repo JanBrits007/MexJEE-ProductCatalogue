@@ -1,19 +1,19 @@
-<product inheritFromFiles="CreditCard_Retail_1032_Simulation" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-	<productIdentifier>1002</productIdentifier>
-	<name>Credit Card</name>
-	<shortDescription>(CreditCard_Retail_ManualAssessmentWithLongForm) This spec file defines the manual assessment with long form (to be used for appeal) Scenario which other specs will inherit</shortDescription>
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+	<productIdentifier>1000</productIdentifier>
+	<name>Base Product</name>
+	<shortDescription>(BaseProduct_Retail_ManualAssessmentWithLongForm) This spec file defines the manual assessment with long form (to be used for appeal) Scenario which other specs will inherit</shortDescription>
 
 	<!--AppealWithLongForm-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_AppealWithLongForm</attributeGroupName>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>YourAppeal|ng-component=YourAppeal~ProceduralStepName=Your appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~HideProceduralStep=true</attributeName>
+			<attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Your appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~HideProceduralStep=true</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Case and Process Configuration-->
-	<productAttributeGroup action="overwrite">
+	<productAttributeGroup>
 		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>

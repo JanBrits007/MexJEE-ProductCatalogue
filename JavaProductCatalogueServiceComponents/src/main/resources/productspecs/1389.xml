@@ -418,6 +418,19 @@
          <attributeName>frontOfficeIntentSequence</attributeName>
          <value>GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>presentLowerOfferFrontOfficeIntentSequence</attributeName>
+         <value>PresentLowerOffer|ActivateProductsGatherProductDetails</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>OverdraftIntentConfig</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>reviewApplicationIntent</attributeName>
+         <value>GenerateOfferGatherProductDetails</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
     <attributeGroupName>ArrangementConfiguration</attributeGroupName>
@@ -700,17 +713,21 @@
    <productAttributeGroup>
       <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
    </productAttributeGroup>
-   <!--productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
          <value>${{dynamicStaffListForSpecInheritance}}</value>
       </productAttributes>
+      <!--<productAttributes>
+         <attributeName>SubstituteForCalculatedSegment</attributeName>
+         <value>200~201</value>
+      </productAttributes>-->
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
          <value>Transactional_RRB_1389</value>
       </productAttributes>
-   </productAttributeGroup-->
+   </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>

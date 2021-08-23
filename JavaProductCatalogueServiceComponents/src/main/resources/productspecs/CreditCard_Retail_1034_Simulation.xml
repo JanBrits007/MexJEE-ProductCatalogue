@@ -3,13 +3,54 @@
 	<name>Platinum Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1034_Simulation)</shortDescription>
 
+	<!--DeclineWithAppeal-->
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_DeclineWithAppeal</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Your offer</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<productAttributeGroup inheritFromFiles="CreditCard_Retail_1032_Simulation">
 		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+	</productAttributeGroup>
+
+	<!--Offer Configuration-->
+	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
+		<attributeGroupName>VASCrossSellControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1454</attributeName><!--Greenbacks-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1333</attributeName><!--Greenbacks Shop Card-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1099</attributeName><!--Credit Card Insurance-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1447</attributeName><!--Own Credit Insurance-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Case and Process Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>CaseConfiguration</attributeGroupName>
+		<!--
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CDE_SimulationETE</attributeName>
+			<value>${{CDE_Simulation}}</value>
+		</productAttributes>
+		-->
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
@@ -57,6 +98,11 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
+			<attributeName>GenericHandler_AppealWithoutLongForm</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
 			<attributeName>CODHandler_CreditOffer</attributeName>
 			<value>${{CreditCard_Platinum_CreditOfferCODHandler}}</value>
 		</productAttributes>
@@ -84,6 +130,11 @@
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Recalculate</attributeName>
 			<value>${{CreditCard_Platinum_RecalcCODHandler}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>DataMiningHandler</attributeName>
+			<value>classname=za.co.nb.onboarding.product.datamining.handlers.retail.RetailDataMiningHandler</value>
 		</productAttributes>
 	</productAttributeGroup>
 

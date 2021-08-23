@@ -1,12 +1,13 @@
-<product inheritFromFiles="CreditCard_Retail_1032_Simulation" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-	<productIdentifier>1002</productIdentifier>
-	<name>Credit Card</name>
-	<shortDescription>(CreditCard_Retail_ManualAssessment) This spec file defines the manual assessment Scenario which other specs will inherit</shortDescription>
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+	<productIdentifier>1000</productIdentifier>
+	<name>Base Product</name>
+	<shortDescription>(BaseProduct_ManualAssessment) This spec file defines the manual assessment Scenario which other specs will inherit</shortDescription>
 
 	<!--GenerateApplicationOfferProposals-->
-	<productAttributeGroup action="overwrite">
+
+	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
-		<productAttributes>
+		<!--productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
@@ -25,11 +26,11 @@
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
+		</productAttributes-->
 	</productAttributeGroup>
 
 	<!--FinalizeFrontOfficeInteraction-->
-	<productAttributeGroup action="overwrite">
+	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -42,7 +43,7 @@
 	</productAttributeGroup>
 
 	<!--Case and Process Configuration-->
-	<productAttributeGroup action="overwrite">
+	<productAttributeGroup>
 		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
