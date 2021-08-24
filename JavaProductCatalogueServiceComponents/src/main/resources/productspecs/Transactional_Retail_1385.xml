@@ -23,6 +23,10 @@
 
    <!--ActivateProductsGatherClientDetails-->
    <productAttributeGroup action="overwrite">
+      <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
+      <!-- This is overwritten so that there is no inherited data from the base product spec-->
+   </productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>1028_LOANAPPLICANT_clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -41,7 +45,7 @@
          <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup action="overwrite">
+   <productAttributeGroup>
       <attributeGroupName>1041_PRIMARY_clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
