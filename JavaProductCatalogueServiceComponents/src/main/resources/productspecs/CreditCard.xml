@@ -289,6 +289,13 @@
 			<attributeName>YourDeclaration|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=60~ContractComponentProductType=1001~applicableChannels=WebSelfAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>RuleHandlers_PresentDocuments</attributeGroupName>
+		<productAttributes>
+			<attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDocumentExclusionFilter</value>
+		</productAttributes>
+	</productAttributeGroup>
 
 	<!--FinalizeFrontOfficeInteraction-->
 	<productAttributeGroup>
@@ -742,6 +749,11 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
+			<attributeName>GenericHandler_AppealWithoutLongForm</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
 			<attributeName>DataMiningHandler</attributeName>
 			<value>classname=za.co.nb.onboarding.product.datamining.handlers.retail.RetailDataMiningHandler</value>
 		</productAttributes>
@@ -1087,6 +1099,11 @@
 			<attributeName>RequiredDataFilter_All</attributeName>
 			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
+		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>EDBPhase2PilotSubstitutionRulesETE</attributeGroupName>
@@ -1122,24 +1139,8 @@
 	</productAttributeGroup>
 
 	<!--Decline Configuration-->
-	<productAttributeGroup>
+	<productAttributeGroup inheritFromFiles="BaseProduct">
 		<attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
-		<productAttributes>
-			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
-			<attributeName>ChallengeWithLongForm|child-ng-components=ChallengeWithLongFormDeclineAction</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
-			<attributeName>AppealWithLongForm|child-ng-components=AppealWithLongFormDeclineAction</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
-			<attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>declineCodeMapping</attributeType>
-			<attributeName>1061|child-ng-components=LeaveApplicationDeclineAction</attributeName>
-		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Provisioning Configuration-->

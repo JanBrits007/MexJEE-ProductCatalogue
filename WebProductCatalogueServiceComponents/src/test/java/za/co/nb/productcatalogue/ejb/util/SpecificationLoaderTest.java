@@ -20,7 +20,7 @@ public class SpecificationLoaderTest {
     public void rrbInheritanceTest() throws JAXBException, IOException {
         ProductTypeLoader specificationLoader = new ProductTypeLoader();
 
-        String productId = "Transactional_RRB_1389";
+        String productId = "CreditCard_Retail_1034_Simulation";
         InputStream inputStream = ProductTypeLoader.class.getResourceAsStream("/productspecs/" + productId + ".xml");
         String xmlString = IOUtils.toString(inputStream, StandardCharsets.UTF_8.name());
         ProductType productType = specificationLoader.load(xmlString, false);
@@ -42,16 +42,19 @@ public class SpecificationLoaderTest {
         ProductType productType = specificationLoader.load(xmlString, false);
 
         Assert.assertNotNull("productType - Object expected", productType);
-        Assert.assertEquals("4 productAttribGroup expected",  4, productType.getProductAttributeGroup().size());
+        Assert.assertEquals("4 productAttribGroup expected",  6, productType.getProductAttributeGroup().size());
 
         //overwriteProductAttrib
         Assert.assertEquals("productAttribGroup - overwrite expected",  "overwrite", productType.getProductAttributeGroup().get(0).getAction());
         Assert.assertEquals("productAttribGroup - clientInformationRequirement_VerifyIdentity expected" ,"clientInformationRequirement_VerifyIdentity", productType.getProductAttributeGroup().get(0).getAttributeGroupName());
         Assert.assertEquals("productAttribGroup - overwrite 4 - items expected", 4, productType.getProductAttributeGroup().get(0).getProductAttributes().size());
 
-
         Assert.assertEquals("productAttribGroup - inherit - DEFAULT - PresentOfferSelection expected", "PresentOfferSelection", productType.getProductAttributeGroup().get(2).getAttributeGroupName());
         Assert.assertEquals("productAttribGroup - inherit - DEFAULT - PresentOfferSelection - 2 - items expected", 2, productType.getProductAttributeGroup().get(2).getProductAttributes().size());
+
+        Assert.assertEquals("productAttribGroup - inherit - test60 - expected", "test60", productType.getProductAttributeGroup().get(5).getAttributeGroupName());
+        Assert.assertEquals("productAttribGroup - inherit - test60 - 1 - items expected", 1, productType.getProductAttributeGroup().get(5).getProductAttributes().size());
+        Assert.assertEquals("productAttribGroup - inherit - test60 - productInformationRequirement expected", "productInformationRequirement", productType.getProductAttributeGroup().get(5).getProductAttributes().get(0).getAttributeType());
 
 
         //inheritProductAttrib
