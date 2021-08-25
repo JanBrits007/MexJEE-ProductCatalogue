@@ -1,14 +1,14 @@
 <product inheritFromFiles="Transactional_RRB" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-   <productIdentifier>1476</productIdentifier>
-   <name>Young Professional One</name>
-   <shortDescription>(Transactional_RRB_1476) Young Professional One</shortDescription>
+   <productIdentifier>1400</productIdentifier>
+   <name>Young Professional Bundle</name>
+   <shortDescription>(Transactional_RRB_1400) Young Professional Bundle</shortDescription>
 
-   <!--GenerateOfferGatherProductDetails-->
+    <!--GenerateOfferGatherProductDetails-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=2000.00~max=300000.00~isMandatory=true</attributeName>
+         <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=2000.00~max=300000.00</attributeName>
       </productAttributes>
        <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -16,12 +16,21 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--FinancialDetails-->
+    <productAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+         <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>SkipFinancialDetails|ng-component=SkipFinancialDetails</attributeName>
+         </productAttributes>
+    </productAttributeGroup>
+
    <!--ActivateProductsGatherProductDetails-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>      
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>CardDeliveryDetails|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170~removeTemporaryCard=true~ContractComponentProductType=1164</attributeName>
+         <attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170~removeTemporaryCard=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -62,11 +71,11 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=10~ContractComponentProductType=1476~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=10~ContractComponentProductType=1400~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YourDeclared|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=10~ContractComponentProductType=1476~applicableChannels=WebSelfAssisted</attributeName>
+         <attributeName>YourDeclared|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=10~ContractComponentProductType=1400~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -75,7 +84,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Young professional one terms and conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
+         <attributeName>Young professional bundle terms and conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -102,7 +111,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Young professional one application form|nedbank-commercial-release/AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+         <attributeName>Young professional bundle application form|nedbank-commercial-release/AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -149,7 +158,7 @@
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subTPTermsAndConditions|ContractComponentProductType=1476</attributeName>
+         <attributeName>subTPTermsAndConditions|ContractComponentProductType=1400</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -157,11 +166,11 @@
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subTP|ContractComponentProductType=1476</attributeName>
+         <attributeName>subTP|ContractComponentProductType=1400</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subYoungProfOne|ContractComponentProductType=1476</attributeName>
+         <attributeName>subProfBundle|ContractComponentProductType=1400</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -169,7 +178,7 @@
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1476</attributeName>
+         <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1400</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -181,9 +190,9 @@
          <attributeName>Age</attributeName>
          <isComparable>false</isComparable>
          <minValue>18</minValue>
-         <maxValue>29</maxValue>
+         <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>be at least 18 years old and no older than 29 years old.</description>
+         <description>be at least 18 years old.</description>
       </productAttributes>
    </productAttributeGroup>
 
@@ -193,17 +202,17 @@
     <productAttributes>
         <attributeType>string</attributeType>
         <attributeName>frontOfficeIntentSequence</attributeName>
-        <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+        <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
     </productAttributes>
     <productAttributes>
         <attributeType>string</attributeType>
         <attributeName>breadcrumbSteps</attributeName>
-        <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
+        <value>Authenticate|Product Setup|About You|Customise|Finishing up</value>
     </productAttributes>
     <productAttributes>
         <attributeType>string</attributeType>
         <attributeName>GNBAIntentToActivityMapping</attributeName>
-        <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+        <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
     </productAttributes>
   </productAttributeGroup>
 
@@ -243,7 +252,7 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>mdmSubProductCode</attributeName>
-         <value>2047</value>
+         <value>2055</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -263,7 +272,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>productSubCategory</attributeName>
-         <value>24</value>
+         <value>22</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -403,7 +412,7 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>productIdentifier</attributeName>
-         <value>1476</value>
+         <value>1400</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -467,8 +476,8 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!-- Offer configuration -->
-   <productAttributeGroup action="overwrite">
+    <!-- Offer configuration -->
+   <productAttributeGroup>
       <attributeGroupName>VASCrossSellControl</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -480,21 +489,11 @@
          <attributeName>VAS_1374</attributeName><!--E Notes-->
          <value>Optionality=Optional~IsTakenUp=true</value>
       </productAttributes>
-      <!--<productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>VAS_1454</attributeName>&lt;!&ndash;Greenbacks Rewards&ndash;&gt;
-         <value>Optionality=Optional~IsTakenUp=true</value>
-      </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>VAS_1164</attributeName>&lt;!&ndash;Cheque Card&ndash;&gt;
-         <value>Optionality=Mandatory~IsTakenUp=true</value>
+         <attributeName>VAS_1164</attributeName><!--Cheque Card-->
+         <value>classname=za.co.nb.offermanagement.crosssell.BundledProductCrossSellHandler</value>
       </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>VAS_1387</attributeName>&lt;!&ndash;Shop Card&ndash;&gt;
-         <value>Optionality=Mandatory~IsTakenUp=true</value>
-      </productAttributes>-->
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>VAS_4387</attributeName>
@@ -502,7 +501,13 @@
       </productAttributes>
    </productAttributeGroup>
 
-  <!--Overdraft feature -->
+   <features>
+      <featureIdentifier>0</featureIdentifier>
+      <featureType>BundledProduct</featureType>
+      <referenceProductID>1511</referenceProductID>
+   </features>
+
+   <!--Overdraft feature -->
    <features>
       <featureIdentifier>1014</featureIdentifier>
       <name>Overdraft</name>
@@ -739,10 +744,6 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>subRRBODFeatures|ContractComponentProductType=1014</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>subRRBODHeader|ContractComponentProductType=1014</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 

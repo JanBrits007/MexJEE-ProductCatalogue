@@ -1,21 +1,26 @@
 <product inheritFromFiles="CreditCard_Retail_1034_Simulation" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1034</productIdentifier>
 	<name>Platinum Credit Card</name>
-	<shortDescription>(CreditCard_Retail_1034_Simulation_ManualAssessment)</shortDescription>
+	<shortDescription>(CreditCard_Retail_1032_Simulation_ManualAssessmentWithLongForm)</shortDescription>
+
 
 	<!--GenerateApplicationOfferProposals-->
-	<productAttributeGroup inheritFromFiles="BaseProduct_Retail_ManualAssessment">
+	<productAttributeGroup inheritFromFiles="BaseProduct_Retail_ReferWithLongForm">
 		<attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
 	</productAttributeGroup>
 
+	<!--FinancialExtendedDetails-->
+	<productAttributeGroup inheritFromFiles="BaseProduct_Retail_LongForm">
+		<attributeGroupName>clientInformationRequirement_FinancialExtendedDetails</attributeGroupName>
+	</productAttributeGroup>
+
 	<!--FinalizeFrontOfficeInteraction-->
-	<!--Confirm this is not required since there is no special chjild component required on the last screen-->
-	<!--productAttributeGroup inheritFromFiles="CreditCard_Retail_ManualAssessment">
+	<productAttributeGroup inheritFromFiles="BaseProduct_Retail_ManualAssessment">
 		<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
-	</productAttributeGroup-->
+	</productAttributeGroup>
 
 	<!--Case and Process Configuration-->
-	<productAttributeGroup inheritFromFiles="BaseProduct_Retail_ManualAssessment">
+	<productAttributeGroup inheritFromFiles="BaseProduct_Retail_ReferWithLongForm">
 		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
 	</productAttributeGroup>
 

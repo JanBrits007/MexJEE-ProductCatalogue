@@ -70,21 +70,30 @@ public class ProductTypeLoader {
 
 
     private void loadProductInheritance(ProductType child){
-        if(child.getInheritFromFiles() == null)
-            return;
 
-            if(child.getInheritFromFiles().trim().isEmpty())
-                throw new RuntimeException("productTpe.inheritanceFromFiles property cannot be empty");
+        if(child.getInheritFromFiles() != null)
+            insertParentInheritance(child);
 
-            String xmlString = loadRawFile(child.getInheritFromFiles());
-            ProductType parent = load(xmlString, true);
+        insertChildInheritance(child);
 
-            insertProductAttributeGroup(child, parent);
-            insertInheritedProductAttributeGroup(child);
+    }
 
-            insertFeature(child, parent);
-            insertInheritedFeature(child);
-            insertInheritedFeatureAttribGroup(child);
+    private void insertChildInheritance(ProductType child){
+        insertInheritedProductAttributeGroup(child);
+        insertInheritedFeature(child);
+        insertInheritedFeatureAttribGroup(child);
+    }
+
+    private void insertParentInheritance(ProductType child){
+
+        if( child.getInheritFromFiles().trim().isEmpty())
+            throw new RuntimeException("productTpe.inheritanceFromFiles property cannot be empty");
+
+        String xmlString = loadRawFile(child.getInheritFromFiles());
+        ProductType parent = load(xmlString, true);
+
+        insertProductAttributeGroup(child, parent);
+        insertFeature(child, parent);
     }
 
     private String loadRawFile(String productId) {
