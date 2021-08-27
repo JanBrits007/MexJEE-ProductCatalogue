@@ -21,7 +21,7 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>      
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170~removeTemporaryCard=true</attributeName>
+         <attributeName>CardDeliveryDetails|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170~removeTemporaryCard=true~ContractComponentProductType=1164</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -70,81 +70,7 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!--Document Configuration-->
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
-      <productAttributes>
-         <attributeType>DocumentDescription</attributeType>
-         <attributeName>Young professional one terms and conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>DigitalAcknowledgement</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Download</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Preview</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Email</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>DocTemplateName</attributeType>
-         <attributeName>ProductContract</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
-      <productAttributes>
-         <attributeType>DocumentDescription</attributeType>
-         <attributeName>Young professional one application form|nedbank-commercial-release/AppFormTPStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Download</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Email</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>WetSign</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>ElectronicallySign</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
-      <productAttributes>
-         <attributeType>DocumentDescription</attributeType>
-         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Download</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Email</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>WetSign</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>ElectronicallySign</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-
+   <!--Document Configuration-->  
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
       <productAttributes>
@@ -161,7 +87,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subYoungProfOne|ContractComponentProductType=1478</attributeName>
+         <attributeName>subProfOne|ContractComponentProductType=1478</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -170,6 +96,14 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1478</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subTP|ContractComponentProductType=1478</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -186,6 +120,26 @@
          <description>be at least 18 years old.</description>
       </productAttributes>
    </productAttributeGroup>
+
+   <!-- Intent sequence mapping -->
+  <productAttributeGroup>
+		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+    <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>frontOfficeIntentSequence</attributeName>
+        <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+    </productAttributes>
+    <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>breadcrumbSteps</attributeName>
+        <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
+    </productAttributes>
+    <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>GNBAIntentToActivityMapping</attributeName>
+        <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+    </productAttributes>
+  </productAttributeGroup>
 
    <!--Provisioning Configuration-->
    <productAttributeGroup action="overwrite">
@@ -223,7 +177,7 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>mdmSubProductCode</attributeName>
-         <value>2047</value>
+         <value>2049</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -243,7 +197,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>productSubCategory</attributeName>
-         <value>24</value>
+         <value>23</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -383,7 +337,7 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>productIdentifier</attributeName>
-         <value>1478</value>
+         <value>1476</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -426,24 +380,59 @@
          <value>true</value>
       </productAttributes>
       <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>welcomeEmailTemplate</attributeName>
+        <value>me_dynamic_welcome_01</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>welcomeDocumentTemplate</attributeName>
+        <value>nedbank-commercial-release/CombinedWelcomeLetter</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>welcomeLetterTaxonomy</attributeName>
+        <value>AGREEMENTSDEPOSIT|Welcome Letter|Welcome Letter</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>welcomeDocumentTemplateLocked</attributeName>
+        <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!-- Offer configuration -->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>VASCrossSellControl</attributeGroupName>
+      <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>welcomeEmailTemplate</attributeName>
-         <value>me_dynamic_welcome_01</value>
+         <attributeName>DontCrossSellOnBaseComponentStatuses</attributeName>
+         <value>1012</value><!--Open-->
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>welcomeDocumentTemplate</attributeName>
-         <value>nedbank-commercial-release/CombinedWelcomeLetter</value>
+         <attributeName>VAS_1374</attributeName><!--E Notes-->
+         <value>Optionality=Optional~IsTakenUp=true</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>welcomeLetterTaxonomy</attributeName>
-         <value>AGREEMENTSDEPOSIT|Welcome Letter|Welcome Letter</value>
+         <attributeName>VAS_1454</attributeName><!--Greenbacks Rewards-->
+         <value>Optionality=Optional~IsTakenUp=true</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>welcomeDocumentTemplateLocked</attributeName>
-         <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
+         <attributeName>VAS_1164</attributeName><!--Cheque Card-->
+         <value>Optionality=Mandatory~IsTakenUp=true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1387</attributeName><!--Shop Card-->
+         <value>Optionality=Mandatory~IsTakenUp=true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_4387</attributeName>
+         <value>Optionality=Mandatory~IsTakenUp=true</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -485,6 +474,11 @@
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>HouseholdExpensesInformationV2|ng-component=HouseholdExpensesComponent~ProceduralStepName=Household expenses~TotalExpenses=true~DetailedExpenses=true~ZOrder=70</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>SkipFinancialDetails</attributeName>
+            <attributeName>SkipFinancialDetails|ng-component=SkipFinancialDetails</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -572,6 +566,33 @@
          <featureAttributes>
             <attributeType>DocumentDescription</attributeType>
             <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITFACILITY|Agreement Contract</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Download</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Email</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>WetSign</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>DigitallySign</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>ElectronicallySign</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+         <featureAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -686,6 +707,36 @@
          </featureAttributes>
       </featureAttributeGroup>
 
+      <featureAttributeGroup>
+         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subNedbankLogo</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericInfo</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericSignatures</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
       <!-- Case and Process Configuration -->
       <featureAttributeGroup>
          <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
@@ -702,7 +753,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>baseCBOActivityList</attributeName>
-            <value>CreditDecisionDetermineOffer|ConfirmVerificationQuality|ConfigureArrangement|CBOFinalizeCase</value>
+            <value>CreditDecisionDetermineOffer|ConfigureArrangement|CBOFinalizeCase</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>

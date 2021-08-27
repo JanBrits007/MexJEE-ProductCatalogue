@@ -96,7 +96,16 @@
 			<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 			<featureAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~restrictOptOut=true~ZOrder=170~ContractComponentProductType=1028</attributeName>
+				<attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~restrictOptOut=true~ZOrder=170~IntlDelivery~ContractComponentProductType=1028</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<!--<attributeGroupName>RuleHandlers_ActivateProductsGatherProductDetails</attributeGroupName-->
+			<attributeGroupName>RuleHandlers_ActivateProducts</attributeGroupName>
+			<featureAttributes>
+				<!--<attributeName>RequiredDataFilter_ActivateProductsGatherProductDetails</attributeName-->
+				<attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+				<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.InternationalCardDeliveryFilter</value>
 			</featureAttributes>
 		</featureAttributeGroup>
 

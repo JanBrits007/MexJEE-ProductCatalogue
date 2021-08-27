@@ -79,7 +79,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         <attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=WebSelfAssisted~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -97,11 +97,9 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
       </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>NedbankID|ng-component=StaffAssistedNedbankIdComponent~ProceduralStepName=Nedbank ID~ZOrder=110~applicableChannels=BranchStaffAssisted</attributeName>
-      </productAttributes>
+
    </productAttributeGroup>
+
 
    <!--ActivateProductsGatherEvidence-->
    <productAttributeGroup>
@@ -150,6 +148,10 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>YourDeclaration|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=60~ContractComponentProductType=1001~applicableChannels=WebSelfAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>NedbankID|ng-component=StaffAssistedNedbankIdComponent~ProceduralStepName=Nedbank ID~ZOrder=50~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -639,7 +641,7 @@
          <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementComplianceInformationFilter</value>
       </productAttributes>
-       <productAttributes>
+      <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
@@ -688,6 +690,11 @@
          <attributeType>1100</attributeType>
          <attributeName>ProductRuleHandler_PaymentProtectionPlan</attributeName>
          <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_All</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -873,6 +880,11 @@
          <attributeType>String</attributeType>
          <attributeName>FAISCategoryCode</attributeName>
          <value>1.18</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>FAISCategoryCode</attributeName>
+         <value>1.17</value>
       </productAttributes>
       <productAttributes>
          <attributeType>boolean</attributeType>
