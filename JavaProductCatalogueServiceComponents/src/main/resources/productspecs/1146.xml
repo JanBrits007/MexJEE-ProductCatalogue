@@ -17,6 +17,25 @@
     </productOnAPageWebURL>
 
     <productAttributeGroup>
+        <attributeGroupName>EligibilityHandler</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOffer</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_PrepareApplicant</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
         <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -64,7 +83,7 @@
         <attributeGroupName>DocumentConfiguration</attributeGroupName>
         <productAttributes>
             <attributeType>string</attributeType>
-            <attributeName>ComplianceDocumentFilter_PresentDocuments</attributeName>
+            <attributeName>ComplianceDocumentFilter_ActivateProducts</attributeName>
             <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFatcaComplianceFilter</value>
         </productAttributes>
     </productAttributeGroup>
@@ -208,10 +227,10 @@
         <attributeGroupName>productEvidenceRequirement_GatherEvidence</attributeGroupName>
     </productAttributeGroup>
     <productAttributeGroup>
-        <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+        <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Your Tax Compliance Documents|N/A|CLIENT|FOREIGN TAX COMPLIENCE|TAX STATUS CERTIFICATION|Certificate of Loss of Nationality</attributeName>
+            <attributeName>Certificate of Loss of Nationality|N/A|Client|Foreign Tax Compliance|Tax Status Certification|Certificate of Loss of Nationality</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -219,10 +238,10 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
-        <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+        <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Your Tax Compliance Documents|nedbank-commercial-release/IRSW9Universal|CLIENT|FOREIGN TAX COMPLIENCE|TAX STATUS CERTIFICATION|W-9 Form</attributeName>
+            <attributeName>W-9 Form|nedbank-commercial-release/IRSW9Universal|Client|Foreign Tax Compliance|Tax Status Certification|W-9 Form</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -246,10 +265,10 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
-        <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+        <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Your Tax Compliance Documents|nedbank-commercial-release/IRSW8BENUniversal|CLIENT|FOREIGN TAX COMPLIENCE|TAX STATUS CERTIFICATION|W-8BEN Form</attributeName>
+            <attributeName>W-8BEN Form|nedbank-commercial-release/IRSW8BENUniversal|Client|Foreign Tax Compliance|Tax Status Certification|W-8BEN Form</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -603,7 +622,7 @@
             <attributeName>DEAStatementBUID</attributeName>
             <value>d2f0821f-1a96-e811-a28a-00155d002916</value>
         </productAttributes>
-		 <productAttributes>
+        <productAttributes>
             <attributeType>string</attributeType>
             <attributeName>DEAStatementBUID_PROD</attributeName>
             <value>f35d558f-4430-e911-aa6b-001e67212aa8</value>
@@ -743,26 +762,26 @@
             <attributeName>dcar</attributeName>
             <value>51911</value>
         </productAttributes>
-       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>mdmAdminFieldType</attributeName>
-         <value>1022</value>
-       </productAttributes>
-       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>mdmSubProductCode</attributeName>
-         <value>1459</value>
-       </productAttributes>
-       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>mdmAccountRoleType</attributeName>
-         <value>1046</value>
-       </productAttributes>
-       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>mdmAdminSystemType</attributeName>
-         <value>1001</value>
-       </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>mdmAdminFieldType</attributeName>
+            <value>1022</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>mdmSubProductCode</attributeName>
+            <value>1459</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>mdmAccountRoleType</attributeName>
+            <value>1046</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>mdmAdminSystemType</attributeName>
+            <value>1001</value>
+        </productAttributes>
         <productAttributes>
             <attributeType>int</attributeType>
             <attributeName>applicationBranch</attributeName>
