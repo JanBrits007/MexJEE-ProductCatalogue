@@ -6,6 +6,16 @@
    <!--GenerateOfferVerifyEligibility-->
    <!--Align with Tim regarding GenerateOfferVerifyEligibility rule handler-->
 
+   <productAttributeGroup>
+      <attributeGroupName>GenerateOfferVerifyEligibilityIntentHandlers</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenerateOfferVerifyEligibilityIntentRuleHandlers</attributeName>
+         <value>classname=za.co.nb.onboarding.product.phaserules.handlers.GenerateOfferVerifyEligibility.GenerateOfferVerifyEligibilityRuleHandler.ForexVerifyClientTypeProduct</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+
    <!--VerifyIdentity-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
@@ -643,11 +653,11 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName> </attributeGroupName>
+      <attributeGroupName>productCodeMappings</attributeGroupName>
       <productAttributes>
          <attributeType>productCodeMapping</attributeType>
          <attributeName>MDM_ProductCode</attributeName>
-         <value></value>
+         <value>1033</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -672,6 +682,12 @@
          <attributeName>EnforceAgeValidationRules</attributeName>
          <value>true</value>
       </productAttributes>
+<!--      To be aligned with Tim-->
+<!--      <productAttributes>-->
+<!--         <attributeType>boolean</attributeType>-->
+<!--         <attributeName>EnforceResidencyValidationRules</attributeName>-->
+<!--         <value>true</value>-->
+<!--      </productAttributes>-->
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
