@@ -3,6 +3,26 @@
     <name>Nedbank Green Savings Bonds</name>
     <shortDescription>This fixed-term investment offers great rates and capital security for the medium to long term. The Nedbank Green Savings Bond lets you contribute to South Africa’s green economy at no cost or risk to you. Now that’s a savvy investment.</shortDescription>
     <productOnAPageWebURL>/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html</productOnAPageWebURL>
+
+    <productAttributeGroup>
+        <attributeGroupName>EligibilityHandler</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOffer</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_PrepareApplicant</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+    </productAttributeGroup>
+
     <productAttributeGroup>
         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
         <productAttributes>
@@ -33,6 +53,79 @@
             <attributeName>ProofOfIdentificationClause</attributeName>
             <isComparable>false</isComparable>
             <valueUnit>bool</valueUnit>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>DocumentConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>ComplianceDocumentFilter_ActivateProducts</attributeName>
+            <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFatcaComplianceFilter</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+        <productAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>Certificate of Loss of Nationality|N/A|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|Certificate of Loss of Nationality</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>WetSign</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+        <productAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>W-9 Form|nedbank-commercial-release/IRSW9Universal|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|W-9 Form</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Download</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Email</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>WetSign</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>ElectronicallySign</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>DigitallySign</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+        <productAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>W-8BEN Form|nedbank-commercial-release/IRSW8BENUniversal|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|W-8BEN Form</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Download</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Email</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>WetSign</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>ElectronicallySign</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>DigitallySign</attributeName>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>

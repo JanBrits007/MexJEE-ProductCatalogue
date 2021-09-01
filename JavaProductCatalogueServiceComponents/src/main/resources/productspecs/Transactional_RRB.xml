@@ -67,7 +67,92 @@
          <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=NoFeeTransactionalProductAccountDetails~ZOrder=50~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-219~GetInTouch=true~child-ng-components=LocateBranchComponent~child-ng-components=ContactUsComponent~child-ng-components=CallMeBackComponent~child-ng-components=BankerDetailComponent~child-ng-components=CompleteCaseComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=FatcaTinValidationComponent~ProceduralStepName=You're all set!</attributeName>
       </productAttributes>
    </productAttributeGroup>
-  
+
+   <!-- Document configuration -->
+  <productAttributeGroup action="overwrite">
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeType>DocumentDescription</attributeType>
+         <attributeName>Terms and conditions|nedbank-commercial-release/ProductContract|N/A|N/A|N/A|N/A</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>DigitalAcknowledgement</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Download</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Preview</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Email</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>DocTemplateName</attributeType>
+         <attributeName>ProductContract</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeType>DocumentDescription</attributeType>
+         <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Download</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Email</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>WetSign</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>ElectronicallySign</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>DigitallySign</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   
+    <productAttributeGroup action="overwrite">
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeType>DocumentDescription</attributeType>
+         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Download</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Email</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>WetSign</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>ElectronicallySign</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>DigitallySign</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--Decisioning control-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>DecisioningControl</attributeGroupName>
@@ -324,6 +409,11 @@
          <attributeName>CODHandler_Recalculate</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.cde.RecalcCODHandler</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CaptureFinancialDetails_FinaliseCase</attributeName>
+         <value>classname=za.co.nb.onboarding.product.phaserules.handlers.financialdetails.FinaliseCaseFinancialDetailsRuleHandler</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!-- Case and Process Configuration -->
@@ -427,59 +517,6 @@
    </productAttributeGroup>
 
    <!--Document configuration-->
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>subYourApplicationHeader</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>subNedbankLogo</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>subYourApplicationHeader</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>subNedbankLogo</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>subGenericInfo</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-        <attributeName>subContactInfo</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>subGenericDetails</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>subGenericSignatures</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
-   </productAttributeGroup>
 
     <!--EDB substitution rule-->
    <productAttributeGroup action="overwrite">
@@ -506,7 +543,7 @@
    <!--RRB TP feature-->
    <features>
       <featureIdentifier>1164</featureIdentifier>
-      <name>Young Professional One Cheque Card</name>
+      <name>Cheque Card</name>
       <mandatory>false</mandatory>
       <preSelected>false</preSelected>
       <featureAttributeGroup>
@@ -596,7 +633,7 @@
    </features>   
    <features>
       <featureIdentifier>4387</featureIdentifier>
-      <name>Young Professional Amex Card</name>
+      <name>Amex Card</name>
       <mandatory>false</mandatory>
       <preSelected>false</preSelected>
       <featureAttributeGroup>

@@ -3,6 +3,26 @@
     <name>Nedbank 32Day Notice</name>
     <shortDescription>The Nedbank 32Day Notice offers you a secure, attractive method of saving funds . You earn interest above the rates earned on the average 32-day Notice Deposit.</shortDescription>
     <productOnAPageWebURL>/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html</productOnAPageWebURL>
+
+    <productAttributeGroup>
+        <attributeGroupName>EligibilityHandler</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOffer</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_PrepareApplicant</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+    </productAttributeGroup>
+
     <productAttributeGroup>
         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
         <productAttributes>

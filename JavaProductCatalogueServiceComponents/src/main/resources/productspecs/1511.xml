@@ -1,6 +1,26 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1511</productIdentifier>
    <name>Professional Credit Card</name>
+
+   <productAttributeGroup>
+      <attributeGroupName>EligibilityHandler</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_PrepareApplicant</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <productAttributeGroup>
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
@@ -300,7 +320,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>6511</value>
+         <value>CreditCard_RRB_1511</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>

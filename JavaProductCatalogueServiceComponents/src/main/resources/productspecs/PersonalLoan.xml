@@ -245,6 +245,10 @@
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>RuleHandlers_ActivateProductsGatherProductDetails</attributeGroupName>
+    	<productAttributes>
+			<attributeType>GNBAPhaseHandler_ActivateProductsGatherProductDetails</attributeType>
+			<attributeName>za.co.nb.facility.management.client.PLFacilityManagementRemote</attributeName>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--ActivateProductsGatherEvidence-->
@@ -366,6 +370,71 @@
 	</productAttributeGroup>
 
 	<!--Document Configuration-->
+	<productAttributeGroup>
+		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+		<productAttributes>
+			<attributeType>DocumentDescription</attributeType>
+			<attributeName>Certificate of Loss of Nationality|N/A|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|Certificate of Loss of Nationality</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>WetSign</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+		<productAttributes>
+			<attributeType>DocumentDescription</attributeType>
+			<attributeName>W-9 Form|nedbank-commercial-release/IRSW9Universal|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|W-9 Form</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Download</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Email</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>WetSign</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>ElectronicallySign</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>DigitallySign</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+		<productAttributes>
+			<attributeType>DocumentDescription</attributeType>
+			<attributeName>W-8BEN Form|nedbank-commercial-release/IRSW8BENUniversal|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|W-8BEN Form</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Download</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Email</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>WetSign</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>ElectronicallySign</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>DigitallySign</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
 		<productAttributes>
@@ -662,6 +731,22 @@
             <description> be a South African resident.</description>
         </productAttributes>
     </productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>DocumentConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>ComplianceDocumentFilter_PresentDocuments</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFatcaComplianceFilter</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>InitialisationConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>InitialiseCaseRuleHandlers</attributeName>
+			<value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.sales.InitialiseBusinessCaseSalesTracking</value>
+		</productAttributes>
+	</productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>CaseConfiguration</attributeGroupName>
         <productAttributes>
@@ -1538,4 +1623,14 @@
             </featureAttributes>
         </featureAttributeGroup>
     </features>
+	<features>
+		<featureIdentifier>1332</featureIdentifier>
+		<name>Payments Mandate</name>
+		<mandatory>false</mandatory>
+		<preSelected>false</preSelected>
+		<shortDescription>This feature represents the Payment mandate given by the client (debicheck)</shortDescription>
+		<description>Detailed description of feature</description>
+		<featureType>BoltOn</featureType>
+		<referenceProductID>-1</referenceProductID>
+	</features>
 </product>
