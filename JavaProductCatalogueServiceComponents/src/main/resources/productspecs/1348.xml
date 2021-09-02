@@ -3,6 +3,26 @@
     <name>Nedbank Green Savings Bonds</name>
     <shortDescription>This fixed-term investment offers great rates and capital security for the medium to long term. The Nedbank Green Savings Bond lets you contribute to South Africa’s green economy at no cost or risk to you. Now that’s a savvy investment.</shortDescription>
     <productOnAPageWebURL>/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html</productOnAPageWebURL>
+
+    <productAttributeGroup>
+        <attributeGroupName>EligibilityHandler</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOffer</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_PrepareApplicant</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+    </productAttributeGroup>
+
     <productAttributeGroup>
         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
         <productAttributes>
@@ -47,7 +67,7 @@
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Certificate of Loss of Nationality|N/A|Client|Foreign Tax Compliance|Tax Status Certification|Certificate of Loss of Nationality</attributeName>
+            <attributeName>Certificate of Loss of Nationality|N/A|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|Certificate of Loss of Nationality</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -58,7 +78,7 @@
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>W-9 Form|nedbank-commercial-release/IRSW9Universal|Client|Foreign Tax Compliance|Tax Status Certification|W-9 Form</attributeName>
+            <attributeName>W-9 Form|nedbank-commercial-release/IRSW9Universal|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|W-9 Form</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -85,7 +105,7 @@
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>W-8BEN Form|nedbank-commercial-release/IRSW8BENUniversal|Client|Foreign Tax Compliance|Tax Status Certification|W-8BEN Form</attributeName>
+            <attributeName>W-8BEN Form|nedbank-commercial-release/IRSW8BENUniversal|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|W-8BEN Form</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
