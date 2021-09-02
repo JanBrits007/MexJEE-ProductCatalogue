@@ -4,6 +4,36 @@
     <shortDescription>The Nedbank 32Day Notice offers you a secure, attractive method of saving funds . You earn interest above the rates earned on the average 32-day Notice Deposit.</shortDescription>
     <productOnAPageWebURL>/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html</productOnAPageWebURL>
 
+
+    <productAttributeGroup>
+        <attributeGroupName>CaseConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>ArrangementBundleCaseHandler</attributeName>
+            <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>Investment_Retail_1391</value>
+        </productAttributes>
+    </productAttributeGroup>
+
     <productAttributeGroup>
         <attributeGroupName>EligibilityHandler</attributeGroupName>
         <productAttributes>
