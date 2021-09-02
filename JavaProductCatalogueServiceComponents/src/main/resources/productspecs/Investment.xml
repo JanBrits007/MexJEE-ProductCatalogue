@@ -24,7 +24,11 @@
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>DepositDetails|ng-component=DepositDetailsComponent~ProceduralStepName=Deposit Details~ActiveOnInitialWorkItemExecution=true~ZOrder=100</attributeName>
+         <attributeName>DepositDetails|ng-component=DepositDetailsComponent~ProceduralStepName=Deposit Details~ActiveOnInitialWorkItemExecution=true~ZOrder=110</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>RecurringPayment|ng-component=RecurringPaymentComponent~ProceduralStepName=Recurring Payment~ZOrder=100</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -88,10 +92,6 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>InvestmentFunding|ng-component=InvestmentFundingComponent~ProceduralStepName=Investment Funding~ZOrder=170</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>RecurringPayment|ng-component=RecurringPaymentComponent~ProceduralStepName=Recurring Payment~ZOrder=160</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -344,7 +344,7 @@
          <attributeName>DigitallySign</attributeName>
       </productAttributes>
    </productAttributeGroup>
-      <productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
@@ -482,6 +482,29 @@
    </productAttributeGroup>
 
    <!-- Case and Process Configuration -->
+   <productAttributeGroup>
+      <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeIntentSequence</attributeName>
+         <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+         <value>GenerateApplicationOfferProposals|FinancialDetails|GenerateOfferGatherClientDetails</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+      </productAttributes>
+   </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>EligibilityRules</attributeGroupName>
       <productAttributes>
