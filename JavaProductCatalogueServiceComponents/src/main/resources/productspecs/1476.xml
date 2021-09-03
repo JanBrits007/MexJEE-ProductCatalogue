@@ -701,7 +701,7 @@
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>NB112478|NB112258|NB158615|NB151154|NB127481|NB180461|NB305602|NB132034|NB132420|NB178217|NB114713</value>
+         <value>${{dynamicStaffList}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForIPSubnets</attributeName>
@@ -709,7 +709,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>6476</value>
+         <value>Transactional_RRB_1476</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -722,7 +722,7 @@
             <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
             <featureAttributes>
                 <attributeType>productInformationRequirement</attributeType>
-                <attributeName>OverdraftDetailsV2|min=5000.00~max=300000.00</attributeName>
+                <attributeName>OverdraftDetailsV2|min=5000.00~max=300000.00~isMandatory=true</attributeName>
             </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
