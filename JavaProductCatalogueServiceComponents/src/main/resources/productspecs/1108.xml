@@ -75,6 +75,73 @@
          <attributeName>FaisConversationRecordOfAdvice</attributeName>
       </productAttributes>
    </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>DocumentDescription</attributeType>
+         <attributeName>Certificate of Loss of Nationality|N/A|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|Certificate of Loss of Nationality</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>WetSign</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>DocumentDescription</attributeType>
+         <attributeName>W-9 Form|nedbank-commercial-release/IRSW9Universal|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|W-9 Form</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Download</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Email</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>WetSign</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>ElectronicallySign</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>DigitallySign</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>DocumentDescription</attributeType>
+         <attributeName>W-8BEN Form|nedbank-commercial-release/IRSW8BENUniversal|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|W-8BEN Form</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Download</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Email</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>WetSign</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>ElectronicallySign</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>DigitallySign</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
       <productAttributes>
@@ -557,6 +624,14 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
+      <attributeGroupName>DocumentConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ComplianceDocumentFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFatcaComplianceFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>RRBProductsSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
@@ -582,7 +657,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>6108</value>
+         <value>Transactional_RRB_1108</value>
       </productAttributes>
    </productAttributeGroup>
     <productAttributeGroup>
@@ -597,7 +672,7 @@
        </productAttributes>
        <productAttributes>
           <attributeName>SubstituteForProductID</attributeName>
-          <value>6108</value>
+          <value>Transactional_RRB_1108</value>
        </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -612,7 +687,7 @@
       </productAttributes> -->
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>6108</value>
+         <value>Transactional_RRB_1108</value>
       </productAttributes>
    </productAttributeGroup>
    <features>
@@ -1153,6 +1228,80 @@
             <value>some value</value>
          </featureAttributes>
       </featureAttributeGroup>
+      <featureAttributeGroup>
+        <attributeGroupName>productInformationRequirement_VerifyAffordabilityAndEmployment</attributeGroupName>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>InsurancePanel|cv-parent-panel=CaseData~cv-component=Insurance_Panel~child-cv-component=widInsuranceInformation[SHOW]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankInformation[SHOW]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>EmploymentInformationPanel|cv-parent-panel=CaseData~cv-component=EmploymentInformation_Panel~child-cv-component=widEmploymentInformation[SHOW]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>BureauInformationPanel|cv-parent-panel=CaseData~cv-component=BureauInformation_Panel~child-cv-component=widBureauGateway[SHOW]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>AffordabilityInformationPanel|cv-parent-panel=CaseData~cv-component=AffordabilityInformation_Panel~child-cv-component=widAffordabilityInformation[SHOW]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>GenericCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnViewComments~cv-component=Actions_CaseActions~child-cv-component=btnSave~cv-component=Actions_CaseActions~child-cv-component=btnCancelCase~cv-component=Actions_CaseActions~child-cv-component=btnViewAuditTrails~cv-component=Actions_CaseActions~child-cv-component=btnDiarise~cv-component=Actions_CaseActions~child-cv-component=btnFlagForFraud</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>DocumentCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnOpenDocuments~cv-component=Actions_CaseActions~child-cv-component=btnRequestDocuments~cv-component=Actions_CaseActions~child-cv-component=btnAddDocuments</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>DataCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnRetrievePartyStatements~cv-component=Actions_CaseActions~child-cv-component=btnRefreshPartyData~cv-component=Actions_CaseActions~child-cv-component=btnREfreshBureauData</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>DiariseCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>FraudCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
+        </featureAttributes>
+      </featureAttributeGroup>
+     <featureAttributeGroup>
+        <attributeGroupName>productInformationRequirement_QualityAssuranceVerification</attributeGroupName>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]~child-cv-component=widFinalAssessment[SHOW]~child-cv-component=widVerificationException[SHOW]~child-cv-component=widFinalAssessmentIndicators[SHOW]</attributeName>
+        </featureAttributes>
+        <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>AccountPanel|cv-parent-panel=CaseData~cv-component=AccountSetup_Panel~child-cv-component=widAccountSetup[SHOW]</attributeName>
+        </featureAttributes>
+		<featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankAccountDetails[SHOW]</attributeName>
+        </featureAttributes>
+		 <featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>LoanConsolidationCashflowPanel|cv-parent-panel=CaseData~cv-component=ConsolidationCashflow_Panel~child-cv-component=widLoanConsolidation[READONLY]~child-cv-component=widCashFlowDetails[READONLY]</attributeName>
+        </featureAttributes>
+		<featureAttributes>
+          <attributeType>productInformationRequirement</attributeType>
+          <attributeName>LastOfferPanel|cv-parent-panel=CaseData~cv-component=LastOffer_Panel~child-cv-component=widLastOfferDetails[READONLY]</attributeName>
+        </featureAttributes>
+     </featureAttributeGroup>
    </features>
    <features>
       <featureIdentifier>1454</featureIdentifier>

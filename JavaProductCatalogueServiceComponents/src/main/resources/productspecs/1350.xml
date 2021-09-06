@@ -1,6 +1,27 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1350</productIdentifier>
     <name>Savvy Bundle Credit Card</name>
+
+    <productAttributeGroup>
+        <attributeGroupName>EligibilityHandler</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOffer</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_PrepareApplicant</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+
     <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
         <productAttributes>
@@ -156,6 +177,71 @@
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+        <productAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>Certificate of Loss of Nationality|N/A|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|Certificate of Loss of Nationality</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>WetSign</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+        <productAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>W-9 Form|nedbank-commercial-release/IRSW9Universal|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|W-9 Form</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Download</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Email</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>WetSign</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>ElectronicallySign</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>DigitallySign</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+        <productAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>W-8BEN Form|nedbank-commercial-release/IRSW8BENUniversal|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|W-8BEN Form</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Download</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Email</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>WetSign</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>ElectronicallySign</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>DigitallySign</attributeName>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
@@ -529,6 +615,14 @@
 			<attributeName>RequiredDataFilter_ActivateProducts</attributeName>
 			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementMandatoryAPOFilter</value>
 		</productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>DocumentConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>ComplianceDocumentFilter_ActivateProducts</attributeName>
+            <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFatcaComplianceFilter</value>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>

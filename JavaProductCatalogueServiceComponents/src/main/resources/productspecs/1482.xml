@@ -3,6 +3,26 @@
    <name>Tax-free investments</name>
    <shortDescription>A long-term savings vehicle to invest for the future and boost retirement savings.</shortDescription>
    <productOnAPageWebURL>/content/nedbank/desktop/gt/en/supplimentary/formintroduction/formintroductionInvestmentsApplication.html</productOnAPageWebURL>
+
+   <productAttributeGroup>
+      <attributeGroupName>EligibilityHandler</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_PrepareApplicant</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
@@ -62,6 +82,16 @@
             <attributeName>EnforceAgeValidationRules</attributeName>
             <value>true</value>
         </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>EnforceIntent0FAISAccreditationRule</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>FAISCategoryCode</attributeName>
+         <value>1.18</value>
+      </productAttributes>
     </productAttributeGroup> 
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
