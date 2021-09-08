@@ -6,6 +6,16 @@
    <!--GenerateOfferVerifyEligibility-->
    <!--Align with Tim regarding GenerateOfferVerifyEligibility rule handler-->
 
+   <productAttributeGroup>
+      <attributeGroupName>GenerateOfferVerifyEligibilityIntentHandlers</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenerateOfferVerifyEligibilityIntentRuleHandlers</attributeName>
+         <value>classname=za.co.nb.onboarding.product.phaserules.handlers.GenerateOfferVerifyEligibility.GenerateOfferVerifyEligibilityRuleHandler.ForexVerifyClientTypeProduct</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+
    <!--VerifyIdentity-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
@@ -216,7 +226,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
+         <attributeName>Application Form|Contract|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -282,6 +292,10 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subForexTermsAndConditions|ContractComponentProductType=1004</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subForexFundingConfirmation|ContractComponentProductType=1004</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -460,15 +474,6 @@
          <attributeName>CODHandler_Recalculate</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.ForexDecisioning.RecalcCODHandler</value>
       </productAttributes>
-
-<!--      Align with Tim about adding this CODHandler-->
-
-<!--      <productAttributes>-->
-<!--         <attributeType>string</attributeType>-->
-<!--         <attributeName>CODHandler_Recalculate_Non_Standard_Rate</attributeName>-->
-<!--         <value>classname=za.co.nb.offermanagement.cod.handler.ForexDecisioning.RecalcNonStandardRateCODHandler</value>-->
-<!--      </productAttributes>-->
-
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_FinancialDetails</attributeName>
@@ -643,11 +648,11 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName> </attributeGroupName>
+      <attributeGroupName>productCodeMappings</attributeGroupName>
       <productAttributes>
          <attributeType>productCodeMapping</attributeType>
          <attributeName>MDM_ProductCode</attributeName>
-         <value></value>
+         <value>1033</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -672,6 +677,12 @@
          <attributeName>EnforceAgeValidationRules</attributeName>
          <value>true</value>
       </productAttributes>
+<!--      To be aligned with Tim-->
+<!--      <productAttributes>-->
+<!--         <attributeType>boolean</attributeType>-->
+<!--         <attributeName>EnforceResidencyValidationRules</attributeName>-->
+<!--         <value>true</value>-->
+<!--      </productAttributes>-->
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
