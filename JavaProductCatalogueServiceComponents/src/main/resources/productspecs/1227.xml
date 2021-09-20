@@ -11,7 +11,7 @@
         <productAttributes>
             <attributeType>string</attributeType>
             <attributeName>ArrangementBundleCaseHandler</attributeName>
-            <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
+            <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailFOREX</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -27,7 +27,7 @@
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
             <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-            <value>CC314525|NB184826</value>
+            <value>${{FOREXdynamicStaffList}}</value>
         </productAttributes>
 <!--        <productAttributes>-->
 <!--            <attributeName>SubstituteForIPSubnets</attributeName>-->
@@ -338,4 +338,35 @@
             <value>100</value>
         </productAttributes>
     </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>enum</attributeType>
+            <attributeName>productOnboardingProcessToExecute</attributeName>
+            <value>enterpriseEndtoEnd</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence</attributeName>
+            <value>RedirectToEWCO</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>GNBAVersion</attributeName>
+            <value>2.0</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>consumerFrameworkVersion</attributeName>
+            <value>2.0</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>productInformationRequirement_RedirectUI</attributeGroupName>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>Redirect|ng-component=UiredirectorComponent~SelfServiceURL="https://www.nedbank.co.za/content/forms/af/nedbank/Foreign-Currency-Account-Application.html"</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
 </product>
