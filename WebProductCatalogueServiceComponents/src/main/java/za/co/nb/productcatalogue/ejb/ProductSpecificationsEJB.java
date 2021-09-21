@@ -232,7 +232,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     private String processMultiSubstitution(String initiatingStaffNBNumber, ProductType productSpec, List<Banker> bankers){
         try{
             for (Banker banker : bankers) {
-                if(initiatingStaffNBNumber != null && banker.getType().toLowerCase().contains(initiatingStaffNBNumber.toLowerCase())){
+                if(initiatingStaffNBNumber != null && banker.getType() != null && banker.getType().toLowerCase().contains(initiatingStaffNBNumber.toLowerCase())){
                     mLog.debug("substituting product:"+banker.getProductId());
                     return banker.getProductId();
                 }
