@@ -19,6 +19,10 @@
    <!--VerifyIdentity-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+      <productAttributes><!--This is only here while whitelisting will move to browse on roll out-->
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>PrepareApplicant|ng-component=GenericProcessStartPageComponent~ZOrder=300~HideProceduralStep=true</attributeName>
+      </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted</attributeName>
@@ -503,6 +507,12 @@
          <attributeName>CODHandler_FinancialDetails</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.cde.FinancialDetailsHandler</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>Forex</attributeType>
+         <attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
+      </productAttributes>
+
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
