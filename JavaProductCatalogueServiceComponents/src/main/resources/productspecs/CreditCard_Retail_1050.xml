@@ -3,6 +3,336 @@
 	<name>HUB Card</name>
 	<shortDescription>(CreditCard_Retail_1050)</shortDescription>
 
+	<!--VerifyIdentity-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+		<productAttributes><!--This is only here while whitelisting will move to browse on roll out-->
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>PrepareApplicant|ng-component=GenericProcessStartPageComponent~ZOrder=300~HideProceduralStep=true</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--GenerateOfferGatherProductDetails-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+		<!--this is overwritten here so that we remove the widgets but still run the GNBA phase-->
+	</productAttributeGroup>
+
+	<!--GenerateOfferGatherClientDetails-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=ConsentCapture~ZOrder=100</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--ActivateProductsGatherProductDetails-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=140</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>HubDetails|ng-component=HubDetailsComponent~ProceduralStepName=Hub details~ZOrder=130</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Case and Process Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Age</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>18</minValue>
+			<maxValue>999</maxValue>
+			<valueUnit>year</valueUnit>
+			<description>be 18 years or older.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>5000</minValue>
+			<maxValue>99999999</maxValue>
+			<valueUnit>ZAR</valueUnit>
+			<description>earn an income of 36 000 per anim or more.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Residence</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>NA</minValue>
+			<maxValue>NA</maxValue>
+			<valueUnit>NA</valueUnit>
+			<description>be a resident of South Africa.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NaturalPerson</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>DebitOrderRepaymentRequired</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>CreditApproval</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NotUnderCreditAdministration</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>requiresDEAStatement</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>requiresSourcePaylslip</attributeName>
+			<value>false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>requiresSourceEnhancedIncomeAndAffordabilityData</attributeName>
+			<value>false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
+			<value>5</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>ApplicationEndToEndExecutionTimeMinutes</attributeName>
+			<value>90</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>enum</attributeType>
+			<attributeName>riskAnalysisMechanism</attributeName>
+			<value>specific</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>enum</attributeType>
+			<attributeName>riskAnalysisMechanismIntent1</attributeName>
+			<value>automated</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>enum</attributeType>
+			<attributeName>riskAnalysisMechanismIntent2</attributeName>
+			<value>automated</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>enum</attributeType>
+			<attributeName>riskAnalysisMechanismIntent3</attributeName>
+			<value>automated</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>enum</attributeType>
+			<attributeName>riskAnalysisMechanismIntent4</attributeName>
+			<value>automated</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODEngine</attributeName>
+			<value>CreditCardCOD</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>SpecialisedLiaisonTeamName</attributeName>
+			<value>CreditCardInformationRetriever</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>AvailableAppealActions</attributeName>
+			<value>Comment</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GatherDocumentsLiaisonTeam</attributeName>
+			<value>PREPROD EDB Party Information Retriever</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>bool</attributeType>
+			<attributeName>FinalCaseQualityAssuranceRequired</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>bool</attributeType>
+			<attributeName>FinalCaseQualityAssuranceSignatureTypeCheck</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>bool</attributeType>
+			<attributeName>FinalCaseQualityAssuranceTeam</attributeName>
+			<value>PREPROD EDB Quality Assurer</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>BPMCARDOFFER</attributeName>
+			<value>BPMCARDROLE</value>
+		</productAttributes>
+		<productAttributes>
+			 <attributeType>string</attributeType>
+			 <attributeName>GNBAVersion</attributeName>
+			 <value>2.0</value>
+		</productAttributes>
+		<productAttributes>
+			 <attributeType>string</attributeType>
+			 <attributeName>consumerFrameworkVersion</attributeName>
+			 <value>2.0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>baseCBOActivityList</attributeName>
+			<value>CreditDecisionDetermineOffer|ConfigureArrangement|ConfirmVerificationQuality|CBOPresentDocuments|CBOFinalizeCase</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CreditDecisionDetermineOffer</attributeName>
+			<value>CreditDecisionDetermineOfferTeam|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CreditDecisionDetermineOffer</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_ConfigureArrangement</attributeName>
+			<value>System|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_ConfigureArrangement</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_ConfirmVerificationQuality</attributeName>
+			<value>EDB Quality Assurer|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_ConfirmVerificationQuality</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CBOFinalizeCase</attributeName>
+			<value>System|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CBOFinalizeCase</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_InvestigateFraud</attributeName>
+			<value>EDB Fraud Investigation|Weighting=1</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_InvestigateFraud</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_GatherInformationAndDocuments</attributeName>
+			<value>EDB Party Information Retriever|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_GatherInformationAndDocuments</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CBOVerifyApplicantAndIncome</attributeName>
+			<value>EDB Party Information Verifier|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CBOVerifyApplicantAndIncome</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CBOAssessCreditApplication</attributeName>
+			<value>EDB Credit Assessor|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CBOAssessCreditApplication</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CBOPresentRevisedOffer</attributeName>
+			<value>EDB Credit Assessor|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CBOPresentRevisedOffer</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CBOPresentDocuments</attributeName>
+			<value>EDB Credit Assessor|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CBOPresentDocuments</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+	</productAttributeGroup>
+		<productAttributeGroup action="overwrite">
+		<attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CommunicationSystem</attributeName>
+			<value>GenCom</value> <!--this needs to be updated to include correct communication strat for Hub-->
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>productType</attributeName>
+			<value>EMAILSMS</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--Document Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
@@ -122,5 +452,60 @@
 			<value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
 		</productAttributes>
 	</productAttributeGroup>
+
+	<!--1400 - Affinity Rewards-->
+	<features>
+		<featureIdentifier>9992</featureIdentifier>
+		<name>Hub Club services</name>
+
+		<!--GenerateOffer-->
+		<featureAttributeGroup>
+			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=HubClubServicesComponent-9992~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+
+		<!-- Case and Process Configuration -->
+		<featureAttributeGroup>
+			<attributeGroupName>SystemRelated</attributeGroupName>
+			<featureAttributes>
+				<attributeType>Flag</attributeType>
+				<attributeName>StraightThroughProcess</attributeName>
+				<value>True</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+
+		<!--Provisioning Configuration-->
+		<featureAttributeGroup>
+			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>FeatureCode</attributeName>
+				<valueUnit>string</valueUnit>
+				<value>ThisisthesFeaturecode</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>provisionInBranch</attributeName>
+				<valueUnit>boolean</valueUnit>
+				<value>false</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>legacyProductID</attributeName>
+				<valueUnit>string</valueUnit>
+				<value />
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>ProvisioningPhase</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>preFICAProvisioning</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+
+	</features>
 
 </product>
