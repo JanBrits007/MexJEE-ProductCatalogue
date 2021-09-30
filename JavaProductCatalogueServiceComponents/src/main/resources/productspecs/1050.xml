@@ -1,6 +1,40 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1050</productIdentifier>
 	<name>Hub Card</name>
+
+	<productAttributeGroup>
+		<attributeGroupName>SubstitutionRulesETE</attributeGroupName>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>SubstitutionRulesQA</attributeGroupName>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+			<value>${{EDBPhase2dynamicStaffList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>CreditCard_Retail_1034_Simulation</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>LimitIncreaseSubstitutionRulesETE</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+			<value>${{EDBPhase2dynamicStaffList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>CreditCard_Retail_1034_Simulation</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+
 	<productAttributeGroup>
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
 		<productAttributes>

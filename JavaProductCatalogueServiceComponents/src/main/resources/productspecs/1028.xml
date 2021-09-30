@@ -2,6 +2,69 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1028</productIdentifier>
     <name>The American Express Platinum Card</name>
+
+
+    <productAttributeGroup>
+        <attributeGroupName>CaseConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>ArrangementBundleCaseHandler</attributeName>
+            <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>EligibilityHandler</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOffer</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_PrepareApplicant</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1028_Simulation</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>LimitIncreaseSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1028_Simulation</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+
     <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
         <productAttributes>
@@ -786,11 +849,11 @@
     </features>
     <features>
         <featureIdentifier>1334</featureIdentifier>
-        <name>Membership Rewards™</name>
+        <name>Membership Rewards</name>
         <mandatory>true</mandatory>
         <preSelected>true</preSelected>
-        <shortDescription>As part of your American Express Platinum Card, Memebership Rewards™ are automatically included at no extra cost!</shortDescription>
-        <description>Please note you will receive a Membership Rewards™ Redemption card in order to spend you rewards.</description>
+        <shortDescription>As part of your American Express Platinum Card, Memebership Rewards are automatically included at no extra cost!</shortDescription>
+        <description>Please note you will receive a Membership Rewards Redemption card in order to spend you rewards.</description>
         <featureGrouping>
             <featureGroupName>Loyalty</featureGroupName>
             <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
