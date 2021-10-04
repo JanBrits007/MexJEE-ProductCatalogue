@@ -7,10 +7,10 @@
    <!--Align with Tim regarding GenerateOfferVerifyEligibility rule handler-->
 
    <productAttributeGroup>
-      <attributeGroupName>GenerateOfferVerifyEligibilityIntentHandlers</attributeGroupName>
+      <attributeGroupName>RuleHandlers_GenerateOfferVerifyEligibility</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>GenerateOfferVerifyEligibilityIntentRuleHandlers</attributeName>
+         <attributeName>GNBAPhaseHandler_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.onboarding.product.phaserules.handlers.GenerateOfferVerifyEligibility.GenerateOfferVerifyEligibilityRuleHandler.ForexVerifyClientTypeProduct</value>
       </productAttributes>
    </productAttributeGroup>
@@ -169,6 +169,16 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=FundYourAccountComponent~child-ng-components=ExchangeRateComponent~child-ng-components=ForeignCurrencyAccountComponent~child-ng-components=VisitTheBranchNotificationComponent~HideProceduralStep=true~ZOrder=50</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--PresentAlternateOffer-->
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_PresentAlternateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAPhaseHandler_PresentAlternateOffer</attributeName>
+         <value>RemoteEJB=XXX</value> <!--sets the next intent to execute as FinalizeFrontOfficeInteraction-->
       </productAttributes>
    </productAttributeGroup>
 
@@ -656,7 +666,12 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>baseCBOActivityList</attributeName>
-         <value>ConfigureArrangement|CBOFinalizeCase</value>
+         <value>ConfigureArrangement~postVerificationProvisioning|ConfirmAvailableFunds|CBOPresentRevisedOffer|ConfigureArrangement~ArrangementFunding|CBOFinalizeCase</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ActivityDecisionTree</attributeName>
+         <value>RemoteEJB=XXX</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -842,6 +857,11 @@
          <attributeType>flag</attributeType>
          <attributeName>ProvisioningPhase</attributeName>
          <value>postVerificationProvisioning</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>flag</attributeType>
+         <attributeName>ProvisioningPhase</attributeName>
+         <value>ArrangementFunding</value>
       </productAttributes>
 
       <productAttributes>
