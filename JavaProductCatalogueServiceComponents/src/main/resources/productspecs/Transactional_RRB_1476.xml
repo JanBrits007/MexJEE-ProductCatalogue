@@ -749,11 +749,6 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
-            <attributeName>breadcrumbSteps</attributeName>
-            <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
             <attributeName>baseCBOActivityList</attributeName>
             <value>CreditDecisionDetermineOffer|ConfigureArrangement|CBOFinalizeCase</value>
          </featureAttributes>
@@ -836,21 +831,6 @@
             <attributeType>int</attributeType>
             <attributeName>CaseActivityPriority_CBOAssessCreditApplication</attributeName>
             <value>0|Weighting=0</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>frontOfficeIntentSequence</attributeName>
-            <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>breadcrumbSteps</attributeName>
-            <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>GNBAIntentToActivityMapping</attributeName>
-            <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>boolean</attributeType>
@@ -955,6 +935,26 @@
             <attributeType>string</attributeType>
             <attributeName>provisioningMechanism</attributeName>
             <value>provisionToCRAG</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!-- Intent sequence mapping -->
+      <featureAttributeGroup>
+         <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence</attributeName>
+            <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>breadcrumbSteps</attributeName>
+            <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>GNBAIntentToActivityMapping</attributeName>
+            <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
