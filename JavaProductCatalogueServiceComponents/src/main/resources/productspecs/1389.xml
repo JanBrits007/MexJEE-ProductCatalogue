@@ -41,6 +41,10 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ClientBiometricsEnrollment</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
          <attributeName>AdditionalPersonalInformation|statementdelivery=Cellphone-Email-Post</attributeName>
       </productAttributes>
       <productAttributes>
@@ -399,6 +403,11 @@
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>cardDeliveryFee</attributeName>
+         <value>0.00</value>
+      </productAttributes>
       <productAttributes>
          <attributeType>String</attributeType>
          <attributeName>HandleProvisioningFailureTeamName</attributeName>
@@ -807,21 +816,17 @@
    <productAttributeGroup>
       <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
    </productAttributeGroup>
-   <productAttributeGroup>
+   <!-- <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
          <value>${{dynamicStaffListForSpecInheritance}}</value>
       </productAttributes>
-      <!--<productAttributes>
-         <attributeName>SubstituteForCalculatedSegment</attributeName>
-         <value>200~201</value>
-      </productAttributes>-->
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
          <value>Transactional_RRB_1389</value>
       </productAttributes>
-   </productAttributeGroup>
+   </productAttributeGroup> -->
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
