@@ -8,14 +8,14 @@
 		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 	</productAttributeGroup>
 
+	<!--ActivateProductsPresentDocuments-->
+	<productAttributeGroup inheritFromFiles="BaseProduct_RRB_ReferWithoutLongForm">
+      <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+	</productAttributeGroup>
+
 	<!--FinalizeFrontOfficeInteraction-->
 	<productAttributeGroup inheritFromFiles="BaseProduct_RRB_ReferWithoutLongForm">
 		<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
-	</productAttributeGroup>
-
-	<!--Case and Process Configuration-->
-	<productAttributeGroup inheritFromFiles="BaseProduct_RRB_ReferWithoutLongForm">
-		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
 	</productAttributeGroup>
 
 	<!--Overdraft feature -->
@@ -34,26 +34,9 @@
 			</featureAttributes>
 		</featureAttributeGroup>
 
-		<!-- Intent sequence mapping -->
+		<!--ActivateProductsPresentDocuments-->
 		<featureAttributeGroup action="overwrite">
-			<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
-			<featureAttributes>
-				<attributeType>string</attributeType>
-				<attributeName>frontOfficeIntentSequence</attributeName>
-				<value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|FinalizeFrontOfficeInteraction</value>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>string</attributeType>
-				<attributeName>breadcrumbSteps</attributeName>
-				<value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>string</attributeType>
-				<attributeName>GNBAIntentToActivityMapping</attributeName>
-				<value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
-			</featureAttributes>
+			<attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
 		</featureAttributeGroup>
-
 	</features>
-
 </product>
