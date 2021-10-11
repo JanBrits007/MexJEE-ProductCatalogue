@@ -346,11 +346,15 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                         String[] channelID = substitution.getType().split("\\|");
                         ((Channel) substitution).getChannelIDWhitelist().addAll(Arrays.asList(channelID));
                     }else if(productAttribute.getAttributeName().equalsIgnoreCase("SubstituteForProductID")){
-                        substitution.setProductId(productAttribute.getValue());
+                        if(substitution != null)
+                            substitution.setProductId(productAttribute.getValue());
+
                         break;
                     }
                 }
-                substitutions.add(substitution);
+
+                if(substitution != null)
+                    substitutions.add(substitution);
             });
 
         }catch (InvalidAttributeGroupException iae){}
