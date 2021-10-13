@@ -1,4 +1,4 @@
-<product inheritFromFiles="CreditCard_Retail_1027" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+<product inheritFromFiles="CreditCard_Retail_1028" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1028</productIdentifier>
     <name>The American Express Platinum Card</name>
     <shortDescription>(CreditCard_Retail_1028_Simulation)</shortDescription>
@@ -15,6 +15,7 @@
     <productAttributeGroup inheritFromFiles="CreditCard_Retail_1032_Simulation">
         <attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
     </productAttributeGroup>
+
 
     <!--GenerateOfferGatherProductDetails-->
     <productAttributeGroup action="overwrite">
@@ -39,7 +40,7 @@
         <productAttributes>
             <attributeType>string</attributeType>
             <attributeName>VAS_1334</attributeName><!--Membership Rewards-->
-            <value>Optionality=Optional~IsTakenUp=false</value>
+            <value>Optionality=Mandatory~IsTakenUp=true</value>
         </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
@@ -198,9 +199,9 @@
     <features>
         <featureIdentifier>1334</featureIdentifier>
         <name>Membership Rewards</name>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <preSelected>true</preSelected>
-        <shortDescription>Earn points on virtually all the spend on your card and enjoy a range of fantastic rewards.</shortDescription>
+        <shortDescription>As part of your American Express Platinum Card, Memebership Rewards are automatically included at no extra cost!</shortDescription>
         <description>Please note you will receive a Membership Rewards Redemption card in order to spend you rewards.</description>
         <featureGrouping>
             <featureGroupName>Loyalty</featureGroupName>
@@ -286,7 +287,7 @@
             </featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>
-            <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+            <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
             <featureAttributes>
                 <attributeType>DocumentDescription</attributeType>
                 <attributeName>Rewards Terms and Conditions|nedbank-commercial-release/CreditCardAmexRewardsTermsAndConditionsUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Terms and Conditions</attributeName>
@@ -522,6 +523,13 @@
                 <attributeName>legacyProductID</attributeName>
                 <valueUnit>string</valueUnit>
                 <value />
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=CreditCardInsuranceComponent-1100~ProceduralStepName=Your offer~ZOrder=65</attributeName>
             </featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>

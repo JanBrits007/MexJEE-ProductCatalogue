@@ -339,6 +339,9 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 Substitution substitution = null;
                 for(ProductattributesType productAttribute :productAttributeGroup.getProductAttributes()) {
 
+                    if(productAttribute.getAttributeName().equals("DefaultSubstitution"))
+                        break;
+
                     if (productAttribute.getAttributeName().equalsIgnoreCase("SubstituteForWhiteListedNBNumbers")) {
                          substitution = new Banker(productAttribute.getValue());
                     } else if (productAttribute.getAttributeName().equalsIgnoreCase("SubstituteForChannelIDs")) {
@@ -350,7 +353,9 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                         break;
                     }
                 }
-                substitutions.add(substitution);
+
+                if(substitution != null)
+                    substitutions.add(substitution);
             });
 
         }catch (InvalidAttributeGroupException iae){}

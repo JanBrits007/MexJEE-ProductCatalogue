@@ -38,7 +38,7 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FundYourNewFcaAccount|ng-component=ng-FundYourNewFcaAccountComponent~ProceduralStepName=Fund your new FCA account~ZOrder=170</attributeName>
+         <attributeName>FundYourNewFcaAccount|ng-component=FundYourNewAccountComponent~ProceduralStepName=Fund your new FCA account~ZOrder=170</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -102,6 +102,13 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1227</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subForexFCA|ContractComponentProductType=1227</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -208,12 +215,20 @@
          <attributeName>welcomeDocumentTemplateLocked</attributeName>
          <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
       </productAttributes>
-
-<!--      Confirm with Tim if this is generate facility number routing flag -->
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>fundingReceiptTemplate</attributeName>
+         <value>nedbank-commercial-release/ForexFCAFundingReceiptUniversal.xdp</value>
+      </productAttributes>
       <productAttributes>
          <attributeType>flag</attributeType>
          <attributeName>ProvisioningPhase</attributeName>
          <value>postVerificationProvisioning</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>flag</attributeType>
+         <attributeName>ProvisioningPhase</attributeName>
+         <value>ArrangementFunding</value>
       </productAttributes>
 
       <productAttributes>
