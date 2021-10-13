@@ -339,9 +339,6 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 Substitution substitution = null;
                 for(ProductattributesType productAttribute :productAttributeGroup.getProductAttributes()) {
 
-                    if(productAttribute.getAttributeName().equals("DefaultSubstitution"))
-                        break;
-
                     if (productAttribute.getAttributeName().equalsIgnoreCase("SubstituteForWhiteListedNBNumbers")) {
                          substitution = new Banker(productAttribute.getValue());
                     } else if (productAttribute.getAttributeName().equalsIgnoreCase("SubstituteForChannelIDs")) {
@@ -349,7 +346,9 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                         String[] channelID = substitution.getType().split("\\|");
                         ((Channel) substitution).getChannelIDWhitelist().addAll(Arrays.asList(channelID));
                     }else if(productAttribute.getAttributeName().equalsIgnoreCase("SubstituteForProductID")){
-                        substitution.setProductId(productAttribute.getValue());
+                        if(substitution != null)
+                            substitution.setProductId(productAttribute.getValue());
+
                         break;
                     }
                 }
