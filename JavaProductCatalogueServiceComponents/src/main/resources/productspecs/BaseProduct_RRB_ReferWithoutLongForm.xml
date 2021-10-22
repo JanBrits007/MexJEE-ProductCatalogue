@@ -3,13 +3,21 @@
 	<name>Base Product</name>
 	<shortDescription>(BaseProduct_RRB_ReferWithoutLongForm) This spec file defines refer with long form (to be used for refer) Scenario which other specs will inherit</shortDescription>
 
-	<!--Activate Product Gather Product Details-->
+	<!--ActivateProductsGatherProductDetails-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>RelationshipBankerInformationV2|ng-component=RelationshipBankerComponent~ProceduralStepName=Your relationship banker~ZOrder=165</attributeName>
 		</productAttributes>
+		<productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfAdviceIndividualComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+	   <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>SalesMilestone|ng-component=CmsDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
@@ -19,6 +27,10 @@
 	<!--ActivateProductsPresentDocuments-->
 	<productAttributeGroup>
       <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+	  <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=10~ContractComponentProductType=1021~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>YourDeclared|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=10~ContractComponentProductType=1021~applicableChannels=WebSelfAssisted</attributeName>
