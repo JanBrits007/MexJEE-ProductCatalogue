@@ -3,9 +3,18 @@
 	<name>Professional Bundle Credit Card</name>
 	<shortDescription>(CreditCard_RRB_1489_AppealWithoutLongForm)</shortDescription>
 
-	<!--GenerateOffer-->
-   <productAttributeGroup inheritFromFiles="BaseProduct_RRB_AppealWithoutLongForm">
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+	<!--AppealWithoutLongForm-->
+	<productAttributeGroup>
+        <attributeGroupName>productInformationRequirement_AppealWithoutLongForm</attributeGroupName>
+        <productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Your appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~HideProceduralStep=true~includeAppealReasons=true~includeAppealMotivation=true~includeAdditionalPaperworkSelection=true~appealsType=affordabilityAppeal</attributeName>
+		</productAttributes>
     </productAttributeGroup>
+
+	<!--Case and Process Configuration-->
+	<productAttributeGroup inheritFromFiles="BaseProduct_RRB_AppealWithoutLongForm">
+		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+	</productAttributeGroup>
 
 </product>
