@@ -3,21 +3,23 @@
 	<name>Base Product</name>
 	<shortDescription>(BaseProduct_RRB_AppealWithoutLongForm) This spec file defines appeal without long form (to be used for decline with appeal) Scenario which other specs will inherit</shortDescription>
 
-    <!--GenerateOffer-->
-	<productAttributeGroup>
-        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+    <!-- Intent sequence mapping -->
+    <productAttributeGroup>
+        <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
         <productAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence</attributeName>
+            <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|AppealWithoutLongForm|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
         </productAttributes>
         <productAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80~child-ng-components=CreditCardDetailsV2Component~1021_min=5000.00~1021_max=300000.00~1400_min=2000.00~1400_max=300000.00~1108_min=5000.00~1108_max=300000.00~1476_min=2000.00~1476_max=300000.00~1478_min=10000.00~1478_max=300000.00~0_min=10000.00~0_max=300000.00~1489_min=5000.00~1489_max=300000.00</attributeName>
+            <attributeType>string</attributeType>
+            <attributeName>breadcrumbSteps</attributeName>
+            <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
         </productAttributes>
         <productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Your appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~HideProceduralStep=true~includeAppealReasons=true~includeAppealMotivation=true~includeAdditionalPaperworkSelection=true</attributeName>
-		</productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>GNBAIntentToActivityMapping</attributeName>
+            <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|AppealWithoutLongForm=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+        </productAttributes>
     </productAttributeGroup>
-
 </product>

@@ -3,27 +3,39 @@
 	<name>Professional Bundle</name>
 	<shortDescription>(Transactional_RRB_1021_AppealWithoutLongForm)</shortDescription>
 
-	<!--Overdraft feature -->
+    <!--Overdraft feature -->
 	<features>
 		<featureIdentifier>1014</featureIdentifier>
 		<name>Overdraft</name>
 		<mandatory>true</mandatory>
 		<preSelected>true</preSelected>
 
-		<!--GenerateOffer-->
+        <!--AppealWithoutLongForm-->
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_AppealWithoutLongForm</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Your appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~HideProceduralStep=true~includeAppealReasons=true~includeAppealMotivation=true~includeAdditionalPaperworkSelection=true~appealsType=affordabilityAppeal</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+
+        <!-- Intent sequence mapping -->
         <featureAttributeGroup action="overwrite">
-            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+            <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
             <featureAttributes>
-                <attributeType>clientInformationRequirement</attributeType>
-                <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+                <attributeType>string</attributeType>
+                <attributeName>frontOfficeIntentSequence</attributeName>
+                <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|AppealWithoutLongForm|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
             </featureAttributes>
             <featureAttributes>
-                <attributeType>productInformationRequirement</attributeType>
-                <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80~child-ng-components=OverdraftDetailsV2Component~min=5000.00~max=300000.00</attributeName>
+                <attributeType>string</attributeType>
+                <attributeName>breadcrumbSteps</attributeName>
+                <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
             </featureAttributes>
             <featureAttributes>
-                <attributeType>productInformationRequirement</attributeType>
-                <attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Your appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~HideProceduralStep=true~includeAppealReasons=true~includeAppealMotivation=true~includeAdditionalPaperworkSelection=true</attributeName>
+                <attributeType>string</attributeType>
+                <attributeName>GNBAIntentToActivityMapping</attributeName>
+                <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|AppealWithoutLongForm=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
             </featureAttributes>
         </featureAttributeGroup>
 	</features>
