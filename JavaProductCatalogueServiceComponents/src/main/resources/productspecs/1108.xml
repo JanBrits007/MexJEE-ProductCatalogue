@@ -1,6 +1,6 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1108</productIdentifier>
-   <name>Private Pay-As-You-Use</name>
+   <name>Professional Pay-As-You-Use</name>
    <productAttributeGroup>
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
@@ -77,14 +77,12 @@
    </productAttributeGroup>
 
    <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+      <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
       <productAttributes>
-         <attributeType>DocumentDescription</attributeType>
+         <attributeType>Evidence</attributeType>
          <attributeName>Certificate of Loss of Nationality|N/A|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|Certificate of Loss of Nationality</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>WetSign</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -235,7 +233,7 @@
       <productAttributes>
           <attributeType>string</attributeType>
           <attributeName>requiresElgiblityScoringAtIntents</attributeName>
-          <value>intent 0</value>
+          <value>intent 0|intent 1</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -307,6 +305,11 @@
             <attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
             <value>EclipseBPMExceptionssupport@Nedbank.co.za</value>
          </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>MaxTransactionalProductEligible</attributeName>
+         <value>3</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>coreProvisioningParameters</attributeGroupName>
@@ -629,6 +632,14 @@
          <attributeType>string</attributeType>
          <attributeName>ComplianceDocumentFilter_ActivateProducts</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFatcaComplianceFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>PartyConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_GatherEvidence</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.PartyLONFilter</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>

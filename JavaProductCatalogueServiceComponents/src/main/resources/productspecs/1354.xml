@@ -109,14 +109,12 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+      <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
       <productAttributes>
-         <attributeType>DocumentDescription</attributeType>
+         <attributeType>Evidence</attributeType>
          <attributeName>Certificate of Loss of Nationality|N/A|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|Certificate of Loss of Nationality</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>WetSign</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -284,6 +282,14 @@
          <attributeType>string</attributeType>
          <attributeName>ComplianceDocumentFilter_ActivateProducts</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFatcaComplianceFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>PartyConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_GatherEvidence</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.PartyLONFilter</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -629,6 +635,11 @@
          <attributeName>ProvisioningPhase</attributeName>
          <value>preVerificationProvisioning</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>isLead</attributeName>
+         <value>true</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>CaseConfiguration</attributeGroupName>
@@ -663,7 +674,44 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>DefaultSubstitution</attributeName>
+         <value>DefaultSubstitution</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1354</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{dynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForIPSubnets</attributeName>
+         <value>${{InternalNetworkIPRanges}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1354</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>DefaultSubstitution</attributeName>
+         <value>DefaultSubstitution</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1354</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
          <value>${{dynamicStaffList}}</value>
@@ -680,12 +728,8 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{dynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForIPSubnets</attributeName>
-         <value>${{InternalNetworkIPRanges}}</value>
+         <attributeName>DefaultSubstitution</attributeName>
+         <value>DefaultSubstitution</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>

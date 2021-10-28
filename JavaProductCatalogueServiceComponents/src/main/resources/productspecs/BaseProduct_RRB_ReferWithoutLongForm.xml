@@ -3,7 +3,7 @@
 	<name>Base Product</name>
 	<shortDescription>(BaseProduct_RRB_ReferWithoutLongForm) This spec file defines refer with long form (to be used for refer) Scenario which other specs will inherit</shortDescription>
 
-	<!--Activate Product Gather Product Details-->
+	<!--ActivateProductsGatherProductDetails-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
@@ -11,10 +11,31 @@
 			<attributeName>RelationshipBankerInformationV2|ng-component=RelationshipBankerComponent~ProceduralStepName=Your relationship banker~ZOrder=165</attributeName>
 		</productAttributes>
 		<productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfAdviceIndividualComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+	   <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>SalesMilestone|ng-component=CmsDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
+
+	<!--ActivateProductsPresentDocuments-->
+	<productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+	  <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=10~ContractComponentProductType=1021~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>YourDeclared|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=10~ContractComponentProductType=1021~applicableChannels=WebSelfAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
 
 	<!--FinalizeFrontOfficeInteraction-->
    <productAttributeGroup>
@@ -25,33 +46,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=NoFeeTransactionalProductAccountDetails~ZOrder=50~HideProceduralStep=true~child-ng-components=CreditApplicationStatusComponent-219~GetInTouch=true~child-ng-components=LocateBranchComponent~child-ng-components=ContactUsComponent~child-ng-components=CallMeBackComponent~child-ng-components=BankerDetailComponent~child-ng-components=CompleteCaseComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=FatcaTinValidationComponent~ProceduralStepName=You're all set!</attributeName>
+         <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=NoFeeTransactionalProductAccountDetails~ZOrder=50~HideProceduralStep=true~child-ng-components=ManualAssesmentCreditComponent-219~GetInTouch=true~child-ng-components=LocateBranchComponent~child-ng-components=ContactUsComponent~child-ng-components=CallMeBackComponent~child-ng-components=BankerDetailComponent~child-ng-components=CompleteCaseComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=FatcaTinValidationComponent~ProceduralStepName=You're all set!</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
-	<!--Case and Process Configuration-->
-	<productAttributeGroup>
-		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>frontOfficeIntentSequence</attributeName>
-			<value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|FinalizeFrontOfficeInteraction</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
-			<value>GenerateApplicationOfferProposals|FinancialDetails|GenerateOfferGatherClientDetails</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>breadcrumbSteps</attributeName>
-			<value>Authenticate|Product Setup|Credit Info|About you|Customise|Finishing up</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>GNBAIntentToActivityMapping</attributeName>
-			<value>VerifyIdentity=Product Setup|GenerateOfferVerifyEligibility=Product Setup|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Product Setup|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
-		</productAttributes>
-	</productAttributeGroup>
-
 </product>

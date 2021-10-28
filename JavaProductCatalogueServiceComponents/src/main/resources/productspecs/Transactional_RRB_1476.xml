@@ -1,7 +1,7 @@
 <product inheritFromFiles="Transactional_RRB" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1476</productIdentifier>
-   <name>Private One | Young</name>
-   <shortDescription>(Transactional_RRB_1476) Private One | Young</shortDescription>
+   <name>Young Professional One</name>
+   <shortDescription>(Transactional_RRB_1476) Young Professional One</shortDescription>
 
    <!--GenerateOfferGatherProductDetails-->
    <productAttributeGroup action="overwrite">
@@ -122,24 +122,29 @@
    </productAttributeGroup>
 
    <!-- Intent sequence mapping -->
-  <productAttributeGroup>
-		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
-    <productAttributes>
-        <attributeType>string</attributeType>
-        <attributeName>frontOfficeIntentSequence</attributeName>
-        <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
-    </productAttributes>
-    <productAttributes>
-        <attributeType>string</attributeType>
-        <attributeName>breadcrumbSteps</attributeName>
-        <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
-    </productAttributes>
-    <productAttributes>
-        <attributeType>string</attributeType>
-        <attributeName>GNBAIntentToActivityMapping</attributeName>
-        <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
-    </productAttributes>
-  </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeIntentSequence</attributeName>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>AlternateOfferWorkItemTemplate</attributeName>
+         <value>GenerateOffer</value>
+      </productAttributes>
+   </productAttributeGroup>
 
    <!--Provisioning Configuration-->
    <productAttributeGroup action="overwrite">
@@ -365,11 +370,6 @@
          <value>46</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>flag</attributeType>
-         <attributeName>ProvisioningPhase</attributeName>
-         <value>preVerificationProvisioning</value>
-      </productAttributes>
-      <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>productCategoryName</attributeName>
          <value>PROFESSIONALBANKING</value>
@@ -509,14 +509,6 @@
       <!--ActivateProductsGatherProductDetails-->
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>DeclarationInformationV2|sideStepperDisplayName=Your declaration~ZOrder=200</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>KeepingInTouchInformationV2|sideStepperDisplayName=Keep in touch</attributeName>
-         </featureAttributes>
       </featureAttributeGroup>
 
       <!--ActivateProductsGatherEvidence-->
@@ -749,11 +741,6 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
-            <attributeName>breadcrumbSteps</attributeName>
-            <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
             <attributeName>baseCBOActivityList</attributeName>
             <value>CreditDecisionDetermineOffer|ConfigureArrangement|CBOFinalizeCase</value>
          </featureAttributes>
@@ -836,21 +823,6 @@
             <attributeType>int</attributeType>
             <attributeName>CaseActivityPriority_CBOAssessCreditApplication</attributeName>
             <value>0|Weighting=0</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>frontOfficeIntentSequence</attributeName>
-            <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>breadcrumbSteps</attributeName>
-            <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>GNBAIntentToActivityMapping</attributeName>
-            <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>boolean</attributeType>
@@ -955,6 +927,26 @@
             <attributeType>string</attributeType>
             <attributeName>provisioningMechanism</attributeName>
             <value>provisionToCRAG</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!-- Intent sequence mapping -->
+      <featureAttributeGroup>
+         <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence</attributeName>
+            <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>breadcrumbSteps</attributeName>
+            <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>GNBAIntentToActivityMapping</attributeName>
+            <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
