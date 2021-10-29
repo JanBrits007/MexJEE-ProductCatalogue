@@ -1,0 +1,52 @@
+<product inheritFromFiles="Transactional_RRB_1476" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+	<productIdentifier>1476</productIdentifier>
+	<name>Young Professional One</name>
+	<shortDescription>(Transactional_RRB_1476_ManualAssessmentWithoutLongForm)</shortDescription>
+
+    <!--Intent sequence mapping-->
+	<productAttributeGroup inheritFromFiles="BaseProduct_RRB_ManualAssessmentWithoutLongForm">
+		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+	</productAttributeGroup>
+
+    <!--Overdraft feature -->
+	<features>
+		<featureIdentifier>1014</featureIdentifier>
+		<name>Overdraft</name>
+		<mandatory>true</mandatory>
+		<preSelected>true</preSelected>
+
+        <!--AppealWithoutLongForm-->
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_AppealWithoutLongForm</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Your appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~HideProceduralStep=true~includeAppealReasons=true~includeAppealMotivation=true~includeAdditionalPaperworkSelection=true~appealsType=affordabilityAppeal</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+
+        <!-- Intent sequence mapping -->
+        <featureAttributeGroup action="overwrite">
+            <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>frontOfficeIntentSequence</attributeName>
+                <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|AppealWithoutLongForm|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>breadcrumbSteps</attributeName>
+                <value>Authenticate|Product Setup|Credit Info|About You|Customise|Finishing up</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>GNBAIntentToActivityMapping</attributeName>
+                <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|AppealWithoutLongForm=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>AlternateOfferWorkItemTemplate</attributeName>
+                <value>GenerateOffer</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+	</features>
+</product>
