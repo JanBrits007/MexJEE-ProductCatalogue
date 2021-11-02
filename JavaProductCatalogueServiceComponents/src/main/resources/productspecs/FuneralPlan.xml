@@ -771,6 +771,29 @@
          <value>EMAILSMS</value>
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeIntentSequence</attributeName>
+         <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+         <value>GenerateApplicationOfferProposals|GenerateOfferGatherClientDetails</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+      </productAttributes>
+   </productAttributeGroup>
 
    <!--Offer Configuration-->
    <productAttributeGroup>
@@ -896,6 +919,16 @@
       <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
    </productAttributeGroup>
 
-   <!-- Add features here -->
+   <!--Features-->
+   <features>
+      <featureIdentifier>1332</featureIdentifier>
+      <name>Payments Mandate</name>
+      <mandatory>false</mandatory>
+      <preSelected>false</preSelected>
+      <shortDescription>This feature represents the Payment mandate given by the client (debicheck)</shortDescription>
+      <description>Detailed description of feature</description>
+      <featureType>BoltOn</featureType>
+      <referenceProductID>-1</referenceProductID>
+   </features>
 
 </product>
