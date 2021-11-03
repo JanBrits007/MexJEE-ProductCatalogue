@@ -12,9 +12,30 @@
 		</productAttributes>
     </productAttributeGroup>
 
+	<!--ActivateProductsGatherProductDetails-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+	</productAttributeGroup>
+
+	<!--ActivateProductsPresentDocuments-->
+	<productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+    </productAttributeGroup>
+
 	<!--Case and Process Configuration-->
 	<productAttributeGroup inheritFromFiles="BaseProduct_RRB_ManualAssessmentWithoutLongForm">
 		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
 	</productAttributeGroup>
+
+	<features>
+      <featureIdentifier>4387</featureIdentifier>
+      <name>Amex Multi App Cheque/Credit Card Plastic Card</name>
+      <mandatory>true</mandatory>
+      <preSelected>true</preSelected>
+
+      <featureAttributeGroup action="overwrite">
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+      </featureAttributeGroup>
+    </features>
 
 </product>
