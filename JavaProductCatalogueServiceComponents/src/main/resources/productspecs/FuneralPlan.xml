@@ -1,5 +1,5 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-   <productIdentifier>1001</productIdentifier>
+   <productIdentifier>1155</productIdentifier>
    <name>Base Funeral Plan Specification</name>
    <shortDescription>Base Transactional Specification</shortDescription>
 
@@ -21,11 +21,12 @@
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
       </productAttributes>
-      <productAttributes>
+      <!--this must only be implemented for build your cover-->
+      <!--productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
-         <value>classname=XXX</value> <!--Implement Allowed Cover rules-->
-      </productAttributes>
+         <value>classname=XXX</value>
+      </productAttributes-->
    </productAttributeGroup>
 
    <!--VerifyIdentity-->
@@ -39,14 +40,6 @@
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Your income details~ZOrder=100</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
    </productAttributeGroup>
 
    <!--GenerateOfferGatherProductDetails-->
@@ -54,6 +47,21 @@
    <!--DetermineRelatedParties-->
 
    <!--GenerateOfferGatherClientDetails-->
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=SalaryBankDetails~child-ng-components=ConsentCapture~ZOrder=100</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
 
    <!--FinancialDetails-->
 
@@ -62,7 +70,7 @@
       <attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Setting up your product~ZOrder=80~ActiveOnInitialWorkItemExecution=true~ContractComponentProductType=1227</attributeName>
+         <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Setting up your product~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -113,15 +121,15 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>LoanDeposit|ng-component=LoanDepositComponent~ProceduralStepName=Debit Order Details~ZOrder=180</attributeName>
+         <attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Debit Order Details~ZOrder=210</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>LoanRepayment|ng-component=DebiCheckWidgetComponent~ProceduralStepName=DebiCheck debit order setup~ZOrder=300</attributeName>
+         <attributeName>LoanRepayment|ng-component=DebiCheckWidgetComponent~ProceduralStepName=DebiCheck debit order setup~ZOrder=180</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>BeneficiaryNomination|ng-component=NominationYourBeneficiaryComponent~ProceduralStepName=Nomination Your Beneficiary~ZOrder=170</attributeName>
+         <attributeName>BeneficiaryNomination|ng-component=NominateYourBeneficiaryComponent~ProceduralStepName=Nominate Your Beneficiary~ZOrder=170</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -144,7 +152,6 @@
          <attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
 
    <!--ActivateProductsGatherEvidence-->
    <productAttributeGroup>
@@ -363,7 +370,7 @@
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subFPTermsAndConditions|ContractComponentProductType=1389</attributeName>
+         <attributeName>subNedbankInsuranceFuneralCoverTermsAndConditions|ContractComponentProductType=1155</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -450,7 +457,7 @@
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subTP|ContractComponentProductType=1389</attributeName>
+         <attributeName>XXX</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -549,22 +556,22 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Intent1</attributeName>
-         <value>classname=XXXX</value>
+         <value>classname=za.co.nb.offermanagement.funeralplan.decisioning.Intent1CODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_CreditLead</attributeName>
-         <value>classname=XXXX</value>
+         <value>classname=za.co.nb.offermanagement.funeralplan.decisioning.CreditLeadCODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_CreditOffer</attributeName>
-         <value>classname=XXXX</value>
+         <value>classname=za.co.nb.offermanagement.funeralplan.decisioning.CreditOfferCODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_ProductOffer</attributeName>
-         <value>classname=XXXX</value>
+         <value>classname=za.co.nb.offermanagement.funeralplan.decisioning.ProductOfferCODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -579,12 +586,12 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>PricingPlanHandler_GenerateOffer</attributeName>
-         <value>classname=XXXX</value>
+         <value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Recalculate</attributeName>
-         <value>classname=XXXX</value>
+         <value>classname=za.co.nb.offermanagement.funeralplan.decisioning.RecalcCODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -756,6 +763,29 @@
          <value>EMAILSMS</value>
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeIntentSequence</attributeName>
+         <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+         <value>GenerateApplicationOfferProposals|GenerateOfferGatherClientDetails</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+      </productAttributes>
+   </productAttributeGroup>
 
    <!--Offer Configuration-->
    <productAttributeGroup>
@@ -881,6 +911,16 @@
       <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
    </productAttributeGroup>
 
-   <!-- Add features here -->
+   <!--Features-->
+   <features>
+      <featureIdentifier>1332</featureIdentifier>
+      <name>Payments Mandate</name>
+      <mandatory>false</mandatory>
+      <preSelected>false</preSelected>
+      <shortDescription>This feature represents the Payment mandate given by the client (debicheck)</shortDescription>
+      <description>Detailed description of feature</description>
+      <featureType>BoltOn</featureType>
+      <referenceProductID>-1</referenceProductID>
+   </features>
 
 </product>
