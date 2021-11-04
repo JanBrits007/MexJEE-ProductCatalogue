@@ -1,7 +1,7 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1155</productIdentifier>
    <name>Base Funeral Plan Specification</name>
-   <shortDescription>Base Transactional Specification</shortDescription>
+   <shortDescription>Base Funeral Plan Specification</shortDescription>
 
    <!--GenerateOfferVerifyEligibility-->
    <productAttributeGroup>
@@ -87,7 +87,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryFuneralPlanProductComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
+         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryFuneralPlanComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -121,7 +121,11 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Debit Order Details~ZOrder=210</attributeName>
+         <attributeName>DebitOrderSetup|ng-component=DebitOrderSetupWidgetComponent~ProceduralStepName=Debit Order Details~child-ng-components=accountPicker~child-ng-components=child-ng-components=dayPicker~subHeaderText=Confirm your debit order details~ZOrder=220</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Legacy Debit Order Details~ZOrder=210</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -278,7 +282,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
+         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|INSURANCE|Policy</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -305,7 +309,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+         <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|INSURANCE|Onboarding</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -332,7 +336,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|INSURANCE|System Enquiries</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -457,7 +461,7 @@
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>XXX</attributeName>
+         <attributeName>subNedbankInsuranceFuneralCover|ContractComponentProductType=1155</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -581,7 +585,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Intent4</attributeName>
-         <value>classname=XXXX</value>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.forex.decisioning.Intent4CODHandler</value> <!--just using the forex one for now to get past the screen-->
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -812,22 +816,17 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>productSystem</attributeName>
-         <value>DAM</value>
+         <value>BANCS</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>spikeProductID</attributeName>
-         <value>1389</value>
+         <value>1155</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>productType</attributeName>
-         <value>CA</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>productTargetType</attributeName>
-         <value>CA</value>
+         <value>FuneralPlan</value>
       </productAttributes>
       <productAttributes>
          <attributeType>boolean</attributeType>
@@ -843,36 +842,6 @@
          <attributeType>int</attributeType>
          <attributeName>digitalDcar</attributeName>
          <value>51911</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>mdmAdminFieldType</attributeName>
-         <value>1004</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>mdmSubProductCode</attributeName>
-         <value>2051</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>mdmAdminSystemType</attributeName>
-         <value>1001</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>mdmAccountRoleType</attributeName>
-         <value>1046</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>productCategory</attributeName>
-         <value>00001</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>productSubCategory</attributeName>
-         <value>2</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -893,16 +862,6 @@
          <attributeType>string</attributeType>
          <attributeName>welcomeDocumentTemplateLocked</attributeName>
          <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>flag</attributeType>
-         <attributeName>ProvisioningPhase</attributeName>
-         <value>preVerificationProvisioning</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>noFundsAlertIndicator</attributeName>
-         <value>1</value>
       </productAttributes>
    </productAttributeGroup>
 
