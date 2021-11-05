@@ -131,24 +131,29 @@
    </productAttributeGroup>
 
    <!-- Intent sequence mapping -->
-  <productAttributeGroup>
-		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
-    <productAttributes>
-        <attributeType>string</attributeType>
-        <attributeName>frontOfficeIntentSequence</attributeName>
-        <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
-    </productAttributes>
-    <productAttributes>
-        <attributeType>string</attributeType>
-        <attributeName>breadcrumbSteps</attributeName>
-        <value>Authenticate|Product Setup|About You|Customise|Finishing up</value>
-    </productAttributes>
-    <productAttributes>
-        <attributeType>string</attributeType>
-        <attributeName>GNBAIntentToActivityMapping</attributeName>
-        <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
-    </productAttributes>
-  </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeIntentSequence</attributeName>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Authenticate|Product Setup|About You|Customise|Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>AlternateOfferWorkItemTemplate</attributeName>
+         <value>GenerateOffer</value>
+      </productAttributes>
+   </productAttributeGroup>
 
    <!--Provisioning Configuration-->
    <productAttributeGroup action="overwrite">
@@ -372,11 +377,6 @@
          <attributeType>int</attributeType>
          <attributeName>staffServiceFeeFormula</attributeName>
          <value>46</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>flag</attributeType>
-         <attributeName>ProvisioningPhase</attributeName>
-         <value>preVerificationProvisioning</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>

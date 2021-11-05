@@ -324,6 +324,11 @@
         <attributeName>GNBAIntentToActivityMapping</attributeName>
         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
     </productAttributes>
+    <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>AlternateOfferWorkItemTemplate</attributeName>
+        <value>GenerateOffer</value>
+    </productAttributes>
 	</productAttributeGroup>
 
   <productAttributeGroup action="overwrite">
@@ -359,7 +364,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Intent3</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.v3.CreditCardFinalAssessmentCODHandler</value>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.v3.RRBFinalAssessmentCODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -458,7 +463,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>baseCBOActivityList</attributeName>
-         <value>ConfigureArrangement|CBOFinalizeCase</value>
+         <value>CreditDecisionDetermineOffer|ConfigureArrangement|CBOFinalizeCase</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -479,6 +484,16 @@
          <attributeType>int</attributeType>
          <attributeName>CaseActivityPriority_CBOFinalizeCase</attributeName>
          <value>0|Weighting=0</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>CaseActivityTeamName_CreditDecisionDetermineOffer</attributeName>
+        <value>CreditDecisionDetermineOfferTeam|Weighting=0</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>int</attributeType>
+        <attributeName>CaseActivityPriority_CreditDecisionDetermineOffer</attributeName>
+        <value>0|Weighting=0</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -617,6 +632,11 @@
          <attributeType>string</attributeType>
          <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementProductContractFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_PresentOffer</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFinancialSummaryFilter</value>
       </productAttributes>
    </productAttributeGroup>
 

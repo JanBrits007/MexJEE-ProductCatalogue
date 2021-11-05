@@ -210,7 +210,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryCreditCardComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
+			<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryCreditCardComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -380,19 +380,16 @@
 			<attributeName>BureauCheckConsentCard</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-
-	<!--Document Configuration-->
 	<productAttributeGroup>
-		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+		<attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
 		<productAttributes>
-			<attributeType>DocumentDescription</attributeType>
+			<attributeType>Evidence</attributeType>
 			<attributeName>Certificate of Loss of Nationality|N/A|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|Certificate of Loss of Nationality</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>WetSign</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>bool</valueUnit>
 		</productAttributes>
 	</productAttributeGroup>
+	<!--Document Configuration-->
 	<productAttributeGroup>
 		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
 		<productAttributes>
@@ -766,6 +763,14 @@
 			<attributeType>string</attributeType>
 			<attributeName>InitialiseCaseRuleHandlers</attributeName>
 			<value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.sales.InitialiseBusinessCaseSalesTracking</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>PartyConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredDataFilter_GatherEvidence</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.PartyLONFilter</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>

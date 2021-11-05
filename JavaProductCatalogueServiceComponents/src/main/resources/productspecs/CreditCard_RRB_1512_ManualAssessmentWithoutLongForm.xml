@@ -1,0 +1,41 @@
+<product inheritFromFiles="CreditCard_RRB_1512" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+	<productIdentifier>1512</productIdentifier>
+	<name>Professional Credit Card</name>
+	<shortDescription>(CreditCard_RRB_1512_ManualAssessmentWithoutLongForm)</shortDescription>
+
+	<!--AppealWithoutLongForm-->
+	<productAttributeGroup>
+        <attributeGroupName>productInformationRequirement_AppealWithoutLongForm</attributeGroupName>
+        <productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Submit an appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~HideProceduralStep=true~includeAppealReasons=true~includeAppealMotivation=true~includeAdditionalPaperworkSelection=true~appealsType=affordabilityAppeal</attributeName>
+		</productAttributes>
+    </productAttributeGroup>
+
+	<!--ActivateProductsGatherProductDetails-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+	</productAttributeGroup>
+
+	<!--ActivateProductsPresentDocuments-->
+	<productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+    </productAttributeGroup>
+
+	<!--Case and Process Configuration-->
+	<productAttributeGroup inheritFromFiles="BaseProduct_RRB_ManualAssessmentWithoutLongForm">
+		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+	</productAttributeGroup>
+
+	<features>
+      <featureIdentifier>4387</featureIdentifier>
+      <name>Amex Multi App Cheque/Credit Card Plastic Card</name>
+      <mandatory>true</mandatory>
+      <preSelected>true</preSelected>
+
+      <featureAttributeGroup action="overwrite">
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+      </featureAttributeGroup>
+    </features>
+
+</product>

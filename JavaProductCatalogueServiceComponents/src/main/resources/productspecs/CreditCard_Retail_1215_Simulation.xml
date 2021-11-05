@@ -1,7 +1,7 @@
 <product inheritFromFiles="CreditCard_Retail_1215" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1215</productIdentifier>
 	<name>Small Business Credit Card</name>
-	<shortDescription>(CreditCard_Retail_1215) Small Business Credit Card</shortDescription>
+	<shortDescription>(CreditCard_Retail_1215_Simulation) Small Business Credit Card</shortDescription>
 
 	<!--DeclineWithAppeal-->
 	<productAttributeGroup>
@@ -36,7 +36,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>VAS_1447</attributeName><!--Own Credit Insurance-->
+			<attributeName>VAS_1025</attributeName><!--Funeral Cover-->
 			<value>Optionality=Optional~IsTakenUp=false</value>
 		</productAttributes>
 	</productAttributeGroup>
@@ -143,4 +143,16 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>150000</minValue>
+			<maxValue>99999999</maxValue>
+			<valueUnit>ZAR</valueUnit>
+			<description>earn R150 000 or more.</description>
+		</productAttributes>
+	</productAttributeGroup>
 </product>

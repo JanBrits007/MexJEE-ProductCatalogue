@@ -10,8 +10,8 @@
       <attributeGroupName>RuleHandlers_GenerateOfferVerifyEligibility</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>GNBAPhaseHandler_GenerateOfferVerifyEligibility</attributeName>
-         <value>classname=za.co.nb.onboarding.product.phaserules.handlers.GenerateOfferVerifyEligibility.GenerateOfferVerifyEligibilityRuleHandler.ForexVerifyClientTypeProduct</value>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.ForeignCurrencyEligibilityRules</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -55,7 +55,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryForexComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
+         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryForexComponent~child-ng-components=OfferProductSummaryFcaConsentComponent~child-ng-components=OfferProductSummaryFcaNotificationComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -172,13 +172,12 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!--PresentAlternateOffer-->
+   <!--GenerateRevisedApplicationOfferProposals-->
    <productAttributeGroup>
-      <attributeGroupName>RuleHandlers_PresentAlternateOffer</attributeGroupName>
+      <attributeGroupName>RuleHandlers_GenerateRevisedApplicationOfferProposals</attributeGroupName>
       <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>GNBAPhaseHandler_PresentAlternateOffer</attributeName>
-         <value>RemoteEJB=XXX</value> <!--sets the next intent to execute as FinalizeFrontOfficeInteraction-->
+         <attributeName>GNBAPhaseHandler_GenerateRevisedApplicationOfferProposals</attributeName>
+         <value>classname=PresentAlternateOffer</value> <!--appends "_PresentAlternateOffer" onto spec-->
       </productAttributes>
    </productAttributeGroup>
 
@@ -551,6 +550,11 @@
          <attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
       </productAttributes>
+      <productAttributes>
+         <attributeName>DecisionTree_PresentAlternateOffer</attributeName>
+         <value>classname=forexPresentAlternateOffer</value>
+      </productAttributes>
+
 
    </productAttributeGroup>
    <productAttributeGroup>
@@ -695,7 +699,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>baseCBOActivityList</attributeName>
-         <value>ConfigureArrangement~postVerificationProvisioning|ConfirmAvailableFunds|CBOPresentRevisedOffer~UpToDateOffer|ConfigureArrangement~ArrangementFunding|CBOFinalizeCase</value>
+         <value>ConfigureArrangement~PostEnabled|ConfirmAvailableFunds|CBOPresentRevisedOffer~UpToDateOffer|ConfigureArrangement~ArrangementFunding|CBOFinalizeCase</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
