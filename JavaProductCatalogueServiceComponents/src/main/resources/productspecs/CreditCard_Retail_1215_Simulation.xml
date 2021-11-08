@@ -12,6 +12,9 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<productAttributeGroup inheritFromFiles="CreditCard_Retail_1032_Simulation">
+		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+	</productAttributeGroup>
 
 	<!--Offer Configuration-->
 	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
@@ -140,4 +143,16 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>150000</minValue>
+			<maxValue>99999999</maxValue>
+			<valueUnit>ZAR</valueUnit>
+			<description>earn R150 000 or more.</description>
+		</productAttributes>
+	</productAttributeGroup>
 </product>
