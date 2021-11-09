@@ -3,6 +3,24 @@
 	<name>Professional Bundle</name>
 	<shortDescription>(Transactional_RRB_1021_ManualAssessmentWithoutLongForm)</shortDescription>
 
+    <!--ActivateProductsGatherProductDetails-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>SkipProductDetails|ng-component=SkipProductDetails</attributeName>
+         </productAttributes>
+	</productAttributeGroup>
+
+    <!--ActivateProductsPresentDocuments-->
+	<productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+	  <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>SkipPresentDocuments|ng-component=SkipPresentDocuments</attributeName>
+         </productAttributes>
+    </productAttributeGroup>
+
     <!--Intent sequence mapping-->
 	<productAttributeGroup inheritFromFiles="BaseProduct_RRB_ManualAssessmentWithoutLongForm">
 		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
@@ -20,9 +38,14 @@
             <attributeGroupName>productInformationRequirement_AppealWithoutLongForm</attributeGroupName>
             <featureAttributes>
                 <attributeType>productInformationRequirement</attributeType>
-                <attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Your appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~HideProceduralStep=true~includeAppealReasons=true~includeAppealMotivation=true~includeAdditionalPaperworkSelection=true~appealsType=affordabilityAppeal</attributeName>
+                <attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Submit an appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~HideProceduralStep=true~includeAppealReasons=true~includeAppealMotivation=true~includeAdditionalPaperworkSelection=true~appealsType=affordabilityAppeal</attributeName>
             </featureAttributes>
         </featureAttributeGroup>
+
+        <!--ActivateProductsPresentDocuments-->
+		<featureAttributeGroup action="overwrite">
+			<attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+		</featureAttributeGroup>
 
         <!-- Intent sequence mapping -->
         <featureAttributeGroup action="overwrite">
