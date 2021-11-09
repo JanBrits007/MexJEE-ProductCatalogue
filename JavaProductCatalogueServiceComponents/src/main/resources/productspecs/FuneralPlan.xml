@@ -21,12 +21,17 @@
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
       </productAttributes>
-      <!--this must only be implemented for build your cover-->
+      <!--allowed cover check must only be implemented for build your cover -->
       <!--productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=XXX</value>
       </productAttributes-->
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.MainBankedEligibilityRules</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--VerifyIdentity-->
@@ -121,7 +126,7 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>DebitOrderSetup|ng-component=DebitOrderSetupComponent~ProceduralStepName=Debit Order Details~child-ng-components=accountPicker~child-ng-components=child-ng-components=dayPicker~subHeaderText=Confirm your debit order details~ZOrder=220</attributeName>
+         <attributeName>DebitOrderSetup|ng-component=DebitOrderSetupComponent~ProceduralStepName=Debit Order Details~child-ng-components=NedbankAccountPicker~child-ng-components=child-ng-components=dayPicker~subHeaderText=Confirm your debit order details~ZOrder=220</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -640,6 +645,11 @@
          <attributeName>RequiredDataFilter_All</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FeesProviderHandler</attributeName>
+         <value>${{FuneralPlanFeesProviderHandler}}</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>PartyConfiguration</attributeGroupName>
@@ -802,7 +812,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>OfferSelectionSummaryDetails</attributeName>
-         <value>FuneralPlanProductOfferSelectionSubSection|ng-component=OfferSelectionTransactionalProductComponent~ZOrder=100~isBase=Y~ContractComponentProductType=1001</value>
+         <value>FuneralPlanProductOfferSelectionSubSection|ng-component=OfferSelectionFuneralPlanProductComponent~ZOrder=100~isBase=Y~ContractComponentProductType=1155</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
