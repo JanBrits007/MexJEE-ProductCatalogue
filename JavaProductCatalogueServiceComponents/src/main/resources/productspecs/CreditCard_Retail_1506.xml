@@ -1,22 +1,33 @@
 <product inheritFromFiles="CreditCard_Retail" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-	<productIdentifier>1350</productIdentifier>
-	<name>Savvy Bundle Credit Card</name>
-	<shortDescription>(CreditCard_Retail_1350) This credit card forms part of the Savvy Bundle</shortDescription>
+	<productIdentifier>1506</productIdentifier>
+	<name>NPW Bundle Credit Card</name>
+	<shortDescription>(CreditCard_Retail_1506) NPW Bundle Credit Card</shortDescription>
 
+	<productAttributeGroup action="overwrite">
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>150000</minValue>
+			<maxValue>99999999</maxValue>
+			<valueUnit>ZAR</valueUnit>
+			<description>be R150 000 or more.</description>
+		</productAttributes>
+	</productAttributeGroup>
 	<!--Document Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCard|ContractComponentProductType=1350</attributeName>
+			<attributeName>subCreditCard|ContractComponentProductType=1504</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1350</attributeName>
+			<attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1504</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCardTC|ContractComponentProductType=1350</attributeName>
+			<attributeName>subCreditCardTC|ContractComponentProductType=1504</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -27,80 +38,25 @@
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCredit|ContractComponentProductType=1350</attributeName>
+			<attributeName>subCredit|ContractComponentProductType=1504</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCard|ContractComponentProductType=1350</attributeName>
+			<attributeName>subCreditCard|ContractComponentProductType=1504</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCardTC|ContractComponentProductType=1504</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1350</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-	
-	<!--Case and Process Configuration-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>EligibilityRules</attributeGroupName>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Age</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>18</minValue>
-			<maxValue>999</maxValue>
-			<valueUnit>year</valueUnit>
-			<description>be 18 years or older.</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Income</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>60000</minValue>
-			<maxValue>99999999</maxValue>
-			<valueUnit>ZAR</valueUnit>
-			<description>earn more than R60 000 a year; and</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>NaturalPerson</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>DebitOrderRepaymentRequired</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>CreditApproval</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>NotUnderCreditAdministration</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>SouthAfricanResident</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-			<description> be a South African resident.</description>
+			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1504</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -110,7 +66,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>OfferSelectionSummaryDetails</attributeName>
-			<value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1350</value>
+			<value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1504</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -143,7 +99,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>spikeProductID</attributeName>
-			<value>1350</value>
+			<value>1504</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>int</attributeType>
@@ -181,7 +137,6 @@
 			<value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
 		</productAttributes>
 	</productAttributeGroup>
-
 	<!--1028 - Plastic Card-->
 	<features>
 		<featureIdentifier>1028</featureIdentifier>
@@ -227,7 +182,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>boolean</attributeType>
-			<attributeName>initiateIntent0CheckSavvyBundleExistingAccounts</attributeName>
+			<attributeName>initiateIntent0CheckNPWBundleExistingAccounts</attributeName>
 			<value>true</value>
 		</productAttributes>
 		<productAttributes>
@@ -243,16 +198,6 @@
 		<productAttributes>
 			<attributeType>boolean</attributeType>
 			<attributeName>creditRepaymentScreenBypassCheck</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>ArrangementMandatoryAPOCheck</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>balanceTransferAllowed</attributeName>
 			<value>true</value>
 		</productAttributes>
 	</productAttributeGroup>
