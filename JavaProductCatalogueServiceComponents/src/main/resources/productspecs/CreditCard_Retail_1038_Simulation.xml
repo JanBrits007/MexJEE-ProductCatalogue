@@ -16,6 +16,28 @@
 		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
 	</productAttributeGroup>
 
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Age</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>18</minValue>
+			<maxValue>999</maxValue>
+			<valueUnit>year</valueUnit>
+			<description>be 18 years or older.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>3000</minValue>
+			<maxValue>999999</maxValue>
+			<valueUnit>ZAR</valueUnit>
+			<description>R150 000 per annum or Net Investable Assets of R5 000 000.</description>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--GenerateOfferGatherProductDetails-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>

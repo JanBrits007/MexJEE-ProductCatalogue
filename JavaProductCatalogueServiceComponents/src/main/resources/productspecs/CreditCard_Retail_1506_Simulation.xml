@@ -16,6 +16,28 @@
 		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
 	</productAttributeGroup>
 
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Age</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>18</minValue>
+			<maxValue>999</maxValue>
+			<valueUnit>year</valueUnit>
+			<description>be 18 years or older.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>1500000</minValue>
+			<maxValue>999999</maxValue>
+			<valueUnit>ZAR</valueUnit>
+			<description>EARN A MINIMUM GROSS SALARY OF R1,5m PER ANNUM or Net Investable assets of R5m.</description>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--Offer Configuration-->
 	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
 		<attributeGroupName>VASCrossSellControl</attributeGroupName>
