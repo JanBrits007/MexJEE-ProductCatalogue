@@ -126,15 +126,11 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>DebitOrderSetup|ng-component=DebitOrderSetupComponent~ProceduralStepName=Debit Order Details~child-ng-components=NedbankAccountPicker~child-ng-components=child-ng-components=dayPicker~subHeaderText=Confirm your debit order details~ZOrder=220</attributeName>
+         <attributeName>DebitOrderSetup|ng-component=DebitOrderSetupComponent~ProceduralStepName=Debit Order Details~child-ng-components=NedbankAccountPicker~child-ng-components=dayPicker~subHeaderText=Confirm your debit order details~ZOrder=220</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Legacy Debit Order Details~ZOrder=210</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>LoanRepayment|ng-component=DebiCheckWidgetComponent~ProceduralStepName=DebiCheck debit order setup~ZOrder=180</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -287,7 +283,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|INSURANCE|Policy</attributeName>
+         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -314,7 +310,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|INSURANCE|Onboarding</attributeName>
+         <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -341,7 +337,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|INSURANCE|System Enquiries</attributeName>
+         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -816,6 +812,39 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
+		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1019~Transactional_Retail_1019</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1354~Transactional_Retail_1354</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1357~1357</value><!--this is done since there is actually no substitution needed for this product (savvy bundle)-->
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1389~Transactional_Retail_1389</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1474~Transactional_Retail_1474</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1155~FuneralPlan</value>
+		</productAttributes>
+	</productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>VASCrossSellControl</attributeGroupName>
       <!-- Add cross sell controll here -->
    </productAttributeGroup>
@@ -871,7 +900,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>welcomeLetterTaxonomy</attributeName>
-         <value>AGREEMENTSDEPOSIT|Welcome Letter|Welcome Letter</value>
+         <value>AGREEMENTSCREDITCARD|Welcome Letter|Welcome Letter</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -895,6 +924,45 @@
       <description>Detailed description of feature</description>
       <featureType>BoltOn</featureType>
       <referenceProductID>-1</referenceProductID>
+
+      <!--ActivateProductsGatherProductDetails-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>LoanRepayment|ng-component=DebiCheckWidgetComponent~ProceduralStepName=DebiCheck debit order setup~ZOrder=180</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--FinalizeFrontOfficeInteraction-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YoureDone|ng-component=WhatIsNextComponent~ProceduralStepName=You're all set!~child-ng-components=DebiCheckStatusComponent~HideProceduralStep=true~ZOrder=50</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <featureAttributeGroup>
+         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>baseCBOActivityList</attributeName>
+            <value>ManageMandateDependency</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CaseActivityTeamName_ManageMandateDependency</attributeName>
+            <value>System|Weighting=0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CaseActivityPriority_ManageMandateDependency</attributeName>
+            <value>0|Weighting=0</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+
    </features>
 
 </product>
