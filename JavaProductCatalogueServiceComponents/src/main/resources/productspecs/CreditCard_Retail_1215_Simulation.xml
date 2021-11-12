@@ -41,28 +41,6 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>EligibilityRules</attributeGroupName>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Age</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>18</minValue>
-			<maxValue>999</maxValue>
-			<valueUnit>year</valueUnit>
-			<description>be 18 years or older.</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Income</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>150000</minValue>
-			<maxValue>999999</maxValue>
-			<valueUnit>ZAR</valueUnit>
-			<description>must be R150 000 or more.</description>
-		</productAttributes>
-	</productAttributeGroup>
-
 	<!--Case and Process Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>CaseConfiguration</attributeGroupName>
@@ -167,6 +145,15 @@
 
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Age</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>18</minValue>
+			<maxValue>999</maxValue>
+			<valueUnit>year</valueUnit>
+			<description>be 18 years or older.</description>
+		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
 			<attributeName>Income</attributeName>
