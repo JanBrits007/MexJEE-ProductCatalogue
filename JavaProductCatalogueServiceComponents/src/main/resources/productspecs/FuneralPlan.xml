@@ -607,11 +607,11 @@
          <attributeName>CODHandler_FinancialDetails</attributeName>
          <value>classname=XXXX</value>
       </productAttributes>
-      <!--productAttributes>
+      <productAttributes>
          <attributeType>Generic</attributeType>
          <attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
-      </productAttributes-->
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
@@ -666,7 +666,11 @@
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
-
+      <productAttributes>
+         <attributeType>enum</attributeType>
+         <attributeName>riskAnalysisMechanismIntent0</attributeName>
+         <value>automated</value>
+      </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
