@@ -1,19 +1,8 @@
-<product inheritFromFiles="CreditCard_Retail" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+<product inheritFromFiles="CreditCard_SBS" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1504</productIdentifier>
 	<name>Small Business Bundle Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1504) Small Business Bundle Credit Card</shortDescription>
 
-	<productAttributeGroup action="overwrite">
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Income</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>150000</minValue>
-			<maxValue>99999999</maxValue>
-			<valueUnit>ZAR</valueUnit>
-			<description>be R150 000 or more.</description>
-		</productAttributes>
-	</productAttributeGroup>
 	<!--Document Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
@@ -137,6 +126,7 @@
 			<value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
 		</productAttributes>
 	</productAttributeGroup>
+
 	<!--1028 - Plastic Card-->
 	<features>
 		<featureIdentifier>1028</featureIdentifier>
@@ -151,61 +141,5 @@
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
-
-	<!--Bundle Product -->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>DecisioningControl</attributeGroupName>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>enhanceActivitiesWithTeamAllocations</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>checkStaffOnMDM</attributeName>
-			<value>false</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>executeCardBusinessRuleToPresentDocuments</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>statusSetting</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>executeArrangementCrossSellRules</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>initiateIntent0CheckSBSBundleExistingAccounts</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>ComponentSupportsDeclineReasons</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>performFICACheck</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>creditRepaymentScreenBypassCheck</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>ArrangementMandatoryAPOCheck</attributeName>
-			<value>true</value>
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
 
 </product>
