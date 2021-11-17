@@ -3,17 +3,6 @@
 	<name>NPW Bundle Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1506) NPW Bundle Credit Card</shortDescription>
 
-	<productAttributeGroup action="overwrite">
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Income</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>150000</minValue>
-			<maxValue>99999999</maxValue>
-			<valueUnit>ZAR</valueUnit>
-			<description>be R150 000 or more.</description>
-		</productAttributes>
-	</productAttributeGroup>
 	<!--Document Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
@@ -54,10 +43,6 @@
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1504</attributeName>
-		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Offer Configuration-->
@@ -199,6 +184,19 @@
 			<attributeType>boolean</attributeType>
 			<attributeName>creditRepaymentScreenBypassCheck</attributeName>
 			<value>true</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--ActivateProductsGatherProductDetails-->
+	<productAttributeGroup  action="overwrite">
+		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=210</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
