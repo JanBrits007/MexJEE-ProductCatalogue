@@ -46,7 +46,7 @@
 	</productAttributeGroup>
 
 	<!--Offer Configuration-->
-	<productAttributeGroup action="overwrite">
+	<productAttributeGroup action="overwrite"><!--Remove Cross Sell & Up Sell, Remove Add bank Account-->
 		<attributeGroupName>PresentOfferSelection</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -54,6 +54,10 @@
 			<value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1504</value>
 		</productAttributes>
 	</productAttributeGroup>
+	<productAttributeGroup action="overwrite"><!--Remove Cross Sell & Up Sell-->
+		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+	</productAttributeGroup>
+
 
 	<!--Provisioning Configuration-->
 	<productAttributeGroup action="overwrite">
@@ -188,7 +192,7 @@
 	</productAttributeGroup>
 
 	<!--ActivateProductsGatherProductDetails-->
-	<productAttributeGroup  action="overwrite">
+	<productAttributeGroup  action="overwrite"> <!--Removed CMS, Removed FAIS, Removed Going Digital, Remove See Something you like, Remove Compare these options-->
 		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
