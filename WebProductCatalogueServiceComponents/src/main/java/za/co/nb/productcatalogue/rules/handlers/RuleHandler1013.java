@@ -1,8 +1,5 @@
 package za.co.nb.productcatalogue.rules.handlers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -15,7 +12,7 @@ import za.co.nednet.it.contracts.data.ent.party.v3.PersonDetailBObjType;
 
 public class RuleHandler1013 extends BaseProductSpecificationRuleHandler {
 
-	private final Log mLog = LogFactory.getLog(getClass());
+	private static final Log mLog = LogFactory.getLog(BaseProductSpecificationRuleHandler.class);
 	
 	private boolean isMainApplicantAPerson(Client360ViewResBObjType client360) {
 		mLog.debug("Trace 1");

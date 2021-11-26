@@ -3,7 +3,6 @@ package za.co.nb.productcatalogue.rules.handlers;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import javax.rmi.PortableRemoteObject;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -14,7 +13,7 @@ import za.co.nb.productcatalogue.exceptions.BusinessRuleExecutionException;
 
 public class RuleHandler1210 extends BaseProductSpecificationRuleHandler {
 
-	private final Log mLog = LogFactory.getLog(getClass());
+	private static final Log mLog = LogFactory.getLog(RuleHandler1210.class);
 
     private Object lookupObject(String pJNDI) throws NamingException {
         mLog.debug("Trace 1");

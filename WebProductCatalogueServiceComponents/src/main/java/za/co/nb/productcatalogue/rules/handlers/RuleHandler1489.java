@@ -14,8 +14,8 @@ import java.util.List;
 
 public class RuleHandler1489 extends BaseProductSpecificationRuleHandler {
 
-    private final Log mLog = LogFactory.getLog(getClass());
-    private static final  ArrangementPartyInformationServiceClient partyInformationServiceClient = new ArrangementPartyInformationServiceClient();
+    private static final Log mLog = LogFactory.getLog(RuleHandler1489.class);
+    private static final ArrangementPartyInformationServiceClient partyInformationServiceClient = new ArrangementPartyInformationServiceClient();
 
     @Override
     public String executeBusinessRules(String productIDToSubstitute, String caseID) throws BusinessRuleExecutionException {

@@ -19,7 +19,7 @@ import java.io.StringWriter;
 
 @Path("/productandservicedevelopment/productrecommendations/v1")
 public class ProductRecommendationResource {
-    private final Log mLog = LogFactory.getLog(getClass());
+    private static final Log mLog = LogFactory.getLog(ProductRecommendationResource.class);
 
     @Inject
     ProductRecommendationService productRecommendationService;

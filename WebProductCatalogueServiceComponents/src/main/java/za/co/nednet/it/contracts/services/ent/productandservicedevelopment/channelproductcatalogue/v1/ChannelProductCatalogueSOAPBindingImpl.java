@@ -14,7 +14,6 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import za.co.nb.productcatalogue.ejb.ProductSpecificationsEJB;
-import za.co.nb.productcatalogue.ejb.ProductSpecificationsEJB;
 
 
 @Stateless
@@ -25,7 +24,7 @@ public class ChannelProductCatalogueSOAPBindingImpl {
 	@EJB
 	private ProductSpecificationsEJB productSpecificationsBean;
 
-	private final Log mLog = LogFactory.getLog(getClass());
+	private static final Log mLog = LogFactory.getLog(ChannelProductCatalogueSOAPBindingImpl.class);
 
 	public void retrieveProducts(String productCategoryID, String productFamilyID, String productLinesID, Holder<ResultSetType> resultSet, Holder<ProductCatalogueType> productCatalogue) {
 		return;
