@@ -186,7 +186,13 @@
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Evidence</attributeType>
-         <attributeName>We need proof of your identity in the form of: South African bar-coded identity card or document, or passport and work permit.</attributeName>
+         <attributeName>We need proof of your identity (valid South African ID/document or passport with valid permit)</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>To fund the Foreign currency account, we need proof of source funds (if you don't have a valid SA ID)</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>string</valueUnit>
       </productAttributes>
@@ -436,7 +442,14 @@
          <minValue>18</minValue>
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>be 18 years or older</description>
+         <description>be 18 or older</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Account</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+         <description>a Nedbank account. If you don't have one, we'll help you open one</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
@@ -612,7 +625,7 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
-         <value>5</value>
+         <value>5 to 10</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
