@@ -1,0 +1,204 @@
+<product inheritFromFiles="CreditCard_Retail_1506" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+	<productIdentifier>1506</productIdentifier>
+	<name>NPW Bundle Credit Card</name>
+	<shortDescription>(CreditCard_Retail_1506_Simulation) NPW Bundle Credit Card</shortDescription>
+
+	<!--DeclineWithAppeal-->
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_DeclineWithAppeal</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Your offer</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<productAttributeGroup inheritFromFiles="CreditCard_Retail_1032_Simulation">
+		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+	</productAttributeGroup>
+
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Age</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>18</minValue>
+			<maxValue>999</maxValue>
+			<valueUnit>year</valueUnit>
+			<description>be 18 years or older.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>1500000</minValue>
+			<maxValue>999999</maxValue>
+			<valueUnit>ZAR</valueUnit>
+			<description>EARN A MINIMUM GROSS SALARY OF R1,5m PER ANNUM or Net Investable assets of R5m.</description>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Offer Configuration-->
+	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
+		<attributeGroupName>VASCrossSellControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1333</attributeName><!--Greenbacks Shop Card-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1099</attributeName><!--Credit Card Insurance-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1025</attributeName><!--Funeral Cover-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Case and Process Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>CaseConfiguration</attributeGroupName>
+		<!--
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CDE_SimulationETE</attributeName>
+			<value>${{CDE_Simulation}}</value>
+		</productAttributes>
+		-->
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODHandler_WebDecisionEngine</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.DecisionEngineCODHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODHandler_Intent1</attributeName>
+			<value>${{CreditCard_Platinum_Intent1CODHandler}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODHandler_FinancialExtendedDetails</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.FinancialExtendedDetailsHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODHandler_AppealWithLongForm</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GenericHandler_AppealWithoutLongForm</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GenericHandler_GenerateOfferTryAgain</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.GenerateOfferTryAgainHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODHandler_CreditOffer</attributeName>
+			<value>${{CreditCard_Platinum_CreditOfferCODHandler}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODHandler_ProductOffer</attributeName>
+			<value>${{CreditCard_Platinum_ProductOfferCODHandler}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODHandler_Intent3</attributeName>
+			<value>${{CreditCard_Platinum_Intent3CODHandler}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODHandler_Intent4</attributeName>
+			<value>${{CreditCard_Platinum_Intent4CODHandler}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>PricingPlanHandler_GenerateOffer</attributeName>
+			<value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODHandler_Recalculate</attributeName>
+			<value>${{CreditCard_Platinum_RecalcCODHandler}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>DataMiningHandler</attributeName>
+			<value>classname=za.co.nb.onboarding.product.datamining.handlers.retail.RetailDataMiningHandler</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Bundle Product -->
+	<productAttributeGroup action="overwrite">
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>initiateIntent0CheckSBSBundleExistingAccounts</attributeName>
+			<value>true</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--GenerateOffer-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryCreditCardComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+</product>

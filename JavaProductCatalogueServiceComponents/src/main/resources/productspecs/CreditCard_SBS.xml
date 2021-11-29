@@ -1,0 +1,194 @@
+<product inheritFromFiles="CreditCard_Retail" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+    <productIdentifier>1002</productIdentifier>
+    <name>Base SBS Credit Card Specification</name>
+    <shortDescription>Base SBS Credit Card Specification</shortDescription>
+
+    <!--VerifyIdentity-->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+        <productAttributes><!--This is only here while whitelisting will move to browse on roll out-->
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>PrepareApplicant|ng-component=GenericProcessStartPageComponent~ZOrder=300~HideProceduralStep=true</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~HideProceduralStep=true</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--GenerateOfferGatherProductDetails-->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=2000</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--DetermineRelatedParties-->
+
+    <!--GenerateOfferGatherClientDetails-->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>NCCDesk|ng-component=NCCDeskWidgetComponent~ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted~ActiveOnInitialWorkItemExecution=true</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=SalaryBankDetails~child-ng-components=ConsentCapture~ZOrder=100</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--FinancialDetails-->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>Yodlee|ng-component=YodleeIntroductionComponent~ProceduralStepName=Yodlee~ZOrder=90~YodleePortalURL~HideProceduralStep=true</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=80~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=70</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--GenerateApplicationOfferProposals-->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true~ContractComponentProductType=1032</attributeName>
+        </productAttributes>
+
+    </productAttributeGroup>
+
+    <!--GenerateRevisedApplicationOfferProposals-->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>productInformationRequirement_GenerateRevisedApplicationOfferProposals</attributeGroupName>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true~ContractComponentProductType=1032</attributeName>
+        </productAttributes>
+
+    </productAttributeGroup>
+
+    <!--GenerateOffer-->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=See something you like?~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryCreditCardComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
+        </productAttributes>
+
+    </productAttributeGroup>
+
+    <!--ActivateProductsGatherClientDetails-->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
+        </productAttributes>
+
+    </productAttributeGroup>
+
+    <!--[Inheritance] - Add features here -->
+
+</product>
