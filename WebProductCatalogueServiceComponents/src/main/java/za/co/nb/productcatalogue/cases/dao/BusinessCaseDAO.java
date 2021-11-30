@@ -20,11 +20,11 @@ import java.util.Map;
 
 public class BusinessCaseDAO {
 
-	private final Log mLog = LogFactory.getLog(getClass());
+	private static final Log mLog = LogFactory.getLog(BusinessCaseDAO.class);
 	private static final boolean useDBCache = true;
 	private static final String JNDI = "jdbc/productCatalogue";
 	
-	private static Map<String, BusinessCaseHeader> businessCaseCache = new HashMap<String, BusinessCaseHeader>();
+	private static final Map<String, BusinessCaseHeader> businessCaseCache = new HashMap<>();
 	
 
 	public BusinessCaseHeader retrieveBusinessCase(String caseID) {

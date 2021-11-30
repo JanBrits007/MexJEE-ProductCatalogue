@@ -14,7 +14,6 @@ import za.co.nb.productcatalogue.ejb.substitution.Subnet;
 import za.co.nb.productcatalogue.ejb.substitution.Substitution;
 import za.co.nb.productcatalogue.ejb.util.ProductTypeLoader;
 import za.co.nb.productcatalogue.ejb.util.RawSpecString;
-import za.co.nb.productcatalogue.exception.InvalidAttributeException;
 import za.co.nb.productcatalogue.exception.InvalidAttributeGroupException;
 import za.co.nb.productcatalogue.util.ProductSpecificationSubstitutionUtil;
 import za.co.nb.productcatalogue.util.ProductSpecificationUtil;
@@ -50,13 +49,13 @@ import java.util.List;
 @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
 public class ProductSpecificationsEJB implements ProductSpecificationsServiceRemoteInterface {
 
-    private final Log mLog = LogFactory.getLog(getClass());
+    private static final Log mLog = LogFactory.getLog(ProductSpecificationsEJB.class);
 
     private static final boolean ENABLE_XSD_VALIDATION = false;
-    private static final String DYNAMIC_STAFF_MARkER = "${{dynamicStaffList}}";
+    private static final String DYNAMIC_STAFF_MARKER = "${{dynamicStaffList}}";
 
     private IJuristicProductSpecifications juristicProductSpecificationsRemote;
-    private ProductTypeLoader productTypeInheritanceLoader = new ProductTypeLoader();
+    private final ProductTypeLoader productTypeInheritanceLoader = new ProductTypeLoader();
     private final ProductSpecificationUtil specUtil = new ProductSpecificationUtil();
 
     @EJB
@@ -564,7 +563,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                             .forEach(productAttributes -> {
 
                               if(productAttributes.getAttributeName().equals( "SubstituteForWhiteListedNBNumbers") &&
-                                      productAttributes.getValue().contains(DYNAMIC_STAFF_MARkER)){
+                                      productAttributes.getValue().contains(DYNAMIC_STAFF_MARKER)){
 
                                   String staffList = dynamicWhitelistBean.getStaffList(productId);
                                     mLog.debug("staffList:" + staffList);
@@ -580,7 +579,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
         productType.getProductAttributeGroup().forEach(productAttributeGroupType ->
             productAttributeGroupType.getProductAttributes().forEach(productAttributesType -> {
-                if(productAttributesType.getValue() != null && !productAttributesType.getValue().contains(DYNAMIC_STAFF_MARkER)) {
+                if(productAttributesType.getValue() != null && !productAttributesType.getValue().contains(DYNAMIC_STAFF_MARKER)) {
                     if (productAttributesType.getValue().contains("${{")) {
 
                         mLog.debug("find [productAttributesType] dynamic value:" + productAttributesType.getValue());

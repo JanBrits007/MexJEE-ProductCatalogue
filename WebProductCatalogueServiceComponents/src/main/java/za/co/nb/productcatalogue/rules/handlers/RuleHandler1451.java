@@ -12,7 +12,7 @@ import za.co.nb.productcatalogue.exceptions.BusinessRuleExecutionException;
 
 public class RuleHandler1451 extends BaseProductSpecificationRuleHandler {
 
-	private final Log mLog = LogFactory.getLog(getClass());
+	private static final Log mLog = LogFactory.getLog(RuleHandler1451.class);
 
     private Object lookupObject(String pJNDI) throws NamingException {
         mLog.debug("Trace 1");

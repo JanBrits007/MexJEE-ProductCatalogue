@@ -15,9 +15,9 @@ import java.util.regex.Pattern;
 
 public abstract class AbstractRate {
 
-    private final Log mLog = LogFactory.getLog(getClass());
+    private static final Log mLog = LogFactory.getLog(AbstractRate.class);
 
-    private static List<String> productIDs = new ArrayList<String>();
+    private static final List<String> productIDs = new ArrayList<>();
 
     static {
         productIDs.add("1126");

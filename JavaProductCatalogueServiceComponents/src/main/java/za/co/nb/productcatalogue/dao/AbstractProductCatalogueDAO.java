@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 
 public abstract class AbstractProductCatalogueDAO extends AbstractRate {
 
-    private final Log mLog = LogFactory.getLog(getClass());
+    private static final Log mLog = LogFactory.getLog(AbstractProductCatalogueDAO.class);
 
 
 

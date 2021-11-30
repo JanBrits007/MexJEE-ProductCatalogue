@@ -3,6 +3,32 @@
    <name>Nedbank Insurance Funeral Cover Individual R10k</name>
    <shortDescription>(FuneralPlan_4227) Nedbank Insurance Funeral Cover Individual R10k</shortDescription>
 
+   <!--Document Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subNedbankInsuranceFuneralCoverTermsAndConditions|ContractComponentProductType=4227</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subNedbankInsuranceFuneralCover|ContractComponentProductType=4227</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--Offer Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>PresentOfferSelection</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferSelectionSummaryDetails</attributeName>
+         <value>FuneralPlanProductOfferSelectionSubSection|ng-component=OfferSelectionFuneralPlanProductComponent~ZOrder=100~isBase=Y~ContractComponentProductType=4227</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--Provisioning Configuration-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>coreProvisioningParameters</attributeGroupName>

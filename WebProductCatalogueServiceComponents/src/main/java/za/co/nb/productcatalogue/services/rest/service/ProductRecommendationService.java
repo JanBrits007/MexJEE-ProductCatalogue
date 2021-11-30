@@ -24,7 +24,7 @@ public class ProductRecommendationService {
     private ProductRecommendationSetListType recommendationSetList;
 
     private ProductCataloguesDAO mProductCataloguesDAO;
-    private final Log mLog = LogFactory.getLog(getClass());
+    private static final Log mLog = LogFactory.getLog(ProductRecommendationService.class);
 
     @Inject
     ProductCatalogueCache productCatalogueCache;
