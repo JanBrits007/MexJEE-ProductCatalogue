@@ -18,9 +18,9 @@ import java.util.Map;
 
 public class ProductSpecificationsJSONServiceDAO {
 
-	private final Log mLog = LogFactory.getLog(getClass());
+	private static final Log mLog = LogFactory.getLog(ProductSpecificationsJSONServiceDAO.class);
 	private ProductSpecificationsServiceDAO mProductSpecificationsDAO;
-	private static Map<String, String> ptJSONStringCache = new HashMap<String, String>();
+	private static final Map<String, String> ptJSONStringCache = new HashMap<>();
 	private IJuristicProductSpecifications juristicProductSpecificationsRemote;
 
 	private ProductSpecificationsServiceDAO getProductSpecificationsDAO() {

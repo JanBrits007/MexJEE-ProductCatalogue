@@ -25,7 +25,7 @@ import javax.xml.parsers.ParserConfigurationException;
 public abstract class BaseProductSpecificationRuleHandler {
 
 	private static final String MAIN_APPLICANT_ROLE_TYPE = "1041";
-	private final Log mLog = LogFactory.getLog(getClass());
+	private static final Log mLog = LogFactory.getLog(BaseProductSpecificationRuleHandler.class);
 	private static final Client360InformationServiceClient client360Client = new Client360InformationServiceClient();
 	
 	protected Client360ViewResBObjType retrieveBasicNCMClient360ByArrangementIDs(List<String> arrangementIDs) throws ServiceIntegrationException {

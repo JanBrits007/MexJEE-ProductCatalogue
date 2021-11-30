@@ -28,7 +28,7 @@ import java.util.Date;
 @Stateless
 public class ProductCatalogueResource {
 
-	private final Log mLog = LogFactory.getLog(getClass());
+	private static final Log mLog = LogFactory.getLog(ProductCatalogueResource.class);
 
 	@Inject
     ProductCatalogueCache productCatalogueCache;
