@@ -1,7 +1,7 @@
 <product inheritFromFiles="CreditCard_Retail_1050" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1050</productIdentifier>
 	<name>HUB Card</name>
-	<shortDescription>(CreditCard_Retail_1050_Simulation) HUB Card</shortDescription>
+	<shortDescription>(HUB Card_1050_Simulation)</shortDescription>
 
 	<!--DeclineWithAppeal-->
 	<productAttributeGroup>
@@ -12,8 +12,19 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-	<productAttributeGroup inheritFromFiles="CreditCard_Retail_1032_Simulation">
-		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+
+	<!--GenerateOfferGatherProductDetails-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=2500</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>SalesMilestone|ng-component=HubEmployeeDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=HUB details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+
 	</productAttributeGroup>
 
 	<!--Offer Configuration-->
@@ -21,22 +32,7 @@
 		<attributeGroupName>VASCrossSellControl</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>VAS_1454</attributeName><!--Greenbacks-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1333</attributeName><!--Greenbacks Shop Card-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1099</attributeName><!--Credit Card Insurance-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1025</attributeName><!--Funeral Cover-->
+			<attributeName>VAS_9992</attributeName><!--HUB Club Rewards-->
 			<value>Optionality=Optional~IsTakenUp=false</value>
 		</productAttributes>
 	</productAttributeGroup>
@@ -143,16 +139,18 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+
+
 	<productAttributeGroup action="overwrite">
-		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<attributeGroupName>CreditDetails</attributeGroupName>
 		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Income</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>150000</minValue>
-			<maxValue>99999999</maxValue>
-			<valueUnit>ZAR</valueUnit>
-			<description>earn R150 000 or more.</description>
+			<attributeName>minimumCreditAvaliableZAR</attributeName>
+			<value>2500</value>
 		</productAttributes>
 	</productAttributeGroup>
+
+
+
+
+
 </product>
