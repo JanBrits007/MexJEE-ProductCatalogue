@@ -68,10 +68,10 @@
 			<attributeType>EligibilityRule</attributeType>
 			<attributeName>Income</attributeName>
 			<isComparable>false</isComparable>
-			<minValue>5000</minValue>
+			<minValue>36000</minValue>
 			<maxValue>99999999</maxValue>
 			<valueUnit>ZAR</valueUnit>
-			<description>earn an income of 36 000 per anim or more.</description>
+			<description>earn an income of 36 000 per annum or more.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -457,17 +457,40 @@
 	<features>
 		<featureIdentifier>9992</featureIdentifier>
 		<name>Hub Club services</name>
-
-		<!--GenerateOffer-->
-		<featureAttributeGroup>
-			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-			<featureAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=HubClubServicesComponent-9992~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-
-		<!-- Case and Process Configuration -->
+		<mandatory>true</mandatory>
+		<preSelected>true</preSelected>
+		<shortDescription>By joining our Greenbacks Rewards Programme you will earn rewards when you use your credit card or one of our other transactional accounts.</shortDescription>
+		<description>Detailed description of feature</description>
+		<featureGrouping>
+			<featureGroupName>Loyalty</featureGroupName>
+			<featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
+		</featureGrouping>
+		<featureType>BoltOn</featureType>
+		<referenceProductID>-1</referenceProductID>
+		<featurePricing>
+			<fee>
+				<type>AdminFee</type>
+				<description>R25 per month</description>
+				<currency>ZAR</currency>
+				<amount>25</amount>
+				<frequency>Monthly</frequency>
+			</fee>
+		</featurePricing>
+		<featureFulfilment>
+			<channel>selfServiceWeb</channel>
+			<fulfilmentType>setting</fulfilmentType>
+			<fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+			<fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+		</featureFulfilment>
+		<featureFulfilment>
+			<channel>staffAssisted</channel>
+			<fulfilmentType>setting</fulfilmentType>
+			<fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+			<fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+		</featureFulfilment>
+		<featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+		<featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+		<featureDisplayPosition>offer</featureDisplayPosition>
 		<featureAttributeGroup>
 			<attributeGroupName>SystemRelated</attributeGroupName>
 			<featureAttributes>
@@ -476,8 +499,6 @@
 				<value>True</value>
 			</featureAttributes>
 		</featureAttributeGroup>
-
-		<!--Provisioning Configuration-->
 		<featureAttributeGroup>
 			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
 			<featureAttributes>
@@ -505,7 +526,17 @@
 				<value>preFICAProvisioning</value>
 			</featureAttributes>
 		</featureAttributeGroup>
-
+		<featureAttributeGroup>
+			<attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+			<featureAttributes>
+				<attributeType>type</attributeType>
+				<attributeName>name</attributeName>
+				<minValue>1</minValue>
+				<maxValue>2</maxValue>
+				<valueUnit>text</valueUnit>
+				<value>some value</value>
+			</featureAttributes>
+		</featureAttributeGroup>
 	</features>
 
 </product>
