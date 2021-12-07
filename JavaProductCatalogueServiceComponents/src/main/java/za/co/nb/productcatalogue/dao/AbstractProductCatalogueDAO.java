@@ -61,7 +61,6 @@ public abstract class AbstractProductCatalogueDAO extends AbstractRate {
 
             mLog.debug("Trace 2.1");
 
-            ;
             byte[] buffer = new byte[1024];
             int length;
 
