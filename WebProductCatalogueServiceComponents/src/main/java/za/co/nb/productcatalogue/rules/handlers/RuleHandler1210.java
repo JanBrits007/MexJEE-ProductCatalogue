@@ -59,7 +59,7 @@ public class RuleHandler1210 extends BaseProductSpecificationRuleHandler {
 		}
 		catch(Exception e) {
 			// Got a problem.
-			e.printStackTrace();
+            mLog.error("", e);
 			
 			return productIDToSubstitute;
 		}
