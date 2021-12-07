@@ -732,7 +732,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             }
 
         } catch (Exception e) {
-            mLog.error"", ""e);
+            mLog.error("", e);
         }
     }
 
