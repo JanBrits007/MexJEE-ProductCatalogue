@@ -92,7 +92,7 @@ public class ProductSpecificationSubstitutionUtil {
             return productIDToSubstitute;
         } catch(Exception e) {
             mLog.debug("Trace 6");
-        	e.printStackTrace();
+            mLog.error(e);
 
         	// Got a problem. Fallback to no substitution.
 			return productSpecificationID;
@@ -130,7 +130,7 @@ public class ProductSpecificationSubstitutionUtil {
             	productSubstitutionID = ruleHandler.executeBusinessRules(productSpecificationID, caseID);
             }
             catch(Exception e) {
-            	e.printStackTrace();
+                mLog.error(e);
             	
             	// Something went wrong. Don't break JO. Fallback to their product ID.
             	productSubstitutionID = new String(productSpecificationID);

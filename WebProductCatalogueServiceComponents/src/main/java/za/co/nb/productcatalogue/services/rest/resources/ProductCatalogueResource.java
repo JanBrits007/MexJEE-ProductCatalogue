@@ -84,7 +84,7 @@ public class ProductCatalogueResource {
 
     	}
     	catch(Exception e) {
-    		e.printStackTrace();
+            mLog.error(e);
             return Response.status(Status.INTERNAL_SERVER_ERROR).build();
     	}
     }

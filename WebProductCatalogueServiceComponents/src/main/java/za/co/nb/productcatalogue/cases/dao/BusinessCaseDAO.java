@@ -38,7 +38,7 @@ public class BusinessCaseDAO {
 				return retrieveCachedBusinessCaseDetailsFromDB(caseID);
 			}
 			catch(Exception e) {
-				e.printStackTrace();
+				mLog.error(e);
 				return null;
 			}
 		}
@@ -87,7 +87,6 @@ public class BusinessCaseDAO {
 			}
 		}
 		catch(Exception e) {
-			e.printStackTrace();
 			mLog.error(e);
 		}		
 		

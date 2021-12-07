@@ -92,7 +92,7 @@ public class ProductCataloguesDAO extends AbstractProductCatalogueDAO {
 
 */    		
 		} catch (Exception e) {
-			e.printStackTrace();
+			mLog.error(e);
 		}        
     
     }

@@ -76,7 +76,7 @@ public class ProductSpecificationsResource {
 	        }
     	}
     	catch(Exception e) {
-    		e.printStackTrace();
+			mLog.error(e);
             return Response.status(Status.INTERNAL_SERVER_ERROR).build();
     	}
     }

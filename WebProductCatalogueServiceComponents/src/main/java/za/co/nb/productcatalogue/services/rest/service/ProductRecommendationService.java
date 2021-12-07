@@ -55,7 +55,7 @@ public class ProductRecommendationService {
 
         } catch (Exception e) {
             mLog.debug("Error: Could not load spec file");
-            e.printStackTrace();
+            mLog.error(e);
         }
         return null;
     }
@@ -89,7 +89,7 @@ public class ProductRecommendationService {
                 return productRecommendationResponse;
             } catch (Exception e) {
                 mLog.debug("Error: Could not get product recommendations");
-                e.printStackTrace();
+                mLog.error(e);
             }
         }
         return new ProductRecommendationResponse();
@@ -135,7 +135,7 @@ public class ProductRecommendationService {
             return questionList;
         } catch (Exception e) {
             mLog.debug("Error: Could not get next list of questions");
-            e.printStackTrace();
+            mLog.error(e);
         }
 
         return new QuestionList();
@@ -184,7 +184,7 @@ public class ProductRecommendationService {
             }
         } catch (Exception e) {
             mLog.debug("Error: Could not compare answered question list from request");
-            e.printStackTrace();
+            mLog.error(e);
         }
         return foundMatch;
     }

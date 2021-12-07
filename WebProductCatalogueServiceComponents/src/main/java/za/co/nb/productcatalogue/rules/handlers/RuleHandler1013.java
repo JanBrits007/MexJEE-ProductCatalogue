@@ -29,7 +29,7 @@ public class RuleHandler1013 extends BaseProductSpecificationRuleHandler {
 			}
 		}
 		catch(Exception e) {
-			e.printStackTrace();
+			mLog.error(e);
 			
 			// Can't break JO. Default to their scenario.
 			return false;
@@ -61,7 +61,7 @@ public class RuleHandler1013 extends BaseProductSpecificationRuleHandler {
 		}
 		catch(Exception e) {
 			// Got a problem.
-			e.printStackTrace();
+			mLog.error(e);
 			
 			return productIDToSubstitute;
 		}
