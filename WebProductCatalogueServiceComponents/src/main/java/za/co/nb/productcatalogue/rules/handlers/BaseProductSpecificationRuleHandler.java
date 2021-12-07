@@ -39,7 +39,7 @@ public abstract class BaseProductSpecificationRuleHandler {
 			client360DTO =  client360Client.retrieveBasicNCMClient360ByArrangementIDs(arrangementIDs);
 		}
 		catch(Exception e) {
-			mLog.error(e);
+			mLog.error("", e);
 			
 			throw new ServiceIntegrationException("Unable to retrieve client 360 for arrangement IDs " + arrangementIDs);
 		}

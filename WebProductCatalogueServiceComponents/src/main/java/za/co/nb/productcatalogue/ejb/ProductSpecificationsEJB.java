@@ -221,7 +221,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 }
             }
         }catch (Exception e){
-            mLog.error(e);
+            mLog.error("", e);
             throw new RuntimeException("Failed to execute MultiSubstitution rules, reason:"+e.getMessage(), e);
         }
 
@@ -240,7 +240,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             return String.valueOf(productSpec.getProductIdentifier());
 
         }catch (Exception e){
-            mLog.error(e);
+            mLog.error("", e);
             throw new RuntimeException("Failed to execute MultiSubstitution rules, reason:"+e.getMessage(), e);
         }
 
@@ -692,7 +692,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
             return new RawSpecString(false, XMLSpec);
         } catch (IOException e) {
-            mLog.error(e);
+            mLog.error("", e);
             throw new Exception("Unable to find specification XML file for product ID " + productID);
         }
     }
@@ -728,11 +728,11 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 dao.getProductSpecificationXMLByID(productIDs);
                 dao.getProductSpecificationXMLByID(productIDs);
             } catch (Exception e1) {
-                mLog.error(e1);
+                mLog.error("", e1);
             }
 
         } catch (Exception e) {
-            mLog.error(e);
+            mLog.error"", ""e);
         }
     }
 

@@ -128,7 +128,7 @@ public abstract class AbstractRate {
             return hierarchyJSONString;
         }
         catch(Exception e) {
-            mLog.error(e);
+            mLog.error("", e);
 
             // It's gone pear shaped.
             return originalHierarchyJSONString;
@@ -248,7 +248,7 @@ public abstract class AbstractRate {
             return hierarchyJSONString;
         }
         catch(Exception e) {
-            mLog.error(e);
+            mLog.error("", e);
 
             // It's gone pear shaped.
             return originalHierarchyJSONString;
@@ -285,7 +285,7 @@ public abstract class AbstractRate {
             return investmentRatesMap;
         }
         catch (Exception e) {
-            mLog.error(e);
+            mLog.error("", e);
             throw new Exception("Service to Retrieve Product Interest Rates Failed.");
         }
     }
@@ -371,7 +371,7 @@ public abstract class AbstractRate {
             return hierarchyJSONString;
         }
         catch(Exception e) {
-            mLog.error(e);
+            mLog.error("", e);
 
             // It's gone pear shaped.
             return originalHierarchyJSONString;

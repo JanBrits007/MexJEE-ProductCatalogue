@@ -44,7 +44,7 @@ public abstract class AbstractProductCatalogueDAO extends AbstractRate {
         try {
             return readDataFromJSONResourceFile("/productcatalogue/" + productCatalogueID + ".json");
         } catch(Exception e) {
-            mLog.error(e);
+            mLog.error("", e);
             return "Unable to compose hierarchy for catalogue ID " + productCatalogueID + ". Please check the log file for detailed exception message";
         }
     }
@@ -102,7 +102,7 @@ public abstract class AbstractProductCatalogueDAO extends AbstractRate {
 
             return resourceData;
         } catch (IOException e) {
-            mLog.error(e);
+            mLog.error("", e);
             throw new Exception("Unable to find resource with filename - " + resourceFilename);
         }
     }

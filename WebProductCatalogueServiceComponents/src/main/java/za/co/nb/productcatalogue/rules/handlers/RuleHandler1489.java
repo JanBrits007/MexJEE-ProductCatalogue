@@ -57,7 +57,7 @@ public class RuleHandler1489 extends BaseProductSpecificationRuleHandler {
         } catch(Exception e) {
             // Got a problem.
             mLog.debug("Trace 8 >>"+productIDToSubstitute+"<<");
-            mLog.error(e);
+            mLog.error("", e);
             return productIDToSubstitute;
         }
 

@@ -91,7 +91,7 @@ public class ProductSpecificationsJSONServiceDAO {
 				
 				return JSONSpec;
 			} catch (IOException e) {
-				mLog.error(e);
+				mLog.error("", e);
 				throw new Exception("Unable to find specification JSON file for product ID " + productID);
 			}
 		}

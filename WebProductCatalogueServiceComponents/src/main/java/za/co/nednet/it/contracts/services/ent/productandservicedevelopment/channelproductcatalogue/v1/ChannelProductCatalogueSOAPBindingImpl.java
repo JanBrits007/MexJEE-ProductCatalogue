@@ -49,7 +49,7 @@ public class ChannelProductCatalogueSOAPBindingImpl {
 				resultSet.value = createResult("R01", "No Record Found.");
 			}
 		} catch (Exception e) {
-			mLog.error(e);
+			mLog.error("", e);
 			resultSet.value = createResult("R01", e.getMessage());
 		}
 		
@@ -137,7 +137,7 @@ public class ChannelProductCatalogueSOAPBindingImpl {
 				resultSet.value = createResult("R01", "No Record Found.");
 			}
 		} catch (Exception e) {
-			mLog.error(e);
+			mLog.error("", e);
 			resultSet.value = createResult("R01", e.getMessage());
 		}
 		
@@ -172,7 +172,7 @@ public class ChannelProductCatalogueSOAPBindingImpl {
 				
 				productSpecifications.value.add(productSpecificationHolder.value);
 			} catch (Exception e) {
-				mLog.error(e);
+				mLog.error("", e);
 				resultSet.value = createResult("R01", e.getMessage());
 			}
 		}
