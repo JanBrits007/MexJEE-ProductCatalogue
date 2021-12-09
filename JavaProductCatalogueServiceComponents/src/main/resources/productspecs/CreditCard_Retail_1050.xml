@@ -1,4 +1,4 @@
-<product inheritFromFiles="CreditCard_Retail" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+<product inheritFromFiles="CreditCard_Merchant" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1050</productIdentifier>
 	<name>HUB Card</name>
 	<shortDescription>(CreditCard_Retail_1050)</shortDescription>
@@ -40,11 +40,11 @@
 		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=140</attributeName>
+			<attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=210~HideBankDetails=true</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>HubDetails|ng-component=HubDetailsComponent~ProceduralStepName=Hub details~ZOrder=130</attributeName>
+			<attributeName>SalesMilestone|ng-component=HubEmployeeDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=HUB details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -491,6 +491,14 @@
 		<featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
 		<featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
 		<featureDisplayPosition>offer</featureDisplayPosition>
+		<!--GenerateOffer-->
+		<featureAttributeGroup>
+			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=HubClubServicesComponent-9992~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
 		<featureAttributeGroup>
 			<attributeGroupName>SystemRelated</attributeGroupName>
 			<featureAttributes>
