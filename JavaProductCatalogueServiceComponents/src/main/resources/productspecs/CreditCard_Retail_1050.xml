@@ -1,4 +1,4 @@
-<product inheritFromFiles="CreditCard_Retail" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+<product inheritFromFiles="CreditCard_Merchant" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1050</productIdentifier>
 	<name>HUB Card</name>
 	<shortDescription>(CreditCard_Retail_1050)</shortDescription>
@@ -40,11 +40,11 @@
 		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=140</attributeName>
+			<attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=210~HideBankDetails=true</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>HubDetails|ng-component=HubDetailsComponent~ProceduralStepName=Hub details~ZOrder=130</attributeName>
+			<attributeName>SalesMilestone|ng-component=HubEmployeeDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=HUB details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -68,10 +68,10 @@
 			<attributeType>EligibilityRule</attributeType>
 			<attributeName>Income</attributeName>
 			<isComparable>false</isComparable>
-			<minValue>5000</minValue>
+			<minValue>36000</minValue>
 			<maxValue>99999999</maxValue>
 			<valueUnit>ZAR</valueUnit>
-			<description>earn an income of 36 000 per anim or more.</description>
+			<description>earn an income of 36 000 per annum or more.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -324,7 +324,7 @@
 		<productAttributes>
 			<attributeType>int</attributeType>
 			<attributeName>CommunicationSystem</attributeName>
-			<value>GenCom</value> <!--this needs to be updated to include correct communication strat for Hub-->
+			<value>SpecCom</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>int</attributeType>
@@ -457,7 +457,40 @@
 	<features>
 		<featureIdentifier>9992</featureIdentifier>
 		<name>Hub Club services</name>
-
+		<mandatory>true</mandatory>
+		<preSelected>true</preSelected>
+		<shortDescription>By joining our Greenbacks Rewards Programme you will earn rewards when you use your credit card or one of our other transactional accounts.</shortDescription>
+		<description>Detailed description of feature</description>
+		<featureGrouping>
+			<featureGroupName>Loyalty</featureGroupName>
+			<featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
+		</featureGrouping>
+		<featureType>BoltOn</featureType>
+		<referenceProductID>-1</referenceProductID>
+		<featurePricing>
+			<fee>
+				<type>AdminFee</type>
+				<description>R25 per month</description>
+				<currency>ZAR</currency>
+				<amount>25</amount>
+				<frequency>Monthly</frequency>
+			</fee>
+		</featurePricing>
+		<featureFulfilment>
+			<channel>selfServiceWeb</channel>
+			<fulfilmentType>setting</fulfilmentType>
+			<fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+			<fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+		</featureFulfilment>
+		<featureFulfilment>
+			<channel>staffAssisted</channel>
+			<fulfilmentType>setting</fulfilmentType>
+			<fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
+			<fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
+		</featureFulfilment>
+		<featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
+		<featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
+		<featureDisplayPosition>offer</featureDisplayPosition>
 		<!--GenerateOffer-->
 		<featureAttributeGroup>
 			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
@@ -466,8 +499,6 @@
 				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=HubClubServicesComponent-9992~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
-
-		<!-- Case and Process Configuration -->
 		<featureAttributeGroup>
 			<attributeGroupName>SystemRelated</attributeGroupName>
 			<featureAttributes>
@@ -476,8 +507,6 @@
 				<value>True</value>
 			</featureAttributes>
 		</featureAttributeGroup>
-
-		<!--Provisioning Configuration-->
 		<featureAttributeGroup>
 			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
 			<featureAttributes>
@@ -505,7 +534,17 @@
 				<value>preFICAProvisioning</value>
 			</featureAttributes>
 		</featureAttributeGroup>
-
+		<featureAttributeGroup>
+			<attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+			<featureAttributes>
+				<attributeType>type</attributeType>
+				<attributeName>name</attributeName>
+				<minValue>1</minValue>
+				<maxValue>2</maxValue>
+				<valueUnit>text</valueUnit>
+				<value>some value</value>
+			</featureAttributes>
+		</featureAttributeGroup>
 	</features>
 
 </product>

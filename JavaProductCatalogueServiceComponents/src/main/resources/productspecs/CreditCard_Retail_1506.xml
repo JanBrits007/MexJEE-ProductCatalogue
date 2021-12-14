@@ -3,17 +3,6 @@
 	<name>NPW Bundle Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1506) NPW Bundle Credit Card</shortDescription>
 
-	<productAttributeGroup action="overwrite">
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Income</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>150000</minValue>
-			<maxValue>99999999</maxValue>
-			<valueUnit>ZAR</valueUnit>
-			<description>be R150 000 or more.</description>
-		</productAttributes>
-	</productAttributeGroup>
 	<!--Document Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
@@ -54,14 +43,10 @@
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1504</attributeName>
-		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Offer Configuration-->
-	<productAttributeGroup action="overwrite">
+	<productAttributeGroup action="overwrite"><!--Remove Cross Sell & Up Sell, Remove Add bank Account-->
 		<attributeGroupName>PresentOfferSelection</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -69,6 +54,10 @@
 			<value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1504</value>
 		</productAttributes>
 	</productAttributeGroup>
+	<productAttributeGroup action="overwrite"><!--Remove Cross Sell & Up Sell-->
+		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+	</productAttributeGroup>
+
 
 	<!--Provisioning Configuration-->
 	<productAttributeGroup action="overwrite">
@@ -199,6 +188,19 @@
 			<attributeType>boolean</attributeType>
 			<attributeName>creditRepaymentScreenBypassCheck</attributeName>
 			<value>true</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--ActivateProductsGatherProductDetails-->
+	<productAttributeGroup  action="overwrite"> <!--Removed CMS, Removed FAIS, Removed Going Digital, Remove See Something you like, Remove Compare these options-->
+		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=210</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 

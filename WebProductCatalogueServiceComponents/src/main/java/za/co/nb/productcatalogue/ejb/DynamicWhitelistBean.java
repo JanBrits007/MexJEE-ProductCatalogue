@@ -16,7 +16,7 @@ import javax.ejb.TransactionAttributeType;
 @TransactionAttribute(TransactionAttributeType.NEVER)
 public class DynamicWhitelistBean {
 
-    private final Log mLog = LogFactory.getLog(getClass());
+    private static final Log mLog = LogFactory.getLog(DynamicWhitelistBean.class);
 
     @EJB(lookup = "java:global/SysSystemConfigurator/WebSystemConfigurator/WhitelistServiceBean!za.co.nb.system.config.whitelist.service.WhitelistServiceRemote")
     WhitelistServiceRemote whitelistServiceRemote;

@@ -15,7 +15,7 @@ import javax.ejb.TransactionAttributeType;
 @TransactionAttribute(TransactionAttributeType.NEVER)
 public class DynamicPropertyBean {
 
-    private final Log mLog = LogFactory.getLog(getClass());
+    private static final Log mLog = LogFactory.getLog(DynamicPropertyBean.class);
 
     @EJB(lookup = "java:global/SysSystemConfigurator/WebSystemConfigurator/PropertyServiceBean!za.co.nb.system.config.property.service.PropertyServiceRemote")
     PropertyServiceRemote propertyServiceRemote;

@@ -52,7 +52,7 @@
    <!--DetermineRelatedParties-->
 
    <!--GenerateOfferGatherClientDetails-->
-   <productAttributeGroup>
+   <!--productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -66,7 +66,7 @@
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
-   </productAttributeGroup>
+   </productAttributeGroup-->
 
    <!--FinancialDetails-->
 
@@ -131,10 +131,6 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>DebitOrderSetup|ng-component=DebitOrderSetupComponent~ProceduralStepName=Debit Order Details~child-ng-components=NedbankAccountPicker~child-ng-components=dayPicker~subHeaderText=Confirm your debit order details~ZOrder=220</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Legacy Debit Order Details~ZOrder=210</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -234,7 +230,7 @@
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Evidence</attributeType>
-         <attributeName>We need proof of your identity in the form of: South African bar-coded identity card or document, or passport and work permit.</attributeName>
+         <attributeName>We need proof of your identity in the form of: South African bar-coded identity card or document.</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>string</valueUnit>
       </productAttributes>
@@ -532,6 +528,11 @@
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>CaseConfiguration</attributeGroupName>
+      <productAttributes> <!--this is a temporary solution untill CDE is ready to accept Funeral Plan-->
+         <attributeType>Boolean</attributeType>
+         <attributeName>ExcludeFromCDERequest</attributeName>
+         <value>true</value>
+      </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
@@ -607,11 +608,11 @@
          <attributeName>CODHandler_FinancialDetails</attributeName>
          <value>classname=XXXX</value>
       </productAttributes>
-      <productAttributes>
+      <!--productAttributes>
          <attributeType>Generic</attributeType>
          <attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
-      </productAttributes>
+      </productAttributes-->
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
@@ -791,7 +792,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -873,7 +874,12 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>spikeProductID</attributeName>
-         <value>1155</value>
+         <value>28</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>SetCoverAmount</attributeName>
+         <value>10000</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>

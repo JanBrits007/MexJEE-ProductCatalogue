@@ -19,8 +19,9 @@ public class ProductTypeLoader {
         ProductType productType = toProductType(xmlString);
         loadParent(productType);
 
-        if(removeInheritance)
+        if(removeInheritance) {
             removeInheritanceAttributes(productType);
+        }
 
         return productType;
     }
@@ -53,13 +54,12 @@ public class ProductTypeLoader {
     }
 
     private ProductType toProductType(String XmlString){
-        try{
+        try(InputStream inputStream = new ByteArrayInputStream(XmlString.getBytes())) {
             Unmarshaller unmarshaller = ProductTypeJaxbContext.getJAXBContext().createUnmarshaller();
-            InputStream inputStream = new ByteArrayInputStream(XmlString.getBytes());
+
             return (ProductType) unmarshaller.unmarshal(inputStream);
         } catch (Exception e) {
-            e.printStackTrace();
-            throw new RuntimeException("Unable to find specification XML file, reason:"+ e.getMessage());
+            throw new RuntimeException("Unable to find specification XML file, reason:"+ e.getMessage(), e);
         }
 
     }
@@ -71,8 +71,9 @@ public class ProductTypeLoader {
 
     private void loadProductInheritance(ProductType child){
 
-        if(child.getInheritFromFiles() != null)
+        if(child.getInheritFromFiles() != null) {
             insertParentInheritance(child);
+        }
 
         insertChildInheritance(child);
 
@@ -86,8 +87,9 @@ public class ProductTypeLoader {
 
     private void insertParentInheritance(ProductType child){
 
-        if( child.getInheritFromFiles().trim().isEmpty())
+        if( child.getInheritFromFiles().trim().isEmpty()) {
             throw new RuntimeException("productTpe.inheritanceFromFiles property cannot be empty");
+        }
 
         String xmlString = loadRawFile(child.getInheritFromFiles());
         ProductType parent = load(xmlString, true);
@@ -154,8 +156,9 @@ public class ProductTypeLoader {
 
                 if(featureAttributeGroupType.getInheritFromFiles() != null){
 
-                    if(featureAttributeGroupType.getAction() != null)
-                        throw new RuntimeException("Both InheritFromFiles and Action cannot be populated, FeatureAttributeGroupType:"+featureAttributeGroupType.getAttributeGroupName());
+                    if(featureAttributeGroupType.getAction() != null) {
+                        throw new RuntimeException("Both InheritFromFiles and Action cannot be populated, FeatureAttributeGroupType:" + featureAttributeGroupType.getAttributeGroupName());
+                    }
 
                     insertInheritedFeatureAttribGroupParent(featuresType, featureAttributeGroupType);
                 }
@@ -243,8 +246,9 @@ public class ProductTypeLoader {
                ProductAttributeGroupType productAttributeGroupType = child.getProductAttributeGroup().get(child.getProductAttributeGroup().indexOf(productAttributeGroup));
                productAttributeGroupType.getProductAttributes().addAll(productAttributeGroupParent.getProductAttributes());
            }else if (productAttributeGroup.getAction() != null){
-                   if (productAttributeGroup.getInheritFromFiles() != null)
-                       throw new RuntimeException("Both InheritFromFiles and Action cannot be populated, ProductAttributeGroup:"+productAttributeGroup.getAttributeGroupName());
+                   if (productAttributeGroup.getInheritFromFiles() != null) {
+                       throw new RuntimeException("Both InheritFromFiles and Action cannot be populated, ProductAttributeGroup:" + productAttributeGroup.getAttributeGroupName());
+                   }
 
                    if (!(productAttributeGroup.getAction().equals("overwrite") || productAttributeGroup.getAction().equals("override"))) {
                        addToChildProductAttrib(child, parent, productAttributeGroupParent);
@@ -259,16 +263,17 @@ public class ProductTypeLoader {
 
     private List<String> getProductAttributeGroupIndex(List<ProductAttributeGroupType> productAttributeGroupTypes) {
         List<String> index = new ArrayList<>();
-        for (ProductAttributeGroupType productAttributeGroup :productAttributeGroupTypes)
+        for (ProductAttributeGroupType productAttributeGroup :productAttributeGroupTypes) {
             index.add(productAttributeGroup.getAttributeGroupName());
-
+        }
         return index;
     }
 
     private List<String> getFeatureIndex(List<FeaturesType> featuresTypes) {
         List<String> index = new ArrayList<>();
-        for (FeaturesType featuresType :featuresTypes)
+        for (FeaturesType featuresType :featuresTypes) {
             index.add(String.valueOf(featuresType.getFeatureIdentifier()));
+        }
 
         return index;
     }
@@ -288,8 +293,9 @@ public class ProductTypeLoader {
 
             }else if(featuresType.getAction() != null) {
 
-                if (featuresType.getInheritFromFiles() != null)
-                    throw new RuntimeException("Both InheritFromFiles and Action cannot be populated, FeaturesType:"+featuresType.getFeatureIdentifier());
+                if (featuresType.getInheritFromFiles() != null) {
+                    throw new RuntimeException("Both InheritFromFiles and Action cannot be populated, FeaturesType:" + featuresType.getFeatureIdentifier());
+                }
 
                 if (!(featuresType.getAction().equals("overwrite") || featuresType.getAction().equals("override"))) {
                     addToChildFeature(child, parent, featureTypeParent);
@@ -302,10 +308,13 @@ public class ProductTypeLoader {
         for(FeatureAttributeGroupType featureAttributeGroupType : feature.getFeatureAttributeGroup()){
 
             List<FeatureAttributeGroupType> tempFeatureAttributeGroupTypes = new ArrayList<>(featureTypeParent.getFeatureAttributeGroup());
-                for(FeatureAttributeGroupType parentFeatureAttributeGroupType  :tempFeatureAttributeGroupTypes)
-                    if(featureAttributeGroupType.getAttributeGroupName().equals(parentFeatureAttributeGroupType.getAttributeGroupName()))
-                        if(featureAttributeGroupType.getAction() != null && (featureAttributeGroupType.getAction().equals("overwrite") || featureAttributeGroupType.getAction().equals("override")))
+                for(FeatureAttributeGroupType parentFeatureAttributeGroupType  :tempFeatureAttributeGroupTypes) {
+                    if (featureAttributeGroupType.getAttributeGroupName().equals(parentFeatureAttributeGroupType.getAttributeGroupName())) {
+                        if (featureAttributeGroupType.getAction() != null && (featureAttributeGroupType.getAction().equals("overwrite") || featureAttributeGroupType.getAction().equals("override"))) {
                             featureTypeParent.getFeatureAttributeGroup().remove(parentFeatureAttributeGroupType);
+                        }
+                    }
+                }
 
         }
         feature.getFeatureAttributeGroup().addAll(featureTypeParent.getFeatureAttributeGroup());
@@ -315,6 +324,4 @@ public class ProductTypeLoader {
         child.getFeatures().add(featureTypeParent);
         parent.getFeatures().remove(featureTypeParent);
     }
-
-
 }
