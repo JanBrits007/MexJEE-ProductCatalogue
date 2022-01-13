@@ -45,8 +45,8 @@ public class ProductSpecificationsJSONServiceDAO {
 		} 
 		else {
 			mLog.debug("Trace 3 >>Loading from resource file<<");
-			try {
-				InputStream inputStream = ProductSpecificationsServiceDAO.class.getResourceAsStream("/productspecs/" + productID + ".json");
+			try(InputStream inputStream = ProductSpecificationsServiceDAO.class.getResourceAsStream(
+					"/productspecs/" + productID + ".json")) {
 				mLog.debug("Trace 4a");
 
 				if(inputStream == null) {
@@ -74,7 +74,7 @@ public class ProductSpecificationsJSONServiceDAO {
 
 					mLog.debug("Trace 4e");
                     if(inputStream2 != null) {
-                        String JSONParentSpec = IOUtils.toString(inputStream2, StandardCharsets.UTF_8.name());
+                        String JSONParentSpec = IOUtils.toString(inputStream2, StandardCharsets.UTF_8);
                         mLog.debug("Trace 4f using parent: " + productIdentifier);
                         //mLog.debug("Trace 4f" + JSONParentSpec);
                         ptJSONStringCache.put(productID, JSONParentSpec);
@@ -91,7 +91,7 @@ public class ProductSpecificationsJSONServiceDAO {
 				
 				return JSONSpec;
 			} catch (IOException e) {
-				e.printStackTrace();
+				mLog.error("", e);
 				throw new Exception("Unable to find specification JSON file for product ID " + productID);
 			}
 		}
@@ -99,8 +99,9 @@ public class ProductSpecificationsJSONServiceDAO {
 
 	private IJuristicProductSpecifications getJuristicProductSpecificationsRemote(){
 
-		if(juristicProductSpecificationsRemote != null)
+		if(juristicProductSpecificationsRemote != null) {
 			return juristicProductSpecificationsRemote;
+		}
 
 		try {
 			InitialContext context = new InitialContext();

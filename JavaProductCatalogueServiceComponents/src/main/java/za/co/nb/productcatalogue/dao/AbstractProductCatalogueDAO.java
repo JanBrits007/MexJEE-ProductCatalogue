@@ -44,7 +44,7 @@ public abstract class AbstractProductCatalogueDAO extends AbstractRate {
         try {
             return readDataFromJSONResourceFile("/productcatalogue/" + productCatalogueID + ".json");
         } catch(Exception e) {
-            e.printStackTrace();
+            mLog.error("", e);
             return "Unable to compose hierarchy for catalogue ID " + productCatalogueID + ". Please check the log file for detailed exception message";
         }
     }
@@ -52,9 +52,8 @@ public abstract class AbstractProductCatalogueDAO extends AbstractRate {
     private String readDataFromJSONResourceFile(String resourceFilename) throws Exception {
         mLog.debug("Trace 1 >>" + resourceFilename + "<<");
 
-        try {
-            InputStream inputStream = ProductSpecificationsServiceDAO.class.getResourceAsStream(resourceFilename);
-
+        try (InputStream inputStream = ProductSpecificationsServiceDAO.class.getResourceAsStream(resourceFilename);
+             ByteArrayOutputStream result = new ByteArrayOutputStream()){
             if(inputStream == null) {
                 mLog.debug("Trace 2");
                 throw new Exception("Unable to find resource with filename " + resourceFilename);
@@ -62,7 +61,6 @@ public abstract class AbstractProductCatalogueDAO extends AbstractRate {
 
             mLog.debug("Trace 2.1");
 
-            ByteArrayOutputStream result = new ByteArrayOutputStream();
             byte[] buffer = new byte[1024];
             int length;
 
@@ -104,7 +102,7 @@ public abstract class AbstractProductCatalogueDAO extends AbstractRate {
 
             return resourceData;
         } catch (IOException e) {
-            e.printStackTrace();
+            mLog.error("", e);
             throw new Exception("Unable to find resource with filename - " + resourceFilename);
         }
     }

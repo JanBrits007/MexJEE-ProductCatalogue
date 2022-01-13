@@ -38,7 +38,7 @@ public class BusinessCaseDAO {
 				return retrieveCachedBusinessCaseDetailsFromDB(caseID);
 			}
 			catch(Exception e) {
-				e.printStackTrace();
+				mLog.error("", e);
 				return null;
 			}
 		}
@@ -58,7 +58,7 @@ public class BusinessCaseDAO {
 
 			mLog.debug("Trace 3");
 		} catch (Exception e) {
-			mLog.error(e);
+			mLog.error("", e);
 			throw e;
 		}
 		
@@ -87,8 +87,7 @@ public class BusinessCaseDAO {
 			}
 		}
 		catch(Exception e) {
-			e.printStackTrace();
-			mLog.error(e);
+			mLog.error("", e);
 		}		
 		
 		mLog.debug("Trace 5");
@@ -159,8 +158,7 @@ public class BusinessCaseDAO {
 			}
 
 		} catch(Exception e) {
-			mLog.debug("Trace 8");
-			mLog.error(e);
+			mLog.debug("Trace 8", e);
 			throw e;
 		}
 		finally {
