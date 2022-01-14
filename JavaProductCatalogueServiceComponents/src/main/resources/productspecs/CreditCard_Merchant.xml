@@ -41,10 +41,6 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>Yodlee|ng-component=YodleeIntroductionComponent~ProceduralStepName=Yodlee~ZOrder=90~YodleePortalURL~HideProceduralStep=true</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=80~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
 		</productAttributes>
 		<productAttributes>
@@ -142,6 +138,19 @@
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>GatherEvidence|ng-component=UploadYourDocumentsComponent~ProceduralStepName=Upload your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--ActivateProductsPresentDocuments-->
+	<productAttributeGroup  action="overwrite">
+		<attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Signing the paperwork~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourDeclaration|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=60~ContractComponentProductType=1001~applicableChannels=WebSelfAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
