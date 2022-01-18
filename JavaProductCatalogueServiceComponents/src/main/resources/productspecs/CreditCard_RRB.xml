@@ -25,9 +25,9 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!--FinancialDetails-->
+   <!--FinancialExtendedDetails-->
   <productAttributeGroup action="overwrite">
-      <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+      <attributeGroupName>clientInformationRequirement_FinancialExtendedDetails</attributeGroupName>
       <productAttributes>
         <attributeType>clientInformationRequirement</attributeType>
         <attributeName>IncomeInformationV2|ng-component=IncomeWidgetV2Component~ProceduralStepName=Income details~ZOrder=90~NettSalary=true~GrossSalary=true~SalaryAccountDetails=true</attributeName>
@@ -312,7 +312,7 @@
 		<productAttributes>
         <attributeType>string</attributeType>
         <attributeName>frontOfficeIntentSequence</attributeName>
-        <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+        <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialExtendedDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
     </productAttributes>
     <productAttributes>
         <attributeType>string</attributeType>
@@ -322,7 +322,7 @@
     <productAttributes>
         <attributeType>string</attributeType>
         <attributeName>GNBAIntentToActivityMapping</attributeName>
-        <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+        <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialExtendedDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
     </productAttributes>
     <productAttributes>
         <attributeType>string</attributeType>
@@ -373,8 +373,8 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>CODHandler_FinancialDetails</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.v3.CreditCardUpfrontOfferCODHandler</value>
+         <attributeName>CODHandler_FinancialExtendedDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.v3.RRBUpfrontOfferCODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -606,7 +606,7 @@
       <productAttributes>
          <attributeType>Boolean</attributeType>
          <attributeName>SkipGenerateOfDeclineWorkItem</attributeName>
-         <value>True</value>
+         <value>False</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -625,7 +625,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_FinancialDetails</attributeName>
+         <attributeName>RequiredDataFilter_FinancialExtendedDetails</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementIncomeExpenseFilterV2</value>
       </productAttributes>
       <productAttributes>
@@ -647,6 +647,11 @@
    <!--Offer Configuration-->
 	<productAttributeGroup action="overwrite">
     <attributeGroupName>PresentOfferSelection</attributeGroupName>
+    <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>OfferSelectionSummaryDetails</attributeName>
+          <value>AlternateProductOfferSelection|ng-component=AlternateProductsComponent~ZOrder=100</value>
+    </productAttributes>
   </productAttributeGroup>
   <productAttributeGroup action="overwrite">
 		<attributeGroupName>CreditDetails</attributeGroupName>
