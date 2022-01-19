@@ -377,6 +377,11 @@
          <attributeName>RequiredDataFilter_PresentOffer</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFinancialSummaryFilter</value>
       </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>RequiredDataFilter_PresentOffer</attributeName>
+        <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Decline Configuration-->
@@ -498,6 +503,11 @@
          <value>true</value>
       </productAttributes>
       <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>requiresConfirmVerificationQualitySignatureTypeCheck</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
          <attributeType>String</attributeType>
          <attributeName>HandleProvisioningFailureTeamName</attributeName>
          <value>BPM Admin</value>
@@ -530,7 +540,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>baseCBOActivityList</attributeName>
-         <value>ConfigureArrangement|CBOFinalizeCase</value>
+         <value>ConfigureArrangement|ConfirmVerificationQuality|CBOFinalizeCase</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -577,6 +587,16 @@
    <productAttributeGroup action="overwrite">
       <attributeGroupName>InitialisationConfiguration</attributeGroupName>
    </productAttributeGroup>
+
+   <!--Decline Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+        <!--default-->
+		<productAttributes>
+           <attributeType>defaultMapping</attributeType>
+           <attributeName>default|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=LeaveApplicationDeclineAction</attributeName>
+        </productAttributes>
+	</productAttributeGroup>
 
    <!--RRB TP feature-->
    <features>

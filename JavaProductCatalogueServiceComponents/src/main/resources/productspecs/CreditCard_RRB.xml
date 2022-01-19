@@ -431,6 +431,11 @@
          <value>true</value>
       </productAttributes>
       <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>requiresConfirmVerificationQualitySignatureTypeCheck</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
          <attributeType>String</attributeType>
          <attributeName>HandleProvisioningFailureTeamName</attributeName>
          <value>BPM Admin</value>
@@ -463,7 +468,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>baseCBOActivityList</attributeName>
-         <value>CreditDecisionDetermineOffer|ConfigureArrangement|CBOFinalizeCase</value>
+         <value>CreditDecisionDetermineOffer|ConfigureArrangement|ConfirmVerificationQuality|CBOFinalizeCase</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -637,6 +642,11 @@
          <attributeType>string</attributeType>
          <attributeName>RequiredDataFilter_PresentOffer</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFinancialSummaryFilter</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>RequiredDataFilter_PresentOffer</attributeName>
+        <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
       </productAttributes>
    </productAttributeGroup>
 
