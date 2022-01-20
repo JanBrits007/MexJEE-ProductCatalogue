@@ -9,8 +9,6 @@ import za.co.nb.productcatalogue.dao.dto.CachedCatalogueDetails;
 import javax.annotation.PostConstruct;
 import javax.ejb.Lock;
 import javax.ejb.LockType;
-import javax.ejb.Schedule;
-import javax.ejb.Schedules;
 import javax.ejb.Singleton;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -22,14 +20,14 @@ import java.util.concurrent.ConcurrentHashMap;
 @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
 public class ProductCatalogueCache  extends AbstractProductCatalogueDAO {
 
-    private final Log mLog = LogFactory.getLog(getClass());
+    private static final Log mLog = LogFactory.getLog(ProductCatalogueCache.class);
 
     private Map<String, CachedCatalogueDetails> catalogueCache;
 
 
     @PostConstruct
     public void init(){
-       catalogueCache = new ConcurrentHashMap<String, CachedCatalogueDetails>();
+       catalogueCache = new ConcurrentHashMap<>();
     }
 
 

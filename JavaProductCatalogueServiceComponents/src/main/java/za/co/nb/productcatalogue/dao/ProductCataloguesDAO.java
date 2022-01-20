@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 
 public class ProductCataloguesDAO extends AbstractProductCatalogueDAO {
 
-	private final Log mLog = LogFactory.getLog(getClass());
+	private static final Log mLog = LogFactory.getLog(ProductCataloguesDAO.class);
 
 	public String getProductCatalogueJSONByID(String pProductCatalogueID) throws Exception {
 		mLog.debug("Trace 1 >>" + pProductCatalogueID + "<<");
@@ -92,7 +92,7 @@ public class ProductCataloguesDAO extends AbstractProductCatalogueDAO {
 
 */    		
 		} catch (Exception e) {
-			e.printStackTrace();
+			mLog.error("", e);
 		}        
     
     }

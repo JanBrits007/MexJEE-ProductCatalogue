@@ -16,9 +16,9 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!--FinancialDetails-->
+   <!--FinancialExtendedDetails-->
     <productAttributeGroup>
-         <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+         <attributeGroupName>clientInformationRequirement_FinancialExtendedDetails</attributeGroupName>
          <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>SkipFinancialDetails|ng-component=SkipFinancialDetails</attributeName>
@@ -136,7 +136,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialExtendedDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -146,7 +146,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialExtendedDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -465,9 +465,9 @@
         </featureAttributes>
       </featureAttributeGroup>
 
-      <!--FinancialDetails-->
+      <!--FinancialExtendedDetails-->
       <featureAttributeGroup>
-         <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+         <attributeGroupName>clientInformationRequirement_FinancialExtendedDetails</attributeGroupName>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>IncomeInformationV2|ng-component=IncomeWidgetV2Component~ProceduralStepName=Income details~ZOrder=90~NettSalary=true~GrossSalary=true~SalaryAccountDetails=true</attributeName>
@@ -482,7 +482,6 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>SkipFinancialDetails</attributeName>
             <attributeName>SkipFinancialDetails|ng-component=SkipFinancialDetails</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
@@ -846,7 +845,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>frontOfficeIntentSequence</attributeName>
-            <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+            <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialExtendedDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
@@ -856,7 +855,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>GNBAIntentToActivityMapping</attributeName>
-            <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+            <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialExtendedDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -872,6 +871,23 @@
             <attributeType>string</attributeType>
             <attributeName>provisioningMechanism</attributeName>
             <value>provisionToCRAG</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--Decline Configuration-->
+      <featureAttributeGroup>
+         <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>ContinueWithoutCredit|child-ng-components=ContinueWithoutCreditDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>4202|child-ng-components=ContinueWithoutCreditDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>defaultMapping</attributeType>
+            <attributeName>default|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>

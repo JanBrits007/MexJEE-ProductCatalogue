@@ -1,0 +1,143 @@
+<product inheritFromFiles="CreditCard_Retail" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+	<productIdentifier>1038</productIdentifier>
+	<name>Nedbank Private Wealth Pay-as-you-use Credit Card</name>
+	<shortDescription>(CreditCard_Retail_1038) This is The NPW PAYU Credit Card</shortDescription>
+
+	<!--Document Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCard|ContractComponentProductType=1027</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1027</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCardTC|ContractComponentProductType=1027</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>Taxonomy|ARRANGEMENTS_AGREEMENTS_AGREEMENTSCREDITCARD_Agreement Contract</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCredit|ContractComponentProductType=1027</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCard|ContractComponentProductType=1027</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1027</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Offer Configuration-->
+	<productAttributeGroup action="overwrite"><!--Remove Cross Sell & Up Sell, Remove Add bank Account-->
+		 <attributeGroupName>PresentOfferSelection</attributeGroupName>
+		 <productAttributes>
+			 <attributeType>string</attributeType>
+			 <attributeName>OfferSelectionSummaryDetails</attributeName>
+			 <value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1027</value>
+		 </productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite"><!--Remove Cross Sell & Up Sell-->
+	<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+	</productAttributeGroup>
+
+
+	<!--Provisioning Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productCodeMappings</attributeGroupName>
+		<productAttributes>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>MDM_ProductCode</attributeName>
+			<value>1447</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>HLCore_ProductCode</attributeName>
+			<value>1447</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>Siyaka_ProductCode</attributeName>
+			<value>324324</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>CoreSystemIdentifier</attributeName>
+			<value>000</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>coreProvisioningParameters</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>spikeProductID</attributeName>
+			<value>1027</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>productSystem</attributeName>
+			<value>CAMS</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>productType</attributeName>
+			<value>CREDITCARD</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>flag</attributeType>
+			<attributeName>ProvisioningPhase</attributeName>
+			<value>preFICAProvisioning</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>welcomeEmailTemplate</attributeName>
+			<value>me_dynamic_welcome_01</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>welcomeDocumentTemplate</attributeName>
+			<value>nedbank-commercial-release/CombinedWelcomeLetter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>welcomeLetterTaxonomy</attributeName>
+			<value>AGREEMENTSCREDITCARD|Welcome Letter|Welcome Letter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>welcomeDocumentTemplateLocked</attributeName>
+			<value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--ActivateProductsGatherProductDetails-->
+	<productAttributeGroup  action="overwrite"><!--Removed CMS, Removed FAIS, Removed Going Digital, Remove See Something you like, Remove Compare these options-->
+		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=210</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+</product>

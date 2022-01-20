@@ -8,12 +8,10 @@ package za.co.nb.productcatalogue.services.rest.resources;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import za.co.nb.common.helper.namespacebinding.CachedNameSpaceBindingHelper;
 import za.co.nb.productcatalogue.dao.ProductSpecificationsJSONServiceDAO;
 import za.co.nb.productcatalogue.ejb.ProductTypeCacheEJB;
 import za.co.nb.productcatalogue.util.ProductSpecificationSubstitutionUtil;
 
-import javax.annotation.PostConstruct;
 import javax.annotation.security.PermitAll;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -36,7 +34,7 @@ public class ProductSpecificationsResource {
      * The name of this class
      */
 
-	private final Log mLog = LogFactory.getLog(getClass());
+	private static final Log mLog = LogFactory.getLog(ProductSpecificationsResource.class);
 
     private ProductSpecificationsJSONServiceDAO mProductSpecificationsDAO;
 
@@ -78,7 +76,7 @@ public class ProductSpecificationsResource {
 	        }
     	}
     	catch(Exception e) {
-    		e.printStackTrace();
+			mLog.error("", e);
             return Response.status(Status.INTERNAL_SERVER_ERROR).build();
     	}
     }
