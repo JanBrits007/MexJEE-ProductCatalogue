@@ -195,7 +195,7 @@
 			<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 			<featureAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>CardDelivery|ng-component=ng-card-delivery~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~restrictOptOut=true~ZOrder=170~IntlDelivery=true~EmbossCompanyName=true~ContractComponentProductType=1028</attributeName>
+				<attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~restrictOptOut=true~ZOrder=170~IntlDelivery=true~EmbossCompanyName=true~ContractComponentProductType=1028</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
@@ -259,5 +259,19 @@
 			<value>true</value>
 		</productAttributes>
 	</productAttributeGroup>
+
+	<!--ActivateProductsGatherProductDetails-->
+	<productAttributeGroup  action="overwrite"><!--Removed CMS, Removed FAIS, Removed Going Digital, Remove See Something you like, Remove Compare these options-->
+		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=210</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
 
 </product>
