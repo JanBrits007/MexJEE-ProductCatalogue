@@ -1,22 +1,22 @@
 <product inheritFromFiles="CreditCard_Retail" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1506</productIdentifier>
-	<name>NPW Bundle Credit Card</name>
-	<shortDescription>(CreditCard_Retail_1506) NPW Bundle Credit Card</shortDescription>
+	<name>Nedbank Private Wealth Pay-as-you-use Credit Card</name>
+	<shortDescription>(CreditCard_Retail_1506) This is The NPW PAYU Credit Card</shortDescription>
 
 	<!--Document Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCard|ContractComponentProductType=1504</attributeName>
+			<attributeName>subCreditCard|ContractComponentProductType=1506</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1504</attributeName>
+			<attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1506</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCardTC|ContractComponentProductType=1504</attributeName>
+			<attributeName>subCreditCardTC|ContractComponentProductType=1506</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -27,35 +27,35 @@
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCredit|ContractComponentProductType=1504</attributeName>
+			<attributeName>subCredit|ContractComponentProductType=1506</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCard|ContractComponentProductType=1504</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>subCreditCardTC|ContractComponentProductType=1504</attributeName>
+			<attributeName>subCreditCard|ContractComponentProductType=1506</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1506</attributeName>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Offer Configuration-->
 	<productAttributeGroup action="overwrite"><!--Remove Cross Sell & Up Sell, Remove Add bank Account-->
-		<attributeGroupName>PresentOfferSelection</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferSelectionSummaryDetails</attributeName>
-			<value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1504</value>
-		</productAttributes>
+		 <attributeGroupName>PresentOfferSelection</attributeGroupName>
+		 <productAttributes>
+			 <attributeType>string</attributeType>
+			 <attributeName>OfferSelectionSummaryDetails</attributeName>
+			 <value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1506</value>
+		 </productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite"><!--Remove Cross Sell & Up Sell-->
-		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+	<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
 	</productAttributeGroup>
 
 
@@ -88,7 +88,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>spikeProductID</attributeName>
-			<value>1504</value>
+			<value>1506</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>int</attributeType>
@@ -126,73 +126,9 @@
 			<value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
 		</productAttributes>
 	</productAttributeGroup>
-	<!--1028 - Plastic Card-->
-	<features>
-		<featureIdentifier>1028</featureIdentifier>
-		<name>Plastic Card</name>
-
-		<!--ActivateProductsGatherProductDetails-->
-		<featureAttributeGroup action="overwrite">
-			<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-			<featureAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~restrictOptOut=true~ZOrder=170~IntlDelivery=true~EmbossCompanyName=true~ContractComponentProductType=1028</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-	</features>
-
-	<!--Bundle Product -->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>DecisioningControl</attributeGroupName>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>enhanceActivitiesWithTeamAllocations</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>checkStaffOnMDM</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>executeCardBusinessRuleToPresentDocuments</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>statusSetting</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>executeArrangementCrossSellRules</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>initiateIntent0CheckNPWBundleExistingAccounts</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>ComponentSupportsDeclineReasons</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>performFICACheck</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>creditRepaymentScreenBypassCheck</attributeName>
-			<value>true</value>
-		</productAttributes>
-	</productAttributeGroup>
 
 	<!--ActivateProductsGatherProductDetails-->
-	<productAttributeGroup  action="overwrite"> <!--Removed CMS, Removed FAIS, Removed Going Digital, Remove See Something you like, Remove Compare these options-->
+	<productAttributeGroup  action="overwrite"><!--Removed CMS, Removed FAIS, Removed Going Digital, Remove See Something you like, Remove Compare these options-->
 		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
