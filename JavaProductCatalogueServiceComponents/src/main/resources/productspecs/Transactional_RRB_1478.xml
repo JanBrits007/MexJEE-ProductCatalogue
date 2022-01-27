@@ -436,6 +436,26 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--Offer Configuration-->
+   <productAttributeGroup>
+		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1021~Transactional_RRB_1021</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1400~Transactional_RRB_1400</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1108~Transactional_RRB_1108</value>
+		</productAttributes>
+	</productAttributeGroup>
+
    <!--Overdraft feature -->
    <features>
       <featureIdentifier>1014</featureIdentifier>
@@ -945,6 +965,25 @@
             <attributeName>GNBAIntentToActivityMapping</attributeName>
             <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialExtendedDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
          </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--Decline Configuration-->
+      <featureAttributeGroup>
+         <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+         <!--CDE Decline-->
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>4202|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
+         </featureAttributes>
+         <!--CDE Available Actions-->
+          <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>ChallengeWithLongForm|child-ng-components=ChallengeWithLongFormDeclineAction</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
+          </featureAttributes>
       </featureAttributeGroup>
    </features>
 

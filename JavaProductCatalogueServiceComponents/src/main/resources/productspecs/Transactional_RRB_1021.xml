@@ -881,14 +881,32 @@
             <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
             <attributeName>ContinueWithoutCredit|child-ng-components=ContinueWithoutCreditDeclineAction</attributeName>
          </featureAttributes>
+         <!--CDE Decline-->
          <featureAttributes>
             <attributeType>declineCodeMapping</attributeType>
-            <attributeName>4202|child-ng-components=ContinueWithoutCreditDeclineAction</attributeName>
+            <attributeName>4202|child-ng-components=ContinueWithoutCreditDeclineAction~child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
          </featureAttributes>
-         <featureAttributes>
-            <attributeType>defaultMapping</attributeType>
-            <attributeName>default|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
-         </featureAttributes>
+         <!--CDE Available Actions-->
+          <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>ChallengeWithLongForm|child-ng-components=ChallengeWithLongFormDeclineAction</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
+          </featureAttributes>
+      </featureAttributeGroup>
+
+      <featureAttributeGroup action="overwrite">
+          <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
+          <featureAttributes>
+            <attributeType>Compliance</attributeType>
+            <attributeName>PersonalInformationProcessingConsent</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>Compliance</attributeType>
+            <attributeName>FinancialHealthConsent</attributeName>
+          </featureAttributes>
       </featureAttributeGroup>
    </features>
 

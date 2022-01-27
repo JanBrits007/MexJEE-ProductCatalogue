@@ -1,7 +1,7 @@
 <product inheritFromFiles="CreditCard_Retail_1506" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1506</productIdentifier>
-	<name>NPW Bundle Credit Card</name>
-	<shortDescription>(CreditCard_Retail_1506_Simulation) NPW Bundle Credit Card</shortDescription>
+	<name>Nedbank Private Wealth Pay-as-you-use Credit Card</name>
+	<shortDescription>(CreditCard_Retail_1506_Simulation)</shortDescription>
 
 	<!--DeclineWithAppeal-->
 	<productAttributeGroup>
@@ -20,21 +20,82 @@
 		<attributeGroupName>EligibilityRules</attributeGroupName>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NPWClient</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+			<description>already be an existing Nedbank Private Wealth Client;</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
 			<attributeName>Age</attributeName>
 			<isComparable>false</isComparable>
 			<minValue>18</minValue>
 			<maxValue>999</maxValue>
 			<valueUnit>year</valueUnit>
-			<description>be 18 years or older.</description>
+			<description>be atleast 18 years or older;</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
 			<attributeName>Income</attributeName>
 			<isComparable>false</isComparable>
-			<minValue>1500000</minValue>
-			<maxValue>999999</maxValue>
+			<minValue>150000</minValue>
+			<maxValue>99999999</maxValue>
 			<valueUnit>ZAR</valueUnit>
-			<description>EARN A MINIMUM GROSS SALARY OF R1,5m PER ANNUM or Net Investable assets of R5m.</description>
+			<description>R150 000 per annum or Net Investable Assets of R5 000 000.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NaturalPerson</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>DebitOrderRepaymentRequired</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>CreditApproval</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NotUnderCreditAdministration</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>SouthAfricanResident</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+			<description> be a South African resident.</description>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--GenerateOfferGatherProductDetails-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=5000</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -43,12 +104,17 @@
 		<attributeGroupName>VASCrossSellControl</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>VAS_1333</attributeName><!--Greenbacks Shop Card-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
+			<attributeName>VAS_1454</attributeName><!--Greenbacks-->
+			<value>Optionality=Mandatory~IsTakenUp=true</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>VAS_1099</attributeName><!--Credit Card Insurance-->
+			<attributeName>VAS_1333</attributeName><!--SHOP Card-->
+			<value>Optionality=Mandatory~IsTakenUp=true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1100</attributeName><!--Credit Card Insurance-->
 			<value>Optionality=Optional~IsTakenUp=false</value>
 		</productAttributes>
 		<productAttributes>
@@ -57,6 +123,45 @@
 			<value>Optionality=Optional~IsTakenUp=false</value>
 		</productAttributes>
 	</productAttributeGroup>
+
+
+	<!--GenerateOffer-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep</attributeName>
+		</productAttributes>
+		<!--<productAttributes> Removed See Something you like.
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=See something you like?~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+		</productAttributes>-->
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryCreditCardComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
 
 	<!--Case and Process Configuration-->
 	<productAttributeGroup action="overwrite">
@@ -160,45 +265,174 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-	<!--Bundle Product -->
 	<productAttributeGroup action="overwrite">
+		<attributeGroupName>CreditDetails</attributeGroupName>
 		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>initiateIntent0CheckSBSBundleExistingAccounts</attributeName>
-			<value>true</value>
+			<attributeName>minimumCreditAvaliableZAR</attributeName>
+			<value>5000</value>
 		</productAttributes>
 	</productAttributeGroup>
 
-	<!--GenerateOffer-->
+	<!--Evidence And Compliance Requirements-->
 	<productAttributeGroup action="overwrite">
-		<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+	<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
+	<productAttributes>
+		<attributeType>Evidence</attributeType>
+		<attributeName>Proof of your identity</attributeName>
+		<isComparable>false</isComparable>
+		<valueUnit>string</valueUnit>
+	</productAttributes>
+	<productAttributes>
+		<attributeType>Evidence</attributeType>
+		<attributeName>Payslips for the last 3 months, or 3 months bank statements</attributeName>
+		<isComparable>false</isComparable>
+		<valueUnit>string</valueUnit>
+	</productAttributes>
 		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryCreditCardComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+			<attributeType>Evidence</attributeType>
+			<attributeName>A letter form you accountant or financial manager (if  you're self employed)</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>string</valueUnit>
 		</productAttributes>
 	</productAttributeGroup>
+
+
+	<!--FinalizeFrontOfficeInteraction-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>LetsGetDigital|ng-component=LetsGetDigitalComponent~applicableChannels=WebSelfAssisted~HideProceduralStep=true~ZOrder=60</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YoureDone|ng-component=WhatIsNextComponent~ProceduralStepName=You're all set!~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=CreditApplicationStatusComponent-1032~child-ng-components=CreditAccountDetails~HideProceduralStep=true~ZOrder=50</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<features>
+		<featureIdentifier>1028</featureIdentifier>
+		<name>Plastic Card</name>
+		<!--ActivateProductsGatherProductDetails-->
+		<featureAttributeGroup action="overwrite">
+			<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~restrictOptOut=false~ZOrder=170~IntlDelivery=true~HideCostAndLink=true~removeTemporaryCard=true~ContractComponentProductType=1028</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+	</features>
+
+	<!--1025 - Funeral Cover-->
+	<features>
+		<featureIdentifier>1025</featureIdentifier>
+		<name>Funeral Cover</name>
+
+		<!--GenerateOffer-->
+		<featureAttributeGroup>
+			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=NedbankInsuranceFuneralPlanComponent-1025~ProceduralStepName=Optional extras for you~ZOrder=65</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+
+		<!--FinalizeFrontOfficeInteraction-->
+		<featureAttributeGroup>
+			<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>YoureDone|ng-component=WhatIsNextComponent~ProceduralStepName=You're all set!~HideProceduralStep=true~child-ng-components=FuneralCoverProvisionInBranchComponent-1025~ZOrder=50</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+
+		<!-- Case and Process Configuration -->
+		<featureAttributeGroup>
+			<attributeGroupName>SystemRelated</attributeGroupName>
+			<featureAttributes>
+				<attributeType>Flag</attributeType>
+				<attributeName>StraightThroughProcess</attributeName>
+				<value>True</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+
+		<!--Provisioning Configuration-->
+		<featureAttributeGroup>
+			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>FeatureCode</attributeName>
+				<valueUnit>string</valueUnit>
+				<value>ThisisthesFeaturecode</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>provisionInBranch</attributeName>
+				<valueUnit>boolean</valueUnit>
+				<value>true</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>legacyProductID</attributeName>
+				<valueUnit>string</valueUnit>
+				<value>1390</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+	</features>
+
+	<features>
+		<featureIdentifier>1100</featureIdentifier>
+		<name>Payment protection plan</name>
+		<description>Life can be full of the unexpected. That's why our credit card insurance is tailor-made to see you through life's ups and downs. Your credit card debt will be covered if you are retrenched, become disabled or critically ill, or pass away.</description>
+		<featureAttributeGroup>
+			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>provisionInBranch</attributeName>
+				<valueUnit>boolean</valueUnit>
+				<value>false</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>legacyProductID</attributeName>
+				<valueUnit>string</valueUnit>
+				<value />
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=CreditCardInsuranceComponent-1100~ProceduralStepName=Your offer~ZOrder=65</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+			<featureAttributes>
+				<attributeType>DocumentDescription</attributeType>
+				<attributeName>FAIS Client Acknowledgement|nedbank-commercial-release/CCFAISClientAcknowledgementStaffAssisted|ARRANGEMENTS|APPLICATIONS|APPLICATIONSCREDITCARD|FAIS Client Acknowledgement</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>Download</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>Email</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>WetSign</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>ElectronicallySign</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>DocTemplateName</attributeType>
+				<attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+	</features>
+
 </product>
