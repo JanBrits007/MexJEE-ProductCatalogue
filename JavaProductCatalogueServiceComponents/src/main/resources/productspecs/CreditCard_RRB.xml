@@ -171,6 +171,14 @@
       <productAttributes>
          <attributeType>Compliance</attributeType>
          <attributeName>NotUnderCreditAdministrationV2</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>PersonalInformationProcessingConsent</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FinancialHealthConsent</attributeName>
       </productAttributes>    
    </productAttributeGroup>
    <productAttributeGroup action="overwrite">
@@ -690,10 +698,19 @@
   <!--Decline Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+    <!--CDE Available Actions-->
+		<productAttributes>
+			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+			<attributeName>ChallengeWithLongForm|child-ng-components=ChallengeWithLongFormDeclineAction</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+			<attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
+		</productAttributes>
     <!--default-->
 		<productAttributes>
         <attributeType>defaultMapping</attributeType>
-        <attributeName>default|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
+        <attributeName>default|child-ng-components=ContinueWithoutCreditDeclineAction~child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
     </productAttributes>
 	</productAttributeGroup>
 
