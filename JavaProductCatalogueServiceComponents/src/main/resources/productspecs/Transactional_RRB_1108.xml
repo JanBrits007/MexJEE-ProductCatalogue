@@ -34,17 +34,6 @@
     </productAttributeGroup>
 
     <!--GenerateOffer-->
-  <productAttributeGroup action="overwrite">
-    <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-    <productAttributes>
-        <attributeType>productInformationRequirement</attributeType>
-        <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80</attributeName>
-    </productAttributes>
-    <productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>AlternateProductOfferSelection|ng-component=AlternateProductsComponent~ZOrder=70~ActiveOnInitialWorkItemExecution=true</attributeName>
-		</productAttributes>
-  </productAttributeGroup>
 
    <!--ActivateProductsGatherProductDetails-->
    <productAttributeGroup action="overwrite">
@@ -972,15 +961,6 @@
       <!--Decline Configuration-->
       <featureAttributeGroup>
          <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
-         <featureAttributes>
-            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
-            <attributeName>ContinueWithoutCredit|child-ng-components=ContinueWithoutCreditDeclineAction</attributeName>
-         </featureAttributes>
-         <!--CDE Decline-->
-         <featureAttributes>
-            <attributeType>declineCodeMapping</attributeType>
-            <attributeName>4202|child-ng-components=ContinueWithoutCreditDeclineAction~child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
-         </featureAttributes>
          <!--CDE Available Actions-->
           <featureAttributes>
             <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
@@ -990,6 +970,15 @@
             <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
             <attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
           </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>ContinueWithoutCredit|child-ng-components=ContinueWithoutCreditDeclineAction</attributeName>
+         </featureAttributes>
+         <!--CDE Decline-->
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>4202|child-ng-components=ContinueWithoutCreditDeclineAction~child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
+         </featureAttributes>         
       </featureAttributeGroup>
    </features>
 
