@@ -23,8 +23,6 @@
       </productAttributes>
    </productAttributeGroup>
 
-
-
    <!--VerifyIdentity-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
@@ -85,7 +83,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
+         <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture~child-ng-components=EmploymentContactComponent</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -557,6 +555,11 @@
          <value>classname=za.co.nb.offermanagement.forex.decisioning.CreditOfferCODHandler</value>
       </productAttributes>
       <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanHandler_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
+      </productAttributes>
+      <productAttributes>
          <attributeName>CODHandler_ProductOffer</attributeName>
          <value>classname=za.co.nb.offermanagement.forex.decisioning.ProductOfferCODHandler</value>
       </productAttributes>
@@ -604,16 +607,21 @@
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
       </productAttributes>
 
-      <productAttributes>
+      <!--<productAttributes>
          <attributeType>string</attributeType>
          <attributeName>PricingPlanDiscriminator</attributeName>
          <value>BRAND</value>
-      </productAttributes>
+      </productAttributes>-->
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>PricingPlanDiscriminator</attributeName>
-         <value>CLIENT TYPE GROUPING</value>
+         <value>NONE</value>
       </productAttributes>
+      <!--<productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanDiscriminator</attributeName>
+         <value>CLIENT TYPE GROUPING</value>
+      </productAttributes>-->
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
