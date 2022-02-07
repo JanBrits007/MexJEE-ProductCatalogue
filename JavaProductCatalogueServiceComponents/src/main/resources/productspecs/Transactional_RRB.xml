@@ -166,6 +166,11 @@
          <attributeName>EnforceAgeValidationRules</attributeName>
          <value>true</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>includeNotTakenUpComponents</attributeName>
+         <value>false</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Communication config-->
@@ -257,8 +262,8 @@
          <attributeName>NotUnderCreditAdministrationV2</attributeName>
       </productAttributes>
       <productAttributes>
-         <attributeType>Compliance</attributeType>
-         <attributeName>ConsentEducationalQualification</attributeName>
+        <attributeType>Compliance</attributeType>
+        <attributeName>FinancialHealthConsent</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -423,7 +428,21 @@
 			<attributeType>string</attributeType>
 			<attributeName>GenericHandler_AppealWithoutLongForm</attributeName>
 			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
-		</productAttributes>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenericHandler_GenerateRevisedApplicationOfferProposals</attributeName>
+         <value>classname=GenerateRevisedApplicationOffer</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--GenerateRevisedApplicationOfferProposals-->
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_GenerateRevisedApplicationOfferProposals</attributeGroupName>
+      <productAttributes>
+         <attributeName>OfferHandler_GenerateRevisedApplicationOfferProposals</attributeName>
+         <value>lookup=PresentResetAlternateOffer</value> <!--reset arrangement and contract status to INITIATED"-->
+      </productAttributes>
    </productAttributeGroup>
 
    <!-- Case and Process Configuration -->

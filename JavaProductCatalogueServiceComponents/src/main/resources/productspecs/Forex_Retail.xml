@@ -183,8 +183,8 @@
    <productAttributeGroup>
       <attributeGroupName>RuleHandlers_GenerateRevisedApplicationOfferProposals</attributeGroupName>
       <productAttributes>
-         <attributeName>GNBAPhaseHandler_GenerateRevisedApplicationOfferProposals</attributeName>
-         <value>classname=PresentAlternateOffer</value> <!--appends "_PresentAlternateOffer" onto spec-->
+         <attributeName>OfferHandler_GenerateRevisedApplicationOfferProposals</attributeName>
+         <value>lookup=PresentAlternateOffer</value> <!--appends "_PresentAlternateOffer" onto spec-->
       </productAttributes>
    </productAttributeGroup>
 
@@ -583,6 +583,11 @@
          <attributeType>Forex</attributeType>
          <attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenericHandler_GenerateRevisedApplicationOfferProposals</attributeName>
+         <value>classname=GenerateRevisedApplicationOffer</value>
       </productAttributes>
       <productAttributes>
          <attributeName>DecisionTree_PresentAlternateOffer</attributeName>
