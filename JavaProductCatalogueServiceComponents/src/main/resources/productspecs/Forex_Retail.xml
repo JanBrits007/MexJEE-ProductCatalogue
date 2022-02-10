@@ -839,8 +839,28 @@
       <attributeGroupName>ProductSpecificCancelReasons</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>ProductSpecificCancelReasons</attributeName>
-         <value>I no longer require the account|The exchange rate is unfavourable|I do not have enough funds yet to fund the FCA|No reason|Other</value>
+         <attributeName>ProductSpecificCancelReason</attributeName>
+         <value>CR00|I no longer require the account</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ProductSpecificCancelReason</attributeName>
+         <value>CR01|The exchange rate is unfavourable</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ProductSpecificCancelReason</attributeName>
+         <value>CR02|I do not have enough funds yet to fund the FCA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ProductSpecificCancelReason</attributeName>
+         <value>CR03|No reason</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ProductSpecificCancelReason</attributeName>
+         <value>CR04|Other</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -1024,7 +1044,11 @@
          <attributeName>ProvisioningPhase</attributeName>
          <value>ArrangementFunding</value>
       </productAttributes>
-
+      <productAttributes>
+         <attributeType>flag</attributeType>
+         <attributeName>ProvisioningPhase</attributeName>
+         <value>CancelApplication</value>
+      </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>noFundsAlertIndicator</attributeName>
