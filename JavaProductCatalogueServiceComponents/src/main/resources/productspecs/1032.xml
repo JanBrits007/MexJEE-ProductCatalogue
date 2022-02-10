@@ -69,6 +69,28 @@
 			<value>CreditCard_Retail_1032_Simulation</value>
 		</productAttributes>
 	</productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationMerchantSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Merchant_1032</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>LimitIncreaseMerchantSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Merchant_1032</value>
+        </productAttributes>
+    </productAttributeGroup>
 
 	<productAttributeGroup>
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
