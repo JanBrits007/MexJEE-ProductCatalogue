@@ -1,0 +1,36 @@
+<product inheritFromFiles="Overdraft" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+   <productIdentifier>1176</productIdentifier>
+   <name>RRB Overdraft</name>
+   <shortDescription>(Overdraft_RRB_1176) RRB Overdraft Specification</shortDescription>
+
+   <!--GenerateOfferGatherProductDetails-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>TransactionalProductSelection|ng-component=RRBTransactionalProductSelectionComponent~ZOrder=100</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>OverdraftProductDetails|ng-component=RRBOverdraftProductDetailsComponent~ZOrder=90~1021_min=5000.00~1021_max=300000.00~1400_min=2000.00~1400_max=300000.00~1108_min=5000.00~1108_max=300000.00~1476_min=2000.00~1476_max=300000.00~1478_min=10000.00~1478_max=300000.00~min=5000.00~max=300000.00~additionalInfo=true~1389_min=500.00~1389_max=250000.00~1019_min=500.00~1019_max=250000.00~1354_min=500.00~1354_max=250000.00~1474_min=2000.00~1474_max=250000.00~1015_min=500.00~1015_max=250000.00</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--Evidence And Compliance Requirements-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>LatestBankStatementsClauseV2</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>AdditionalDocument</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+   </productAttributeGroup>
+
+</product>
