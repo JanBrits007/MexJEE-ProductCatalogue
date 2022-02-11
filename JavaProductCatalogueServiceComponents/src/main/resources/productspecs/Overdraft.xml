@@ -1,0 +1,219 @@
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+   <productIdentifier>1005</productIdentifier>
+   <name>Base Overdraft Specification</name>
+   <shortDescription>Base Overdraft Specification</shortDescription>
+
+   <!--GenerateOfferVerifyEligibility-->
+   <productAttributeGroup>
+      <attributeGroupName>EligibilityHandler</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_PrepareApplicant</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--VerifyIdentity-->
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--GenerateOfferGatherProductDetails-->
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+      <!--RRB and Retail are specialised at this level-->
+   </productAttributeGroup>
+
+   <!--Evidence And Compliance Requirements-->
+   <productAttributeGroup>
+      <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>We need proof of your identity in the form of: South African bar-coded identity card or document, or passport and work permit.</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>RequiredCompliance</attributeGroupName>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>FICA</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>POPIConsent</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>PersonalInformationProcessingConsent</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FinancialHealthConsent</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>RequiredCompliance_GenerateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FraudCheckConsent</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FaisDeclaration</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FAISComplianceConfirmation</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!-- Case and Process Configuration -->
+   <productAttributeGroup>
+      <attributeGroupName>EligibilityRules</attributeGroupName>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Age</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>18</minValue>
+         <maxValue>999</maxValue>
+         <valueUnit>year</valueUnit>
+         <description>be 18 years or older</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Income</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>0</minValue>
+         <maxValue>99999999</maxValue>
+         <valueUnit>ZAR</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>NaturalPerson</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>CreditApproval</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>NotUnderCreditAdministration</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EligibleDCARRanges</attributeName>
+         <value>0-100000|100001-200000</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EligibleSegments</attributeName>
+         <value>${{RetailEligibleSegments}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>InitialiseCaseRuleHandlers</attributeName>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.sales.InitialiseBusinessCaseSalesTracking</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>CaseConfiguration</attributeGroupName>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_All</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+
+   <productAttributeGroup>
+      <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
+         <value>5</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>ApplicationEndToEndExecutionTimeMinutes</attributeName>
+         <value>90</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAVersion</attributeName>
+         <value>2.0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>consumerFrameworkVersion</attributeName>
+         <value>2.0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>requiresGoodForCreditLeadCheck</attributeName>
+         <value>false</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>DecisioningControl</attributeGroupName>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>ComponentSupportsDeclineReasons</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>EnforceSingleOverdraftRule</attributeName>
+         <value>true</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--Decline Configuration-->
+   <productAttributeGroup inheritFromFiles="BaseProduct">
+      <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+   </productAttributeGroup>
+
+</product>
