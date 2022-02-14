@@ -453,6 +453,32 @@
    </productAttributeGroup>
 
    <!--Offer Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>PresentOfferSelection</attributeGroupName>
+      <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>OfferSelectionSummaryDetails</attributeName>
+            <value>AlternateProductOfferSelection|ng-component=AlternateProductsComponent~ZOrder=100</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1021~Transactional_RRB_1021</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1400~Transactional_RRB_1400</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1108~Transactional_RRB_1108</value>
+		</productAttributes>
+	</productAttributeGroup>
    
   <!--Overdraft feature -->
    <features>
@@ -978,6 +1004,10 @@
           <featureAttributes>
             <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
             <attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>SelectAlternateTP|child-ng-components=AlternateProductsDeclineAction</attributeName>
           </featureAttributes>
          <!--CDE Decline-->
          <featureAttributes>
