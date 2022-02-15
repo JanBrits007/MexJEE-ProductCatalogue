@@ -1,0 +1,24 @@
+<product inheritFromFiles="Transactional_Retail" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+   <productIdentifier>Transactional_Retail_TP20</productIdentifier>
+   <name>Transactional Retail TP20</name>
+   <shortDescription>Generic retail transactional with TP2.0 updates product to be inherited from</shortDescription>
+
+
+   <!--VerifyIdentity-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~child-ng-components=AddressDetails~child-ng-components=IncomeDetails~ProceduralStepName=Your income details~ZOrder=100</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+</product>
