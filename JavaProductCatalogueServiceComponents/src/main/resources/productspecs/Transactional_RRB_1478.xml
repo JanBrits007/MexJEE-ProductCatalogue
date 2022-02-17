@@ -21,7 +21,7 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>      
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>CardDeliveryDetails|ng-component=DeliveryCardWidgetComponent~child-ng-components=ng-card-collection-available~child-ng-components=DeliveryCardWidgetComponent-available~ProceduralStepName=Getting your cards~ZOrder=170~removeTemporaryCard=true~ContractComponentProductType=1164</attributeName>
+         <attributeName>CardDeliveryDetails|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170~removeTemporaryCard=true~ContractComponentProductType=1164</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -437,7 +437,24 @@
    </productAttributeGroup>
 
    <!--Offer Configuration-->
-   
+   <productAttributeGroup>
+		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1021~Transactional_RRB_1021</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1400~Transactional_RRB_1400</value>
+		</productAttributes>
+        <productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
+			<value>1108~Transactional_RRB_1108</value>
+		</productAttributes>
+	</productAttributeGroup>   
 
    <!--Overdraft feature -->
    <features>
@@ -961,6 +978,10 @@
           <featureAttributes>
             <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
             <attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>SelectAlternateTP|child-ng-components=AlternateProductsDeclineAction</attributeName>
           </featureAttributes>
          <!--CDE Decline-->
          <featureAttributes>
