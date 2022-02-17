@@ -8,11 +8,11 @@
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>TransactionalProductSelection|ng-component=RRBTransactionalProductSelectionComponent~ZOrder=100</attributeName>
+         <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~1021_min=5000.00~1021_max=300000.00~1400_min=2000.00~1400_max=300000.00~1108_min=5000.00~1108_max=300000.00~1476_min=2000.00~1476_max=300000.00~1478_min=10000.00~1478_max=300000.00~min=5000.00~max=300000.00~additionalInfo=true~1389_min=500.00~1389_max=250000.00~1019_min=500.00~1019_max=250000.00~1354_min=500.00~1354_max=250000.00~1474_min=2000.00~1474_max=250000.00~1015_min=500.00~1015_max=250000.00</attributeName>
       </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OverdraftProductDetails|ng-component=RRBOverdraftProductDetailsComponent~ZOrder=90~1021_min=5000.00~1021_max=300000.00~1400_min=2000.00~1400_max=300000.00~1108_min=5000.00~1108_max=300000.00~1476_min=2000.00~1476_max=300000.00~1478_min=10000.00~1478_max=300000.00~min=5000.00~max=300000.00~additionalInfo=true~1389_min=500.00~1389_max=250000.00~1019_min=500.00~1019_max=250000.00~1354_min=500.00~1354_max=250000.00~1474_min=2000.00~1474_max=250000.00~1015_min=500.00~1015_max=250000.00</attributeName>
+       <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -30,6 +30,26 @@
          <attributeName>AdditionalDocument</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!-- Intent sequence mapping -->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeIntentSequence</attributeName>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Authenticate|Product Setup|About You|Customise|Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup</value>
       </productAttributes>
    </productAttributeGroup>
 
