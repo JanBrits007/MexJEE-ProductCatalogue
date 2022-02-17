@@ -3,6 +3,16 @@
    <name>Edge Premium</name>
    <shortDescription>Routing Spec for Edge</shortDescription>
 
+   <!--Initialization Handler-->
+   <productAttributeGroup>
+      <attributeGroupName>CaseConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ArrangementBundleCaseHandler</attributeName>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--Substitution and Routing Rules-->
    <productAttributeGroup>
       <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
@@ -12,17 +22,6 @@
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{dynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_TP20_3021</value>
-      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
