@@ -2,21 +2,15 @@ package za.co.nb.productcatalogue.rules.handlers;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.json.simple.JSONObject;
 
-import za.co.nb.common.htpp.client.HttpClientUtil;
 import za.co.nb.onboarding.casemanagement.BusinessCaseManagementDAO;
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseSegment;
 import za.co.nb.productcatalogue.exceptions.BusinessRuleExecutionException;
-import za.co.nb.system.config.dao.SystemConfiguratorDAO;
-import za.co.nb.system.config.environment.Environment;
-
-import java.util.HashMap;
 
 public class RuleHandler1176 extends BaseProductSpecificationRuleHandler {
 
-    private final Log mLog = LogFactory.getLog(getClass());
+    private static final Log mLog = LogFactory.getLog(BaseProductSpecificationRuleHandler.class);
 
     /*@Override
     public String executeBusinessRules(String productIDToSubstitute, String caseID) throws BusinessRuleExecutionException {

@@ -5,7 +5,6 @@ import java.util.Map;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import za.co.nb.configuration.environment.EnvironmentValue;
 import za.co.nb.onboarding.casemanagement.BusinessCaseManagementDAO;
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 import za.co.nb.productcatalogue.dao.ArrangementMetricsDAO;
@@ -13,7 +12,7 @@ import za.co.nb.productcatalogue.rules.handlers.BaseProductSpecificationRuleHand
 
 public class ProductSpecificationSubstitutionUtil {
 
-    private final Log mLog = LogFactory.getLog(getClass());
+    private static final Log mLog = LogFactory.getLog(ProductSpecificationSubstitutionUtil.class);
 
     private BaseProductSpecificationRuleHandler getProductSubstitutionRuleHandler(String productSpecificationID) {
 	    mLog.debug("Trace 1 >>" + productSpecificationID + "<<");
@@ -93,7 +92,7 @@ public class ProductSpecificationSubstitutionUtil {
             return productIDToSubstitute;
         } catch(Exception e) {
             mLog.debug("Trace 6");
-        	e.printStackTrace();
+            mLog.error("", e);
 
         	// Got a problem. Fallback to no substitution.
 			return productSpecificationID;
@@ -131,7 +130,7 @@ public class ProductSpecificationSubstitutionUtil {
             	productSubstitutionID = ruleHandler.executeBusinessRules(productSpecificationID, caseID);
             }
             catch(Exception e) {
-            	e.printStackTrace();
+                mLog.error("", e);
             	
             	// Something went wrong. Don't break JO. Fallback to their product ID.
             	productSubstitutionID = new String(productSpecificationID);

@@ -69,6 +69,28 @@
 			<value>CreditCard_Retail_1032_Simulation</value>
 		</productAttributes>
 	</productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationMerchantSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Merchant_1032</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>LimitIncreaseMerchantSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Merchant_1032</value>
+        </productAttributes>
+    </productAttributeGroup>
 
 	<productAttributeGroup>
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
@@ -220,16 +242,11 @@
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
 		<productAttributes>
-			<attributeType>DocumentDescription</attributeType>
+			<attributeType>Evidence</attributeType>
 			<attributeName>Certificate of Loss of Nationality|N/A|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|Certificate of Loss of Nationality</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>WetSign</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>bool</valueUnit>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -451,16 +468,6 @@
 		</productAttributes>
 		<productAttributes>
          	<attributeType>string</attributeType>
-         	<attributeName>DEAStatementBUID</attributeName>
-         	<value>3fbf9238-9fca-46f3-8967-bc236103478c</value>
-        </productAttributes>
-		<productAttributes>
-         	<attributeType>string</attributeType>
-         	<attributeName>DEAStatementBUID_PROD</attributeName>
-         	<value>4ec5bd70-2670-49ba-a139-15eb30c8e79a</value>
-        </productAttributes>
-		<productAttributes>
-         	<attributeType>string</attributeType>
          	<attributeName>ArrangementMandatoryAPO</attributeName>
          	<value>T2|T3</value>
         </productAttributes>
@@ -627,6 +634,14 @@
 			<attributeType>string</attributeType>
 			<attributeName>RequiredDataFilter_ActivateProducts</attributeName>
 			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementMandatoryAPOFilter</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>PartyConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredDataFilter_GatherEvidence</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.PartyLONFilter</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>

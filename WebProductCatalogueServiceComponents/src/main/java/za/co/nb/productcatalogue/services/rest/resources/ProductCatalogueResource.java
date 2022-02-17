@@ -28,7 +28,7 @@ import java.util.Date;
 @Stateless
 public class ProductCatalogueResource {
 
-	private final Log mLog = LogFactory.getLog(getClass());
+	private static final Log mLog = LogFactory.getLog(ProductCatalogueResource.class);
 
 	@Inject
     ProductCatalogueCache productCatalogueCache;
@@ -84,7 +84,7 @@ public class ProductCatalogueResource {
 
     	}
     	catch(Exception e) {
-    		e.printStackTrace();
+            mLog.error("", e);
             return Response.status(Status.INTERNAL_SERVER_ERROR).build();
     	}
     }

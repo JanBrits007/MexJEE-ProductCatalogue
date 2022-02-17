@@ -84,6 +84,14 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
+        <attributeGroupName>PartyConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredDataFilter_GatherEvidence</attributeName>
+            <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.PartyLONFilter</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>productInformationRequirement</attributeType>
@@ -363,6 +371,26 @@
             <attributeName>provisionInBranch</attributeName>
             <value>false</value>
         </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>mdmAdminFieldType</attributeName>
+            <value>1011</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>mdmSubProductCode</attributeName>
+            <value>1220</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>mdmAdminSystemType</attributeName>
+            <value>1021</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>mdmAccountRoleType</attributeName>
+            <value>1046</value>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>RequiredCompliance</attributeGroupName>
@@ -399,14 +427,12 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
-        <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
+        <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
         <productAttributes>
-            <attributeType>DocumentDescription</attributeType>
+            <attributeType>Evidence</attributeType>
             <attributeName>Certificate of Loss of Nationality|N/A|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|Certificate of Loss of Nationality</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>WetSign</attributeName>
+            <isComparable>false</isComparable>
+            <valueUnit>bool</valueUnit>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -532,6 +558,50 @@
             <attributeName>ElectronicallySign</attributeName>
         </productAttributes>
     </productAttributeGroup>
+
+    <!-- Process Audit Report -->
+    <productAttributeGroup>
+        <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subNedbankLogo</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subCaseAuditData</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subFinancialDetailsAuditData</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subEvidenceAuditData</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subClientAuditData</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subAdditionalClientInfo</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subInvestment|ContractComponentProductType=1199</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
     <productAttributeGroup>
         <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
         <productAttributes>

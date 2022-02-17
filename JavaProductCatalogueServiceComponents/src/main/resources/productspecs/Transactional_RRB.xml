@@ -64,7 +64,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=NoFeeTransactionalProductAccountDetails~ZOrder=50~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-219~GetInTouch=true~child-ng-components=LocateBranchComponent~child-ng-components=ContactUsComponent~child-ng-components=CallMeBackComponent~child-ng-components=BankerDetailComponent~child-ng-components=CompleteCaseComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=FatcaTinValidationComponent~ProceduralStepName=You're all set!</attributeName>
+         <attributeName>YoureDone|ng-component=YouAreDoneComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=NoFeeTransactionalProductAccountDetails~ZOrder=50~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-219~GetInTouch=true~child-ng-components=LocateBranchComponent~child-ng-components=ContactUsComponent~child-ng-components=CallMeBackComponent~callMeBackUrl=PRIVATE_BANKING_CMB_URL~child-ng-components=BankerDetailComponent~child-ng-components=CompleteCaseComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=FatcaTinValidationComponent~ProceduralStepName=You're all set!</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -168,8 +168,8 @@
       </productAttributes>
       <productAttributes>
          <attributeType>boolean</attributeType>
-         <attributeName>IgnoreTakenUp</attributeName>
-         <value>true</value>
+         <attributeName>includeNotTakenUpComponents</attributeName>
+         <value>false</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -259,11 +259,15 @@
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Compliance</attributeType>
-         <attributeName>NotUnderCreditAdministrationV2</attributeName>
+         <attributeName>PersonalInformationProcessingConsent</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>Compliance</attributeType>
-         <attributeName>ConsentEducationalQualification</attributeName>
+         <attributeName>NotUnderCreditAdministrationV2</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>Compliance</attributeType>
+        <attributeName>FinancialHealthConsent</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -274,11 +278,6 @@
 
    <productAttributeGroup action="overwrite">
       <attributeGroupName>RequiredCompliance_GenerateOffer</attributeGroupName>
-   </productAttributeGroup>
-
-   <!--Offer Configuration-->
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>PresentOfferSelection</attributeGroupName>
    </productAttributeGroup>
 
     <!--Arrangement configuration-->
@@ -296,7 +295,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_FinancialDetails</attributeName>
+         <attributeName>RequiredDataFilter_FinancialExtendedDetails</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementIncomeExpenseFilterV2</value>
       </productAttributes>
       <productAttributes>
@@ -349,6 +348,16 @@
          <attributeName>RequiredDataFilter_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementAgeDeclineFilter</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_PresentOffer</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFinancialSummaryFilter</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>RequiredDataFilter_PresentOffer</attributeName>
+        <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Decline Configuration-->
@@ -357,7 +366,7 @@
       <productAttributes>
          <attributeType>Boolean</attributeType>
          <attributeName>SkipGenerateOfDeclineWorkItem</attributeName>
-         <value>True</value>
+         <value>False</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -386,8 +395,8 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>CODHandler_FinancialDetails</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.v3.CreditCardUpfrontOfferCODHandler</value>
+         <attributeName>CODHandler_FinancialExtendedDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.v3.RRBUpfrontOfferCODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -397,7 +406,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Recalculate</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.v3.CreditCardRecalcCODHandler</value>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.v3.RRBRecalcCODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -407,7 +416,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Intent3</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.v3.CreditCardFinalAssessmentCODHandler</value>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.v3.RRBFinalAssessmentCODHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -418,6 +427,25 @@
          <attributeType>string</attributeType>
          <attributeName>CaptureFinancialDetails_FinaliseCase</attributeName>
          <value>classname=za.co.nb.onboarding.product.phaserules.handlers.financialdetails.FinaliseCaseFinancialDetailsRuleHandler</value>
+      </productAttributes>
+      <productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GenericHandler_AppealWithoutLongForm</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenericHandler_GenerateRevisedApplicationOfferProposals</attributeName>
+         <value>classname=GenerateRevisedApplicationOffer</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--GenerateRevisedApplicationOfferProposals-->
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_GenerateRevisedApplicationOfferProposals</attributeGroupName>
+      <productAttributes>
+         <attributeName>OfferHandler_GenerateRevisedApplicationOfferProposals</attributeName>
+         <value>lookup=PresentResetAlternateOffer</value> <!--reset arrangement and contract status to INITIATED"-->
       </productAttributes>
    </productAttributeGroup>
 
@@ -465,6 +493,11 @@
          <value>true</value>
       </productAttributes>
       <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>requiresConfirmVerificationQualitySignatureTypeCheck</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
          <attributeType>String</attributeType>
          <attributeName>HandleProvisioningFailureTeamName</attributeName>
          <value>BPM Admin</value>
@@ -497,7 +530,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>baseCBOActivityList</attributeName>
-         <value>ConfigureArrangement|CBOFinalizeCase</value>
+         <value>ConfigureArrangement|ConfirmVerificationQuality|CBOFinalizeCase</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -543,6 +576,16 @@
     <!--Initialisation config-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>InitialisationConfiguration</attributeGroupName>
+   </productAttributeGroup>
+
+   <!--Offer Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>PresentOfferSelection</attributeGroupName>
+      <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>OfferSelectionSummaryDetails</attributeName>
+            <value>ProductListing|ng-component=ProductListingComponent~ZOrder=100</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--RRB TP feature-->

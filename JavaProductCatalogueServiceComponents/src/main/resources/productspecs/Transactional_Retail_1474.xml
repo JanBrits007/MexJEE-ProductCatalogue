@@ -12,6 +12,14 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1474</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--Document Configuration-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
@@ -104,7 +112,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>productTargetType</attributeName>
-         <value>CA</value>
+         <value>${{TransactionalProductTargetType}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>boolean</attributeType>
@@ -171,6 +179,11 @@
          <attributeName>noFundsAlertIndicator</attributeName>
          <value>1</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>splitCAMSCall</attributeName>
+         <value>true</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productCodeMappings</attributeGroupName>
@@ -190,6 +203,7 @@
          <value>000</value>
       </productAttributes>
    </productAttributeGroup>
+
 
    <!--Offer Configuration-->
    <productAttributeGroup action="overwrite">

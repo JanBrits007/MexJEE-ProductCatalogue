@@ -15,9 +15,15 @@ import java.util.regex.Pattern;
 
 public abstract class AbstractRate {
 
-    private final Log mLog = LogFactory.getLog(getClass());
+    private static final Log mLog = LogFactory.getLog(AbstractRate.class);
 
-    private static List<String> productIDs = new ArrayList<String>();
+    private static final Pattern UPPER_RATE_PATTERN = Pattern.compile("\\%upperRate.*?\\%");
+    private static final Pattern LOWER_RATE_PATTERN = Pattern.compile("\\%lowerRate.*?\\%");
+    private static final Pattern DEC_UPPER_RATE = Pattern.compile("\\%upperRateDec.*?\\%");
+    private static final Pattern DEC_LOWER_RATE = Pattern.compile("\\%lowerRateDec.*?\\%");
+    private static final Pattern BASE_RATE_PATTERN = Pattern.compile("\\%baseRate.*?\\%");
+
+    private static final List<String> productIDs = new ArrayList<>();
 
     static {
         productIDs.add("1126");
@@ -51,8 +57,7 @@ public abstract class AbstractRate {
             // Handle upper rates.
             // Find the upper rate markers.
             // Check whether there are any resource file references to replace.
-            Pattern pattern = Pattern.compile("\\%upperRate.*?\\%");
-            Matcher matcher = pattern.matcher(hierarchyJSONString);
+            Matcher matcher = UPPER_RATE_PATTERN.matcher(hierarchyJSONString);
 
             double rate = 0.0;
 
@@ -80,14 +85,14 @@ public abstract class AbstractRate {
                 mLog.debug("Trace 6 >>" + hierarchyJSONString + "<<");
 
                 // Reset the matcher on the updated data.
-                matcher = pattern.matcher(hierarchyJSONString);
+                matcher = UPPER_RATE_PATTERN.matcher(hierarchyJSONString);
             }
 
             // Handle lower rates.
             // Find the lower rate markers.
             // Check whether there are any resource file references to replace.
-            pattern = Pattern.compile("\\%lowerRate.*?\\%");
-            matcher = pattern.matcher(hierarchyJSONString);
+            
+            matcher = LOWER_RATE_PATTERN.matcher(hierarchyJSONString);
 
             rate = 0.0;
 
@@ -115,7 +120,7 @@ public abstract class AbstractRate {
                 mLog.debug("Trace 8 >>" + hierarchyJSONString + "<<");
 
                 // Reset the matcher on the updated data.
-                matcher = pattern.matcher(hierarchyJSONString);
+                matcher = LOWER_RATE_PATTERN.matcher(hierarchyJSONString);
             }
 
             mLog.debug("Trace 9 >>" + hierarchyJSONString + "<<");
@@ -123,7 +128,7 @@ public abstract class AbstractRate {
             return hierarchyJSONString;
         }
         catch(Exception e) {
-            e.printStackTrace();
+            mLog.error("", e);
 
             // It's gone pear shaped.
             return originalHierarchyJSONString;
@@ -154,8 +159,7 @@ public abstract class AbstractRate {
             // Handle upper rates.
             // Find the upper rate markers.
             // Check whether there are any resource file references to replace.
-            Pattern pattern = Pattern.compile("\\%upperRateDec.*?\\%");
-            Matcher matcher = pattern.matcher(hierarchyJSONString);
+            Matcher matcher = DEC_UPPER_RATE.matcher(hierarchyJSONString);
 
             double rate = 0.0;
 
@@ -192,14 +196,14 @@ public abstract class AbstractRate {
                 mLog.debug("Trace 13 >>" + hierarchyJSONString + "<<");
 
                 // Reset the matcher on the updated data.
-                matcher = pattern.matcher(hierarchyJSONString);
+                matcher = DEC_UPPER_RATE.matcher(hierarchyJSONString);
             }
 
             // Handle lower rates.
             // Find the lower rate markers.
             // Check whether there are any resource file references to replace.
-            pattern = Pattern.compile("\\%lowerRateDec.*?\\%");
-            matcher = pattern.matcher(hierarchyJSONString);
+
+            matcher = DEC_LOWER_RATE.matcher(hierarchyJSONString);
 
             rate = 0.0;
 
@@ -236,7 +240,7 @@ public abstract class AbstractRate {
                 mLog.debug("Trace 13 >>" + hierarchyJSONString + "<<");
 
                 // Reset the matcher on the updated data.
-                matcher = pattern.matcher(hierarchyJSONString);
+                matcher = DEC_LOWER_RATE.matcher(hierarchyJSONString);
             }
 
             mLog.debug("Trace 14 >>" + hierarchyJSONString + "<<");
@@ -244,7 +248,7 @@ public abstract class AbstractRate {
             return hierarchyJSONString;
         }
         catch(Exception e) {
-            e.printStackTrace();
+            mLog.error("", e);
 
             // It's gone pear shaped.
             return originalHierarchyJSONString;
@@ -281,7 +285,7 @@ public abstract class AbstractRate {
             return investmentRatesMap;
         }
         catch (Exception e) {
-            e.printStackTrace();
+            mLog.error("", e);
             throw new Exception("Service to Retrieve Product Interest Rates Failed.");
         }
     }
@@ -299,8 +303,8 @@ public abstract class AbstractRate {
             // Find the baseRate markers.
             // Check whether there are any resource file references to replace.
             // %baseRate + 2.3%
-            Pattern pattern = Pattern.compile("\\%baseRate.*?\\%");
-            Matcher matcher = pattern.matcher(hierarchyJSONString);
+
+            Matcher matcher = BASE_RATE_PATTERN.matcher(hierarchyJSONString);
 
             String variableRate = "N/A";
             double rate = 0.0;
@@ -359,7 +363,7 @@ public abstract class AbstractRate {
                 mLog.debug("Trace 8 >>" + hierarchyJSONString + "<<");
 
                 // Reset the matcher on the updated data.
-                matcher = pattern.matcher(hierarchyJSONString);
+                matcher = BASE_RATE_PATTERN.matcher(hierarchyJSONString);
             }
 
             mLog.debug("Trace 9 >>" + hierarchyJSONString + "<<");
@@ -367,7 +371,7 @@ public abstract class AbstractRate {
             return hierarchyJSONString;
         }
         catch(Exception e) {
-            e.printStackTrace();
+            mLog.error("", e);
 
             // It's gone pear shaped.
             return originalHierarchyJSONString;

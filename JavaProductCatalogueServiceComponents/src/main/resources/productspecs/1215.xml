@@ -1,6 +1,70 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1215</productIdentifier>
 	<name>Small Business Credit Card</name>
+
+	<productAttributeGroup>
+		<attributeGroupName>CaseConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>ArrangementBundleCaseHandler</attributeName>
+			<value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<productAttributeGroup>
+		<attributeGroupName>EligibilityHandler</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_GenerateOffer</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_PrepareApplicant</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Substitution rules for EDB v2-->
+	<productAttributeGroup>
+		<attributeGroupName>SubstitutionRulesETE</attributeGroupName>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>SubstitutionRulesQA</attributeGroupName>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+			<value>${{EDBPhase2dynamicStaffList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>CreditCard_Retail_1215_Simulation</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>LimitIncreaseSubstitutionRulesETE</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+			<value>${{EDBPhase2dynamicStaffList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>CreditCard_Retail_1215_Simulation</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+
+
 	<productAttributeGroup>
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
 		<productAttributes>
@@ -148,18 +212,14 @@
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
 		<productAttributes>
-			<attributeType>DocumentDescription</attributeType>
+			<attributeType>Evidence</attributeType>
 			<attributeName>Certificate of Loss of Nationality|N/A|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|Certificate of Loss of Nationality</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>AvailableAction</attributeType>
-			<attributeName>WetSign</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>bool</valueUnit>
 		</productAttributes>
 	</productAttributeGroup>
+
 	<productAttributeGroup>
 		<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
 		<productAttributes>
@@ -379,16 +439,6 @@
         </productAttributes>
 		<productAttributes>
          	<attributeType>string</attributeType>
-         	<attributeName>DEAStatementBUID</attributeName>
-         	<value>3fbf9238-9fca-46f3-8967-bc236103478c</value>
-        </productAttributes>
-		<productAttributes>
-         	<attributeType>string</attributeType>
-         	<attributeName>DEAStatementBUID_PROD</attributeName>
-         	<value>4ec5bd70-2670-49ba-a139-15eb30c8e79a</value>
-        </productAttributes>
-		<productAttributes>
-         	<attributeType>string</attributeType>
          	<attributeName>ArrangementMandatoryAPO</attributeName>
          	<value>T2|T3</value>
         </productAttributes>
@@ -543,6 +593,14 @@
 			<attributeType>string</attributeType>
 			<attributeName>ComplianceDocumentFilter_ActivateProducts</attributeName>
 			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFatcaComplianceFilter</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>PartyConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredDataFilter_GatherEvidence</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.PartyLONFilter</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>

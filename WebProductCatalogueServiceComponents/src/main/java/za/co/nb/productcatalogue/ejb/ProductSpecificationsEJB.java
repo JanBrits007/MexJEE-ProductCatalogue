@@ -14,7 +14,6 @@ import za.co.nb.productcatalogue.ejb.substitution.Subnet;
 import za.co.nb.productcatalogue.ejb.substitution.Substitution;
 import za.co.nb.productcatalogue.ejb.util.ProductTypeLoader;
 import za.co.nb.productcatalogue.ejb.util.RawSpecString;
-import za.co.nb.productcatalogue.exception.InvalidAttributeException;
 import za.co.nb.productcatalogue.exception.InvalidAttributeGroupException;
 import za.co.nb.productcatalogue.util.ProductSpecificationSubstitutionUtil;
 import za.co.nb.productcatalogue.util.ProductSpecificationUtil;
@@ -50,13 +49,13 @@ import java.util.List;
 @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
 public class ProductSpecificationsEJB implements ProductSpecificationsServiceRemoteInterface {
 
-    private final Log mLog = LogFactory.getLog(getClass());
+    private static final Log mLog = LogFactory.getLog(ProductSpecificationsEJB.class);
 
     private static final boolean ENABLE_XSD_VALIDATION = false;
-    private static final String DYNAMIC_STAFF_MARkER = "${{dynamicStaffList}}";
+    private static final String DYNAMIC_STAFF_MARKER = "${{dynamicStaffList}}";
 
     private IJuristicProductSpecifications juristicProductSpecificationsRemote;
-    private ProductTypeLoader productTypeInheritanceLoader = new ProductTypeLoader();
+    private final ProductTypeLoader productTypeInheritanceLoader = new ProductTypeLoader();
     private final ProductSpecificationUtil specUtil = new ProductSpecificationUtil();
 
     @EJB
@@ -222,7 +221,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 }
             }
         }catch (Exception e){
-            e.printStackTrace();
+            mLog.error("", e);
             throw new RuntimeException("Failed to execute MultiSubstitution rules, reason:"+e.getMessage(), e);
         }
 
@@ -241,7 +240,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             return String.valueOf(productSpec.getProductIdentifier());
 
         }catch (Exception e){
-            e.printStackTrace();
+            mLog.error("", e);
             throw new RuntimeException("Failed to execute MultiSubstitution rules, reason:"+e.getMessage(), e);
         }
 
@@ -346,11 +345,15 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                         String[] channelID = substitution.getType().split("\\|");
                         ((Channel) substitution).getChannelIDWhitelist().addAll(Arrays.asList(channelID));
                     }else if(productAttribute.getAttributeName().equalsIgnoreCase("SubstituteForProductID")){
-                        substitution.setProductId(productAttribute.getValue());
+                        if(substitution != null)
+                            substitution.setProductId(productAttribute.getValue());
+
                         break;
                     }
                 }
-                substitutions.add(substitution);
+
+                if(substitution != null)
+                    substitutions.add(substitution);
             });
 
         }catch (InvalidAttributeGroupException iae){}
@@ -560,7 +563,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                             .forEach(productAttributes -> {
 
                               if(productAttributes.getAttributeName().equals( "SubstituteForWhiteListedNBNumbers") &&
-                                      productAttributes.getValue().contains(DYNAMIC_STAFF_MARkER)){
+                                      productAttributes.getValue().contains(DYNAMIC_STAFF_MARKER)){
 
                                   String staffList = dynamicWhitelistBean.getStaffList(productId);
                                     mLog.debug("staffList:" + staffList);
@@ -576,7 +579,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
         productType.getProductAttributeGroup().forEach(productAttributeGroupType ->
             productAttributeGroupType.getProductAttributes().forEach(productAttributesType -> {
-                if(productAttributesType.getValue() != null && !productAttributesType.getValue().contains(DYNAMIC_STAFF_MARkER)) {
+                if(productAttributesType.getValue() != null && !productAttributesType.getValue().contains(DYNAMIC_STAFF_MARKER)) {
                     if (productAttributesType.getValue().contains("${{")) {
 
                         mLog.debug("find [productAttributesType] dynamic value:" + productAttributesType.getValue());
@@ -689,7 +692,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
             return new RawSpecString(false, XMLSpec);
         } catch (IOException e) {
-            e.printStackTrace();
+            mLog.error("", e);
             throw new Exception("Unable to find specification XML file for product ID " + productID);
         }
     }
@@ -725,11 +728,11 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 dao.getProductSpecificationXMLByID(productIDs);
                 dao.getProductSpecificationXMLByID(productIDs);
             } catch (Exception e1) {
-                e1.printStackTrace();
+                mLog.error("", e1);
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            mLog.error("", e);
         }
     }
 
