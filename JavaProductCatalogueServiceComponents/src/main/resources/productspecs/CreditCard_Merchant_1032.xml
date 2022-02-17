@@ -11,11 +11,18 @@
 			<attributeName>PrepareApplicant|ng-component=GenericProcessStartPageComponent~ZOrder=300~HideProceduralStep=true</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-
+	
 	<!--GenerateOfferGatherProductDetails-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-		<!--this is overwritten here so that we remove the widgets but still run the GNBA phase-->
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=2000</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--GenerateOfferGatherClientDetails-->
@@ -51,6 +58,7 @@
 			<attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
+
 
 	<!--Case and Process Configuration-->
 	<productAttributeGroup action="overwrite">
