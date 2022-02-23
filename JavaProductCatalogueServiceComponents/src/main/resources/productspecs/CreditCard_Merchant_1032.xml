@@ -15,14 +15,7 @@
 	<!--GenerateOfferGatherProductDetails-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=2000</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
-		</productAttributes>
+		<!--this is overwritten here so that we remove the widgets but still run the GNBA phase-->
 	</productAttributeGroup>
 
 	<!--GenerateOfferGatherClientDetails-->
@@ -58,7 +51,6 @@
 			<attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-
 
 	<!--Case and Process Configuration-->
 	<productAttributeGroup action="overwrite">
@@ -119,165 +111,6 @@
 			<valueUnit>bool</valueUnit>
 		</productAttributes>
 	</productAttributeGroup>
-
-
-	<!--Case and Process Configuration-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>CaseConfiguration</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CDE_SimulationETE</attributeName>
-			<value>${{CDE_Simulation}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_WebDecisionEngine</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.internal.DecisionEngineCODHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_Intent1</attributeName>
-			<value>${{CreditCard_Gold_Intent1CODHandler}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_FinancialExtendedDetails</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.internal.FinancialExtendedDetailsHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_CreditOffer</attributeName>
-			<value>${{CreditCard_Gold_CreditOfferCODHandler}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_ProductOffer</attributeName>
-			<value>${{CreditCard_Gold_ProductOfferCODHandler}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_Intent3</attributeName>
-			<value>${{CreditCard_Gold_Intent3CODHandler}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_Intent4</attributeName>
-			<value>${{CreditCard_Gold_Intent4CODHandler}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>PricingPlanHandler_GenerateOffer</attributeName>
-			<value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_Recalculate</attributeName>
-			<value>${{CreditCard_Gold_RecalcCODHandler}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>DataMiningHandler</attributeName>
-			<value>classname=za.co.nb.onboarding.product.datamining.handlers.retail.RetailDataMiningHandler</value>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--Offer Configuration-->
-	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
-		<attributeGroupName>VASCrossSellControl</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1454</attributeName><!--Greenbacks-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1333</attributeName><!--Greenbacks Shop Card-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1099</attributeName><!--Credit Card Insurance-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1447</attributeName><!--Own Credit Insurance-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
-		</productAttributes>
-
-	</productAttributeGroup>
-
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1019~Transactional_Retail_1019_Simulation</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1354~Transactional_Retail_1354</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1357~1357</value><!--this is done since there is actually no substitution needed for this product (savvy bundle)-->
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1389~Transactional_Retail_1389_Simulation</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1474~Transactional_Retail_1474</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1032~CreditCard_Retail_1032</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1350~CreditCard_Retail_1350</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1034~CreditCard_Retail_1034_Simulation</value>
-		</productAttributes>
-	</productAttributeGroup>
-
-
-
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
 		<productAttributes>
@@ -486,7 +319,6 @@
 			<value>0|Weighting=0</value>
 		</productAttributes>
 	</productAttributeGroup>
-
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
 		<productAttributes>
@@ -506,15 +338,15 @@
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCard|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCreditCard|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCardTC|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCreditCardTC|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -525,21 +357,21 @@
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCredit|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCredit|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCard|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCreditCard|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1032</attributeName>
+			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -549,7 +381,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>OfferSelectionSummaryDetails</attributeName>
-			<value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1032</value>
+			<value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1050</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -582,7 +414,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>spikeProductID</attributeName>
-			<value>1032</value>
+			<value>1050</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>int</attributeType>
@@ -621,29 +453,6 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-	<!--Evidence And Compliance Requirements-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>Proof of your identity</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>Payslips for the last 3 months, or 3 months bank statements</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>A letter from your accountant or financial manager (if  you're self employed)</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-	</productAttributeGroup>
-	
 	<!--1400 - Affinity Rewards-->
 	<features>
 		<featureIdentifier>9992</featureIdentifier>
