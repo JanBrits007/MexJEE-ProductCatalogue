@@ -15,14 +15,7 @@
 	<!--GenerateOfferGatherProductDetails-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=2000</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
-		</productAttributes>
+		<!--this is overwritten here so that we remove the widgets but still run the GNBA phase-->
 	</productAttributeGroup>
 
 	<!--GenerateOfferGatherClientDetails-->
@@ -59,7 +52,6 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-
 	<!--Case and Process Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>EligibilityRules</attributeGroupName>
@@ -88,7 +80,7 @@
 			<minValue>NA</minValue>
 			<maxValue>NA</maxValue>
 			<valueUnit>NA</valueUnit>
-			<description>be a resident of South Africa.</description>
+			<description>resident|You need to be a resident of South Africa.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -327,7 +319,6 @@
 			<value>0|Weighting=0</value>
 		</productAttributes>
 	</productAttributeGroup>
-
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
 		<productAttributes>
@@ -347,15 +338,15 @@
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCard|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCreditCard|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCardTC|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCreditCardTC|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -366,21 +357,21 @@
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCredit|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCredit|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCard|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCreditCard|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1032</attributeName>
+			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -390,7 +381,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>OfferSelectionSummaryDetails</attributeName>
-			<value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1032</value>
+			<value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1050</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -423,7 +414,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>spikeProductID</attributeName>
-			<value>1032</value>
+			<value>1050</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>int</attributeType>
@@ -462,29 +453,6 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-	<!--Evidence And Compliance Requirements-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>Proof of your identity</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>Payslips for the last 3 months, or 3 months bank statements</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>A letter from your accountant or financial manager (if  you're self employed)</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-	</productAttributeGroup>
-	
 	<!--1400 - Affinity Rewards-->
 	<features>
 		<featureIdentifier>9992</featureIdentifier>
