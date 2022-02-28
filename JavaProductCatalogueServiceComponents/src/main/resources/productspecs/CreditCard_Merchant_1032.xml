@@ -15,7 +15,10 @@
 	<!--GenerateOfferGatherProductDetails-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-		<!--this is overwritten here so that we remove the widgets but still run the GNBA phase-->
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=2000</attributeName>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--GenerateOfferGatherClientDetails-->
@@ -40,7 +43,7 @@
 		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>CreditRepayment|ng-component=CreditRepaymentWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=210~HideBankDetails=true</attributeName>
+			<attributeName>CreditRepayment|ng-component=CreditRepaymentAndSetupWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=210~HideBankDetails=true</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -48,7 +51,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
+			<attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -62,7 +65,7 @@
 			<minValue>18</minValue>
 			<maxValue>999</maxValue>
 			<valueUnit>year</valueUnit>
-			<description>be 18 years or older.</description>
+			<description>user-icon|You need to be 18 years or older.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -71,7 +74,7 @@
 			<minValue>5000</minValue>
 			<maxValue>99999999</maxValue>
 			<valueUnit>ZAR</valueUnit>
-			<description>earn an income of 5 000 or more.</description>
+			<description>income|You need to earn an income of 5 000 or more.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -80,7 +83,7 @@
 			<minValue>NA</minValue>
 			<maxValue>NA</maxValue>
 			<valueUnit>NA</valueUnit>
-			<description>be a resident of South Africa.</description>
+			<description>resident|You need to be a resident of South Africa.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -338,15 +341,15 @@
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCard|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCreditCard|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCardTC|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCreditCardTC|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -357,21 +360,21 @@
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCredit|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCredit|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCard|ContractComponentProductType=1032</attributeName>
+			<attributeName>subCreditCard|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1032</attributeName>
+			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1050</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -381,7 +384,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>OfferSelectionSummaryDetails</attributeName>
-			<value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1032</value>
+			<value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1050</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -414,7 +417,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>spikeProductID</attributeName>
-			<value>1032</value>
+			<value>1050</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>int</attributeType>

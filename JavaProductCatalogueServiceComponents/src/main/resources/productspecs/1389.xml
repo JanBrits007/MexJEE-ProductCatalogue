@@ -33,6 +33,124 @@
       </productAttributes>
    </productAttributeGroup>
 
+
+   <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
+   </productAttributeGroup>
+
+   <!--ETE Substitution Rules-->
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+         <value>${{GTPTestEmailOverideList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389_GTP</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>DefaultSubstitution</attributeName>
+         <value>DefaultSubstitution</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--QA Substitution Rules-->
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+         <value>${{GTPTestEmailOverideList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389_GTP</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>DefaultSubstitution</attributeName>
+         <value>DefaultSubstitution</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--PROD Substitution Rules-->
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+         <value>${{GTPTestEmailOverideList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389_GTP</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>DefaultSubstitution</attributeName>
+         <value>DefaultSubstitution</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--Old GTP rules-->
+   <!--productAttributeGroup>
+      <attributeGroupName>GTPPilotSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedJWTSub</attributeName>
+         <value>7278519348</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389_GTP</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>GTPPilotSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedJWTSub</attributeName>
+         <value>4316927282|8922624386|2124145273|966938814</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389_GTP</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>GTPPilotSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedJWTSub</attributeName>
+         <value>6154442790|729546977|2653152556</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389_GTP</value>
+      </productAttributes>
+   </productAttributeGroup-->
+
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
@@ -811,137 +929,7 @@
          <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
       </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
-   </productAttributeGroup>
-   <!-- <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{dynamicStaffListForSpecInheritance}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_1389</value>
-      </productAttributes>
-   </productAttributeGroup> -->
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>DefaultSubstitution</attributeName>
-         <value>DefaultSubstitution</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>DefaultSubstitution</attributeName>
-         <value>DefaultSubstitution</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>DefaultSubstitution</attributeName>
-         <value>DefaultSubstitution</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{dynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForIPSubnets</attributeName>
-         <value>${{InternalNetworkIPRanges}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{dynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForIPSubnets</attributeName>
-         <value>${{InternalNetworkIPRanges}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{dynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForIPSubnets</attributeName>
-         <value>${{InternalNetworkIPRanges}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-     <attributeGroupName>GTPPilotSubstitutionRulesETE</attributeGroupName>
-     <productAttributes>
-       <attributeName>SubstituteForWhiteListedJWTSub</attributeName>
-       <value>7278519348</value>
-     </productAttributes>
-     <productAttributes>
-       <attributeName>SubstituteForProductID</attributeName>
-       <value>Transactional_Retail_1389_GTP</value>
-     </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>GTPPilotSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedJWTSub</attributeName>
-         <value>4316927282|8922624386|2124145273|966938814</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389_GTP</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>GTPPilotSubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedJWTSub</attributeName>
-         <value>6154442790|729546977|2653152556</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389_GTP</value>
-      </productAttributes>
-   </productAttributeGroup>
+
    <productAttributeGroup>
       <attributeGroupName>DecisioningControl</attributeGroupName>
       <productAttributes>

@@ -104,15 +104,15 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfAdviceIndividualComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>SalesMilestone|ng-component=CmsDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>KeepingInTouch|ng-component=ParticipateWithUsWidgetComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
+         <attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -175,7 +175,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDone|ng-component=WhatIsNextComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=FundYourAccountComponent~child-ng-components=ExchangeRateComponent~child-ng-components=ForeignCurrencyAccountComponent~child-ng-components=VisitTheBranchNotificationComponent~HideProceduralStep=true~ZOrder=50</attributeName>
+         <attributeName>YoureDone|ng-component=YouAreDoneComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=FundYourAccountComponent~child-ng-components=ExchangeRateComponent~child-ng-components=ForeignCurrencyAccountComponent~child-ng-components=VisitTheBranchNotificationComponent~HideProceduralStep=true~ZOrder=50</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -190,19 +190,30 @@
 
    <!--Finalise Case-->
    <productAttributeGroup>
-      <attributeGroupName>RuleHandlers_FinaliseCasePhaseHandler</attributeGroupName>
+      <attributeGroupName>RuleHandlers_FinaliseCase</attributeGroupName>
       <productAttributes>
-         <attributeName>FinaliseCasePhaseHandler</attributeName>
+         <attributeName>GNBAHandler_FinaliseCase</attributeName>
          <value>classname=ForexCancelApplicationHandler</value>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--
+   <productAttributeGroup>
+      <attributeGroupName>ProductSpecificCancelReasons</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ProductSpecificCancelReasons</attributeName>
+         <value>I no longer require the account|The exchange rate is unfavourable|I do not have enough funds yet to fund the FCA|No reason|Other</value>
+      </productAttributes>
+   </productAttributeGroup>
+   -->
 
    <!--Evidence And Compliance Requirements-->
    <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Evidence</attributeType>
-         <attributeName>We need proof of your identity (valid South African ID/document or passport with valid permit)</attributeName>
+         <attributeName>Proof of your identity (valid South African ID/document or passport with valid permit)</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>string</valueUnit>
       </productAttributes>
@@ -465,7 +476,7 @@
          <attributeName>Account</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>string</valueUnit>
-         <description>a Nedbank account. If you don't have one, we'll help you open one</description>
+         <description>have a Nedbank account. If you don't have one, we'll help you open one</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
@@ -828,8 +839,28 @@
       <attributeGroupName>ProductSpecificCancelReasons</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>ProductSpecificCancelReasons</attributeName>
-         <value>I no longer require the account|The exchange rate is unfavourable|I do not have enough funds yet to fund the FCA|No reason|Other</value>
+         <attributeName>ProductSpecificCancelReason</attributeName>
+         <value>CR00|I no longer require the account</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ProductSpecificCancelReason</attributeName>
+         <value>CR01|The exchange rate is unfavourable</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ProductSpecificCancelReason</attributeName>
+         <value>CR02|I do not have enough funds yet to fund the FCA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ProductSpecificCancelReason</attributeName>
+         <value>CR03|No reason</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ProductSpecificCancelReason</attributeName>
+         <value>CR04|Other</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -1001,19 +1032,11 @@
          <attributeName>welcomeDocumentTemplateLocked</attributeName>
          <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
       </productAttributes>
-
-<!--      Confirm with Tim if this is generate facility number routing flag -->
       <productAttributes>
          <attributeType>flag</attributeType>
          <attributeName>ProvisioningPhase</attributeName>
          <value>postVerificationProvisioning</value>
       </productAttributes>
-      <productAttributes>
-         <attributeType>flag</attributeType>
-         <attributeName>ProvisioningPhase</attributeName>
-         <value>ArrangementFunding</value>
-      </productAttributes>
-
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>noFundsAlertIndicator</attributeName>
