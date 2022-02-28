@@ -436,34 +436,24 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!--Offer Configuration-->
    <productAttributeGroup action="overwrite">
-      <attributeGroupName>PresentOfferSelection</attributeGroupName>
+      <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>OfferSelectionSummaryDetails</attributeName>
-            <value>AlternateProductOfferSelection|ng-component=AlternateProductsComponent~ZOrder=100</value>
+         <attributeType>Compliance</attributeType>
+         <attributeName>NotUnderCreditAdministrationV2</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>ConsentEducationalQualification</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>Compliance</attributeType>
+        <attributeName>FinancialHealthConsent</attributeName>
       </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
-		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1021~Transactional_RRB_1021</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1400~Transactional_RRB_1400</value>
-		</productAttributes>
-        <productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1108~Transactional_RRB_1108</value>
-		</productAttributes>
-	</productAttributeGroup>
 
+   <!--Offer Configuration-->
+   
   <!--Overdraft feature -->
    <features>
       <featureIdentifier>1014</featureIdentifier>
