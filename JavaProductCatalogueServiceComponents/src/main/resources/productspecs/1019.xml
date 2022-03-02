@@ -32,6 +32,88 @@
    </productAttributeGroup>
 
    <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
+   </productAttributeGroup>
+
+   <!--ETE Substitution Rules-->
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>403|552</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>1019</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>DefaultSubstitution</attributeName>
+         <value>DefaultSubstitution</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1019</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--QA Substitution Rules-->
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>403|552</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>1019</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>DefaultSubstitution</attributeName>
+         <value>DefaultSubstitution</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1019</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--PROD Substitution Rules-->
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>403|552</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>1019</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>DefaultSubstitution</attributeName>
+         <value>DefaultSubstitution</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1019</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -722,104 +804,6 @@
          <attributeType>boolean</attributeType>
          <attributeName>ComponentSupportsDeclineReasons</attributeName>
          <value>true</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>DefaultSubstitution</attributeName>
-         <value>DefaultSubstitution</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1019</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>DefaultSubstitution</attributeName>
-         <value>DefaultSubstitution</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1019</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>DefaultSubstitution</attributeName>
-         <value>DefaultSubstitution</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1019</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{dynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForIPSubnets</attributeName>
-         <value>${{InternalNetworkIPRanges}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1019</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{dynamicStaffListForSpecInheritance}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1019</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{dynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForIPSubnets</attributeName>
-         <value>${{InternalNetworkIPRanges}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1019</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{dynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForIPSubnets</attributeName>
-         <value>${{InternalNetworkIPRanges}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1019</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
