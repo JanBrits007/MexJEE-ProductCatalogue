@@ -123,7 +123,7 @@ public class RuleHandler1176 extends BaseProductSpecificationRuleHandler {
         BusinessCaseHeader businessCase = dao.retrieveBusinessCase(caseID);
 
         if(businessCase != null && businessCase.getClientInContextECN() != null && businessCase.getInitiatingChannelID() != null
-                && "397".equalsIgnoreCase(businessCase.getInitiatingChannelID())) {
+                && ("397".equalsIgnoreCase(businessCase.getInitiatingChannelID()) || "3".equalsIgnoreCase(businessCase.getInitiatingChannelID()))) {
             mLog.debug("Trace 2");
             BusinessCaseSegment businessCaseSegment = businessCase.getBusinessCaseSegment();
             if(businessCaseSegment != null && businessCaseSegment.getCluster() != null && businessCaseSegment.getDivision() != null){
