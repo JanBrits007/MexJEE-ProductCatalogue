@@ -288,11 +288,21 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <attributeGroupName>RRBProductsSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
          <value>${{RRBProductsTestEmailOverideList}}</value>
       </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>RRBProductsSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
+         <value>${{RRBProductsTestEmailOverideList}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+  <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
          <value>${{dynamicStaffList}}</value>
@@ -308,10 +318,6 @@
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
-         <value>${{RRBProductsTestEmailOverideList}}</value>
-      </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
          <value>${{dynamicStaffList}}</value>
