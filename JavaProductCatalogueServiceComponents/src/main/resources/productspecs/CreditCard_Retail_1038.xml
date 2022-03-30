@@ -3,6 +3,16 @@
 	<name>Nedbank Private Wealth Pay-as-you-use Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1038) This is The NPW PAYU Credit Card</shortDescription>
 
+	<!--Eliibility Handlers-->
+	<productAttributeGroup>
+		<attributeGroupName>EligibilityHandler</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--Document Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
@@ -140,4 +150,70 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<productAttributeGroup  action="overwrite">
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.CreditCardEligibilityRules</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Case and Process Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Age</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>18</minValue>
+			<maxValue>999</maxValue>
+			<valueUnit>year</valueUnit>
+			<!--<description>user-icon|You need to be 18 years or older.</description>-->
+			<description>be 18 years or older.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>5000</minValue>
+			<maxValue>99999999</maxValue>
+			<valueUnit>ZAR</valueUnit>
+			<!--<description>income|You need to earn R5 000 or more per month.</description>-->
+			<description>earn R5 000 or more per month.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NaturalPerson</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>DebitOrderRepaymentRequired</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>CreditApproval</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NotUnderCreditAdministration</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>QualifyingProducts</attributeName>
+			<value>1113</value>
+			<valueUnit>String</valueUnit>
+		</productAttributes>
+	</productAttributeGroup>
 </product>
