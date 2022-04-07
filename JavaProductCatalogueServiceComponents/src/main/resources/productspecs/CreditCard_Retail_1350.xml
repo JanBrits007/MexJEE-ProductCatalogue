@@ -44,7 +44,15 @@
 			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1350</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-	
+
+	<productAttributeGroup  action="overwrite">
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.CreditCardEligibilityRules</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--Case and Process Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>EligibilityRules</attributeGroupName>
@@ -101,6 +109,12 @@
 			<value>true</value>
 			<valueUnit>bool</valueUnit>
 			<description> be a South African resident.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>QualifyingProducts</attributeName>
+			<value>1113</value>
+			<valueUnit>String</valueUnit>
 		</productAttributes>
 	</productAttributeGroup>
 
