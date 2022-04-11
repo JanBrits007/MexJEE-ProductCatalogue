@@ -555,8 +555,20 @@
          <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
-         </featureAttributes>
+            <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~RemoveStatementDelivery=true~displaySummary=true</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~RemoveEmployedSince=true~child-ng-components=MainSourceOfIncome~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80~displaySummary=true</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+          </featureAttributes>
       </featureAttributeGroup>
 
       <!--ActivateProductsGatherProductDetails-->
