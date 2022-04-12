@@ -374,8 +374,19 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--Party configuration-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>PartyConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNEDIDFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_GatherEvidence</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.PartyLONFilter</value>
+      </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
