@@ -53,4 +53,58 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <productAttributeGroup action="overwrite">
+        <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>requiresElgiblityScoringAtIntents</attributeName>
+            <value>intent 0</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
+            <value>5-10</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>ApplicationEndToEndExecutionTimeMinutes</attributeName>
+            <value>90</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>enum</attributeType>
+            <attributeName>riskAnalysisMechanismIntent0</attributeName>
+            <value>automated</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>enum</attributeType>
+            <attributeName>riskAnalysisMechanismIntent1</attributeName>
+            <value>skip</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>enum</attributeType>
+            <attributeName>riskAnalysisMechanismIntent2</attributeName>
+            <value>automatedManualAssessment</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence</attributeName>
+            <value>PrepareApplicantV2|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CODEngine</attributeName>
+            <value>RRBCOD</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>breadcrumbSteps</attributeName>
+            <value>Authenticate|Product Setup|About You|Credit Info|Customisation|Finalisation</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>GNBAIntentToActivityMapping</attributeName>
+            <value>GenerateOfferVerifyEligibility=Product Setup|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=About You|GenerateOffer=Credit Info|ActivateProductsGatherProductDetails=Customisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
+        </productAttributes>
+    </productAttributeGroup>
+
 </product>
