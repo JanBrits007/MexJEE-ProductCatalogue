@@ -31,6 +31,31 @@
       <attributeGroupName>coreProvisioningParameters</attributeGroupName>
    </productAttributeGroup>
 
+    <!-- Intent sequence mapping -->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeIntentSequence</attributeName>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialExtendedDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Authenticate|Product Setup|About You|Customise|Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialExtendedDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>AlternateOfferWorkItemTemplate</attributeName>
+         <value>GenerateOffer</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--1333 - Nedbank Greenbacks Shop Card-->
    <features inheritFromFiles="Transactional_Retail">
       <featureIdentifier>1333</featureIdentifier>
@@ -89,6 +114,11 @@
    <features inheritFromFiles="Transactional_Retail">
       <featureIdentifier>1386</featureIdentifier>
       <name>Gold Cheque Card</name>
+
+      <!--ActivateProductsGatherProductDetails-->
+      <featureAttributeGroup action="overwrite">
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+      </featureAttributeGroup>
    </features>
 
    <!--1387 - Amex Card-->
