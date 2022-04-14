@@ -4,8 +4,8 @@
    <shortDescription>(FuneralPlan_1390) Nedbank Insurance Funeral Plan</shortDescription>
 
    <!--GenerateOfferVerifyEligibility-->
-   <!--Will re-enable the below once we have the APIs correctly configured on client secret domain -->
-   <!--productAttributeGroup action="overwrite">
+
+   <productAttributeGroup action="overwrite">
       <attributeGroupName>EligibilityHandler</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -27,7 +27,30 @@
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.FuneralCoverEligibilityRules</value>
       </productAttributes>
-   </productAttributeGroup-->
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>ProofOfIdentificationClause</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>ProofOfIdentificationForDependentsClause</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>ProofOfIdentificationForBeneficiaryClause</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+   </productAttributeGroup>
+
 
    <!--Document Configuration-->
    <productAttributeGroup action="overwrite">
