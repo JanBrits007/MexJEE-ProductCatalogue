@@ -117,12 +117,12 @@
          <minValue>18</minValue>
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>be at least 18 years old.</description>
+         <description>user-icon|You need to be at least 18 years old.</description>
       </productAttributes>
    </productAttributeGroup>
 
    <!-- Intent sequence mapping -->
-   <productAttributeGroup>
+   <productAttributeGroup action="overwrite">
       <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -335,14 +335,24 @@
          <value>0</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>backOfficeEmailAddress</attributeName>
-         <value>NatashaBu@Nedbank.co.za;ajits@nedbank.co.za;LindaMn@Nedbank.co.za;ThaboMokoen@Nedbank.co.za;BrigertM@Nedbank.co.za;andreasroh@nedbank.co.za</value>
+         <attributeType>string</attributeType>
+         <attributeName>LeadEmailAddressNonProd</attributeName>
+         <value>FohnB@Nedbank.co.za;MandisaMah@Nedbank.co.za;ZamaMgo@Nedbank.co.za;ajits@nedbank.co.za;LijuN@Nedbank.co.za;LudieP@Nedbank.co.za;NatashaBu@Nedbank.co.za;PramothV@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>letUsSwitchEmailAddress</attributeName>
-         <value>NatashaBu@Nedbank.co.za;ajits@nedbank.co.za;LindaMn@Nedbank.co.za;ThaboMokoen@Nedbank.co.za;BrigertM@Nedbank.co.za;andreasroh@nedbank.co.za</value>
+         <attributeType>string</attributeType>
+         <attributeName>LeadEmailAddressProd</attributeName>
+         <value>>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ConversionLeadEmailAddressNonProd</attributeName>
+         <value>LudieP@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ConversionLeadEmailAddressProd</attributeName>
+         <value>PRBSales@nedbank.co.za;Aliciap@Nedbank.co.za</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -526,8 +536,20 @@
          <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
-         </featureAttributes>
+            <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~RemoveStatementDelivery=true~displaySummary=true</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~RemoveEmployedSince=true~child-ng-components=MainSourceOfIncome~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80~displaySummary=true</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+          </featureAttributes>
       </featureAttributeGroup>
 
       <!--ActivateProductsGatherProductDetails-->
@@ -738,7 +760,7 @@
          <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
          <featureAttributes>
             <attributeType>string</attributeType>
-            <attributeName>subGenericInfo</attributeName>
+            <attributeName>subGenericDetails</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
@@ -750,6 +772,10 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subRRBOverdraft|ContractComponentProductType=1014</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -957,6 +983,36 @@
             <attributeType>string</attributeType>
             <attributeName>provisioningMechanism</attributeName>
             <value>provisionToCRAG</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>LeadEmailAddressNonProd</attributeName>
+            <value>ThapeloC@nedbank.co.za;NatashaBu@Nedbank.co.za;ajits@nedbank.co.za;BrigertM@Nedbank.co.za</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>LeadEmailAddressProd</attributeName>
+            <value>LifeStyleBanking@Nedbank.co.za</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>OOReducingLeadEmailAddressNonProd</attributeName>
+            <value>ThapeloC@nedbank.co.za;NatashaBu@Nedbank.co.za;ajits@nedbank.co.za;BrigertM@Nedbank.co.za</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>OOReducingLeadEmailAddressProd</attributeName>
+            <value>CreditDirect@Nedbank.co.za</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>ODAssuranceLeadEmailAddressNonProd</attributeName>
+            <value>ThapeloC@nedbank.co.za;NatashaBu@Nedbank.co.za;ajits@nedbank.co.za;ThaboMokoen@Nedbank.co.za;BrigertM@Nedbank.co.za</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>ODAssuranceLeadEmailAddressProd</attributeName>
+            <value>ODSales@Nedbank.co.za</value>
          </featureAttributes>
       </featureAttributeGroup>
 

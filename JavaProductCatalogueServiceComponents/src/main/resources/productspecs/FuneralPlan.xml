@@ -88,7 +88,7 @@
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~displaySummary=true</attributeName>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~displaySummary=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -205,15 +205,6 @@
    </productAttributeGroup>
 
    <!--Evidence And Compliance Requirements-->
-   <productAttributeGroup>
-      <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>We need proof of your identity in the form of: South African bar-coded identity card or document.</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>string</valueUnit>
-      </productAttributes>
-   </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>RequiredCompliance</attributeGroupName>
       <productAttributes>
@@ -837,6 +828,33 @@
       <!-- Add cross sell controll here -->
    </productAttributeGroup>
 
+   <!-- CommunicationStrategyConfiguration -->
+   <productAttributeGroup>
+      <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CommunicationSystem</attributeName>
+         <value>SpecCom</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>commsAudience</attributeName>
+         <value>customer</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>welcomeComms</attributeName>
+         <value>SMS</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productType</attributeName>
+         <value>SMS</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+
+
    <!--Provisioning Configuration-->
    <productAttributeGroup>
       <attributeGroupName>coreProvisioningParameters</attributeGroupName>
@@ -907,7 +925,7 @@
       <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
    </productAttributeGroup>
 
-    <productAttributeGroup>
+    <!--productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
         <productAttributes>
             <attributeType>Evidence</attributeType>
@@ -927,7 +945,7 @@
             <isComparable>false</isComparable>
             <valueUnit>string</valueUnit>
         </productAttributes>
-    </productAttributeGroup>
+    </productAttributeGroup-->
 
    <!--Features-->
    <features>

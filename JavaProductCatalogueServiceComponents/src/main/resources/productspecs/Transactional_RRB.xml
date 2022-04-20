@@ -374,6 +374,26 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--Party configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>PartyConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNEDIDFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_GatherEvidence</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.PartyLONFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.party.PartyLendingProductNotificationFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--Decline Configuration-->
    <productAttributeGroup>
       <attributeGroupName>DeclineParameters_GenerateOffer</attributeGroupName>
