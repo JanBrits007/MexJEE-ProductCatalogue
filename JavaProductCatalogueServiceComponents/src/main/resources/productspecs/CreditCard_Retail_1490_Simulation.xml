@@ -21,7 +21,7 @@
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=5000</attributeName>
+			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=350000</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -175,6 +175,14 @@
 			<valueUnit>ZAR</valueUnit>
 			<description>income|You need to earn between R200 000 and R750 000 per annum.</description>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Invitation</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+			<description>invitation-only|By invitation only</description>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<productAttributeGroup action="overwrite">
@@ -184,6 +192,36 @@
 			<value>5000</value>
 		</productAttributes>
 	</productAttributeGroup>
+
+	<!--Evidence And Compliance Requirements-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
+		<productAttributes>
+			<attributeType>Evidence</attributeType>
+			<attributeName>Organisation identification</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>string</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>Evidence</attributeType>
+			<attributeName>Proof of income</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>string</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>Evidence</attributeType>
+			<attributeName>Financial statements</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>string</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>Evidence</attributeType>
+			<attributeName>Due diligence documents</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>string</valueUnit>
+		</productAttributes>
+	</productAttributeGroup>
+
 
 	<features>
 		<featureIdentifier>1334</featureIdentifier>
