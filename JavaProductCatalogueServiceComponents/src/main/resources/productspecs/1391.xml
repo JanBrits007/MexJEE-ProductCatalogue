@@ -5,7 +5,7 @@
     <productOnAPageWebURL>/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html</productOnAPageWebURL>
 
 
-    <!--productAttributeGroup>
+    <productAttributeGroup>
         <attributeGroupName>CaseConfiguration</attributeGroupName>
         <productAttributes>
             <attributeType>string</attributeType>
@@ -13,26 +13,32 @@
             <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
         </productAttributes>
     </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
-    </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
-    </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
-    </productAttributeGroup>
+
+    <!--ETE Substitution Rules-->
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
-            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-            <value>${{EDBPhase2dynamicStaffList}}</value>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{TPOnAppEmailOverideList}}</value>
         </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
-            <value>Investment_Retail_1391</value>
+            <value>Transactional_Retail_TP20_3020</value> <!--Edge Plus-->
         </productAttributes>
-    </productAttributeGroup-->
+    </productAttributeGroup>
+
+    <!--QA Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{TPOnAppEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>Transactional_Retail_3020</value> <!--Edge Plus-->
+        </productAttributes>
+    </productAttributeGroup>
 
     <productAttributeGroup>
         <attributeGroupName>EligibilityHandler</attributeGroupName>
@@ -269,6 +275,26 @@
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>enableNotification</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>notificationType</attributeName>
+            <value>INVESTFUND</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>notificationDisplayCategory</attributeName>
+            <value>Messages</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>notificationdisplaySubCategory</attributeName>
+            <value>Investment Reminder</value>
+        </productAttributes>
         <productAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>supressClientCommunications</attributeName>

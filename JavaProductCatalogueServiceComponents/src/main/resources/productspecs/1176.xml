@@ -9,7 +9,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>ArrangementBundleCaseHandler</attributeName>
-         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.rrb.InitialiseBusinessCaseHandlerRetailRRB</value>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailRRB</value>
       </productAttributes>
     </productAttributeGroup>
 
@@ -48,18 +48,17 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!--Only switch this on when we roll out fully-->
-   <!--productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
-         <attributeName>SubstituteForCalculatedSegments</attributeName>
+         <attributeName>SubstituteForCalculatedSegment</attributeName>
          <value>${{RRB_Segement_list}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
          <value>Overdraft_RRB_1176</value>
       </productAttributes>
-   </productAttributeGroup-->
+   </productAttributeGroup>
 
    <!--Legacy Product Spec-->
    <productAttributeGroup>
@@ -287,7 +286,60 @@
          <a:attributeName>riskAnalysisMechanismIntent0</a:attributeName>
          <a:value>automated</a:value>
       </a:productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>segmentCheckRequired</attributeName>
+         <value>true</value>
+      </productAttributes>
    </productAttributeGroup>
+   <!-- Process Audit Report Overdraft Start-->
+   <productAttributeGroup>
+      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subYourApplicationHeader</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subNedbankLogo</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subCaseAuditData</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subFinancialDetailsAuditData</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subEvidenceAuditData</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subClientAuditData</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subAdditionalClientInfo</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subODPLIncomeAndExpense</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <!-- Process Audit Report Overdraft End-->
+
    <features>
       <featureIdentifier>1446</featureIdentifier>
       <name>Credit Life</name>

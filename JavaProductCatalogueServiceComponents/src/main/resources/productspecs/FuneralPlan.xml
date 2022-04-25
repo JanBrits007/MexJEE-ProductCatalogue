@@ -83,41 +83,20 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!--GenerateOffer-->
-   <productAttributeGroup>
-      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=See something you like?~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryFuneralPlanComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-
    <!--ActivateProductsGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress</attributeName>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~displaySummary=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
+         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
+         <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture~displaySummary=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -130,7 +109,7 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>DebitOrderSetup|ng-component=DebitOrderSetupComponent~ProceduralStepName=Debit Order Details~child-ng-components=NedbankAccountPicker~child-ng-components=dayPicker~subHeaderText=Confirm your debit order details~ZOrder=220</attributeName>
+         <attributeName>DebitOrderSetup|ng-component=DebitOrderSetupComponent~ProceduralStepName=Debit Order Details~child-ng-components=BankDetailsComponent~child-ng-components=DatePickerComponent~subHeaderText=Confirm your debit order details~ZOrder=220</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -226,15 +205,6 @@
    </productAttributeGroup>
 
    <!--Evidence And Compliance Requirements-->
-   <productAttributeGroup>
-      <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>We need proof of your identity in the form of: South African bar-coded identity card or document.</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>string</valueUnit>
-      </productAttributes>
-   </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>RequiredCompliance</attributeGroupName>
       <productAttributes>
@@ -608,6 +578,11 @@
          <attributeName>CODHandler_FinancialDetails</attributeName>
          <value>classname=XXXX</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>Insurance</attributeType>
+         <attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
+      </productAttributes>
       <!--productAttributes>
          <attributeType>Generic</attributeType>
          <attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
@@ -756,12 +731,7 @@
       <productAttributes>
          <attributeType>String</attributeType>
          <attributeName>FAISCategoryCode</attributeName>
-         <value>1.18</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>String</attributeType>
-         <attributeName>FAISCategoryCode</attributeName>
-         <value>1.17</value>
+         <value>1.22</value>
       </productAttributes>
       <productAttributes>
          <attributeType>boolean</attributeType>
@@ -858,6 +828,33 @@
       <!-- Add cross sell controll here -->
    </productAttributeGroup>
 
+   <!-- CommunicationStrategyConfiguration -->
+   <productAttributeGroup>
+      <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CommunicationSystem</attributeName>
+         <value>SpecCom</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>commsAudience</attributeName>
+         <value>customer</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>welcomeComms</attributeName>
+         <value>SMS</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productType</attributeName>
+         <value>SMS</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+
+
    <!--Provisioning Configuration-->
    <productAttributeGroup>
       <attributeGroupName>coreProvisioningParameters</attributeGroupName>
@@ -927,6 +924,28 @@
    <productAttributeGroup inheritFromFiles="BaseProduct">
       <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
    </productAttributeGroup>
+
+    <!--productAttributeGroup>
+        <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
+        <productAttributes>
+            <attributeType>Evidence</attributeType>
+            <attributeName>ProofOfIdentificationClause</attributeName>
+            <isComparable>false</isComparable>
+            <valueUnit>string</valueUnit>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>Evidence</attributeType>
+            <attributeName>ProofOfIdentificationForDependentsClause</attributeName>
+            <isComparable>false</isComparable>
+            <valueUnit>string</valueUnit>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>Evidence</attributeType>
+            <attributeName>ProofOfIdentificationForBeneficiaryClause</attributeName>
+            <isComparable>false</isComparable>
+            <valueUnit>string</valueUnit>
+        </productAttributes>
+    </productAttributeGroup-->
 
    <!--Features-->
    <features>

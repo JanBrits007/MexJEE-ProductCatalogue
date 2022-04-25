@@ -32,8 +32,7 @@
 			<minValue>18</minValue>
 			<maxValue>999</maxValue>
 			<valueUnit>year</valueUnit>
-			<!--<description>user-icon|You need to be atleast 18 years or older.</description>-->
-			<description>be atleast 18 years or older.</description>
+			<description>user-icon|You need to be atleast 18 years or older.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -42,8 +41,7 @@
 			<minValue>150000</minValue>
 			<maxValue>99999999</maxValue>
 			<valueUnit>ZAR</valueUnit>
-			<!--<description>income|You need to earn R150 000 per annum or have Net Investable Assets of R5 000 000.</description>-->
-			<description>earn R150 000 per annum or have Net Investable Assets of R5 000 000.</description>
+			<description>income|You need to earn R150 000 per annum or have Net Investable Assets of R5 000 000.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -79,8 +77,7 @@
 			<isComparable>false</isComparable>
 			<value>true</value>
 			<valueUnit>bool</valueUnit>
-			<!--<description>resident|You need to be a South African resident.</description>-->
-			<description>be a South African resident.</description>
+			<description>resident|You need to be a South African resident.</description>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -117,11 +114,6 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>VAS_1100</attributeName><!--Credit Card Insurance-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1025</attributeName><!--Funeral Cover-->
 			<value>Optionality=Optional~IsTakenUp=false</value>
 		</productAttributes>
 	</productAttributeGroup>
@@ -325,62 +317,6 @@
 		</featureAttributeGroup>
 	</features>
 
-	<!--1025 - Funeral Cover-->
-	<features>
-		<featureIdentifier>1025</featureIdentifier>
-		<name>Funeral Cover</name>
-
-		<!--GenerateOffer-->
-		<featureAttributeGroup>
-			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-			<featureAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=NedbankInsuranceFuneralPlanComponent-1025~ProceduralStepName=Optional extras for you~ZOrder=65</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-
-		<!--FinalizeFrontOfficeInteraction-->
-		<featureAttributeGroup>
-			<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
-			<featureAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~HideProceduralStep=true~child-ng-components=FuneralCoverProvisionInBranchComponent-1025~ZOrder=50</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-
-		<!-- Case and Process Configuration -->
-		<featureAttributeGroup>
-			<attributeGroupName>SystemRelated</attributeGroupName>
-			<featureAttributes>
-				<attributeType>Flag</attributeType>
-				<attributeName>StraightThroughProcess</attributeName>
-				<value>True</value>
-			</featureAttributes>
-		</featureAttributeGroup>
-
-		<!--Provisioning Configuration-->
-		<featureAttributeGroup>
-			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
-			<featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>FeatureCode</attributeName>
-				<valueUnit>string</valueUnit>
-				<value>ThisisthesFeaturecode</value>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>provisionInBranch</attributeName>
-				<valueUnit>boolean</valueUnit>
-				<value>true</value>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>legacyProductID</attributeName>
-				<valueUnit>string</valueUnit>
-				<value>1390</value>
-			</featureAttributes>
-		</featureAttributeGroup>
-	</features>
 
 	<features>
 		<featureIdentifier>1100</featureIdentifier>

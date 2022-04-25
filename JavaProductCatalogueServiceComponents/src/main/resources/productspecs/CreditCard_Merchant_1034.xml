@@ -47,7 +47,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>SalesMilestone|ng-component=HubEmployeeDetailsComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=HUB details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+			<attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -65,8 +65,7 @@
 			<minValue>18</minValue>
 			<maxValue>999</maxValue>
 			<valueUnit>year</valueUnit>
-			<!--<description>user-icon|You need to be 18 years or older.</description>-->
-			<description>be 18 years or older.</description>
+			<description>user-icon|You need to be 18 years or older.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -75,8 +74,7 @@
 			<minValue>5000</minValue>
 			<maxValue>99999999</maxValue>
 			<valueUnit>ZAR</valueUnit>
-			<!--<description>income|You need to earn an income of 5 000 or more.</description>-->
-			<description>earn an income of 5 000 or more.</description>
+			<description>income|You need to earn an income of 5 000 or more.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -85,8 +83,7 @@
 			<minValue>NA</minValue>
 			<maxValue>NA</maxValue>
 			<valueUnit>NA</valueUnit>
-			<!--<description>resident|You need to be a resident of South Africa.</description>-->
-			<description>be a resident of South Africa.</description>
+			<description>resident|You need to be a resident of South Africa.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -458,99 +455,4 @@
 			<value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
 		</productAttributes>
 	</productAttributeGroup>
-
-	<!--1400 - Affinity Rewards-->
-	<features>
-		<featureIdentifier>9992</featureIdentifier>
-		<name>Hub Club services</name>
-		<mandatory>true</mandatory>
-		<preSelected>true</preSelected>
-		<shortDescription>By joining our Greenbacks Rewards Programme you will earn rewards when you use your credit card or one of our other transactional accounts.</shortDescription>
-		<description>Detailed description of feature</description>
-		<featureGrouping>
-			<featureGroupName>Loyalty</featureGroupName>
-			<featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-		</featureGrouping>
-		<featureType>BoltOn</featureType>
-		<referenceProductID>-1</referenceProductID>
-		<featurePricing>
-			<fee>
-				<type>AdminFee</type>
-				<description>R25 per month</description>
-				<currency>ZAR</currency>
-				<amount>25</amount>
-				<frequency>Monthly</frequency>
-			</fee>
-		</featurePricing>
-		<featureFulfilment>
-			<channel>selfServiceWeb</channel>
-			<fulfilmentType>setting</fulfilmentType>
-			<fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-			<fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-		</featureFulfilment>
-		<featureFulfilment>
-			<channel>staffAssisted</channel>
-			<fulfilmentType>setting</fulfilmentType>
-			<fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-			<fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-		</featureFulfilment>
-		<featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-		<featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-		<featureDisplayPosition>offer</featureDisplayPosition>
-		<!--GenerateOffer-->
-		<featureAttributeGroup>
-			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-			<featureAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=HubClubServicesComponent-9992~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-		<featureAttributeGroup>
-			<attributeGroupName>SystemRelated</attributeGroupName>
-			<featureAttributes>
-				<attributeType>Flag</attributeType>
-				<attributeName>StraightThroughProcess</attributeName>
-				<value>True</value>
-			</featureAttributes>
-		</featureAttributeGroup>
-		<featureAttributeGroup>
-			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
-			<featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>FeatureCode</attributeName>
-				<valueUnit>string</valueUnit>
-				<value>ThisisthesFeaturecode</value>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>provisionInBranch</attributeName>
-				<valueUnit>boolean</valueUnit>
-				<value>false</value>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>legacyProductID</attributeName>
-				<valueUnit>string</valueUnit>
-				<value />
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>ProvisioningPhase</attributeName>
-				<valueUnit>PER</valueUnit>
-				<value>preFICAProvisioning</value>
-			</featureAttributes>
-		</featureAttributeGroup>
-		<featureAttributeGroup>
-			<attributeGroupName>placeholder-Fullstructure</attributeGroupName>
-			<featureAttributes>
-				<attributeType>type</attributeType>
-				<attributeName>name</attributeName>
-				<minValue>1</minValue>
-				<maxValue>2</maxValue>
-				<valueUnit>text</valueUnit>
-				<value>some value</value>
-			</featureAttributes>
-		</featureAttributeGroup>
-	</features>
-
 </product>

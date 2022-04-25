@@ -4,6 +4,7 @@
    <shortDescription>(FuneralPlan_1390) Nedbank Insurance Funeral Plan</shortDescription>
 
    <!--GenerateOfferVerifyEligibility-->
+
    <productAttributeGroup action="overwrite">
       <attributeGroupName>EligibilityHandler</attributeGroupName>
       <productAttributes>
@@ -27,6 +28,29 @@
          <value>classname=za.co.nb.offermanagement.eligibility.handler.FuneralCoverEligibilityRules</value>
       </productAttributes>
    </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>ProofOfIdentificationClause</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>ProofOfIdentificationForDependentsClause</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>ProofOfIdentificationForBeneficiaryClause</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+   </productAttributeGroup>
+
 
    <!--Document Configuration-->
    <productAttributeGroup action="overwrite">

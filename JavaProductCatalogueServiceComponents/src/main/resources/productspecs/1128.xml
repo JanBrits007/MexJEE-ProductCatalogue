@@ -3,6 +3,42 @@
     <name>Electronic 32 Day Notice</name>
     <shortDescription>An Investment account offering competitive interest rates and short-term flexibility, that is exclusively available online.</shortDescription>
     <productOnAPageWebURL>/content/nedbank/desktop/gt/en/personal/invest/investment-account/investment-account.html</productOnAPageWebURL>
+
+    <productAttributeGroup>
+        <attributeGroupName>CaseConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>ArrangementBundleCaseHandler</attributeName>
+            <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--ETE Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{TPOnAppEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>Transactional_Retail_TP20_3020</value> <!--Edge Plus-->
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--QA Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{TPOnAppEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>Transactional_Retail_3020</value> <!--Edge Plus-->
+        </productAttributes>
+    </productAttributeGroup>
+
     <productAttributeGroup>
         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
         <productAttributes>
@@ -222,6 +258,26 @@
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>enableNotification</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>notificationType</attributeName>
+            <value>INVESTFUND</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>notificationDisplayCategory</attributeName>
+            <value>Messages</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>notificationdisplaySubCategory</attributeName>
+            <value>Investment Reminder</value>
+        </productAttributes>
         <productAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>supressClientCommunications</attributeName>

@@ -184,6 +184,11 @@
          <attributeName>includeNotTakenUpComponents</attributeName>
          <value>false</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>statusSetting</attributeName>
+         <value>true</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Communication config-->
@@ -354,6 +359,11 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementBOApprovedFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
          <attributeName>RequiredDataFilter_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementAgeDeclineFilter</value>
       </productAttributes>
@@ -366,6 +376,26 @@
         <attributeType>string</attributeType>
         <attributeName>RequiredDataFilter_PresentOffer</attributeName>
         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--Party configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>PartyConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNEDIDFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_GatherEvidence</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.PartyLONFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.party.PartyLendingProductNotificationFilter</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -694,13 +724,6 @@
       <mandatory>false</mandatory>
       <preSelected>false</preSelected>
       <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=4387~allowCardCollection~allowCardDelivery</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
-      <featureAttributeGroup>
         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
         <featureAttributes>
             <attributeType>coreProvisioningParameter</attributeType>
@@ -787,13 +810,6 @@
       <name>Greenbacks Shopping Card</name>
       <mandatory>false</mandatory>
       <preSelected>false</preSelected>
-      <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1387~allowCardCollection~allowCardDelivery</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
       <featureAttributeGroup>
         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
         <featureAttributes>
