@@ -312,6 +312,32 @@
          <attributeName>FAISComplianceConfirmation</attributeName>
       </productAttributes>
    </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeIntentSequence</attributeName>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ReevaluateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RecursiveGNBAIntents</attributeName>
+         <value>GenerateOfferVerifyEligibility|FinancialDetails|GenerateOfferGatherClientDetails|GenerateOfferGatherProductDetails|AppealWithLongForm|AppealWithoutLongForm|GenerateApplicationOfferProposals</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Your product|About you|Customisation|Finalisation</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>VerifyIdentity=Your Product|GenerateOfferVerifyEligibility=Your Product|GenerateOfferGatherClientDetails=Your product|FinancialDetails=Your product|GenerateOffer=Your product|ReevaluateOffer=Your product|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+
    <productAttributeGroup>
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
       <productAttributes>
@@ -393,21 +419,6 @@
          <attributeType>string</attributeType>
          <attributeName>requiresElgiblityScoringAtIntents</attributeName>
          <value>intent 0|intent 1</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ReevaluateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>breadcrumbSteps</attributeName>
-         <value>Your product|About you|Customisation|Finalisation</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Your Product|GenerateOfferVerifyEligibility=Your Product|GenerateOfferGatherClientDetails=Your product|FinancialDetails=Your product|GenerateOffer=Your product|ReevaluateOffer=Your product|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
