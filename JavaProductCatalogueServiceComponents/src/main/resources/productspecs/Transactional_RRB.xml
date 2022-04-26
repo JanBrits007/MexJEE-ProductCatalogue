@@ -186,7 +186,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>boolean</attributeType>
-         <attributeName>statusSetting</attributeName>
+         <attributeName>agreementStatusChangeRequired</attributeName>
          <value>true</value>
       </productAttributes>
    </productAttributeGroup>
@@ -626,6 +626,21 @@
             <value>ProductListing|ng-component=ProductListingComponent~ZOrder=100</value>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--Decline Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+        <!--CDE Available Actions-->
+		<productAttributes>
+			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+			<attributeName>acceptOffer|child-ng-components=ContinueWithoutCreditDeclineAction</attributeName>
+		</productAttributes>
+        <!--default-->
+		<productAttributes>
+           <attributeType>defaultMapping</attributeType>
+           <attributeName>default|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
 
    <!--RRB TP feature-->
    <features>
