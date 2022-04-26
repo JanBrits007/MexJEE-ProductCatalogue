@@ -39,7 +39,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails</value>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -49,8 +49,37 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup</value>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup</value>
       </productAttributes>
    </productAttributeGroup>
+
+   <productAttributeGroup action="overwrite">
+        <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
+            <value>5-10</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>ApplicationEndToEndExecutionTimeMinutes</attributeName>
+            <value>90</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CODEngine</attributeName>
+            <value>RRBCOD</value>
+        </productAttributes>
+        <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>GNBAVersion</attributeName>
+          <value>2.0</value>
+        </productAttributes>
+        <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>consumerFrameworkVersion</attributeName>
+          <value>2.0</value>
+        </productAttributes>
+    </productAttributeGroup>
 
 </product>

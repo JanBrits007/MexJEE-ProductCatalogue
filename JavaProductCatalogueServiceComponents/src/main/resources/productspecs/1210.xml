@@ -364,7 +364,7 @@
          <minValue>18</minValue>
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>be 18 years or older to apply</description>
+         <description>user-icon|You need to be 18 years or older to apply</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
@@ -478,6 +478,33 @@
          <attributeName>FAISComplianceConfirmation</attributeName>
       </productAttributes>
    </productAttributeGroup>
+
+
+   <productAttributeGroup>
+      <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeIntentSequence</attributeName>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ReevaluateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RecursiveGNBAIntents</attributeName>
+         <value>GenerateOfferVerifyEligibility|FinancialDetails|GenerateOfferGatherClientDetails|GenerateOfferGatherProductDetails|AppealWithLongForm|AppealWithoutLongForm|GenerateApplicationOfferProposals</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Authenticate|Choose extras|Credit info|About you|Finalisation</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>VerifyIdentity=Choose extras|GenerateOfferVerifyEligibility=Choose extras|GenerateOfferGatherProductDetails=Choose extras|GenerateOfferGatherClientDetails=Choose extras|FinancialDetails=Credit info|GenerateOffer=Credit info|ReevaluateOffer=Credit info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Finalisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+
    <productAttributeGroup>
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
       <productAttributes>
@@ -569,21 +596,6 @@
          <attributeType>string</attributeType>
          <attributeName>requiresElgiblityScoringAtIntents</attributeName>
          <value>intent 0|intent 1</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateOffer|ReevaluateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>breadcrumbSteps</attributeName>
-         <value>Authenticate|Choose extras|Credit info|About you|Finalisation</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Choose extras|GenerateOfferVerifyEligibility=Choose extras|GenerateOfferGatherProductDetails=Choose extras|GenerateOfferGatherClientDetails=Choose extras|FinancialDetails=Credit info|GenerateOffer=Credit info|ReevaluateOffer=Credit info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Finalisation|ActivateProductsGatherEvidence=Finalisation|ActivateProductsPresentDocuments=Finalisation|FinalizeFrontOfficeInteraction=Finalisation</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>

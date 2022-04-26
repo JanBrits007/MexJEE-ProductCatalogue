@@ -48,6 +48,18 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
+         <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
+         <value>${{Overdraft_RRB_dynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_RRB_1389</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
          <attributeName>LimitIncreaseSubstitutionRulesV2</attributeName>
          <value>NA</value>
       </productAttributes>
@@ -56,7 +68,8 @@
          <value>1389</value>
       </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
+
+   <!-- <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForCalculatedSegment</attributeName>
@@ -66,12 +79,12 @@
          <attributeName>SubstituteForProductID</attributeName>
          <value>1389</value>
       </productAttributes>
-   </productAttributeGroup>
+   </productAttributeGroup> -->
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>403|552</value>
+         <value>403|499</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -105,6 +118,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
+         <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
+         <value>${{Overdraft_RRB_dynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_RRB_1389</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
          <attributeName>LimitIncreaseSubstitutionRulesV2</attributeName>
          <value>NA</value>
       </productAttributes>
@@ -128,7 +152,7 @@
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>403|552</value>
+         <value>403|499</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -157,6 +181,7 @@
          <value>Transactional_Retail_1389</value>
       </productAttributes>
    </productAttributeGroup>
+   
 
    <!--PROD Substitution Rules-->
    <productAttributeGroup>
@@ -185,7 +210,7 @@
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>403|552</value>
+         <value>403|552|499</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -514,7 +539,7 @@
          <minValue>16</minValue>
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>be 16 or older</description>
+         <description>user-icon|You need to be 16 or older</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>

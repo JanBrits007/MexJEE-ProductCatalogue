@@ -14,7 +14,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~HideProceduralStep=true</attributeName>
+			<attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~HideProceduralStep=true</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -199,7 +199,7 @@
 		<attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress</attributeName>
+			<attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~child-ng-components=CustomerVulnerabilitiesComponent</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -675,8 +675,7 @@
 			<minValue>18</minValue>
 			<maxValue>999</maxValue>
 			<valueUnit>year</valueUnit>
-			<!--<description>user-icon|You need to be 18 years or older.</description>-->
-			<description>be 18 years or older.</description>
+			<description>user-icon|You need to be 18 years or older.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -685,8 +684,7 @@
 			<minValue>50000</minValue>
 			<maxValue>99999999</maxValue>
 			<valueUnit>ZAR</valueUnit>
-			<!--<description>income|You need to earn more than R60 000 a year; and</description>-->
-			<description>earn more than R60 000 a year; and</description>
+			<description>income|You need to earn more than R60 000 a year</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -722,8 +720,7 @@
 			<isComparable>false</isComparable>
 			<value>true</value>
 			<valueUnit>bool</valueUnit>
-			<!--<description>resident|You need to be a South African resident.</description>-->
-			<description>earn more than R60 000 a year; and</description>
+			<description>resident|You need to be a South African resident.</description>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
