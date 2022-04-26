@@ -5,7 +5,6 @@
     <productOnAPageWebURL></productOnAPageWebURL>
 
 
-    <!--Substitution rules-->
     <productAttributeGroup>
         <attributeGroupName>CaseConfiguration</attributeGroupName>
         <productAttributes>
@@ -23,16 +22,40 @@
     <productAttributeGroup>
         <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
     </productAttributeGroup>
+
+    <!--ETE Substitution Rules-->
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
             <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
             <value>${{FuneralPlandynamicStaffList}}</value>
         </productAttributes>
-<!--        <productAttributes>-->
-<!--            <attributeName>SubstituteForIPSubnets</attributeName>-->
-<!--            <value>${{InternalNetworkIPRanges}}</value>-->
-<!--        </productAttributes>-->
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>FuneralPlan_4232</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--QA Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{FuneralPlandynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>FuneralPlan_4232</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--PROD Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{FuneralPlandynamicStaffList}}</value>
+        </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
             <value>FuneralPlan_4232</value>
