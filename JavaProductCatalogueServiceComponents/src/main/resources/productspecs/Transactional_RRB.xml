@@ -627,6 +627,21 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--Decline Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+        <!--CDE Available Actions-->
+		<productAttributes>
+			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+			<attributeName>acceptOffer|child-ng-components=ContinueWithoutCreditDeclineAction</attributeName>
+		</productAttributes>
+        <!--default-->
+		<productAttributes>
+           <attributeType>defaultMapping</attributeType>
+           <attributeName>default|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
    <!--RRB TP feature-->
    <features>
       <featureIdentifier>1164</featureIdentifier>
