@@ -469,7 +469,22 @@
 			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
 			<value>1108~Transactional_RRB_1108</value>
 		</productAttributes>
-	</productAttributeGroup>   
+	</productAttributeGroup>
+
+  <!--Decline Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+    <!--CDE Available Actions-->
+		<productAttributes>
+			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+			<attributeName>SelectAlternateTP|child-ng-components=AlternateProductsDeclineAction</attributeName>
+		</productAttributes>
+    <!--default-->
+		<productAttributes>
+        <attributeType>defaultMapping</attributeType>
+        <attributeName>default|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
+    </productAttributes>  
+  </productAttributeGroup>
 
    <!--Overdraft feature -->
    <features>
