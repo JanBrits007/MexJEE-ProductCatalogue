@@ -119,10 +119,10 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
-      <productAttributes>
+      <!--productAttributes> Include this only when we go to self
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>GettingTheApp|ng-component=GettingTheAppComponent~ProceduralStepName=Getting the app~ZOrder=155~applicableChannels=WebSelfAssisted</attributeName>
-      </productAttributes>
+      </productAttributes-->
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
@@ -438,6 +438,38 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!-- Process Audit Report -->
+   <productAttributeGroup>
+      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subYourApplicationHeader</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subNedbankLogo</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subCaseAuditData</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subEvidenceAuditData</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subClientAuditData</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subAdditionalClientInfo</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!-- Case and Process Configuration -->
    <productAttributeGroup>
       <attributeGroupName>EligibilityRules</attributeGroupName>
@@ -446,7 +478,7 @@
          <attributeName>Age</attributeName>
          <isComparable>false</isComparable>
          <minValue>18</minValue>
-         <maxValue>999</maxValue>
+         <maxValue>55</maxValue>
          <valueUnit>year</valueUnit>
          <description>be 18 years or older</description>
       </productAttributes>
