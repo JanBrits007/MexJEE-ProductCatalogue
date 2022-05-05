@@ -24,7 +24,7 @@
       <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
    </productAttributeGroup>
 
-   <productAttributeGroup>
+   <!-- <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
@@ -46,7 +46,7 @@
          <attributeName>SubstituteForProductID</attributeName>
          <value>Overdraft_Retail_1176</value>
       </productAttributes>
-   </productAttributeGroup>
+   </productAttributeGroup> -->
 
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
@@ -56,7 +56,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Overdraft_RRB_1176</value>
+         <value>2176</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -68,7 +68,19 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Overdraft_RRB_1176</value>
+         <value>2176</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForCalculatedSegment</attributeName>
+         <value>${{RRB_Segement_list}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>2176</value>
       </productAttributes>
    </productAttributeGroup>
 

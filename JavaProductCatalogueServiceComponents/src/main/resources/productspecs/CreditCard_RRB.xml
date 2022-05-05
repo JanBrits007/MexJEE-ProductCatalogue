@@ -650,6 +650,11 @@
          <attributeName>RequiredDataFilter_FinancialExtendedDetails</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementIncomeExpenseFilterV2</value>
       </productAttributes>
+       <productAttributes>
+           <attributeType>string</attributeType>
+           <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+           <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementBOApprovedFilter</value>
+       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
@@ -734,6 +739,16 @@
       <attributeName>4313|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
     </productAttributes>
 	</productAttributeGroup>
+
+  <!-- Enable soft decline after intent 3 -->
+  <productAttributeGroup>
+      <attributeGroupName>BundleConfiguration</attributeGroupName>
+      <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>FeatureIntegratedWithBundle</attributeName>
+          <value>true</value>
+      </productAttributes>
+  </productAttributeGroup>
 
   <features>
       <featureIdentifier>5032</featureIdentifier>
