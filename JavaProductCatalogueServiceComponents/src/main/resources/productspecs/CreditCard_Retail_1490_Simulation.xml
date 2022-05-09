@@ -3,6 +3,41 @@
     <name>The American Express Centurion Card</name>
     <shortDescription>(CreditCard_Retail_1490_Simulation)</shortDescription>
 
+
+    <!--Case and Process Configuration-->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence</attributeName>
+            <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+            <value>GenerateApplicationOfferProposals|FinancialDetails|GenerateOfferGatherClientDetails</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>breadcrumbSteps</attributeName>
+            <value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>GNBAIntentToActivityMapping</attributeName>
+            <value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--ActivateProductsGatherProductDetails-->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
     <!--DeclineWithAppeal-->
     <productAttributeGroup>
         <attributeGroupName>productInformationRequirement_DeclineWithAppeal</attributeGroupName>
@@ -654,6 +689,13 @@
         <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
         <featureDisplayPosition>VAS</featureDisplayPosition>
         <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=PriorityPassCardComponent-9999~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
             <attributeGroupName>SystemRelated</attributeGroupName>
             <featureAttributes>
                 <attributeType>Flag</attributeType>
@@ -754,6 +796,7 @@
             </featureAttributes>
         </featureAttributeGroup>
     </features>
+
 
     <features>
         <featureIdentifier>1028</featureIdentifier>
