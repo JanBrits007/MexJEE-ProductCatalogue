@@ -30,6 +30,11 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.AgeEligibilityHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.MainBankedAccountsEligibilityHandler</value>
       </productAttributes>
    </productAttributeGroup>
@@ -438,6 +443,38 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!-- Process Audit Report -->
+   <productAttributeGroup>
+      <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subYourApplicationHeader</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subNedbankLogo</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subCaseAuditData</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subEvidenceAuditData</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subClientAuditData</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subAdditionalClientInfo</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!-- Case and Process Configuration -->
    <productAttributeGroup>
       <attributeGroupName>EligibilityRules</attributeGroupName>
@@ -743,11 +780,6 @@
       <productAttributes>
          <attributeType>boolean</attributeType>
          <attributeName>ComponentSupportsDeclineReasons</attributeName>
-         <value>true</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>boolean</attributeType>
-         <attributeName>EnforceAgeValidationRules</attributeName>
          <value>true</value>
       </productAttributes>
    </productAttributeGroup>
