@@ -1,39 +1,104 @@
 {
-	"productIdentifier": "1390",
-	"name": "Home Owner Insurance",
-	"shortDescription": "Protect your home.",
-	"productPricing": [{
-		"type": "AdminFee",
-		"amount": 0,
-		"frequency": "monthly",
-		"currency": "ZAR",
-		"description": ""
-	}],
-	"specialFeature": "",
-	"salesHighlights": [
-		"We have preapproved suppliers who offer 24-hour services.",
-		"The amount you insure increases automatically to ensure your cover keeps up with rising building costs.",
-		"Personal-liability cover is included at no extra cost to you.",
-		"Cover for geysers and pipes is also included."
-	],
-	"salesHighlightsDetails": [
-		"I want affordable cover for when things go wrong, and I need to rebuild or repair my home."
-		],
-	"salesHighlightsDetailsOption": "Is homeowner's insurance from Nedbank right for me?",
+	"productIdentifier": 1390,
+	"name": "Build your own cover",
+	"shortDescription": "Create your own cover for yourself and your loved ones.",
 	"redirect": {
 		"shouldRedirect": false,
 		"redirectUrl": null
 	},
-	"actions": [{
-		"type": "REDIRECT",
-		"text": "Call me back",
-		"value": "https://www.nedbankinsurancequotes.co.za/"
-	},
-	{
-		"type": "DETAIL",
-		"text": "Details"
-	}],
+	"actions": [
+		{
+			"type": "SELECT",
+			"text": "Select"
+		},
+		{
+			"type": "DETAIL",
+			"text": "Detail"
+		},
+		{
+			"type": "COMPARE",
+			"text": "Compare"
+		}
+	],
+	"applicationSteps":[
+		{
+			"index":1,
+			"name":"Choose extras",
+			"Description":"Select optional extras for your account."
+		},
+		{
+			"index":2,
+			"name":"About you",
+			"Description":"We need personal details and other information to open this account."
+		},
+		{
+			"index":3,
+			"name":"Customise",
+			"Description":"Choose your preferences, including card delivery and staying in touch."
+		},
+		{
+			"index":4,
+			"name":"Finishing up",
+			"Description":"Finish the paperwork and activate your product!"
+		}
+	],
+	"productFeatures": [
+		{
+			"name": "Premium bonus",
+			"displayName": "Premium bonus",
+			"description": "Premium bonus: After 11 months premiums have been received, you'll get a premium holiday of 1 month."
+		},
+		{
+			"name": "Extra premium bonus",
+			"displayName": "Extra premium bonus",
+			"description": "Extra premium bonus: If you pay 10 months' premiums in advance, you will be credited with an extra month’s premium, which together with the normal premium bonus gives you 12 months' cover."
+		},
+		{
+			"name": "Grace period",
+			"displayName": "Grace period",
+			"description": "Grace period of 30 days: If you are unable to make a payment towards this policy in any month, you will have a 30-day grace period to make up for the non-payment."
+		},
+		{
+			"name": "Allocated premium",
+			"displayName": "Allocated premium",
+			"description": "Allocated premium: To determine whether the right premium has been paid for the chosen cover, we calculate an allocated premium."
+		},
+		{
+			"name": "Reduced cover amount",
+			"displayName": "Reduced cover amount",
+			"description": "Reduced cover amount: When we determine the amount payable for a valid claim, we look at the total amount of premiums we have received for the past six months and compare it with the total policy premium amount due for the past six months."
+		},
+		{
+			"name": "Stillborn cover",
+			"displayName": "Stillborn cover",
+			"description": "Stillborn cover: Female main members and female partners (including more than one spouse, wife, common-law partner and customary-law wife) qualify automatically for stillborn cover of 12,5% of the main member’s cover. This benefit is limited to a maximum of two claims over the policy term and a maximum of R1 000 per claim."
+		}
+	],
+	"eligibilityRules": [
+		{
+			"attributeType": "EligibilityRule",
+			"attributeName": "Age",
+			"minValue": "18",
+			"maxValue": "55",
+			"valueUnit": "year",
+			"description": "If you're over 18 years old, not older than 55 years old and a South African citizen, you can take out your policy today."
+		}
+	],
+	"lifeCycleStatus":"AVAILABLE",
+	"productPricing": [],
+	"specialFeature": "",
 	"valueAddedServices": [],
-	"eligibilityRules": [],
-	"lifeCycleStatus": "AVAILABLE"
+	"salesHighlights": [
+		"Cover for up to 29 family members.",
+		"You can choose from different cover amount options up to R75 000.",
+		"You can benefit from immediate accidental death cover.",
+		"You, your immediate family, parents and domestic worker(s) will be covered for natural death after only six months. Other insured lives will be covered after 12 months.",
+		"No medical tests are required to take out a funeral policy.",
+		"A premium bonus every 12 months which is equal to the average premiums paid in the preceding 11 months.",
+		"A no-lapse benefit - if you are experiencing financial difficulties and pay only part of your premium, your cover will be reduced but your policy will not lapse.",
+		"A family support benefit. Depending on the options you choose when you take out your policy, your beneficiaries could get a monthly income of up to R2 500 for three, six, nine or twelve months on your death.",
+		"A waiver of premium. Depending on the options you choose when you take out your policy, your premiums could be paid for up to 24 months, providing peace of mind that your loved ones will still be covered after your death.",
+		"Access to our Value For Life programme.",
+		"Get up to 10% discount on your premium. That’s 5% for purchasing your cover through one of our digital channels**and 5% for having your premium debited from your Nedbank account."
+	]
 }
