@@ -1,6 +1,27 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1021</productIdentifier>
    <name>Private Bundle</name>
+
+   <productAttributeGroup>
+      <attributeGroupName>EligibilityHandler</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_PrepareApplicant</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+
    <productAttributeGroup>
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
@@ -83,6 +104,11 @@
       <attributeName>CaptureFinancialDetails_FinaliseCase</attributeName>
       <value>classname=za.co.nb.onboarding.product.phaserules.handlers.financialdetails.FinaliseCaseFinancialDetailsRuleHandler</value>
    </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_WebDecisionEngine</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.DecisionEngineCODHandler</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>      
