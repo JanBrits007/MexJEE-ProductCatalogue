@@ -103,14 +103,16 @@
       </productAttributes>
    </productAttributeGroup>
 
+
+   <!-- Case and Process Configuration -->
+
    <!-- Intent sequence mapping -->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails</value>
-         <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -120,9 +122,10 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Choose extras|GenerateOfferGatherClientDetails=Choose extras</value>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Choose extras|GenerateOfferGatherClientDetails=About You</value>
       </productAttributes>
    </productAttributeGroup>
+
 
    <productAttributeGroup action="overwrite">
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
