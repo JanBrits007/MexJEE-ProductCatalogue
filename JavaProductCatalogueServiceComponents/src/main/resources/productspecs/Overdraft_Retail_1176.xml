@@ -16,4 +16,161 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>EligibilityRules</attributeGroupName>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Age</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>18</minValue>
+         <maxValue>999</maxValue>
+         <valueUnit>year</valueUnit>
+         <description>user-icon|You need to be 18 or older.</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Income</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>3500.00</minValue>
+         <maxValue>99999999</maxValue>
+         <valueUnit>ZAR</valueUnit>
+         <description>icon_earn|You need to earn at least R3 500.00 a month.</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Account</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+         <description>icon_account|If you don't have a bank account with us, we'll help you open one. No hassle.</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>SalarySwitching</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+         <description>salary_switching|Get your salary paid into your Nedbank account, you can do this with Salary Switching.</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>NaturalPerson</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>CreditApproval</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>NotUnderCreditAdministration</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EligibleDCARRanges</attributeName>
+         <value>0-100000|100001-200000</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EligibleSegments</attributeName>
+         <value>${{RetailEligibleSegments}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+
+   <!--Evidence And Compliance Requirements-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>Proof of your identity.</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>3 months of bank statement and 3 months payslips.</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>string</valueUnit>
+      </productAttributes>
+   </productAttributeGroup>
+
+
+   <!-- Case and Process Configuration -->
+
+   <!-- Intent sequence mapping -->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeIntentSequence</attributeName>
+         <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Authenticate|Choose extras|About You|Customise|Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Choose extras|GenerateOfferGatherClientDetails=About You</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
+         <value>5-10</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>ApplicationEndToEndExecutionTimeMinutes</attributeName>
+         <value>90</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODEngine</attributeName>
+         <value>RRBCOD</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAVersion</attributeName>
+         <value>2.0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>consumerFrameworkVersion</attributeName>
+         <value>2.0</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--GenerateOfferGatherProductDetails-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>YourOverdraft|ng-component=YourOverdraftComponent~ProceduralStepName=Your Overdraft~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=500~MaximumInput=250000</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
 </product>
