@@ -20,6 +20,39 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--ActivateProductsGatherProductDetails-->
+   <productAttributeGroup action="overwrite"> <!--overwritten to make getting the app widget applicable to kiosk-->
+      <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>TransactionalProductInformationBroadcast|ng-component=TransactionalProductInformationBroadcastComponent~ZOrder=400~</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~restrictOptOut=true~ProceduralStepName=Getting your cards~ZOrder=170</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>GettingTheApp|ng-component=GettingTheAppComponent~ProceduralStepName=Getting the app~ZOrder=155~applicableChannels=WebSelfAssisted~applicableChannels= </attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
 
    <!--ActivateProductsGatherEvidence-->
    <productAttributeGroup action="overwrite"> <!--overwritten to remove normal doc upload and add in SSK scanning-->
@@ -66,6 +99,7 @@
 
 
    <!-- here for each vas override the vas offer screen-->
+   
 
    <!--1333 - Nedbank Greenbacks Shop Card-->
    <features>
@@ -73,10 +107,161 @@
       <name>Nedbank Greenbacks Shop Card</name>
 
       <!--GenerateOffer-->
-      <featureAttributeGroup action="overwrite"> <!--overwritten to remove the vas selection-->
+      <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GreenbacksComponent-1333~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      
+   </features>
+
+   
+
+   <!--1374 - eNotes-->
+   <features>
+      <featureIdentifier>1374</featureIdentifier>
+      <name>eNotes</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup action="overwrite"> <!--remove VAS offer widgit-->
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=EnotesVASComponent-1374~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      
+   </features>
+
+   <!--1008 - No Funds Alert Services-->
+   <features>
+      <featureIdentifier>1008</featureIdentifier>
+      <name>No Funds Alert Services</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup action="overwrite"> <!--remove VAS offer widgit-->
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=NoFundsAlertVASComponent-1008~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      
+   </features>
+
+   <!--1454 - Greenbacks Rewards Membership-->
+   <features>
+      <featureIdentifier>1454</featureIdentifier>
+      <name>Greenbacks Rewards Membership</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup action="overwrite"> <!--remove VAS offer widgit-->
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GreenbacksComponent-1454~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      
+   </features>
+
+   <!--1025 - Funeral Cover-->
+   <features>
+      <featureIdentifier>1025</featureIdentifier>
+      <name>Funeral Cover</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup action="overwrite"> <!--remove VAS offer widgit-->
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=NedbankInsuranceFuneralPlanComponent-1025~ProceduralStepName=Optional extras for you~ZOrder=65~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      
+   </features>
+
+   <!--1376 - Salary Switching-->
+   <features>
+      <featureIdentifier>1376</featureIdentifier>
+      <name>Salary Switching</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup action="overwrite"> <!--remove VAS offer widgit-->
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=SalarySwitchingComponent-1376~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      
+   </features>
+
+   <!--1380 - Debit Order Switching-->
+   <features>
+      <featureIdentifier>1380</featureIdentifier>
+      <name>Debit Order Switching</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup action="overwrite"> <!--remove VAS offer widgit-->
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=DebitOrderSwitchingComponent-1380~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      
+   </features>
+
+   <!--219 - Instant Gold Cheque Card-->
+   <features>
+      <featureIdentifier>219</featureIdentifier>
+      <name>Instant Gold Cheque Card</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup action="overwrite"> <!--remove VAS offer widgit-->
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-InstantGoldChequeCardValueAddedServiceSelector-219~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      
+   </features>
+
+   <!--1386 - Gold Cheque Card-->
+   <features>
+      <featureIdentifier>1386</featureIdentifier>
+      <name>Gold Cheque Card</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup action="overwrite"> <!--remove VAS offer widgit-->
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GoldChequeCardVASComponent-1386~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
 
    </features>
+
+   <!--1164 - Amex Card-->
+   <features>
+      <featureIdentifier>1164</featureIdentifier>
+      <name>Amex Card</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup action="overwrite"> <!--remove VAS offer widgit-->
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GreenbacksComponent-1164~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+   </features>
+  
 
 </product>
