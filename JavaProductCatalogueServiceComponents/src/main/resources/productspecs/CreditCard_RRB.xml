@@ -399,6 +399,11 @@
          <attributeName>CODHandler_Recalculate</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.cde.v3.RRBRecalcCODHandler</value>
       </productAttributes>
+      <productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>PricingPlanHandler_GenerateOffer</attributeName>
+			<value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
+		</productAttributes>
    </productAttributeGroup>
 
    <productAttributeGroup action="overwrite">
@@ -631,6 +636,16 @@
     <!-- Arrangement configuration -->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
+      <productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>PricingPlanDiscriminator</attributeName>
+			<value>Nedbank Staff</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>PricingPlanDiscriminator</attributeName>
+			<value>Client Risk Tier</value>
+		</productAttributes>
       <productAttributes>
          <attributeType>1454</attributeType>
          <attributeName>ProductRuleHandler_Greenbacks</attributeName>
