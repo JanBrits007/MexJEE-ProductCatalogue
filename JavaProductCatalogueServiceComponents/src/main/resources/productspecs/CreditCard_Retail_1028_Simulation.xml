@@ -3,61 +3,10 @@
     <name>The American Express Platinum Card</name>
     <shortDescription>(CreditCard_Retail_1028_Simulation)</shortDescription>
 
-    <!--DeclineWithAppeal-->
-    <productAttributeGroup>
-        <attributeGroupName>productInformationRequirement_DeclineWithAppeal</attributeGroupName>
-        <productAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Your offer</attributeName>
-        </productAttributes>
-    </productAttributeGroup>
-
     <productAttributeGroup inheritFromFiles="CreditCard_Retail_1032_Simulation">
         <attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
     </productAttributeGroup>
 
-
-    <!--GenerateOfferGatherProductDetails-->
-    <productAttributeGroup action="overwrite">
-        <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-        <productAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=5000</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=MerchantAssisted~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-        </productAttributes>
-    </productAttributeGroup>
-
-    <!--Offer Configuration-->
-    <productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
-        <attributeGroupName>VASCrossSellControl</attributeGroupName>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1334</attributeName><!--Membership Rewards-->
-            <value>Optionality=Mandatory~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1465</attributeName><!--Redemption Card-->
-            <value>Optionality=Optional~IsTakenUp=false</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1100</attributeName><!--Credit Card Insurance-->
-            <value>Optionality=Optional~IsTakenUp=false</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_9999</attributeName><!--Priority pass-->
-            <value>Optionality=Mandatory~IsTakenUp=true</value>
-        </productAttributes>
-    </productAttributeGroup>
 
     <!--Case and Process Configuration-->
     <productAttributeGroup action="overwrite">
