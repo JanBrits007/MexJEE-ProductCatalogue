@@ -3,9 +3,9 @@
    <name>Foreign Currency Account</name>
    <shortDescription>(Forex_Retail_1227_PresentAlternateOffer) used to present an alternate offer only</shortDescription>
 
-   <!--GenerateOffer-->
+   <!--PresentAlternateOffer-->
    <productAttributeGroup action="overwrite">
-      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+      <attributeGroupName>productInformationRequirement_PresentAlternateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep</attributeName>
@@ -20,9 +20,9 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>RuleHandlers_PresentOffer</attributeGroupName>
+      <attributeGroupName>RuleHandlers_PresentAlternateOffer</attributeGroupName>
       <productAttributes>
-         <attributeName>CompleteWorkItemPhaseHandler_PresentOffer</attributeName>
+         <attributeName>CompleteWorkItemPhaseHandler_PresentAlternateOffer</attributeName>
          <value>classname=ProvisionArrangement</value> <!--calls provisioning with ArrangementFunding as a provisioning phase-->
       </productAttributes>
    </productAttributeGroup>
@@ -32,7 +32,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>GenerateOffer|FinalizeFrontOfficeInteraction</value>
+         <value>PresentAlternateOffer|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -42,12 +42,12 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>GenerateOffer=Choose Extras|FinalizeFrontOfficeInteraction=Finishing up</value>
+         <value>PresentAlternateOffer=Choose Extras|FinalizeFrontOfficeInteraction=Finishing up</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>AlternateOfferWorkItemTemplate</attributeName>
-         <value>GenerateOffer</value>
+         <value>PresentAlternateOffer</value>
       </productAttributes>
    </productAttributeGroup>
    
