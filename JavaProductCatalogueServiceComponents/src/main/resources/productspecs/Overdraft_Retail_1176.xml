@@ -8,11 +8,20 @@
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OverdraftProductDetails|ng-component=RetailOverdraftProductDetailsComponent~ZOrder=100</attributeName>
+         <!--<attributeName>OverdraftProductDetails|ng-component=RetailOverdraftProductDetailsComponent~ZOrder=100</attributeName>-->
+         <attributeName>OverdraftProductDetails|ng-component=RetailOverdraftProductDetailsComponent~ProceduralStepName=Your Overdraft~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=500~MaximumInput=250000</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>TransactionalProductSelection|ng-component=RetailTransactionalProductSelectionComponent~ZOrder=90</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -105,7 +114,6 @@
 
 
    <!-- Case and Process Configuration -->
-
    <!-- Intent sequence mapping -->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
@@ -125,52 +133,4 @@
          <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Choose extras|GenerateOfferGatherClientDetails=About You</value>
       </productAttributes>
    </productAttributeGroup>
-
-
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
-         <value>5-10</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>ApplicationEndToEndExecutionTimeMinutes</attributeName>
-         <value>90</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>CODEngine</attributeName>
-         <value>RRBCOD</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>GNBAVersion</attributeName>
-         <value>2.0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>consumerFrameworkVersion</attributeName>
-         <value>2.0</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <!--GenerateOfferGatherProductDetails-->
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YourOverdraft|ng-component=YourOverdraftComponent~ProceduralStepName=Your Overdraft~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=500~MaximumInput=250000</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-
 </product>
