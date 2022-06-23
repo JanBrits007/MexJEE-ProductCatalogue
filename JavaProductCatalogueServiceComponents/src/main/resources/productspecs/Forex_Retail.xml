@@ -272,7 +272,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|INVESTMENT|Agreement Contract</attributeName>
+         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSINVESTMENT|Terms and Conditions</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -299,7 +299,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+         <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|AGREEMENTSINVESTMENT|Application</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -326,7 +326,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|AGREEMENTS|AGREEMENTSINVESTMENT|FAIS Declaration</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -604,9 +604,8 @@
          <attributeName>DecisionTree_PresentAlternateOffer</attributeName>
          <value>classname=forexPresentAlternateOffer</value>
       </productAttributes>
-
-
    </productAttributeGroup>
+
    <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
       <productAttributes>
@@ -815,12 +814,6 @@
          <attributeName>EnforceAgeValidationRules</attributeName>
          <value>true</value>
       </productAttributes>
-<!--      To be aligned with Tim-->
-<!--      <productAttributes>-->
-<!--         <attributeType>boolean</attributeType>-->
-<!--         <attributeName>EnforceResidencyValidationRules</attributeName>-->
-<!--         <value>true</value>-->
-<!--      </productAttributes>-->
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
@@ -1025,7 +1018,12 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>welcomeLetterTaxonomy</attributeName>
-         <value>AGREEMENTSDEPOSIT|Welcome Letter|Welcome Letter</value>
+         <value>AGREEMENTSINVESTMENT|Welcome Letter|Welcome Letter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>foreignExchangeReceiptTaxonomy</attributeName>
+         <value>MAINTENANCEINVESTMENT|Foreign Exchange Receipt|Foreign Exchange Receipt</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
