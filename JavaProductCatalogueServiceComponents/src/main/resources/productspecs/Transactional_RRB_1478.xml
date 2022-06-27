@@ -396,7 +396,7 @@
       <productAttributes>
          <attributeType>boolean</attributeType>
          <attributeName>consolidatedLeadEmail</attributeName>
-         <value>true</value>
+         <value>false</value>
       </productAttributes>
       <productAttributes>
         <attributeType>string</attributeType>
@@ -488,6 +488,19 @@
         <attributeType>defaultMapping</attributeType>
         <attributeName>default|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
     </productAttributes>  
+  </productAttributeGroup>
+
+  <!--GenerateOffer - Decline-->
+  <productAttributeGroup action="overwrite">
+    <attributeGroupName>productInformationRequirement_Decline</attributeGroupName>
+    <productAttributes>
+        <attributeType>clientInformationRequirement</attributeType>
+        <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+    </productAttributes>
+    <productAttributes>
+        <attributeType>productInformationRequirement</attributeType>
+        <attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80~min=10000</attributeName>
+    </productAttributes>
   </productAttributeGroup>
 
    <!--Overdraft feature -->

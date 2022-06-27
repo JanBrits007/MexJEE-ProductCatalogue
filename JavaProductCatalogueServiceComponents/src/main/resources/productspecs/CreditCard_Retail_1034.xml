@@ -3,6 +3,45 @@
 	<name>Platinum Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1034)</shortDescription>
 
+	<!--DeclineWithAppeal-->
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_DeclineWithAppeal</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Your offer</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Offer Configuration-->
+	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
+		<attributeGroupName>VASCrossSellControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1454</attributeName><!--Greenbacks-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1333</attributeName><!--Greenbacks Shop Card-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1099</attributeName><!--Credit Card Insurance-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1447</attributeName><!--Own Credit Insurance-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1028</attributeName><!--Plastic Card-->
+			<value>Optionality=Optional~IsTakenUp=true</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--Document Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>

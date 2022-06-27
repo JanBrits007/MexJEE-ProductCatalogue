@@ -3,6 +3,40 @@
 	<name>Small Business Bundle Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1504) Small Business Bundle Credit Card</shortDescription>
 
+	<!--DeclineWithAppeal-->
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_DeclineWithAppeal</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Your offer</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Offer Configuration-->
+	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
+		<attributeGroupName>VASCrossSellControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1454</attributeName><!--Greenbacks-->
+			<value>Optionality=Mandatory~IsTakenUp=true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1333</attributeName><!--Greenbacks Shop Card-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1099</attributeName><!--Credit Card Insurance-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1028</attributeName><!--Plastic Card-->
+			<value>Optionality=Optional~IsTakenUp=true</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--Document Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
@@ -41,6 +75,42 @@
 			<attributeName>subCreditCardTC|ContractComponentProductType=1504</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
+
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Age</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>18</minValue>
+			<maxValue>999</maxValue>
+			<valueUnit>year</valueUnit>
+			<description>user-icon|You need to be 18 years or older.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>60000</minValue>
+			<maxValue>99999999</maxValue>
+			<valueUnit>ZAR</valueUnit>
+			<description>income|You need to earn more than R60 000 per year and have a business annual turnover of R150 000 per year or more.</description>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--GenerateOfferGatherProductDetails-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=2500</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
 
 
 	<!--Offer Configuration-->

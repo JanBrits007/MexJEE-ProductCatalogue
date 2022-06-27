@@ -3,24 +3,6 @@
     <name>HUB Card</name>
     <shortDescription>(HUB Card_1050_Simulation)</shortDescription>
 
-    <!--DeclineWithAppeal-->
-    <productAttributeGroup>
-        <attributeGroupName>productInformationRequirement_DeclineWithAppeal</attributeGroupName>
-        <productAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Your offer</attributeName>
-        </productAttributes>
-    </productAttributeGroup>
-
-    <!--Offer Configuration-->
-    <productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
-        <attributeGroupName>VASCrossSellControl</attributeGroupName>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_5200</attributeName><!--HUB Club Rewards-->
-            <value>Optionality=Optional~IsTakenUp=false</value>
-        </productAttributes>
-    </productAttributeGroup>
 
     <!--Case and Process Configuration-->
     <productAttributeGroup action="overwrite">
@@ -126,11 +108,4 @@
 
 
 
-    <productAttributeGroup action="overwrite">
-        <attributeGroupName>CreditDetails</attributeGroupName>
-        <productAttributes>
-            <attributeName>minimumCreditAvaliableZAR</attributeName>
-            <value>2500</value>
-        </productAttributes>
-    </productAttributeGroup>
 </product>

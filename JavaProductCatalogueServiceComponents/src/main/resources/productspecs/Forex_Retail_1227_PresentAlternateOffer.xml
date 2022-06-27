@@ -3,9 +3,9 @@
    <name>Foreign Currency Account</name>
    <shortDescription>(Forex_Retail_1227_PresentAlternateOffer) used to present an alternate offer only</shortDescription>
 
-   <!--GenerateOffer-->
+   <!--PresentAlternateOffer-->
    <productAttributeGroup action="overwrite">
-      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+      <attributeGroupName>productInformationRequirement_PresentAlternateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep</attributeName>
@@ -19,20 +19,13 @@
          <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>RuleHandlers_PresentOffer</attributeGroupName>
-      <productAttributes>
-         <attributeName>CompleteWorkItemPhaseHandler_PresentOffer</attributeName>
-         <value>classname=ProvisionArrangement</value> <!--calls provisioning with ArrangementFunding as a provisioning phase-->
-      </productAttributes>
-   </productAttributeGroup>
 
    <productAttributeGroup action="overwrite">
       <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>GenerateOffer|FinalizeFrontOfficeInteraction</value>
+         <value>PresentAlternateOffer|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -42,14 +35,96 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>GenerateOffer=Choose Extras|FinalizeFrontOfficeInteraction=Finishing up</value>
+         <value>PresentAlternateOffer=Choose Extras|FinalizeFrontOfficeInteraction=Finishing up</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>AlternateOfferWorkItemTemplate</attributeName>
-         <value>GenerateOffer</value>
+         <value>PresentAlternateOffer</value>
       </productAttributes>
    </productAttributeGroup>
-   
-
+   <!--Speak to Ryan and Tim about having to copy the whole productAttributeGroup"-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>CaseConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CDE_SimulationETE</attributeName>
+         <value>${{Forex_Simulation}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>CODHandler_WebDecisionEngine</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.DecisionEngineCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>CODHandler_CreditOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.forex.decisioning.CreditOfferCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanHandler_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>CODHandler_ProductOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.forex.decisioning.ProductOfferCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>CODHandler_Intent4</attributeName>
+         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.forex.decisioning.Intent4CODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>PricingPlanHandler_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>CODHandler_Recalculate</attributeName>
+         <value>classname=za.co.nb.offermanagement.forex.decisioning.RecalcCODHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>CODHandler_FinancialDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.cde.FinancialDetailsHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Forex</attributeType>
+         <attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenericHandler_GenerateRevisedApplicationOfferProposals</attributeName>
+         <value>classname=GenerateRevisedApplicationOffer</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>DecisionTree_PresentAlternateOffer</attributeName>
+         <value>classname=forexPresentAlternateOffer</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>CompleteWorkItemHandler_PresentAlternateOffer</attributeName>
+         <value>classname=ProvisionArrangement</value>
+      </productAttributes>
+   </productAttributeGroup>
 </product>

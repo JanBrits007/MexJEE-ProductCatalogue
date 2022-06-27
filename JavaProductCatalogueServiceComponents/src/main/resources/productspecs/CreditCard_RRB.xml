@@ -74,7 +74,7 @@
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~RemoveStatementDelivery=true~displaySummary=true~child-ng-components=CustomerVulnerabilitiesComponent~child-ng-components=EmailAddress</attributeName>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~RemoveStatementDelivery=true~displaySummary=true~child-ng-components=CustomerVulnerabilitiesComponent~child-ng-components=EmailAddress~statementDeliveryMethod=email</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -399,6 +399,11 @@
          <attributeName>CODHandler_Recalculate</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.cde.v3.RRBRecalcCODHandler</value>
       </productAttributes>
+      <productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>PricingPlanHandler_GenerateOffer</attributeName>
+			<value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
+		</productAttributes>
    </productAttributeGroup>
 
    <productAttributeGroup action="overwrite">
@@ -632,6 +637,16 @@
    <productAttributeGroup action="overwrite">
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
       <productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>PricingPlanDiscriminator</attributeName>
+			<value>Nedbank Staff</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>PricingPlanDiscriminator</attributeName>
+			<value>Client Risk Tier</value>
+		</productAttributes>
+      <productAttributes>
          <attributeType>1454</attributeType>
          <attributeName>ProductRuleHandler_Greenbacks</attributeName>
          <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.GreenBacksRule</value>
@@ -717,6 +732,11 @@
 			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
 			<attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
 		</productAttributes>
+        <!--Web Decision Engine Decline for staff FAIS registration-->
+        <productAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>FAIS02|child-ng-components=FaisOnbehalfOfComponent</attributeName>
+        </productAttributes>
     <!--CDE Decline-->
     <productAttributes>
         <attributeType>declineCodeMapping</attributeType>
