@@ -1,6 +1,30 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1108</productIdentifier>
    <name>Private | Pay-As-You-Use</name>
+
+   <productAttributeGroup>
+      <attributeGroupName>EligibilityHandler</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_PrepareApplicant</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.NonEligibleDCAREligibilityHandler</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <productAttributeGroup>
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
@@ -58,6 +82,11 @@
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
          <description>user-icon|You need to be at least 18 years old.</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>NonEligibleDCAR</attributeName>
+         <value>${{NonEligibleDCARList}}</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
