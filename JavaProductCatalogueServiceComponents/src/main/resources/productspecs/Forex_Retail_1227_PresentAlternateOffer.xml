@@ -3,9 +3,9 @@
    <name>Foreign Currency Account</name>
    <shortDescription>(Forex_Retail_1227_PresentAlternateOffer) used to present an alternate offer only</shortDescription>
 
-   <!--PresentAlternateOffer-->
+   <!--GenerateOffer-->
    <productAttributeGroup action="overwrite">
-      <attributeGroupName>productInformationRequirement_PresentAlternateOffer</attributeGroupName>
+      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep</attributeName>
@@ -25,7 +25,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>PresentAlternateOffer|FinalizeFrontOfficeInteraction</value>
+         <value>GenerateOffer|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -35,12 +35,12 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>PresentAlternateOffer=Choose Extras|FinalizeFrontOfficeInteraction=Finishing up</value>
+         <value>GenerateOffer=Choose Extras|FinalizeFrontOfficeInteraction=Finishing up</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>AlternateOfferWorkItemTemplate</attributeName>
-         <value>PresentAlternateOffer</value>
+         <value>GenerateOffer</value>
       </productAttributes>
       <productAttributes>
          <attributeType>boolean</attributeType>
@@ -48,6 +48,7 @@
          <value>true</value>
       </productAttributes>
    </productAttributeGroup>
+
    <!--Speak to Ryan and Tim about having to copy the whole productAttributeGroup"-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>CaseConfiguration</attributeGroupName>
@@ -128,8 +129,9 @@
          <value>classname=forexPresentAlternateOffer</value>
       </productAttributes>
       <productAttributes>
-         <attributeName>CompleteWorkItemHandler_PresentAlternateOffer</attributeName>
+         <attributeName>CompleteWorkItemHandler_PresentOffer</attributeName>
          <value>classname=ProvisionArrangement</value>
       </productAttributes>
    </productAttributeGroup>
+
 </product>
