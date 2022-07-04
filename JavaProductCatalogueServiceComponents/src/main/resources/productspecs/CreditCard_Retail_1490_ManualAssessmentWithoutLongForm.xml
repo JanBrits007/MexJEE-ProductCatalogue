@@ -1,7 +1,7 @@
 <product inheritFromFiles="CreditCard_Retail_1490" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1490</productIdentifier>
 	<name>The American Express Centurion Card</name>
-	<shortDescription>(CreditCard_Retail_1490_ManualAssessmentWithLongForm)</shortDescription>
+	<shortDescription>(CreditCard_Retail_1490_ManualAssessmentWithoutLongForm)</shortDescription>
 
 	<!--AppealWithLongForm-->
 	<productAttributeGroup inheritFromFiles="BaseProduct_Retail_ManualAssessmentWithoutLongForm">
@@ -12,6 +12,13 @@
 	<productAttributeGroup inheritFromFiles="BaseProduct_Retail_LongForm">
 		<attributeGroupName>clientInformationRequirement_FinancialExtendedDetails</attributeGroupName>
 	</productAttributeGroup>
+
+
+	<!--FinalizeFrontOfficeInteraction-->
+	<productAttributeGroup inheritFromFiles="BaseProduct_Retail_ManualAssessmentWithoutLongForm">
+		<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+	</productAttributeGroup>
+
 
 	<!--Case and Process Configuration-->
 	<productAttributeGroup inheritFromFiles="BaseProduct_Retail_ManualAssessmentWithoutLongForm">

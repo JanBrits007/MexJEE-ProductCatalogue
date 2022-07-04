@@ -3,6 +3,36 @@
 	<name>Base Personal Loan Specification</name>
 	<shortDescription>Base Personal Loan Specification</shortDescription>
 
+
+	<!--Evidence And Compliance Requirements-->
+	<productAttributeGroup>
+		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
+		<productAttributes>
+			<attributeType>Evidence</attributeType>
+			<attributeName>Proof of your identity.</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>string</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>Evidence</attributeType>
+			<attributeName>Latest Payslip.</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>string</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>Evidence</attributeType>
+			<attributeName>3 months of bank statements.</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>string</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>Evidence</attributeType>
+			<attributeName>A letter from your accountant or financial manager (if you are sef-employed).</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>string</valueUnit>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--GenerateOfferVerifyEligibility-->
 
 	<!--VerifyIdentity-->
@@ -232,7 +262,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+			<attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -261,7 +291,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>FaisDeclaration|ProceduralStepName=FAIS declaration~ZOrder=60~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+			<attributeName>FaisDeclaration|ProceduralStepName=FAIS declaration~ZOrder=60~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -282,11 +312,11 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>DigitalActivation|ng-component=DigitalActivationComponent~ProceduralStepName=Get activated on the app~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+			<attributeName>DigitalActivation|ng-component=DigitalActivationComponent~ProceduralStepName=Get activated on the app~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=60~ContractComponentProductType=1001~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+			<attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=60~ContractComponentProductType=1001~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -1446,11 +1476,11 @@
 	</productAttributeGroup>
 
 	<features>
-		<featureIdentifier>1446</featureIdentifier>
+		<featureIdentifier>1105</featureIdentifier>
 		<name>Credit Life</name>
 		<mandatory>false</mandatory>
 		<preSelected>true</preSelected>
-		<shortDescription>Life Insurance with credit producct</shortDescription>
+		<shortDescription>Life Insurance with credit product</shortDescription>
 		<description>Detailed description of feature</description>
 		<featureGrouping>
 			<featureGroupName>Insurance</featureGroupName>
@@ -1474,14 +1504,14 @@
 			<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
 			<featureAttributes>
 				<attributeType>string</attributeType>
-				<attributeName>subCreditLifeInsurance|ContractComponentProductType=1446</attributeName>  <!--This needs to only come  through if Credit Life insurance (1446) is taken-up-->
+				<attributeName>subCreditLifeInsurance|ContractComponentProductType=1105</attributeName>  <!--This needs to only come  through if Credit Life insurance (1105) is taken-up-->
 			</featureAttributes>
 		</featureAttributeGroup>
 		<featureAttributeGroup>
 			<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
 			<featureAttributes>
 				<attributeType>string</attributeType>
-				<attributeName>subNedbankInsurance|ContractComponentProductType=1446</attributeName>
+				<attributeName>subNedbankInsurance|ContractComponentProductType=1105</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 		<featureAttributeGroup>
@@ -1586,7 +1616,7 @@
 			<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 			<featureAttributes>
 				<attributeType>string</attributeType>
-				<attributeName>subCreditLifeInsurance|ContractComponentProductType=1446</attributeName>
+				<attributeName>subCreditLifeInsurance|ContractComponentProductType=1105</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>

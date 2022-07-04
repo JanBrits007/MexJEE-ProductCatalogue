@@ -3,6 +3,48 @@
    <name>Transactional RRB</name>
    <shortDescription>Generic RRB transactional product to be inherited from</shortDescription>
 
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>EligibilityHandler</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_PrepareApplicant</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.NonEligibleDCAREligibilityHandler</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!-- Eligibility rules -->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>EligibilityRules</attributeGroupName>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Age</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>18</minValue>
+         <maxValue>999</maxValue>
+         <valueUnit>year</valueUnit>
+         <description>user-icon|You need to be at least 18 years old.</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>NonEligibleDCAR</attributeName>
+         <value>${{NonEligibleDCARList}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+
   <!--GenerateOfferGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
@@ -77,7 +119,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDone|ng-component=YouAreDoneComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=TransactionalProductAccountDetails~ZOrder=50~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-219~GetInTouch=true~child-ng-components=LocateBranchComponent~child-ng-components=ContactUsComponent~child-ng-components=CallMeBackComponent~callMeBackUrl=PRIVATE_BANKING_CMB_URL~child-ng-components=BankerDetailComponent~child-ng-components=CompleteCaseComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=FatcaTinValidationComponent~ProceduralStepName=You're all set!</attributeName>
+         <attributeName>YoureDone|ng-component=YouAreDoneComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=NoFeeTransactionalProductAccountDetails~ZOrder=50~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-219~GetInTouch=true~child-ng-components=LocateBranchComponent~child-ng-components=ContactUsComponent~child-ng-components=CallMeBackComponent~callMeBackUrl=PRIVATE_BANKING_CMB_URL~child-ng-components=BankerDetailComponent~child-ng-components=CompleteCaseComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=FatcaTinValidationComponent~ProceduralStepName=You're all set!</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
