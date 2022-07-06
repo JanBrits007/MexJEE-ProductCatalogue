@@ -40,6 +40,9 @@
 	<productAttributeGroup>
 		<attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
 	</productAttributeGroup>
+
+	<!--ETE Substitution Rules-->
+
 	<productAttributeGroup>
 		<attributeGroupName>InitialisationMerchantSubstitutionRulesETE</attributeGroupName>
 		<productAttributes>
@@ -64,6 +67,30 @@
 	</productAttributeGroup>
 
 
+	<!--QA Substitution Rules-->
+
+	<productAttributeGroup>
+		<attributeGroupName>InitialisationMerchantSubstitutionRulesQA</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+			<value>${{EDBPhase2dynamicStaffList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>CreditCard_Retail_1050</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>LimitIncreaseMerchantSubstitutionRulesQA</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+			<value>${{EDBPhase2dynamicStaffList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>CreditCard_Retail_1050</value>
+		</productAttributes>
+	</productAttributeGroup>
 
 	<productAttributeGroup>
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>

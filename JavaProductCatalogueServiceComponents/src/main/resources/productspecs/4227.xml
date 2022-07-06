@@ -24,11 +24,12 @@
     </productAttributeGroup>
 
     <!--ETE Substitution Rules-->
+
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
-            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-            <value>${{FuneralPlan10KDynamicStaffList}}</value>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{FuneralPlanClientEmailAddresses}}</value>
         </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
@@ -39,8 +40,8 @@
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
-            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
-            <value>${{FuneralPlanClientEmailAddresses}}</value>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{FuneralPlan10KDynamicStaffList}}</value>
         </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
@@ -62,6 +63,18 @@
 
 
     <!--QA Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{FuneralPlanClientEmailAddresses}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>FuneralPlan_4227</value>
+        </productAttributes>
+    </productAttributeGroup>
+
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
         <productAttributes>
