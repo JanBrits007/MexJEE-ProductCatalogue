@@ -24,18 +24,6 @@
       <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
    </productAttributeGroup>
 
-   <!-- <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{EDBPhase2dynamicStaffList}}</value>         
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Overdraft_Retail_1176</value>
-      </productAttributes>
-   </productAttributeGroup> -->
-
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
@@ -69,6 +57,18 @@
       <productAttributes>
          <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
          <value>${{RRBProductsTestEmailOverideList}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{EDBPhase2dynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Overdraft_Retail_1176</value>
       </productAttributes>
    </productAttributeGroup>
 
