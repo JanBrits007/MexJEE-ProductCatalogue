@@ -18,7 +18,7 @@ public class DynamicWhitelistBean {
 
     private static final Log mLog = LogFactory.getLog(DynamicWhitelistBean.class);
 
-    @EJB(lookup = "java:global/SysSystemConfigurator/WebSystemConfigurator/WhitelistServiceBean!za.co.nb.system.config.whitelist.service.WhitelistServiceRemote")
+    @EJB(lookup = "java:global/SysIndividualProductOnboardingManagement/WebSystemConfigurator/WhitelistServiceBean!za.co.nb.system.config.whitelist.service.WhitelistServiceRemote")
     WhitelistServiceRemote whitelistServiceRemote;
 
 

@@ -17,7 +17,7 @@ public class DynamicPropertyBean {
 
     private static final Log mLog = LogFactory.getLog(DynamicPropertyBean.class);
 
-    @EJB(lookup = "java:global/SysSystemConfigurator/WebSystemConfigurator/PropertyServiceBean!za.co.nb.system.config.property.service.PropertyServiceRemote")
+    @EJB(lookup = "java:global/SysIndividualProductOnboardingManagement/WebSystemConfigurator/PropertyServiceBean!za.co.nb.system.config.property.service.PropertyServiceRemote")
     PropertyServiceRemote propertyServiceRemote;
 
 
