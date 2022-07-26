@@ -40,6 +40,9 @@
     <productAttributeGroup>
         <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
     </productAttributeGroup>
+
+    <!--ETE Substitution Rules-->
+
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
@@ -48,7 +51,7 @@
         </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
-            <value>CreditCard_Retail_1038_Simulation</value>
+            <value>CreditCard_Retail_1038</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -59,7 +62,22 @@
         </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
-            <value>CreditCard_Retail_1038_Simulation</value>
+            <value>CreditCard_Retail_1038</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+
+    <!--QA Substitution Rules-->
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1038</value>
         </productAttributes>
     </productAttributeGroup>
 
@@ -651,11 +669,6 @@
 			<attributeName>RequiredDataFilter_ActivateProducts</attributeName>
 			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementMandatoryAPOFilter</value>
 		</productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
-            <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNPWPAQFilter</value>
-        </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType> <!--Enable filter for CR1 flow-->
             <attributeName>DocumentsToPresentFilter_ActivateProducts</attributeName>

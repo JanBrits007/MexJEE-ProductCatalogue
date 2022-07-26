@@ -41,6 +41,9 @@
     <productAttributeGroup>
         <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
     </productAttributeGroup>
+
+    <!--ETE Substitution Rules-->
+
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
@@ -49,7 +52,7 @@
         </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
-            <value>CreditCard_Retail_1490_Simulation</value>
+            <value>CreditCard_Retail_1490</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -60,7 +63,43 @@
         </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
-            <value>CreditCard_Retail_1490_Simulation</value>
+            <value>CreditCard_Retail_1490</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>DefaultSubstitution</attributeName>
+            <value>DefaultSubstitution</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>1490</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--QA Substitution Rules-->
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1490</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>DefaultSubstitution</attributeName>
+            <value>DefaultSubstitution</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>1490</value>
         </productAttributes>
     </productAttributeGroup>
 
@@ -284,6 +323,18 @@
         <productAttributes>
             <attributeType>AvailableAction</attributeType>
             <attributeName>Email</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>WetSign</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>ElectronicallySign</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>DigitallySign</attributeName>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -628,6 +679,11 @@
 			<attributeName>RequiredDataFilter_ActivateProducts</attributeName>
 			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementMandatoryAPOFilter</value>
 		</productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType> <!--Enable filter for CR1 flow-->
+            <attributeName>DocumentsToPresentFilter_ActivateProducts</attributeName>
+            <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNPWPAQFilter</value>
+        </productAttributes>
 	</productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>DocumentConfiguration</attributeGroupName>
@@ -867,11 +923,11 @@
     </features>
     <features>
         <featureIdentifier>1334</featureIdentifier>
-        <name>Membership Rewards™</name>
+        <name>Membership Rewards</name>
         <mandatory>true</mandatory>
         <preSelected>true</preSelected>
-        <shortDescription>As part of your American Express Platinum Card, Memebership Rewards™ are automatically included at no extra cost!</shortDescription>
-        <description>Please note you will receive a Membership Rewards™ Redemption card in order to spend you rewards.</description>
+        <shortDescription>As part of your American Express Platinum Card, Membership Rewards are automatically included at no extra cost!</shortDescription>
+        <description>Please note you will receive a Membership Rewards Redemption card in order to spend you rewards.</description>
         <featureGrouping>
             <featureGroupName>Loyalty</featureGroupName>
             <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>

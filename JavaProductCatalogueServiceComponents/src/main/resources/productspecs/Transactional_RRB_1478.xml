@@ -21,7 +21,7 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>      
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>CardDeliveryDetails|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170~removeTemporaryCard=true~ContractComponentProductType=1164</attributeName>
+         <attributeName>CardDeliveryDetails|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170~removeTemporaryCard=true~ContractComponentProductType=1164~IntlDelivery=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -68,6 +68,10 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>YourDeclared|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=10~ContractComponentProductType=1478~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>NedbankID|ng-component=StaffAssistedNedbankIdComponent~ProceduralStepName=Nedbank ID~ZOrder=5~applicableChannels=BranchStaffAssisted</attributeName>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Document Configuration-->  
@@ -107,20 +111,6 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!-- Eligibility rules -->
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>EligibilityRules</attributeGroupName>
-      <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <attributeName>Age</attributeName>
-         <isComparable>false</isComparable>
-         <minValue>18</minValue>
-         <maxValue>999</maxValue>
-         <valueUnit>year</valueUnit>
-         <description>user-icon|You need to be at least 18 years old.</description>
-      </productAttributes>
-   </productAttributeGroup>
-
    <!-- Intent sequence mapping -->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
@@ -137,7 +127,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|GatherAdHocEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -342,7 +332,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>LeadEmailAddressProd</attributeName>
-         <value>>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
+         <value>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -392,7 +382,7 @@
       <productAttributes>
          <attributeType>boolean</attributeType>
          <attributeName>consolidatedLeadEmail</attributeName>
-         <value>true</value>
+         <value>false</value>
       </productAttributes>
       <productAttributes>
         <attributeType>string</attributeType>
@@ -477,13 +467,26 @@
     <!--CDE Available Actions-->
 		<productAttributes>
 			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
-			<attributeName>SelectAlternateTP|child-ng-components=AlternateProductsDeclineAction</attributeName>
+			<attributeName>SelectAlternateTP|child-ng-components=AlternateProductsDeclineAction~child-ng-components=TpCreditOffer~child-ng-components=LeaveApplicationDeclineAction</attributeName>
 		</productAttributes>
-    <!--default-->
-		<productAttributes>
-        <attributeType>defaultMapping</attributeType>
-        <attributeName>default|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
-    </productAttributes>  
+    <!--Web Decision Engine Decline for staff FAIS registration-->
+    <productAttributes>
+      <attributeType>declineCodeMapping</attributeType>
+      <attributeName>FAIS02|child-ng-components=FaisOnbehalfOfComponent</attributeName>
+    </productAttributes>
+  </productAttributeGroup>
+
+  <!--GenerateOffer - Decline-->
+  <productAttributeGroup action="overwrite">
+    <attributeGroupName>productInformationRequirement_Decline</attributeGroupName>
+    <productAttributes>
+        <attributeType>clientInformationRequirement</attributeType>
+        <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+    </productAttributes>
+    <productAttributes>
+        <attributeType>productInformationRequirement</attributeType>
+        <attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80~min=10000</attributeName>
+    </productAttributes>
   </productAttributeGroup>
 
    <!--Overdraft feature -->
@@ -555,7 +558,7 @@
           </featureAttributes>
           <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~RemoveEmployedSince=true~child-ng-components=MainSourceOfIncome~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true</attributeName>
+            <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~RemoveEmployedSince=true~child-ng-components=MainSourceOfIncome~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true~child-ng-components=EmploymentContact</attributeName>
           </featureAttributes>
           <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -570,6 +573,18 @@
       <!--ActivateProductsGatherProductDetails-->
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+          </featureAttributes>      
+          <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
+          </featureAttributes>
       </featureAttributeGroup>
 
       <!--ActivateProductsGatherEvidence-->
@@ -600,6 +615,14 @@
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Signing the paperwork~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=10~ContractComponentProductType=1478~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YourDeclared|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=10~ContractComponentProductType=1478~applicableChannels=WebSelfAssisted</attributeName>
+          </featureAttributes>
       </featureAttributeGroup>
 
       <!--FinalizeFrontOfficeInteraction-->
@@ -1002,12 +1025,12 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>LeadEmailAddressNonProd</attributeName>
-            <value>ThapeloC@nedbank.co.za;NatashaBu@Nedbank.co.za;ajits@nedbank.co.za;BrigertM@Nedbank.co.za</value>
+            <value>FohnB@Nedbank.co.za;MandisaMah@Nedbank.co.za;ZamaMgo@Nedbank.co.za;ajits@nedbank.co.za;LijuN@Nedbank.co.za;LudieP@Nedbank.co.za;NatashaBu@Nedbank.co.za;PramothV@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>LeadEmailAddressProd</attributeName>
-            <value>LifeStyleBanking@Nedbank.co.za</value>
+            <value>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>

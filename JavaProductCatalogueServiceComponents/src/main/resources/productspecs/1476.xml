@@ -1,6 +1,30 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1476</productIdentifier>
    <name>Private One | Young</name>
+
+   <productAttributeGroup>
+      <attributeGroupName>EligibilityHandler</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_PrepareApplicant</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.NonEligibleDCAREligibilityHandler</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <productAttributeGroup>
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
@@ -62,6 +86,11 @@
          <maxValue>29</maxValue>
          <valueUnit>year</valueUnit>
          <description>user-icon|You need to be at least 18 years old and no older than 29 years old.</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>NonEligibleDCAR</attributeName>
+         <value>${{NonEligibleDCARList}}</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -219,7 +248,7 @@
       </productAttributes>
       <productAttributes>
         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>CardDeliveryDetails|sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1164~allowCardCollection~allowCardDelivery~restrictOptOut=true</attributeName>
+         <attributeName>CardDeliveryDetails|sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1164~allowCardCollection~allowCardDelivery~restrictOptOut=true~IntlDelivery=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -511,7 +540,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>LeadEmailAddressProd</attributeName>
-         <value>>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
+         <value>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -830,12 +859,12 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>LeadEmailAddressNonProd</attributeName>
-            <value>ThapeloC@nedbank.co.za;NatashaBu@Nedbank.co.za;ajits@nedbank.co.za;BrigertM@Nedbank.co.za</value>
+            <value>FohnB@Nedbank.co.za;MandisaMah@Nedbank.co.za;ZamaMgo@Nedbank.co.za;ajits@nedbank.co.za;LijuN@Nedbank.co.za;LudieP@Nedbank.co.za;NatashaBu@Nedbank.co.za;PramothV@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>LeadEmailAddressProd</attributeName>
-            <value>LifeStyleBanking@Nedbank.co.za</value>
+            <value>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
@@ -963,7 +992,7 @@
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=4387~allowCardCollection~allowCardDelivery</attributeName>
+            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=4387~allowCardCollection~allowCardDelivery~IntlDelivery=true</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -1057,7 +1086,7 @@
          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1387~allowCardCollection~allowCardDelivery</attributeName>
+            <attributeName>CardDeliveryDetails|singleton=true~sideStepperDisplayName=Delivery of your cards~ZOrder=100~ContractComponentProductType=1387~allowCardCollection~allowCardDelivery~IntlDelivery=true</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>

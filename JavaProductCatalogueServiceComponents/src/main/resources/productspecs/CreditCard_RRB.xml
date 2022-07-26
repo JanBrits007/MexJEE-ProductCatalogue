@@ -3,6 +3,48 @@
 	<name>Base Credit Card Specification Extended for RRB</name>
 	<shortDescription>Base Credit Card Specification Extended for RRB</shortDescription>
 
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>EligibilityHandler</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOffer</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_PrepareApplicant</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.NonEligibleDCAREligibilityHandler</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!-- Eligibility rules -->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>EligibilityRules</attributeGroupName>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>Age</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>18</minValue>
+            <maxValue>999</maxValue>
+            <valueUnit>year</valueUnit>
+            <description>user-icon|You need to be at least 18 years old.</description>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>NonEligibleDCAR</attributeName>
+            <value>${{NonEligibleDCARList}}</value>
+        </productAttributes>
+    </productAttributeGroup>
+
 	<!--VerifyIdentity-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
@@ -74,11 +116,11 @@
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~RemoveStatementDelivery=true~displaySummary=true</attributeName>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~RemoveStatementDelivery=true~displaySummary=true~child-ng-components=CustomerVulnerabilitiesComponent~child-ng-components=EmailAddress~statementDeliveryMethod=email</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~RemoveEmployedSince=true~child-ng-components=MainSourceOfIncome~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true</attributeName>
+         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~RemoveEmployedSince=true~child-ng-components=MainSourceOfIncome~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true~child-ng-components=EmploymentContact</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -99,7 +141,7 @@
       </productAttributes>    
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=270~removeTemporaryCard=true</attributeName>
+         <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=270~removeTemporaryCard=true~IntlDelivery=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -181,10 +223,6 @@
    <!--Evidence And Compliance Requirements-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
-      <productAttributes>
-         <attributeType>Compliance</attributeType>
-         <attributeName>PersonalInformationProcessingConsent</attributeName>
-      </productAttributes>
       <productAttributes>
          <attributeType>Compliance</attributeType>
          <attributeName>FinancialHealthConsent</attributeName>
@@ -403,6 +441,11 @@
          <attributeName>CODHandler_Recalculate</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.cde.v3.RRBRecalcCODHandler</value>
       </productAttributes>
+      <productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>PricingPlanHandler_GenerateOffer</attributeName>
+			<value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
+		</productAttributes>
    </productAttributeGroup>
 
    <productAttributeGroup action="overwrite">
@@ -636,6 +679,16 @@
    <productAttributeGroup action="overwrite">
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
       <productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>PricingPlanDiscriminator</attributeName>
+			<value>Nedbank Staff</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>PricingPlanDiscriminator</attributeName>
+			<value>Client Risk Tier</value>
+		</productAttributes>
+      <productAttributes>
          <attributeType>1454</attributeType>
          <attributeName>ProductRuleHandler_Greenbacks</attributeName>
          <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.GreenBacksRule</value>
@@ -668,7 +721,7 @@
       <productAttributes>
         <attributeType>string</attributeType>
         <attributeName>RequiredDataFilter_PresentOffer</attributeName>
-        <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
+        <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineCodeMappingFilter</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -721,6 +774,11 @@
 			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
 			<attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
 		</productAttributes>
+        <!--Web Decision Engine Decline for staff FAIS registration-->
+        <productAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>FAIS02|child-ng-components=FaisOnbehalfOfComponent</attributeName>
+        </productAttributes>
     <!--CDE Decline-->
     <productAttributes>
         <attributeType>declineCodeMapping</attributeType>
@@ -739,6 +797,16 @@
       <attributeName>4313|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
     </productAttributes>
 	</productAttributeGroup>
+
+  <!-- Enable soft decline after intent 3 -->
+  <productAttributeGroup>
+      <attributeGroupName>BundleConfiguration</attributeGroupName>
+      <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>FeatureIntegratedWithBundle</attributeName>
+          <value>true</value>
+      </productAttributes>
+  </productAttributeGroup>
 
   <features>
       <featureIdentifier>5032</featureIdentifier>

@@ -9,7 +9,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>ArrangementBundleCaseHandler</attributeName>
-         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailRRB</value>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.rrb.InitialiseBusinessCaseHandlerMultipleSubstitution</value>
       </productAttributes>
     </productAttributeGroup>
 
@@ -24,30 +24,6 @@
       <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
    </productAttributeGroup>
 
-   <!-- <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
-         <value>${{Overdraft_RRB_dynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Overdraft_RRB_1176</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{Overdraft_Retail_dynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Overdraft_Retail_1176</value>
-      </productAttributes>
-   </productAttributeGroup> -->
-
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
@@ -59,6 +35,54 @@
          <value>2176</value>
       </productAttributes>
    </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
+         <value>${{Overdraft_RRB_dynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForIPSubnets</attributeName>
+         <value>192.168.0.0|172.238.0.0|168.142.0.0|172.28.0.0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Overdraft_RRB_1176</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>RRBProductsSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
+         <value>${{RRBProductsTestEmailOverideList}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{EDBPhase2dynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Overdraft_Retail_1176</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!-- <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{EDBPhase2dynamicStaffList}}</value>         
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>1176</value>
+      </productAttributes>
+   </productAttributeGroup> -->
 
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
@@ -73,6 +97,38 @@
    </productAttributeGroup>
 
    <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
+         <value>${{Overdraft_RRB_dynamicStaffList}}</value>
+      </productAttributes>      
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Overdraft_RRB_1176</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>RRBProductsSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
+         <value>${{RRBProductsTestEmailOverideList}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!-- <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{EDBPhase2dynamicStaffList}}</value>         
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>1176</value>
+      </productAttributes>
+   </productAttributeGroup> -->
+
+   <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForCalculatedSegment</attributeName>
@@ -81,6 +137,18 @@
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
          <value>2176</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
+         <value>${{Overdraft_RRB_dynamicStaffList}}</value>
+      </productAttributes>      
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Overdraft_RRB_1176</value>
       </productAttributes>
    </productAttributeGroup>
 

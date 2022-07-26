@@ -24,11 +24,12 @@
     </productAttributeGroup>
 
     <!--ETE Substitution Rules-->
+
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
-            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-            <value>${{FuneralPlandynamicStaffList}}</value>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{FuneralPlanClientEmailAddresses}}</value>
         </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
@@ -36,16 +37,65 @@
         </productAttributes>
     </productAttributeGroup>
 
-    <!--QA Substitution Rules-->
     <productAttributeGroup>
-        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
             <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-            <value>${{FuneralPlandynamicStaffList}}</value>
+            <value>${{FuneralPlan10KDynamicStaffList}}</value>
         </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
             <value>FuneralPlan_4227</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>DefaultSubstitution</attributeName>
+            <value>DefaultSubstitution</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>4227</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+
+    <!--QA Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{FuneralPlanClientEmailAddresses}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>FuneralPlan_4227</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{FuneralPlan10KDynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>FuneralPlan_4227</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>DefaultSubstitution</attributeName>
+            <value>DefaultSubstitution</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>4227</value>
         </productAttributes>
     </productAttributeGroup>
 
@@ -54,11 +104,23 @@
         <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
         <productAttributes>
             <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-            <value>${{FuneralPlandynamicStaffList}}</value>
+            <value>${{FuneralPlan10KDynamicStaffList}}</value>
         </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
             <value>FuneralPlan_4227</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>DefaultSubstitution</attributeName>
+            <value>DefaultSubstitution</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>4227</value>
         </productAttributes>
     </productAttributeGroup>
 

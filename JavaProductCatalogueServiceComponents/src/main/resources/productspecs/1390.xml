@@ -5,7 +5,7 @@
     <productOnAPageWebURL></productOnAPageWebURL>
 
 
-    <!--Substitution rules-->
+
     <productAttributeGroup>
         <attributeGroupName>CaseConfiguration</attributeGroupName>
         <productAttributes>
@@ -23,19 +23,80 @@
     <productAttributeGroup>
         <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
     </productAttributeGroup>
+
+    <!--ETE Substitution rules-->
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{FuneralPlanClientEmailAddresses}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>FuneralPlan_1390</value>
+        </productAttributes>
+    </productAttributeGroup>
+
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
             <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
             <value>${{FuneralPlandynamicStaffList}}</value>
         </productAttributes>
-<!--        <productAttributes>-->
-<!--            <attributeName>SubstituteForIPSubnets</attributeName>-->
-<!--            <value>${{InternalNetworkIPRanges}}</value>-->
-<!--        </productAttributes>-->
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
             <value>FuneralPlan_1390</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>DefaultSubstitution</attributeName>
+            <value>DefaultSubstitution</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>1390</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--QA Substitution rules-->
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{FuneralPlanClientEmailAddresses}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>FuneralPlan_1390</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{FuneralPlandynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>FuneralPlan_1390</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>DefaultSubstitution</attributeName>
+            <value>DefaultSubstitution</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>1390</value>
         </productAttributes>
     </productAttributeGroup>
 

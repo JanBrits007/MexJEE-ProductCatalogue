@@ -1,334 +1,115 @@
 <product inheritFromFiles="CreditCard_Retail_1490" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-	<productIdentifier>1490</productIdentifier>
-	<name>The American Express Centurion Card</name>
-	<shortDescription>(CreditCard_Retail_1490_Simulation)</shortDescription>
+    <productIdentifier>1490</productIdentifier>
+    <name>The American Express Centurion Card</name>
+    <shortDescription>(CreditCard_Retail_1490_Simulation)</shortDescription>
 
-	<!--DeclineWithAppeal-->
-	<productAttributeGroup>
-		<attributeGroupName>productInformationRequirement_DeclineWithAppeal</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Your offer</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
+    <productAttributeGroup inheritFromFiles="CreditCard_Retail_1032_Simulation">
+        <attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+    </productAttributeGroup>
 
-	<productAttributeGroup inheritFromFiles="CreditCard_Retail_1032_Simulation">
-		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
-	</productAttributeGroup>
-
-	<!--GenerateOfferGatherProductDetails-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=350000</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--Offer Configuration-->
-	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
-		<attributeGroupName>VASCrossSellControl</attributeGroupName>
-	</productAttributeGroup>
-
-	<!--Case and Process Configuration-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>CaseConfiguration</attributeGroupName>
-		<!--
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CDE_SimulationETE</attributeName>
-			<value>${{CDE_Simulation}}</value>
-		</productAttributes>
-		-->
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_WebDecisionEngine</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.internal.DecisionEngineCODHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_Intent1</attributeName>
-			<value>${{CreditCard_Platinum_Intent1CODHandler}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_FinancialExtendedDetails</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.internal.FinancialExtendedDetailsHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_AppealWithLongForm</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>GenericHandler_AppealWithoutLongForm</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>GenericHandler_GenerateOfferTryAgain</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.internal.GenerateOfferTryAgainHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_CreditOffer</attributeName>
-			<value>${{CreditCard_Platinum_CreditOfferCODHandler}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_ProductOffer</attributeName>
-			<value>${{CreditCard_Platinum_ProductOfferCODHandler}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_Intent3</attributeName>
-			<value>${{CreditCard_Platinum_Intent3CODHandler}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_Intent4</attributeName>
-			<value>${{CreditCard_Platinum_Intent4CODHandler}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>PricingPlanHandler_GenerateOffer</attributeName>
-			<value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CODHandler_Recalculate</attributeName>
-			<value>${{CreditCard_Platinum_RecalcCODHandler}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>DataMiningHandler</attributeName>
-			<value>classname=za.co.nb.onboarding.product.datamining.handlers.retail.RetailDataMiningHandler</value>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>EligibilityRules</attributeGroupName>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Age</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>18</minValue>
-			<maxValue>999</maxValue>
-			<valueUnit>year</valueUnit>
-			<description>user-icon|You need to be 18 years or older.</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Income</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>200000</minValue>
-			<maxValue>750000</maxValue>
-			<valueUnit>ZAR</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Invitation</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-			<description>invitation-only|By invitation only</description>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>CreditDetails</attributeGroupName>
-		<productAttributes>
-			<attributeName>minimumCreditAvaliableZAR</attributeName>
-			<value>5000</value>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--Evidence And Compliance Requirements-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>Organisation identification</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>Proof of income</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>Financial statements</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>Due diligence documents</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--GenerateOfferGatherClientDetails-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>NCCDesk|ng-component=NCCDeskWidgetComponent~ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted~ActiveOnInitialWorkItemExecution=true</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=ConsentCapture~ZOrder=100</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--FinancialDetails-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>Yodlee|ng-component=YodleeIntroductionComponent~ProceduralStepName=Yodlee~ZOrder=90~YodleePortalURL~HideProceduralStep=true</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=80~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
+    <!--Case and Process Configuration-->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>CaseConfiguration</attributeGroupName>
+        <!--
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CDE_SimulationETE</attributeName>
+            <value>${{CDE_Simulation}}</value>
+        </productAttributes>
+        -->
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
+            <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
+            <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
+            <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
+            <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
+            <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CODHandler_WebDecisionEngine</attributeName>
+            <value>classname=za.co.nb.offermanagement.cod.handler.internal.DecisionEngineCODHandler</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CODHandler_Intent1</attributeName>
+            <value>${{CreditCard_Gold_Intent1CODHandler}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CODHandler_FinancialExtendedDetails</attributeName>
+            <value>classname=za.co.nb.offermanagement.cod.handler.internal.FinancialExtendedDetailsHandler</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CODHandler_AppealWithLongForm</attributeName>
+            <value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>GenericHandler_AppealWithoutLongForm</attributeName>
+            <value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>GenericHandler_GenerateOfferTryAgain</attributeName>
+            <value>classname=za.co.nb.offermanagement.cod.handler.internal.GenerateOfferTryAgainHandler</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CODHandler_CreditOffer</attributeName>
+            <value>${{CreditCard_Gold_CreditOfferCODHandler}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CODHandler_ProductOffer</attributeName>
+            <value>${{CreditCard_Gold_ProductOfferCODHandler}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CODHandler_Intent3</attributeName>
+            <value>${{CreditCard_Gold_Intent3CODHandler}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CODHandler_Intent4</attributeName>
+            <value>${{CreditCard_Gold_Intent4CODHandler}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>PricingPlanHandler_GenerateOffer</attributeName>
+            <value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CODHandler_Recalculate</attributeName>
+            <value>${{CreditCard_Gold_RecalcCODHandler}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>DataMiningHandler</attributeName>
+            <value>classname=za.co.nb.onboarding.product.datamining.handlers.retail.RetailDataMiningHandler</value>
+        </productAttributes>
+    </productAttributeGroup>
 
 
-	<!--GenerateOffer-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourCreditCard|ProceduralStepName=Your Credit Card~ZOrder=160</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--ActivateProductsGatherProductDetails-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-	</productAttributeGroup>
-
-	<!--FinalizeFrontOfficeInteraction-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~child-ng-components=CreditApplicationStatusComponent-1032~HideProceduralStep=true~ZOrder=50</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--VerifyIdentity-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
-		<productAttributes><!--This is only here while whitelisting will move to browse on roll out-->
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>PrepareApplicant|ng-component=GenericProcessStartPageComponent~ZOrder=300~HideProceduralStep=false</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~HideProceduralStep=true</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--ActivateProductsGatherClientDetails-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
 
 
 </product>

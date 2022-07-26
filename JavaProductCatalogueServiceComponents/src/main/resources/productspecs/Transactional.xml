@@ -69,15 +69,15 @@
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~child-ng-components=CustomerVulnerabilitiesComponent</attributeName>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~child-ng-components=CustomerVulnerabilitiesComponent~displaySummary=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
+         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
+         <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture~displaySummary=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -154,6 +154,15 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--GatherAdHocEvidence-->
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GatherAdHocEvidence</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>GatherEvidence|ng-component=UploadYourDocumentsComponent~ProceduralStepName=Upload your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   
    <!--ActivateProductsPresentDocuments-->
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
@@ -621,6 +630,11 @@
          <attributeName>EligibleSegments</attributeName>
          <value>${{RetailEligibleSegments}}</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>NonEligibleDCAR</attributeName>
+         <value>${{NonEligibleDCARList}}</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationConfiguration</attributeGroupName>
@@ -665,32 +679,32 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Intent1</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.Intent1CODHandler</value>
+         <value>${{CODHandler_Intent1}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_CreditLead</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditLeadCODHandler</value>
+         <value>${{CODHandler_CreditLead}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_CreditOffer</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditOfferCODHandler</value>
+         <value>${{CODHandler_GenerateOfferProposals}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_ProductOffer</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.ProductOfferCODHandler</value>
+         <value>${{CODHandler_ProductOffer}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Intent3</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.Intent3CODHandler</value>
+         <value>${{CODHandler_Intent3}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Intent4</attributeName>
-         <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.cde.Intent4CODHandler</value>
+         <value>${{CODHandler_Intent4}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -700,12 +714,12 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Recalculate</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.RecalcCODHandler</value>
+         <value>${{CODHandler_Recalculate}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_FinancialDetails</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.FinancialDetailsHandler</value>
+         <value>${{CODHandler_FinancialDetails}}</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -790,7 +804,7 @@
       <attributeGroupName>PartyConfiguration</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <attributeName>RequiredDataFilter_PresentDocuments</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNEDIDFilter</value>
       </productAttributes>
       <productAttributes>

@@ -278,6 +278,14 @@
             <attributeType>declineCodeMapping</attributeType>
             <attributeName>1061|child-ng-components=ContinueWithoutCreditDeclineAction</attributeName>
          </featureAttributes>
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>1045|child-ng-components=ContinueWithoutCreditDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>1036|child-ng-components=ContinueWithoutCreditDeclineAction</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
 
       <!--Case and Process Configuration -->
@@ -349,7 +357,29 @@
       </featureAttributeGroup>
 
       <!--FinancialDetails-->
-
+      <featureAttributeGroup>
+         <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OverdraftProductDetails|ng-component=RetailOverdraftProductDetailsComponent~ProceduralStepName=Your Overdraft~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=500~MaximumInput=250000</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=80~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=70</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
       <!--GenerateApplicationOfferProposals-->
 
       <!--GenerateOffer-->
@@ -382,7 +412,7 @@
          <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
+            <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -1763,9 +1793,9 @@
       </featureAttributeGroup>
    </features>
 
-   <!--1446 - Overdraft Assurance-->
+   <!--1101 - Overdraft Assurance-->
    <features>
-      <featureIdentifier>1446</featureIdentifier>
+      <featureIdentifier>1101</featureIdentifier>
       <name>Overdraft Assurance</name>
 
       <!--GenerateOffer-->
@@ -1773,7 +1803,7 @@
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceComponent-1446~ProceduralStepName=Optional extras for you~ZOrder=65</attributeName>
+            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceComponent-1101~ProceduralStepName=Optional extras for you~ZOrder=65</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 

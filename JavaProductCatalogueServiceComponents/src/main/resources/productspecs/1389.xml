@@ -45,7 +45,7 @@
    </productAttributeGroup>
 
    <!--ETE Substitution Rules-->
-   <!-- <productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
@@ -53,9 +53,9 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_1389</value>
+         <value>1389</value>
       </productAttributes>
-   </productAttributeGroup> -->
+   </productAttributeGroup>
 
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
@@ -69,7 +69,7 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!-- <productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForCalculatedSegment</attributeName>
@@ -79,7 +79,21 @@
          <attributeName>SubstituteForProductID</attributeName>
          <value>1389</value>
       </productAttributes>
-   </productAttributeGroup> -->
+   </productAttributeGroup>
+
+   <!--Adding this just to test the requirements for SSK-->
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{SSK_Channel_ID}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389_SSKTest</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
@@ -96,6 +110,17 @@
       <productAttributes>
          <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
          <value>${{GTPTestEmailOverideList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389_GTP</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{GTPDynamicStaffList}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -123,7 +148,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_1389</value>
+         <value>1389</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -164,6 +189,17 @@
       <productAttributes>
          <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
          <value>${{GTPTestEmailOverideList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389_GTP</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{GTPDynamicStaffList}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -835,6 +871,26 @@
          <value>CA</value>
       </productAttributes>
       <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>LeadEmailAddressNonProd</attributeName>
+         <value>FohnB@Nedbank.co.za;MandisaMah@Nedbank.co.za;ZamaMgo@Nedbank.co.za;ajits@nedbank.co.za;LijuN@Nedbank.co.za;LudieP@Nedbank.co.za;NatashaBu@Nedbank.co.za;PramothV@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>LeadEmailAddressProd</attributeName>
+         <value>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ConversionLeadEmailAddressNonProd</attributeName>
+         <value>LudieP@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ConversionLeadEmailAddressProd</attributeName>
+         <value>PRBSales@nedbank.co.za;Aliciap@Nedbank.co.za</value>
+      </productAttributes>
+      <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>branchCode</attributeName>
          <value>911</value>
@@ -1220,12 +1276,12 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>LeadEmailAddressNonProd</attributeName>
-            <value>ThapeloC@nedbank.co.za;NatashaBu@Nedbank.co.za;ajits@nedbank.co.za;BrigertM@Nedbank.co.za</value>
+            <value>FohnB@Nedbank.co.za;MandisaMah@Nedbank.co.za;ZamaMgo@Nedbank.co.za;ajits@nedbank.co.za;LijuN@Nedbank.co.za;LudieP@Nedbank.co.za;NatashaBu@Nedbank.co.za;PramothV@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>LeadEmailAddressProd</attributeName>
-            <value>LifeStyleBanking@Nedbank.co.za</value>
+            <value>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>

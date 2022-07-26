@@ -6,17 +6,12 @@
    <!--GenerateOfferVerifyEligibility-->
    <!--Align with Tim regarding GenerateOfferVerifyEligibility rule handler-->
 
-   <productAttributeGroup>
-      <attributeGroupName>RuleHandlers_GenerateOfferVerifyEligibility</attributeGroupName>
+    <productAttributeGroup>
+      <attributeGroupName>EligibilityHandler</attributeGroupName>
       <productAttributes>
-         <attributeType>string</attributeType>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.ForeignCurrencyEligibilityRules</value>
       </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup>
-      <attributeGroupName>EligibilityHandler</attributeGroupName>
       <productAttributes>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.NonResidentFICAEligibilityRules</value>
@@ -272,7 +267,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|INVESTMENT|Agreement Contract</attributeName>
+         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSINVESTMENT|Terms and Conditions</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -299,7 +294,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+         <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENTS|APPLICATIONS|AGREEMENTSINVESTMENT|Application</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -326,7 +321,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENTS|AGREEMENTS|AGREEMENTSINVESTMENT|FAIS Declaration</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -604,9 +599,8 @@
          <attributeName>DecisionTree_PresentAlternateOffer</attributeName>
          <value>classname=forexPresentAlternateOffer</value>
       </productAttributes>
-
-
    </productAttributeGroup>
+
    <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
       <productAttributes>
@@ -815,12 +809,6 @@
          <attributeName>EnforceAgeValidationRules</attributeName>
          <value>true</value>
       </productAttributes>
-<!--      To be aligned with Tim-->
-<!--      <productAttributes>-->
-<!--         <attributeType>boolean</attributeType>-->
-<!--         <attributeName>EnforceResidencyValidationRules</attributeName>-->
-<!--         <value>true</value>-->
-<!--      </productAttributes>-->
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
@@ -873,13 +861,24 @@
          <value>ForexProductOfferSelectionSubSection|ng-component=OfferSelectionForexProductComponent~ZOrder=100~isBase=Y~ContractComponentProductType=1004</value>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--NTB Crossell -->
    <productAttributeGroup>
-      <attributeGroupName>VASCrossSellControl</attributeGroupName>
-      <!--[Inheritance] - Add cross sell controll here -->
+      <attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>1019~Transactional_Retail_1019</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>1389~Transactional_Retail_1389</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Decline Configuration-->
-   <productAttributeGroup action="overwrite">
+   <productAttributeGroup>
       <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
       <!--CDE Available Actions-->
       <productAttributes>
@@ -1025,7 +1024,12 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>welcomeLetterTaxonomy</attributeName>
-         <value>AGREEMENTSDEPOSIT|Welcome Letter|Welcome Letter</value>
+         <value>AGREEMENTSINVESTMENT|Welcome Letter|Welcome Letter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>foreignExchangeReceiptTaxonomy</attributeName>
+         <value>MAINTENANCEINVESTMENT|Foreign Exchange Receipt|Foreign Exchange Receipt</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
