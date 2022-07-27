@@ -82,6 +82,16 @@
 			<value>1113</value>
 			<valueUnit>String</valueUnit>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+			<value>${{FAIS_OnBehalfOfBranchList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>FAIS_StaffBranchOverrideList</attributeName>
+			<value>${{FAIS_StaffBranchOverideList}}</value>
+		</productAttributes>
 	</productAttributeGroup>
 
 
@@ -96,10 +106,6 @@
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -160,10 +166,6 @@
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryCreditCardComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
 		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
 	</productAttributeGroup>
 
 
@@ -210,6 +212,86 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subCreditCard|ContractComponentProductType=1038</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Case and Process Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CommunicationSystem</attributeName>
+			<value>SpecCom</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>commsAudience</attributeName>
+			<value>banker</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>welcomeComms</attributeName>
+			<value>EMAIL</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>declineComms</attributeName>
+			<value>EMAIL</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>reminderCommsPreOffer</attributeName>
+			<value>EMAIL</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>reminderCommsPostOffer</attributeName>
+			<value>EMAIL</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>manualAssessmentComms</attributeName>
+			<value>EMAIL</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>verificationComms</attributeName>
+			<value>EMAIL</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>captivaRejectedDocComms</attributeName>
+			<value>EMAIL</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>lowerOfferComms</attributeName>
+			<value>EMAIL</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>appealComms</attributeName>
+			<value>EMAIL</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>fraudComms</attributeName>
+			<value>EMAIL</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>docsReceivedComms</attributeName>
+			<value>EMAIL</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>pendOrDocsRequiredComms</attributeName>
+			<value>EMAIL</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>cancelCaseComms</attributeName>
+			<value>EMAIL</value>
 		</productAttributes>
 	</productAttributeGroup>
 

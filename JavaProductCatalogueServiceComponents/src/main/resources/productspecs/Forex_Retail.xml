@@ -6,17 +6,12 @@
    <!--GenerateOfferVerifyEligibility-->
    <!--Align with Tim regarding GenerateOfferVerifyEligibility rule handler-->
 
-   <productAttributeGroup>
-      <attributeGroupName>RuleHandlers_GenerateOfferVerifyEligibility</attributeGroupName>
+    <productAttributeGroup>
+      <attributeGroupName>EligibilityHandler</attributeGroupName>
       <productAttributes>
-         <attributeType>string</attributeType>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.ForeignCurrencyEligibilityRules</value>
       </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup>
-      <attributeGroupName>EligibilityHandler</attributeGroupName>
       <productAttributes>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.NonResidentFICAEligibilityRules</value>
@@ -59,6 +54,10 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=See something you like?~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -517,6 +516,16 @@
          <attributeName>EligibleSegments</attributeName>
          <value>${{RetailEligibleSegments}}</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+         <value>${{FAIS_OnBehalfOfBranchList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+         <value>${{FAIS_StaffBranchOverideList}}</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationConfiguration</attributeGroupName>
@@ -867,7 +876,7 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!--NTB Crossell -->
+   <!--NTB Cross sell -->
    <productAttributeGroup>
       <attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
       <productAttributes>

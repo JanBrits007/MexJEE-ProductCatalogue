@@ -23,10 +23,6 @@
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
 		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=MerchantAssisted~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Offer Configuration-->
@@ -87,13 +83,6 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subCreditCard|ContractComponentProductType=1027</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1027</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -195,6 +184,16 @@
 			<maxValue>750000</maxValue>
 			<valueUnit>ZAR</valueUnit>
 			<description>income|You need to earn between R200 000 and R750 000 per annum.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+			<value>${{FAIS_OnBehalfOfBranchList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>FAIS_StaffBranchOverrideList</attributeName>
+			<value>${{FAIS_StaffBranchOverideList}}</value>
 		</productAttributes>
 	</productAttributeGroup>
 

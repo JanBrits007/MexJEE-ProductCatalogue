@@ -1,0 +1,66 @@
+<product inheritFromFiles="1389" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+   <productIdentifier>1389</productIdentifier>
+   <name>Nedbank Pay-As-You-Use</name>
+   <shortDescription>(1389_RRBComStrategy) This spec file just includes the RRB communication Strategy on the base retail spec file</shortDescription>
+
+   <!-- Communication strategy -->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>CommunicationSystem</attributeName>
+         <value>SpecCom</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>commsAudience</attributeName>
+         <value>customer|banker</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>welcomeComms</attributeName>
+         <value>EMAIL</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>sendDeclineCommsAudience</attributeName>
+         <value>banker</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>declineComms</attributeName>
+         <value>EMAIL</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>productType</attributeName>
+         <value>EMAILSMS</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>emailAddress</attributeName>
+         <value>lijun@nedbank.co.za;fohnb@nedbank.co.za;mutheiwanan@nedbank.co.za;sunilp@Nedbank.co.za</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>pendDocsLiaisonComms</attributeName>
+         <value>EMAIL</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>declineComms</attributeName>
+         <value>SMS</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>reminderCommsPostOffer</attributeName>
+         <value>NONE</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>LowerOfferAppealDecline</attributeName>
+         <value>NONE</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+</product>

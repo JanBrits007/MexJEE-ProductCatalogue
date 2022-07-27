@@ -41,6 +41,40 @@
 			<valueUnit>bool</valueUnit>
 			<description>credit_card_icon|You need to have Savvy Bundle Transactional Account.</description>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NaturalPerson</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>DebitOrderRepaymentRequired</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>CreditApproval</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NotUnderCreditAdministration</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>QualifyingProducts</attributeName>
+			<value>1113</value>
+			<valueUnit>String</valueUnit>
+		</productAttributes>
 	</productAttributeGroup>
 
 
@@ -74,10 +108,6 @@
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryCreditCardComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -167,13 +197,6 @@
 			<attributeName>subCreditCard|ContractComponentProductType=1350</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1350</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
 
 	<productAttributeGroup  action="overwrite">
 		<attributeGroupName>EligibilityHandler</attributeGroupName>
@@ -181,71 +204,6 @@
 			<attributeType>string</attributeType>
 			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
 			<value>classname=za.co.nb.offermanagement.eligibility.handler.CreditCardEligibilityRules</value>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--Case and Process Configuration-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>EligibilityRules</attributeGroupName>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Age</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>18</minValue>
-			<maxValue>999</maxValue>
-			<valueUnit>year</valueUnit>
-			<description>be 18 years or older.</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Income</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>60000</minValue>
-			<maxValue>99999999</maxValue>
-			<valueUnit>ZAR</valueUnit>
-			<description>earn more than R60 000 a year; and</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>NaturalPerson</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>DebitOrderRepaymentRequired</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>CreditApproval</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>NotUnderCreditAdministration</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>SouthAfricanResident</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-			<description> be a South African resident.</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>QualifyingProducts</attributeName>
-			<value>1113</value>
-			<valueUnit>String</valueUnit>
 		</productAttributes>
 	</productAttributeGroup>
 
