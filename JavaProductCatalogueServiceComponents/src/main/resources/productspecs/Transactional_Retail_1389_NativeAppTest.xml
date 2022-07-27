@@ -13,15 +13,31 @@
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~child-ng-components=CustomerVulnerabilitiesComponent~child-ng-components=DigitalActiveCardTrascationalComponent~displaySummary=true</attributeName>
+         <attributeName>AddressCaptureSplash|ng-component=AddressCaptureSplashComponent~ZOrder=100</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true</attributeName>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=90~child-ng-components=AddressDetails~displaySummary=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture~displaySummary=true</attributeName>
+         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=80~displaySummary=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>SourceOfIncomeCaptureSplash|ng-component=SourceOfIncomeAndTaxObligationsCaptureSplashComponent~ZOrder=70</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=60~child-ng-components=SourceOfFunds~displaySummary=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>TaxObligationsCaptureSplash|ng-component=TaxObligationsCaptureSplashComponent~ZOrder=50</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>AdditionalComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=40~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=ForeignTaxObligations~displaySummary=true</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -30,19 +46,31 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~restrictOptOut=true~ProceduralStepName=Getting your cards~ZOrder=170</attributeName>
+         <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~restrictOptOut=true~ProceduralStepName=Getting your cards~ZOrder=100</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>NedbankIDOnAppSplash|ng-component=NedbankIDOnAppSplashComponent~ZOrder=90</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>NedbankIDOnApp|ng-component=NedbankIDOnAppComponent~ProceduralStepName=Create Your Nedbank ID~ZOrder=155~applicableChannels=WebSelfAssisted~applicableChannels=AppSelfAssisted</attributeName>
+         <attributeName>NedbankIDOnApp|ng-component=NedbankIDOnAppComponent~ProceduralStepName=Create Your Nedbank ID~ZOrder=80</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>AppLogInSetupSplash|ng-component=AppLogInSetupSplashComponent~ZOrder=70</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>AppLogInSetup|ng-component=AppLogInSetupComponent~ProceduralStepName=Set Up App Login~ZOrder=100~applicableChannels=WebSelfAssisted~applicableChannels=AppSelfAssisted</attributeName>
+         <attributeName>AppLogInSetup|ng-component=AppLogInSetupComponent~ProceduralStepName=Set Up App Login~ZOrder=60</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>AppTrustedDeviceSplash|ng-component=AppTrustedDeviceSplashComponent~ZOrder=50</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>AppTrustedDevice|ng-component=AppTrustedDeviceComponent~ProceduralStepName=Trusted Device~ZOrder=90~applicableChannels=WebSelfAssisted~applicableChannels=AppSelfAssisted</attributeName>
+         <attributeName>AppTrustedDevice|ng-component=AppTrustedDeviceComponent~ProceduralStepName=Trusted Device~ZOrder=40</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
