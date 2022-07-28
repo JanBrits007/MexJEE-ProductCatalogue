@@ -28,6 +28,11 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
+         <attributeName>RequiredRule_PrepareApplicant</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.PartyInformationEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
       </productAttributes>
@@ -105,6 +110,31 @@
          <value>1389</value>
       </productAttributes>
    </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>100</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389_NativeAppTest</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+         <value>${{NoCreditonTPTestEmailOverideList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389_NoCreditTest</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>

@@ -50,7 +50,7 @@
         </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
-            <attributeName>VAS_1028</attributeName><!--Plastic Card-->
+            <attributeName>VAS_1029</attributeName><!--Plastic Card-->
             <value>Optionality=Optional~IsTakenUp=true</value>
         </productAttributes>
     </productAttributeGroup>
@@ -197,6 +197,193 @@
             <value>5000</value>
         </productAttributes>
     </productAttributeGroup>
+
+
+    <!--1029 - Plastic Card (this should be 1028 but we are using 1029 since it contradicts with the product ID)-->
+    <features>
+        <featureIdentifier>1029</featureIdentifier>
+        <name>Plastic Card</name>
+
+        <!--GenerateOffer-->
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-PlasticCardValueAddedServiceSelector-1029~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+
+        <!--ActivateProductsGatherProductDetails-->
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170~IntlDelivery=true~ContractComponentProductType=1029~lockersOption=true</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <!--<attributeGroupName>RuleHandlers_ActivateProductsGatherProductDetails</attributeGroupName-->
+            <attributeGroupName>RuleHandlers_ActivateProducts</attributeGroupName>
+            <featureAttributes>
+                <!--<attributeName>RequiredDataFilter_ActivateProductsGatherProductDetails</attributeName-->
+                <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+                <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.InternationalCardDeliveryFilter</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+
+        <!--		ActivateProductsPresentDocuments-->
+        <featureAttributeGroup>
+            <attributeGroupName>RuleHandlers_PresentDocuments</attributeGroupName>
+            <featureAttributes>
+                <attributeName>RequiredDataFilter_PresentDocuments</attributeName>
+                <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementInsuranceCrossSellFaisScreenFilter</value>
+            </featureAttributes>
+
+            <featureAttributes>
+                <attributeName>RequiredCaseFilter_PresentDocuments</attributeName>
+                <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementLendingProductOnlyFaisScreenFilter</value>
+            </featureAttributes>
+
+            <featureAttributes>
+                <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
+                <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFaisDocumentFilter</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+
+
+        <!--FinalizeFrontOfficeInteraction-->
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-1029~ZOrder=50</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+
+        <!-- Case and Process Configuration -->
+        <featureAttributeGroup>
+            <attributeGroupName>SystemRelated</attributeGroupName>
+            <featureAttributes>
+                <attributeType>Flag</attributeType>
+                <attributeName>StraightThroughProcess</attributeName>
+                <value>True</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+
+        <!--Provisioning Configuration-->
+        <featureAttributeGroup>
+            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSProdCd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>CRD</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSActCoid</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>101</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSCppmMlgMetCd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>REG</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSCtlAdId</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>C1</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSRelCd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>PRI</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSPayMethod</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>MAN</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSActType</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>PRI</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSATrRegistrationNbr</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>194905</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSLangCd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>ENG</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSNcaInd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>Y</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSQpcInd</attributeName>
+                <valueUnit>ENG</valueUnit>
+                <value>Y</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>FeatureDetails</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productATMLimit</attributeType>
+                <attributeName>ATM_Limit</attributeName>
+                <value>2000</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>monthlyServiceFeeFrequency</attributeType>
+                <attributeName>AdminFee</attributeName>
+                <value>Monthly</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>monthlyCreditFacilityServiceFeeFrequency</attributeType>
+                <attributeName>AdminFee</attributeName>
+                <value>Monthly</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>initiationFeeFrequency</attributeType>
+                <attributeName>InitiationFee</attributeName>
+                <value>Revolving</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>numberOfInstallments</attributeType>
+                <attributeName>Number_Of_Installments</attributeName>
+                <value>Revolving</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>minimumRepaymentPercentage</attributeType>
+                <attributeName>Minimum_Repayment_Percentage</attributeName>
+                <value>5</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>repaymentterm</attributeType>
+                <attributeName>Repayment_Term</attributeName>
+                <value>12</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>InstalmentPayable_Frequency</attributeType>
+                <attributeName>InstalmentPayable_Frequency</attributeName>
+                <value>Monthly</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+    </features>
 
     <features>
         <featureIdentifier>1334</featureIdentifier>
