@@ -172,10 +172,6 @@
 				<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementLendingProductOnlyFaisScreenFilter</value>
 			</featureAttributes>
 
-			<featureAttributes>
-				<attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
-				<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFaisDocumentFilter</value>
-			</featureAttributes>
 		</featureAttributeGroup>
 
 
@@ -582,6 +578,23 @@
 			</featureAttributes>
 		</featureAttributeGroup>
 
+		<!--GatherEvidence-->
+		<featureAttributeGroup>
+			<attributeGroupName>productInformationRequirement_GatherEvidence</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>FaisDeclaration|ProceduralStepName=FAIS declaration~ZOrder=60~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+
+		<!--PresentDocuments-->
+		<featureAttributeGroup>
+			<attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=60~ContractComponentProductType=1001~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
 		<!--Document Configuration-->
 		<featureAttributeGroup>
 			<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
