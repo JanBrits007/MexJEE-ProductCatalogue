@@ -457,7 +457,7 @@
 		</featureAttributeGroup>
 	</features>
 
-	<features>
+	<!--features>
 		<featureIdentifier>1100</featureIdentifier>
 		<name>Payment protection plan</name>
 		<description>Life can be full of the unexpected. That's why our credit card insurance is tailor-made to see you through life's ups and downs. Your credit card debt will be covered if you are retrenched, become disabled or critically ill, or pass away.</description>
@@ -476,7 +476,7 @@
 				<value />
 			</featureAttributes>
 		</featureAttributeGroup>
-		<!--GatherEvidence-->
+		<!-GatherEvidence->
 		<featureAttributeGroup>
 			<attributeGroupName>productInformationRequirement_GatherEvidence</attributeGroupName>
 			<featureAttributes>
@@ -485,7 +485,7 @@
 			</featureAttributes>
 		</featureAttributeGroup>
 
-		<!--PresentDocuments-->
+		<!-PresentDocuments->
 		<featureAttributeGroup>
 			<attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
 			<featureAttributes>
@@ -527,7 +527,45 @@
 				<attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
-	</features>
+
+		<featureAttributeGroup>
+			<attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subYourApplicationHeader</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subNedbankLogo</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subGenericInfo</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subGenericSignatures</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1100</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1100</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+
+	</features-->
 
 
 </product>
