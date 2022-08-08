@@ -37,6 +37,15 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<productAttributeGroup  action="overwrite">
+		<attributeGroupName>EligibilityHandler</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.CreditCardEligibilityRules</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--Document Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
@@ -105,6 +114,12 @@
 			<attributeType>string</attributeType>
 			<attributeName>FAIS_StaffBranchOverrideList</attributeName>
 			<value>${{FAIS_StaffBranchOverideList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>QualifyingProducts</attributeName>
+			<value>1111</value>
+			<valueUnit>String</valueUnit>
 		</productAttributes>
 	</productAttributeGroup>
 
