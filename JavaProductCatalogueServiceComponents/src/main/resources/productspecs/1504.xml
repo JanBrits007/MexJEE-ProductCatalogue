@@ -1,5 +1,4 @@
-<product 
-    xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1504</productIdentifier>
     <name>Small Business Bundle Credit Card</name>
 
@@ -43,7 +42,6 @@
     </productAttributeGroup>
 
     <!--ETE Substitution Rules-->
-
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
@@ -79,7 +77,6 @@
     </productAttributeGroup>
 
     <!--QA Substitution Rules-->
-
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
         <productAttributes>
@@ -100,6 +97,19 @@
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
             <value>1504</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--PROD Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1504</value>
         </productAttributes>
     </productAttributeGroup>
 
