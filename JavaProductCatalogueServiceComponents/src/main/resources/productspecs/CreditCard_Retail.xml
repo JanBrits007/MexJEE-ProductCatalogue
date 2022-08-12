@@ -126,7 +126,6 @@
 			<value>1155~FuneralPlan</value>
 		</productAttributes>
 	</productAttributeGroup>
-
 	<productAttributeGroup>
 		<attributeGroupName>DecisioningControl</attributeGroupName>
 		<productAttributes>
@@ -915,7 +914,6 @@
 	<features>
 		<featureIdentifier>1100</featureIdentifier>
 		<name>Payment protection plan</name>
-		<description>Life can be full of the unexpected. That's why our credit card insurance is tailor-made to see you through life's ups and downs. Your credit card debt will be covered if you are retrenched, become disabled or critically ill, or pass away.</description>
 		<featureAttributeGroup>
 			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
 			<featureAttributes>
@@ -1020,4 +1018,315 @@
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
+
+	<!--1334 - Membership Rewards-->
+	<features>
+		<featureIdentifier>1334</featureIdentifier>
+		<name>Membership Rewards</name>
+		<featureAttributeGroup>
+			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=MembershipRewardsComponent-1334~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>SystemRelated</attributeGroupName>
+			<featureAttributes>
+				<attributeType>Flag</attributeType>
+				<attributeName>StraightThroughProcess</attributeName>
+				<value>True</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>FeatureCode</attributeName>
+				<valueUnit>string</valueUnit>
+				<value>ThisisthesFeaturecode</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>provisionInBranch</attributeName>
+				<valueUnit>boolean</valueUnit>
+				<value>false</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>legacyProductID</attributeName>
+				<valueUnit>string</valueUnit>
+				<value />
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>ProvisioningPhase</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>preFICAProvisioning</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+			<featureAttributes>
+				<attributeType>type</attributeType>
+				<attributeName>name</attributeName>
+				<minValue>1</minValue>
+				<maxValue>2</maxValue>
+				<valueUnit>text</valueUnit>
+				<value>some value</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+			<featureAttributes>
+				<attributeType>DocumentDescription</attributeType>
+				<attributeName>Rewards Terms and Conditions|nedbank-commercial-release/CreditCardAmexRewardsTermsAndConditionsUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Terms and Conditions</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>Download</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>Email</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>DocTemplateName</attributeType>
+				<attributeName>CreditCardAmexRewardsTermsAndConditionsUniversal</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+	</features>
+
+	<!--1465 Redemption Card-->
+	<features>
+		<featureIdentifier>1465</featureIdentifier>
+		<name>Redemption Card</name>
+		<featureAttributeGroup>
+			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=MembershipRewardsComponent-1465~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>SystemRelated</attributeGroupName>
+			<featureAttributes>
+				<attributeType>Flag</attributeType>
+				<attributeName>StraightThroughProcess</attributeName>
+				<value>True</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+			<featureAttributes>
+				<attributeType>type</attributeType>
+				<attributeName>name</attributeName>
+				<minValue>1</minValue>
+				<maxValue>2</maxValue>
+				<valueUnit>text</valueUnit>
+				<value>some value</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSProdCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>CRD</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSCtlAdId</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>C1</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSRelCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>PRI</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSSCtlSlTnPgCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>6563</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSCredLnAmt</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>0</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSPayMethod</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>MAN</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSPlasticType</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>AR1</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSCrdStock</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>AR2</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSActType</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>PRI</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSATrRegistrationNbr</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>194905</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>provisionInBranch</attributeName>
+				<valueUnit>boolean</valueUnit>
+				<value>false</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSLangCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>ENG</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSSolicitationCode</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>8079</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>ProvisioningPhase</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>preFICAProvisioning</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+	</features>
+
+	<!--9999 - Priority Pass-->
+	<features>
+		<featureIdentifier>9999</featureIdentifier>
+		<name>Priority Pass</name>
+		<featureAttributeGroup>
+			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=PriorityPassCardComponent-9999~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>SystemRelated</attributeGroupName>
+			<featureAttributes>
+				<attributeType>Flag</attributeType>
+				<attributeName>StraightThroughProcess</attributeName>
+				<value>True</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>placeholder-Fullstructure</attributeGroupName>
+			<featureAttributes>
+				<attributeType>type</attributeType>
+				<attributeName>name</attributeName>
+				<minValue>1</minValue>
+				<maxValue>2</maxValue>
+				<valueUnit>text</valueUnit>
+				<value>some value</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup>
+			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSProdCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>CRD</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSCtlAdId</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>C1</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSRelCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>PRI</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSSCtlSlTnPgCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>6563</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSCredLnAmt</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>0</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSPayMethod</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>MAN</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSPlasticType</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>PP5</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSCrdStock</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>AP3</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSActType</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>PRI</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSATrRegistrationNbr</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>194905</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>provisionInBranch</attributeName>
+				<valueUnit>boolean</valueUnit>
+				<value>false</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSLangCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>ENG</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSSolicitationCode</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>8521</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+	</features>
+
 </product>
