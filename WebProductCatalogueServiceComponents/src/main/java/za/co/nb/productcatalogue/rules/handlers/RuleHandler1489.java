@@ -41,8 +41,9 @@ public class RuleHandler1489 extends BaseProductSpecificationRuleHandler {
                     String xValueXML = getArrangementBaseContractComponentXValueXML(arrangementDetailBObjType);
                     mLog.debug("Trace 5 XValueXML value >>" + xValueXML + "<<");
 
-                    Document doc = convertXmlStringToDocument(xValueXML);
-                    if (checkIfTagPresent(xValueXML, "facilityInstruction")) {
+                    if (xValueXML != null && checkIfTagPresent(xValueXML, "facilityInstruction")) {
+                        Document doc = convertXmlStringToDocument(xValueXML);
+
                         String value = fetchValueByTagName(doc, "facilityInstruction");
                         mLog.debug("Trace 6 facilityInstruction value>>" + value + "<<");
 
