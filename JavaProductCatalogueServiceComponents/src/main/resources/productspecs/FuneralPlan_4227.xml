@@ -3,6 +3,41 @@
    <name>Nedbank Insurance Funeral Cover Individual R10k</name>
    <shortDescription>(FuneralPlan_4227) Nedbank Insurance Funeral Cover Individual R10k</shortDescription>
 
+   <!--GenerateOfferVerifyEligibility-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>EligibilityHandler</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_PrepareApplicant</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.AgeEligibilityHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.MainBankedAccountsEligibilityHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.ExistingPolicyEligibilityHandler</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--GenerateOffer-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
