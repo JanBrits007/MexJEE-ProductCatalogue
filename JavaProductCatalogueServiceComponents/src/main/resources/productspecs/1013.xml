@@ -1,358 +1,17 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-   <productIdentifier>1389</productIdentifier>
-   <name>Nedbank Pay-As-You-Use</name>
+   <productIdentifier>1013</productIdentifier>
+   <name>Ordinary Current Account</name>
    <shortDescription>A no frills, transparent account with a flat monthly fee, pay only for what you use.</shortDescription>
    <productPricing>
       <fee>
          <type>AdminFee</type>
-         <description>Zero monthly fee</description>
+         <description>R 180 pm</description>
          <currency>ZAR</currency>
-         <amount>0</amount>
+         <amount>180</amount>
          <frequency>Monthly</frequency>
       </fee>
    </productPricing>
    <productOnAPageWebURL>/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html</productOnAPageWebURL>
-
-
-   <productAttributeGroup>
-      <attributeGroupName>EligibilityHandler</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredRule_GenerateOffer</attributeName>
-         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredRule_PrepareApplicant</attributeName>
-         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredRule_PrepareApplicant</attributeName>
-         <value>classname=za.co.nb.offermanagement.eligibility.handler.PartyInformationEligibilityRules</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
-         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-
-   <productAttributeGroup>
-      <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
-   </productAttributeGroup>
-
-   <!--ETE Substitution Rules-->
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
-         <value>${{Overdraft_RRB_dynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>LimitIncreaseSubstitutionRulesV2</attributeName>
-         <value>NA</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForCalculatedSegment</attributeName>
-         <value>${{RRB_Segement_list}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>1389_RRBComStrategy</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>${{Framework_V1_Channel_IDs}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <!--Adding this just to test the requirements for SSK-->
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>${{SSK_Channel_ID}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389_SSKTest</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>${{Framework_V1_Channel_IDs}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>100</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389_NativeAppTest</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
-         <value>${{NoCreditonTPTestEmailOverideList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389_NoCreditTest</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
-         <value>${{GTPTestEmailOverideList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389_GTP</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{GTPDynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389_GTP</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>DefaultSubstitution</attributeName>
-         <value>DefaultSubstitution</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <!--QA Substitution Rules-->
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
-         <value>${{Overdraft_RRB_dynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>LimitIncreaseSubstitutionRulesV2</attributeName>
-         <value>NA</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForCalculatedSegment</attributeName>
-         <value>${{RRB_Segement_list}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>${{Framework_V1_Channel_IDs}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
-         <value>${{GTPTestEmailOverideList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389_GTP</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{GTPDynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389_GTP</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>DefaultSubstitution</attributeName>
-         <value>DefaultSubstitution</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-   
-
-   <!--PROD Substitution Rules-->
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>LimitIncreaseSubstitutionRulesV2</attributeName>
-         <value>NA</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForCalculatedSegment</attributeName>
-         <value>${{RRB_Segement_list}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>${{Framework_V1_Channel_IDs}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
-         <value>${{GTPTestEmailOverideList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389_GTP</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>DefaultSubstitution</attributeName>
-         <value>DefaultSubstitution</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <!--Old GTP rules-->
-   <!--productAttributeGroup>
-      <attributeGroupName>GTPPilotSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedJWTSub</attributeName>
-         <value>7278519348</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389_GTP</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>GTPPilotSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedJWTSub</attributeName>
-         <value>4316927282|8922624386|2124145273|966938814</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389_GTP</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>GTPPilotSubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedJWTSub</attributeName>
-         <value>6154442790|729546977|2653152556</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389_GTP</value>
-      </productAttributes>
-   </productAttributeGroup-->
-
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
@@ -361,11 +20,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ClientBiometricsEnrollment</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|statementdelivery=Cellphone-Email-Post</attributeName>
+         <attributeName>AdditionalPersonalInformation</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -378,10 +33,6 @@
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>PreOfferFinePrint</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisConversationRecordOfAdvice</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -406,13 +57,9 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>OverdraftDetailsNewFlow</attributeName>
       </productAttributes>
-      <productAttributes>
+       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>ArrangementCaptureSalesMilestone</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisConversationRecordOfAdvice</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -432,12 +79,6 @@
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_GatherEvidence</attributeGroupName>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>Certificate of Loss of Nationality|N/A|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|Certificate of Loss of Nationality</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
@@ -480,61 +121,6 @@
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>productEvidenceRequirement_GatherEvidence</attributeGroupName>
-   </productAttributeGroup>
-
-   <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-      <productAttributes>
-         <attributeType>DocumentDescription</attributeType>
-         <attributeName>W-9 Form|nedbank-commercial-release/IRSW9Universal|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|W-9 Form</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Download</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Email</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>WetSign</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>ElectronicallySign</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>DigitallySign</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-      <productAttributes>
-         <attributeType>DocumentDescription</attributeType>
-         <attributeName>W-8BEN Form|nedbank-commercial-release/IRSW8BENUniversal|Client|FOREIGNTAXCOMPLIANCE|Tax Status Certification|W-8BEN Form</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Download</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>Email</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>WetSign</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>ElectronicallySign</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>AvailableAction</attributeType>
-         <attributeName>DigitallySign</attributeName>
-      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
@@ -614,10 +200,10 @@
          <attributeType>EligibilityRule</attributeType>
          <attributeName>Age</attributeName>
          <isComparable>false</isComparable>
-         <minValue>16</minValue>
+         <minValue>18</minValue>
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>user-icon|You need to be 16 or older</description>
+         <description>be 18 years or older</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
@@ -647,16 +233,6 @@
          <isComparable>false</isComparable>
          <value>true</value>
          <valueUnit>bool</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
-         <value>${{FAIS_OnBehalfOfBranchList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>FAIS_StaffBranchOverrideList</attributeName>
-         <value>${{FAIS_StaffBranchOverideList}}</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -703,13 +279,21 @@
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
-       <productAttributes>
+      <productAttributes>
          <attributeType>Compliance</attributeType>
-         <attributeName>PersonalInformationProcessingConsent</attributeName>
+         <attributeName>MeetsMinimumProductEligibilityRequirements</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>IsAwareOfComparableProducts</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>Compliance</attributeType>
          <attributeName>BureauCheckConsent</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>CreditBureauMonitoring</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -730,29 +314,9 @@
    <productAttributeGroup>
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
       <productAttributes>
-         <attributeType>String</attributeType>
-         <attributeName>cardDeliveryFee</attributeName>
-         <value>0.00</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>String</attributeType>
-         <attributeName>HandleProvisioningFailureTeamName</attributeName>
-         <value>BPM Admin</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>String</attributeType>
-         <attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
-         <value>30</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>String</attributeType>
-         <attributeName>HandleProvisioningFailureEscalationTestingEmailAddress</attributeName>
-         <value>BensonM2@Nedbank.co.za</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>String</attributeType>
-         <attributeName>HandleProvisioningFailureEscalationEmailAddress</attributeName>
-         <value>TIPSR@nedbank.co.za</value>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeIntentSequence</attributeName>
+         <value>GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -777,11 +341,6 @@
       <productAttributes>
          <attributeType>enum</attributeType>
          <attributeName>riskAnalysisMechanism</attributeName>
-         <value>automated</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>enum</attributeType>
-         <attributeName>riskAnalysisMechanismIntent0</attributeName>
          <value>automated</value>
       </productAttributes>
       <productAttributes>
@@ -834,49 +393,15 @@
          <attributeName>requiresElgiblityScoringAtIntents</attributeName>
          <value>intent 0|intent 1</value>
       </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>presentLowerOfferFrontOfficeIntentSequence</attributeName>
-         <value>PresentLowerOffer|ActivateProductsGatherProductDetails</value>
-      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>OverdraftIntentConfig</attributeGroupName>
+      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
       <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>reviewApplicationIntent</attributeName>
-         <value>GenerateOfferGatherProductDetails</value>
+          <attributeType>string</attributeType>
+          <attributeName>RequiredDataFilter_GenerateOffer</attributeName>
+          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementIncomeExpenseFilter</value>
       </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>DocumentConfiguration</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>ComplianceDocumentFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFatcaComplianceFilter</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>PartyConfiguration</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_GatherEvidence</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.PartyLONFilter</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-    <attributeGroupName>ArrangementConfiguration</attributeGroupName>
-    <productAttributes>
-        <attributeType>string</attributeType>
-        <attributeName>RequiredDataFilter_GenerateOffer</attributeName>
-        <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementIncomeExpenseFilter</value>
-    </productAttributes>
-  </productAttributeGroup>
+    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
       <productAttributes>
@@ -952,36 +477,36 @@
          <attributeName>dcar</attributeName>
          <value>51911</value>
       </productAttributes>
-      <productAttributes>
-        <attributeType>int</attributeType>
-        <attributeName>mdmAdminFieldType</attributeName>
-        <value>1004</value>
-      </productAttributes>
-      <productAttributes>
-        <attributeType>int</attributeType>
-        <attributeName>mdmSubProductCode</attributeName>
-        <value>2051</value>
-      </productAttributes>
-      <productAttributes>
-        <attributeType>int</attributeType>
-        <attributeName>mdmAdminSystemType</attributeName>
-        <value>1001</value>
-      </productAttributes>
-      <productAttributes>
-        <attributeType>int</attributeType>
-        <attributeName>mdmAccountRoleType</attributeName>
-        <value>1046</value>
-      </productAttributes>
-      <productAttributes>
-        <attributeType>int</attributeType>
-        <attributeName>productCategory</attributeName>
-        <value>00001</value>
-      </productAttributes>
-      <productAttributes>
-        <attributeType>string</attributeType>
-        <attributeName>productSubCategory</attributeName>
-        <value>2</value>
-      </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAdminFieldType</attributeName>
+         <value>1004</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmSubProductCode</attributeName>
+         <value>1067</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAccountRoleType</attributeName>
+         <value>1046</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAdminSystemType</attributeName>
+         <value>1001</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>productCategory</attributeName>
+         <value>00001</value>
+       </productAttributes>
+       <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productSubCategory</attributeName>
+         <value>0</value>
+       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>schemeCode</attributeName>
@@ -1154,45 +679,26 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-      <attributeGroupName>CaseConfiguration</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>ArrangementBundleCaseHandler</attributeName>
-         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup>
       <attributeGroupName>DecisioningControl</attributeGroupName>
-      <productAttributes>
-         <attributeType>boolean</attributeType>
-         <attributeName>EnforceIntent0FAISAccreditationRule</attributeName>
-         <value>true</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>String</attributeType>
-         <attributeName>FAISCategoryCode</attributeName>
-         <value>1.18</value>
-      </productAttributes>
       <productAttributes>
          <attributeType>boolean</attributeType>
          <attributeName>ComponentSupportsDeclineReasons</attributeName>
          <value>true</value>
       </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>CommunicationSystem</attributeName>
-         <value>GenCom</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>int</attributeType>
-         <attributeName>productType</attributeName>
-         <value>EMAILSMS</value>
-      </productAttributes>
-   </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CommunicationSystem</attributeName>
+            <value>GenCom</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>productType</attributeName>
+            <value>EMAILSMS</value>
+        </productAttributes>
+    </productAttributeGroup>
    <features>
       <featureIdentifier>1014</featureIdentifier>
       <name>Overdraft</name>
@@ -1238,80 +744,6 @@
             <value>true</value>
          </featureAttributes>
       </featureAttributeGroup>
-     <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_VerifyAffordabilityAndEmployment</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>InsurancePanel|cv-parent-panel=CaseData~cv-component=Insurance_Panel~child-cv-component=widInsuranceInformation[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>PartyPanel|cv-parent-panel=CaseData~cv-component=Party_Panel~child-cv-component=widPersonalInformation[READONLY]~child-cv-component=widEducationInformation[READONLY]~child-cv-component=widContactInformation[READONLY]~child-cv-component=widAddressInformation[READONLY]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankInformation[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>EmploymentInformationPanel|cv-parent-panel=CaseData~cv-component=EmploymentInformation_Panel~child-cv-component=widEmploymentInformation[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>BureauInformationPanel|cv-parent-panel=CaseData~cv-component=BureauInformation_Panel~child-cv-component=widBureauGateway[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>AffordabilityInformationPanel|cv-parent-panel=CaseData~cv-component=AffordabilityInformation_Panel~child-cv-component=widAffordabilityInformation[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>GenericCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnViewComments~cv-component=Actions_CaseActions~child-cv-component=btnSave~cv-component=Actions_CaseActions~child-cv-component=btnCancelCase~cv-component=Actions_CaseActions~child-cv-component=btnViewAuditTrails~cv-component=Actions_CaseActions~child-cv-component=btnDiarise~cv-component=Actions_CaseActions~child-cv-component=btnFlagForFraud</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>DocumentCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnOpenDocuments~cv-component=Actions_CaseActions~child-cv-component=btnRequestDocuments~cv-component=Actions_CaseActions~child-cv-component=btnAddDocuments</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>DataCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_CaseActions~child-cv-component=btnRetrievePartyStatements~cv-component=Actions_CaseActions~child-cv-component=btnRefreshPartyData~cv-component=Actions_CaseActions~child-cv-component=btnREfreshBureauData</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>DiariseCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>FraudCaseActions|cv-parent-panel=CaseActions~cv-component=Actions_Diarise~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]</attributeName>
-        </featureAttributes>
-      </featureAttributeGroup>
-     <featureAttributeGroup>
-        <attributeGroupName>productInformationRequirement_QualityAssuranceVerification</attributeGroupName>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>ApplicationPanel|cv-parent-panel=CaseData~cv-component=Application_Panel~child-cv-component=widProductsInThisApplication[READONLY]~child-cv-component=widTriggerReasons[SHOW]~child-cv-component=widOtherApplicationsInProgress[READONLY]~child-cv-component=widFinalAssessment[SHOW]~child-cv-component=widVerificationException[SHOW]~child-cv-component=widFinalAssessmentIndicators[SHOW]</attributeName>
-        </featureAttributes>
-        <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>AccountPanel|cv-parent-panel=CaseData~cv-component=AccountSetup_Panel~child-cv-component=widAccountSetup[SHOW]</attributeName>
-        </featureAttributes>
-		<featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>BankInformationPanel|cv-parent-panel=CaseData~cv-component=BankInformation_Panel~child-cv-component=widBankAccountDetails[SHOW]</attributeName>
-        </featureAttributes>
-		 <featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>LoanConsolidationCashflowPanel|cv-parent-panel=CaseData~cv-component=ConsolidationCashflow_Panel~child-cv-component=widLoanConsolidation[READONLY]~child-cv-component=widCashFlowDetails[READONLY]</attributeName>
-        </featureAttributes>
-		<featureAttributes>
-          <attributeType>productInformationRequirement</attributeType>
-          <attributeName>LastOfferPanel|cv-parent-panel=CaseData~cv-component=LastOffer_Panel~child-cv-component=widLastOfferDetails[READONLY]</attributeName>
-        </featureAttributes>
-     </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>coreProvisioningParameters</attributeGroupName>
          <featureAttributes>
@@ -1325,36 +757,6 @@
             <attributeName>provisioningMechanism</attributeName>
             <value>provisionToCRAG</value>
          </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>LeadEmailAddressNonProd</attributeName>
-            <value>FohnB@Nedbank.co.za;MandisaMah@Nedbank.co.za;ZamaMgo@Nedbank.co.za;ajits@nedbank.co.za;LijuN@Nedbank.co.za;LudieP@Nedbank.co.za;NatashaBu@Nedbank.co.za;PramothV@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>LeadEmailAddressProd</attributeName>
-            <value>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>OOReducingLeadEmailAddressNonProd</attributeName>
-            <value>ThapeloC@nedbank.co.za;NatashaBu@Nedbank.co.za;ajits@nedbank.co.za;BrigertM@Nedbank.co.za</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>OOReducingLeadEmailAddressProd</attributeName>
-            <value>CreditDirect@Nedbank.co.za</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>ODAssuranceLeadEmailAddressNonProd</attributeName>
-            <value>ThapeloC@nedbank.co.za;NatashaBu@Nedbank.co.za;ajits@nedbank.co.za;ThaboMokoen@Nedbank.co.za;BrigertM@Nedbank.co.za</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>ODAssuranceLeadEmailAddressProd</attributeName>
-            <value>ODSales@Nedbank.co.za</value>
-         </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
@@ -1364,7 +766,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>AdditionalPersonalInformation|statementdelivery=Cellphone-Email-Post</attributeName>
+            <attributeName>AdditionalPersonalInformation</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -1477,9 +879,9 @@
             <value>d2f0821f-1a96-e811-a28a-00155d002916</value>
          </featureAttributes>
          <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>DEAStatementBUID_PROD</attributeName>
-            <value>f35d558f-4430-e911-aa6b-001e67212aa8</value>
+            	<attributeType>string</attributeType>
+            	<attributeName>DEAStatementBUID_PROD</attributeName>
+            	<value>f35d558f-4430-e911-aa6b-001e67212aa8</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>boolean</attributeType>
@@ -1535,7 +937,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>EligibleApplicationStatus</attributeName>
-            <value>CANCELLED|INITIATED|DECLINED|OFFER ACCEPTED</value>
+            <value>CANCELLED|INITIATED|DECLINED</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -1588,7 +990,7 @@
       <featureIdentifier>1402</featureIdentifier>
       <name>My Pocket</name>
       <mandatory>false</mandatory>
-      <preSelected>true</preSelected>
+      <preSelected>false</preSelected>
       <shortDescription>Earn favourable interest rates</shortDescription>
       <description>Get a free budgeting and savings pocket linked to your Nedbank current account to earn interest and get instant access to your money when you need it.</description>
       <featureGrouping>
@@ -2039,9 +1441,9 @@
       <featurePricing>
          <fee>
             <type>AdminFee</type>
-            <description>R0.50c per sms</description>
+            <description>R0.45c per sms</description>
             <currency>ZAR</currency>
-            <amount>0.50</amount>
+            <amount>0.45</amount>
             <frequency>Transactional</frequency>
          </fee>
       </featurePricing>
@@ -2104,7 +1506,7 @@
    <features>
       <featureIdentifier>1008</featureIdentifier>
       <name>No Funds Alert Services</name>
-      <mandatory>true</mandatory>
+      <mandatory>false</mandatory>
       <preSelected>true</preSelected>
       <shortDescription>Included</shortDescription>
       <description>No funds alert is a service that provides a delay of the transactions being returned,due to insufficient funds in the account. Helping you save on unnecessary dishonoured penalty fees.</description>
@@ -2117,9 +1519,9 @@
       <featurePricing>
          <fee>
             <type>AdminFee</type>
-            <description>R10 per sms</description>
+            <description>R13 per sms</description>
             <currency>ZAR</currency>
-            <amount>10</amount>
+            <amount>13</amount>
             <frequency>Transactional</frequency>
          </fee>
       </featurePricing>
@@ -2195,9 +1597,9 @@
       <featurePricing>
          <fee>
             <type>AdminFee</type>
-            <description>R24 per month</description>
+            <description>R23 per month</description>
             <currency>ZAR</currency>
-            <amount>24</amount>
+            <amount>23</amount>
             <frequency>Monthly</frequency>
          </fee>
       </featurePricing>
@@ -2696,7 +2098,7 @@
          <featureAttributes>
             <attributeType>productATMLimit</attributeType>
             <attributeName>ATM_Limit</attributeName>
-            <value>1500</value>
+            <value>2000</value>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
