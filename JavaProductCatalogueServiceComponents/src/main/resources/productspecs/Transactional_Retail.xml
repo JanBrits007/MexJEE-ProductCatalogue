@@ -13,7 +13,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Your income details~ZOrder=100</attributeName>
+         <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Your income details~ZOrder=100~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -41,21 +41,6 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>VAS_1376</attributeName><!--Salary Switching-->
-         <value>classname=za.co.nb.offermanagement.crosssell.SalarySwitchingCrossSellHandler</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>VAS_1380</attributeName><!--Debit Order Switching-->
-         <value>Optionality=Optional~IsTakenUp=false</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>VAS_1454</attributeName><!--Greenbacks Rewards-->
-         <value>Optionality=Optional~IsTakenUp=false</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
          <attributeName>VAS_1025</attributeName><!--Funeral Cover-->
          <value>Optionality=Optional~IsTakenUp=false</value>
       </productAttributes>
@@ -66,17 +51,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>VAS_1402</attributeName><!--My Pocket-->
-         <value>Optionality=Optional~IsTakenUp=true</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
          <attributeName>VAS_1374</attributeName><!--eNotes-->
-         <value>Optionality=Optional~IsTakenUp=false</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>VAS_1333</attributeName><!--Nedbank Greenbacks Shop Card-->
          <value>Optionality=Optional~IsTakenUp=false</value>
       </productAttributes>
    </productAttributeGroup>
@@ -246,6 +221,17 @@
       <!--ActivateProductsPresentDocuments-->
 
       <!--FinalizeFrontOfficeInteraction-->
+      <productAttributeGroup action="overwrite">
+         <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+         <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>LetsGetDigital|ng-component=LetsGetDigitalComponent~ProceduralStepName=Get your Nedbank ID~child-ng-components=NedbankIdRegisterComponent~applicableChannels=WebSelfAssisted~ZOrder=60</attributeName>
+         </productAttributes>
+         <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalProductAccountDetails~child-ng-components=ApplyForCredit~child-ng-components=DebitOrderSwitching~child-ng-components=SwitchingToNedbank~child-ng-components=ForgotYourCard~child-ng-components=EarnAsYouSwipe~child-ng-components=Statements~child-ng-components=GettingTheMobileApp~HideProceduralStep=true~ZOrder=50</attributeName>
+         </productAttributes>
+      </productAttributeGroup>
 
       <!--Decline Configuration-->
       <featureAttributeGroup>
@@ -1319,7 +1305,7 @@
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=NedbankInsuranceFuneralPlanComponent-1025~ProceduralStepName=Optional extras for you~ZOrder=65</attributeName>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=NedbankInsuranceFuneralPlanComponent-1025~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -1811,7 +1797,7 @@
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceComponent-1101~ProceduralStepName=Optional extras for you~ZOrder=65</attributeName>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=OverdraftAssuranceComponent-1101~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
