@@ -15,10 +15,6 @@
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Your income details~ZOrder=100~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
    </productAttributeGroup>
 
    <!--Case and Process Configuration-->
@@ -120,10 +116,6 @@
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>OfferTransactionalCredit|ng-component=AdditionalTransactionalCreditOffersComponent~ProceduralStepName=Extra perks with your account~ZOrder=300~ContractComponentProductType=9062~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-         </featureAttributes>
       </featureAttributeGroup>
 
       <!--DetermineRelatedParties-->
@@ -151,10 +143,6 @@
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
          </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-         </featureAttributes>
       </featureAttributeGroup>
 
       <!--FinancialDetails-->
@@ -180,10 +168,6 @@
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
          </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-         </featureAttributes>
       </featureAttributeGroup>
 
       <!--GenerateApplicationOfferProposals-->
@@ -208,10 +192,6 @@
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -323,6 +303,10 @@
       <featureAttributeGroup>
          <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
          <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OverdraftProductDetails|ProceduralStepName=Your Overdraft~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=SalaryBankDetails~child-ng-components=ConsentCapture~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
@@ -334,10 +318,6 @@
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
          </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-         </featureAttributes>
       </featureAttributeGroup>
 
       <!--FinancialDetails-->
@@ -345,7 +325,7 @@
          <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>OverdraftProductDetails|ng-component=RetailOverdraftProductDetailsComponent~ProceduralStepName=Your Overdraft~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=500~MaximumInput=250000</attributeName>
+            <attributeName>OverdraftProductDetails|ProceduralStepName=Your Overdraft~ZOrder=100</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
