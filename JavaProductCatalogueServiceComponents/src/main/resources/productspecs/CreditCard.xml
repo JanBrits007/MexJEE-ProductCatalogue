@@ -115,7 +115,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=80~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
+			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=80~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~CheckYodlee=false~FinancialInformationStatusCallbackID</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -314,6 +314,15 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<!--DeclineWithAppeal-->
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_DeclineWithAppeal</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Your offer</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--Evidence And Compliance Requirements-->
 	<productAttributeGroup>
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
@@ -373,6 +382,7 @@
 			<valueUnit>bool</valueUnit>
 		</productAttributes>
 	</productAttributeGroup>
+
 	<!--Document Configuration-->
 	<productAttributeGroup>
 		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
@@ -428,8 +438,6 @@
 			<attributeName>DigitallySign</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-
-
 	<productAttributeGroup>
 		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
 		<productAttributes>
@@ -627,6 +635,14 @@
 	</productAttributeGroup>
 
 	<!--Case and Process Configuration-->
+	<productAttributeGroup>
+		<attributeGroupName>OverrideSegmentation</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OverrideSegmentation</attributeName>
+			<value>200~213</value>
+		</productAttributes>
+	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
 		<productAttributes>

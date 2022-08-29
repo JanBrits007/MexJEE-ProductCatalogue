@@ -3,16 +3,6 @@
 	<name>Nedbank Private Wealth Pay-as-you-use Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1038) This is The NPW PAYU Credit Card</shortDescription>
 
-	<!--DeclineWithAppeal-->
-	<productAttributeGroup>
-		<attributeGroupName>productInformationRequirement_DeclineWithAppeal</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Your offer</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
-
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>EligibilityRules</attributeGroupName>
 		<productAttributes>
@@ -452,120 +442,9 @@
 			<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 			<featureAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~restrictOptOut=false~ZOrder=170~IntlDelivery=true~HideCostAndLink=true~removeTemporaryCard=true~ContractComponentProductType=1028</attributeName>
+				<attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~restrictOptOut=false~ZOrder=170~IntlDelivery=true~HideCostAndLink=true~ContractComponentProductType=1028</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
-
-	<!--features>
-		<featureIdentifier>1100</featureIdentifier>
-		<name>Payment protection plan</name>
-		<description>Life can be full of the unexpected. That's why our credit card insurance is tailor-made to see you through life's ups and downs. Your credit card debt will be covered if you are retrenched, become disabled or critically ill, or pass away.</description>
-		<featureAttributeGroup>
-			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
-			<featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>provisionInBranch</attributeName>
-				<valueUnit>boolean</valueUnit>
-				<value>false</value>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>legacyProductID</attributeName>
-				<valueUnit>string</valueUnit>
-				<value />
-			</featureAttributes>
-		</featureAttributeGroup>
-		<!-GatherEvidence->
-		<featureAttributeGroup>
-			<attributeGroupName>productInformationRequirement_GatherEvidence</attributeGroupName>
-			<featureAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>FaisDeclaration|ProceduralStepName=FAIS declaration~ZOrder=60~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-
-		<!-PresentDocuments->
-		<featureAttributeGroup>
-			<attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
-			<featureAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=60~ContractComponentProductType=1001~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-		<featureAttributeGroup>
-			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-			<featureAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=CreditCardInsuranceComponent-1100~ProceduralStepName=Your offer~ZOrder=65</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-		<featureAttributeGroup>
-			<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
-			<featureAttributes>
-				<attributeType>DocumentDescription</attributeType>
-				<attributeName>FAIS Client Acknowledgement|nedbank-commercial-release/CCFAISClientAcknowledgementStaffAssisted|ARRANGEMENTS|APPLICATIONS|APPLICATIONSCREDITCARD|FAIS Client Acknowledgement</attributeName>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>AvailableAction</attributeType>
-				<attributeName>Download</attributeName>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>AvailableAction</attributeType>
-				<attributeName>Email</attributeName>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>AvailableAction</attributeType>
-				<attributeName>WetSign</attributeName>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>AvailableAction</attributeType>
-				<attributeName>ElectronicallySign</attributeName>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>DocTemplateName</attributeType>
-				<attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-
-		<featureAttributeGroup>
-			<attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
-			<featureAttributes>
-				<attributeType>string</attributeType>
-				<attributeName>subYourApplicationHeader</attributeName>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>string</attributeType>
-				<attributeName>subNedbankLogo</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-		<featureAttributeGroup>
-			<attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
-			<featureAttributes>
-				<attributeType>string</attributeType>
-				<attributeName>subGenericInfo</attributeName>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>string</attributeType>
-				<attributeName>subGenericSignatures</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-		<featureAttributeGroup>
-			<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
-			<featureAttributes>
-				<attributeType>string</attributeType>
-				<attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1100</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-		<featureAttributeGroup>
-			<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
-			<featureAttributes>
-				<attributeType>string</attributeType>
-				<attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1100</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-
-	</features-->
-
 
 </product>

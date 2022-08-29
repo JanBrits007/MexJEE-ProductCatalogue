@@ -45,6 +45,17 @@
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1504</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
             <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
             <value>${{EDBPhase2dynamicStaffList}}</value>
         </productAttributes>
@@ -80,6 +91,17 @@
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
         <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1504</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
             <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
             <value>${{EDBPhase2dynamicStaffList}}</value>
         </productAttributes>
@@ -104,12 +126,33 @@
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
         <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1504</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
             <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
             <value>${{EDBPhase2dynamicStaffList}}</value>
         </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
             <value>CreditCard_Retail_1504</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--Case and Process Configuration-->
+    <productAttributeGroup>
+        <attributeGroupName>OverrideSegmentation</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>OverrideSegmentation</attributeName>
+            <value>200~213</value>
         </productAttributes>
     </productAttributeGroup>
 
