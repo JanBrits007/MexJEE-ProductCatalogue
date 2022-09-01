@@ -9,13 +9,18 @@
     <productAttributeGroup>
       <attributeGroupName>EligibilityHandler</attributeGroupName>
       <productAttributes>
-         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <attributeName>RequiredRule_ActivateProductsVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.ForeignCurrencyEligibilityRules</value>
       </productAttributes>
       <productAttributes>
-         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <attributeName>RequiredRule_ActivateProductsVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.NonResidentFICAEligibilityRules</value>
       </productAttributes>
+       <productAttributes>
+          <attributeType>string</attributeType>
+          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+          <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+       </productAttributes>
    </productAttributeGroup>
 
    <!--VerifyIdentity-->
@@ -54,6 +59,15 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryForexComponent~child-ng-components=OfferProductSummaryFcaConsentComponent~child-ng-components=OfferProductSummaryFcaNotificationComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--GenerateOfferGatherClientDetails-->
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -613,6 +627,11 @@
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementForexAddressFilter</value>
+      </productAttributes>
 
       <!--<productAttributes>
          <attributeType>string</attributeType>
@@ -640,7 +659,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         <value>GenerateOfferGatherClientDetails|GenerateOfferVerifyEligibility|VerifyIdentity|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsVerifyEligibility|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -650,7 +669,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>GNBAIntentToActivityMapping</attributeName>
-         <value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateApplicationOfferProposals=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+         <value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|GenerateApplicationOfferProposals=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsVerifyEligibility=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
