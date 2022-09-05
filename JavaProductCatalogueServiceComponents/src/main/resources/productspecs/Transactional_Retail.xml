@@ -13,7 +13,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Your income details~ZOrder=100</attributeName>
+         <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Your income details~ZOrder=100~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -41,21 +41,6 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>VAS_1376</attributeName><!--Salary Switching-->
-         <value>classname=za.co.nb.offermanagement.crosssell.SalarySwitchingCrossSellHandler</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>VAS_1380</attributeName><!--Debit Order Switching-->
-         <value>Optionality=Optional~IsTakenUp=false</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>VAS_1454</attributeName><!--Greenbacks Rewards-->
-         <value>Optionality=Optional~IsTakenUp=false</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
          <attributeName>VAS_1025</attributeName><!--Funeral Cover-->
          <value>Optionality=Optional~IsTakenUp=false</value>
       </productAttributes>
@@ -72,11 +57,6 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>VAS_1374</attributeName><!--eNotes-->
-         <value>Optionality=Optional~IsTakenUp=false</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>VAS_1333</attributeName><!--Nedbank Greenbacks Shop Card-->
          <value>Optionality=Optional~IsTakenUp=false</value>
       </productAttributes>
    </productAttributeGroup>
@@ -343,6 +323,10 @@
       <featureAttributeGroup>
          <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
          <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OverdraftProductDetails|ProceduralStepName=Your Overdraft~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=SalaryBankDetails~child-ng-components=ConsentCapture~ZOrder=100~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
@@ -365,7 +349,7 @@
          <attributeGroupName>clientInformationRequirement_FinancialDetails</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>OverdraftProductDetails|ng-component=RetailOverdraftProductDetailsComponent~ProceduralStepName=Your Overdraft~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=500~MaximumInput=250000</attributeName>
+            <attributeName>OverdraftProductDetails|ProceduralStepName=Your Overdraft~ZOrder=100</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -384,7 +368,35 @@
             <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=70</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
+      
       <!--GenerateApplicationOfferProposals-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>NCCDesk|~ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
 
       <!--GenerateOffer-->
       <featureAttributeGroup>
@@ -673,7 +685,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>EligibleApplicationStatus</attributeName>
-            <value>CANCELLED|INITIATED|DECLINED</value>
+            <value>CANCELLED|INITIATED|DECLINED|OFFER ACCEPTED</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -1319,7 +1331,7 @@
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=NedbankInsuranceFuneralPlanComponent-1025~ProceduralStepName=Optional extras for you~ZOrder=65</attributeName>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=NedbankInsuranceFuneralPlanComponent-1025~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -1515,7 +1527,7 @@
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=ng-InstantGoldChequeCardValueAddedServiceSelector-219~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=InstantGoldChequeCardValueAddedServiceSelector-219~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -1811,7 +1823,7 @@
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=OverdraftAssuranceComponent-1101~ProceduralStepName=Optional extras for you~ZOrder=65</attributeName>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=OverdraftAssuranceComponent-1101~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
