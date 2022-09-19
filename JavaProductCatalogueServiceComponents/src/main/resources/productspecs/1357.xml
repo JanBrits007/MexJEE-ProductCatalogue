@@ -163,6 +163,16 @@
          <value>true</value>
          <valueUnit>bool</valueUnit>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+         <value>${{FAIS_OnBehalfOfBranchList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+         <value>${{FAIS_StaffBranchOverideList}}</value>
+      </productAttributes>     
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
@@ -217,22 +227,32 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Intent1</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.Intent1CODHandler</value>
+         <value>${{CODHandler_Intent1}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_CreditLead</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditLeadCODHandler</value>
+         <value>${{CODHandler_CreditLead}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_CreditOffer</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.CreditOfferCODHandler</value>
+         <value>${{CODHandler_GenerateOfferProposals}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_ProductOffer</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.ProductOfferCODHandler</value>
+         <value>${{CODHandler_ProductOffer}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent3</attributeName>
+         <value>${{CODHandler_Intent3}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_Intent4</attributeName>
+         <value>${{CODHandler_Intent4}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -242,7 +262,12 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_Recalculate</attributeName>
-         <value>classname=za.co.nb.offermanagement.cod.handler.cde.RecalcCODHandler</value>
+         <value>${{CODHandler_Recalculate}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_FinancialDetails</attributeName>
+         <value>${{CODHandler_FinancialDetails}}</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>

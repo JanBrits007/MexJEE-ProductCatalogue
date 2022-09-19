@@ -1,5 +1,4 @@
-<product 
-    xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1490</productIdentifier>
     <name>The American Express Centurion Card</name>
 
@@ -43,7 +42,17 @@
     </productAttributeGroup>
 
     <!--ETE Substitution Rules-->
-
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1490</value>
+        </productAttributes>
+    </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
@@ -79,7 +88,17 @@
     </productAttributeGroup>
 
     <!--QA Substitution Rules-->
-
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1490</value>
+        </productAttributes>
+    </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
         <productAttributes>
@@ -100,6 +119,40 @@
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
             <value>1490</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--PROD Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1490</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1490</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--Case and Process Configuration-->
+    <productAttributeGroup>
+        <attributeGroupName>OverrideSegmentation</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>OverrideSegmentation</attributeName>
+            <value></value>
         </productAttributes>
     </productAttributeGroup>
 
@@ -184,6 +237,16 @@
             <value>true</value>
             <valueUnit>bool</valueUnit>
             <description>on invitation only</description>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+            <value>${{FAIS_OnBehalfOfBranchList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+            <value>${{FAIS_StaffBranchOverideList}}</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>

@@ -3,15 +3,6 @@
 	<name>Small Business Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1215) Small Business Credit Card</shortDescription>
 
-	<!--DeclineWithAppeal-->
-	<productAttributeGroup>
-		<attributeGroupName>productInformationRequirement_DeclineWithAppeal</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Your offer</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
 	<!--Offer Configuration-->
 	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
 		<attributeGroupName>VASCrossSellControl</attributeGroupName>
@@ -23,7 +14,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>VAS_1333</attributeName><!--Greenbacks Shop Card-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
+			<value>Optionality=Mandatory~IsTakenUp=true</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -67,6 +58,22 @@
 			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=2500</attributeName>
 		</productAttributes>
 		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
+		</productAttributes>
+		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
 		</productAttributes>
@@ -108,13 +115,6 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subCreditCardTC|ContractComponentProductType=1215</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1215</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 

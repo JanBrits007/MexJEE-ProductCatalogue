@@ -17,6 +17,11 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_PrepareApplicant</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.ClientIdNameEligibilityRules</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
 			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
 			<value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
 		</productAttributes>
@@ -49,7 +54,17 @@
 	</productAttributeGroup>
 
 	<!--ETE Substitution Rules-->
-
+	<productAttributeGroup>
+		<attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+			<value>${{EDBTestEmailOverideList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>CreditCard_Retail_1032</value>
+		</productAttributes>
+	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
 		<productAttributes>
@@ -96,7 +111,17 @@
     </productAttributeGroup>
 
 	<!--QA Substitution Rules-->
-
+	<productAttributeGroup>
+		<attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+			<value>${{EDBTestEmailOverideList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>CreditCard_Retail_1032</value>
+		</productAttributes>
+	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
 		<productAttributes>
@@ -109,6 +134,39 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<!--PROD Substitution Rules-->
+	<productAttributeGroup>
+		<attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+			<value>${{EDBTestEmailOverideList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>CreditCard_Retail_1032</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+			<value>${{EDBPhase2dynamicStaffList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>CreditCard_Retail_1032</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Case and Process Configuration-->
+	<productAttributeGroup>
+		<attributeGroupName>OverrideSegmentation</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>OverrideSegmentation</attributeName>
+			<value></value>
+		</productAttributes>
+	</productAttributeGroup>
 
 	<productAttributeGroup>
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
@@ -200,6 +258,16 @@
 			<isComparable>false</isComparable>
 			<value>true</value>
 			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+			<value>${{FAIS_OnBehalfOfBranchList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>FAIS_StaffBranchOverrideList</attributeName>
+			<value>${{FAIS_StaffBranchOverideList}}</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>

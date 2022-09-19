@@ -3,15 +3,6 @@
 	<name>Nedbank Private Wealth Pay-as-you-use Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1506) This is The NPW PAYU Credit Card</shortDescription>
 
-	<!--DeclineWithAppeal-->
-	<productAttributeGroup>
-		<attributeGroupName>productInformationRequirement_DeclineWithAppeal</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Your offer</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>EligibilityRules</attributeGroupName>
 		<productAttributes>
@@ -34,10 +25,10 @@
 			<attributeType>EligibilityRule</attributeType>
 			<attributeName>Income</attributeName>
 			<isComparable>false</isComparable>
-			<minValue>150000</minValue>
+			<minValue>1500000</minValue>
 			<maxValue>99999999</maxValue>
 			<valueUnit>ZAR</valueUnit>
-			<description>income|You need to earn R150 000 per annum or have Net Investable Assets of R5 000 000.</description>
+			<description>income|You need to earn R1 500 000 per annum or have Net Investable Assets of R5 000 000.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -78,11 +69,10 @@
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
 			<attributeName>QualifyingProducts</attributeName>
-			<value>1113</value>
+			<value>1108</value>
 			<valueUnit>String</valueUnit>
 		</productAttributes>
 	</productAttributeGroup>
-
 
 	<!--GenerateOfferGatherProductDetails-->
 	<productAttributeGroup action="overwrite">
@@ -90,6 +80,22 @@
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=2000</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -125,7 +131,6 @@
 			<value>Optionality=Optional~IsTakenUp=true</value>
 		</productAttributes>
 	</productAttributeGroup>
-
 
 	<!--GenerateOffer-->
 	<productAttributeGroup action="overwrite">
@@ -163,7 +168,6 @@
 			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-
 
 	<!--Document Configuration-->
 	<productAttributeGroup action="overwrite">
@@ -212,7 +216,6 @@
 	<productAttributeGroup action="overwrite"><!--Remove Cross Sell & Up Sell-->
 	<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
 	</productAttributeGroup>
-
 
 	<!--Provisioning Configuration-->
 	<productAttributeGroup action="overwrite">
@@ -294,7 +297,6 @@
 			<attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-
 	<productAttributeGroup  action="overwrite">
 		<attributeGroupName>EligibilityHandler</attributeGroupName>
 		<productAttributes>
@@ -303,9 +305,6 @@
 			<value>classname=za.co.nb.offermanagement.eligibility.handler.CreditCardEligibilityRules</value>
 		</productAttributes>
 	</productAttributeGroup>
-
-
-
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>CreditDetails</attributeGroupName>
 		<productAttributes>
@@ -337,7 +336,6 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-
 	<!--FinalizeFrontOfficeInteraction-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
@@ -359,66 +357,9 @@
 			<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 			<featureAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~restrictOptOut=false~ZOrder=170~IntlDelivery=true~HideCostAndLink=true~removeTemporaryCard=true~ContractComponentProductType=1028</attributeName>
+				<attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~restrictOptOut=false~ZOrder=170~IntlDelivery=true~HideCostAndLink=true~ContractComponentProductType=1028</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
-
-
-	<features>
-		<featureIdentifier>1100</featureIdentifier>
-		<name>Payment protection plan</name>
-		<description>Life can be full of the unexpected. That's why our credit card insurance is tailor-made to see you through life's ups and downs. Your credit card debt will be covered if you are retrenched, become disabled or critically ill, or pass away.</description>
-		<featureAttributeGroup>
-			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
-			<featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>provisionInBranch</attributeName>
-				<valueUnit>boolean</valueUnit>
-				<value>false</value>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>legacyProductID</attributeName>
-				<valueUnit>string</valueUnit>
-				<value />
-			</featureAttributes>
-		</featureAttributeGroup>
-		<featureAttributeGroup>
-			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-			<featureAttributes>
-				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=CreditCardInsuranceComponent-1100~ProceduralStepName=Your offer~ZOrder=65</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-		<featureAttributeGroup>
-			<attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-			<featureAttributes>
-				<attributeType>DocumentDescription</attributeType>
-				<attributeName>FAIS Client Acknowledgement|nedbank-commercial-release/CCFAISClientAcknowledgementStaffAssisted|ARRANGEMENTS|APPLICATIONS|APPLICATIONSCREDITCARD|FAIS Client Acknowledgement</attributeName>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>AvailableAction</attributeType>
-				<attributeName>Download</attributeName>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>AvailableAction</attributeType>
-				<attributeName>Email</attributeName>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>AvailableAction</attributeType>
-				<attributeName>WetSign</attributeName>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>AvailableAction</attributeType>
-				<attributeName>ElectronicallySign</attributeName>
-			</featureAttributes>
-			<featureAttributes>
-				<attributeType>DocTemplateName</attributeType>
-				<attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-	</features>
-
 
 </product>

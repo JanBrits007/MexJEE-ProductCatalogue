@@ -28,6 +28,11 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
+         <attributeName>RequiredRule_PrepareApplicant</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.PartyInformationEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
       </productAttributes>
@@ -53,7 +58,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>1389</value>
+         <value>Transactional_RRB_1389</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -77,20 +82,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>1389</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <!--Adding this just to test the requirements for SSK-->
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>${{SSK_Channel_ID}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_1389_SSKTest</value>
+         <value>1389_RRBComStrategy</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -105,6 +97,32 @@
          <value>1389</value>
       </productAttributes>
    </productAttributeGroup>
+
+
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>100</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389_NativeAppTest</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+         <value>${{NoCreditonTPTestEmailOverideList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389_NoCreditTest</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
@@ -606,6 +624,16 @@
          <value>true</value>
          <valueUnit>bool</valueUnit>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+         <value>${{FAIS_OnBehalfOfBranchList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+         <value>${{FAIS_StaffBranchOverideList}}</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>ProductFeatures</attributeGroupName>
@@ -659,6 +687,10 @@
          <attributeType>Compliance</attributeType>
          <attributeName>BureauCheckConsent</attributeName>
       </productAttributes>
+      <!--<productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FAISAdviceRefused</attributeName>
+      </productAttributes>-->
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>RequiredCompliance_GenerateOffer</attributeGroupName>
@@ -1483,7 +1515,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>EligibleApplicationStatus</attributeName>
-            <value>CANCELLED|INITIATED|DECLINED</value>
+            <value>CANCELLED|INITIATED|DECLINED|OFFER ACCEPTED</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>

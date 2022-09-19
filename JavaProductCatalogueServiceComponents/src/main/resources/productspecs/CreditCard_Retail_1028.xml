@@ -3,15 +3,6 @@
     <name>The American Express Platinum Card</name>
     <shortDescription>(CreditCard_Retail_1028) This is The American Express Platinum Card</shortDescription>
 
-    <!--DeclineWithAppeal-->
-    <productAttributeGroup>
-        <attributeGroupName>productInformationRequirement_DeclineWithAppeal</attributeGroupName>
-        <productAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Your offer</attributeName>
-        </productAttributes>
-    </productAttributeGroup>
-
     <!--GenerateOfferGatherProductDetails-->
     <productAttributeGroup action="overwrite">
         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
@@ -20,12 +11,24 @@
             <attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=5000</attributeName>
         </productAttributes>
         <productAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=MerchantAssisted~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+            <attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
         </productAttributes>
     </productAttributeGroup>
 
@@ -54,7 +57,7 @@
         </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
-            <attributeName>VAS_1028</attributeName><!--Plastic Card-->
+            <attributeName>VAS_1029</attributeName><!--Plastic Card-->
             <value>Optionality=Optional~IsTakenUp=true</value>
         </productAttributes>
     </productAttributeGroup>
@@ -202,50 +205,69 @@
         </productAttributes>
     </productAttributeGroup>
 
+
+    <!--1029 - Plastic Card (this should be 1028 but we are using 1029 since it contradicts with the product ID)-->
     <features>
-        <featureIdentifier>1334</featureIdentifier>
-        <name>Membership Rewards</name>
-        <mandatory>true</mandatory>
-        <preSelected>true</preSelected>
-        <shortDescription>As part of your American Express Platinum Card, Memebership Rewards are automatically included at no extra cost!</shortDescription>
-        <description>Please note you will receive a Membership Rewards Redemption card in order to spend you rewards.</description>
-        <featureGrouping>
-            <featureGroupName>Loyalty</featureGroupName>
-            <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-        </featureGrouping>
-        <featureType>BoltOn</featureType>
-        <referenceProductID>-1</referenceProductID>
-        <featurePricing>
-            <fee>
-                <type>AdminFee</type>
-                <description>R60 per month</description>
-                <currency>ZAR</currency>
-                <amount>60</amount>
-                <frequency>Monthly</frequency>
-            </fee>
-        </featurePricing>
-        <featureFulfilment>
-            <channel>selfServiceWeb</channel>
-            <fulfilmentType>setting</fulfilmentType>
-            <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-            <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-        </featureFulfilment>
-        <featureFulfilment>
-            <channel>staffAssisted</channel>
-            <fulfilmentType>setting</fulfilmentType>
-            <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-            <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-        </featureFulfilment>
-        <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-        <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-        <featureDisplayPosition>offer</featureDisplayPosition>
+        <featureIdentifier>1029</featureIdentifier>
+        <name>Plastic Card</name>
+
+        <!--GenerateOffer-->
         <featureAttributeGroup>
             <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
             <featureAttributes>
                 <attributeType>productInformationRequirement</attributeType>
-                <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=MembershipRewardsComponent-1334~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
+                <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=PlasticCardValueAddedServiceSelector-1029~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
             </featureAttributes>
         </featureAttributeGroup>
+
+        <!--ActivateProductsGatherProductDetails-->
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170~IntlDelivery=true~ContractComponentProductType=1029~lockersOption=true~ContractComponentProductType=1029</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <!--<attributeGroupName>RuleHandlers_ActivateProductsGatherProductDetails</attributeGroupName-->
+            <attributeGroupName>RuleHandlers_ActivateProducts</attributeGroupName>
+            <featureAttributes>
+                <!--<attributeName>RequiredDataFilter_ActivateProductsGatherProductDetails</attributeName-->
+                <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+                <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.InternationalCardDeliveryFilter</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+
+        <!--		ActivateProductsPresentDocuments-->
+<!--        <featureAttributeGroup>-->
+<!--            <attributeGroupName>RuleHandlers_PresentDocuments</attributeGroupName>-->
+<!--            <featureAttributes>-->
+<!--                <attributeName>RequiredDataFilter_PresentDocuments</attributeName>-->
+<!--                <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementInsuranceCrossSellFaisScreenFilter</value>-->
+<!--            </featureAttributes>-->
+
+<!--            <featureAttributes>-->
+<!--                <attributeName>RequiredCaseFilter_PresentDocuments</attributeName>-->
+<!--                <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementLendingProductOnlyFaisScreenFilter</value>-->
+<!--            </featureAttributes>-->
+
+<!--            <featureAttributes>-->
+<!--                <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>-->
+<!--                <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFaisDocumentFilter</value>-->
+<!--            </featureAttributes>-->
+<!--        </featureAttributeGroup>-->
+
+
+        <!--FinalizeFrontOfficeInteraction-->
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-1029~ZOrder=50</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+
+        <!-- Case and Process Configuration -->
         <featureAttributeGroup>
             <attributeGroupName>SystemRelated</attributeGroupName>
             <featureAttributes>
@@ -254,118 +276,8 @@
                 <value>True</value>
             </featureAttributes>
         </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>FeatureCode</attributeName>
-                <valueUnit>string</valueUnit>
-                <value>ThisisthesFeaturecode</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>provisionInBranch</attributeName>
-                <valueUnit>boolean</valueUnit>
-                <value>false</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>legacyProductID</attributeName>
-                <valueUnit>string</valueUnit>
-                <value />
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>ProvisioningPhase</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>preFICAProvisioning</value>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
-            <featureAttributes>
-                <attributeType>type</attributeType>
-                <attributeName>name</attributeName>
-                <minValue>1</minValue>
-                <maxValue>2</maxValue>
-                <valueUnit>text</valueUnit>
-                <value>some value</value>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
-            <featureAttributes>
-                <attributeType>DocumentDescription</attributeType>
-                <attributeName>Rewards Terms and Conditions|nedbank-commercial-release/CreditCardAmexRewardsTermsAndConditionsUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Terms and Conditions</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>Download</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>Email</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>DocTemplateName</attributeType>
-                <attributeName>CreditCardAmexRewardsTermsAndConditionsUniversal</attributeName>
-            </featureAttributes>
-        </featureAttributeGroup>
-    </features>
-    <features>
-        <featureIdentifier>1465</featureIdentifier>
-        <name>Redemption Card</name>
-        <mandatory>false</mandatory>
-        <preSelected>true</preSelected>
-        <shortDescription>What is the Redemption card?</shortDescription>
-        <description>We' have made it quick and easy to redeem and spend all the rewards you've earned using the Redemption card.</description>
-        <featureGrouping>
-            <featureGroupName>Loyalty</featureGroupName>
-            <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-        </featureGrouping>
-        <featureType>BoltOn</featureType>
-        <referenceProductID>-1</referenceProductID>
-        <featureFulfilment>
-            <channel>selfServiceWeb</channel>
-            <fulfilmentType>setting</fulfilmentType>
-            <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-            <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-        </featureFulfilment>
-        <featureFulfilment>
-            <channel>staffAssisted</channel>
-            <fulfilmentType>setting</fulfilmentType>
-            <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-            <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-        </featureFulfilment>
-        <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-        <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-        <featureDisplayPosition>VAS</featureDisplayPosition>
-        <featureAttributeGroup>
-            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-            <featureAttributes>
-                <attributeType>productInformationRequirement</attributeType>
-                <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=RedemptioncardComponent-1465~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>SystemRelated</attributeGroupName>
-            <featureAttributes>
-                <attributeType>Flag</attributeType>
-                <attributeName>StraightThroughProcess</attributeName>
-                <value>True</value>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
-            <featureAttributes>
-                <attributeType>type</attributeType>
-                <attributeName>name</attributeName>
-                <minValue>1</minValue>
-                <maxValue>2</maxValue>
-                <valueUnit>text</valueUnit>
-                <value>some value</value>
-            </featureAttributes>
-        </featureAttributeGroup>
+
+        <!--Provisioning Configuration-->
         <featureAttributeGroup>
             <attributeGroupName>coreProvisioningParameters</attributeGroupName>
             <featureAttributes>
@@ -373,6 +285,18 @@
                 <attributeName>CAMSProdCd</attributeName>
                 <valueUnit>PER</valueUnit>
                 <value>CRD</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSActCoid</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>101</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSCppmMlgMetCd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>REG</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
@@ -388,33 +312,9 @@
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSSCtlSlTnPgCd</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>6563</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSCredLnAmt</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>0</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSPayMethod</attributeName>
                 <valueUnit>PER</valueUnit>
                 <value>MAN</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSPlasticType</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>AR1</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSCrdStock</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>AR2</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
@@ -430,233 +330,66 @@
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>provisionInBranch</attributeName>
-                <valueUnit>boolean</valueUnit>
-                <value>false</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSLangCd</attributeName>
                 <valueUnit>PER</valueUnit>
                 <value>ENG</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSSolicitationCode</attributeName>
+                <attributeName>CAMSNcaInd</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>8079</value>
+                <value>Y</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>ProvisioningPhase</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>preFICAProvisioning</value>
+                <attributeName>CAMSQpcInd</attributeName>
+                <valueUnit>ENG</valueUnit>
+                <value>Y</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>FeatureDetails</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productATMLimit</attributeType>
+                <attributeName>ATM_Limit</attributeName>
+                <value>2000</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>monthlyServiceFeeFrequency</attributeType>
+                <attributeName>AdminFee</attributeName>
+                <value>Monthly</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>monthlyCreditFacilityServiceFeeFrequency</attributeType>
+                <attributeName>AdminFee</attributeName>
+                <value>Monthly</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>initiationFeeFrequency</attributeType>
+                <attributeName>InitiationFee</attributeName>
+                <value>Revolving</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>numberOfInstallments</attributeType>
+                <attributeName>Number_Of_Installments</attributeName>
+                <value>Revolving</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>minimumRepaymentPercentage</attributeType>
+                <attributeName>Minimum_Repayment_Percentage</attributeName>
+                <value>5</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>repaymentterm</attributeType>
+                <attributeName>Repayment_Term</attributeName>
+                <value>12</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>InstalmentPayable_Frequency</attributeType>
+                <attributeName>InstalmentPayable_Frequency</attributeName>
+                <value>Monthly</value>
             </featureAttributes>
         </featureAttributeGroup>
     </features>
-
-    <features>
-        <featureIdentifier>1100</featureIdentifier>
-        <name>Payment protection plan</name>
-        <description>Life can be full of the unexpected. That's why our credit card insurance is tailor-made to see you through life's ups and downs. Your credit card debt will be covered if you are retrenched, become disabled or critically ill, or pass away.</description>
-        <featureAttributeGroup>
-            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>provisionInBranch</attributeName>
-                <valueUnit>boolean</valueUnit>
-                <value>false</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>legacyProductID</attributeName>
-                <valueUnit>string</valueUnit>
-                <value />
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-            <featureAttributes>
-                <attributeType>productInformationRequirement</attributeType>
-                <attributeName>InsuranceOptionsConfiguration|ng-component=InsuranceOptionsForYourOfferComponent~child-ng-components=CreditCardInsuranceComponent-1100~ProceduralStepName=Your offer~ZOrder=65</attributeName>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-            <featureAttributes>
-                <attributeType>DocumentDescription</attributeType>
-                <attributeName>FAIS Client Acknowledgement|nedbank-commercial-release/CCFAISClientAcknowledgementStaffAssisted|ARRANGEMENTS|APPLICATIONS|APPLICATIONSCREDITCARD|FAIS Client Acknowledgement</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>Download</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>Email</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>WetSign</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>ElectronicallySign</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>DocTemplateName</attributeType>
-                <attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>EligibilityRules</attributeGroupName>
-            <featureAttributes>
-                <attributeType>EligibilityRule</attributeType>
-                <attributeName>Age</attributeName>
-                <minValue>18</minValue>
-                <maxValue>64</maxValue>
-                <valueUnit>year</valueUnit>
-            </featureAttributes>
-        </featureAttributeGroup>
-    </features>
-
-    <features>
-        <featureIdentifier>9999</featureIdentifier>
-        <name>Priority Pass</name>
-        <mandatory>true</mandatory>
-        <preSelected>true</preSelected>
-        <shortDescription>As part of your travel privileges, we will issue you with a Priority Pass Card, which allows you complimentary  access to over 1000 Priority Pass Lounges worldwide.</shortDescription>
-        <description>As part of your travel privileges, we will issue you with a Priority Pass Card, which allows you complimentary  access to over 1000 Priority Pass Lounges worldwide.</description>
-        <featureGrouping>
-            <featureGroupName>Loyalty</featureGroupName>
-            <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
-        </featureGrouping>
-        <featureType>BoltOn</featureType>
-        <referenceProductID>-1</referenceProductID>
-        <featureFulfilment>
-            <channel>selfServiceWeb</channel>
-            <fulfilmentType>setting</fulfilmentType>
-            <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-            <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-        </featureFulfilment>
-        <featureFulfilment>
-            <channel>staffAssisted</channel>
-            <fulfilmentType>setting</fulfilmentType>
-            <fulfilmentInputSetting1>N/A</fulfilmentInputSetting1>
-            <fulfilmentInputSetting2>N/A</fulfilmentInputSetting2>
-        </featureFulfilment>
-        <featureDisplayAdditionalInformationWidget>No</featureDisplayAdditionalInformationWidget>
-        <featureOnAPageWebURL>/content/nedbank/desktop/gt/en/someFeaturePage.html</featureOnAPageWebURL>
-        <featureDisplayPosition>VAS</featureDisplayPosition>
-        <featureAttributeGroup>
-            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-            <featureAttributes>
-                <attributeType>productInformationRequirement</attributeType>
-                <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=PriorityPassCardComponent-9999~ProceduralStepName=Optional extras for you~ZOrder=70</attributeName>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>SystemRelated</attributeGroupName>
-            <featureAttributes>
-                <attributeType>Flag</attributeType>
-                <attributeName>StraightThroughProcess</attributeName>
-                <value>True</value>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
-            <featureAttributes>
-                <attributeType>type</attributeType>
-                <attributeName>name</attributeName>
-                <minValue>1</minValue>
-                <maxValue>2</maxValue>
-                <valueUnit>text</valueUnit>
-                <value>some value</value>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSProdCd</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>CRD</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSCtlAdId</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>C1</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSRelCd</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>PRI</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSSCtlSlTnPgCd</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>6563</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSCredLnAmt</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>0</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSPayMethod</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>MAN</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSPlasticType</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>PP5</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSCrdStock</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>AP3</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSActType</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>PRI</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSATrRegistrationNbr</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>194905</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>provisionInBranch</attributeName>
-                <valueUnit>boolean</valueUnit>
-                <value>false</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSLangCd</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>ENG</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>CAMSSolicitationCode</attributeName>
-                <valueUnit>PER</valueUnit>
-                <value>8521</value>
-            </featureAttributes>
-        </featureAttributeGroup>
-    </features>
-
-
 
 </product>

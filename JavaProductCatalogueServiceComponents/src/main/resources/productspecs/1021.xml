@@ -36,6 +36,10 @@
          <attributeType>Compliance</attributeType>
          <attributeName>NotUnderCreditAdministrationV2</attributeName>
       </productAttributes>
+      <!--<productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FAISAdviceRefused</attributeName>
+      </productAttributes>-->
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
@@ -88,6 +92,16 @@
          <attributeType>string</attributeType>
          <attributeName>NonEligibleDCAR</attributeName>
          <value>${{NonEligibleDCARList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+         <value>${{FAIS_OnBehalfOfBranchList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+         <value>${{FAIS_StaffBranchOverideList}}</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>

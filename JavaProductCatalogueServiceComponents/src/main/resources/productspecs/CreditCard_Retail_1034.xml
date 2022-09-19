@@ -3,15 +3,6 @@
 	<name>Platinum Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1034)</shortDescription>
 
-	<!--DeclineWithAppeal-->
-	<productAttributeGroup>
-		<attributeGroupName>productInformationRequirement_DeclineWithAppeal</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>DeclineOffer|ng-component=DeclineOfferComponent~ProceduralStepName=Your offer</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
 	<!--Offer Configuration-->
 	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
 		<attributeGroupName>VASCrossSellControl</attributeGroupName>
@@ -39,6 +30,28 @@
 			<attributeType>string</attributeType>
 			<attributeName>VAS_1028</attributeName><!--Plastic Card-->
 			<value>Optionality=Optional~IsTakenUp=true</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Age</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>18</minValue>
+			<maxValue>999</maxValue>
+			<valueUnit>year</valueUnit>
+			<description>user-icon|You need to be 18 years or older.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>29000</minValue>
+			<maxValue>999999</maxValue>
+			<valueUnit>ZAR</valueUnit>
+			<description>income|You need to earn R29 000 or more per month.</description>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -74,13 +87,6 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subCreditCard|ContractComponentProductType=1034</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1034</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 

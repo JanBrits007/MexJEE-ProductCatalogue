@@ -10,7 +10,7 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=5000.00~max=300000.00</attributeName>
       </productAttributes>
-       <productAttributes>
+      <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
@@ -30,7 +30,7 @@
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>      
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>CardDeliveryDetails|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170~removeTemporaryCard=true~ContractComponentProductType=1164~IntlDelivery=true</attributeName>
+         <attributeName>CardDeliveryDetails|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~ZOrder=170~ContractComponentProductType=1164~IntlDelivery=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -466,7 +466,7 @@
         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>      
         <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=ng-employment-type-approved-loan~showIncomeSource=true~child-ng-components=ng-employment-details</attributeName>
+            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=ng-employment-type-approved-loan~showIncomeSource=true~child-ng-components=ng-employment-details~ExecuteMarriedCOPRule=true</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
 
@@ -487,7 +487,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>SkipFinancialDetails|ng-component=SkipFinancialDetails</attributeName>
+            <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right~ZOrder=60~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -496,10 +496,6 @@
       <!--GenerateOffer-->
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
-         </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80~child-ng-components=OverdraftDetailsV2Component~min=5000.00~max=300000.00</attributeName>
@@ -521,19 +517,11 @@
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80~displaySummary=true</attributeName>
           </featureAttributes>
-          <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-          </featureAttributes>
       </featureAttributeGroup>
 
       <!--ActivateProductsGatherProductDetails-->
       <featureAttributeGroup>
-          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-          <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-          </featureAttributes>      
+          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>    
           <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>

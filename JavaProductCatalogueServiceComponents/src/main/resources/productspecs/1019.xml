@@ -26,6 +26,11 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
+         <attributeName>RequiredRule_PrepareApplicant</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.PartyInformationEligibilityRules</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
       </productAttributes>
@@ -417,6 +422,10 @@
          <attributeType>Compliance</attributeType>
          <attributeName>BureauCheckConsent</attributeName>
       </productAttributes>
+      <!--<productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>FAISAdviceRefused</attributeName>
+      </productAttributes>-->
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>RequiredCompliance_GenerateOffer</attributeGroupName>
@@ -881,6 +890,16 @@
          <isComparable>false</isComparable>
          <value>true</value>
          <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+         <value>${{FAIS_OnBehalfOfBranchList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+         <value>${{FAIS_StaffBranchOverideList}}</value>
       </productAttributes>
    </productAttributeGroup>
      <productAttributeGroup>
@@ -2263,7 +2282,7 @@
           <featureAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>EligibleApplicationStatus</attributeName>
-		    <value>CANCELLED|INITIATED|DECLINED</value>
+		    <value>CANCELLED|INITIATED|DECLINED|OFFER ACCEPTED</value>
 	      </featureAttributes>
        </featureAttributeGroup>
        <featureAttributeGroup>

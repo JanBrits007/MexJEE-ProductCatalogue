@@ -42,7 +42,17 @@
     </productAttributeGroup>
 
     <!--ETE Substitution Rules-->
-
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1027</value>
+        </productAttributes>
+    </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
@@ -89,7 +99,17 @@
     </productAttributeGroup>
 
     <!--QA Substitution Rules-->
-
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1027</value>
+        </productAttributes>
+    </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
         <productAttributes>
@@ -125,6 +145,30 @@
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>LimitIncreaseMerchantSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1027</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--PROD Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1027</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
         <productAttributes>
             <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
             <value>${{EDBPhase2dynamicStaffList}}</value>
@@ -222,6 +266,16 @@
             <value>true</value>
             <valueUnit>bool</valueUnit>
             <description> be a South African resident.</description>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+            <value>${{FAIS_OnBehalfOfBranchList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+            <value>${{FAIS_StaffBranchOverideList}}</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>

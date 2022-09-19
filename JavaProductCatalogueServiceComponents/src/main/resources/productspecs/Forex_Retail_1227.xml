@@ -25,6 +25,10 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
+         <attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=See something you like?~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
          <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryFcaProductComponent~child-ng-components=OfferProductSummaryFcaConsentComponent~child-ng-components=OfferProductSummaryFcaNotificationComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
       </productAttributes>
       <productAttributes>
@@ -32,36 +36,7 @@
          <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
-   <productAttributeGroup>
-      <attributeGroupName>ProductSpecificCancelReasons</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>ProductSpecificCancelReason</attributeName>
-         <value>CR00|I no longer require the account</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>ProductSpecificCancelReason</attributeName>
-         <value>CR01|The exchange rate is unfavourable</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>ProductSpecificCancelReason</attributeName>
-         <value>CR02|I do not have enough funds yet to fund the FCA</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>ProductSpecificCancelReason</attributeName>
-         <value>CR03|No reason</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>ProductSpecificCancelReason</attributeName>
-         <value>CR04|Other</value>
-      </productAttributes>
-   </productAttributeGroup>
-
+   
    <!--ActivateProductsGatherProductDetails-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
@@ -147,7 +122,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>OfferSelectionSummaryDetails</attributeName>
-         <value>ForexProductOfferSelectionSubSection|ng-component=OfferSelectionForexProductComponent~ZOrder=100~isBase=Y~ContractComponentProductType=1227</value>
+         <value>ForexProductOfferSelectionSubSection|ng-component=OfferSelectionFcaProductComponent~ZOrder=100~isBase=Y~ContractComponentProductType=1227</value>
       </productAttributes>
    </productAttributeGroup>
 
