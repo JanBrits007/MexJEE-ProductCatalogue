@@ -16,6 +16,41 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--Decisioning control-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>DecisioningControl</attributeGroupName>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>EnforceIntent0FAISAccreditationRule</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>FAISCategoryCode</attributeName>
+         <value>1.18</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>FAISCategoryCode</attributeName>
+         <value>1.17</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>ComponentSupportsDeclineReasons</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>EnforceAgeValidationRules</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>agreementStatusChangeRequired</attributeName>
+         <value>true</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!-- Case and Process Configuration -->
    <productAttributeGroup inheritFromFiles="Transactional_RRB">
       <attributeGroupName>EligibilityRules</attributeGroupName>
