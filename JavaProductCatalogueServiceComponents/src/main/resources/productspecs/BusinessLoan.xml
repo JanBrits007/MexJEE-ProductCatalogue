@@ -75,7 +75,7 @@
 		<attributeGroupName>RuleHandlers_DetermineRelatedParties</attributeGroupName>
 		<productAttributes>
 			<attributeName>GNBAHandler_DetermineRelatedParties</attributeName>
-			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.soleProprietorRelationshipSetup</value> <!--Look for the actingOnBehalfOfClientECN in case data and create a Role Type Loan Applicant (1028) against the arrangement using that ECN-->
+			<value>classname=SoleProprietorRelationshipSetup</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -706,7 +706,8 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeIntentSequence</attributeName>
-			<value>GenerateOfferVerifyEligibility|DetermineRelatedParties|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+			<value>DetermineRelatedParties|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+			<!--value>GenerateOfferVerifyEligibility|DetermineRelatedParties|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value-->
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -932,7 +933,17 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>baseCBOActivityList</attributeName>
-			<value>CreditDecisionDetermineOffer|ConfigureArrangement|ConfirmVerificationQuality|CBOFinalizeCase</value>
+			<value>CBOEasyLoanProcessing|CreditDecisionDetermineOffer|ConfigureArrangement|ConfirmVerificationQuality|CBOFinalizeCase</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CBOEasyLoanProcessing</attributeName>
+			<value>CBOEasyLoanProcessingTeam|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CBOEasyLoanProcessing</attributeName>
+			<value>0|Weighting=0</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
