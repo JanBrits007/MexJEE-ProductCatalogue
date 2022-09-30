@@ -17,12 +17,23 @@
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
-            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
-            <value>${{TPOnAppEmailOverideList}}</value>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{InvestmentDynamicStaffList}}</value>
         </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
-            <value>Transactional_Retail_TP20_3020</value> <!--Edge Plus-->
+            <value>Investment_Retail_1128</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>DefaultSubstitution</attributeName>
+            <value>DefaultSubstitution</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>1128</value>
         </productAttributes>
     </productAttributeGroup>
 
@@ -30,27 +41,28 @@
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
         <productAttributes>
-            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
-            <value>${{TPOnAppEmailOverideList}}</value>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{InvestmentDynamicStaffList}}</value>
         </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
-            <value>Transactional_Retail_3020</value> <!--Edge Plus-->
+            <value>Investment_Retail_1128</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>DefaultSubstitution</attributeName>
+            <value>DefaultSubstitution</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>1128</value>
         </productAttributes>
     </productAttributeGroup>
 
     <!--PROD Substitution Rules-->
-    <productAttributeGroup>
-        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
-        <productAttributes>
-            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
-            <value>${{TPOnAppEmailOverideList}}</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeName>SubstituteForProductID</attributeName>
-            <value>Transactional_Retail_3020</value> <!--Edge Plus-->
-        </productAttributes>
-    </productAttributeGroup>
+
 
     <productAttributeGroup>
         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
@@ -595,6 +607,8 @@
             <attributeName>ElectronicallySign</attributeName>
         </productAttributes>
     </productAttributeGroup>
+
+
     <productAttributeGroup>
         <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
         <productAttributes>
