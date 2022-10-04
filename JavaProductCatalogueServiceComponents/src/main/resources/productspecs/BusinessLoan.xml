@@ -52,6 +52,15 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<!--DetermineRelatedBusinessParties-->
+	<productAttributeGroup>
+		<attributeGroupName>RuleHandlers_DetermineRelatedBusinessParties</attributeGroupName>
+		<productAttributes>
+			<attributeName>GNBAHandler_DetermineRelatedBusinessParties</attributeName>
+			<value>classname=SoleProprietorRelationshipSetup</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--GenerateOfferGatherProductDetails-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
@@ -70,23 +79,6 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-	<!--DetermineRelatedBusinessParties-->
-	<productAttributeGroup>
-		<attributeGroupName>RuleHandlers_DetermineRelatedBusinessParties</attributeGroupName>
-		<productAttributes>
-			<attributeName>GNBAHandler_DetermineRelatedBusinessParties</attributeName>
-			<value>classname=SoleProprietorRelationshipSetup</value>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--DetermineRelatedBusinessParties-->
-	<productAttributeGroup>
-		<attributeGroupName>RuleHandlers_DetermineRelatedBusinessParties</attributeGroupName>
-		<productAttributes>
-			<attributeName>GNBAHandler_DetermineRelatedBusinessParties</attributeName>
-			<value>classname=SoleProprietorRelationshipSetup</value>
-		</productAttributes>
-	</productAttributeGroup>
 
 	<!--GenerateOfferGatherClientDetails-->
 	<productAttributeGroup> <!--These are the details for the director-->
@@ -716,7 +708,7 @@
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeIntentSequence</attributeName>
 			<!--value>DetermineRelatedParties|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value-->
-			<value>DetermineRelatedBusinessParties|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+			<value>DetermineRelatedBusinessParties|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -947,7 +939,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>baseCBOActivityList</attributeName>
-			<value>CBOEasyLoanProcessing|CreditDecisionDetermineOffer|ConfigureArrangement|ConfirmVerificationQuality|CBOFinalizeCase</value>
+			<value>ConfigureArrangement~SwivelChairCreditDecisioning|CBOEasyLoanProcessing|CreditDecisionDetermineOffer|ConfigureArrangement|ConfirmVerificationQuality|CBOFinalizeCase</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
