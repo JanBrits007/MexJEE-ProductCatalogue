@@ -9,7 +9,7 @@
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant</attributeName>
+         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=SelfServiceKiosk</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -90,6 +90,26 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>4801~Transactional_Retail_TP20_4801</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>4802~Transactional_Retail_TP20_4802</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>4803~Transactional_Retail_TP20_4803</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>4804~Transactional_Retail_TP20_4804</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
          <value>1032~CreditCard_Retail_1032</value>
       </productAttributes>
       <productAttributes>
@@ -103,6 +123,142 @@
          <value>1155~FuneralPlan</value>
       </productAttributes>
    </productAttributeGroup>
+
+
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>requiresACPData</attributeName>
+         <value>false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
+         <value>5</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>ApplicationEndToEndExecutionTimeMinutes</attributeName>
+         <value>90</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>requiresClientVerificationViaQA</attributeName>
+         <value>false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>requiresConfirmVerificationQualitySignatureTypeCheck</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>enum</attributeType>
+         <attributeName>requiresClientVerificationAtPhase</attributeName>
+         <value>GenerateOffer</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>enum</attributeType>
+         <attributeName>riskAnalysisMechanism</attributeName>
+         <value>automated</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>riskAnalysisMechanismIntent0</attributeName>
+         <value>automated</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>enum</attributeType>
+         <attributeName>riskAnalysisMechanismIntent1</attributeName>
+         <value>automated</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>enum</attributeType>
+         <attributeName>riskAnalysisMechanismIntent2</attributeName>
+         <value>automated</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>enum</attributeType>
+         <attributeName>riskAnalysisMechanismIntent3</attributeName>
+         <value>automated</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>enum</attributeType>
+         <attributeName>riskAnalysisMechanismIntent4</attributeName>
+         <value>automated</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>enum</attributeType>
+         <attributeName>riskAnalysisMechanismIntent5</attributeName>
+         <value>automated</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>enum</attributeType>
+         <attributeName>riskAnalysisMechanismIntent6</attributeName>
+         <value>automated</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>enum</attributeType>
+         <attributeName>fullfillmentMechanism</attributeName>
+         <value>automated</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>enum</attributeType>
+         <attributeName>productOnboardingProcessToExecute</attributeName>
+         <value>enterpriseEndtoEnd</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>requiresSecurityAndCollatoralManagement</attributeName>
+         <value>false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>requiresElgiblityScoringAtIntents</attributeName>
+         <value>intent 0|intent 1</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAVersion</attributeName>
+         <value>2.0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>consumerFrameworkVersion</attributeName>
+         <value>2.0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>requiresGoodForCreditLeadCheck</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>baseCBOActivityList</attributeName>
+         <value>ConfigureArrangement|CBOFinalizeCase</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CaseActivityTeamName_ConfigureArrangement</attributeName>
+         <value>System|Weighting=0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>CaseActivityPriority_ConfigureArrangement</attributeName>
+         <value>0|Weighting=0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CaseActivityTeamName_CBOFinalizeCase</attributeName>
+         <value>System|Weighting=0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>CaseActivityPriority_CBOFinalizeCase</attributeName>
+         <value>0|Weighting=0</value>
+      </productAttributes>
+   </productAttributeGroup>
+
 
    <!--9062 - Additional Transactional Credit-->
    <features>
