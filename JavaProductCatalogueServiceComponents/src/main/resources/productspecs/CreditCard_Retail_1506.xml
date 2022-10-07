@@ -217,6 +217,25 @@
 	<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
 	</productAttributeGroup>
 
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CommunicationSystem</attributeName>
+			<value>GenCom</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>productType</attributeName>
+			<value>EMAILSMS</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>String</attributeType>
+			<attributeName>sendDeclineCommsAudience</attributeName>
+			<value>banker</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--Provisioning Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productCodeMappings</attributeGroupName>
@@ -303,6 +322,11 @@
 			<attributeType>string</attributeType>
 			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
 			<value>classname=za.co.nb.offermanagement.eligibility.handler.CreditCardEligibilityRules</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.BranchEligibilityRule</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
