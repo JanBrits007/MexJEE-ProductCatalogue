@@ -2,31 +2,6 @@
    <productIdentifier>4229</productIdentifier>
    <name>Nedbank Insurance Funeral Cover Family</name>
    <shortDescription>(FuneralPlan_4229) Nedbank Insurance Funeral Cover Family</shortDescription>
-
-   <!--GenerateOfferVerifyEligibility-->
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>EligibilityHandler</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredRule_GenerateOffer</attributeName>
-         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredRule_PrepareApplicant</attributeName>
-         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
-         <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
-         <value>classname=za.co.nb.offermanagement.eligibility.handler.FuneralCoverEligibilityRules</value>
-      </productAttributes>
-   </productAttributeGroup>
    <productAttributeGroup action="overwrite">
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
       <productAttributes>
@@ -87,7 +62,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>DependentsSetup|ProceduralStepName=Your Dependants~ZOrder=90</attributeName>
+         <attributeName>DependentsSetup|ProceduralStepName=Your Dependents~ZOrder=90</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -148,6 +123,71 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--Provisioning Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>brand</attributeName>
+         <value>NEDBANK</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productSystem</attributeName>
+         <value>BANCS</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>spikeProductID</attributeName>
+         <value>28</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>SetCoverAmount</attributeName>
+         <value>30000</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productType</attributeName>
+         <value>FuneralPlan</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>supressClientCommunications</attributeName>
+         <value>false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>digitalBranchCode</attributeName>
+         <value>911</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>digitalDcar</attributeName>
+         <value>51911</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>welcomeEmailTemplate</attributeName>
+         <value>me_dynamic_welcome_01</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>welcomeDocumentTemplate</attributeName>
+         <value>nedbank-commercial-release/CombinedWelcomeLetter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>welcomeLetterTaxonomy</attributeName>
+         <value>ARRANGEMENT|AGREEMENTS|AGREEMENTSINSURANCE|Welcome Letter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>welcomeDocumentTemplateLocked</attributeName>
+         <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--Offer Configuration-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>PresentOfferSelection</attributeGroupName>
@@ -155,6 +195,69 @@
          <attributeType>string</attributeType>
          <attributeName>OfferSelectionSummaryDetails</attributeName>
          <value>FuneralPlanProductOfferSelectionSubSection|ng-component=OfferSelectionFuneralPlanProductComponent~ZOrder=100~isBase=Y~ContractComponentProductType=4229</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+      <productAttributes>
+         <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+         <attributeName>ChallengeWithLongForm|child-ng-components=ChallengeWithLongFormDeclineAction</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+         <attributeName>AppealWithLongForm|child-ng-components=AppealWithLongFormDeclineAction</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+         <attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+         <attributeName>TryAgain|child-ng-components=TryAgainDeclineAction</attributeName>
+      </productAttributes>
+      <!--CDE Decline-->
+      <productAttributes>
+         <attributeType>declineCodeMapping</attributeType>
+         <attributeName>1061|child-ng-components=LeaveApplicationDeclineAction</attributeName>
+      </productAttributes>
+      <!--Web Decision Engine Decline for segmentation eligibility-->
+      <productAttributes>
+         <attributeType>declineCodeMapping</attributeType>
+         <attributeName>SDC00|child-ng-components=LeaveApplicationNonCreditDeclineAction</attributeName>
+      </productAttributes>
+      <!--Web Decision Engine Decline for staff FAIS registration-->
+      <productAttributes>
+         <attributeType>declineCodeMapping</attributeType>
+         <attributeName>FAIS01|child-ng-components=LeaveApplicationNonCreditDeclineAction</attributeName>
+      </productAttributes>
+      <!--Web Decision Engine Decline for staff FAIS registration-->
+      <productAttributes>
+         <attributeType>declineCodeMapping</attributeType>
+         <attributeName>FAIS02|child-ng-components=FaisOnbehalfOfComponent</attributeName>
+      </productAttributes>
+      <!--Web Decision Engine Decline for existing overdraft-->
+      <productAttributes>
+         <attributeType>declineCodeMapping</attributeType>
+         <attributeName>JDC00|child-ng-components=LeaveApplicationDeclineAction</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>declineCodeMapping</attributeType>
+         <attributeName>GDC00|child-ng-components=LeaveApplicationDeclineAction</attributeName>
+      </productAttributes>
+      <!--Web Decision Engine Decline for age validation-->
+      <productAttributes>
+         <attributeType>declineCodeMapping</attributeType>
+         <attributeName>EPD01|child-ng-components=AlternateProductsDeclineAction</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>declineCodeMapping</attributeType>
+         <attributeName>GDC01|child-ng-components=LeaveApplicationNonCreditDeclineAction</attributeName>
+      </productAttributes>
+      <!--default-->
+      <productAttributes>
+         <attributeType>defaultMapping</attributeType>
+         <attributeName>default|child-ng-components=LeaveApplicationDeclineAction</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
