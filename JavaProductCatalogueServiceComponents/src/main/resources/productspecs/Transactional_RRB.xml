@@ -24,6 +24,10 @@
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.NonEligibleDCAREligibilityHandler</value>
       </productAttributes>
+      <productAttributes>
+         <attributeName>RequiredRule_GenerateOfferGatherClientDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.TPMaxLimitEligibilityHandler</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!-- Eligibility rules -->
@@ -685,6 +689,11 @@
          <attributeType>int</attributeType>
          <attributeName>CaseActivityPriority_CBOFinalizeCase</attributeName>
          <value>0|Weighting=0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>MaxTransactionalProductEligible</attributeName>
+         <value>3</value>
       </productAttributes>
    </productAttributeGroup>
 
