@@ -52,6 +52,15 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<!--DetermineRelatedBusinessParties-->
+	<productAttributeGroup>
+		<attributeGroupName>RuleHandlers_DetermineRelatedBusinessParties</attributeGroupName>
+		<productAttributes>
+			<attributeName>GNBAHandler_DetermineRelatedBusinessParties</attributeName>
+			<value>classname=SoleProprietorRelationshipSetup</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--GenerateOfferGatherProductDetails-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
@@ -70,14 +79,6 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-	<!--DetermineRelatedParties-->
-	<productAttributeGroup>
-		<attributeGroupName>RuleHandlers_DetermineRelatedParties</attributeGroupName>
-		<productAttributes>
-			<attributeName>GNBAHandler_DetermineRelatedParties</attributeName>
-			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.soleProprietorRelationshipSetup</value> <!--Look for the actingOnBehalfOfClientECN in case data and create a Role Type Loan Applicant (1028) against the arrangement using that ECN-->
-		</productAttributes>
-	</productAttributeGroup>
 
 	<!--GenerateOfferGatherClientDetails-->
 	<productAttributeGroup> <!--These are the details for the director-->
@@ -88,7 +89,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=personName~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=ConsentCapture~ZOrder=100~displaySummary=true</attributeName>
+			<attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=personName~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=ConsentCapture~ZOrder=110~displaySummary=true</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -706,12 +707,18 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeIntentSequence</attributeName>
-			<value>GenerateOfferVerifyEligibility|DetermineRelatedParties|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+			<!--value>DetermineRelatedParties|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value-->
+			<value>DetermineRelatedBusinessParties|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
 			<value>GenerateApplicationOfferProposals|GenerateOfferGatherClientDetails</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RecursiveGNBAIntents</attributeName>
+			<value>GenerateOfferVerifyEligibility|DetermineRelatedBusinessParties|FinancialDetails|GenerateOfferGatherClientDetails|GenerateOfferGatherProductDetails|AppealWithLongForm|AppealWithoutLongForm|GenerateApplicationOfferProposals</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -721,7 +728,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>GNBAIntentToActivityMapping</attributeName>
-			<value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+			<value>VerifyIdentity=Choose Extras|DetermineRelatedBusinessParties=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -932,7 +939,17 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>baseCBOActivityList</attributeName>
-			<value>CreditDecisionDetermineOffer|ConfigureArrangement|ConfirmVerificationQuality|CBOFinalizeCase</value>
+			<value>ConfigureArrangement~SwivelChairCreditDecisioning|CBOEasyLoanProcessing|CreditDecisionDetermineOffer|ConfigureArrangement|ConfirmVerificationQuality|CBOFinalizeCase</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CBOEasyLoanProcessing</attributeName>
+			<value>CBOEasyLoanProcessingTeam|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CBOEasyLoanProcessing</attributeName>
+			<value>0|Weighting=0</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
