@@ -1,11 +1,38 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
 	<productIdentifier>1000</productIdentifier>
 	<name>Base Product</name>
-	<shortDescription>(BaseProduct_Retail_ManualAssessmentWithLongForm) This spec file defines the manual assessment with long form (to be used for appeal) Scenario which other specs will inherit</shortDescription>
+	<shortDescription>(BaseProduct_Retail_ManualAssessmentWithoutLongForm) This spec file defines the manual assessment with long form (to be used for appeal) Scenario which other specs will inherit</shortDescription>
 
 	<!--AppealWithoutLongForm-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_AppealWithoutLongForm</attributeGroupName>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Your appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~fetchAvailableAppealReasonsFromArrangement=true~HideProceduralStep=true</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--DeclineAppealWithoutLongForm-->
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_DeclineAppealWithoutLongForm</attributeGroupName>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Your appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~fetchAvailableAppealReasonsFromArrangement=true~HideProceduralStep=true</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--LimitAppealWithoutLongForm-->
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_LimitAppealWithoutLongForm</attributeGroupName>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Your appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~fetchAvailableAppealReasonsFromArrangement=true~HideProceduralStep=true</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--PricingAppealWithoutLongForm-->
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_PricingAppealWithoutLongForm</attributeGroupName>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Your appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~fetchAvailableAppealReasonsFromArrangement=true~HideProceduralStep=true</attributeName>
