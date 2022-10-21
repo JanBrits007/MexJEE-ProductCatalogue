@@ -1,0 +1,53 @@
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+	<productIdentifier>1000</productIdentifier>
+	<name>Base Product</name>
+	<shortDescription>(BaseProduct_Retail_PricingAppealWithoutLongForm) This spec file defines the manual assessment with long form (to be used for appeal) Scenario which other specs will inherit</shortDescription>
+
+	<!--AppealWithoutLongForm-->
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_PricingAppealWithoutLongForm</attributeGroupName>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Your appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~fetchAvailableAppealReasonsFromArrangement=true~HideProceduralStep=true</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--FinalizeFrontOfficeInteraction-->
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>LetsGetDigital|ng-component=LetsGetDigitalComponent~applicableChannels=WebSelfAssisted~HideProceduralStep=true~ZOrder=60</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=Application sent to back office~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=ManualAssessmentStatusComponent~child-ng-components=CreditAccountDetails~HideProceduralStep=true~ZOrder=50</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Case and Process Configuration-->
+	<productAttributeGroup>
+		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>frontOfficeIntentSequence</attributeName>
+			<value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|PricingAppealWithoutLongForm|ActivateProductsGatherClientDetails|ActivateProductsGatherEvidence|FinalizeFrontOfficeInteraction</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+			<value>GenerateApplicationOfferProposals|FinancialDetails|GenerateOfferGatherClientDetails</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>breadcrumbSteps</attributeName>
+			<value>Authenticate|Choose Extras|About you|Finishing up</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GNBAIntentToActivityMapping</attributeName>
+			<value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialDetails=Choose Extras|GenerateApplicationOfferProposals=Choose Extras|GenerateOffer=Choose Extras|PricingAppealWithoutLongForm=About you|FinancialExtendedDetails=About you|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+</product>

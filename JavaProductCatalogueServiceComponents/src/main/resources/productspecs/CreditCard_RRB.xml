@@ -62,10 +62,6 @@
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCMerchant</attributeName>
       </productAttributes>
-       <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
    </productAttributeGroup>
 
    <!--GenerateOfferGatherClientDetails-->
@@ -132,10 +128,6 @@
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~displaySummary=true</attributeName>
       </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
    </productAttributeGroup>
 
    <!--ActivateProductsGatherProductDetails-->
@@ -157,10 +149,6 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>      
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
@@ -739,6 +727,11 @@
            <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
            <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementLockerFilter</value>
        </productAttributes>
+       <productAttributes>
+           <attributeType>string</attributeType>
+           <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
+           <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCCFAISDocumentFilter</value>
+       </productAttributes>
    </productAttributeGroup>
 
    <productAttributeGroup action="overwrite">
@@ -790,6 +783,10 @@
 			<attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
 			<attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
 		</productAttributes>
+        <productAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>DeclineAppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
+        </productAttributes>
         <!--Web Decision Engine Decline for staff FAIS registration-->
         <productAttributes>
             <attributeType>declineCodeMapping</attributeType>

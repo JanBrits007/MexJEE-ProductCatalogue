@@ -10,10 +10,6 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=2000.00~max=300000.00~isMandatory=true</attributeName>
       </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
    </productAttributeGroup>
 
    <!--ActivateProductsGatherProductDetails-->
@@ -33,7 +29,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~child-ng-components=FAISAdviceRefused</attributeName>
       </productAttributes>      
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -1133,6 +1129,10 @@
             <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
             <attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
           </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>DeclineAppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
+         </featureAttributes>
           <featureAttributes>
             <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
             <attributeName>SelectAlternateTP|child-ng-components=AlternateProductsDeclineAction</attributeName>
