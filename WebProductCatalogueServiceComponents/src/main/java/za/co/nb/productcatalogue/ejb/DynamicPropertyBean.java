@@ -39,7 +39,7 @@ public class DynamicPropertyBean {
             mLog.warn("PropertyNotFoundException:", pnfe);
             return "null";
         } catch (Exception e) {
-            throw new RuntimeException("Unable to lookup property", e);
+            throw new RuntimeException("Unable to lookup property:"+e.getMessage(), e);
         }
     }
 
