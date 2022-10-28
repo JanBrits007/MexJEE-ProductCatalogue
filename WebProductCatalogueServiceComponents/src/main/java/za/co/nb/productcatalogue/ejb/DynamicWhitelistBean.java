@@ -45,7 +45,7 @@ public class DynamicWhitelistBean {
             StaffResponse productStaff = whitelistServiceRemote.getProductStaff(productId, environment);
             return productStaff.getProductStaff().getStaffList();
         } catch (Exception e) {
-            throw new RuntimeException("Unable to lookup property", e);
+            throw new RuntimeException("Unable to lookup property:"+e.getMessage(), e);
         }
     }
 

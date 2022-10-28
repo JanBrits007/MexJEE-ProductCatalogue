@@ -66,7 +66,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryFuneralPlanComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60~ActiveOnInitialWorkItemExecution=true</attributeName>
+         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryFuneralPlanComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
 <!--      <productAttributes>-->
 <!--         <attributeType>clientInformationRequirement</attributeType>-->
@@ -91,7 +91,7 @@
       </productAttributes-->
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceFuneralComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~child-ng-components=FACTBasedSale~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -267,6 +267,15 @@
       <productAttributes>
          <attributeType>defaultMapping</attributeType>
          <attributeName>default|child-ng-components=LeaveApplicationDeclineAction</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!-- Rule handlers   -->
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_ActivateProductsPresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeName>GNBAHandler_ActivateProductsPresentDocuments</attributeName>
+         <value>classname=FuneralPlanRecalculateRuleHandler</value>
       </productAttributes>
    </productAttributeGroup>
 
