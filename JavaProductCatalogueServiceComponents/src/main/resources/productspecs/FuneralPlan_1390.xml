@@ -1,6 +1,6 @@
 <product inheritFromFiles="FuneralPlan" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
    <productIdentifier>1390</productIdentifier>
-   <name>Nedbank Insurance Funeral Plan</name>
+   <name>Nedbank Insurance Build Your Own Funeral Plan</name>
    <shortDescription>(FuneralPlan_1390) Nedbank Insurance Funeral Plan</shortDescription>
 
    <!--GenerateOfferVerifyEligibility-->
@@ -228,7 +228,7 @@
    </productAttributeGroup>
 
     <!--BusinessProcessExecutionConfiguration Configuration-->
-    <productAttributeGroup action="overwrite">>
+    <productAttributeGroup action="overwrite">
         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
         <productAttributes>
             <attributeType>string</attributeType>
@@ -299,6 +299,68 @@
             <attributeType>boolean</attributeType>
             <attributeName>retrieveMaxProposal</attributeName>
             <value>true</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>EligibilityRules</attributeGroupName>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>Age</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>18</minValue>
+            <maxValue>75</maxValue>
+            <valueUnit>year</valueUnit>
+            <description>You need be 18 or older</description>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>Income</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>0</minValue>
+            <maxValue>99999999</maxValue>
+            <valueUnit>ZAR</valueUnit>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>NaturalPerson</attributeName>
+            <isComparable>false</isComparable>
+            <value>true</value>
+            <valueUnit>bool</valueUnit>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>CreditApproval</attributeName>
+            <isComparable>false</isComparable>
+            <value>true</value>
+            <valueUnit>bool</valueUnit>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>NotUnderCreditAdministration</attributeName>
+            <isComparable>false</isComparable>
+            <value>true</value>
+            <valueUnit>bool</valueUnit>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleDCARRanges</attributeName>
+            <value>0-100000|100001-200000</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleSegments</attributeName>
+            <value>${{RetailEligibleSegments}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+            <value>${{FAIS_OnBehalfOfBranchList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+            <value>${{FAIS_StaffBranchOverideList}}</value>
         </productAttributes>
     </productAttributeGroup>
 
