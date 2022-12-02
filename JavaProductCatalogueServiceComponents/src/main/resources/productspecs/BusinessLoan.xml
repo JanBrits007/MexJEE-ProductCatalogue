@@ -79,10 +79,9 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-
-	<!--GenerateOfferGatherClientDetails-->
+	<!--GatherPartyDetailsForOffer-->
 	<productAttributeGroup> <!--These are the details for the director-->
-		<attributeGroupName>1028_LOANAPPLICANT_clientInformationRequirement_GenerateOffer</attributeGroupName>
+		<attributeGroupName>1028_LOANAPPLICANT_clientInformationRequirement_GatherPartyDetailsForOffer</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>NeedForYourLoan|ProceduralStepName=Need for your business loan~ZOrder=160</attributeName>
@@ -101,7 +100,7 @@
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup> <!--These are the details for the business-->
-		<attributeGroupName>1041_PRIMARY_clientInformationRequirement_GenerateOffer</attributeGroupName>
+		<attributeGroupName>1041_PRIMARY_clientInformationRequirement_GatherPartyDetailsForOffer</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>NeedForYourLoan|ProceduralStepName=Need for your business loan~ZOrder=160</attributeName>
@@ -708,12 +707,12 @@
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeIntentSequence</attributeName>
 			<!--value>DetermineRelatedParties|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value-->
-			<value>DetermineRelatedBusinessParties|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+			<value>DetermineRelatedBusinessParties|GenerateOfferGatherProductDetails|GatherPartyDetailsForOffer|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
-			<value>GenerateApplicationOfferProposals|GenerateOfferGatherClientDetails</value>
+			<value>GenerateApplicationOfferProposals|GatherPartyDetailsForOffer</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -728,7 +727,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>GNBAIntentToActivityMapping</attributeName>
-			<value>VerifyIdentity=Choose Extras|DetermineRelatedBusinessParties=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+			<value>VerifyIdentity=Choose Extras|DetermineRelatedBusinessParties=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GatherPartyDetailsForOffer=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
