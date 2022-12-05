@@ -4,7 +4,6 @@
    <shortDescription>Base Transactional Specification</shortDescription>
 
    <!--GenerateOfferVerifyEligibility-->
-
    <productAttributeGroup>
       <attributeGroupName>EligibilityHandler</attributeGroupName>
       <productAttributes>
@@ -101,17 +100,6 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~restrictOptOut=true~ProceduralStepName=Getting your cards~includeTemporaryCard=true~lockersOption=true~ZOrder=170</attributeName>
       </productAttributes>
-      <!-- 
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
-      
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>GettingTheApp|ng-component=GettingTheAppComponent~ProceduralStepName=Getting the app~ZOrder=155~applicableChannels=WebSelfAssisted</attributeName>
-      </productAttributes>
-       -->
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~child-ng-components=FAISAdviceRefused</attributeName>
@@ -129,7 +117,6 @@
          <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
 
    <!--ActivateProductsGatherEvidence-->
    <productAttributeGroup>
@@ -278,7 +265,6 @@
    </productAttributeGroup>
 
    <!--Document Configuration-->
-
    <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
@@ -333,9 +319,6 @@
          <attributeName>DigitallySign</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
-
-
    <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
@@ -390,7 +373,7 @@
          <attributeName>DigitallySign</attributeName>
       </productAttributes>
    </productAttributeGroup>
-      <productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
@@ -750,6 +733,11 @@
          <attributeName>CODHandler_FinancialDetails</attributeName>
          <value>${{CODHandler_FinancialDetails}}</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>DAM</attributeType>
+         <attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
@@ -1077,13 +1065,6 @@
          <value>${{EDBTestEmailOverideList}}</value>
       </productAttributes>
    </productAttributeGroup>
-   <!--productAttributeGroup> Not implementing this whitelisting for PROD
-      <attributeGroupName>EDBPilotSubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
-         <value>${{GTPTestEmailOverideList}}</value>
-      </productAttributes>
-   </productAttributeGroup-->
 
    <!--Offer Configuration-->
    <productAttributeGroup>

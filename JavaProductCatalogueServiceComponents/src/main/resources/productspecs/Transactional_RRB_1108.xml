@@ -191,7 +191,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>productTargetType</attributeName>
-         <value>CA</value>
+         <value>${{RRBTransactionalProductTargetType}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -361,7 +361,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>LeadEmailAddressNonProd</attributeName>
-         <value>FohnB@Nedbank.co.za;ajits@nedbank.co.za;LijuN@Nedbank.co.za;LudieP@Nedbank.co.za;NatashaBu@Nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za</value>
+         <value>FohnB@Nedbank.co.za;ajits@nedbank.co.za;LijuN@Nedbank.co.za;LudieP@Nedbank.co.za;NatashaBu@Nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za;sivat@nedbank.co.za</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -456,7 +456,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>VAS_1164</attributeName><!--Cheque Card-->
-         <value>classname=za.co.nb.offermanagement.crosssell.BundledProductCrossSellHandler</value>
+         <value>classname=za.co.nb.decisionengine.crosssell.BundledProductCrossSellHandler</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -483,6 +483,13 @@
       <!--GenerateOfferVerifyEligibility-->
 
       <!--GenerateOfferGatherProductDetails-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=5000.00~max=300000.00</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
 
       <!--DetermineRelatedParties-->
 
@@ -991,7 +998,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>LeadEmailAddressNonProd</attributeName>
-            <value>FohnB@Nedbank.co.za;ajits@nedbank.co.za;LijuN@Nedbank.co.za;LudieP@Nedbank.co.za;NatashaBu@Nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za</value>
+            <value>FohnB@Nedbank.co.za;ajits@nedbank.co.za;LijuN@Nedbank.co.za;LudieP@Nedbank.co.za;NatashaBu@Nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za;sivat@nedbank.co.za</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
