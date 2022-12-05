@@ -161,7 +161,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>productTargetType</attributeName>
-         <value>CA</value>
+         <value>${{RRBTransactionalProductTargetType}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -501,6 +501,13 @@
       <!--GenerateOfferVerifyEligibility-->
 
       <!--GenerateOfferGatherProductDetails-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=10000.00~max=300000.00~isMandatory=true</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
 
       <!--DetermineRelatedParties-->
 
