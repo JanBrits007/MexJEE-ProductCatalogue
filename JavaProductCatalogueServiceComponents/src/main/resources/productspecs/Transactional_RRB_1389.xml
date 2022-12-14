@@ -91,6 +91,21 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--Decline Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+      <!--CDE Available Actions-->
+      <productAttributes>
+         <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+         <attributeName>AcceptOffer|child-ng-components=ContinueWithoutCreditDeclineAction~child-ng-components=TpCreditOffer~child-ng-components=LeaveApplicationDeclineAction</attributeName>
+      </productAttributes>
+      <!--Web Decision Engine Decline for staff FAIS registration-->
+      <productAttributes>
+         <attributeType>declineCodeMapping</attributeType>
+         <attributeName>FAIS02|child-ng-components=FaisOnbehalfOfComponent</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--1333 - Nedbank Greenbacks Shop Card-->
    <features inheritFromFiles="Transactional_Retail">
       <featureIdentifier>1333</featureIdentifier>
@@ -209,7 +224,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>SkipFinancialDetails|ng-component=SkipFinancialDetails</attributeName>
+            <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right~ZOrder=60~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -219,12 +234,8 @@
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
-         </featureAttributes>
-         <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80~child-ng-components=OverdraftDetailsV2Component~min=100.00~max=250000.00~isMandatory=true</attributeName>
+            <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=10~child-ng-components=OverdraftDetailsV2Component~min=100.00~max=250000.00~isMandatory=true~child-ng-components=MotivationBoxComponent</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
