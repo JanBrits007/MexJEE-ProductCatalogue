@@ -56,16 +56,12 @@
       <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep</attributeName>
+         <attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryTransactionalProductComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
+         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryTransactionalProductComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
-<!--      <productAttributes>-->
-<!--         <attributeType>clientInformationRequirement</attributeType>-->
-<!--         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>-->
-<!--      </productAttributes>-->
    </productAttributeGroup>
 
    <!--ActivateProductsGatherClientDetails-->
@@ -191,6 +187,13 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>NedbankID|ng-component=StaffAssistedNedbankIdComponent~ProceduralStepName=Nedbank ID~ZOrder=50~applicableChannels=BranchStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.CombinedProductContractUniversalDocumentFilter</value>
       </productAttributes>
    </productAttributeGroup>
 
