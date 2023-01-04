@@ -126,7 +126,6 @@
 			<value>1155~FuneralPlan</value>
 		</productAttributes>
 	</productAttributeGroup>
-
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
 		<productAttributes>
@@ -336,7 +335,7 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-
+	<!-- Decisioning Control -->
 	<productAttributeGroup>
 		<attributeGroupName>DecisioningControl</attributeGroupName>
 		<productAttributes>
@@ -787,6 +786,18 @@
 		<featureIdentifier>1099</featureIdentifier>
 		<name>Credit card insurance</name>
 
+		<!--GenerateOfferVerifyEligibility-->
+		<featureAttributeGroup>
+			<attributeGroupName>EligibilityRules</attributeGroupName>
+			<featureAttributes>
+				<attributeType>EligibilityRule</attributeType>
+				<attributeName>Age</attributeName>
+				<minValue>18</minValue>
+				<maxValue>64</maxValue>
+				<valueUnit>year</valueUnit>
+			</featureAttributes>
+		</featureAttributeGroup>
+
 		<!--GenerateOffer-->
 		<featureAttributeGroup>
 			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
@@ -974,18 +985,6 @@
 			<featureAttributes>
 				<attributeType>string</attributeType>
 				<attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1099</attributeName>
-			</featureAttributes>
-		</featureAttributeGroup>
-
-		<!--Case and Process Configuration-->
-		<featureAttributeGroup>
-			<attributeGroupName>EligibilityRules</attributeGroupName>
-			<featureAttributes>
-				<attributeType>EligibilityRule</attributeType>
-				<attributeName>Age</attributeName>
-				<minValue>18</minValue>
-				<maxValue>64</maxValue>
-				<valueUnit>year</valueUnit>
 			</featureAttributes>
 		</featureAttributeGroup>
 
