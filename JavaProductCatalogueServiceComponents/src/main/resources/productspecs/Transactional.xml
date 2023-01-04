@@ -4,7 +4,6 @@
    <shortDescription>Base Transactional Specification</shortDescription>
 
    <!--GenerateOfferVerifyEligibility-->
-
    <productAttributeGroup>
       <attributeGroupName>EligibilityHandler</attributeGroupName>
       <productAttributes>
@@ -57,16 +56,12 @@
       <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep</attributeName>
+         <attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryTransactionalProductComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
+         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryTransactionalProductComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
-<!--      <productAttributes>-->
-<!--         <attributeType>clientInformationRequirement</attributeType>-->
-<!--         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>-->
-<!--      </productAttributes>-->
    </productAttributeGroup>
 
    <!--ActivateProductsGatherClientDetails-->
@@ -101,17 +96,6 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~restrictOptOut=true~ProceduralStepName=Getting your cards~includeTemporaryCard=true~lockersOption=true~ZOrder=170</attributeName>
       </productAttributes>
-      <!-- 
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-      </productAttributes>
-      
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>GettingTheApp|ng-component=GettingTheAppComponent~ProceduralStepName=Getting the app~ZOrder=155~applicableChannels=WebSelfAssisted</attributeName>
-      </productAttributes>
-       -->
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~child-ng-components=FAISAdviceRefused</attributeName>
@@ -130,13 +114,12 @@
       </productAttributes>
    </productAttributeGroup>
 
-
    <!--ActivateProductsGatherEvidence-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GatherEvidence</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>GatherEvidence|ng-component=UploadYourDocumentsComponent~ProceduralStepName=Upload your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~applicableChannels=SelfServiceKiosk</attributeName>
+         <attributeName>GatherEvidence|ng-component=UploadYourDocumentsComponent~ProceduralStepName=Uploading your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~applicableChannels=SelfServiceKiosk</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -204,6 +187,13 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>NedbankID|ng-component=StaffAssistedNedbankIdComponent~ProceduralStepName=Nedbank ID~ZOrder=50~applicableChannels=BranchStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.CombinedProductContractUniversalDocumentFilter</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -278,7 +268,6 @@
    </productAttributeGroup>
 
    <!--Document Configuration-->
-
    <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
@@ -333,9 +322,6 @@
          <attributeName>DigitallySign</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
-
-
    <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
@@ -390,7 +376,7 @@
          <attributeName>DigitallySign</attributeName>
       </productAttributes>
    </productAttributeGroup>
-      <productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
@@ -586,7 +572,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RecursiveGNBAIntents</attributeName>
-         <value>GenerateOfferVerifyEligibility|FinancialDetails|GenerateOfferGatherClientDetails|GenerateOfferGatherProductDetails|AppealWithLongForm|AppealWithoutLongForm|DeclineAppealWithLongForm|DeclineAppealWithoutLongForm|LimitAppealWithLongForm|LimitAppealWithoutLongForm|PricingAppealWithLongForm|PricingAppealWithoutLongForm|GenerateApplicationOfferProposals</value>
+         <value>GenerateOfferVerifyEligibility|FinancialDetails|GenerateOfferGatherClientDetails|GenerateOfferGatherProductDetails|AppealWithLongForm|AppealWithoutLongForm|GenerateApplicationOfferProposals</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -749,6 +735,11 @@
          <attributeType>string</attributeType>
          <attributeName>CODHandler_FinancialDetails</attributeName>
          <value>${{CODHandler_FinancialDetails}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>DAM</attributeType>
+         <attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -1077,13 +1068,6 @@
          <value>${{EDBTestEmailOverideList}}</value>
       </productAttributes>
    </productAttributeGroup>
-   <!--productAttributeGroup> Not implementing this whitelisting for PROD
-      <attributeGroupName>EDBPilotSubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
-         <value>${{GTPTestEmailOverideList}}</value>
-      </productAttributes>
-   </productAttributeGroup-->
 
    <!--Offer Configuration-->
    <productAttributeGroup>

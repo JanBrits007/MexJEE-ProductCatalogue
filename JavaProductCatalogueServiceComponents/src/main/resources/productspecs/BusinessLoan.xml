@@ -79,17 +79,16 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-
-	<!--GenerateOfferGatherClientDetails-->
+	<!--GatherPartyDetailsForOffer-->
 	<productAttributeGroup> <!--These are the details for the director-->
-		<attributeGroupName>1028_LOANAPPLICANT_clientInformationRequirement_GenerateOffer</attributeGroupName>
+		<attributeGroupName>1028_LOANAPPLICANT_clientInformationRequirement_GatherPartyDetailsForOffer</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>NeedForYourLoan|ProceduralStepName=Need for your business loan~ZOrder=160</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=personName~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=ConsentCapture~ZOrder=110~displaySummary=true</attributeName>
+			<attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=personName~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=ConsentCapture~ZOrder=110</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -101,14 +100,14 @@
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup> <!--These are the details for the business-->
-		<attributeGroupName>1041_PRIMARY_clientInformationRequirement_GenerateOffer</attributeGroupName>
+		<attributeGroupName>1041_PRIMARY_clientInformationRequirement_GatherPartyDetailsForOffer</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>NeedForYourLoan|ProceduralStepName=Need for your business loan~ZOrder=160</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ApplicationBusinessDetails|ng-component=ApplicationBusinessDetailsComponent~ProceduralStepName=Let's get a few details about Your Business~ZOrder=100~displaySummary=true</attributeName>
+			<attributeName>ApplicationBusinessDetails|ng-component=ApplicationBusinessDetailsComponent~ProceduralStepName=Let's get a few details about Your Business~ZOrder=100</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -708,12 +707,12 @@
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeIntentSequence</attributeName>
 			<!--value>DetermineRelatedParties|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value-->
-			<value>DetermineRelatedBusinessParties|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+			<value>DetermineRelatedBusinessParties|GenerateOfferGatherProductDetails|GatherPartyDetailsForOffer|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
-			<value>GenerateApplicationOfferProposals|GenerateOfferGatherClientDetails</value>
+			<value>GenerateApplicationOfferProposals|GatherPartyDetailsForOffer</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -728,7 +727,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>GNBAIntentToActivityMapping</attributeName>
-			<value>VerifyIdentity=Choose Extras|DetermineRelatedBusinessParties=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+			<value>VerifyIdentity=Choose Extras|DetermineRelatedBusinessParties=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GatherPartyDetailsForOffer=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -771,8 +770,14 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_CreditOffer</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.EasyLoanSimulationGenerateApplicationOfferProposalCODHandler</value>
+		</productAttributes>
+<!--		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODHandler_CreditOffer</attributeName>
 			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.PersonalLoanSimulationCreditOfferCODHandler</value>
 		</productAttributes>
+		-->
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_ProductOffer</attributeName>

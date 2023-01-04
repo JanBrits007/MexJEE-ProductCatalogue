@@ -3,7 +3,7 @@
 	<name>Base Credit Card Specification</name>
 	<shortDescription>Base Credit Card Specification</shortDescription>
 
-
+	<!--GenerateOfferVerifyEligibility-->
 	<productAttributeGroup>
 		<attributeGroupName>EligibilityHandler</attributeGroupName>
 		<productAttributes>
@@ -22,8 +22,65 @@
 			<value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
 		</productAttributes>
 	</productAttributeGroup>
-
-	<!--GenerateOfferVerifyEligibility-->
+	<productAttributeGroup>
+		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Age</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>18</minValue>
+			<maxValue>999</maxValue>
+			<valueUnit>year</valueUnit>
+			<description>user-icon|You need to be 18 years or older.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>5000</minValue>
+			<maxValue>99999999</maxValue>
+			<valueUnit>ZAR</valueUnit>
+			<description>income|You need to earn R5 000 or more per month.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NaturalPerson</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>DebitOrderRepaymentRequired</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>CreditApproval</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NotUnderCreditAdministration</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+			<value>${{FAIS_OnBehalfOfBranchList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>FAIS_StaffBranchOverrideList</attributeName>
+			<value>${{FAIS_StaffBranchOverideList}}</value>
+		</productAttributes>
+	</productAttributeGroup>
 
 	<!--VerifyIdentity-->
 	<productAttributeGroup>
@@ -112,6 +169,10 @@
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>Yodlee|ng-component=YodleeIntroductionComponent~ProceduralStepName=Yodlee~ZOrder=90~YodleePortalURL~HideProceduralStep=true~applicableChannels=WebSelfAssisted</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>Finch|ng-component=StaffFinancialDataMiningComponent~ProceduralStepName=Finch~ZOrder=89~ClientPermissionPortalURL~applicableChannels=NCCStaffAssisted~applicableChannels=BranchStaffAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -667,65 +728,6 @@
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
-		<attributeGroupName>EligibilityRules</attributeGroupName>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Age</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>18</minValue>
-			<maxValue>999</maxValue>
-			<valueUnit>year</valueUnit>
-			<description>user-icon|You need to be 18 years or older.</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Income</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>5000</minValue>
-			<maxValue>99999999</maxValue>
-			<valueUnit>ZAR</valueUnit>
-			<description>income|You need to earn R5 000 or more per month.</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>NaturalPerson</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>DebitOrderRepaymentRequired</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>CreditApproval</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>NotUnderCreditAdministration</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-		</productAttributes>
-		<productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
-            <value>${{FAIS_OnBehalfOfBranchList}}</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>FAIS_StaffBranchOverrideList</attributeName>
-            <value>${{FAIS_StaffBranchOverideList}}</value>
-        </productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
 		<attributeGroupName>DocumentConfiguration</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -875,6 +877,11 @@
 			<attributeType>string</attributeType>
 			<attributeName>DataMiningHandler</attributeName>
 			<value>classname=za.co.nb.onboarding.product.datamining.handlers.retail.RetailDataMiningHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>Generic</attributeType>
+			<attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>

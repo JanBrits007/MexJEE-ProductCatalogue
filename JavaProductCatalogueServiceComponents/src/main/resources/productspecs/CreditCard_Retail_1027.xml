@@ -3,6 +3,39 @@
 	<name>The American Express Gold Card</name>
 	<shortDescription>(CreditCard_Retail_1027) This is The American Express Gold Card</shortDescription>
 
+	<!--GenerateOfferVerifyEligibility-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Age</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>18</minValue>
+			<maxValue>999</maxValue>
+			<valueUnit>year</valueUnit>
+			<description>user-icon|You need to be 18 years or older.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>200000</minValue>
+			<maxValue>750000</maxValue>
+			<valueUnit>ZAR</valueUnit>
+			<description>income|You need to earn between R200 000 and R750 000 per annum.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+			<value>${{FAIS_OnBehalfOfBranchList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>FAIS_StaffBranchOverrideList</attributeName>
+			<value>${{FAIS_StaffBranchOverideList}}</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--GenerateOfferGatherProductDetails-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
@@ -38,7 +71,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>VAS_1334</attributeName><!--Membership Rewards-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
+			<value>Optionality=Mandatory~IsTakenUp=true</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -89,39 +122,6 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subCreditCard|ContractComponentProductType=1027</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--Case and Process Configuration-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>EligibilityRules</attributeGroupName>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Age</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>18</minValue>
-			<maxValue>999</maxValue>
-			<valueUnit>year</valueUnit>
-			<description>user-icon|You need to be 18 years or older.</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Income</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>200000</minValue>
-			<maxValue>750000</maxValue>
-			<valueUnit>ZAR</valueUnit>
-			<description>income|You need to earn between R200 000 and R750 000 per annum.</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>FAIS_OnBehalfOfBranchList</attributeName>
-			<value>${{FAIS_OnBehalfOfBranchList}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>FAIS_StaffBranchOverrideList</attributeName>
-			<value>${{FAIS_StaffBranchOverideList}}</value>
 		</productAttributes>
 	</productAttributeGroup>
 

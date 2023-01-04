@@ -40,6 +40,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
+         <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
+         <value>${{Overdraft_RRB_dynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_RRB_TP20_4801</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
          <attributeName>DefaultSubstitution</attributeName>
          <value>DefaultSubstitution</value>
       </productAttributes>
@@ -63,6 +74,30 @@
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
+         <value>${{Overdraft_RRB_dynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_RRB_TP20_4801</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>DefaultSubstitution</attributeName>
+         <value>DefaultSubstitution</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_TP20_4801</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--PROD Substitution Rules-->
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
          <attributeName>DefaultSubstitution</attributeName>
          <value>DefaultSubstitution</value>
