@@ -3,6 +3,35 @@
    <name>Private Bundle | Young</name>
    <shortDescription>(Transactional_RRB_1400) Private Bundle | Young</shortDescription>
 
+   <!--GenerateOfferVerifyEligibility-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>EligibilityRules</attributeGroupName>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Age</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>18</minValue>
+         <maxValue>29</maxValue>
+         <valueUnit>year</valueUnit>
+         <description>user-icon|You need to be at least 18 years old and no older than 29 years old.</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>NonEligibleDCAR</attributeName>
+         <value>${{NonEligibleDCARList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+         <value>${{FAIS_OnBehalfOfBranchList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+         <value>${{FAIS_StaffBranchOverideList}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+
     <!--GenerateOfferGatherProductDetails-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
@@ -121,35 +150,6 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subTP|ContractComponentProductType=1400</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <!-- Eligibility rules -->
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>EligibilityRules</attributeGroupName>
-      <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <attributeName>Age</attributeName>
-         <isComparable>false</isComparable>
-         <minValue>18</minValue>
-         <maxValue>29</maxValue>
-         <valueUnit>year</valueUnit>
-         <description>user-icon|You need to be at least 18 years old and no older than 29 years old.</description>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>NonEligibleDCAR</attributeName>
-         <value>${{NonEligibleDCARList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
-         <value>${{FAIS_OnBehalfOfBranchList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>FAIS_StaffBranchOverrideList</attributeName>
-         <value>${{FAIS_StaffBranchOverideList}}</value>
       </productAttributes>
    </productAttributeGroup>
 
