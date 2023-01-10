@@ -144,7 +144,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=80~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~CheckYodlee=false~FinancialInformationStatusCallbackID</attributeName>
+			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=80~child-ng-components=BusinessIncomeDetailsComponent~child-ng-components=BusinessDebtObligationsComponent~child-ng-components=BusinessExpensesComponent~ActiveOnInitialWorkItemExecution=true~CheckYodlee=false~FinancialInformationStatusCallbackID</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -819,7 +819,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent3</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.CreditCardSimulationIntent3CODHandler</value>
+			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.EasyLoanSimulationIntent3CODHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -1214,6 +1214,14 @@
 		<productAttributes>
 			<attributeName>SubstituteForWhiteListedEmailAddresses</attributeName>
 			<value>${{EDBPhase2TestEmailOverideList}}</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>DecisionTreeConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>EvaluateCase_DecisionTree</attributeName>
+			<value>classname=businessLoanEvaluateCaseDecisionTree</value>
 		</productAttributes>
 	</productAttributeGroup>
 
