@@ -10,10 +10,36 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=100.00~max=250000.00~isMandatory=false</attributeName>
       </productAttributes>
-<!--      <productAttributes>-->
-<!--         <attributeType>clientInformationRequirement</attributeType>-->
-<!--         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>-->
-<!--      </productAttributes>-->
+   </productAttributeGroup>
+
+   <!--FinancialExtendedDetails-->
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_FinancialExtendedDetails</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>SkipFinancialDetails|ng-component=SkipFinancialDetails</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--GenerateOffer-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=EnotesVASComponent-1374~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>ProductSetupSummary|ng-component=ProductSetupSummaryComponent~ZOrder=50~retailProduct=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~retailProduct=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>AlternateProductOfferSelection|ng-component=AlternateProductsComponent~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Decisioning control-->
@@ -88,6 +114,21 @@
          <attributeType>string</attributeType>
          <attributeName>AlternateOfferWorkItemTemplate</attributeName>
          <value>GenerateOffer</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--Decline Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+      <!--CDE Available Actions-->
+      <productAttributes>
+         <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+         <attributeName>AcceptOffer|child-ng-components=ContinueWithoutCreditDeclineAction~child-ng-components=TpCreditOffer~child-ng-components=LeaveApplicationDeclineAction</attributeName>
+      </productAttributes>
+      <!--Web Decision Engine Decline for staff FAIS registration-->
+      <productAttributes>
+         <attributeType>declineCodeMapping</attributeType>
+         <attributeName>FAIS02|child-ng-components=FaisOnbehalfOfComponent</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -209,7 +250,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>SkipFinancialDetails|ng-component=SkipFinancialDetails</attributeName>
+            <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right~ZOrder=60~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -219,12 +260,8 @@
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
-         </featureAttributes>
-         <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80~child-ng-components=OverdraftDetailsV2Component~min=100.00~max=250000.00~isMandatory=true</attributeName>
+            <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=10~child-ng-components=OverdraftDetailsV2Component~min=100.00~max=250000.00~isMandatory=true~child-ng-components=MotivationBoxComponent</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
