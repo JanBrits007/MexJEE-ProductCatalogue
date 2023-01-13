@@ -3,16 +3,6 @@
 	<name>HUB Card</name>
 	<shortDescription>(CreditCard_Retail_1050)</shortDescription>
 
-	<!--Offer Configuration-->
-	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
-		<attributeGroupName>VASCrossSellControl</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_5200</attributeName><!--HUB Club Rewards-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
-		</productAttributes>
-	</productAttributeGroup>
-
 	<!--VerifyIdentity-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
@@ -21,8 +11,6 @@
 			<attributeName>PrepareApplicant|ng-component=GenericProcessStartPageComponent~ZOrder=300~HideProceduralStep=true</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-
-
 
 	<!--ActivateProductsPresentDocuments-->
 	<productAttributeGroup action="overwrite">
@@ -97,14 +85,6 @@
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>CreditDetails</attributeGroupName>
-		<productAttributes>
-			<attributeName>minimumCreditAvaliableZAR</attributeName>
-			<value>2500</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -375,7 +355,7 @@
 			<value>0|Weighting=0</value>
 		</productAttributes>
 	</productAttributeGroup>
-		<productAttributeGroup action="overwrite">
+	<productAttributeGroup action="overwrite">
 		<attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
 		<productAttributes>
 			<attributeType>int</attributeType>
@@ -432,6 +412,21 @@
 			 <attributeName>OfferSelectionSummaryDetails</attributeName>
 			 <value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1050</value>
 		 </productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
+		<attributeGroupName>VASCrossSellControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_5200</attributeName><!--HUB Club Rewards-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>CreditDetails</attributeGroupName>
+		<productAttributes>
+			<attributeName>minimumCreditAvaliableZAR</attributeName>
+			<value>2500</value>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Provisioning Configuration-->
@@ -501,7 +496,6 @@
 			<value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
 		</productAttributes>
 	</productAttributeGroup>
-
 
 	<!--1400 - Affinity Rewards-->
 	<features>

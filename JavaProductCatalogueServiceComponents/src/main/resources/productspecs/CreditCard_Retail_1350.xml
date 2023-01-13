@@ -3,6 +3,17 @@
 	<name>Savvy Bundle Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1350) This credit card forms part of the Savvy Bundle</shortDescription>
 
+	<!--GenerateOfferVerifyEligibility-->
+	<productAttributeGroup  action="overwrite">
+		<attributeGroupName>EligibilityHandler</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.CreditCardEligibilityRules</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Case and Process Configuration -->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>EligibilityRules</attributeGroupName>
 		<productAttributes>
@@ -67,7 +78,6 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-
 	<!--GenerateOffer-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
@@ -101,7 +111,6 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-
 	<!--Offer Configuration-->
 	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
 		<attributeGroupName>VASCrossSellControl</attributeGroupName>
@@ -127,7 +136,6 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-
 	<!--Evidence And Compliance Requirements-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
@@ -150,8 +158,6 @@
 			<valueUnit>string</valueUnit>
 		</productAttributes>
 	</productAttributeGroup>
-
-
 
 	<!--Document Configuration-->
 	<productAttributeGroup action="overwrite">
@@ -185,15 +191,6 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subCreditCard|ContractComponentProductType=1350</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<productAttributeGroup  action="overwrite">
-		<attributeGroupName>EligibilityHandler</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
-			<value>classname=za.co.nb.offermanagement.eligibility.handler.CreditCardEligibilityRules</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -292,7 +289,6 @@
 		</featureAttributeGroup>
 	</features>
 
-
 	<!--Bundle Product -->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>DecisioningControl</attributeGroupName>
@@ -365,6 +361,5 @@
 			<attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-
 
 </product>

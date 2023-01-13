@@ -3,7 +3,6 @@
    <name>Transactional Retail</name>
    <shortDescription>Generic retail transactional product to be inherited from</shortDescription>
 
-
    <!--VerifyIdentity-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
@@ -30,106 +29,6 @@
          <value>Pattern5_EDB</value>
       </productAttributes>
    </productAttributeGroup>
-
-   <!--Offer Configuration-->
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>VASCrossSellControl</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>DontCrossSellOnBaseComponentStatuses</attributeName>
-         <value>1012</value><!--Open-->
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>VAS_1025</attributeName><!--Funeral Cover-->
-         <value>Optionality=Optional~IsTakenUp=false</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>VAS_219</attributeName><!--Instant Gold Cheque Card-->
-         <value>Optionality=Optional~IsTakenUp=false</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>VAS_1402</attributeName><!--My Pocket-->
-         <value>Optionality=Optional~IsTakenUp=true</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>VAS_1374</attributeName><!--eNotes-->
-         <value>Optionality=Optional~IsTakenUp=false</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
-         <value>1019~Transactional_Retail_1019</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
-         <value>1354~Transactional_Retail_1354</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
-         <value>1357~1357</value><!--this is done since there is actually no substitution needed for this product (savvy bundle)-->
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
-         <value>1389~Transactional_Retail_1389</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
-         <value>1474~Transactional_Retail_1474</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
-         <value>4801~Transactional_Retail_TP20_4801</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
-         <value>4802~Transactional_Retail_TP20_4802</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
-         <value>4803~Transactional_Retail_TP20_4803</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
-         <value>4804~4804</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
-         <value>1032~CreditCard_Retail_1032</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
-         <value>1034~CreditCard_Retail_1034</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
-         <value>1350~CreditCard_Retail_1350</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
-         <value>1155~FuneralPlan</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-
    <productAttributeGroup action="overwrite">
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
       <productAttributes>
@@ -264,6 +163,103 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--Offer Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>VASCrossSellControl</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>DontCrossSellOnBaseComponentStatuses</attributeName>
+         <value>1012</value><!--Open-->
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1025</attributeName><!--Funeral Cover-->
+         <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_219</attributeName><!--Instant Gold Cheque Card-->
+         <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1402</attributeName><!--My Pocket-->
+         <value>Optionality=Optional~IsTakenUp=true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1374</attributeName><!--eNotes-->
+         <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>1019~Transactional_Retail_1019</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>1354~Transactional_Retail_1354</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>1357~1357</value><!--this is done since there is actually no substitution needed for this product (savvy bundle)-->
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>1389~Transactional_Retail_1389</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>1474~Transactional_Retail_1474</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>4801~Transactional_Retail_TP20_4801</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>4802~Transactional_Retail_TP20_4802</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>4803~Transactional_Retail_TP20_4803</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>4804~4804</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>1032~CreditCard_Retail_1032</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>1034~CreditCard_Retail_1034</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>1350~CreditCard_Retail_1350</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferCrossSellSubstitutionMap</attributeName>
+         <value>1155~FuneralPlan</value>
+      </productAttributes>
+   </productAttributeGroup>
 
    <!--9062 - Additional Transactional Credit-->
    <features>
@@ -335,7 +331,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
+            <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90~child-ng-components=IncomeFrequencyComponent~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -475,6 +471,24 @@
       <!--VerifyIdentity-->
 
       <!--GenerateOfferVerifyEligibility-->
+      <featureAttributeGroup>
+         <attributeGroupName>EligibilityRules</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleDCARRanges</attributeName>
+            <value>0-100000|100001-200000</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleSegments</attributeName>
+            <value>${{RetailEligibleSegments}}</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>EligibleApplicationStatus</attributeName>
+            <value>CANCELLED|INITIATED|DECLINED|OFFER ACCEPTED</value>
+         </featureAttributes>
+      </featureAttributeGroup>
 
       <!--GenerateOfferGatherProductDetails-->
 
@@ -522,7 +536,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=80~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
+            <attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=80~child-ng-components=IncomeFrequencyComponent~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -831,24 +845,6 @@
       </featureAttributeGroup>
 
       <!-- Case and Process Configuration -->
-      <featureAttributeGroup>
-         <attributeGroupName>EligibilityRules</attributeGroupName>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>EligibleDCARRanges</attributeName>
-            <value>0-100000|100001-200000</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>EligibleSegments</attributeName>
-            <value>${{RetailEligibleSegments}}</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>EligibleApplicationStatus</attributeName>
-            <value>CANCELLED|INITIATED|DECLINED|OFFER ACCEPTED</value>
-         </featureAttributes>
-      </featureAttributeGroup>
       <featureAttributeGroup>
          <attributeGroupName>SystemRelated</attributeGroupName>
          <featureAttributes>

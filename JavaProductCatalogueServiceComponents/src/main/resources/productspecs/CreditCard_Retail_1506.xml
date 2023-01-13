@@ -3,6 +3,7 @@
 	<name>Nedbank Private Wealth Pay-as-you-use Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1506) This is The NPW PAYU Credit Card</shortDescription>
 
+	<!--GenerateOfferVerifyEligibility-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>EligibilityRules</attributeGroupName>
 		<productAttributes>
@@ -216,7 +217,15 @@
 	<productAttributeGroup action="overwrite"><!--Remove Cross Sell & Up Sell-->
 	<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
 	</productAttributeGroup>
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>CreditDetails</attributeGroupName>
+		<productAttributes>
+			<attributeName>minimumCreditAvaliableZAR</attributeName>
+			<value>2000</value>
+		</productAttributes>
+	</productAttributeGroup>
 
+	<!--Case and Process Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
 		<productAttributes>
@@ -332,13 +341,6 @@
 			<attributeType>string</attributeType>
 			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
 			<value>classname=za.co.nb.offermanagement.eligibility.handler.BranchEligibilityRule</value>
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>CreditDetails</attributeGroupName>
-		<productAttributes>
-			<attributeName>minimumCreditAvaliableZAR</attributeName>
-			<value>2000</value>
 		</productAttributes>
 	</productAttributeGroup>
 
