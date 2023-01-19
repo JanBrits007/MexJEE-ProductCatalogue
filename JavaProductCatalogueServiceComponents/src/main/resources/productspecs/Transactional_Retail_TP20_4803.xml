@@ -3,6 +3,19 @@
    <name>MiGoals Premium</name>
    <shortDescription>(Transactional_Retail_TP20_4803) MiGoals Premium</shortDescription>
 
+   <!--VerifyIdentity-->
+   <productAttributeGroup action="overwrite"> <!--overriden to allow cross sell of credit on web self assisted-->
+      <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=SelfServiceKiosk</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Your income details~ZOrder=100~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~applicableChannels=WebSelfAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--FinalizeFrontOfficeInteraction-->
    <productAttributeGroup action="overwrite"><!--Overwritten as PAYU does not get eNotes and instead gets a tile on the you are done screen-->
       <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
