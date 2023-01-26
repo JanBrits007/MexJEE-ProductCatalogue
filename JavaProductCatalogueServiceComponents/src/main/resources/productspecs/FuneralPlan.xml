@@ -1064,54 +1064,6 @@
     </productAttributeGroup-->
 
    <!--Features-->
-   <features>
-      <featureIdentifier>1332</featureIdentifier>
-      <name>Payments Mandate</name>
-      <mandatory>false</mandatory>
-      <preSelected>false</preSelected>
-      <shortDescription>This feature represents the Payment mandate given by the client (debicheck)</shortDescription>
-      <description>Detailed description of feature</description>
-      <featureType>BoltOn</featureType>
-      <referenceProductID>-1</referenceProductID>
 
-      <!--ActivateProductsGatherProductDetails-->
-      <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>LoanRepayment|ng-component=DebiCheckWidgetComponent~ProceduralStepName=DebiCheck debit order setup~ZOrder=180</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
-
-      <!--FinalizeFrontOfficeInteraction-->
-      <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~child-ng-components=DebiCheckStatusComponent~HideProceduralStep=true~ZOrder=50</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
-
-      <featureAttributeGroup>
-         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>baseCBOActivityList</attributeName>
-            <value>ManageMandateDependency</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>CaseActivityTeamName_ManageMandateDependency</attributeName>
-            <value>System|Weighting=0</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>CaseActivityPriority_ManageMandateDependency</attributeName>
-            <value>0|Weighting=0</value>
-         </featureAttributes>
-      </featureAttributeGroup>
-
-
-   </features>
 
 </product>
