@@ -16,6 +16,36 @@
 <!--      </productAttributes>-->
    </productAttributeGroup>
 
+   <!--FinancialExtendedDetails-->
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_FinancialExtendedDetails</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>SkipFinancialDetails|ng-component=SkipFinancialDetails</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--GenerateOffer-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=EnotesVASComponent-1374~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~retailProduct=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>ProductSetupSummary|ng-component=ProductSetupSummaryComponent~ZOrder=50~retailProduct=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~retailProduct=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>AlternateProductOfferSelection|ng-component=AlternateProductsComponent~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--Decisioning control-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>DecisioningControl</attributeGroupName>
@@ -97,7 +127,7 @@
       <!--CDE Available Actions-->
       <productAttributes>
          <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
-         <attributeName>AcceptOffer|child-ng-components=ContinueWithoutCreditDeclineAction~child-ng-components=TpCreditOffer~child-ng-components=LeaveApplicationDeclineAction</attributeName>
+         <attributeName>acceptOffer|child-ng-components=ContinueWithoutCreditDeclineAction~child-ng-components=TpCreditOffer~child-ng-components=LeaveApplicationDeclineAction</attributeName>
       </productAttributes>
       <!--Web Decision Engine Decline for staff FAIS registration-->
       <productAttributes>
@@ -252,7 +282,7 @@
           </featureAttributes>
           <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~displaySummary=true</attributeName>
+            <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~displaySummary=true~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
           </featureAttributes>
       </featureAttributeGroup>
 
