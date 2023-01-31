@@ -43,6 +43,67 @@
          <value>classname=za.co.nb.offermanagement.eligibility.handler.ExistingPolicyEligibilityHandler</value>
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>EligibilityRules</attributeGroupName>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Age</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>18</minValue>
+         <maxValue>55</maxValue>
+         <valueUnit>year</valueUnit>
+         <description>You need to be 18 or older</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Income</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>0</minValue>
+         <maxValue>99999999</maxValue>
+         <valueUnit>ZAR</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>NaturalPerson</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>CreditApproval</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>NotUnderCreditAdministration</attributeName>
+         <isComparable>false</isComparable>
+         <value>true</value>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EligibleDCARRanges</attributeName>
+         <value>0-100000|100001-200000</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>EligibleSegments</attributeName>
+         <value>${{RetailEligibleSegments}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+         <value>${{FAIS_OnBehalfOfBranchList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+         <value>${{FAIS_StaffBranchOverideList}}</value>
+      </productAttributes>
+   </productAttributeGroup>
 
    <!--VerifyIdentity-->
    <productAttributeGroup>
@@ -83,10 +144,6 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Setting up your product~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
       </productAttributes>
-<!--      <productAttributes>-->
-<!--         <attributeType>clientInformationRequirement</attributeType>-->
-<!--         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>-->
-<!--      </productAttributes>-->
    </productAttributeGroup>
 
    <!--AlternativeProductSelection-->
@@ -94,7 +151,7 @@
       <attributeGroupName>productInformationRequirement_AlternativeProductSelection</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>AlternativeProductSelection|ng-component=AlternativeProductSelectionComponent~ZOrder=100~HideProceduralStep=true</attributeName>
+         <attributeName>AlternativeProductSelection|ng-component=AlternativeProductSelectionComponent~ProceduralStepName=You already have the product you selected, you can still enjoy additional benefits by selecting one of the other funeral packages.~ZOrder=100~HideProceduralStep=true</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -113,10 +170,6 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryFuneralPlanComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
       </productAttributes>
-<!--      <productAttributes>-->
-<!--         <attributeType>clientInformationRequirement</attributeType>-->
-<!--         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>-->
-<!--      </productAttributes>-->
    </productAttributeGroup>
 
    <!--ActivateProductsGatherClientDetails-->
@@ -133,10 +186,6 @@
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture~displaySummary=true</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -550,67 +599,6 @@
    </productAttributeGroup>
 
    <!-- Case and Process Configuration -->
-   <productAttributeGroup>
-      <attributeGroupName>EligibilityRules</attributeGroupName>
-      <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <attributeName>Age</attributeName>
-         <isComparable>false</isComparable>
-         <minValue>18</minValue>
-         <maxValue>55</maxValue>
-         <valueUnit>year</valueUnit>
-         <description>You need to be 18 or older</description>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <attributeName>Income</attributeName>
-         <isComparable>false</isComparable>
-         <minValue>0</minValue>
-         <maxValue>99999999</maxValue>
-         <valueUnit>ZAR</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <attributeName>NaturalPerson</attributeName>
-         <isComparable>false</isComparable>
-         <value>true</value>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <attributeName>CreditApproval</attributeName>
-         <isComparable>false</isComparable>
-         <value>true</value>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <attributeName>NotUnderCreditAdministration</attributeName>
-         <isComparable>false</isComparable>
-         <value>true</value>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>EligibleDCARRanges</attributeName>
-         <value>0-100000|100001-200000</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>EligibleSegments</attributeName>
-         <value>${{RetailEligibleSegments}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
-         <value>${{FAIS_OnBehalfOfBranchList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>FAIS_StaffBranchOverrideList</attributeName>
-         <value>${{FAIS_StaffBranchOverideList}}</value>
-      </productAttributes>
-   </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationConfiguration</attributeGroupName>
       <productAttributes>
@@ -1076,54 +1064,6 @@
     </productAttributeGroup-->
 
    <!--Features-->
-   <features>
-      <featureIdentifier>1332</featureIdentifier>
-      <name>Payments Mandate</name>
-      <mandatory>false</mandatory>
-      <preSelected>false</preSelected>
-      <shortDescription>This feature represents the Payment mandate given by the client (debicheck)</shortDescription>
-      <description>Detailed description of feature</description>
-      <featureType>BoltOn</featureType>
-      <referenceProductID>-1</referenceProductID>
 
-      <!--ActivateProductsGatherProductDetails-->
-      <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>LoanRepayment|ng-component=DebiCheckWidgetComponent~ProceduralStepName=DebiCheck debit order setup~ZOrder=180</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
-
-      <!--FinalizeFrontOfficeInteraction-->
-      <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~child-ng-components=DebiCheckStatusComponent~HideProceduralStep=true~ZOrder=50</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
-
-      <featureAttributeGroup>
-         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>baseCBOActivityList</attributeName>
-            <value>ManageMandateDependency</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>CaseActivityTeamName_ManageMandateDependency</attributeName>
-            <value>System|Weighting=0</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>int</attributeType>
-            <attributeName>CaseActivityPriority_ManageMandateDependency</attributeName>
-            <value>0|Weighting=0</value>
-         </featureAttributes>
-      </featureAttributeGroup>
-
-
-   </features>
 
 </product>

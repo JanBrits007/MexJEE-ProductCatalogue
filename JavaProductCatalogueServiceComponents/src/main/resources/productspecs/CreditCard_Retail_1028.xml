@@ -3,6 +3,29 @@
     <name>The American Express Platinum Card</name>
     <shortDescription>(CreditCard_Retail_1028) This is The American Express Platinum Card</shortDescription>
 
+    <!--GenerateOfferVerifyEligibility-->
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>EligibilityRules</attributeGroupName>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>Age</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>18</minValue>
+            <maxValue>999</maxValue>
+            <valueUnit>year</valueUnit>
+            <description>user-icon|You need to be 18 years or older.</description>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>Income</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>750000</minValue>
+            <maxValue>999999</maxValue>
+            <valueUnit>ZAR</valueUnit>
+            <description>income|You need to earn R750 000 per annum or more.</description>
+        </productAttributes>
+    </productAttributeGroup>
+
     <!--GenerateOfferGatherProductDetails-->
     <productAttributeGroup action="overwrite">
         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
@@ -29,36 +52,6 @@
         <productAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
-        </productAttributes>
-    </productAttributeGroup>
-
-    <!--Offer Configuration-->
-    <productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
-        <attributeGroupName>VASCrossSellControl</attributeGroupName>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1334</attributeName><!--Membership Rewards-->
-            <value>Optionality=Mandatory~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1465</attributeName><!--Redemption Card-->
-            <value>Optionality=Optional~IsTakenUp=false</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1100</attributeName><!--Credit Card Insurance-->
-            <value>Optionality=Optional~IsTakenUp=false</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_9999</attributeName><!--Priority pass-->
-            <value>Optionality=Mandatory~IsTakenUp=true</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>VAS_1029</attributeName><!--Plastic Card-->
-            <value>Optionality=Optional~IsTakenUp=true</value>
         </productAttributes>
     </productAttributeGroup>
 
@@ -104,6 +97,41 @@
             <attributeType>string</attributeType>
             <attributeName>OfferSelectionSummaryDetails</attributeName>
             <value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1028</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
+        <attributeGroupName>VASCrossSellControl</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>VAS_1334</attributeName><!--Membership Rewards-->
+            <value>Optionality=Mandatory~IsTakenUp=true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>VAS_1465</attributeName><!--Redemption Card-->
+            <value>Optionality=Mandatory~IsTakenUp=true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>VAS_1100</attributeName><!--Credit Card Insurance-->
+            <value>Optionality=Optional~IsTakenUp=false</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>VAS_9999</attributeName><!--Priority pass-->
+            <value>Optionality=Mandatory~IsTakenUp=true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>VAS_1029</attributeName><!--Plastic Card-->
+            <value>Optionality=Optional~IsTakenUp=true</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>CreditDetails</attributeGroupName>
+        <productAttributes>
+            <attributeName>minimumCreditAvaliableZAR</attributeName>
+            <value>5000</value>
         </productAttributes>
     </productAttributeGroup>
 
@@ -174,37 +202,6 @@
             <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
         </productAttributes>
     </productAttributeGroup>
-
-    <productAttributeGroup action="overwrite">
-        <attributeGroupName>EligibilityRules</attributeGroupName>
-        <productAttributes>
-            <attributeType>EligibilityRule</attributeType>
-            <attributeName>Age</attributeName>
-            <isComparable>false</isComparable>
-            <minValue>18</minValue>
-            <maxValue>999</maxValue>
-            <valueUnit>year</valueUnit>
-            <description>user-icon|You need to be 18 years or older.</description>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>EligibilityRule</attributeType>
-            <attributeName>Income</attributeName>
-            <isComparable>false</isComparable>
-            <minValue>750000</minValue>
-            <maxValue>999999</maxValue>
-            <valueUnit>ZAR</valueUnit>
-            <description>income|You need to earn R750 000 per annum or more.</description>
-        </productAttributes>
-    </productAttributeGroup>
-
-    <productAttributeGroup action="overwrite">
-        <attributeGroupName>CreditDetails</attributeGroupName>
-        <productAttributes>
-            <attributeName>minimumCreditAvaliableZAR</attributeName>
-            <value>5000</value>
-        </productAttributes>
-    </productAttributeGroup>
-
 
     <!--1029 - Plastic Card (this should be 1028 but we are using 1029 since it contradicts with the product ID)-->
     <features>

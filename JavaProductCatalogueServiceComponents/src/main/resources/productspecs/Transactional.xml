@@ -56,16 +56,12 @@
       <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep</attributeName>
+         <attributeName>OfferHeader|ProceduralStepName=Your offer~ZOrder=85~StepType=HeaderStep~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryTransactionalProductComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
+         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryTransactionalProductComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
-<!--      <productAttributes>-->
-<!--         <attributeType>clientInformationRequirement</attributeType>-->
-<!--         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>-->
-<!--      </productAttributes>-->
    </productAttributeGroup>
 
    <!--ActivateProductsGatherClientDetails-->
@@ -123,7 +119,7 @@
       <attributeGroupName>clientInformationRequirement_GatherEvidence</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>GatherEvidence|ng-component=UploadYourDocumentsComponent~ProceduralStepName=Upload your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~applicableChannels=SelfServiceKiosk</attributeName>
+         <attributeName>GatherEvidence|ng-component=UploadYourDocumentsComponent~ProceduralStepName=Uploading your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~applicableChannels=SelfServiceKiosk</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -191,6 +187,13 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>NedbankID|ng-component=StaffAssistedNedbankIdComponent~ProceduralStepName=Nedbank ID~ZOrder=50~applicableChannels=BranchStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.CombinedProductContractUniversalDocumentFilter</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -569,7 +572,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RecursiveGNBAIntents</attributeName>
-         <value>GenerateOfferVerifyEligibility|FinancialDetails|GenerateOfferGatherClientDetails|GenerateOfferGatherProductDetails|AppealWithLongForm|AppealWithoutLongForm|DeclineAppealWithLongForm|DeclineAppealWithoutLongForm|LimitAppealWithLongForm|LimitAppealWithoutLongForm|PricingAppealWithLongForm|PricingAppealWithoutLongForm|GenerateApplicationOfferProposals</value>
+         <value>GenerateOfferVerifyEligibility|FinancialDetails|GenerateOfferGatherClientDetails|GenerateOfferGatherProductDetails|AppealWithLongForm|AppealWithoutLongForm|GenerateApplicationOfferProposals</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -732,6 +735,11 @@
          <attributeType>string</attributeType>
          <attributeName>CODHandler_FinancialDetails</attributeName>
          <value>${{CODHandler_FinancialDetails}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>DAM</attributeType>
+         <attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>

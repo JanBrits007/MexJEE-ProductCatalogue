@@ -3,37 +3,43 @@
 	<name>The American Express Centurion Card</name>
 	<shortDescription>(CreditCard_Retail_1490) The American Express Centurion Card</shortDescription>
 
-	<!--Case and Process Configuration-->
+	<!--GenerateOfferVerifyEligibility-->
 	<productAttributeGroup action="overwrite">
-		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+		<attributeGroupName>EligibilityRules</attributeGroupName>
 		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>frontOfficeIntentSequence</attributeName>
-			<value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Age</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>18</minValue>
+			<maxValue>999</maxValue>
+			<valueUnit>year</valueUnit>
+			<description>user-icon|You need to be 18 years or older.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>200000</minValue>
+			<maxValue>750000</maxValue>
+			<valueUnit>ZAR</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Invitation</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+			<description>invitation-only|By invitation only</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
-			<value>GenerateApplicationOfferProposals|FinancialDetails|GenerateOfferGatherClientDetails</value>
+			<attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+			<value>${{FAIS_OnBehalfOfBranchList}}</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>breadcrumbSteps</attributeName>
-			<value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>GNBAIntentToActivityMapping</attributeName>
-			<value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--ActivateProductsGatherProductDetails-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
+			<attributeName>FAIS_StaffBranchOverrideList</attributeName>
+			<value>${{FAIS_StaffBranchOverideList}}</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -66,33 +72,16 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-	<!--Offer Configuration-->
-	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
-		<attributeGroupName>VASCrossSellControl</attributeGroupName>
+	<!--ActivateProductsGatherProductDetails-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1334</attributeName><!--Membership Rewards-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1465</attributeName><!--Redemption Card-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_9999</attributeName><!--Priority Pass-->
-			<value>Optionality=Optional~IsTakenUp=false</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>VAS_1028</attributeName><!--Plastic Card-->
-			<value>Optionality=Optional~IsTakenUp=true</value>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Document Configuration-->
-
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
 		<productAttributes>
@@ -116,7 +105,6 @@
 			<attributeName>Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 		<productAttributes>
@@ -152,6 +140,29 @@
 	</productAttributeGroup>
 
 	<!--Case and Process Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>frontOfficeIntentSequence</attributeName>
+			<value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+			<value>GenerateApplicationOfferProposals|FinancialDetails|GenerateOfferGatherClientDetails</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>breadcrumbSteps</attributeName>
+			<value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GNBAIntentToActivityMapping</attributeName>
+			<value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+		</productAttributes>
+	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
 		<productAttributes>
@@ -262,7 +273,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>baseCBOActivityList</attributeName>
-			<value>CreditDecisionDetermineOffer|ConfigureArrangement|ConfigureArrangement~PreFICAProvision|GatherContractPostProvision|ConfirmVerificationQuality|CBOFinalizeCase</value>
+			<value>CreditDecisionDetermineOffer|ConfigureArrangement|ConfigureArrangement~PreFICAProvision|GatherContractPostProvision|ConfirmVerificationQuality~9001|CBOFinalizeCase</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -355,6 +366,32 @@
 			<value>0|Weighting=0</value>
 		</productAttributes>
 	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>DecisionTreeConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>EvaluateCase_DecisionTree</attributeName>
+			<value>classname=evaluateCaseDecisionTreePostProvisioningPAQUpload</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup  action="overwrite">
+		<attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CommunicationSystem</attributeName>
+			<value>GenCom</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>productType</attributeName>
+			<value>EMAILSMS</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CommunicationPattern</attributeName>
+			<value>Pattern7_Centurion</value>
+		</productAttributes>
+	</productAttributeGroup>
 
 	<!--Offer Configuration-->
 	<productAttributeGroup action="overwrite">
@@ -364,6 +401,36 @@
 			 <attributeName>OfferSelectionSummaryDetails</attributeName>
 			 <value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1027</value>
 		 </productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
+		<attributeGroupName>VASCrossSellControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1334</attributeName><!--Membership Rewards-->
+			<value>Optionality=Mandatory~IsTakenUp=true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1465</attributeName><!--Redemption Card-->
+			<value>Optionality=Mandatory~IsTakenUp=true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_9999</attributeName><!--Priority Pass-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1028</attributeName><!--Plastic Card-->
+			<value>Optionality=Optional~IsTakenUp=true</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>CreditDetails</attributeGroupName>
+		<productAttributes>
+			<attributeName>minimumCreditAvaliableZAR</attributeName>
+			<value>5000</value>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--Provisioning Configuration-->
@@ -434,53 +501,6 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>EligibilityRules</attributeGroupName>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Age</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>18</minValue>
-			<maxValue>999</maxValue>
-			<valueUnit>year</valueUnit>
-			<description>user-icon|You need to be 18 years or older.</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Income</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>200000</minValue>
-			<maxValue>750000</maxValue>
-			<valueUnit>ZAR</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Invitation</attributeName>
-			<isComparable>false</isComparable>
-			<value>true</value>
-			<valueUnit>bool</valueUnit>
-			<description>invitation-only|By invitation only</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>FAIS_OnBehalfOfBranchList</attributeName>
-			<value>${{FAIS_OnBehalfOfBranchList}}</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>FAIS_StaffBranchOverrideList</attributeName>
-			<value>${{FAIS_StaffBranchOverideList}}</value>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>CreditDetails</attributeGroupName>
-		<productAttributes>
-			<attributeName>minimumCreditAvaliableZAR</attributeName>
-			<value>5000</value>
-		</productAttributes>
-	</productAttributeGroup>
-
 	<!--Evidence And Compliance Requirements-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
@@ -548,10 +568,9 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=80~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
+			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=80~child-ng-components=IncomeFrequencyComponent~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-
 
 	<!--VerifyIdentity-->
 	<productAttributeGroup action="overwrite">
@@ -595,7 +614,6 @@
 			<attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=CreditApplicationStatusComponent-1032~child-ng-components=CreditAccountDetails~child-ng-components=LockerCollectCardComponent~HideProceduralStep=true~ZOrder=50</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-
 
 	<features>
 		<featureIdentifier>1028</featureIdentifier>

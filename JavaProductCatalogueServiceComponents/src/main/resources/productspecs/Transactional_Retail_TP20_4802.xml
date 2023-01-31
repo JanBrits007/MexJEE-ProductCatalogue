@@ -12,7 +12,8 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDone|ng-component=YouAreDoneComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalProductAccountDetails~child-ng-components=EnotesComponent~HideProceduralStep=true~ZOrder=50</attributeName>
+         <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=SSKInstantCardIssuePrimer~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalProductAccountDetails~child-ng-components=ApplyForCredit~child-ng-components=DebitOrderSwitching~child-ng-components=SwitchingToNedbank~child-ng-components=ForgotYourCard~child-ng-components=EarnAsYouSwipe~child-ng-components=Statements~child-ng-components=GettingTheMobileApp~HideProceduralStep=true~ZOrder=50</attributeName>
+         <!-- <attributeName>YoureDone|ng-component=YouAreDoneComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalProductAccountDetails~child-ng-components=EnotesComponent~HideProceduralStep=true~ZOrder=50</attributeName> -->
       </productAttributes>
    </productAttributeGroup>
 
@@ -73,7 +74,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>EligibleDCARRanges</attributeName>
-         <value>1000-1999|11000-11999|31000-31800|31851-31999|36000-36999|46000-46999|51000-51999|56000-56999|61000-61999|71000-71999|81400-81499|86000-86999|91000-91999</value>
+         <value>1000-1999|6000-6999|11000-11999|31000-31800|31851-31999|36000-36999|46000-46999|51000-51999|56000-56999|61000-61999|71000-71999|81400-81499|86000-86999|91000-91999</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -89,6 +90,41 @@
          <attributeType>string</attributeType>
          <attributeName>FAIS_StaffBranchOverrideList</attributeName>
          <value>${{FAIS_StaffBranchOverideList}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--Offer Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>VASCrossSellControl</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>DontCrossSellOnBaseComponentStatuses</attributeName>
+         <value>1012</value><!--Open-->
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1025</attributeName><!--Funeral Cover-->
+         <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_219</attributeName><!--Instant Gold Cheque Card-->
+         <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1402</attributeName><!--My Pocket-->
+         <value>Optionality=Optional~IsTakenUp=true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1374</attributeName><!--eNotes-->
+         <value>Optionality=Mandatory~IsTakenUp=true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1008</attributeName><!--No-funds alert-->
+         <value>Optionality=Mandatory~IsTakenUp=true</value>
       </productAttributes>
    </productAttributeGroup>
 

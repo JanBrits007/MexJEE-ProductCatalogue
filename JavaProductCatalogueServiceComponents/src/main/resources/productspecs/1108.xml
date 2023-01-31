@@ -548,17 +548,17 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>LeadEmailAddressProd</attributeName>
-         <value>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
+         <value>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>ConversionLeadEmailAddressNonProd</attributeName>
-         <value>LudieP@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
+         <value>LudieP@Nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>ConversionLeadEmailAddressProd</attributeName>
-         <value>PRBSales@nedbank.co.za;Aliciap@Nedbank.co.za</value>
+         <value>PRBSales@nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -716,8 +716,12 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
-         <attributeName>LimitIncreaseSubstitutionRulesV2</attributeName>
-         <value>NA</value>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{dynamicStaffList}}</value>
+      </productAttributes>
+       <productAttributes>
+         <attributeName>SubstituteForIPSubnets</attributeName>
+         <value>192.168.0.0|172.238.0.0|168.142.0.0|172.28.0.0</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -727,12 +731,8 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
-         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{dynamicStaffList}}</value>
-      </productAttributes>
-       <productAttributes>
-         <attributeName>SubstituteForIPSubnets</attributeName>
-         <value>192.168.0.0|172.238.0.0|168.142.0.0|172.28.0.0</value>
+         <attributeName>LimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>NA</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -753,6 +753,17 @@
           <attributeName>SubstituteForProductID</attributeName>
           <value>Transactional_RRB_1108</value>
        </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>LimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>NA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_RRB_1108</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
@@ -871,7 +882,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>LeadEmailAddressProd</attributeName>
-            <value>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
+            <value>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
