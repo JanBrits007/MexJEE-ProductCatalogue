@@ -6,6 +6,7 @@ import za.co.nb.productcatalogue.dao.ProductCataloguesDAO;
 import za.co.nb.productcatalogue.dao.dto.CachedCatalogueDetails;
 import za.co.nb.productcatalogue.dto.ProductIdentifiers;
 import za.co.nb.productcatalogue.services.rest.resources.cache.ProductCatalogueCache;
+import za.co.nb.rest.interceptors.CommonInboundRESTAPIInterceptor;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.security.PermitAll;
@@ -48,6 +49,7 @@ public class ProductCatalogueResource {
     }
         
     @GET
+    @CommonInboundRESTAPIInterceptor
     @Path( "/{id}" )
     @Produces( MediaType.APPLICATION_JSON )
     public Response getProductCatalogueByID( @PathParam( "id" ) String id ) {
@@ -98,6 +100,7 @@ public class ProductCatalogueResource {
     }
 
     @GET
+    @CommonInboundRESTAPIInterceptor
     @Path( "/invalidate" )
     @Produces( MediaType.APPLICATION_JSON )
     public Response invalidateCache( ) {
@@ -114,6 +117,7 @@ public class ProductCatalogueResource {
     }
 
     @GET
+    @CommonInboundRESTAPIInterceptor
     @Path( "/reload" )
     @Produces( MediaType.APPLICATION_JSON )
     public Response reloadCache( ) {
@@ -130,6 +134,7 @@ public class ProductCatalogueResource {
     }
     
     @POST
+    @CommonInboundRESTAPIInterceptor
     @Path( "/selection" )
     @Produces( MediaType.APPLICATION_JSON )
     @Consumes( "application/json" )
