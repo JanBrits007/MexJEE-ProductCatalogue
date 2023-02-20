@@ -6,6 +6,7 @@ import za.co.nb.dto.ResultSet;
 import za.co.nb.productcatalogue.dto.AnsweredQuestionList;
 import za.co.nb.productcatalogue.dto.ProductRecommendationResponse;
 import za.co.nb.productcatalogue.services.rest.service.ProductRecommendationService;
+import za.co.nb.rest.interceptors.CommonInboundRESTAPIInterceptor;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
@@ -30,6 +31,7 @@ public class ProductRecommendationResource {
      * @return JSON Response
      */
     @POST
+    @CommonInboundRESTAPIInterceptor
     @Path("/productrecommendations")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
