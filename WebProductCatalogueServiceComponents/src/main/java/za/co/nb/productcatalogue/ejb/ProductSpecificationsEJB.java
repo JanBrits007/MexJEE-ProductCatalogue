@@ -5,8 +5,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import za.co.nb.common.helper.namespacebinding.CachedNameSpaceBindingHelper;
 import za.co.nb.juristic.productcatalogue.remoteejb.IJuristicProductSpecifications;
+import za.co.nb.onboarding.casemanagement.BusinessCaseManagementDAO;
 import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
-import za.co.nb.productcatalogue.cases.dao.BusinessCaseDAO;
 import za.co.nb.productcatalogue.dao.ArrangementMetricsDAO;
 import za.co.nb.productcatalogue.ejb.substitution.Banker;
 import za.co.nb.productcatalogue.ejb.substitution.Channel;
@@ -149,7 +149,8 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
     public ProductType getProductSpecificationByIDAndCaseID(String productSpecificationID, String caseID) throws Exception {
         mLog.debug("Trace 1 >>" + productSpecificationID + "<<,>>" + caseID + "<<");
-        BusinessCaseDAO dao = new BusinessCaseDAO();
+        //BusinessCaseDAO dao = new BusinessCaseDAO();
+        BusinessCaseManagementDAO dao = new BusinessCaseManagementDAO();
         BusinessCaseHeader caseHeader = dao.retrieveBusinessCase(caseID);
         // Get the product spec.
         if(caseID != null){
