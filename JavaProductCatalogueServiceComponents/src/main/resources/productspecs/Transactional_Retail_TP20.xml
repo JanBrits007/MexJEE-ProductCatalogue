@@ -24,17 +24,26 @@
    <!--ActivateProductsGatherClientDetails-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
+      
+      <!-- all but moneyapp -->
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~displaySummary=true</attributeName>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~displaySummary=true~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=SelfServiceKiosk</attributeName>
       </productAttributes>
+      <!-- moneyapp only-->
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~displaySummary=true~applicableChannels=MobileSelfAssisted</attributeName>
+      </productAttributes>
+
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true</attributeName>
       </productAttributes>
+      
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture~displaySummary=true</attributeName>
+         <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture~displaySummary=true</attributeName>
       </productAttributes>
 <!--      <productAttributes>-->
 <!--         <attributeType>clientInformationRequirement</attributeType>-->
