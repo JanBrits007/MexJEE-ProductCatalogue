@@ -1726,7 +1726,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~HideProceduralStep=true~child-ng-components=InstantGoldChequeCardProvisionInBranchComponent-219~child-ng-components=CardCollectionNotificationComponent-219~child-ng-components=LockerCollectCardComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there!~HideProceduralStep=true~child-ng-components=InstantGoldChequeCardProvisionInBranchComponent-219~child-ng-components=CardCollectionNotificationComponent-219~child-ng-components=LockerCollectCardComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -1761,7 +1761,7 @@
    <!--1386 - Gold Cheque Card-->
    <features>
       <featureIdentifier>1386</featureIdentifier>
-      <name>Gold Cheque Card</name>
+      <name>Gold Debit Card</name>
 
       <!--GenerateOffer-->
       <featureAttributeGroup>
@@ -1790,7 +1790,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-1386~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there!~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-1386~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -2009,6 +2009,43 @@
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=OverdraftAssuranceComponent-1446~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!-- Case and Process Configuration -->
+      <featureAttributeGroup>
+         <attributeGroupName>SystemRelated</attributeGroupName>
+         <featureAttributes>
+            <attributeType>Flag</attributeType>
+            <attributeName>StraightThroughProcess</attributeName>
+            <value>true</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>provisionInBranch</attributeName>
+            <valueUnit>boolean</valueUnit>
+            <value>false</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
+
+
+   <!--1101 - Overdraft Assurance new code for OD flow-->
+   <features>
+      <featureIdentifier>1101</featureIdentifier>
+      <name>Overdraft Assurance</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=OverdraftAssuranceComponent-1101~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
