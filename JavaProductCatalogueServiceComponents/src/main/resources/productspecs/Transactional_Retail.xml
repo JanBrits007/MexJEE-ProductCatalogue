@@ -2033,4 +2033,41 @@
          </featureAttributes>
       </featureAttributeGroup>
    </features>
+
+
+   <!--1101 - Overdraft Assurance new code for OD flow-->
+   <features>
+      <featureIdentifier>1101</featureIdentifier>
+      <name>Overdraft Assurance</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=OverdraftAssuranceComponent-1101~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!-- Case and Process Configuration -->
+      <featureAttributeGroup>
+         <attributeGroupName>SystemRelated</attributeGroupName>
+         <featureAttributes>
+            <attributeType>Flag</attributeType>
+            <attributeName>StraightThroughProcess</attributeName>
+            <value>true</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>provisionInBranch</attributeName>
+            <valueUnit>boolean</valueUnit>
+            <value>false</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
 </product>
