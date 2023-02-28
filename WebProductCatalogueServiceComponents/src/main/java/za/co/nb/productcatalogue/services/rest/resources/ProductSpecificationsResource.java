@@ -11,6 +11,7 @@ import org.apache.commons.logging.LogFactory;
 import za.co.nb.productcatalogue.dao.ProductSpecificationsJSONServiceDAO;
 import za.co.nb.productcatalogue.ejb.ProductTypeCacheEJB;
 import za.co.nb.productcatalogue.util.ProductSpecificationSubstitutionUtil;
+import za.co.nb.rest.interceptors.CommonInboundRESTAPIInterceptor;
 
 import javax.annotation.security.PermitAll;
 import javax.ejb.EJB;
@@ -48,6 +49,7 @@ public class ProductSpecificationsResource {
     }
         
     @GET
+    @CommonInboundRESTAPIInterceptor
     @Path( "/{id}" )
     @Produces( MediaType.APPLICATION_JSON )
     public Response getProductSpecificationByID( @PathParam( "id" ) String id, @QueryParam(value="caseID")String caseID) {
@@ -95,6 +97,7 @@ public class ProductSpecificationsResource {
 	}
 
 	@GET
+    @CommonInboundRESTAPIInterceptor
 	@Path("/cache/invalidate")
 	public Response invalidate(){
     	productTypeCacheEJB.invalidate();

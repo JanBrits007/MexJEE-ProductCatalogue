@@ -36,10 +36,10 @@
          <attributeType>EligibilityRule</attributeType>
          <attributeName>Income</attributeName>
          <isComparable>false</isComparable>
-         <minValue>3500.00</minValue>
+         <minValue>5000.00</minValue>
          <maxValue>99999999</maxValue>
          <valueUnit>ZAR</valueUnit>
-         <description>icon_earn|You need to earn at least R3 500.00 a month.</description>
+         <description>icon_earn|You need to earn at least R5 000.00 a month.</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
@@ -90,6 +90,20 @@
       </productAttributes>
    </productAttributeGroup>
 
+
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_All</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementIncomeDeclineFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
 
    <productAttributeGroup action="overwrite">
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>

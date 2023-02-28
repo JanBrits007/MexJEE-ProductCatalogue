@@ -3,7 +3,6 @@
 	<name>Base Business Loan Specification</name>
 	<shortDescription>Base Business Loan Specification</shortDescription>
 
-
 	<!--Evidence And Compliance Requirements-->
 	<productAttributeGroup>
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
@@ -33,7 +32,7 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-	<!--GenerateOfferVerifyEligibility-->
+	<!--GenerateOfferVerifyEligibility -->
 
 	<!--VerifyIdentity-->
 	<productAttributeGroup>
@@ -174,7 +173,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90~child-ng-components=BusinessIncomeDetailsComponent~child-ng-components=BusinessDebtObligationsComponent~child-ng-components=BusinessExpensesComponent~ActiveOnInitialWorkItemExecution=true~DefaultIncomeFrequency=1002~readOnly=true</attributeName>
+			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90~child-ng-components=BusinessIncomeDetailsComponent~child-ng-components=BusinessDebtObligationsComponent~child-ng-components=BusinessExpensesComponent~child-ng-components=FinancialDetailsIncorrectAppealComponent~ActiveOnInitialWorkItemExecution=true~DefaultIncomeFrequency=1002~readOnly=true</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -495,7 +494,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCondensedIncomeAndExpenses</attributeName>
+			<attributeName>subOrganizationsIncomeAndExpenses</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -503,11 +502,11 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subGenericTCForCreditProducts</attributeName>
+			<attributeName>subOrganizationsGenericTCForCreditProducts</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subGenericImpConfirmation</attributeName>
+			<attributeName>subOrganizationsGenericImpConfirmation</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -518,15 +517,11 @@
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subPersonalLoan|ContractComponentProductType=1146</attributeName>
+			<attributeName>subEasyLoan|ContractComponentProductType=9624</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subPLTC|ContractComponentProductType=1146</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>subConsolidations|ContractComponentProductType=1146</attributeName>
+			<attributeName>subELTC|ContractComponentProductType=9624</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -726,7 +721,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>RecursiveGNBAIntents</attributeName>
-			<value>GenerateOfferVerifyEligibility|DetermineRelatedBusinessParties|GenerateOfferGatherClientDetails|GenerateOfferGatherProductDetails|AppealWithLongForm|AppealWithoutLongForm|GenerateApplicationOfferProposals</value>
+			<value>NA</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -838,7 +833,7 @@
 			<value>classname=za.co.nb.offermanagement.cod.handler.internal.GenerateOfferTryAgainHandler</value>
 		</productAttributes>
 		<productAttributes>
-			<attributeType>PersonalLoan</attributeType>
+			<attributeType>Generic</attributeType>
 			<attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
 			<value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
 		</productAttributes>
