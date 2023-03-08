@@ -249,10 +249,136 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!--1386-->
+   <!--1386 - Gold Cheque Card-->
    <features action="overwrite">
       <featureIdentifier>1386</featureIdentifier>
-      <name>Platinum Debit Card</name>
+      <name>Platinum Debit Card</name>   
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GoldChequeCardVASComponent-1386~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--ActivateProductsGatherProductDetails-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your cards~restrictOptOut=true~includeTemporaryCard=true~ZOrder=170~ContractComponentProductType=1386</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--FinalizeFrontOfficeInteraction-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-1386~ZOrder=50</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there!~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-1386~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!-- Case and Process Configuration -->
+      <featureAttributeGroup>
+         <attributeGroupName>SystemRelated</attributeGroupName>
+         <featureAttributes>
+            <attributeType>Flag</attributeType>
+            <attributeName>StraightThroughProcess</attributeName>
+            <value>true</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSProdCd</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>CRD</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSCtlAdId</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>C1</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSRelCd</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>PRI</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSCredLnAmt</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>0</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSPayMethod</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>MAN</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSPlasticType</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>AP3</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSCrdStock</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>AS6</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSActType</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>PRI</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSATrRegistrationNbr</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>194905</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>faceToFaceBranch</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>09163</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>CAMSLangCd</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>ENG</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>provisionInBranch</attributeName>
+            <valueUnit>boolean</valueUnit>
+            <value>false</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>FeatureDetails</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productATMLimit</attributeType>
+            <attributeName>ATM_Limit</attributeName>
+            <value>2000</value>
+         </featureAttributes>
+      </featureAttributeGroup>
    </features>
 
 </product>
