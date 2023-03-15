@@ -65,7 +65,7 @@
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>NeedForBusinessYourLoan|ng-component=NeedForYourBusinessLoanComponent~ProceduralStepName=Need for your loan~ZOrder=100~ActiveOnInitialWorkItemExecution=true~minTerm=3~maxTerm=18~defaultTerm=10~minAmount=20000.00~maxAmount=2000000.00~defaultAmount=20000.00~minRatePercentage=7.0~maxRatePercentage=24.5~defaultRatePercentage=18</attributeName>
+			<attributeName>NeedForBusinessYourLoan|ng-component=NeedForYourBusinessLoanComponent~ProceduralStepName=Need for your loan~ZOrder=100~ActiveOnInitialWorkItemExecution=true~minTerm=3~maxTerm=12~defaultTerm=10~minAmount=20000.00~maxAmount=2000000.00~defaultAmount=20000.00~minRatePercentage=7.0~maxRatePercentage=24.5~defaultRatePercentage=18</attributeName>
 			<!--attributeName>NeedForYourBusinessLoan|ng-component=NeedForYourBusinessLoanComponent~ProceduralStepName=Need for your business loan~ZOrder=100~ActiveOnInitialWorkItemExecution=true~minAmount=2000.00~maxAmount=300000.00~minTerm=12~maxTerm=120</attributeName-->
 		</productAttributes>
 		<productAttributes>
@@ -833,7 +833,8 @@
 			<value>classname=za.co.nb.offermanagement.cod.handler.internal.GenerateOfferTryAgainHandler</value>
 		</productAttributes>
 		<productAttributes>
-			<attributeType>Generic</attributeType>
+			<!--attributeType>Generic</attributeType-->
+			<attributeType>PersonalLoan</attributeType>
 			<attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
 			<value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
 		</productAttributes>
@@ -1208,6 +1209,14 @@
 			<attributeType>string</attributeType>
 			<attributeName>EvaluateCase_DecisionTree</attributeName>
 			<value>classname=businessLoanEvaluateCaseDecisionTree</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>ChannelConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>String</attributeType>
+			<attributeName>PushToAlternateChannelEmailAddress</attributeName>
+			<value>${{sBSCallCentreEmailAddress}}</value>
 		</productAttributes>
 	</productAttributeGroup>
 
