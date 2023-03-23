@@ -1,4 +1,4 @@
-library identifier: 'was-shared-jenkins@master', retriever: modernSCM([$class: 'GitSCMSource', remote: 'http://bitbucket.nednet.co.za/scm/admw/jenkins_cr_global.git', credentialsId: '7bd0ae20-aedc-448c-a86f-6700da7b7e29']) _
+library identifier: 'was-shared-jenkins@master', retriever: modernSCM([$class: 'GitSCMSource', remote: 'https://Nedbank-Limited@dev.azure.com/Nedbank-Limited/Eclipse-1.0/_git/Jenkins_CR_Global', credentialsId: 'eeda13c7-af90-463c-a278-eaf39daa20b8']) _
 
 CommercialRelease(
 	workingdir_Target: 'SysProductCatalogueServiceComponents',
@@ -7,5 +7,5 @@ CommercialRelease(
   	deployApp: "BPMX",
 	deployProc: "BPMX",
   	email_recipients: 'supportWAS@nedbank.co.za, suryab@nedbank.co.za',
-    gitUrl: 'http://bitbucket.nednet.co.za/scm/uid6793/bpmexjee-productcataloguecache.git'
+    gitUrl: 'https://Nedbank-Limited@dev.azure.com/Nedbank-Limited/Eclipse-1.0/_git/BPMexJEE-ProductCatalogue'
 )
