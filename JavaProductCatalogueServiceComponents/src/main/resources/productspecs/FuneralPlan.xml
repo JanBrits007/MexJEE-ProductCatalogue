@@ -40,6 +40,11 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.FuneralPlanTPEligibilityHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.ExistingPolicyEligibilityHandler</value>
       </productAttributes>
    </productAttributeGroup>
@@ -345,7 +350,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSINSURANCE|Agreement Contract</attributeName>
+         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -372,8 +377,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <!--attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSINSURANCE|Application</attributeName-->
-         <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+         <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSINSURANCE|Application</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -400,8 +404,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <!--attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSINSURANCE|FAIS Client Acknowledgement</attributeName-->
-         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSINSURANCE|FAIS Client Acknowledgement</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -428,8 +431,7 @@
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <!--attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSINSURANCE|FAIS Client Acknowledgement</attributeName-->
-         <attributeName>Your Fact Based Sale Acknowledgement|nedbank-commercial-release/FAISClientAcknowledgementInsurance|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+         <attributeName>Your Fact Based Sale Acknowledgement|nedbank-commercial-release/FAISClientAcknowledgementInsurance|ARRANGEMENT|APPLICATIONS|APPLICATIONSINSURANCE|FAIS Client Acknowledgement</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -899,41 +901,11 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
-		<attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1019~Transactional_Retail_1019</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1354~Transactional_Retail_1354</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1357~1357</value><!--this is done since there is actually no substitution needed for this product (savvy bundle)-->
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1389~Transactional_Retail_1389</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1474~Transactional_Retail_1474</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>OfferCrossSellSubstitutionMap</attributeName>
-			<value>1155~FuneralPlan</value>
-		</productAttributes>
-	</productAttributeGroup>
-   <productAttributeGroup>
       <attributeGroupName>VASCrossSellControl</attributeGroupName>
       <!-- Add cross sell controll here -->
+   </productAttributeGroup>
+   <productAttributeGroup inheritFromFiles="BaseProduct">
+      <attributeGroupName>OfferCrossSellSubstitutionMappings</attributeGroupName>
    </productAttributeGroup>
 
    <!-- CommunicationStrategyConfiguration -->
