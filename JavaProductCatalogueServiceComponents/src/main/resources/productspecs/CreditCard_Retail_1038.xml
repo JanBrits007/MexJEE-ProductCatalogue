@@ -360,6 +360,227 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>requiresDEAStatement</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>requiresSourcePaylslip</attributeName>
+			<value>false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>requiresSourceEnhancedIncomeAndAffordabilityData</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>requiresConfirmVerificationQualitySignatureTypeCheck</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
+			<value>5</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>ApplicationEndToEndExecutionTimeMinutes</attributeName>
+			<value>90</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>enum</attributeType>
+			<attributeName>riskAnalysisMechanism</attributeName>
+			<value>specific</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>riskAnalysisMechanismIntent0</attributeName>
+			<value>automated</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>enum</attributeType>
+			<attributeName>riskAnalysisMechanismIntent1</attributeName>
+			<value>automated</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>enum</attributeType>
+			<attributeName>riskAnalysisMechanismIntent2</attributeName>
+			<value>automated</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>enum</attributeType>
+			<attributeName>riskAnalysisMechanismIntent3</attributeName>
+			<value>automated</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>enum</attributeType>
+			<attributeName>riskAnalysisMechanismIntent4</attributeName>
+			<value>automated</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODEngine</attributeName>
+			<value>CreditCardCOD</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>SpecialisedLiaisonTeamName</attributeName>
+			<value>CreditCardInformationRetriever</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>AvailableAppealActions</attributeName>
+			<value>Comment</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GatherDocumentsLiaisonTeam</attributeName>
+			<value>PREPROD EDB Party Information Retriever</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>bool</attributeType>
+			<attributeName>FinalCaseQualityAssuranceRequired</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>bool</attributeType>
+			<attributeName>FinalCaseQualityAssuranceSignatureTypeCheck</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>bool</attributeType>
+			<attributeName>FinalCaseQualityAssuranceTeam</attributeName>
+			<value>PREPROD EDB Quality Assurer</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>BPMCARDOFFER</attributeName>
+			<value>BPMCARDROLE</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GNBAVersion</attributeName>
+			<value>2.0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>consumerFrameworkVersion</attributeName>
+			<value>2.0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>baseCBOActivityList</attributeName>
+			<value>CreditDecisionDetermineOffer|ConfigureArrangement|ConfigureArrangement~PreFICAProvision|GatherContractPostProvision|ConfirmVerificationQuality~9001|ConfigureArrangement~PostPAQProvisioning|CBOFinalizeCase</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CreditDecisionDetermineOffer</attributeName>
+			<value>CreditDecisionDetermineOfferTeam|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CreditDecisionDetermineOffer</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_ConfigureArrangement</attributeName>
+			<value>System|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_ConfigureArrangement</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_GatherContractPostProvision</attributeName>
+			<value>System|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_GatherContractPostProvision</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_ConfirmVerificationQuality</attributeName>
+			<value>EDB Quality Assurer|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_ConfirmVerificationQuality</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CBOFinalizeCase</attributeName>
+			<value>System|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CBOFinalizeCase</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_InvestigateFraud</attributeName>
+			<value>EDB Fraud Investigation|Weighting=1</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_InvestigateFraud</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_GatherInformationAndDocuments</attributeName>
+			<value>EDB Party Information Retriever|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_GatherInformationAndDocuments</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CBOVerifyApplicantAndIncome</attributeName>
+			<value>EDB Party Information Verifier|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CBOVerifyApplicantAndIncome</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CBOAssessCreditApplication</attributeName>
+			<value>EDB Credit Assessor|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CBOAssessCreditApplication</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_CBOPresentRevisedOffer</attributeName>
+			<value>EDB Credit Assessor|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_CBOPresentRevisedOffer</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+
 	<!--Provisioning Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productCodeMappings</attributeGroupName>
@@ -448,6 +669,19 @@
 			<attributeName>A letter form you accountant or financial manager (if  you're self employed)</attributeName>
 			<isComparable>false</isComparable>
 			<valueUnit>string</valueUnit>
+		</productAttributes>
+	</productAttributeGroup>
+	
+	<!-- Process Audit Report-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCard|ContractComponentProductType=1038</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1099</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 

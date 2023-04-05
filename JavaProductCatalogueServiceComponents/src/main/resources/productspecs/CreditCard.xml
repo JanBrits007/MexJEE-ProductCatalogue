@@ -353,7 +353,7 @@
 <!--		</productAttributes>-->
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YourDeclaration|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=60~ContractComponentProductType=1001~applicableChannels=WebSelfAssisted~applicableChannels=MobileSelfAssisted</attributeName>
+			<attributeName>YourDeclaration|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=60~ContractComponentProductType=1001~applicableChannels=WebSelfAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -377,7 +377,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there!~child-ng-components=MobileCreateYourLoginDetailsNotificationComponent~child-ng-components=MobileAlsoExpectNotificationComponent~HideProceduralStep=true~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+			<attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there!~child-ng-components=MobileCreateYourLoginDetailsNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=MobileAlsoExpectNotificationComponent~HideProceduralStep=true~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -710,6 +710,57 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<!-- Process Audit Report-->
+	<productAttributeGroup>
+		<attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subYourApplicationHeader</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subNedbankLogo</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCaseAuditData</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subFinancialDetailsAuditData</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subEvidenceAuditData</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subClientAuditData</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subAdditionalClientInfo</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCardIncomeAndExpense</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCard|ContractComponentProductType=1032</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1099</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--Case and Process Configuration-->
 	<productAttributeGroup>
 		<attributeGroupName>OverrideSegmentation</attributeGroupName>
@@ -773,6 +824,11 @@
             <attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
             <value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
         </productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>EvaluateCaseRuleHandlers_GatherAdHocEvidence</attributeName>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.GatherAdHocEvidenceGNBAIntentHandler</value>
+		</productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
             <attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
@@ -1250,6 +1306,13 @@
 			<attributeName>RequiredDataFilter_All</attributeName>
 			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
 		</productAttributes>
+		<!-- 
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredDataFilter_All</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDigitallyActiveFilter</value>
+		</productAttributes>
+		 -->
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
