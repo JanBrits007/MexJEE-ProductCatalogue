@@ -273,7 +273,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>baseCBOActivityList</attributeName>
-			<value>CreditDecisionDetermineOffer|ConfigureArrangement|ConfigureArrangement~PreFICAProvision|GatherContractPostProvision|ConfirmVerificationQuality~9001|ConfigureArrangement~PostPAQProvisioning|CBOFinalizeCase</value>
+			<value>CreditDecisionDetermineOffer|ConfigureArrangement~PreFICAProvision|GatherContractPostProvision|ConfirmVerificationQuality~9001|ConfigureArrangement~PostPAQProvisioning|CBOFinalizeCase</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -625,6 +625,19 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<!-- Process Audit Report-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCard|ContractComponentProductType=1490</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1099</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	
 	<features>
 		<featureIdentifier>1028</featureIdentifier>
 		<name>Plastic Card</name>
@@ -653,6 +666,79 @@
 				<attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=CreditApplicationStatusComponent-1032~child-ng-components=CreditAccountDetails~child-ng-components=CardCollectionNotificationComponent-1028~child-ng-components=LockerCollectCardComponent~HideProceduralStep=true~ZOrder=50</attributeName>
 			</featureAttributes>
 		</featureAttributeGroup>
+
+
+		<!--Provisioning Configuration-->
+		<featureAttributeGroup action="overwrite">
+			<attributeGroupName>coreProvisioningParameters</attributeGroupName>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSProdCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>CRD</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSActCoid</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>101</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSCppmMlgMetCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>REG</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSCtlAdId</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>C1</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSRelCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>PRI</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSPayMethod</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>MAN</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSActType</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>PRI</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSATrRegistrationNbr</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>194905</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSLangCd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>ENG</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSNcaInd</attributeName>
+				<valueUnit>PER</valueUnit>
+				<value>Y</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>coreProvisioningParameter</attributeType>
+				<attributeName>CAMSQpcInd</attributeName>
+				<valueUnit>ENG</valueUnit>
+				<value>N</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+
 	</features>
 
 

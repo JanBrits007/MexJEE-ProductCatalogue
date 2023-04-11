@@ -438,20 +438,19 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
     public ProductType getProductSpecificationXMLByID(String pProductSpecificationID) throws Exception {
         mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
-
-        List<String> productIDs = new ArrayList<String>();
+        mLog.debug("Getting product specification xml by id "+pProductSpecificationID);
+        List<String> productIDs = new ArrayList<>();
         productIDs.add(pProductSpecificationID);
 
         List<ProductType> productSpecifications = getProductSpecificationXMLByID(productIDs);
-
         return productSpecifications.get(0);
     }
 
     public ProductType getProductSpecificationXMLByID(int pProductSpecificationID) throws Exception {
         mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
 
-        List<Integer> productIDs = new ArrayList<Integer>();
-        productIDs.add(new Integer(pProductSpecificationID));
+        List<Integer> productIDs = new ArrayList<>();
+        productIDs.add(pProductSpecificationID);
 
         List<ProductType> productSpecifications = getProductSpecificationXMLByID(productIDs);
 
@@ -471,7 +470,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     public List<ProductType> getProductSpecificationXMLByID(List pProductSpecificationID) throws Exception {
         mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
 
-    	List<String> productIDs = new ArrayList<String>();
+    	List<String> productIDs = new ArrayList<>();
     	
     	for(Object object: pProductSpecificationID) {
     		productIDs.add(object.toString());
@@ -484,23 +483,21 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     
     public List<ProductType> getProductSpecificationXMLsByStringIDs(List<String> pProductSpecificationID) throws Exception {
         mLog.debug("Trace 1 >>" + pProductSpecificationID + "<<");
-
-        List<ProductType> products = new ArrayList<ProductType>();
+        mLog.debug("Getting product specification xml by string ids "+pProductSpecificationID);
+        List<ProductType> products = new ArrayList<>();
 
         for (String productId : pProductSpecificationID) {
-
             mLog.debug("Trace 2 >> productId:" + productId + "<<");
 
             if(productTypeCacheEJB.contains(productId)){
+                mLog.debug(String.format("Got product with product id %s from the cache ",productId));
                 ProductType productType = productTypeCacheEJB.get(productId);
                 mLog.debug("## CACHE ## productType:"+productType);
                 products.add(productType);
                 continue;
             }
 
-
-//			mLog.debug("Trace 2.1 >>" + xmlString + "<<");
-
+            mLog.info(String.format("Product with product id %s is absent from the cache. Finding it.",productId));
             JAXBContext jaxbContext = getJAXBContext();
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
@@ -536,7 +533,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 mLog.debug("Trace 4.1");
             } catch (Exception e) {
                 // Schema validator is a mess. It returns no stack trace on the exception. Need to specifically handle it.
-                mLog.warn("ProductId >>" +productId+" failure, reason:"+ e.getMessage() + "<<");
+                mLog.error("ProductId >>" +productId+" failure, reason:"+ e.getMessage() + "<<",e);
                 throw new Exception("ProductSpec lookup failure: product: " + productId + ", reason:" + e.getMessage());
             }
 
@@ -615,8 +612,9 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
     private Object lookupObject(String pJNDI) throws NamingException {
         mLog.debug("Trace 1");
 
-        Object objref = null;
+        Object objref;
         Context vInitialContext = new InitialContext();
+
         try {
             mLog.debug("Trace 2");
 
@@ -665,18 +663,16 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
     private RawSpecString readProductSpecificationFromResourceFile(String productID) throws Exception {
         mLog.debug("Trace 1 >>" + productID + "<<");
-
+        mLog.info(String.format("Reading product specification with id %s from resource file",productID));
         // Look for a string binding that switches this product spec out for another.
         productID = retrieveProductIDSubstitution(productID);
 
         mLog.debug("Trace 1.1 >>" + productID + "<<");
 
         try {
-            /*
-            if (cache.containsKey(productID)){
-                return (String) cache.get(productID);
-            }*/
-            InputStream inputStream = ProductSpecificationsEJB.class.getResourceAsStream("/productspecs/" + productID + ".xml");
+            final String productSpecFilePath = "/productspecs/" + productID + ".xml";
+            mLog.info(String.format("Reading product specification with id %s from resource file %s",productID,productSpecFilePath));
+            InputStream inputStream = ProductSpecificationsEJB.class.getResourceAsStream(productSpecFilePath);
 
             if (inputStream == null) {
 
@@ -686,17 +682,14 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
                 mLog.debug("Trace 2");
                 throw new Exception("Unable to find specification XML file for product ID " + productID);
-
             }
 
             mLog.debug("Trace 3");
-            String XMLSpec = IOUtils.toString(inputStream, StandardCharsets.UTF_8.name());
-
-           // cache.putIfAbsent(productID, XMLSpec);
-
+            String XMLSpec = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
+            mLog.info(String.format("Product Spec XML file will be "+XMLSpec));
             return new RawSpecString(false, XMLSpec);
         } catch (IOException e) {
-            mLog.error("", e);
+            mLog.error(e.getMessage(), e);
             throw new Exception("Unable to find specification XML file for product ID " + productID);
         }
     }

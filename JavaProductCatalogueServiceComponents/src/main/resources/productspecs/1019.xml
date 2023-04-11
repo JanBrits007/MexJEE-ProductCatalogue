@@ -50,6 +50,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
+         <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
+         <value>${{Overdraft_RRB_dynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_RRB_1019</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
          <attributeName>LimitIncreaseSubstitutionRulesV2</attributeName>
          <value>NA</value>
       </productAttributes>
@@ -107,6 +118,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
+         <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
+         <value>${{Overdraft_RRB_dynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_RRB_1019</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
          <attributeName>LimitIncreaseSubstitutionRulesV2</attributeName>
          <value>NA</value>
       </productAttributes>
@@ -161,6 +183,17 @@
    </productAttributeGroup>
 
    <!--PROD Substitution Rules-->
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
+         <value>${{Overdraft_RRB_dynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_RRB_1019</value>
+      </productAttributes>
+   </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
@@ -559,6 +592,11 @@
          <attributeType>string</attributeType>
          <attributeName>presentLowerOfferFrontOfficeIntentSequence</attributeName>
          <value>PresentLowerOffer|ActivateProductsGatherProductDetails</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>segmentCheckRequired</attributeName>
+         <value>true</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
