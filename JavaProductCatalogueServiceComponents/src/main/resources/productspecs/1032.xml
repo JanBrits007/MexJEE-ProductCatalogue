@@ -102,7 +102,7 @@
 		<attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
 		<productAttributes>
 			<attributeName>SubstituteForChannelIDs</attributeName>
-			<value>100|397</value>
+			<value>${{EDBPhase2ChannelIDList}}</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeName>SubstituteForProductID</attributeName>
@@ -133,6 +133,17 @@
 			<value>CreditCard_Retail_1032</value>
 		</productAttributes>
 	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForChannelIDs</attributeName>
+			<value>${{EDBPhase2ChannelIDList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>CreditCard_Retail_1032</value>
+		</productAttributes>
+	</productAttributeGroup>
 
 	<!--PROD Substitution Rules-->
 	<productAttributeGroup>
@@ -151,6 +162,17 @@
 		<productAttributes>
 			<attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
 			<value>${{EDBPhase2dynamicStaffList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>CreditCard_Retail_1032</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForChannelIDs</attributeName>
+			<value>${{EDBPhase2ChannelIDList}}</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeName>SubstituteForProductID</attributeName>
