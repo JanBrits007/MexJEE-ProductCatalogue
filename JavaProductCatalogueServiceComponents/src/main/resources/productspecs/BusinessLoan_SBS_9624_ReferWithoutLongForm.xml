@@ -14,8 +14,28 @@
    </productAttributeGroup>
 
    <!--Case and Process Configuration-->
-   <productAttributeGroup inheritFromFiles="BaseProduct_Retail_ReferWithoutLongForm">
+   <productAttributeGroup action="overwrite">
       <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeIntentSequence</attributeName>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|ActivateProductsGatherClientDetails|ActivateProductsGatherEvidence|FinalizeFrontOfficeInteraction</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+         <value>GenerateApplicationOfferProposals|FinancialDetails|GenerateOfferGatherClientDetails</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Authenticate|Loan|Details|What's Next</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>VerifyIdentity=Loan|GenerateOfferVerifyEligibility=Loan|GenerateOfferGatherProductDetails=Loan|GenerateOfferGatherClientDetails=Loan|FinancialDetails=Loan|GenerateApplicationOfferProposals=Loan|ActivateProductsGatherClientDetails=Details|ActivateProductsGatherEvidence=What's Next|ActivateProductsPresentDocuments=What's Next|FinalizeFrontOfficeInteraction=What's Next</value>
+      </productAttributes>
    </productAttributeGroup>
 
 </product>
