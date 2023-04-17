@@ -72,6 +72,17 @@
          <value>Overdraft_Retail_1176</value>
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+         <value>${{EDBTestEmailOverideList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Overdraft_Retail_1176</value>
+      </productAttributes>
+   </productAttributeGroup>
 
    <!--QA Substitution Rules-->
    <productAttributeGroup>
@@ -79,6 +90,18 @@
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
          <value>${{EDBPhase2dynamicStaffList}}</value>         
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Overdraft_Retail_1176</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+         <value>${{EDBTestEmailOverideList}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
