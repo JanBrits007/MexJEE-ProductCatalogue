@@ -11,6 +11,40 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeIntentSequence</attributeName>
+         <value>DetermineRelatedBusinessParties|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GatherPartyDetailsForOffer|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+         <value>GatherPartyDetailsForOffer|GenerateOfferGatherProductDetails</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RecursiveGNBAIntents</attributeName>
+         <value>NA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Authenticate|Loan|Details|What's Next</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>VerifyIdentity=Loan|DetermineRelatedBusinessParties=Loan|GenerateOfferVerifyEligibility=Loan|GenerateOfferGatherProductDetails=Loan|GatherPartyDetailsForOffer=Loan|GenerateOffer=Loan|ActivateProductsGatherClientDetails=Details|ActivateProductsGatherProductDetails=Details|ActivateProductsGatherEvidence=What's Next|ActivateProductsPresentDocuments=What's Next|FinalizeFrontOfficeInteraction=What's Next</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>AlternateOfferWorkItemTemplate</attributeName>
+         <value>GenerateOffer</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--GenerateOfferGatherProductDetails-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
