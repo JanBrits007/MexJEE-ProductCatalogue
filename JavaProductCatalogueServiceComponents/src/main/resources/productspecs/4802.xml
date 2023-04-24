@@ -25,7 +25,18 @@
    </productAttributeGroup>
 
 
-      <!--ETE Substitution Rules-->
+   <!--ETE Substitution Rules-->
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>NA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_RRB_TP20_4802</value>
+      </productAttributes>
+   </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
@@ -35,6 +46,17 @@
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
          <value>Transactional_RRB_TP20_4802</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{TP20MobileChannelIDList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_TP20_4802_MoneyApp</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -53,12 +75,34 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
+         <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>NA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_RRB_TP20_4802</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
          <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
          <value>${{MiGoals_RRB_dynamicStaffList}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
          <value>Transactional_RRB_TP20_4802</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{TP20MobileChannelIDList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_TP20_4802_MoneyApp</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -83,6 +127,17 @@
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
          <value>Transactional_RRB_TP20_4802</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{TP20MobileChannelIDList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_TP20_4802_MoneyApp</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -116,7 +171,7 @@
          <minValue>16</minValue>
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>be 16 or older</description>
+         <description>You need to be 16 years or older</description>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -135,7 +190,7 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
-         <value>5</value>
+         <value>5-10</value>
       </productAttributes>
 
    </productAttributeGroup>
