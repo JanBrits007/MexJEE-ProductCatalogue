@@ -16,12 +16,12 @@
    <productAttributeGroup>
       <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
    </productAttributeGroup>
-   <!-- <productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
-   </productAttributeGroup> -->
-   <!-- <productAttributeGroup>
+   </productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
-   </productAttributeGroup> -->
+   </productAttributeGroup>
 
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
@@ -47,7 +47,7 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!-- <productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
          <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
@@ -57,7 +57,7 @@
          <attributeName>SubstituteForProductID</attributeName>
          <value>Transactional_RRB_5013</value>
       </productAttributes>
-   </productAttributeGroup> -->
+   </productAttributeGroup>
 
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
@@ -746,6 +746,14 @@
             <value>EMAILSMS</value>
         </productAttributes>
     </productAttributeGroup>
+    <productAttributeGroup>
+      <attributeGroupName>CaseConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ArrangementBundleCaseHandler</attributeName>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
+      </productAttributes>
+   </productAttributeGroup>
    <features>
       <featureIdentifier>1014</featureIdentifier>
       <name>Overdraft</name>
