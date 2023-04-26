@@ -128,7 +128,11 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ApplicationDirectorDetails|ng-component=ApplicationDirectorDetailsComponent~ProceduralStepName=Director's details~child-ng-components=summarisedDirectorDetailsComponent~child-ng-components=yourBusinessHealthConfirmationComponent~ZOrder=110</attributeName>
+			<attributeName>ApplicationDirectorDetails|ng-component=ApplicationDirectorDetailsComponent~ProceduralStepName=Personal details~child-ng-components=summarisedDirectorDetailsComponent~child-ng-components=yourBusinessHealthConfirmationComponent~ZOrder=110</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ApplicationBusinessDetails|ProceduralStepName=Your business details~ZOrder=100</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -152,7 +156,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ApplicationBusinessDetails|ng-component=ApplicationBusinessDetailsComponent~ProceduralStepName=Director's details~ZOrder=100</attributeName>
+			<attributeName>ApplicationBusinessDetails|ng-component=ApplicationBusinessDetailsComponent~ProceduralStepName=Personal details~child-ng-components=ForeignTaxObligations~ZOrder=100</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -189,7 +193,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>Offer|ProceduralStepName=Your offer~ZOrder=70</attributeName>
+			<attributeName>Offer|ProceduralStepName=Declaration~ZOrder=70</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -218,6 +222,14 @@
 	<!--ActivateProductsGatherClientDetails-->
 	<productAttributeGroup>
 		<attributeGroupName>1028_LOANAPPLICANT_clientInformationRequirement_ActivateProducts</attributeGroupName>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ApplicationDirectorDetails|ng-component=ApplicationDirectorDetailsComponent~ProceduralStepName=Personal details~ZOrder=110</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ApplicationBusinessDetails|ProceduralStepName=Your business details~ZOrder=100</attributeName>
+		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Tax declaration~ZOrder=80~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture~displaySummary=false</attributeName>
