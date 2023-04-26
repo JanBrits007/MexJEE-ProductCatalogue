@@ -173,11 +173,6 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>VAS_1025</attributeName><!--Funeral Cover-->
-         <value>Optionality=Optional~IsTakenUp=false</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
          <attributeName>VAS_219</attributeName><!--Instant Gold Cheque Card-->
          <value>Optionality=Optional~IsTakenUp=false</value>
       </productAttributes>
@@ -439,15 +434,11 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>Finch|ProceduralStepName=Finch~ZOrder=89~applicableChannels=NCCStaffAssisted~applicableChannels=BranchStaffAssisted</attributeName>
+            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=80</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
+            <attributeName>Offer|ProceduralStepName=Your offer~ZOrder=70</attributeName>
          </featureAttributes>
 <!--         <featureAttributes>-->
 <!--            <attributeType>clientInformationRequirement</attributeType>-->
@@ -489,7 +480,7 @@
          <attributeGroupName>productInformationRequirement_GenerateApplicationOfferProposals</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
+            <attributeName>OverdraftProductDetails|ProceduralStepName=Your Overdraft~ZOrder=100</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -516,22 +507,14 @@
       <!--GenerateOffer-->
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-         <featureAttributes>
+        <!-- <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>OfferTransactionalCredit|ProceduralStepName=Extra perks with your account~ZOrder=300</attributeName>
          </featureAttributes>
          <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
-         </featureAttributes>
-         <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>OfferSelection|ng-component=OfferSelectionComponent~ProceduralStepName=See something you like?~ZOrder=80~ActiveOnInitialWorkItemExecution=true</attributeName>
-         </featureAttributes>
+         </featureAttributes>-->
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryOverdraftComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
@@ -582,10 +565,6 @@
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>productDocumentPresentation|ProceduralStepName=Signing the paperwork~ZOrder=90~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>DigitalActivation|ProceduralStepName=Get activated on the app~ZOrder=80</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>

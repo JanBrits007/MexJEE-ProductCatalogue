@@ -476,7 +476,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>baseCBOActivityList</attributeName>
-			<value>CreditDecisionDetermineOffer|ConfigureArrangement|ConfirmVerificationQuality~9001|CBOFinalizeCase</value>
+			<value>CreditDecisionDetermineOffer|ConfigureArrangement~PreFICAProvision|GatherContractPostProvision|ConfirmVerificationQuality~9001|ConfigureArrangement~postPAQUploadProvisioning|CBOFinalizeCase</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -579,7 +579,14 @@
 			<value>0|Weighting=0</value>
 		</productAttributes>
 	</productAttributeGroup>
-
+	<productAttributeGroup>
+		<attributeGroupName>DecisionTreeConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>EvaluateCase_DecisionTree</attributeName>
+			<value>classname=evaluateCaseDecisionTreePostProvisioningPAQUpload</value>
+		</productAttributes>
+	</productAttributeGroup>
 
 	<!--Provisioning Configuration-->
 	<productAttributeGroup action="overwrite">
