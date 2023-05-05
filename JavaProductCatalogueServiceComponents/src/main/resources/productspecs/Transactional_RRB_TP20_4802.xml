@@ -83,7 +83,7 @@
    </productAttributeGroup>
 
    <!--Offer Configuration-->
-   <productAttributeGroup inheritFromFiles="Transactional_Retail">
+   <productAttributeGroup inheritFromFiles="Transactional_Retail_TP20_4802">
       <attributeGroupName>VASCrossSellControl</attributeGroupName>
    </productAttributeGroup>
 
@@ -166,6 +166,34 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subTP|ContractComponentProductType=4802</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeType>DocumentDescription</attributeType>
+         <attributeName>Terms and conditions|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>DigitalAcknowledgement</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Download</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Preview</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Email</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>DocTemplateName</attributeType>
+         <attributeName>ProductContract</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -258,6 +286,13 @@
       <!--GenerateOfferVerifyEligibility-->
 
       <!--GenerateOfferGatherProductDetails-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=100.00~max=250000.00~isMandatory=false</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
 
       <!--DetermineRelatedParties-->
 
