@@ -26,14 +26,6 @@
       <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=EnotesVASComponent-1374~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>ProductSetupSummary|ng-component=ProductSetupSummaryComponent~ZOrder=50~retailProduct=true</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
          <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~retailProduct=true</attributeName>
       </productAttributes>
       <productAttributes>
@@ -83,7 +75,7 @@
    </productAttributeGroup>
 
    <!--Offer Configuration-->
-   <productAttributeGroup inheritFromFiles="Transactional_Retail">
+   <productAttributeGroup inheritFromFiles="Transactional_Retail_TP20_4802">
       <attributeGroupName>VASCrossSellControl</attributeGroupName>
    </productAttributeGroup>
 
@@ -169,6 +161,90 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeType>DocumentDescription</attributeType>
+         <attributeName>Terms and conditions|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>DigitalAcknowledgement</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Download</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Preview</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Email</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>DocTemplateName</attributeType>
+         <attributeName>ProductContract</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeType>DocumentDescription</attributeType>
+         <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Download</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Email</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>WetSign</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>ElectronicallySign</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>DigitallySign</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeType>DocumentDescription</attributeType>
+         <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Download</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Email</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>WetSign</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>ElectronicallySign</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>DigitallySign</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--1333 - Nedbank Greenbacks Shop Card-->
    <features inheritFromFiles="Transactional_Retail">
       <featureIdentifier>1333</featureIdentifier>
@@ -176,25 +252,25 @@
    </features>
 
    <!--1402 - My Pocket-->
-   <features inheritFromFiles="Transactional_Retail">
+   <features inheritFromFiles="Transactional_Retail_TP20_4802">
       <featureIdentifier>1402</featureIdentifier>
       <name>My Pocket</name>
    </features>
 
    <!--1374 - eNotes-->
-   <features inheritFromFiles="Transactional_Retail">
+   <features inheritFromFiles="Transactional_Retail_TP20_4802">
       <featureIdentifier>1374</featureIdentifier>
       <name>eNotes</name>
    </features>
 
    <!--1008 - No Funds Alert Services-->
-   <features inheritFromFiles="Transactional_Retail">
+   <features inheritFromFiles="Transactional_Retail_TP20_4802">
       <featureIdentifier>1008</featureIdentifier>
       <name>No Funds Alert Services</name>
    </features>
 
    <!--1454 - Greenbacks Rewards Membership-->
-   <features inheritFromFiles="Transactional_Retail">
+   <features inheritFromFiles="Transactional_Retail_TP20_4802">
       <featureIdentifier>1454</featureIdentifier>
       <name>Greenbacks Rewards Membership</name>
    </features>
@@ -206,25 +282,25 @@
    </features>
 
    <!--1376 - Salary Switching-->
-   <features inheritFromFiles="Transactional_Retail">
+   <features inheritFromFiles="Transactional_Retail_TP20_4802">
       <featureIdentifier>1376</featureIdentifier>
       <name>Salary Switching</name>
    </features>
 
    <!--1380 - Debit Order Switching-->
-   <features inheritFromFiles="Transactional_Retail">
+   <features inheritFromFiles="Transactional_Retail_TP20_4802">
       <featureIdentifier>1380</featureIdentifier>
       <name>Debit Order Switching</name>
    </features>
 
    <!--219 - Instant Gold Cheque Card-->
-   <features inheritFromFiles="Transactional_Retail">
+   <features inheritFromFiles="Transactional_Retail_TP20_4802">
       <featureIdentifier>219</featureIdentifier>
       <name>Instant Gold Cheque Card</name>
    </features>
 
    <!--1386 - Gold Cheque Card-->
-   <features inheritFromFiles="Transactional_Retail">
+   <features inheritFromFiles="Transactional_Retail_TP20_4802">
       <featureIdentifier>1386</featureIdentifier>
       <name>Gold Cheque Card</name>
 
@@ -241,7 +317,7 @@
    </features>
 
    <!--1446 - Overdraft Assurance-->
-   <features inheritFromFiles="Transactional_Retail">
+   <features inheritFromFiles="Transactional_Retail_TP20_4802">
       <featureIdentifier>1446</featureIdentifier>
       <name>Overdraft Assurance</name>
    </features>
@@ -258,6 +334,13 @@
       <!--GenerateOfferVerifyEligibility-->
 
       <!--GenerateOfferGatherProductDetails-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=100.00~max=250000.00~isMandatory=false</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
 
       <!--DetermineRelatedParties-->
 
