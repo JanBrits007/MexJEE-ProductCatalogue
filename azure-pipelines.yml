@@ -1,0 +1,13 @@
+trigger:
+ branches:
+   include:
+     - release/*
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: Eclipse-1.0/templates
+
+extends:
+   template: cfo-repo-build-with-ears.yml@templates

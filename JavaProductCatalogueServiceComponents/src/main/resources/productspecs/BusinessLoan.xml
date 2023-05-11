@@ -3,75 +3,13 @@
 	<name>Base Business Loan Specification</name>
 	<shortDescription>Base Business Loan Specification</shortDescription>
 
-	<productAttributeGroup>
-		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>frontOfficeIntentSequence</attributeName>
-			<value>DetermineRelatedBusinessParties|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GatherPartyDetailsForOffer|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
-			<value>GatherPartyDetailsForOffer|GenerateOfferGatherProductDetails</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>RecursiveGNBAIntents</attributeName>
-			<value>NA</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>breadcrumbSteps</attributeName>
-			<value>Authenticate|Loan|Details|What's next</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>GNBAIntentToActivityMapping</attributeName>
-			<value>VerifyIdentity=Loan|DetermineRelatedBusinessParties=Loan|GenerateOfferVerifyEligibility=Loan|GenerateOfferGatherProductDetails=Loan|GatherPartyDetailsForOffer=Loan|GenerateOffer=Loan|ActivateProductsGatherClientDetails=Details|ActivateProductsGatherProductDetails=Details|ActivateProductsGatherEvidence=What's Next|ActivateProductsPresentDocuments=What's Next|FinalizeFrontOfficeInteraction=What's Next</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>AlternateOfferWorkItemTemplate</attributeName>
-			<value>GenerateOffer</value>
-		</productAttributes>
-	</productAttributeGroup>
-
+	<!--GenerateOfferVerifyEligibility-->
 	<productAttributeGroup>
 		<attributeGroupName>EligibilityHandler</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
 			<value>classname=za.co.nb.offermanagement.eligibility.handler.JuristicEasyLoanAccountEligibilityHandler</value>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--Evidence And Compliance Requirements-->
-	<productAttributeGroup>
-		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>Proof of your identity.</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>Latest Payslip.</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>3 months of bank statements.</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>A letter from your accountant or financial manager (if you are sef-employed).</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -132,7 +70,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>FinancialDetails|ProceduralStepName=Tax declaration~ZOrder=80</attributeName>
+			<attributeName>ComplianceInformation|ProceduralStepName=Some last personal details~ZOrder=80</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -143,7 +81,6 @@
 			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-
 	<productAttributeGroup> <!--These are the details for the business-->
 		<attributeGroupName>1041_PRIMARY_clientInformationRequirement_GatherPartyDetailsForOffer</attributeGroupName>
         <productAttributes>
@@ -156,7 +93,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>FinancialDetails|ProceduralStepName=Tax declaration~ZOrder=80</attributeName>
+			<attributeName>ComplianceInformation|ProceduralStepName=Some last personal details~ZOrder=80</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -165,27 +102,6 @@
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--FinancialDetails-->
-	<productAttributeGroup>
-		<attributeGroupName>1041_PRIMARY_clientInformationRequirement_FinancialDetails</attributeGroupName>
-		<productAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ApplicationDirectorDetails|ProceduralStepName=Personal details~ZOrder=160</attributeName>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ApplicationBusinessDetails|ProceduralStepName=Business details~ZOrder=110</attributeName>
-        </productAttributes>
-        <productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Tax declaration~ZOrder=80~child-ng-components=BusinessIncomeDetailsComponent~child-ng-components=BusinessDebtObligationsComponent~child-ng-components=BusinessExpensesComponent~ActiveOnInitialWorkItemExecution=true~DefaultIncomeFrequency=1002~CheckYodlee=false~FinancialInformationStatusCallbackID</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>Offer|ProceduralStepName=Declaration~ZOrder=70</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -229,7 +145,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Tax declaration~ZOrder=80~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture~displaySummary=false</attributeName>
+			<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture~displaySummary=false</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -304,11 +220,11 @@
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
-		<attributeGroupName>RuleHandlers_PresentDocuments</attributeGroupName>
+		<attributeGroupName>RuleHandlers_ActivateProductsPresentDocuments</attributeGroupName>
 		<productAttributes>
-			<attributeName>GNBAHandler_PresentDocuments</attributeName>
+			<attributeName>GNBAHandler_ActivateProductsPresentDocuments</attributeName>
 			<!--Class that Zoro created for last Payment date to be inserted here?-->
-			<value>classname=XXXXXXXXXXXX</value>
+			<value>classname=FuneralPlanRecalculateRuleHandler</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -677,6 +593,39 @@
 
 	<!--Case and Process Configuration-->
 	<productAttributeGroup>
+		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>frontOfficeIntentSequence</attributeName>
+			<value>DetermineRelatedBusinessParties|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GatherPartyDetailsForOffer|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+			<value>GatherPartyDetailsForOffer|GenerateOfferGatherProductDetails</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RecursiveGNBAIntents</attributeName>
+			<value>NA</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>breadcrumbSteps</attributeName>
+			<value>Authenticate|Loan|Details|Finishing up</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GNBAIntentToActivityMapping</attributeName>
+			<value>VerifyIdentity=Loan|DetermineRelatedBusinessParties=Loan|GenerateOfferVerifyEligibility=Loan|GenerateOfferGatherProductDetails=Loan|GatherPartyDetailsForOffer=Details|GenerateOffer=Details|ActivateProductsGatherClientDetails=Details|ActivateProductsGatherProductDetails=Details|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>AlternateOfferWorkItemTemplate</attributeName>
+			<value>GenerateOffer</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
 		<attributeGroupName>EligibilityRules</attributeGroupName>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -799,12 +748,6 @@
 			<attributeName>CODHandler_CreditOffer</attributeName>
 			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.EasyLoanSimulationGenerateApplicationOfferProposalCODHandler</value>
 		</productAttributes>
-		<!--		<productAttributes>
-                    <attributeType>string</attributeType>
-                    <attributeName>CODHandler_CreditOffer</attributeName>
-                    <value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.PersonalLoanSimulationCreditOfferCODHandler</value>
-                </productAttributes>
-                -->
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_ProductOffer</attributeName>
@@ -928,6 +871,11 @@
 			<attributeType>string</attributeType>
 			<attributeName>GatherDocumentsLiaisonTeam</attributeName>
 			<value>PREPROD EDB Party Information Retriever</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>enum</attributeType>
+			<attributeName>riskAnalysisMechanismIntent0</attributeName>
+			<value>automated</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>bool</attributeType>
