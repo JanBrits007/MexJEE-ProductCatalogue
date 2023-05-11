@@ -252,6 +252,82 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--1376 - Salary Switching-->
+   <features action="overwrite">
+      <featureIdentifier>1376</featureIdentifier>
+      <name>Salary Switching</name>
 
+      <!--GenerateOffer-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+      </featureAttributeGroup>
+
+      <!--FinalizeFrontOfficeInteraction-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~HideProceduralStep=true~child-ng-components=SalarySwitchingProvisionInBranchComponent-1376~ZOrder=50~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--Document Configuration-->
+      <featureAttributeGroup>
+         <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+         <featureAttributes>
+            <attributeType>DocumentDescription</attributeType>
+            <attributeName>Salary Switching Letter|nedbank-commercial-release/SalarySwitchingUniversal|N/A|N/A|N/A|N/A</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Download</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Email</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>Preview</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>DocTemplateName</attributeType>
+            <attributeName>SalarySwitchingUniversal</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!-- Case and Process Configuration -->
+      <featureAttributeGroup>
+         <attributeGroupName>SystemRelated</attributeGroupName>
+         <featureAttributes>
+            <attributeType>Flag</attributeType>
+            <attributeName>StraightThroughProcess</attributeName>
+            <value>true</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+
+      <!--Provisioning Configuration-->
+      <featureAttributeGroup>
+         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>LoanGroupingCode</attributeName>
+            <valueUnit>PER</valueUnit>
+            <value>PER</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>provisionInBranch</attributeName>
+            <valueUnit>boolean</valueUnit>
+            <value>true</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>coreProvisioningParameter</attributeType>
+            <attributeName>legacyProductID</attributeName>
+            <valueUnit>string</valueUnit>
+            <value />
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
 
    </product>
