@@ -29,6 +29,15 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<!-- Rule handlers   -->
+	<productAttributeGroup>
+		<attributeGroupName>RuleHandlers_ActivateProductsPresentDocuments</attributeGroupName>
+		<productAttributes>
+			<attributeName>GNBAHandler_ActivateProductsPresentDocuments</attributeName>
+			<value>classname=EasyLoanRecalculateHandler</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--GenerateOfferGatherProductDetails-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
@@ -193,7 +202,6 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-	<!--ActivateProductsPresentDocuments-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
 		<productAttributes>
@@ -570,6 +578,24 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subStandardDisclosures|ContractComponentProductType=9624</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<productAttributeGroup>
+	<attributeGroupName>EligibilityHandler</attributeGroupName>
+	<productAttributes>
+		<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+		<value>classname=za.co.nb.offermanagement.eligibility.handler.JuristicEasyLoanAccountEligibilityHandler</value>
+	</productAttributes>
+	</productAttributeGroup>
+
+	<!-- Decisioning Control -->
+	<productAttributeGroup>
+		<attributeGroupName>DecisioningControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>ComponentSupportsDeclineReasons</attributeName>
+			<value>true</value>
 		</productAttributes>
 	</productAttributeGroup>
 
