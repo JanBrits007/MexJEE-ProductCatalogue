@@ -47,6 +47,17 @@
         <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
     </productAttributeGroup>
 
+    <!-- <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>NA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_RRB_1015</value>
+      </productAttributes>
+   </productAttributeGroup> -->
     <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
@@ -58,53 +69,31 @@
          <value>1015_RRBComStrategy</value>
       </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
-         <value>NA</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_1015</value>
-      </productAttributes>
-   </productAttributeGroup>
 
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForCalculatedSegment</attributeName>
-         <value>${{RRB_Segement_list}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>1015_RRBComStrategy</value>
-      </productAttributes>
-   </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
-         <value>NA</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_1015</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-    <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForCalculatedSegment</attributeName>
-         <value>${{RRB_Segement_list}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>1015_RRBComStrategy</value>
-      </productAttributes>
-   </productAttributeGroup>
    <!-- <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>NA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_RRB_1015</value>
+      </productAttributes>
+   </productAttributeGroup> -->
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForCalculatedSegment</attributeName>
+         <value>${{RRB_Segement_list}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>1015_RRBComStrategy</value>
+      </productAttributes>
+   </productAttributeGroup>
+   
+    <!-- <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
          <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
@@ -115,6 +104,17 @@
          <value>Transactional_RRB_1015</value>
       </productAttributes>
    </productAttributeGroup> -->
+    <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForCalculatedSegment</attributeName>
+         <value>${{RRB_Segement_list}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>1015_RRBComStrategy</value>
+      </productAttributes>
+   </productAttributeGroup>
 
     <productAttributeGroup>
         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
@@ -808,6 +808,14 @@
             <value>EMAILSMS</value>
         </productAttributes>
     </productAttributeGroup>
+    <productAttributeGroup>
+      <attributeGroupName>CaseConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ArrangementBundleCaseHandler</attributeName>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
+      </productAttributes>
+   </productAttributeGroup>
     <features>
         <featureIdentifier>1402</featureIdentifier>
         <name>My Pocket</name>

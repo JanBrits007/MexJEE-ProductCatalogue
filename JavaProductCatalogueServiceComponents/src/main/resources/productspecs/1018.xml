@@ -22,7 +22,17 @@
    <productAttributeGroup>
       <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
    </productAttributeGroup>
-
+   <!-- <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>NA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_RRB_1018</value>
+      </productAttributes>
+   </productAttributeGroup> -->
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
    <productAttributes>
@@ -34,8 +44,9 @@
       <value>1018_RRBComStrategy</value>
    </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+
+   <!-- <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
          <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
          <value>NA</value>
@@ -44,8 +55,7 @@
          <attributeName>SubstituteForProductID</attributeName>
          <value>Transactional_RRB_1018</value>
       </productAttributes>
-   </productAttributeGroup>
-
+   </productAttributeGroup> -->
    <productAttributeGroup>
          <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
@@ -57,29 +67,7 @@
          <value>1018_RRBComStrategy</value>
       </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-      <productAttributes>
-         <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
-         <value>NA</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_1018</value>
-      </productAttributes>
-   </productAttributeGroup>
 
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
-   <productAttributes>
-      <attributeName>SubstituteForCalculatedSegment</attributeName>
-      <value>${{RRB_Segement_list}}</value>
-   </productAttributes>
-   <productAttributes>
-      <attributeName>SubstituteForProductID</attributeName>
-      <value>1018_RRBComStrategy</value>
-   </productAttributes>
-   </productAttributeGroup>
    <!-- <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
@@ -91,6 +79,17 @@
          <value>Transactional_RRB_1018</value>
       </productAttributes>
    </productAttributeGroup> -->
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+   <productAttributes>
+      <attributeName>SubstituteForCalculatedSegment</attributeName>
+      <value>${{RRB_Segement_list}}</value>
+   </productAttributes>
+   <productAttributes>
+      <attributeName>SubstituteForProductID</attributeName>
+      <value>1018_RRBComStrategy</value>
+   </productAttributes>
+   </productAttributeGroup>
 
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
@@ -746,6 +745,14 @@
          <attributeType>flag</attributeType>
          <attributeName>ProvisioningPhase</attributeName>
          <value>preVerificationProvisioning</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>CaseConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ArrangementBundleCaseHandler</attributeName>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
