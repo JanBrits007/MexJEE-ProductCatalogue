@@ -3,16 +3,6 @@
 	<name>Base Business Loan Specification</name>
 	<shortDescription>Base Business Loan Specification</shortDescription>
 
-	<!--GenerateOfferVerifyEligibility-->
-	<productAttributeGroup>
-		<attributeGroupName>EligibilityHandler</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
-			<value>classname=za.co.nb.offermanagement.eligibility.handler.JuristicEasyLoanAccountEligibilityHandler</value>
-		</productAttributes>
-	</productAttributeGroup>
-
 	<!--VerifyIdentity-->
 	<productAttributeGroup>
 		<attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
@@ -29,13 +19,69 @@
 			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-
+	<productAttributeGroup>
+	<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>String</attributeType>
+			<attributeName>HandleProvisioningFailureTeamName</attributeName>
+			<value>BPM Admin</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>time</attributeType>
+			<attributeName>WeekdayProvisioningWindowOpenTime</attributeName>
+			<value>07:05</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>time</attributeType>
+			<attributeName>WeekdayProvisioningWindowCloseTime</attributeName>
+			<value>19:30</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>time</attributeType>
+			<attributeName>SaterdayProvisioningWindowOpenTime</attributeName>
+			<value>07:05</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>time</attributeType>
+			<attributeName>SaterdayProvisioningWindowCloseTime</attributeName>
+			<value>13:55</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>time</attributeType>
+			<attributeName>SundayProvisioningWindowOpenTime</attributeName>
+			<value>00:00</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>time</attributeType>
+			<attributeName>SubdayProvisioningWindowCloseTime</attributeName>
+			<value>00:00</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>time</attributeType>
+			<attributeName>HolidayProvisioningWindowOpenTime</attributeName>
+			<value>00:00:00</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>time</attributeType>
+			<attributeName>HolidayProvisioningWindowCloseTime</attributeName>
+			<value>00:00</value>
+		</productAttributes>
+	</productAttributeGroup>
 	<!--DetermineRelatedBusinessParties-->
 	<productAttributeGroup>
 		<attributeGroupName>RuleHandlers_DetermineRelatedBusinessParties</attributeGroupName>
 		<productAttributes>
 			<attributeName>GNBAHandler_DetermineRelatedBusinessParties</attributeName>
 			<value>classname=SoleProprietorRelationshipSetup</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!-- Rule handlers   -->
+	<productAttributeGroup>
+		<attributeGroupName>RuleHandlers_ActivateProductsPresentDocuments</attributeGroupName>
+		<productAttributes>
+			<attributeName>GNBAHandler_ActivateProductsPresentDocuments</attributeName>
+			<value>classname=EasyLoanRecalculateHandler</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -203,7 +249,6 @@
 		</productAttributes>
 	</productAttributeGroup>
 
-	<!--ActivateProductsPresentDocuments-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
 		<productAttributes>
@@ -217,14 +262,6 @@
 			<attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
 			<!--<attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Signing the paperwork~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>-->
 			<!--No Stepname required, made it blank-->
-		</productAttributes>
-	</productAttributeGroup>
-	<productAttributeGroup>
-		<attributeGroupName>RuleHandlers_ActivateProductsPresentDocuments</attributeGroupName>
-		<productAttributes>
-			<attributeName>GNBAHandler_ActivateProductsPresentDocuments</attributeName>
-			<!--Class that Zoro created for last Payment date to be inserted here?-->
-			<value>classname=FuneralPlanRecalculateRuleHandler</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -588,6 +625,24 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subStandardDisclosures|ContractComponentProductType=9624</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<productAttributeGroup>
+	<attributeGroupName>EligibilityHandler</attributeGroupName>
+	<productAttributes>
+		<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+		<value>classname=za.co.nb.offermanagement.eligibility.handler.JuristicEasyLoanAccountEligibilityHandler</value>
+	</productAttributes>
+	</productAttributeGroup>
+
+	<!-- Decisioning Control -->
+	<productAttributeGroup>
+		<attributeGroupName>DecisioningControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>boolean</attributeType>
+			<attributeName>ComponentSupportsDeclineReasons</attributeName>
+			<value>true</value>
 		</productAttributes>
 	</productAttributeGroup>
 
