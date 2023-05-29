@@ -400,6 +400,21 @@
       <name>Overdraft</name>
 
       <!--VerifyIdentity-->
+      <featureAttributeGroup>
+         <attributeGroupName>RuleHandlers_clientInformationRequirement_VerifyIdentity</attributeGroupName>
+         <featureAttributes>
+            <attributeType>RequiredDataFilter_clientInformationRequirement_VerifyIdentity</attributeType>
+            <attributeName>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.CreditEligibilityIncomeFilter</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>PartyConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredDataFilter_VerifyIdentity</attributeName>
+            <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.CreditEligibilityIncomeFilter</value>
+         </featureAttributes>
+      </featureAttributeGroup>
 
       <!--GenerateOfferVerifyEligibility-->
       <featureAttributeGroup>
@@ -1023,7 +1038,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>frontOfficeIntentSequence</attributeName>
-            <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+            <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
@@ -1645,7 +1660,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~HideProceduralStep=true~child-ng-components=InstantGoldChequeCardProvisionInBranchComponent-219~child-ng-components=CardCollectionNotificationComponent-219~child-ng-components=LockerCollectCardComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~HideProceduralStep=true~child-ng-components=LockerCollectCardComponent~child-ng-components=InstantGoldChequeCardProvisionInBranchComponent-219~child-ng-components=CardCollectionNotificationComponent-219~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -1709,7 +1724,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-1386~child-ng-components=LockerCollectCardComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~HideProceduralStep=true~child-ng-components=LockerCollectCardComponent~child-ng-components=CardCollectionNotificationComponent-1386~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
