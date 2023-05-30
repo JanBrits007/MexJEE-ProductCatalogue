@@ -50,6 +50,22 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementExistingToBankFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_FinalizeFrontOfficeInteraction</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementRemoveCardDeliveryFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!-- Case and Process Configuration -->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>EligibilityRules</attributeGroupName>
