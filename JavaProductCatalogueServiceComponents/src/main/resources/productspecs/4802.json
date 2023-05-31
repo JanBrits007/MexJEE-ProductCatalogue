@@ -7,12 +7,86 @@
             "productPricing": [
                 {
                     "type": "AdminFee",
-                    "amount": 99.00,
+                    "amount": 99,
+                    "frequency": "Monthly",
                     "currency": "ZAR",
-                    "description": "R99 pm",
-                    "frequency": "Monthly"
+                    "description": "R99 pm"
+                },
+                {
+                    "type": "AdminFee|Seniors",
+                    "amount": 49.5,
+                    "frequency": "Monthly",
+                    "currency": "ZAR",
+                    "description": "R49.50 pm"
                 }
             ],
+            "specialFeature": "",
+            "salesHighlights": [
+                "<b>Free</b> Greenbacks Membership",
+                "<b>Free</b> cash withdrawals at retailers",
+                "<b>Free</b> purchase of airtime, data & electricity on Money App",
+                "<b>Over 1% cashback</b> on spend on your <b>Nedbank Amex Debit Card</b> (accepted at all major groceries, pharmacy, travel and homeware stores)",
+                "<b>Free R3 000 cash withdrawals & R3 000 cash deposits</b> at Nedbank ATMs (per month)",
+                "<b>Free</b> debit orders, electronic payments, transfers & stop orders",
+                "<b>25 cents cash back</b> per litre at bp (all fuel)",
+                "<b>50% off</b> at selected Nu Metro cinemas (unlimited tickets)",
+                "<b>R60 pm off</b> monthly fee for spouse",
+                "<b>Free</b> In-app transactions notifications and eNotes",
+                "<b>Free</b> POS withdrawals @Retailers",
+                "<b>Free</b> Platinum debit card",
+                "<b>Free</b> card purchases",
+                "<b>Free</b> MyPocket account",
+                "<b>50% Discount applicable to 55 year and older at R49.50 per month</b>"
+            ],
+            "startApplicationScreen": {
+                "isRequired": "false"
+            },
+            "redirect": {
+                "shouldRedirect": false,
+                "redirectUrl": null
+            },
+            "actions": [
+                {
+                    "type": "SELECT",
+                    "text": "Select"
+                },
+                {
+                    "type": "DETAIL",
+                    "text": "Details"
+                },
+                {
+                    "type": "COMPARE",
+                    "text": "Compare"
+                }
+            ],
+            "applicationSteps": [
+                {
+                    "index": 1,
+                    "name": "Choose extras",
+                    "Description": "Select optional extras for your account."
+                },
+                {
+                    "index": 2,
+                    "name": "About you",
+                    "Description": "We need personal details and other information to open this account."
+                },
+                {
+                    "index": 3,
+                    "name": "Customise",
+                    "Description": "Choose your preferences, including card delivery and staying in touch."
+                },
+                {
+                    "index": 4,
+                    "name": "Finishing up",
+                    "Description": "Finish the paperwork and activate your product."
+                }
+            ],
+            "valueAddedServices": [
+                "Platinum credit card",
+                "Overdraft",
+                "Credit card and overdraft is for clients 18 years and older and dependant on credit eligibility"
+            ],
+            "productOnAPageWebURL": "",
             "features": [
                 {
                     "featureIdentifier": "1402",
@@ -1404,6 +1478,132 @@
                         }
                     ]
                 }
+            ],
+            "productFeatures": [
+                {
+                    "name": "fee",
+                    "displayName": "Monthly Fee",
+                    "description": "R99 pm"
+                },
+                {
+                    "name": "Age",
+                    "displayName": "Age",
+                    "description": "16+"
+                },
+                {
+                    "name": "Chequecard",
+                    "displayName": "Cheque Card",
+                    "description": "Platinum cheque card included"
+                },
+                {
+                    "name": "Nedbankatmwithdrawals",
+                    "displayName": "Nedbank ATM withdrawals",
+                    "description": "R3000,00 Free withdrawals at Nedbank ATMS"
+                },
+                {
+                    "name": "Debitordersinternal",
+                    "displayName": "Debit orders (Internal)",
+                    "description": "Unlimited internal debit orders included"
+                },
+                {
+                    "name": "Debitordersexternal",
+                    "displayName": "Debit orders (External)",
+                    "description": "Unlimited external debit orders included"
+                },
+                {
+                    "name": "Stoporders",
+                    "displayName": "Stop orders",
+                    "description": "Included"
+                },
+                {
+                    "name": "Cardswipes",
+                    "displayName": "Card swipes",
+                    "description": "Unlimited card swipes"
+                },
+                {
+                    "name": "Cashwithdrawalsatparticipatingretailers",
+                    "displayName": "Cash withdrawals",
+                    "description": "Pay as you use"
+                },
+                {
+                    "name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
+                    "displayName": "Digital banking",
+                    "description": "Included"
+                },
+                {
+                    "name": "Greenbacks",
+                    "displayName": "Greenbacks",
+                    "description": "Included"
+                },
+                {
+                    "name": "Electronicchannels",
+                    "displayName": "Electronic channels",
+                    "description": "Included"
+                },
+                {
+                    "name": "eNote",
+                    "displayName": "eNote",
+                    "description": "Included"
+                },
+                {
+                    "name": "Nofundsalert",
+                    "displayName": "No-funds alert",
+                    "description": "Pay as you use"
+                },
+                {
+                    "name": "Balanceenquiry",
+                    "displayName": "Balance enquiry",
+                    "description": "Included on Self Service channels"
+                },
+                {
+                    "name": "AirtimewithoutAirtime",
+                    "displayName": "Airtime without Airtime",
+                    "description": "Airtime without Airtime (purchase airtime without having airtime using *130*001#)"
+                },
+                {
+                    "name": "SendiMali",
+                    "displayName": "Send i-Mali",
+                    "description": "Send i-Mali (Send money to a cellphone number using *120*001#)"
+                },
+                {
+                    "name": "Domesticairportloungeaccess",
+                    "displayName": "Domestic airport lounge",
+                    "description": "n/a"
+                },
+                {
+                    "name": "Income",
+                    "displayName": "Income",
+                    "description": "No minimum income required"
+                },
+                {
+                    "name": "PrepaidElectricity",
+                    "displayName": "Prepaid electricity",
+                    "description": "Included"
+                },
+                {
+                    "name": "Lotto",
+                    "displayName": "Lotto purchase",
+                    "description": "Included"
+                }
+            ],
+            "eligibilityRules": [
+                {
+                    "attributeType": "EligibilityRule",
+                    "attributeName": "Age",
+                    "minValue": "16",
+                    "maxValue": "999",
+                    "valueUnit": "year",
+                    "description": "You need to be 16 years or older"
+                },
+                {
+                    "attributeType": "ConcurrentApplicationLimitationGroup",
+                    "attributeName": "ConcurrentApplicationLimitation",
+                    "value": "1"
+                }
+            ],
+            "lifeCycleStatus": "AVAILABLE",
+            "requiredCompliance": [
+                "FAIS"
             ]
         }
     ]
