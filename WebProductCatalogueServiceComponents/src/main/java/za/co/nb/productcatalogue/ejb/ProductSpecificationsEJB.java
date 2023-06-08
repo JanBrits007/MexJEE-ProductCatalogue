@@ -497,7 +497,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 continue;
             }
 
-            mLog.info(String.format("Product with product id %s is absent from the cache. Finding it.",productId));
+            mLog.debug(String.format("Product with product id %s is absent from the cache. Finding it.",productId));
             JAXBContext jaxbContext = getJAXBContext();
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
@@ -663,7 +663,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
     private RawSpecString readProductSpecificationFromResourceFile(String productID) throws Exception {
         mLog.debug("Trace 1 >>" + productID + "<<");
-        mLog.info(String.format("Reading product specification with id %s from resource file",productID));
+        mLog.debug(String.format("Reading product specification with id %s from resource file",productID));
         // Look for a string binding that switches this product spec out for another.
         productID = retrieveProductIDSubstitution(productID);
 
@@ -671,7 +671,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
         try {
             final String productSpecFilePath = "/productspecs/" + productID + ".xml";
-            mLog.info(String.format("Reading product specification with id %s from resource file %s",productID,productSpecFilePath));
+            mLog.debug(String.format("Reading product specification with id %s from resource file %s",productID,productSpecFilePath));
             InputStream inputStream = ProductSpecificationsEJB.class.getResourceAsStream(productSpecFilePath);
 
             if (inputStream == null) {
@@ -686,7 +686,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
             mLog.debug("Trace 3");
             String XMLSpec = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
-            mLog.info(String.format("Product Spec XML file will be "+XMLSpec));
+            mLog.debug(String.format("Product Spec XML file will be "+XMLSpec));
             return new RawSpecString(false, XMLSpec);
         } catch (IOException e) {
             mLog.error(e.getMessage(), e);
