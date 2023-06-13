@@ -74,8 +74,32 @@
    </productAttributeGroup>
 
    <!-- Case and Process Configuration -->
-   <productAttributeGroup inheritFromFiles="Transactional_RRB">
+   <productAttributeGroup action="overwrite">
       <attributeGroupName>EligibilityRules</attributeGroupName>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Age</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>16</minValue>
+         <maxValue>999</maxValue>
+         <valueUnit>year</valueUnit>
+         <description>user-icon|You need to be at least 16 years old.</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>NonEligibleDCAR</attributeName>
+         <value>${{NonEligibleDCARList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+         <value>${{FAIS_OnBehalfOfBranchList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+         <value>${{FAIS_StaffBranchOverideList}}</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Offer Configuration-->
@@ -476,7 +500,7 @@
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDone|ng-component=YouAreDoneComponent~child-ng-components=OverdraftAccountDetails-1014~ZOrder=50~child-ng-components=FatcaTinValidationComponent~ProceduralStepName=You're all set!</attributeName>
+            <attributeName>YoureDone|ng-component=YouAreDoneComponent~child-ng-components=CreditApplicationStatusComponent-1014~child-ng-components=OverdraftAccountDetails-1014~ZOrder=50~child-ng-components=FatcaTinValidationComponent~ProceduralStepName=You're all set!</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
