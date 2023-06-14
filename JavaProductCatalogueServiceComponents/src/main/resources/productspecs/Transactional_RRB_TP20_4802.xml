@@ -165,6 +165,14 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedKeyFactStatements</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subMiGoalsPlus</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
@@ -249,6 +257,22 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeType>DocumentDescription</attributeType>
+         <attributeName>CombinedKeyFactStatements|nedbank-commercial-release/CombinedKeyFactStatements|N/A|N/A|N/A|N/A</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Email</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>DocTemplateName</attributeType>
+         <attributeName>CombinedKeyFactStatements</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--1333 - Nedbank Greenbacks Shop Card-->
    <features inheritFromFiles="Transactional_Retail">
       <featureIdentifier>1333</featureIdentifier>
@@ -330,6 +354,13 @@
    <features inheritFromFiles="Transactional_Retail_TP20_4802">
       <featureIdentifier>1164</featureIdentifier>
       <name>Amex Card</name>
+   </features>
+
+   <!-- Nedbank Platinum Credit Card -->
+   <features>
+      <featureIdentifier>0</featureIdentifier>
+      <featureType>BundledProduct</featureType>
+      <referenceProductID>1034</referenceProductID>
    </features>
 
    <!--Overdraft feature -->
