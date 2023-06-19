@@ -680,7 +680,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>ArrangementBundleCaseHandler</attributeName>
-         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.rrb.InitialiseBusinessCaseHandlerRetailRRB</value>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -721,7 +721,7 @@
       </productAttributes>
        <productAttributes>
          <attributeName>SubstituteForIPSubnets</attributeName>
-         <value>192.168.0.0|172.238.0.0|168.142.0.0|172.28.0.0</value>
+         <value>${{RRBInternalNetworkIPRanges}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -750,6 +750,7 @@
          <value>Transactional_RRB_1108</value>
       </productAttributes>
    </productAttributeGroup>
+
     <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
        <productAttributes>
@@ -758,7 +759,7 @@
        </productAttributes>
        <productAttributes>
           <attributeName>SubstituteForIPSubnets</attributeName>
-          <value>192.168.0.0|172.238.0.0|168.142.0.0|172.28.0.0</value>
+          <value>${{RRBInternalNetworkIPRanges}}</value>
        </productAttributes>
        <productAttributes>
           <attributeName>SubstituteForProductID</attributeName>
@@ -777,15 +778,27 @@
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{Framework_V2_Channel_IDs}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_RRB_1108</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
          <value>${{dynamicStaffList}}</value>
       </productAttributes>
-      <!-- <productAttributes>
+      <productAttributes>
          <attributeName>SubstituteForIPSubnets</attributeName>
          <value>192.168.0.0|172.238.0.0|168.142.0.0|172.28.0.0</value>
-      </productAttributes> -->
+      </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
          <value>Transactional_RRB_1108</value>

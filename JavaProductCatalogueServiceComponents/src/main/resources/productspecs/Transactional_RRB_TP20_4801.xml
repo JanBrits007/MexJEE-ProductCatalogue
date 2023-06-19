@@ -3,6 +3,14 @@
    <name>MiGoals</name>
    <shortDescription>(Transactional_RRB_TP20_4801) RRB version of MiGoals</shortDescription>
 
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_Initialise</attributeGroupName>
+      <productAttributes>
+         <attributeName>GNBAHandler_Initialise</attributeName>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.initialise.initialisation.rules.BundleProductRule</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--GenerateOfferGatherProductDetails-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
@@ -42,6 +50,35 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--ActivateProductsGatherProductDetails-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>TransactionalProductInformationBroadcast|ng-component=TransactionalProductInformationBroadcastComponent~ZOrder=400</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~restrictOptOut=true~ProceduralStepName=Getting your cards~includeTemporaryCard=true~lockersOption=true~deliveryMessage=deliveryChargeWillBeReversed~ZOrder=170</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~child-ng-components=FAISAdviceRefused</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent~applicableChannels=WebSelfAssisted~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=SelfServiceKiosk~applicableChannels=MerchantAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--Decisioning control-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>DecisioningControl</attributeGroupName>
@@ -78,8 +115,32 @@
    </productAttributeGroup>
 
    <!-- Case and Process Configuration -->
-   <productAttributeGroup inheritFromFiles="Transactional_RRB">
+   <productAttributeGroup action="overwrite">
       <attributeGroupName>EligibilityRules</attributeGroupName>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Age</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>16</minValue>
+         <maxValue>999</maxValue>
+         <valueUnit>year</valueUnit>
+         <description>user-icon|You need to be at least 16 years old.</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>NonEligibleDCAR</attributeName>
+         <value>${{NonEligibleDCARList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+         <value>${{FAIS_OnBehalfOfBranchList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+         <value>${{FAIS_StaffBranchOverideList}}</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Offer Configuration-->
@@ -358,6 +419,13 @@
    <features inheritFromFiles="Transactional_Retail">
       <featureIdentifier>1164</featureIdentifier>
       <name>Amex Card</name>
+   </features>
+
+   <!-- Nedbank Gold Credit Card -->
+   <features>
+      <featureIdentifier>0</featureIdentifier>
+      <featureType>BundledProduct</featureType>
+      <referenceProductID>1032</referenceProductID>
    </features>
 
    <!--Overdraft feature -->
