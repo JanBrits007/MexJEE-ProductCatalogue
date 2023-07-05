@@ -1,0 +1,66 @@
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+    <productIdentifier>5000</productIdentifier>
+    <name>Simple Savings</name>
+    <shortDescription>Simple Savings</shortDescription>
+
+    <productAttributeGroup>
+        <attributeGroupName>CaseConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>ArrangementBundleCaseHandler</attributeName>
+            <value>
+                classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP
+            </value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
+    </productAttributeGroup>
+
+    <!--ETE Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>DefaultSubstitution</attributeName>
+            <value>DefaultSubstitution</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>Transactional_Retail_TP20_5000</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--QA Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>DefaultSubstitution</attributeName>
+            <value>DefaultSubstitution</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>Transactional_Retail_TP20_5000</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--PROD Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>DefaultSubstitution</attributeName>
+            <value>DefaultSubstitution</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>Transactional_Retail_TP20_5000</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+</product>
