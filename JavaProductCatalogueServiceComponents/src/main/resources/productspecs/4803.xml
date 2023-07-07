@@ -205,6 +205,15 @@
 
    </productAttributeGroup>
 
+   <productAttributeGroup>
+      <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>productSystem</attributeName>
+         <value>DAM</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <features> <!--Including this as BPM references this base file directly-->
       <featureIdentifier>1014</featureIdentifier>
       <name>Overdraft</name>
@@ -595,12 +604,6 @@
             <attributeName>subOverdraftTC|ContractComponentProductType=1014</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
-   </features>
-   <features>
-      <featureIdentifier>0</featureIdentifier>
-      <featureType>BundledProduct</featureType>
-      <referenceProductID>1350</referenceProductID>
-      <!-- Savvy Bundle Credit Card (placeholder) -->
    </features>
 
 </product>

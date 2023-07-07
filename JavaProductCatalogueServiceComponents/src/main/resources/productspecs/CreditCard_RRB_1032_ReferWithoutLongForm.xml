@@ -1,0 +1,28 @@
+<product inheritFromFiles="CreditCard_RRB_1032" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+	<productIdentifier>1032</productIdentifier>
+	<name>Nedbank Gold Credit Card</name>
+	<shortDescription>(CreditCard_RRB_1032_ReferWithoutLongForm)</shortDescription>
+
+	<!--Activate Product Gather Product Details-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>RelationshipBankerInformationV2|ng-component=RelationshipBankerComponent~ProceduralStepName=Your relationship banker~ZOrder=165</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--ActivateProductsPresentDocuments-->
+	<productAttributeGroup inheritFromFiles="BaseProduct_RRB_ReferWithoutLongForm">
+      <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+	</productAttributeGroup>
+
+</product>

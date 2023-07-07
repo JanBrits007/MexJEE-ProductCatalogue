@@ -1,0 +1,293 @@
+<product inheritFromFiles="CreditCard_RRB" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+	<productIdentifier>1032</productIdentifier>
+	<name>Nedbank Gold Credit Card</name>
+
+	<!--GenerateOfferGatherProductDetails-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=CreditCardDetailsV2Component~4801_min=2000.00~4801_max=300000.00~1400_min=2000.00~1400_max=300000.00~1108_min=5000.00~1108_max=300000.00~1476_min=2000.00~1476_max=300000.00~1478_min=10000.00~1478_max=300000.00~0_min=10000.00~0_max=300000.00~1032_min=2000.00~1032_max=300000.00</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+  <!--GenerateOffer-->
+   <productAttributeGroup action="overwrite">
+        <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+        <productAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80~child-ng-components=CreditCardDetailsV2Component~4801_min=2000.00~4801_max=300000.00~1400_min=2000.00~1400_max=300000.00~1108_min=5000.00~1108_max=300000.00~1476_min=2000.00~1476_max=300000.00~1478_min=10000.00~1478_max=300000.00~0_min=10000.00~0_max=300000.00~1032_min=2000.00~1032_max=300000.00~child-ng-components=MotivationBoxComponent</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
+   <!-- Combined Product contract Universal -->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subTPTermsAndConditions|ContractComponentProductType=4801</attributeName>
+      </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>subCreditCard|ContractComponentProductType=1032</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1032</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>subCreditCardTC|ContractComponentProductType=1032</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>Taxonomy|ARRANGEMENTS_AGREEMENTS_AGREEMENTSCREDITCARD_Agreement Contract</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+  <!-- Combined welcome letter -->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>subCredit|ContractComponentProductType=1032</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>subRRBCreditCard|ContractComponentProductType=1032</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!-- Combined APP form -->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>subCreditCard|ContractComponentProductType=1032</attributeName>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>subRRBCreditCard|ContractComponentProductType=1032</attributeName>
+      </productAttributes>
+    </productAttributeGroup>
+
+    <!--Provisioning Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>supressClientCommunications</attributeName>
+         <value>false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>productSystem</attributeName>
+         <value>CAMS</value>
+      </productAttributes>
+       <productAttributes>
+           <attributeType>string</attributeType>
+           <attributeName>LeadEmailAddressNonProd</attributeName>
+           <value>FohnB@Nedbank.co.za;ajits@nedbank.co.za;LijuN@Nedbank.co.za;LudieP@Nedbank.co.za;NatashaRa@Nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za;sivat@nedbank.co.za</value>
+       </productAttributes>
+       <productAttributes>
+           <attributeType>string</attributeType>
+           <attributeName>LeadEmailAddressProd</attributeName>
+           <value>>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za</value>
+       </productAttributes>
+       <productAttributes>
+           <attributeType>string</attributeType>
+           <attributeName>ConversionLeadEmailAddressNonProd</attributeName>
+           <value>LudieP@Nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za</value>
+       </productAttributes>
+       <productAttributes>
+           <attributeType>string</attributeType>
+           <attributeName>ConversionLeadEmailAddressProd</attributeName>
+           <value>PRBSales@nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za</value>
+       </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>productType</attributeName>
+         <value>CREDITCARD</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>leadTemplateName</attributeName>
+         <value>nedbank-commercial-release/AppFormPBStaffAssisted</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>bool</attributeType>
+         <attributeName>isLead</attributeName>
+         <value>false</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>boolean</attributeType>
+        <attributeName>consolidatedLeadEmail</attributeName>
+        <value>false</value>
+      </productAttributes> 
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productCategoryName</attributeName>
+         <value>PROFESSIONALBANKING</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>backOfficeEmailAddress</attributeName>
+         <value>NatashaBu@Nedbank.co.za;ajits@nedbank.co.za;LindaMn@Nedbank.co.za;ThaboMokoen@Nedbank.co.za;BrigertM@Nedbank.co.za;andreasroh@nedbank.co.za</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>letUsSwitchEmailAddress</attributeName>
+         <value>NatashaBu@Nedbank.co.za;ajits@nedbank.co.za;LindaMn@Nedbank.co.za;ThaboMokoen@Nedbank.co.za;BrigertM@Nedbank.co.za;andreasroh@nedbank.co.za</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>productIdentifier</attributeName>
+         <value>1032</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>welcomeEmailTemplate</attributeName>
+        <value>me_dynamic_welcome_01</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>welcomeDocumentTemplate</attributeName>
+        <value>nedbank-commercial-release/CombinedWelcomeLetter</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>welcomeLetterTaxonomy</attributeName>
+        <value>AGREEMENTSDEPOSIT|Welcome Letter|Welcome Letter</value>
+      </productAttributes>
+      <productAttributes>
+        <attributeType>string</attributeType>
+        <attributeName>welcomeDocumentTemplateLocked</attributeName>
+        <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1032</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   
+   <!-- Process Audit Report-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCard|ContractComponentProductType=1032</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>VASCrossSellControl</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>DontCrossSellOnBaseComponentStatuses</attributeName>
+            <value>1012</value><!--Open-->
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>VAS_1028</attributeName><!--Multi App Card-->
+            <value>Optionality=Optional~IsTakenUp=true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>DontCrossSellOnLimitIncrease</attributeName><!--Multi App Card-->
+            <value>true</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <features>
+        <featureIdentifier>1028</featureIdentifier>
+        <name>Multi App Debit/Credit Card Plastic Card</name>
+        <mandatory>true</mandatory>
+        <preSelected>true</preSelected>
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSProdCd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>CRD</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSActCoid</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>101</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSCppmMlgMetCd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>REG</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSCtlAdId</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>C1</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSRelCd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>PRI</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSPayMethod</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>MAN</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSActType</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>PRI</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSATrRegistrationNbr</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>194905</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSLangCd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>ENG</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSNcaInd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>Y</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSQpcInd</attributeName>
+                <valueUnit>ENG</valueUnit>
+                <value>Y</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSCashLimitPercentage</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>100</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+    </features>
+</product>

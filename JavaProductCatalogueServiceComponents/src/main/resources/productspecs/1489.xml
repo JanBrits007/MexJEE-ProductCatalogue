@@ -323,7 +323,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>ArrangementBundleCaseHandler</attributeName>
-         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.rrb.InitialiseBusinessCaseHandlerRetailRRB</value>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -348,7 +348,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForIPSubnets</attributeName>
-         <value>192.168.0.0|172.238.0.0|168.142.0.0|172.28.0.0</value>
+         <value>${{RRBInternalNetworkIPRanges}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -360,6 +360,33 @@
      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{Framework_V2_Channel_IDs}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>CreditCard_RRB_1489</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>BundleSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{Framework_V2_Channel_IDs}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForIPSubnets</attributeName>
+         <value>${{RRBInternalNetworkIPRanges}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>CreditCard_RRB_1489</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
@@ -367,7 +394,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForIPSubnets</attributeName>
-         <value>192.168.0.0|172.238.0.0|168.142.0.0|172.28.0.0</value>
+         <value>${{RRBInternalNetworkIPRanges}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -375,6 +402,32 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForLimitIncrease</attributeName>
+         <value>CreditCard_RRB_1489</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{Framework_V2_Channel_IDs}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>CreditCard_RRB_1489</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>BundleSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{Framework_V2_Channel_IDs}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForIPSubnets</attributeName>
+         <value>${{RRBInternalNetworkIPRanges}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
          <value>CreditCard_RRB_1489</value>
       </productAttributes>
    </productAttributeGroup>
@@ -397,6 +450,33 @@
          <value>CreditCard_RRB_1489</value>
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{Framework_V2_Channel_IDs}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>CreditCard_RRB_1489</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>BundleSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{Framework_V2_Channel_IDs}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForIPSubnets</attributeName>
+         <value>192.168.0.0|172.238.0.0|168.142.0.0|172.28.0.0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>CreditCard_RRB_1489</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <features>
       <featureIdentifier>5032</featureIdentifier>
       <name>Multi App Debit/Credit Card Plastic Card</name>

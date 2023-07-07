@@ -66,7 +66,7 @@
       
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=CustomerVulnerabilitiesComponent~child-ng-components=DigitalActiveCardTrascationalComponent~displaySummary=true</attributeName>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=CustomerVulnerabilitiesComponent~displaySummary=true</attributeName>
       </productAttributes>
 
       <productAttributes>
@@ -755,6 +755,11 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
+         <attributeName>CODHandler_FinancialExtendedDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.FinancialExtendedDetailsHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
          <attributeName>CODHandler_FinancialDetails</attributeName>
          <value>${{CODHandler_FinancialDetails}}</value>
       </productAttributes>
@@ -791,7 +796,12 @@
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
       </productAttributes>
-      <!-- 
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementPostalAddressSummaryDetailsFilter</value>
+      </productAttributes>
+      <!--
       <productAttributes>
 		 <attributeType>string</attributeType>
 		 <attributeName>RequiredDataFilter_All</attributeName>

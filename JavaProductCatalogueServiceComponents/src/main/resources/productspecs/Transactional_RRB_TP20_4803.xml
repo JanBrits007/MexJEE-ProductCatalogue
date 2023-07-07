@@ -3,6 +3,14 @@
    <name>MiGoals Premium</name>
    <shortDescription>(Transactional_RRB_TP20_4803) RRB version of MiGoals Premium</shortDescription>
 
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_Initialise</attributeGroupName>
+      <productAttributes>
+         <attributeName>GNBAHandler_Initialise</attributeName>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.initialise.initialisation.rules.BundleProductRule</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--GenerateOfferGatherProductDetails-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
@@ -74,8 +82,32 @@
    </productAttributeGroup>
 
    <!-- Case and Process Configuration -->
-   <productAttributeGroup inheritFromFiles="Transactional_RRB">
+   <productAttributeGroup action="overwrite">
       <attributeGroupName>EligibilityRules</attributeGroupName>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Age</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>16</minValue>
+         <maxValue>999</maxValue>
+         <valueUnit>year</valueUnit>
+         <description>user-icon|You need to be at least 16 years old.</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>NonEligibleDCAR</attributeName>
+         <value>${{NonEligibleDCARList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+         <value>${{FAIS_OnBehalfOfBranchList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+         <value>${{FAIS_StaffBranchOverideList}}</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Offer Configuration-->
@@ -145,7 +177,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subMiGoals|ContractComponentProductType=4803</attributeName>
+         <attributeName>subMiGoalsPremium|ContractComponentProductType=4803</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -162,6 +194,14 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subTP|ContractComponentProductType=4803</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedKeyFactStatements</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subMiGoalsPremium</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -249,6 +289,22 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeType>DocumentDescription</attributeType>
+         <attributeName>CombinedKeyFactStatements|nedbank-commercial-release/CombinedKeyFactStatements|N/A|N/A|N/A|N/A</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Email</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>DocTemplateName</attributeType>
+         <attributeName>CombinedKeyFactStatements</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--1333 - Nedbank Greenbacks Shop Card-->
    <features inheritFromFiles="Transactional_Retail">
       <featureIdentifier>1333</featureIdentifier>
@@ -330,6 +386,13 @@
    <features inheritFromFiles="Transactional_Retail_TP20_4803">
       <featureIdentifier>1164</featureIdentifier>
       <name>Amex Card</name>
+   </features>
+
+   <!-- Savvy Bundle Credit Card (placeholder) -->
+   <features>
+      <featureIdentifier>0</featureIdentifier>
+      <featureType>BundledProduct</featureType>
+      <referenceProductID>1350</referenceProductID>
    </features>
 
    <!--Overdraft feature -->
@@ -843,6 +906,11 @@
             <attributeType>string</attributeType>
             <attributeName>provisioningMechanism</attributeName>
             <value>provisionToCRAG</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>productType</attributeName>
+            <value>OD</value>
          </featureAttributes>
       </featureAttributeGroup>
 
