@@ -109,5 +109,16 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- Dependencies specified like this should auto load entitlements -->
+        <dependency>
+            <groupId>#{pomGroupId}#</groupId>
+            <artifactId>CR1Authorization</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>#{pomGroupId}#</groupId>
+            <artifactId>EJBEntitlementAuthorization</artifactId>
+            <version>#{buildVersion}#</version>
+            <type>ejb</type>
+        </dependency>
     </dependencies>
 </project>
