@@ -1,13 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
 	<artifactId>SysProductCatalogueServiceComponents</artifactId>
 	<packaging>ear</packaging>
 
 	<parent>
 		<groupId>BPMX</groupId>
-		<artifactId>ProductCatalogueCache</artifactId>
-		<version>2.121.0-SNAPSHOT</version>
+		<artifactId>cfo-productcatalogue</artifactId>
+		<version>2023.6.10-SNAPSHOT</version>
 	</parent>
 
 	<build>
@@ -39,13 +38,11 @@
 		<dependency>
 			<groupId>BPMX</groupId>
 			<artifactId>JavaProductCatalogueServiceComponents</artifactId>
-			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>BPMX</groupId>
 			<artifactId>WebProductCatalogueServiceComponents</artifactId>
 			<type>war</type>
-			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>BPMX</groupId>
@@ -57,11 +54,11 @@
 	    </dependency>
 		<dependency>
 			<groupId>BPMX</groupId>
-			<artifactId>CR1Common</artifactId>
+			<artifactId>JavaCommon</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>BPMX</groupId>
-			<artifactId>JavaSystemConfigurator</artifactId>
+			<artifactId>JavaCommon</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>BPMX</groupId>
@@ -117,5 +114,4 @@
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
-
 </project>
