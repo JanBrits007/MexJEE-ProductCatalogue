@@ -22,4 +22,29 @@
             <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialExtendedDetails=Credit Info|GenerateOffer=Credit Info|AppealWithoutLongForm=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
         </productAttributes>
     </productAttributeGroup>
+
+    <!--AppealWithoutLongForm-->
+	<productAttributeGroup>
+        <attributeGroupName>productInformationRequirement_AppealWithoutLongForm</attributeGroupName>
+        <productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Submit an appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~HideProceduralStep=true~includeAppealReasons=true~includeAppealMotivation=true~includeAdditionalPaperworkSelection=true~fetchAvailableAppealReasonsFromArrangement=true</attributeName>
+		</productAttributes>
+    </productAttributeGroup>
+
+    <features>
+		<featureIdentifier>1014</featureIdentifier>
+		<name>Overdraft</name>
+		<mandatory>true</mandatory>
+		<preSelected>true</preSelected>
+
+        <!--AppealWithoutLongForm-->
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_AppealWithoutLongForm</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>YourAppeal|ng-component=YourAppealComponent~ProceduralStepName=Submit an appeal~ZOrder=80~ActiveOnInitialWorkItemExecution=true~HideProceduralStep=true~includeAppealReasons=true~includeAppealMotivation=true~includeAdditionalPaperworkSelection=true~fetchAvailableAppealReasonsFromArrangement=true</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+	</features>
 </product>
