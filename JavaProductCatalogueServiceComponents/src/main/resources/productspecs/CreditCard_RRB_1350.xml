@@ -7,7 +7,7 @@
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=CreditCardDetailsV2Component~4803_min=5000.00~4803_max=300000.00~1400_min=2000.00~1400_max=300000.00~1108_min=5000.00~1108_max=300000.00~1476_min=2000.00~1476_max=300000.00~1478_min=10000.00~1478_max=300000.00~0_min=10000.00~0_max=300000.00~1350_min=2000.00~1350_max=300000.00</attributeName>
+         <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=CreditCardDetailsV2Component~4803_min=2000.00~4803_max=300000.00~1400_min=2000.00~1400_max=300000.00~1108_min=5000.00~1108_max=300000.00~1476_min=2000.00~1476_max=300000.00~1478_min=10000.00~1478_max=300000.00~0_min=10000.00~0_max=300000.00~1350_min=2000.00~1350_max=300000.00</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -16,7 +16,7 @@
         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
         <productAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80~child-ng-components=CreditCardDetailsV2Component~4803_min=5000.00~4803_max=300000.00~1400_min=2000.00~1400_max=300000.00~1108_min=5000.00~1108_max=300000.00~1476_min=2000.00~1476_max=300000.00~1478_min=10000.00~1478_max=300000.00~0_min=10000.00~0_max=300000.00~1350_min=2000.00~1350_max=300000.00~child-ng-components=MotivationBoxComponent</attributeName>
+            <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80~child-ng-components=CreditCardDetailsV2Component~4803_min=2000.00~4803_max=300000.00~1400_min=2000.00~1400_max=300000.00~1108_min=5000.00~1108_max=300000.00~1476_min=2000.00~1476_max=300000.00~1478_min=10000.00~1478_max=300000.00~0_min=10000.00~0_max=300000.00~1350_min=2000.00~1350_max=300000.00~child-ng-components=MotivationBoxComponent</attributeName>
         </productAttributes>
     </productAttributeGroup>
 
@@ -186,4 +186,108 @@
 			<attributeName>subCreditCard|ContractComponentProductType=1350</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
+
+    <productAttributeGroup action="overwrite">
+        <attributeGroupName>VASCrossSellControl</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>DontCrossSellOnBaseComponentStatuses</attributeName>
+            <value>1012</value><!--Open-->
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>VAS_1028</attributeName><!--Multi App Card-->
+            <value>Optionality=Optional~IsTakenUp=true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>DontCrossSellOnLimitIncrease</attributeName><!--Multi App Card-->
+            <value>true</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <features>
+        <featureIdentifier>1028</featureIdentifier>
+        <name>Multi App Debit/Credit Card Plastic Card</name>
+        <mandatory>true</mandatory>
+        <preSelected>true</preSelected>
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSProdCd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>CRD</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSActCoid</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>101</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSCppmMlgMetCd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>REG</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSCtlAdId</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>C1</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSRelCd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>PRI</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSPayMethod</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>MAN</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSActType</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>PRI</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSATrRegistrationNbr</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>194905</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSLangCd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>ENG</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSNcaInd</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>Y</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSQpcInd</attributeName>
+                <valueUnit>ENG</valueUnit>
+                <value>Y</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSCashLimitPercentage</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>100</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+    </features>
 </product>

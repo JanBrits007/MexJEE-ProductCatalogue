@@ -3,6 +3,14 @@
    <name>MiGoals Plus</name>
    <shortDescription>(Transactional_RRB_TP20_4802) RRB version of MiGoals Plus</shortDescription>
 
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_Initialise</attributeGroupName>
+      <productAttributes>
+         <attributeName>GNBAHandler_Initialise</attributeName>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.initialise.initialisation.rules.BundleProductRule</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--GenerateOfferGatherProductDetails-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
@@ -161,6 +169,14 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subGenericSignatures</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
       <productAttributes>
@@ -169,7 +185,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subMiGoals|ContractComponentProductType=4802</attributeName>
+         <attributeName>subMiGoalsPlus|ContractComponentProductType=4802</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -898,6 +914,11 @@
             <attributeType>string</attributeType>
             <attributeName>provisioningMechanism</attributeName>
             <value>provisionToCRAG</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>productType</attributeName>
+            <value>OD</value>
          </featureAttributes>
       </featureAttributeGroup>
 
