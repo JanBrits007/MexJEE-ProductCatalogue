@@ -14,7 +14,7 @@ public class ProductConfig extends Application {
 	public Set<Object> getSingletons()
 	{
 		Set<Object> singletons = new HashSet<>();
-		singletons.add(new EntitlementsAuthenticationPathFilter(EntitlementsLoader.getLocalJndiName("SysProductCatalogueServiceComponents","WebProductCatalogueServiceComponents")));
+		singletons.add(new EntitlementsAuthenticationPathFilter());
 		// register others, if any
 		return singletons;
 	}
