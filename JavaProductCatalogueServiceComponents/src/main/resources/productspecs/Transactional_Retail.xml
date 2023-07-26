@@ -400,6 +400,36 @@
       <featureIdentifier>1014</featureIdentifier>
       <name>Overdraft</name>
 
+      <!-- Intent sequence mapping -->
+      <featureAttributeGroup>
+         <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence</attributeName>
+            <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         </featureAttributes>
+         <!--featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+            <value>No back and forth yet configured</value>
+         </featureAttributes-->
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RecursiveGNBAIntents</attributeName>
+            <value>NA</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>breadcrumbSteps</attributeName>
+            <value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>GNBAIntentToActivityMapping</attributeName>
+            <value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+
       <!--VerifyIdentity-->
       <featureAttributeGroup>
          <attributeGroupName>RuleHandlers_clientInformationRequirement_VerifyIdentity</attributeGroupName>
