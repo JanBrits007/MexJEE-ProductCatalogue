@@ -5,7 +5,7 @@ import za.co.nb.productcatalogue.services.rest.resources.ProductRecommendationRe
 import za.co.nb.productcatalogue.services.rest.resources.ProductSpecificationsResource;
 import za.co.nb.ws.soap.handler.EntitlementsLoader;
 import za.co.nedbank.entitlement.transport.EntitlementsAuthenticationPathFilter;
-
+import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
 import java.util.HashSet;
 import java.util.Set;
 import javax.ws.rs.core.Application;
@@ -24,6 +24,7 @@ public class ProductConfig extends Application {
 	        classes.add(ProductCatalogueResource.class);
 	        classes.add(ProductSpecificationsResource.class);
 		  	classes.add(ProductRecommendationResource.class);
+		  	classes.add(JacksonJaxbJsonProvider.class);
 	        return classes;
 	    }
 }
