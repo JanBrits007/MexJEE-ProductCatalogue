@@ -17,20 +17,45 @@
    </productAttributeGroup>
 
    <!--Determine Related Parties-->
-   <productAttributeGroup>
+   <!--Removing this old pattern-->
+   <!--productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_DetermineChildParty</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ResolvedLinkedMinorApplicant|ng-component=MinorApplicantDetailsComponent~ProceduralStepName=Link your child~ZOrder=200</attributeName>
       </productAttributes>
-   </productAttributeGroup>
+   </productAttributeGroup-->
 
    <!--ActivateProductsGatherClientDetails-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
-      <!-- This is overwritten so that there is no inherited data from the base product spec-->
+      <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~deduplicateWidget=false</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ResolvedLinkedMinorApplicant|ng-component=MinorApplicantDetailsComponent~ProceduralStepName=Link your child~ZOrder=70</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ChildComplianceInformation|ng-component=YourChildComplianceInformationComponent~ProceduralStepName=Childs compliance~ZOrder=60~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
+      </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
+
+
+
+   <!--Removing this old pattern-->
+   <!--productAttributeGroup>
       <attributeGroupName>1028_LOANAPPLICANT_clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -44,10 +69,6 @@
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
       </productAttributes>
-<!--      <productAttributes>-->
-<!--         <attributeType>clientInformationRequirement</attributeType>-->
-<!--         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>-->
-<!--      </productAttributes>-->
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>1041_PRIMARY_clientInformationRequirement_ActivateProducts</attributeGroupName>
@@ -55,7 +76,7 @@
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know your child~ZOrder=300~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~deduplicateWidget=false</attributeName>
       </productAttributes>
-   </productAttributeGroup>
+   </productAttributeGroup-->
 
    <!--ActivateProductsGatherEvidence-->
    <productAttributeGroup  action="overwrite">
@@ -111,7 +132,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>frontOfficeIntentSequence</attributeName>
-         <value>GenerateOfferVerifyEligibility|VerifyIdentity|DetermineChildParty|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -290,7 +311,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>Compliance</attributeType>
-         <attributeName>LegalGuardianOfMinor</attributeName>
+         <attributeName>YOUTHBANKING_LegalGuardianOfMinor</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>Compliance</attributeType>
@@ -532,5 +553,18 @@
          <value>000</value>
       </productAttributes>
    </productAttributeGroup>
+
+   <!--1376 - Salary Switching-->
+   <features action="overwrite">
+      <featureIdentifier>1376</featureIdentifier>
+      <name>Salary Switching</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <!--removing this section so salary switching wont appear and wont be taken up-->
+      </featureAttributeGroup>
+
+   </features>
 
 </product>
