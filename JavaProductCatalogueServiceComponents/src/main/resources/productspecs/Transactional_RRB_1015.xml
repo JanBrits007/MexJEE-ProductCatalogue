@@ -12,6 +12,71 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--FinancialExtendedDetails-->
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_FinancialExtendedDetails</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>SkipFinancialDetails|ng-component=SkipFinancialDetails</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--GenerateOffer-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=EnotesVASComponent-1374~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~retailProduct=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>ProductSetupSummary|ng-component=ProductSetupSummaryComponent~ZOrder=50~retailProduct=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~retailProduct=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>AlternateProductOfferSelection|ng-component=AlternateProductsComponent~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--Decisioning control-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>DecisioningControl</attributeGroupName>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>EnforceIntent0FAISAccreditationRule</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>FAISCategoryCode</attributeName>
+         <value>1.18</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>FAISCategoryCode</attributeName>
+         <value>1.17</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>ComponentSupportsDeclineReasons</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>EnforceAgeValidationRules</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>agreementStatusChangeRequired</attributeName>
+         <value>true</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!-- Case and Process Configuration -->
    <productAttributeGroup inheritFromFiles="Transactional_RRB">
       <attributeGroupName>EligibilityRules</attributeGroupName>
@@ -23,8 +88,61 @@
    </productAttributeGroup>
 
    <!--Provisioning Configuration-->
-   <productAttributeGroup inheritFromFiles="Transactional_RRB">
+   <productAttributeGroup inheritFromFiles="Transactional_Retail_1389">
       <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+   </productAttributeGroup>
+
+    <!-- Intent sequence mapping -->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>frontOfficeIntentSequence</attributeName>
+         <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialExtendedDetails|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>breadcrumbSteps</attributeName>
+         <value>Authenticate|Product Setup|About You|Customise|Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GNBAIntentToActivityMapping</attributeName>
+         <value>VerifyIdentity=Authenticate|GenerateOfferVerifyEligibility=Authenticate|GenerateOfferGatherProductDetails=Product Setup|GenerateOfferGatherClientDetails=Product Setup|FinancialExtendedDetails=Credit Info|GenerateOffer=Credit Info|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>AlternateOfferWorkItemTemplate</attributeName>
+         <value>GenerateOffer</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--Decline Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+      <!--CDE Available Actions-->
+      <productAttributes>
+         <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+         <attributeName>acceptOffer|child-ng-components=ContinueWithoutCreditDeclineAction~child-ng-components=TpCreditOffer~child-ng-components=LeaveApplicationDeclineAction</attributeName>
+      </productAttributes>
+      <!--Web Decision Engine Decline for staff FAIS registration-->
+      <productAttributes>
+         <attributeType>declineCodeMapping</attributeType>
+         <attributeName>FAIS02|child-ng-components=FaisOnbehalfOfComponent</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--Document Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subTP|ContractComponentProductType=1015</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subSavvyBundle|ContractComponentProductType=1015</attributeName> <!-- Used existing reference as Legacy products reference is not available-->
+      </productAttributes>
    </productAttributeGroup>
 
    <!--1333 - Nedbank Greenbacks Shop Card-->
@@ -85,6 +203,11 @@
    <features inheritFromFiles="Transactional_Retail">
       <featureIdentifier>1386</featureIdentifier>
       <name>Gold Cheque Card</name>
+
+      <!--ActivateProductsGatherProductDetails-->
+      <featureAttributeGroup action="overwrite">
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+      </featureAttributeGroup>
    </features>
 
    <!--1387 - Amex Card-->
@@ -99,6 +222,12 @@
       <name>Overdraft Assurance</name>
    </features>
 
+   <!--1164 - Amex Card-->
+   <features inheritFromFiles="Transactional_Retail">
+      <featureIdentifier>1164</featureIdentifier>
+      <name>Amex Card</name>
+   </features>
+
    <!--Overdraft feature -->
    <features>
       <featureIdentifier>1014</featureIdentifier>
@@ -111,7 +240,13 @@
       <!--GenerateOfferVerifyEligibility-->
 
       <!--GenerateOfferGatherProductDetails-->
-
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=500.00~max=250000.00~isMandatory=false</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
       <!--DetermineRelatedParties-->
 
       <!--GenerateOfferGatherClientDetails-->
@@ -140,7 +275,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>SkipFinancialDetails|ng-component=SkipFinancialDetails</attributeName>
+            <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right~ZOrder=60~ActiveOnInitialWorkItemExecution=true</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -150,12 +285,8 @@
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
-            <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>FinancialSummary|ng-component=FinancialSummaryComponent~ProceduralStepName=Are these details right~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
-         </featureAttributes>
-         <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80~child-ng-components=OverdraftDetailsV2Component~min=500.00~max=250000.00~isMandatory=true~child-ng-components=MotivationBoxComponent</attributeName>
+            <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=10~child-ng-components=OverdraftDetailsV2Component~min=500.00~max=250000.00~isMandatory=true~child-ng-components=MotivationBoxComponent</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -164,8 +295,16 @@
          <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
-         </featureAttributes>
+            <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~RemoveStatementDelivery=true~displaySummary=true</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~RemoveEmployedSince=true~child-ng-components=MainSourceOfIncome~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>clientInformationRequirement</attributeType>
+            <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~displaySummary=true~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
+          </featureAttributes>
       </featureAttributeGroup>
 
       <!--ActivateProductsGatherProductDetails-->
@@ -359,10 +498,6 @@
             <attributeType>string</attributeType>
             <attributeName>subRRBODHeader|ContractComponentProductType=1014</attributeName>
          </featureAttributes>
-         <featureAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>subRRBOverdraft|ContractComponentProductType=1014</attributeName>
-         </featureAttributes>
       </featureAttributeGroup>
 
       <featureAttributeGroup>
@@ -380,7 +515,7 @@
          <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
          <featureAttributes>
             <attributeType>string</attributeType>
-            <attributeName>subGenericInfo</attributeName>
+            <attributeName>subGenericDetails</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
@@ -392,6 +527,10 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>subOverdraft|ContractComponentProductType=1014</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subRRBOverdraft|ContractComponentProductType=1014</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -639,10 +778,30 @@
             <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
             <attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
          </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>DeclineAppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>ContinueWithoutCredit|child-ng-components=ContinueWithoutCreditDeclineAction</attributeName>
+         </featureAttributes>
          <!--CDE Decline-->
          <featureAttributes>
             <attributeType>declineCodeMapping</attributeType>
+            <attributeName>4201|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
             <attributeName>4202|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>4207|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>4313|child-ng-components=LeaveApplicationDeclineAction~child-ng-components=TpCreditOffer</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
    </features>
