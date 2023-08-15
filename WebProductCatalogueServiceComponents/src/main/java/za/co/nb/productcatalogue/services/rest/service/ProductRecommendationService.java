@@ -2,7 +2,7 @@ package za.co.nb.productcatalogue.services.rest.service;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.codehaus.jackson.map.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import za.co.nb.productcatalogue.dao.ProductCataloguesDAO;
 import za.co.nb.productcatalogue.dao.dto.CachedCatalogueDetails;
 import za.co.nb.productcatalogue.dto.*;

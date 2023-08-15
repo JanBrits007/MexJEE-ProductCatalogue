@@ -8,7 +8,7 @@
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=SelfServiceKiosk</attributeName>
+         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=SelfServiceKiosk</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -181,6 +181,22 @@
          <attributeType>string</attributeType>
          <attributeName>VAS_1374</attributeName><!--eNotes-->
          <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_PresentDocuments</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODLimitIncreaseFaisFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODLimitIncreaseFaisFilter</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -400,6 +416,36 @@
       <featureIdentifier>1014</featureIdentifier>
       <name>Overdraft</name>
 
+      <!-- Intent sequence mapping -->
+      <featureAttributeGroup>
+         <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence</attributeName>
+            <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         </featureAttributes>
+         <!--featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+            <value>No back and forth yet configured</value>
+         </featureAttributes-->
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RecursiveGNBAIntents</attributeName>
+            <value>NA</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>breadcrumbSteps</attributeName>
+            <value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>GNBAIntentToActivityMapping</attributeName>
+            <value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+
       <!--VerifyIdentity-->
       <featureAttributeGroup>
          <attributeGroupName>RuleHandlers_clientInformationRequirement_VerifyIdentity</attributeGroupName>
@@ -438,7 +484,14 @@
       </featureAttributeGroup>
 
       <!--GenerateOfferGatherProductDetails-->
-
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OverdraftProductDetails|ng-component=RetailOverdraftProductDetailsComponent~ProceduralStepName=Your Overdraft~ZOrder=105~ActiveOnInitialWorkItemExecution=true~MinimumInput=500~MaximumInput=250000~isLimitIncrease=true</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      
       <!--DetermineRelatedParties-->
 
       <!--GenerateOfferGatherClientDetails-->
@@ -569,10 +622,10 @@
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted</attributeName>
          </featureAttributes>
-         <featureAttributes>
+        <!-- <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted</attributeName>
-         </featureAttributes>
+         </featureAttributes>-->
       </featureAttributeGroup>
 
       <!--ActivateProductsGatherEvidence-->
