@@ -132,6 +132,19 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--Document Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subTP|ContractComponentProductType=1018</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subSavvyBundle|ContractComponentProductType=1018</attributeName> <!-- Used existing reference as Legacy products reference is not available-->
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--1333 - Nedbank Greenbacks Shop Card-->
    <features inheritFromFiles="Transactional_Retail">
       <featureIdentifier>1333</featureIdentifier>
@@ -296,7 +309,15 @@
 
       <!--ActivateProductsGatherProductDetails-->
       <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>    
+          <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
+          </featureAttributes>
       </featureAttributeGroup>
 
       <!--ActivateProductsGatherEvidence-->
@@ -326,6 +347,10 @@
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Signing the paperwork~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=10~ContractComponentProductType=1018~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
