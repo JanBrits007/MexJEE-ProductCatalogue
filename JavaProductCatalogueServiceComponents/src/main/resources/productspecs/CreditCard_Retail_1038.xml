@@ -182,7 +182,7 @@
 		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
 		<productAttributes>
 			<attributeType>DocumentDescription</attributeType>
-			<attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
+			<attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
@@ -202,6 +202,26 @@
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+		<productAttributes>
+			<attributeType>DocumentDescription</attributeType>
+			<attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Download</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Email</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>StaffDigitalAcknowledgement</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -220,6 +240,7 @@
 			<attributeName>Taxonomy|ARRANGEMENTS_AGREEMENTS_AGREEMENTSCREDITCARD_Agreement Contract</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
+
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
 		<productAttributes>
@@ -696,6 +717,85 @@
 			<attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1099</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
+
+	<!--1099 - Credit card insurance-->
+	<features>
+		<featureIdentifier>1099</featureIdentifier>
+		<name>Credit card insurance</name>
+
+		<!--Document Configuration-->
+		<featureAttributeGroup action="overwrite">
+			<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+			<featureAttributes>
+				<attributeType>DocumentDescription</attributeType>
+				<attributeName>FAIS Client Acknowledgement|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENTS|APPLICATIONS|APPLICATIONSCREDITCARD|FAIS Client Acknowledgement</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>Download</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>Email</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>StaffDigitalAcknowledgement</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>DocTemplateName</attributeType>
+				<attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup action="overwrite">
+			<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+			<featureAttributes>
+				<attributeType>DocumentDescription</attributeType>
+				<attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>Download</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>Email</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>StaffDigitalAcknowledgement</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+		<featureAttributeGroup action="overwrite">
+			<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+			<featureAttributes>
+				<attributeType>DocumentDescription</attributeType>
+				<attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>Download</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>Email</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>AvailableAction</attributeType>
+				<attributeName>StaffDigitalAcknowledgement</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>DocTemplateName</attributeType>
+				<attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>DocumentExclusion</attributeType>
+				<attributeName>Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+	</features>
+
+
 
 	<features>
 		<featureIdentifier>1028</featureIdentifier>
