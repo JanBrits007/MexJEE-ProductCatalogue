@@ -4,6 +4,7 @@
     <shortDescription>A loan from R2000 up to R300 000 with flexible repayment periods of 6 to 72 months; customised
         interest rates; and the option to consolidate internal and external loans.
     </shortDescription>
+    
     <productPricing>
         <fee>
             <type>AdminFee</type>
@@ -112,6 +113,18 @@
     </productAttributeGroup>
     
     <!--QA Substitution Rules-->
+    <productAttributeGroup>
+		<attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+			<value>${{EDBTestEmailOverideList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>PersonalLoan_Simulation</value>
+		</productAttributes>
+	</productAttributeGroup>
+	
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
         <productAttributes>
