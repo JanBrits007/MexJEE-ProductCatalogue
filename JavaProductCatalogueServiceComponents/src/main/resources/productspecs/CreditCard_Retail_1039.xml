@@ -1,0 +1,255 @@
+<product inheritFromFiles="CreditCard_Retail" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+	<productIdentifier>1039</productIdentifier>
+	<name>NPW Amex Gold Charge</name>
+	<shortDescription>(CreditCard_Retail_1039) This is NPW Amex Gold Charge</shortDescription>
+
+	<!--GenerateOfferVerifyEligibility-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Age</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>18</minValue>
+			<maxValue>999</maxValue>
+			<valueUnit>year</valueUnit>
+			<description>user-icon|You need to be 18 years or older.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>200000</minValue>
+			<maxValue>750000</maxValue>
+			<valueUnit>ZAR</valueUnit>
+			<description>income|You need to earn between R200 000 and R750 000 per annum.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+			<value>${{FAIS_OnBehalfOfBranchList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>FAIS_StaffBranchOverrideList</attributeName>
+			<value>${{FAIS_StaffBranchOverideList}}</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--GenerateOfferGatherProductDetails-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>YourCreditCard|ng-component=YourCreditCardComponent~ProceduralStepName=Your Credit Card~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=5000</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>NCCDesk|ProceduralStepName=NCC Desk~ZOrder=150~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>FinancialDetails|ProceduralStepName=Financial Details~ZOrder=90</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Offer Configuration-->
+	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
+		<attributeGroupName>VASCrossSellControl</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1334</attributeName><!--Membership Rewards-->
+			<value>Optionality=Mandatory~IsTakenUp=true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1465</attributeName><!--Redemption Card-->
+			<value>Optionality=Mandatory~IsTakenUp=true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1100</attributeName><!--Credit Card Insurance-->
+			<value>Optionality=Optional~IsTakenUp=false</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>VAS_1028</attributeName><!--Plastic Card-->
+			<value>Optionality=Optional~IsTakenUp=true</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Document Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCard|ContractComponentProductType=1039</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1039</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCardTC|ContractComponentProductType=1039</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>Taxonomy|ARRANGEMENTS_AGREEMENTS_AGREEMENTSCREDITCARD_Agreement Contract</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCredit|ContractComponentProductType=1039</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCard|ContractComponentProductType=1039</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Offer Configuration-->
+	<productAttributeGroup action="overwrite">
+		 <attributeGroupName>PresentOfferSelection</attributeGroupName>
+		 <productAttributes>
+			 <attributeType>string</attributeType>
+			 <attributeName>OfferSelectionSummaryDetails</attributeName>
+			 <value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1039</value>
+		 </productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>CreditDetails</attributeGroupName>
+		<productAttributes>
+			<attributeName>minimumCreditAvaliableZAR</attributeName>
+			<value>5000</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Provisioning Configuration-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productCodeMappings</attributeGroupName>
+		<productAttributes>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>MDM_ProductCode</attributeName>
+			<value>1447</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>HLCore_ProductCode</attributeName>
+			<value>1447</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>Siyaka_ProductCode</attributeName>
+			<value>324324</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productCodeMapping</attributeType>
+			<attributeName>CoreSystemIdentifier</attributeName>
+			<value>000</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>coreProvisioningParameters</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>spikeProductID</attributeName>
+			<value>1039</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>productSystem</attributeName>
+			<value>CAMS</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>productType</attributeName>
+			<value>CREDITCARD</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>flag</attributeType>
+			<attributeName>ProvisioningPhase</attributeName>
+			<value>preFICAProvisioning</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>welcomeEmailTemplate</attributeName>
+			<value>me_dynamic_welcome_01</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>welcomeDocumentTemplate</attributeName>
+			<value>nedbank-commercial-release/CombinedWelcomeLetter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>welcomeLetterTaxonomy</attributeName>
+			<value>AGREEMENTSCREDITCARD|Welcome Letter|Welcome Letter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>welcomeDocumentTemplateLocked</attributeName>
+			<value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
+		</productAttributes>
+	</productAttributeGroup>
+	
+	<!-- Process Audit Report-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCard|ContractComponentProductType=1039</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1099</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
+
+
+	<features>
+		<featureIdentifier>1099</featureIdentifier>
+		<name>Credit card insurance</name>
+
+		<!--GenerateOffer-->
+		<featureAttributeGroup action="overwrite">
+			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=CreditCardInsurancePaymentProtectionComponent-1099~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+	</features>
+
+	<!--1100 - Payment protection plan-->
+	<features>
+		<featureIdentifier>1100</featureIdentifier>
+		<name>Payment protection plan</name>
+		<featureAttributeGroup action="overwrite">
+			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productInformationRequirement</attributeType>
+				<attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=CreditCardInsurancePaymentProtectionComponent-1100~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+	</features>
+
+</product>
