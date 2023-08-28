@@ -38,6 +38,64 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--ActivateProductsGatherEvidence-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>clientInformationRequirement_GatherEvidence</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>GatherEvidence|ng-component=UploadYourDocumentsComponent~ProceduralStepName=Uploading your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=MobileSelfAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>productDocumentPresentation|ProceduralStepName=Signing the paperwork~ZOrder=90</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>DigitalActivation|ProceduralStepName=Get activated on the app~ZOrder=80</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisDeclaration|ProceduralStepName=FAIS declaration~ZOrder=60~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>YourDeclaration|ProceduralStepName=Your declaration~ZOrder=60~applicableChannels=WebSelfAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--ActivateProductsPresentDocuments-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>GatherEvidence|ProceduralStepName=Upload your documents~ZOrder=100~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~applicableChannels=MobileSelfAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>SSKScanEvidence|ProceduralStepName=Scan your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true~applicableChannels=SelfServiceKiosk</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Signing the paperwork~ZOrder=90~ActiveOnInitialWorkItemExecution=true~applicableChannels=WebSelfAssisted~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=SelfServiceKiosk~applicableChannels=MerchantAssisted~applicableChannels=MobileSelfAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>DigitalActivation|ng-component=DigitalActivationComponent~ProceduralStepName=Get activated on the app~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=60~ContractComponentProductType=1001~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>YourDeclaration|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=60~ContractComponentProductType=1001~applicableChannels=WebSelfAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>NedbankID|ng-component=StaffAssistedNedbankIdComponent~ProceduralStepName=Nedbank ID~ZOrder=50~applicableChannels=BranchStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--FinalizeFrontOfficeInteraction-->
 
    <!--Document Configuration-->
@@ -81,7 +139,7 @@
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subTPTermsAndConditions|ContractComponentProductType=4801</attributeName>
+         <attributeName>subTPTermsAndConditions|ContractComponentProductType=4803</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
