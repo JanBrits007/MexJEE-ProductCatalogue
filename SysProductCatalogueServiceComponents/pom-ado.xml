@@ -38,6 +38,7 @@
 		<dependency>
 			<groupId>#{pomGroupId}#</groupId>
 			<artifactId>JavaProductCatalogueServiceComponents</artifactId>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
 			<groupId>#{pomGroupId}#</groupId>
@@ -47,71 +48,77 @@
 		<dependency>
 			<groupId>#{pomGroupId}#</groupId>
 			<artifactId>JavaProductCatalogueClient</artifactId>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 	    <dependency>
 	        <groupId>#{pomGroupId}#</groupId>
 	        <artifactId>JavaClient360InformationServiceClient</artifactId>
+			<scope>#{supportingJARsScope}#</scope>
 	    </dependency>
 		<dependency>
 			<groupId>#{pomGroupId}#</groupId>
-			<artifactId>CR1Common</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>#{pomGroupId}#</groupId>
-			<artifactId>JavaSystemConfigurator</artifactId>
+			<artifactId>JavaCommon</artifactId>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
 			<groupId>#{pomGroupId}#</groupId>
 			<artifactId>JavaArrangementInformationServiceClient</artifactId>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
 			<groupId>#{pomGroupId}#</groupId>
 			<artifactId>JavaProductDevelopmentServiceClient</artifactId>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka-clients</artifactId>
-			<scope>compile</scope>
+			<scope>#{supportingJARsScope}#</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-json-provider</artifactId>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
-			<scope>compile</scope>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
-		<dependency>
+		<!--dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
-		</dependency>
+		</dependency-->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<scope>compile</scope>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
-			<scope>compile</scope>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
 			<artifactId>json-simple</artifactId>
-			<scope>compile</scope>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<scope>compile</scope>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.25</version>
-			<scope>compile</scope>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka-clients</artifactId>
-			<scope>compile</scope>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 	</dependencies>
 </project>

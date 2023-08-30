@@ -3,16 +3,24 @@
    <name>MiGoals</name>
    <shortDescription>(Transactional_RRB_TP20_4801) RRB version of MiGoals</shortDescription>
 
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_Initialise</attributeGroupName>
+      <productAttributes>
+         <attributeName>GNBAHandler_Initialise</attributeName>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.initialise.initialisation.rules.BundleProductRule</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--GenerateOfferGatherProductDetails-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=100.00~max=250000.00~isMandatory=false~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=100.00~max=250000.00~isMandatory=false~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>TransactionalProductDetailsV2Mobile|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~applicableChannels=MobileSelfAssisted~applicableChannels=WebSelfAssisted</attributeName>
+         <attributeName>TransactionalProductDetailsV2Mobile|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~applicableChannels=MobileSelfAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -39,6 +47,35 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>AlternateProductOfferSelection|ng-component=AlternateProductsComponent~ActiveOnInitialWorkItemExecution=true</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--ActivateProductsGatherProductDetails-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>TransactionalProductInformationBroadcast|ng-component=TransactionalProductInformationBroadcastComponent~ZOrder=400</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~restrictOptOut=true~ProceduralStepName=Getting your cards~includeTemporaryCard=true~lockersOption=true~deliveryMessage=deliveryChargeWillBeReversed~ZOrder=170</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~child-ng-components=FAISAdviceRefused</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent~applicableChannels=WebSelfAssisted~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=SelfServiceKiosk~applicableChannels=MerchantAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -78,18 +115,192 @@
    </productAttributeGroup>
 
    <!-- Case and Process Configuration -->
-   <productAttributeGroup inheritFromFiles="Transactional_RRB">
+   <productAttributeGroup action="overwrite">
       <attributeGroupName>EligibilityRules</attributeGroupName>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Age</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>16</minValue>
+         <maxValue>999</maxValue>
+         <valueUnit>year</valueUnit>
+         <description>user-icon|You need to be at least 16 years old.</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>NonEligibleDCAR</attributeName>
+         <value>${{NonEligibleDCARList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+         <value>${{FAIS_OnBehalfOfBranchList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+         <value>${{FAIS_StaffBranchOverideList}}</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Offer Configuration-->
-   <productAttributeGroup inheritFromFiles="Transactional_Retail_TP20_4801">
+   <productAttributeGroup action="overwrite">
       <attributeGroupName>VASCrossSellControl</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>DontCrossSellOnBaseComponentStatuses</attributeName>
+         <value>1012</value><!--Open-->
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1374</attributeName><!--eNotes-->
+         <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_219</attributeName><!--Instant Gold Cheque Card-->
+         <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1402</attributeName><!--My Pocket-->
+         <value>Optionality=Optional~IsTakenUp=true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1008</attributeName><!--No-funds alert-->
+         <value>Optionality=Mandatory~IsTakenUp=true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1164</attributeName><!--AMEX-->
+         <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--Provisioning Configuration-->
-   <productAttributeGroup inheritFromFiles="Transactional_Retail_TP20_4801">
+   <productAttributeGroup action="overwrite">
       <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>LeadEmailAddressNonProd</attributeName>
+         <value>FohnB@Nedbank.co.za;ajits@nedbank.co.za;LijuN@Nedbank.co.za;LudieP@Nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za;sivat@nedbank.co.za</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>LeadEmailAddressProd</attributeName>
+         <value>NedbankSmallBusiness@Nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ConversionLeadEmailAddressNonProd</attributeName>
+         <value>FohnB@Nedbank.co.za;ajits@nedbank.co.za;LijuN@Nedbank.co.za;LudieP@Nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za;sivat@nedbank.co.za</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>ConversionLeadEmailAddressProd</attributeName>
+         <value>PRBSales@nedbank.co.za;Aliciap@Nedbank.co.za;melezem@nedbank.co.za</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>consolidatedLeadEmail</attributeName>
+         <value>false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>brand</attributeName>
+         <value>NEDBANK</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productSystem</attributeName>
+         <value>DAM</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>spikeProductID</attributeName>
+         <value>4801</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productType</attributeName>
+         <value>CA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productTargetType</attributeName>
+         <value>${{TP20TransactionalProductTargetType}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>supressClientCommunications</attributeName>
+         <value>false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>digitalBranchCode</attributeName>
+         <value>911</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>digitalDcar</attributeName>
+         <value>51911</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAdminFieldType</attributeName>
+         <value>1004</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmSubProductCode</attributeName>
+         <value>2141</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAdminSystemType</attributeName>
+         <value>1001</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>mdmAccountRoleType</attributeName>
+         <value>1046</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>productCategory</attributeName>
+         <value>00001</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productSubCategory</attributeName>
+         <value>2</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>welcomeEmailTemplate</attributeName>
+         <value>me_dynamic_welcome_01</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>welcomeDocumentTemplate</attributeName>
+         <value>nedbank-commercial-release/CombinedWelcomeLetter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>welcomeLetterTaxonomy</attributeName>
+         <value>AGREEMENTSDEPOSIT|Welcome Letter|Welcome Letter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>welcomeDocumentTemplateLocked</attributeName>
+         <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>noFundsAlertIndicator</attributeName>
+         <value>1</value>
+      </productAttributes>
    </productAttributeGroup>
 
     <!-- Intent sequence mapping -->
@@ -141,6 +352,14 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subGenericSignatures</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
       <productAttributes>
@@ -169,11 +388,19 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedKeyFactStatements</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subMiGoals</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
       <productAttributes>
          <attributeType>DocumentDescription</attributeType>
-         <attributeName>Terms and conditions|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
+         <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
@@ -250,6 +477,22 @@
       <productAttributes>
          <attributeType>AvailableAction</attributeType>
          <attributeName>DigitallySign</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeType>DocumentDescription</attributeType>
+         <attributeName>CombinedKeyFactStatements|nedbank-commercial-release/CombinedKeyFactStatements|N/A|N/A|N/A|N/A</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>AvailableAction</attributeType>
+         <attributeName>Email</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>DocTemplateName</attributeType>
+         <attributeName>CombinedKeyFactStatements</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -334,6 +577,13 @@
    <features inheritFromFiles="Transactional_Retail">
       <featureIdentifier>1164</featureIdentifier>
       <name>Amex Card</name>
+   </features>
+
+   <!-- Nedbank Gold Credit Card -->
+   <features>
+      <featureIdentifier>0</featureIdentifier>
+      <featureType>BundledProduct</featureType>
+      <referenceProductID>1032</referenceProductID>
    </features>
 
    <!--Overdraft feature -->
@@ -847,6 +1097,11 @@
             <attributeType>string</attributeType>
             <attributeName>provisioningMechanism</attributeName>
             <value>provisionToCRAG</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>productType</attributeName>
+            <value>OD</value>
          </featureAttributes>
       </featureAttributeGroup>
 

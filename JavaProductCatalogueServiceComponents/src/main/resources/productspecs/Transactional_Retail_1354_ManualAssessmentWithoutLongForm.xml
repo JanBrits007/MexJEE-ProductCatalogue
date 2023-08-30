@@ -1,0 +1,37 @@
+<product inheritFromFiles="Transactional_Retail_1354" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+	<productIdentifier>1354</productIdentifier>
+	<name>Savvy Bundle Current Account</name>
+	<shortDescription>(Transactional_Retail_1354) This current account forms part of the Savvy Bundle</shortDescription>
+
+	<!--AppealWithLongForm-->
+	<productAttributeGroup inheritFromFiles="BaseProduct_Retail_ManualAssessmentWithoutLongForm">
+		<attributeGroupName>productInformationRequirement_AppealWithoutLongForm</attributeGroupName>
+	</productAttributeGroup>
+
+	<!--FinancialExtendedDetails-->
+	<productAttributeGroup inheritFromFiles="BaseProduct_Retail_LongForm">
+		<attributeGroupName>clientInformationRequirement_FinancialExtendedDetails</attributeGroupName>
+	</productAttributeGroup>
+
+	<!--FinalizeFrontOfficeInteraction-->
+	<productAttributeGroup inheritFromFiles="BaseProduct_Retail_ManualAssessmentWithoutLongForm">
+		<attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+	</productAttributeGroup>
+
+	<!--Case and Process Configuration-->
+	<productAttributeGroup inheritFromFiles="BaseProduct_Retail_ManualAssessmentWithoutLongForm">
+		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+	</productAttributeGroup>
+
+	<!--Overdraft feature -->
+	<features>
+		<featureIdentifier>1014</featureIdentifier>
+		<name>Overdraft</name>
+
+		<featureAttributeGroup inheritFromFiles="BaseProduct_Retail_ManualAssessmentWithoutLongForm">
+			<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+		</featureAttributeGroup>
+
+	</features>
+
+</product>

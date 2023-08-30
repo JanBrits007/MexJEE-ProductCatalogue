@@ -3,17 +3,6 @@
    <name>Savvy Bundle Current Account</name>
    <shortDescription>(Transactional_Retail_1354) This current account forms part of the Savvy Bundle</shortDescription>
 
-   <!--GenerateOfferGatherProductDetails-->
-<!--
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OverdraftProductDetails|ng-component=RetailOverdraftProductDetailsComponent~ProceduralStepName=Your Overdraft~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=500~MaximumInput=250000~isLimitIncrease=true</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
--->
-
    <!--Evidence And Compliance Requirements-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
@@ -47,6 +36,30 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subSavvyBundle|ContractComponentProductType=1354</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_GenerateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODCreditLimitIncreaseFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementExistingToBankFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_FinalizeFrontOfficeInteraction</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementRemoveCardDeliveryFilter</value>
       </productAttributes>
    </productAttributeGroup>
 

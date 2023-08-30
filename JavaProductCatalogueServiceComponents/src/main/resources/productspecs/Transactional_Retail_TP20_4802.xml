@@ -12,7 +12,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryTransactionalProductComponentTpFix~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
+         <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryTransactionalProductComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -36,6 +36,38 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subMiGoalsPlus|ContractComponentProductType=4802</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subTP|ContractComponentProductType=4802</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subTP|ContractComponentProductType=4802</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subTPTermsAndConditions|ContractComponentProductType=4802</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subGenericSignatures</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -361,6 +393,12 @@
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementLockerFilter</value>
       </productAttributes>
+      <!--
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementPostalAddressSummaryDetailsFilter</value>
+      </productAttributes> -->
    </productAttributeGroup>
 
 
@@ -390,11 +428,11 @@
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-1386~child-ng-components=LockerCollectCardComponent~ZOrder=50</attributeName>
+            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set!~HideProceduralStep=true~child-ng-components=LockerCollectCardComponent~child-ng-components=CardCollectionNotificationComponent-1386~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~ZOrder=50</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there!~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-1386~child-ng-components=LockerCollectCardComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there!~HideProceduralStep=true~child-ng-components=LockerCollectCardComponent~child-ng-components=CardCollectionNotificationComponent-1386~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -724,7 +762,13 @@
       </featureAttributeGroup>
 
       <!--GenerateOfferGatherProductDetails-->
-
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OverdraftProductDetails|ng-component=RetailOverdraftProductDetailsComponent~ProceduralStepName=Your Overdraft~ZOrder=105~ActiveOnInitialWorkItemExecution=true~MinimumInput=500~MaximumInput=250000~isLimitIncrease=true</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
       <!--DetermineRelatedParties-->
 
       <!--GenerateOfferGatherClientDetails-->
@@ -769,7 +813,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>Finch|ng-component=StaffFinancialDataMiningComponent~ProceduralStepName=Finch~ZOrder=89~ClientPermissionPortalURL~HideProceduralStep=true~applicableChannels=NCCStaffAssisted~applicableChannels=BranchStaffAssisted</attributeName>
+            <attributeName>Finch|ng-component=StaffFinancialDataMiningComponent~ProceduralStepName=Finch~ZOrder=89~ClientPermissionPortalURL~applicableChannels=NCCStaffAssisted~applicableChannels=BranchStaffAssisted</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -853,7 +897,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130</attributeName>
+            <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
@@ -904,11 +948,11 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=CreditApplicationStatusComponent-1014~child-ng-components=OverdraftAccountDetails-1014~HideProceduralStep=true~ZOrder=50~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted</attributeName>
+            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=CreditApplicationStatusComponent-1014~child-ng-components=OverdraftAccountDetails-1014~HideProceduralStep=true~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~ZOrder=50~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~child-ng-components=MobileCreateYourLoginDetailsNotificationComponent~child-ng-components=MobileAlsoExpectNotificationComponent~HideProceduralStep=true~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~child-ng-components=MobileCreateYourLoginDetailsNotificationComponent~child-ng-components=MobileAlsoExpectNotificationComponent~HideProceduralStep=true~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -1755,11 +1799,11 @@
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~HideProceduralStep=true~child-ng-components=InstantGoldChequeCardProvisionInBranchComponent-219~child-ng-components=CardCollectionNotificationComponent-219~child-ng-components=LockerCollectCardComponent~ZOrder=50</attributeName>
+            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~HideProceduralStep=true~child-ng-components=LockerCollectCardComponent~child-ng-components=InstantGoldChequeCardProvisionInBranchComponent-219~child-ng-components=CardCollectionNotificationComponent-219~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~ZOrder=50</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~HideProceduralStep=true~child-ng-components=InstantGoldChequeCardProvisionInBranchComponent-219~child-ng-components=CardCollectionNotificationComponent-219~child-ng-components=LockerCollectCardComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~HideProceduralStep=true~child-ng-components=LockerCollectCardComponent~child-ng-components=InstantGoldChequeCardProvisionInBranchComponent-219~child-ng-components=CardCollectionNotificationComponent-219~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 

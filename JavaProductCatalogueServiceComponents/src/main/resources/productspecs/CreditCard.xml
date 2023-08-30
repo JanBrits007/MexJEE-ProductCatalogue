@@ -40,7 +40,7 @@
 			<minValue>5000</minValue>
 			<maxValue>99999999</maxValue>
 			<valueUnit>ZAR</valueUnit>
-			<description>income|You need to earn R5 000 or more per month.</description>
+			<description>You need to earn R5000 or more per month.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -172,7 +172,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>Finch|ng-component=StaffFinancialDataMiningComponent~ProceduralStepName=Finch~ZOrder=89~ClientPermissionPortalURL~HideProceduralStep=true~applicableChannels=NCCStaffAssisted~applicableChannels=BranchStaffAssisted</attributeName>
+			<attributeName>Finch|ng-component=StaffFinancialDataMiningComponent~ProceduralStepName=Finch~ZOrder=89~ClientPermissionPortalURL~applicableChannels=NCCStaffAssisted~applicableChannels=BranchStaffAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -902,6 +902,11 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
+			<attributeName>GenericHandler_AppealWithLongForm</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
 			<attributeName>GenericHandler_AppealWithoutLongForm</attributeName>
 			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
 		</productAttributes>
@@ -1317,6 +1322,17 @@
 			<attributeName>RequiredDataFilter_All</attributeName>
 			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditLimitIncreaseFilter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditLimitIncreaseContractDocumentFilter</value>
+		</productAttributes>
+
 		<!--
 		<productAttributes>
 			<attributeType>string</attributeType>

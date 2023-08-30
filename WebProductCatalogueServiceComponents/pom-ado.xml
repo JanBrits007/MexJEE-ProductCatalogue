@@ -35,10 +35,25 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>#{pomGroupId}#</groupId>
+            <artifactId>JavaProductCatalogueClient</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>#{pomGroupId}#</groupId>
+            <artifactId>JavaBusinessCaseManagementDTO</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>#{pomGroupId}#</groupId>
+            <artifactId>JavaCommonDTO</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
             <scope>provided</scope>
-        </dependency>
+        </dependency-->
 	    <dependency>
 	        <groupId>#{pomGroupId}#</groupId>
 	        <artifactId>JavaClient360InformationServiceClient</artifactId>
@@ -51,7 +66,12 @@
         </dependency>
         <dependency>
             <groupId>#{pomGroupId}#</groupId>
-            <artifactId>JavaSystemConfigurator</artifactId>
+            <artifactId>JavaPartyManagementDTO</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>#{pomGroupId}#</groupId>
+            <artifactId>JavaCommon</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -88,6 +108,55 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
+        </dependency>
+        <!-- start. jackson dependencies to enable jackson annotations in REST-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+            <scope>#{supportingJARsScope}#</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-base</artifactId>
+            <scope>#{supportingJARsScope}#</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-jaxb-annotations</artifactId>
+            <scope>#{supportingJARsScope}#</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <scope>#{supportingJARsScope}#</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <scope>#{supportingJARsScope}#</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <scope>#{supportingJARsScope}#</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+            <scope>#{supportingJARsScope}#</scope>
+        </dependency>
+        <!-- end. jackson dependencies to enable jackson annotations in REST-->
+
+        <!-- Dependencies specified like this should auto load entitlements -->
+        <dependency>
+            <groupId>#{pomGroupId}#</groupId>
+            <artifactId>CR1Authorization</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>#{pomGroupId}#</groupId>
+            <artifactId>EntitlementAuthorization</artifactId>
+            <version>#{buildVersion}#</version>
         </dependency>
     </dependencies>
 </project>

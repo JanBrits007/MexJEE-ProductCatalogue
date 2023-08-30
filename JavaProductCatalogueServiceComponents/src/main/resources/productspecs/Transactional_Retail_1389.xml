@@ -3,14 +3,7 @@
    <name>Nedbank Pay-As-You-Use</name>
    <shortDescription>(Transactional_Retail_1389) A no frills, transparent account with a flat monthly fee, pay only for what you use.</shortDescription>
 
-   <!--GenerateOfferGatherProductDetails-->
- <!--  <productAttributeGroup action="overwrite">
-      <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>OverdraftProductDetails|ng-component=RetailOverdraftProductDetailsComponent~ProceduralStepName=Your Overdraft~ZOrder=100~ActiveOnInitialWorkItemExecution=true~MinimumInput=500~MaximumInput=250000~isLimitIncrease=true</attributeName>
-      </productAttributes>
-   </productAttributeGroup>-->
+
 
    <!--FinalizeFrontOfficeInteraction-->
    <productAttributeGroup action="overwrite"><!--Overwritten as PAYU does not get eNotes and instead gets a tile on the you are done screen-->
@@ -35,6 +28,30 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subPAYU|ContractComponentProductType=1389</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_GenerateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODCreditLimitIncreaseFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementExistingToBankFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_FinalizeFrontOfficeInteraction</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementRemoveCardDeliveryFilter</value>
       </productAttributes>
    </productAttributeGroup>
 

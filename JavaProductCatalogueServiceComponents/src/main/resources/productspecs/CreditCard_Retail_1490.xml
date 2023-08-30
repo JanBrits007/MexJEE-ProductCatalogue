@@ -82,7 +82,7 @@
 		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
 		<productAttributes>
 			<attributeType>DocumentDescription</attributeType>
-			<attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|N/A|N/A|N/A|N/A</attributeName>
+			<attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
@@ -102,10 +102,33 @@
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+	<productAttributes>
+		<attributeType>DocumentDescription</attributeType>
+		<attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+	</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Download</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>Email</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>StaffDigitalAcknowledgement</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subCreditCard|ContractComponentProductType=1490</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCenturion|ContractComponentProductType=1490</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -132,6 +155,10 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subCreditCard|ContractComponentProductType=1490</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subCenturion|ContractComponentProductType=1490</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -622,7 +649,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=CreditApplicationStatusComponent-1032~child-ng-components=CreditAccountDetails~child-ng-components=CardCollectionNotificationComponent-1028~child-ng-components=LockerCollectCardComponent~HideProceduralStep=true~ZOrder=50</attributeName>
+			<attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=LockerCollectCardComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=CreditApplicationStatusComponent-1032~child-ng-components=CreditAccountDetails~child-ng-components=CardCollectionNotificationComponent-1028~HideProceduralStep=true~ZOrder=50</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -664,7 +691,52 @@
 			</featureAttributes>
 			<featureAttributes>
 				<attributeType>productInformationRequirement</attributeType>
-				<attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=CreditApplicationStatusComponent-1032~child-ng-components=CreditAccountDetails~child-ng-components=CardCollectionNotificationComponent-1028~child-ng-components=LockerCollectCardComponent~HideProceduralStep=true~ZOrder=50</attributeName>
+				<attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=LockerCollectCardComponent~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=CreditApplicationStatusComponent-1032~child-ng-components=CreditAccountDetails~child-ng-components=CardCollectionNotificationComponent-1028~HideProceduralStep=true~ZOrder=50</attributeName>
+			</featureAttributes>
+		</featureAttributeGroup>
+
+
+		<featureAttributeGroup action="overwrite">
+			<attributeGroupName>FeatureDetails</attributeGroupName>
+			<featureAttributes>
+				<attributeType>productATMLimit</attributeType>
+				<attributeName>ATM_Limit</attributeName>
+				<value>2000</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>monthlyServiceFeeFrequency</attributeType>
+				<attributeName>AdminFee</attributeName>
+				<value>Monthly</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>monthlyCreditFacilityServiceFeeFrequency</attributeType>
+				<attributeName>AdminFee</attributeName>
+				<value>Monthly</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>initiationFeeFrequency</attributeType>
+				<attributeName>InitiationFee</attributeName>
+				<value>Revolving</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>numberOfInstallments</attributeType>
+				<attributeName>Number_Of_Installments</attributeName>
+				<value>Revolving</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>minimumRepaymentPercentage</attributeType>
+				<attributeName>Minimum_Repayment_Percentage</attributeName>
+				<value>100</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>repaymentterm</attributeType>
+				<attributeName>Repayment_Term</attributeName>
+				<value>12</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>InstalmentPayable_Frequency</attributeType>
+				<attributeName>InstalmentPayable_Frequency</attributeName>
+				<value>Monthly</value>
 			</featureAttributes>
 		</featureAttributeGroup>
 

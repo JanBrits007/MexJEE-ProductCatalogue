@@ -8,18 +8,26 @@
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=SelfServiceKiosk</attributeName>
+         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=SelfServiceKiosk</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>CreditEligibilityIncome|ng-component=AppBasicIncomeWidgetComponent~ProceduralStepName=Your income details~ZOrder=100~applicableChannels=NCCStaffAssisted~applicableChannels=BranchStaffAssisted</attributeName>
       </productAttributes>
-<!--      <productAttributes>-->
-<!--         <attributeType>clientInformationRequirement</attributeType>-->
-<!--         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>-->
-<!--      </productAttributes>-->
    </productAttributeGroup>
 
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_GenerateOfferVerifyEligibility</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementAgeDeclineFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementIncomeDeclineFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+   
    <!--Case and Process Configuration-->
    <productAttributeGroup>
       <attributeGroupName>CommunicationStrategyConfiguration</attributeGroupName>
@@ -185,6 +193,22 @@
          <attributeType>string</attributeType>
          <attributeName>VAS_1374</attributeName><!--eNotes-->
          <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_PresentDocuments</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODLimitIncreaseFaisFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODLimitIncreaseFaisFilter</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -391,6 +415,11 @@
             <attributeName>DataMiningHandler</attributeName>
             <value>classname=za.co.nb.onboarding.product.datamining.handlers.retail.RetailDataMiningHandler</value>
          </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CODHandler_FinancialExtendedDetails</attributeName>
+            <value>classname=za.co.nb.offermanagement.cod.handler.internal.FinancialExtendedDetailsHandler</value>
+         </featureAttributes>
       </featureAttributeGroup>
    </features>
 
@@ -399,7 +428,52 @@
       <featureIdentifier>1014</featureIdentifier>
       <name>Overdraft</name>
 
+      <!-- Intent sequence mapping -->
+      <featureAttributeGroup>
+         <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeIntentSequence</attributeName>
+            <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+         </featureAttributes>
+         <!--featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+            <value>No back and forth yet configured</value>
+         </featureAttributes-->
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RecursiveGNBAIntents</attributeName>
+            <value>NA</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>breadcrumbSteps</attributeName>
+            <value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>GNBAIntentToActivityMapping</attributeName>
+            <value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+         </featureAttributes>
+      </featureAttributeGroup>
+
       <!--VerifyIdentity-->
+      <featureAttributeGroup>
+         <attributeGroupName>RuleHandlers_clientInformationRequirement_VerifyIdentity</attributeGroupName>
+         <featureAttributes>
+            <attributeType>RequiredDataFilter_clientInformationRequirement_VerifyIdentity</attributeType>
+            <attributeName>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.CreditEligibilityIncomeFilter</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      <featureAttributeGroup>
+         <attributeGroupName>PartyConfiguration</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredDataFilter_VerifyIdentity</attributeName>
+            <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.CreditEligibilityIncomeFilter</value>
+         </featureAttributes>
+      </featureAttributeGroup>
 
       <!--GenerateOfferVerifyEligibility-->
       <featureAttributeGroup>
@@ -422,7 +496,14 @@
       </featureAttributeGroup>
 
       <!--GenerateOfferGatherProductDetails-->
-
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>OverdraftProductDetails|ng-component=RetailOverdraftProductDetailsComponent~ProceduralStepName=Your Overdraft~ZOrder=105~ActiveOnInitialWorkItemExecution=true~MinimumInput=500~MaximumInput=250000~isLimitIncrease=true</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+      
       <!--DetermineRelatedParties-->
 
       <!--GenerateOfferGatherClientDetails-->
@@ -467,7 +548,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>Finch|ng-component=StaffFinancialDataMiningComponent~ProceduralStepName=Finch~ZOrder=89~ClientPermissionPortalURL~HideProceduralStep=true~applicableChannels=NCCStaffAssisted~applicableChannels=BranchStaffAssisted</attributeName>
+            <attributeName>Finch|ng-component=StaffFinancialDataMiningComponent~ProceduralStepName=Finch~ZOrder=89~ClientPermissionPortalURL~applicableChannels=NCCStaffAssisted~applicableChannels=BranchStaffAssisted</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -551,12 +632,12 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130</attributeName>
+            <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted</attributeName>
          </featureAttributes>
-         <featureAttributes>
+        <!-- <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted</attributeName>
-         </featureAttributes>
+         </featureAttributes>-->
       </featureAttributeGroup>
 
       <!--ActivateProductsGatherEvidence-->
@@ -1023,7 +1104,7 @@
          <featureAttributes>
             <attributeType>string</attributeType>
             <attributeName>frontOfficeIntentSequence</attributeName>
-            <value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+            <value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
@@ -1047,6 +1128,11 @@
             <attributeType>string</attributeType>
             <attributeName>DataMiningHandler</attributeName>
             <value>classname=za.co.nb.onboarding.product.datamining.handlers.retail.RetailDataMiningHandler</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>CODHandler_FinancialExtendedDetails</attributeName>
+            <value>classname=za.co.nb.offermanagement.cod.handler.internal.FinancialExtendedDetailsHandler</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -1641,11 +1727,11 @@
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~HideProceduralStep=true~child-ng-components=InstantGoldChequeCardProvisionInBranchComponent-219~child-ng-components=CardCollectionNotificationComponent-219~child-ng-components=LockerCollectCardComponent~ZOrder=50</attributeName>
+            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~HideProceduralStep=true~child-ng-components=LockerCollectCardComponent~child-ng-components=InstantGoldChequeCardProvisionInBranchComponent-219~child-ng-components=CardCollectionNotificationComponent-219~ZOrder=50</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~HideProceduralStep=true~child-ng-components=InstantGoldChequeCardProvisionInBranchComponent-219~child-ng-components=CardCollectionNotificationComponent-219~child-ng-components=LockerCollectCardComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~HideProceduralStep=true~child-ng-components=LockerCollectCardComponent~child-ng-components=InstantGoldChequeCardProvisionInBranchComponent-219~child-ng-components=CardCollectionNotificationComponent-219~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -1705,11 +1791,11 @@
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-1386~child-ng-components=LockerCollectCardComponent~ZOrder=50</attributeName>
+            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~HideProceduralStep=true~child-ng-components=LockerCollectCardComponent~child-ng-components=CardCollectionNotificationComponent-1386~ZOrder=50</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~HideProceduralStep=true~child-ng-components=CardCollectionNotificationComponent-1386~child-ng-components=LockerCollectCardComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~HideProceduralStep=true~child-ng-components=LockerCollectCardComponent~child-ng-components=CardCollectionNotificationComponent-1386~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 

@@ -31,6 +31,11 @@
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.FuneralCoverEligibilityRules</value>
       </productAttributes>
+       <productAttributes>
+           <attributeType>string</attributeType>
+           <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+           <value>classname=za.co.nb.offermanagement.eligibility.handler.FuneralPlanBankerAccreditationEligibilityHandler</value>
+       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup action="overwrite">
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
@@ -137,6 +142,11 @@
    <!--Provisioning Configuration-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+       <productAttributes>
+           <attributeType>string</attributeType>
+           <attributeName>AdvisorCodeSelf</attributeName>
+           <value>${{FuneralPlanAdvisorCodeSelf}}</value>
+       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>brand</attributeName>
