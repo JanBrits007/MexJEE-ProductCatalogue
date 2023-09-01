@@ -25,7 +25,6 @@
    <!--ActivateProductsGatherClientDetails-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
-      <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~deduplicateWidget=false</attributeName>
@@ -40,7 +39,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ResolvedLinkedMinorApplicant|ng-component=MinorApplicantDetailsComponent~ProceduralStepName=Link your child~ZOrder=70</attributeName>
+         <attributeName>ResolvedLinkedMinorApplicant|ng-component=MinorApplicantDetailsV2Component~ProceduralStepName=Link your child~ZOrder=70</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -110,6 +109,14 @@
    </productAttributeGroup>
 
    <!--Document Configuration-->
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedKeyFactStatements</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subMinors</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
       <productAttributes>
@@ -118,7 +125,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subNedbank4Me|ContractComponentProductType=4801</attributeName>
+         <attributeName>subMinors|ContractComponentProductType=4801</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -211,14 +218,9 @@
          <value>${{YouthRetailEligibleSegments}}</value>
       </productAttributes>
       <productAttributes>
-      <attributeType>string</attributeType>
-      <attributeName>NonEligibleDCAR</attributeName>
-      <value>${{YouthNonEligibleDCARList}}</value>
-      </productAttributes>
-      <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>EligibleSegments</attributeName>
-         <value>${{YouthRetailEligibleSegments}}</value>
+         <attributeName>NonEligibleDCAR</attributeName>
+         <value>${{YouthNonEligibleDCARList}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -276,6 +278,32 @@
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <!--removing this section so salary switching wont appear and wont be taken up-->
+      </featureAttributeGroup>
+
+   </features>
+
+   <!--1454 - Greenbacks Rewards Membership-->
+   <features action="overwrite">
+      <featureIdentifier>1454</featureIdentifier>
+      <name>Greenbacks Rewards Membership</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <!--removing this section so Greenbacks wont appear and wont be taken up-->
+      </featureAttributeGroup>
+
+   </features>
+
+   <!--1333 - Nedbank Greenbacks Shop Card-->
+   <features action="overwrite">
+      <featureIdentifier>1333</featureIdentifier>
+      <name>Nedbank Greenbacks Shop Card</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <!--removing this section so shop card wont appear and wont be taken up-->
       </featureAttributeGroup>
 
    </features>
