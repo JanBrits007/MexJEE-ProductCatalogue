@@ -33,7 +33,7 @@
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~ActiveOnInitialWorkItemExecution=true~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant</attributeName>
+         <attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~ActiveOnInitialWorkItemExecution=true~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -63,12 +63,10 @@
    <!--ActivateProductsGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
-      
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=CustomerVulnerabilitiesComponent~displaySummary=true</attributeName>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=CustomerVulnerabilitiesComponent~child-ng-components=DigitalActiveCardTrascationalComponent~displaySummary=true</attributeName>
       </productAttributes>
-
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true</attributeName>
@@ -77,10 +75,6 @@
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture~displaySummary=true</attributeName>
       </productAttributes>
-<!--      <productAttributes>-->
-<!--         <attributeType>clientInformationRequirement</attributeType>-->
-<!--         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>-->
-<!--      </productAttributes>-->
    </productAttributeGroup>
 
    <!--ActivateProductsGatherProductDetails-->
@@ -755,6 +749,61 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
+         <attributeName>CODHandler_FinancialExtendedDetails</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.FinancialExtendedDetailsHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CODHandler_AppealWithLongForm</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenericHandler_AppealWithLongForm</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenericHandler_AppealWithoutLongForm</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenericHandler_DeclineAppealWithoutLongForm</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenericHandler_DeclineAppealWithLongForm</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenericHandler_LimitAppealWithoutLongForm</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenericHandler_LimitAppealWithLongForm</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenericHandler_PricingAppealWithoutLongForm</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenericHandler_PricingAppealWithLongForm</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenericHandler_GenerateOfferTryAgain</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.GenerateOfferTryAgainHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
          <attributeName>CODHandler_FinancialDetails</attributeName>
          <value>${{CODHandler_FinancialDetails}}</value>
       </productAttributes>
@@ -791,7 +840,18 @@
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
       </productAttributes>
-      <!-- 
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditLimitIncreaseContractDocumentFilter</value>
+      </productAttributes>
+      <!--
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementPostalAddressSummaryDetailsFilter</value>
+      </productAttributes> -->
+      <!--
       <productAttributes>
 		 <attributeType>string</attributeType>
 		 <attributeName>RequiredDataFilter_All</attributeName>

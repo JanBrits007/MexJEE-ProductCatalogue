@@ -322,6 +322,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
+         <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>NA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>CreditCard_RRB_1512</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
          <value>${{dynamicStaffList}}</value>
       </productAttributes>
@@ -342,7 +353,7 @@
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>${{Framework_V2_Channel_IDs}}</value>
+         <value>${{PAYU_V2_Channel_IDs}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -353,7 +364,7 @@
       <attributeGroupName>BundleSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>${{Framework_V2_Channel_IDs}}</value>
+         <value>${{PAYU_V2_Channel_IDs}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForIPSubnets</attributeName>
@@ -365,6 +376,17 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>NA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>CreditCard_RRB_1512</value>
+      </productAttributes>
+   </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
@@ -388,7 +410,7 @@
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>${{Framework_V2_Channel_IDs}}</value>
+         <value>${{PAYU_V2_Channel_IDs}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -399,7 +421,7 @@
       <attributeGroupName>BundleSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForChannelIDs</attributeName>
-         <value>${{Framework_V2_Channel_IDs}}</value>
+         <value>${{PAYU_V2_Channel_IDs}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForIPSubnets</attributeName>
@@ -414,19 +436,56 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
+         <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>NA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>CreditCard_RRB_1512</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
          <value>${{dynamicStaffList}}</value>
       </productAttributes>
-      <!-- <productAttributes>
+      <productAttributes>
          <attributeName>SubstituteForIPSubnets</attributeName>
          <value>192.168.0.0|172.238.0.0|168.142.0.0|172.28.0.0</value>
-      </productAttributes> -->
+      </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
          <value>CreditCard_RRB_1512</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForLimitIncrease</attributeName>
+         <value>CreditCard_RRB_1512</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{PAYU_V2_Channel_IDs}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>CreditCard_RRB_1512</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>BundleSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{PAYU_V2_Channel_IDs}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForIPSubnets</attributeName>
+         <value>192.168.0.0|172.238.0.0|168.142.0.0|172.28.0.0</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
          <value>CreditCard_RRB_1512</value>
       </productAttributes>
    </productAttributeGroup>

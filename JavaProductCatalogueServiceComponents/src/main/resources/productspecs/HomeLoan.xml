@@ -8,7 +8,6 @@
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
 	</productAttributeGroup>
 
-
 	<!--WaitForSupportingDocuments-->
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_WaitForSupportingDocuments</attributeGroupName>
@@ -348,6 +347,29 @@
 	</productAttributeGroup>
 
 	<!--Case and Process Configuration-->
+	<productAttributeGroup>
+		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>frontOfficeIntentSequence</attributeName>
+			<value>WaitForSupportingDocuments|GenerateQuote|ActivateProductsGatherEvidence</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+			<value>na</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>breadcrumbSteps</attributeName>
+			<value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GNBAIntentToActivityMapping</attributeName>
+			<value>WaitForSupportingDocuments=Choose Extras|GenerateQuote=Choose Extras|ActivateProductsGatherEvidence=Choose Extras</value>
+		</productAttributes>
+	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>DocumentConfiguration</attributeGroupName>
 		<productAttributes>
