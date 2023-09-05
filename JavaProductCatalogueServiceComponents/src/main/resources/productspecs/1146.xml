@@ -4,6 +4,7 @@
     <shortDescription>A loan from R2000 up to R300 000 with flexible repayment periods of 6 to 72 months; customised
         interest rates; and the option to consolidate internal and external loans.
     </shortDescription>
+    
     <productPricing>
         <fee>
             <type>AdminFee</type>
@@ -35,6 +36,7 @@
         </productAttributes>
     </productAttributeGroup>
     
+    <!--Substitution Rules-->
     <productAttributeGroup>
         <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
     </productAttributeGroup>
@@ -44,6 +46,20 @@
     <productAttributeGroup>
         <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
     </productAttributeGroup>
+    
+    <!--ETE Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>PersonalLoan_Simulation</value>
+        </productAttributes>
+    </productAttributeGroup>
+    
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
@@ -59,6 +75,7 @@
             <value>PersonalLoan_RRB_1146</value>
         </productAttributes>
     </productAttributeGroup>
+    
     <productAttributeGroup>
         <attributeGroupName>InitialisationMerchantSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
@@ -70,6 +87,7 @@
             <value>PersonalLoan_Simulation</value>
         </productAttributes>
     </productAttributeGroup>
+    
     <productAttributeGroup>
         <attributeGroupName>LimitIncreaseMerchantSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
@@ -93,6 +111,20 @@
             <value>PersonalLoan_RRB_1146</value>
         </productAttributes>
     </productAttributeGroup>
+    
+    <!--QA Substitution Rules-->
+    <productAttributeGroup>
+		<attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+		<productAttributes>
+			<attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+			<value>${{EDBTestEmailOverideList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>SubstituteForProductID</attributeName>
+			<value>PersonalLoan_Simulation</value>
+		</productAttributes>
+	</productAttributeGroup>
+	
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
         <productAttributes>
@@ -104,6 +136,8 @@
             <value>PersonalLoan_RRB_1146</value>
         </productAttributes>
     </productAttributeGroup>
+    
+    <!--PROD Substitution Rules-->
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
         <productAttributes>

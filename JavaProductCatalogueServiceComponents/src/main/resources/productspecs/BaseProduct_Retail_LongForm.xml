@@ -32,7 +32,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>DebtObligationsDetails|ng-component=DebtObligationsWidgetComponent~ProceduralStepName=Debt obligations~ZOrder=92</attributeName>
+			<attributeName>DebtObligationsDetails|ng-component=DebtObligationsWidgetComponent~ProceduralStepName=Debt obligations~ZOrder=92~DebtObligationItems=1014</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -72,5 +72,40 @@
 			<value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialExtendedDetails=Choose Extras|GenerateApplicationOfferProposals=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
 		</productAttributes>
 	</productAttributeGroup>
+
+	<features>
+		<featureIdentifier>1014</featureIdentifier>
+		<name>Overdraft</name>
+
+	<!-- Intent sequence mapping -->
+		<featureAttributeGroup action="overwrite">
+			<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>frontOfficeIntentSequence</attributeName>
+				<value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialExtendedDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+			</featureAttributes>
+			<featureAttributes>
+           		<attributeType>string</attributeType>
+           		<attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+           		<value>GenerateApplicationOfferProposals|FinancialExtendedDetails|GenerateOfferGatherClientDetails</value>
+        	</featureAttributes>
+			<!--featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>RecursiveGNBAIntents</attributeName>
+				<value>NA</value>
+			</featureAttributes-->
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>breadcrumbSteps</attributeName>
+				<value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>GNBAIntentToActivityMapping</attributeName>
+				<value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialExtendedDetails=Choose Extras|GenerateApplicationOfferProposals=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+	</features>
 
 </product>

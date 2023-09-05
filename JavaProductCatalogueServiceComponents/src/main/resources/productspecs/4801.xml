@@ -363,6 +363,18 @@
          <attributeName>RequiredDataFilter_GatherEvidence</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.PartyLONFilter</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>YOUTHBANKING_ProofOfChildIdentificationClause</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>YOUTHBANKING_ProofOfChildIdentificationClause</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
@@ -385,6 +397,14 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>YoureDone</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>YOUTHBANKING_LegalGuardianOfMinor</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>YOUTHBANKING_LegalGuardianOfMinor</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -419,11 +439,6 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>productTargetType</attributeName>
-         <value>MP</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
          <attributeName>LeadEmailAddressNonProd</attributeName>
          <value>FohnB@Nedbank.co.za;MandisaMah@Nedbank.co.za;ZamaMgo@Nedbank.co.za;ajits@nedbank.co.za;LijuN@Nedbank.co.za;LudieP@Nedbank.co.za;NatashaBu@Nedbank.co.za;PramothV@Nedbank.co.za;Aliciap@Nedbank.co.za</value>
       </productAttributes>
@@ -441,6 +456,11 @@
          <attributeType>string</attributeType>
          <attributeName>ConversionLeadEmailAddressProd</attributeName>
          <value>PRBSales@nedbank.co.za;Aliciap@Nedbank.co.za</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>productTargetType</attributeName>
+         <value>MP</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -929,6 +949,18 @@
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>ProofOfMinorIdentificationClause</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>ProofOfChildBirthIdentificationClause</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>EligibilityRules</attributeGroupName>
@@ -939,7 +971,11 @@
          <minValue>16</minValue>
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>You need to be 16 years or older</description>
+         <description>Child needs to be younger than 16</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <description>Overdraft_icon|No minimum income required</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
@@ -990,6 +1026,10 @@
       <productAttributes>
          <attributeType>Compliance</attributeType>
          <attributeName>BureauCheckConsent</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>LegalGuardianOfMinor</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
