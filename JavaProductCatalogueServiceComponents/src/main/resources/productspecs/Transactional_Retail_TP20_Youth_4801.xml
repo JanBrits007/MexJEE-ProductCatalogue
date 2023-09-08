@@ -108,6 +108,23 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--FinalizeFrontOfficeInteraction-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>LetsGetDigital|ng-component=LetsGetDigitalComponent~ProceduralStepName=Get your Nedbank ID~child-ng-components=NedbankIdRegisterComponent~applicableChannels=WebSelfAssisted~ZOrder=60</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=SSKInstantCardIssuePrimer~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalYouthProductAccountDetails~child-ng-components=ApplyForCredit~child-ng-components=DebitOrderSwitching~child-ng-components=SwitchingToNedbank~child-ng-components=ForgotYourCard~child-ng-components=EarnAsYouSwipe~child-ng-components=Statements~child-ng-components=GettingTheYouthMobileApp~HideProceduralStep=true~ZOrder=50~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~child-ng-components=MobileCreateYourLoginDetailsNotificationComponent~child-ng-components=MobileAlsoExpectNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalYouthProductAccountDetails~HideProceduralStep=true~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--Document Configuration-->
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedKeyFactStatements</attributeGroupName>
@@ -306,6 +323,21 @@
          <!--removing this section so shop card wont appear and wont be taken up-->
       </featureAttributeGroup>
 
+   </features>
+
+   <!--1164 - Amex Card-->
+   <features>
+   <featureIdentifier>1164</featureIdentifier>
+   <name>Amex Card</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup action="overwrite">
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~applicableChannels=MobileSelfAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
    </features>
 
 </product>
