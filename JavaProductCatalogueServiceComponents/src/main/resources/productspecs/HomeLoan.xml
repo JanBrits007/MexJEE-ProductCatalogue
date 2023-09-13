@@ -25,6 +25,13 @@
 			<attributeName>GenerateQuote|ng-component=GenerateQuoteComponent~ProceduralStepName=Generate Quote~ZOrder=100~ActiveOnInitialWorkItemExecution=true~applicableChannels=Headless</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>RuleHandlers_GenerateQuote</attributeGroupName>
+		<productAttributes>
+			<attributeName>GNBAHandler_GenerateQuote</attributeName>
+			<value>classname=HLGenerateQuoteHandler</value>
+		</productAttributes>
+	</productAttributeGroup>
 
 	<!--ActivateProductsGatherEvidence-->
 	<productAttributeGroup>
@@ -431,12 +438,12 @@
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent1</attributeName>
 			<value></value>
-		</productAttributes>
+		</productAttributes-->
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_CreditOffer</attributeName>
-			<value></value>
-		</productAttributes-->
+			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.HomeLoanSimulationGenerateApplicationOfferProposalCODHandler</value>
+		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_ProductOffer</attributeName>
@@ -495,17 +502,11 @@
 			<attributeName>requiresDEAStatement</attributeName>
 			<value>true</value>
 		</productAttributes>
-
-
 		<productAttributes>
 			<attributeType>boolean</attributeType>
 			<attributeName>requiresConfirmVerificationQualitySignatureTypeCheck</attributeName>
 			<value>true</value>
 		</productAttributes>
-
-
-
-
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>GatherDocumentsLiaisonTeam</attributeName>
@@ -531,8 +532,6 @@
 			<attributeName>BPMCARDOFFER</attributeName>
 			<value>BPMCARDROLE</value>
 		</productAttributes>
-
-
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>GNBAVersion</attributeName>
@@ -543,15 +542,11 @@
 			<attributeName>consumerFrameworkVersion</attributeName>
 			<value>2.0</value>
 		</productAttributes>
-
-
-
-
-
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>baseCBOActivityList</attributeName>
-			<value>ConcludeAssetValuation|CreditDecisionDetermineOffer|PresentAlternateOffer|ConfigureArrangement~ReserveFacility|InstructAttorney|ConfirmVerificationQuality|PartyHealth|ReconcileParty|ConfigureArrangement~PostEnabled|CBOFinalizeCase</value>
+			<!--value>ConcludeAssetValuation|CreditDecisionDetermineOffer|PresentAlternateOffer|ConfigureArrangement~ReserveFacility|InstructAttorney|ConfirmVerificationQuality|PartyHealth|ReconcileParty|ConfigureArrangement~PostEnabled|CBOFinalizeCase</value-->
+			<value>ConfigureArrangement|CBOFinalizeCase</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
