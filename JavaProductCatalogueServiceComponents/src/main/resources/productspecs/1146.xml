@@ -480,7 +480,25 @@
             <minValue>3500</minValue>
             <maxValue>99999999</maxValue>
             <valueUnit>ZAR</valueUnit>
-            <description>earn more than R5000 a month.</description>
+            <description>You must have a salary that is paid into your bank account electronically and that is at least:</description>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>IncomeDetail1</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>3500</minValue>
+            <maxValue>99999999</maxValue>
+            <valueUnit>ZAR</valueUnit>
+            <description>R5 000 if you have an active Nedbank transactional account; or</description>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>IncomeDetail2</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>3500</minValue>
+            <maxValue>99999999</maxValue>
+            <valueUnit>ZAR</valueUnit>
+            <description>R10 000 if you don’t have a transactional account with Nedbank.</description>
         </productAttributes>
         <productAttributes>
             <attributeType>EligibilityRule</attributeType>
@@ -1102,6 +1120,81 @@
         <productAttributes>
             <attributeType>string</attributeType>
             <attributeName>subPersonalLoan|ContractComponentProductType=1146</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--MandateConfiguration-->
+    <productAttributeGroup>
+        <attributeGroupName>MandateConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>operationType</attributeName>
+            <value>REQ</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>trackingIndicator</attributeName>
+            <value>T</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>instalmentOccurrence</attributeName>
+            <value>RCUR</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>collectionCurrency</attributeName>
+            <value>ZAR</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>creditorName</attributeName>
+            <value>Nedbank Personal Loans</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>creditorTeleContactDetails</attributeName>
+            <value>+27-116679220</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>creditorEmailContactDetails</attributeName>
+            <value>NbplPaymentsReports@Nedbank.co.za</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>creditorBranchNumber</attributeName>
+            <value>198765</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>creditorAccountNumber</attributeName>
+            <value>1456008315</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>creditorAbbreviatedShortName</attributeName>
+            <value>NEDBPL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>lobPartyIdentifier</attributeName>
+            <value>PL_CR1</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>nedbankMenberNo</attributeName>
+            <value>210002</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>caseMetricParameter</attributeName>
+            <value>MANDATEREQUESTTANSACTIONID</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>BPMAction</attributeName>
+            <value>checkPaymentMandate</value>
         </productAttributes>
     </productAttributeGroup>
 

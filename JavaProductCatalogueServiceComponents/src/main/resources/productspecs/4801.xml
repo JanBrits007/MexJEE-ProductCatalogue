@@ -369,6 +369,12 @@
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
+         <attributeName>YOUTHBANKING_ProofOfChildIdentificationClause</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
@@ -391,6 +397,10 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>YoureDone</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Compliance</attributeType>
+         <attributeName>YOUTHBANKING_LegalGuardianOfMinor</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>Compliance</attributeType>
@@ -941,6 +951,12 @@
       </productAttributes>
       <productAttributes>
          <attributeType>Evidence</attributeType>
+         <attributeName>ProofOfMinorIdentificationClause</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
          <attributeName>ProofOfChildBirthIdentificationClause</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
@@ -955,10 +971,11 @@
          <minValue>16</minValue>
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>Child needs to be 16 years or older</description>
+         <description>Child needs to be younger than 16</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
+         <attributeName>NoIncome</attributeName>
          <description>Overdraft_icon|No minimum income required</description>
       </productAttributes>
       <productAttributes>
@@ -1341,7 +1358,7 @@
          <featureAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>EnforceApplicationStatusValidationRules</attributeName>
-            <value>true</value>
+            <value>false</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>

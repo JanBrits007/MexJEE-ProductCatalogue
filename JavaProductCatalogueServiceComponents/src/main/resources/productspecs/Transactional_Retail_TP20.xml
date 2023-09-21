@@ -43,6 +43,10 @@
          <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementExistingToBankFilter</value>
       </productAttributes>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.InternationalCardDeliveryFilter</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <productAttributeGroup>
@@ -50,6 +54,10 @@
       <productAttributes>
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementRemoveCardDeliveryFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementActionStatusesFilter</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -393,7 +401,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>FaisDeclaration|ProceduralStepName=FAIS declaration~ZOrder=60</attributeName>
+            <attributeName>FaisDeclaration|ProceduralStepName=FAIS declaration~ZOrder=60~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -410,7 +418,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=60~ContractComponentProductType=1019</attributeName>
+            <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=60~ContractComponentProductType=1019~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -423,7 +431,11 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=CreditApplicationStatusComponent-1014~child-ng-components=OverdraftAccountDetails-1014~HideProceduralStep=true~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~ZOrder=50~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted</attributeName>
+            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=CreditApplicationStatusComponent-1014~child-ng-components=OverdraftAccountDetails-1014~HideProceduralStep=true~ZOrder=50~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=CreditApplicationStatusComponent-1014~child-ng-components=OverdraftAccountDetails-1014~HideProceduralStep=true~child-ng-components=TransactionalProductAccountDetails~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~ZOrder=50~applicableChannels=WebSelfAssisted</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
@@ -944,6 +956,95 @@
             <value>ODSales@Nedbank.co.za</value>
          </featureAttributes>
 
+      </featureAttributeGroup>
+
+      <!--Decline Configuration-->
+      <featureAttributeGroup>
+         <attributeGroupName>DeclineWorkItemMapping</attributeGroupName>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>ChallengeWithLongForm|child-ng-components=ChallengeWithLongFormDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>ChallengeWithLongForm|child-ng-components=LeaveApplicationDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>AppealWithLongForm|child-ng-components=AppealWithLongFormDeclineAction~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>AppealWithLongForm|child-ng-components=LeaveApplicationDeclineAction~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>AppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>AppealWithoutLongForm|child-ng-components=LeaveApplicationDeclineAction~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>DeclineAppealWithLongForm|child-ng-components=AppealWithLongFormDeclineAction~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>DeclineAppealWithLongForm|child-ng-components=LeaveApplicationDeclineAction~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>DeclineAppealWithoutLongForm|child-ng-components=AppealWithoutLongFormDeclineAction~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>DeclineAppealWithoutLongForm|child-ng-components=LeaveApplicationDeclineAction~ZOrder=90</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>TryAgain|child-ng-components=TryAgainDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>TryAgain|child-ng-components=LeaveApplicationDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>assessmentOutcomeAvailableActionMapping</attributeType>
+            <attributeName>acceptOffer|child-ng-components=ContinueWithoutCreditDeclineAction~child-ng-components=TpCreditOffer~child-ng-components=LeaveApplicationDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>1061|child-ng-components=LeaveApplicationDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>SDC00|child-ng-components=LeaveApplicationNonCreditDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>FAIS01|child-ng-components=LeaveApplicationNonCreditDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>FAIS02|child-ng-components=FaisOnbehalfOfComponent</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>JDC00|child-ng-components=LeaveApplicationDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>GDC00|child-ng-components=LeaveApplicationDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>declineCodeMapping</attributeType>
+            <attributeName>GDC01|child-ng-components=LeaveApplicationNonCreditDeclineAction</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>defaultMapping</attributeType>
+            <attributeName>default|child-ng-components=LeaveApplicationDeclineAction</attributeName>
+         </featureAttributes>
       </featureAttributeGroup>
    </features>
 

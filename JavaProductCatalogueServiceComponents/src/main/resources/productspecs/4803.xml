@@ -751,6 +751,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{TP20MobileChannelIDList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_TP20_4803_MoneyApp</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
          <attributeName>DefaultSubstitution</attributeName>
          <value>DefaultSubstitution</value>
       </productAttributes>
@@ -808,6 +819,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{TP20MobileChannelIDList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_TP20_4803_MoneyApp</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
          <attributeName>DefaultSubstitution</attributeName>
          <value>DefaultSubstitution</value>
       </productAttributes>
@@ -854,6 +876,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
+         <attributeName>SubstituteForChannelIDs</attributeName>
+         <value>${{TP20MobileChannelIDList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_TP20_4803_MoneyApp</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
          <attributeName>DefaultSubstitution</attributeName>
          <value>DefaultSubstitution</value>
       </productAttributes>
@@ -874,6 +907,12 @@
       </productAttributes>
       <productAttributes>
          <attributeType>Evidence</attributeType>
+         <attributeName>ProofOfMinorIdentificationClause</attributeName>
+         <isComparable>false</isComparable>
+         <valueUnit>bool</valueUnit>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Evidence</attributeType>
          <attributeName>ProofOfChildBirthIdentificationClause</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
@@ -888,10 +927,11 @@
          <minValue>16</minValue>
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>Child needs to be 16 years or older</description>
+         <description>Child needs to be younger than 16</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
+         <attributeName>NoIncome</attributeName>
          <description>Overdraft_icon|No minimum income required</description>
       </productAttributes>
       <productAttributes>
@@ -1284,7 +1324,7 @@
          <featureAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>EnforceApplicationStatusValidationRules</attributeName>
-            <value>true</value>
+            <value>false</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
