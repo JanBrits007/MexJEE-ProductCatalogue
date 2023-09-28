@@ -750,6 +750,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
+         <attributeName>RetailLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_TP20_4801</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
          <attributeName>SubstituteForRequestedSegmentation</attributeName>
          <value>YOUTH BANKING</value>
       </productAttributes>
@@ -862,6 +873,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
+         <attributeName>RetailLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_TP20_4801</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
          <attributeName>LimitIncreaseSubstitutionRulesV2</attributeName>
          <value>NA</value>
       </productAttributes>
@@ -964,6 +986,15 @@
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>EligibilityRules</attributeGroupName>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Age</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>16</minValue>
+         <maxValue>999</maxValue>
+         <valueUnit>year</valueUnit>
+         <description>You need to be 16 years or older</description>
+      </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
          <attributeName>Age</attributeName>
