@@ -10,7 +10,7 @@ import za.co.nednet.it.contracts.data.ent.party.v3.ArrangementDetailBObjType;
 import za.co.nednet.it.contracts.data.ent.party.v3.Client360ViewResBObjType;
 import za.co.nednet.it.contracts.data.ent.party.v3.PersonDetailBObjType;
 
-public class RuleHandler1013 extends BaseProductSpecificationRuleHandler {
+public class RuleHandler1013Back extends BaseProductSpecificationRuleHandler {
 
 	private static final Log mLog = LogFactory.getLog(BaseProductSpecificationRuleHandler.class);
 	

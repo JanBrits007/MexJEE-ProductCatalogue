@@ -7,14 +7,12 @@
    <productAttributeGroup inheritFromFiles="BaseProduct_Retail_MoneyApp">
       <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
    </productAttributeGroup>
-
-   <productAttributeGroup>
+   <productAttributeGroup inheritFromFiles="BaseProduct_Retail_MoneyApp">
       <attributeGroupName>EligibilityHandler</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
-         <value>classname=za.co.nb.offermanagement.eligibility.handler.MiGoalsTPMaxEligibilityHandler</value>
-      </productAttributes>
+   </productAttributeGroup>
+
+   <productAttributeGroup inheritFromFiles="BaseProduct_Retail_MoneyApp">
+      <attributeGroupName>RuleHandlers_FinalizeFrontOfficeInteraction</attributeGroupName>
    </productAttributeGroup>
 
 </product>
