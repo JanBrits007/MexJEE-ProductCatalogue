@@ -3,6 +3,19 @@
    <name>Transactional Retail</name>
    <shortDescription>Generic retail transactional product to be inherited from</shortDescription>
 
+   <!--GenerateOfferVerifyEligibility-->
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_GenerateOfferVerifyEligibility</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementAgeDeclineFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementIncomeDeclineFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--VerifyIdentity-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
@@ -16,15 +29,16 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--FinalizeFrontOfficeInteraction-->
    <productAttributeGroup>
-      <attributeGroupName>RuleHandlers_GenerateOfferVerifyEligibility</attributeGroupName>
+      <attributeGroupName>RuleHandlers_FinalizeFrontOfficeInteraction</attributeGroupName>
       <productAttributes>
-         <attributeName>RequiredDataFilter_GenerateOfferVerifyEligibility</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementAgeDeclineFilter</value>
+         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementRemoveCardDeliveryFilter</value>
       </productAttributes>
       <productAttributes>
-         <attributeName>RequiredDataFilter_GenerateOfferVerifyEligibility</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementIncomeDeclineFilter</value>
+         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementActionStatusesFilter</value>
       </productAttributes>
    </productAttributeGroup>
    

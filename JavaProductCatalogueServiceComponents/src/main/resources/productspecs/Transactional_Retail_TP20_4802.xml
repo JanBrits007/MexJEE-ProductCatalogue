@@ -16,8 +16,6 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!--FinalizeFrontOfficeInteraction-->
-
    <!--Document Configuration-->
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedKeyFactStatements</attributeGroupName>
@@ -26,7 +24,6 @@
          <attributeName>subMiGoalsPlus</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
       <productAttributes>
@@ -38,7 +35,6 @@
          <attributeName>subMiGoalsPlus|ContractComponentProductType=4802</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
       <productAttributes>
@@ -46,7 +42,6 @@
          <attributeName>subTP|ContractComponentProductType=4802</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
       <productAttributes>
@@ -54,7 +49,6 @@
          <attributeName>subTP|ContractComponentProductType=4802</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
       <productAttributes>
@@ -62,7 +56,6 @@
          <attributeName>subTPTermsAndConditions|ContractComponentProductType=4802</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
       <productAttributes>
@@ -133,8 +126,117 @@
          <value>${{FAIS_StaffBranchOverideList}}</value>
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>Boolean</attributeType>
+         <attributeName>ProductSupportsCreditCardRepaymentFromNewAccount</attributeName>
+         <value>True</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditRepaymentFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementEmploymentFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementComplianceInformationFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
+      </productAttributes>
+      <!--
+      <productAttributes>
+		 <attributeType>string</attributeType>
+		 <attributeName>RequiredDataFilter_All</attributeName>
+		 <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDigitallyActiveFilter</value>
+	  </productAttributes>
+	   -->
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>CreditContracts</attributeName>
+         <value>9062|9063</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanDiscriminator</attributeName>
+         <value>BRAND</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanDiscriminator</attributeName>
+         <value>CLIENT TYPE GROUPING</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanDiscriminator</attributeName>
+         <value>AGE GROUP</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>1454</attributeType>
+         <attributeName>ProductRuleHandler_Greenbacks</attributeName>
+         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.GreenBacksRule</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>1333</attributeType>
+         <attributeName>ProductRuleHandler_ShopCard</attributeName>
+         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ShopCardRule</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>1334</attributeType>
+         <attributeName>ProductRuleHandler_MembershipReward</attributeName>
+         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.MembershipRewardRule</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>1465</attributeType>
+         <attributeName>ProductRuleHandler_RedemptionCard</attributeName>
+         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.RedemptionRule</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>1099</attributeType>
+         <attributeName>ProductRuleHandler_BalanceProtectionPlan</attributeName>
+         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>1100</attributeType>
+         <attributeName>ProductRuleHandler_PaymentProtectionPlan</attributeName>
+         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_All</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementLockerFilter</value>
+      </productAttributes>
+      <!--
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementPostalAddressSummaryDetailsFilter</value>
+      </productAttributes> -->
+   </productAttributeGroup>
 
    <!--Offer Configuration-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>PresentOfferSelection</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferSelectionSummaryDetails</attributeName>
+         <value>TransactionalProductOfferSelectionSubSection|ng-component=OfferSelectionTransactionalProductComponent~ZOrder=100~isBase=Y~ContractComponentProductType=4802</value>
+      </productAttributes>
+   </productAttributeGroup>
    <productAttributeGroup action="overwrite">
       <attributeGroupName>VASCrossSellControl</attributeGroupName>
       <productAttributes>
@@ -287,121 +389,6 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!--Offer Configuration-->
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>PresentOfferSelection</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferSelectionSummaryDetails</attributeName>
-         <value>TransactionalProductOfferSelectionSubSection|ng-component=OfferSelectionTransactionalProductComponent~ZOrder=100~isBase=Y~ContractComponentProductType=4802</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-
-
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
-      <productAttributes>
-         <attributeType>Boolean</attributeType>
-         <attributeName>ProductSupportsCreditCardRepaymentFromNewAccount</attributeName>
-         <value>True</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditRepaymentFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementEmploymentFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementComplianceInformationFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
-      </productAttributes>
-      <!--
-      <productAttributes>
-		 <attributeType>string</attributeType>
-		 <attributeName>RequiredDataFilter_All</attributeName>
-		 <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDigitallyActiveFilter</value>
-	  </productAttributes>
-	   -->
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>CreditContracts</attributeName>
-         <value>9062|9063</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>PricingPlanDiscriminator</attributeName>
-         <value>BRAND</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>PricingPlanDiscriminator</attributeName>
-         <value>CLIENT TYPE GROUPING</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>PricingPlanDiscriminator</attributeName>
-         <value>AGE GROUP</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1454</attributeType>
-         <attributeName>ProductRuleHandler_Greenbacks</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.GreenBacksRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1333</attributeType>
-         <attributeName>ProductRuleHandler_ShopCard</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ShopCardRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1334</attributeType>
-         <attributeName>ProductRuleHandler_MembershipReward</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.MembershipRewardRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1465</attributeType>
-         <attributeName>ProductRuleHandler_RedemptionCard</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.RedemptionRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1099</attributeType>
-         <attributeName>ProductRuleHandler_BalanceProtectionPlan</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1100</attributeType>
-         <attributeName>ProductRuleHandler_PaymentProtectionPlan</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_All</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementLockerFilter</value>
-      </productAttributes>
-      <!--
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementPostalAddressSummaryDetailsFilter</value>
-      </productAttributes> -->
-   </productAttributeGroup>
-
-
    <!--1386 - Gold Cheque Card-->
    <features action="overwrite">
       <featureIdentifier>1386</featureIdentifier>
@@ -411,8 +398,6 @@
       <featureAttributeGroup>
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
       </featureAttributeGroup>
-
-
 
       <!--ActivateProductsGatherProductDetails-->
       <featureAttributeGroup>
@@ -524,6 +509,11 @@
             <attributeName>provisionInBranch</attributeName>
             <valueUnit>boolean</valueUnit>
             <value>false</value>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>flag</attributeType>
+            <attributeName>ProvisioningPhase</attributeName>
+            <value>preVerificationProvisioning</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2029,6 +2019,11 @@
             <valueUnit>string</valueUnit>
             <value />
          </featureAttributes>
+         <featureAttributes>
+            <attributeType>flag</attributeType>
+            <attributeName>ProvisioningPhase</attributeName>
+            <value>preVerificationProvisioning</value>
+         </featureAttributes>
       </featureAttributeGroup>
    </features>
 
@@ -2063,7 +2058,6 @@
          </featureAttributes>
       </featureAttributeGroup>
    </features>
-
 
    <!--1101 - Overdraft Assurance new code for OD flow-->
    <features action="overwrite">
