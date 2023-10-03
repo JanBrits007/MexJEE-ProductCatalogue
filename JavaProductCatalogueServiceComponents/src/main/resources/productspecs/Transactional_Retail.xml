@@ -207,6 +207,10 @@
          <attributeName>RequiredDataFilter_PresentDocuments</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODLimitIncreaseFaisFilter</value>
       </productAttributes>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_PresentDocuments</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementPremiumSignDocumentFilter</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <productAttributeGroup>
@@ -672,6 +676,10 @@
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>GatherEvidence|ProceduralStepName=Upload your documents~ZOrder=100</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>productDocumentPresentation|ng-component=VisitTheBranchComponent~ProceduralStepName=Signing the paperwork~ZOrder=95~ActiveOnInitialWorkItemExecution=true~HideProceduralStep=true~applicableChannels=MobileSelfAssisted</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
