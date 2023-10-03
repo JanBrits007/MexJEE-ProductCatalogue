@@ -38,6 +38,7 @@
 		<dependency>
 			<groupId>#{pomGroupId}#</groupId>
 			<artifactId>JavaProductCatalogueServiceComponents</artifactId>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
 			<groupId>#{pomGroupId}#</groupId>
@@ -47,26 +48,27 @@
 		<dependency>
 			<groupId>#{pomGroupId}#</groupId>
 			<artifactId>JavaProductCatalogueClient</artifactId>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 	    <dependency>
 	        <groupId>#{pomGroupId}#</groupId>
 	        <artifactId>JavaClient360InformationServiceClient</artifactId>
+			<scope>#{supportingJARsScope}#</scope>
 	    </dependency>
 		<dependency>
 			<groupId>#{pomGroupId}#</groupId>
 			<artifactId>JavaCommon</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>#{pomGroupId}#</groupId>
-			<artifactId>JavaCommon</artifactId>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
 			<groupId>#{pomGroupId}#</groupId>
 			<artifactId>JavaArrangementInformationServiceClient</artifactId>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
 			<groupId>#{pomGroupId}#</groupId>
 			<artifactId>JavaProductDevelopmentServiceClient</artifactId>
+			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.kafka</groupId>
@@ -74,14 +76,19 @@
 			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
 		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-json-provider</artifactId>
+			<scope>#{supportingJARsScope}#</scope>
+		</dependency>
+		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
 			<scope>#{supportingJARsScope}#</scope>
 		</dependency>
-		<dependency>
+		<!--dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
-		</dependency>
+		</dependency-->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>

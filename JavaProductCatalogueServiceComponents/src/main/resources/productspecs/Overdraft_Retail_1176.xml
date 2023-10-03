@@ -34,15 +34,6 @@
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
-         <attributeName>Income</attributeName>
-         <isComparable>false</isComparable>
-         <minValue>5000.00</minValue>
-         <maxValue>99999999</maxValue>
-         <valueUnit>ZAR</valueUnit>
-         <description>icon_earn|You need to earn at least R5 000.00 a month.</description>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
          <attributeName>Account</attributeName>
          <isComparable>false</isComparable>
          <value>true</value>
@@ -56,6 +47,15 @@
          <value>true</value>
          <valueUnit>bool</valueUnit>
          <description>salary_switching|Get your salary paid into your Nedbank account, you can do this with Salary Switching.</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>Income</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>6000.00</minValue>
+         <maxValue>99999999</maxValue>
+         <valueUnit>ZAR</valueUnit>
+         <description>icon_earn|You must earn a monthly salary of:#1~&lt;b&gt;R6 000&lt;/b&gt; if you have an active Nedbank current account; or #1~&lt;b&gt;R7 000&lt;/b&gt; if you don’t have a Nedbank current account, we will open a new account for you.</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
@@ -90,6 +90,17 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_GenerateOfferVerifyEligibility</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementAgeDeclineFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementIncomeDeclineFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
 
    <productAttributeGroup action="overwrite">
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
@@ -98,15 +109,30 @@
          <attributeName>RequiredDataFilter_All</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
       </productAttributes>
+   </productAttributeGroup>
+
+   <!-- Decisioning Control -->
+   <productAttributeGroup>
+      <attributeGroupName>DecisioningControl</attributeGroupName>
       <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_GenerateOfferVerifyEligibility</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementIncomeDeclineFilter</value>
+         <attributeType>boolean</attributeType>
+         <attributeName>ComponentSupportsDeclineReasons</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>EnforceAgeValidationRules</attributeName>
+         <value>true</value>
       </productAttributes>
    </productAttributeGroup>
 
    <productAttributeGroup action="overwrite">
       <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>requiresElgiblityScoringAtIntents</attributeName>
+         <value>intent 0|intent 1</value>
+      </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
@@ -233,6 +259,11 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CODHandler_AppealWithLongForm</attributeName>
+         <value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>GenericHandler_AppealWithLongForm</attributeName>
          <value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
       </productAttributes>
       <productAttributes>

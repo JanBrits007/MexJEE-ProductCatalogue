@@ -9,7 +9,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeIntentSequence</attributeName>
-			<value>GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|FinalizeFrontOfficeInteraction</value>
+			<value>GenerateOfferVerifyEligibility|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|FinalizeFrontOfficeInteraction</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -27,5 +27,21 @@
 			<value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
 		</productAttributes>
 	</productAttributeGroup>
+	<productAttributeGroup>
+		<attributeGroupName>EligibilityHandler</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.MiGoalsTPMaxEligibilityHandler</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--productAttributeGroup>
+		<attributeGroupName>RuleHandlers_FinalizeFrontOfficeInteraction</attributeGroupName>
+		<productAttributes>
+			<attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementActionStatusesFilter</value>
+		</productAttributes>
+	</productAttributeGroup-->
 
 </product>

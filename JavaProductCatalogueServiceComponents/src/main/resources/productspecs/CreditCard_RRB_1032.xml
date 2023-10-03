@@ -168,6 +168,11 @@
         <attributeName>welcomeDocumentTemplateLocked</attributeName>
         <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
       </productAttributes>
+       <productAttributes>
+           <attributeType>flag</attributeType>
+           <attributeName>ProvisioningPhase</attributeName>
+           <value>preFICAProvisioning</value>
+       </productAttributes>
    </productAttributeGroup>
 
    <productAttributeGroup>
@@ -290,4 +295,17 @@
             </featureAttributes>
         </featureAttributeGroup>
     </features>
+
+    <!--1333 - Nedbank Greenbacks Shop Card-->
+    <features inheritFromFiles="CreditCard_Retail">
+        <featureIdentifier>1333</featureIdentifier>
+        <name>Nedbank Greenbacks Shop Card</name>
+    </features>
+
+    <!--1454 - Nedbank Greenback Rewards-->
+    <features inheritFromFiles="CreditCard_Retail">
+        <featureIdentifier>1454</featureIdentifier>
+        <name>Nedbank Greenback Rewards</name>
+    </features>
+
 </product>

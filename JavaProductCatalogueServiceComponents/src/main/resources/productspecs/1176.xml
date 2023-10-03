@@ -9,7 +9,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>ArrangementBundleCaseHandler</attributeName>
-         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.rrb.InitialiseBusinessCaseHandlerMultipleSubstitution</value>
+         <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
       </productAttributes>
     </productAttributeGroup>
 
@@ -28,28 +28,27 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
+         <attributeName>RRBSubstituteForChannelIDs</attributeName>
+         <value>${{Framework_V2_Channel_IDs}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>RRBSubstituteForIPSubnets</attributeName>
+         <value>${{RRBInternalNetworkIPRanges}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Overdraft_RRB_1176</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
          <attributeName>SubstituteForCalculatedSegment</attributeName>
          <value>${{RRB_Segement_list}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
          <value>2176</value>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup>
-      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-      <productAttributes>
-         <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
-         <value>${{Overdraft_RRB_dynamicStaffList}}</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForIPSubnets</attributeName>
-         <value>192.168.0.0|172.238.0.0|168.142.0.0|172.28.0.0</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>SubstituteForProductID</attributeName>
-         <value>Overdraft_RRB_1176</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -65,7 +64,7 @@
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{EDBPhase2dynamicStaffList}}</value>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -88,8 +87,23 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
+         <attributeName>RRBSubstituteForChannelIDs</attributeName>
+         <value>${{Framework_V2_Channel_IDs}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>RRBSubstituteForIPSubnets</attributeName>
+         <value>${{RRBInternalNetworkIPRanges}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Overdraft_RRB_1176</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{EDBPhase2dynamicStaffList}}</value>         
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
@@ -154,6 +168,21 @@
       </productAttributes>
    </productAttributeGroup> -->
 
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>RRBSubstituteForChannelIDs</attributeName>
+         <value>${{Framework_V2_Channel_IDs}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>RRBSubstituteForIPSubnets</attributeName>
+         <value>${{RRBInternalNetworkIPRanges}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Overdraft_RRB_1176</value>
+      </productAttributes>
+   </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
@@ -289,7 +318,25 @@
          <minValue>3500</minValue>
          <maxValue>99999999</maxValue>
          <valueUnit>ZAR</valueUnit>
-         <description>earn more than R5000 a month; and</description>
+         <description>You must earn a monthly salary of:</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>IncomeDetail1</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>3500</minValue>
+         <maxValue>99999999</maxValue>
+         <valueUnit>ZAR</valueUnit>
+         <description>R6 000 if you have an active Nedbank current account; or</description>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>EligibilityRule</attributeType>
+         <attributeName>IncomeDetail2</attributeName>
+         <isComparable>false</isComparable>
+         <minValue>3500</minValue>
+         <maxValue>99999999</maxValue>
+         <valueUnit>ZAR</valueUnit>
+         <description>R7 000 if you don’t have a Nedbank current account, we will open a new account for you.</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>

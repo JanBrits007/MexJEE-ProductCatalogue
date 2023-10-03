@@ -72,6 +72,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1019</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
          <attributeName>LimitIncreaseSubstitutionRulesV2</attributeName>
          <value>NA</value>
       </productAttributes>
@@ -146,6 +157,17 @@
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
          <value>Transactional_RRB_1019</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1019</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -2335,7 +2357,7 @@
          <featureAttributes>
 			<attributeType>boolean</attributeType>
 			<attributeName>EnforceApplicationStatusValidationRules</attributeName>
-			<value>true</value>
+			<value>false</value>
 	  	 </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>

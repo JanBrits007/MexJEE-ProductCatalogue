@@ -18,6 +18,10 @@
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=80~child-ng-components=CreditCardDetailsV2Component~4802_min=2000.00~4802_max=300000.00~1400_min=2000.00~1400_max=300000.00~1108_min=5000.00~1108_max=300000.00~1476_min=2000.00~1476_max=300000.00~1478_min=10000.00~1478_max=300000.00~0_min=10000.00~0_max=300000.00~1034_min=2000.00~1034_max=300000.00~child-ng-components=MotivationBoxComponent</attributeName>
         </productAttributes>
+       <productAttributes> <!--adding this here so that the sumery screen renders and forces the recalculate to inject the Amex based on the taken up greenbacks-->
+           <attributeType>productInformationRequirement</attributeType>
+           <attributeName>ProductSetupSummary|ng-component=ProductSetupSummaryComponent~ZOrder=50~retailProduct=true</attributeName>
+       </productAttributes>
     </productAttributeGroup>
 
    <!-- Combined Product contract Universal -->
@@ -168,6 +172,11 @@
         <attributeName>welcomeDocumentTemplateLocked</attributeName>
         <value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
       </productAttributes>
+       <productAttributes>
+           <attributeType>flag</attributeType>
+           <attributeName>ProvisioningPhase</attributeName>
+           <value>preFICAProvisioning</value>
+       </productAttributes>
    </productAttributeGroup>
 
    <productAttributeGroup>
@@ -290,4 +299,17 @@
             </featureAttributes>
         </featureAttributeGroup>
     </features>
+
+    <!--1333 - Nedbank Greenbacks Shop Card-->
+    <features inheritFromFiles="CreditCard_Retail">
+        <featureIdentifier>1333</featureIdentifier>
+        <name>Nedbank Greenbacks Shop Card</name>
+    </features>
+
+    <!--1454 - Nedbank Greenback Rewards-->
+    <features inheritFromFiles="CreditCard_Retail">
+        <featureIdentifier>1454</featureIdentifier>
+        <name>Nedbank Greenback Rewards</name>
+    </features>
+
 </product>
