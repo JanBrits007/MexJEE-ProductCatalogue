@@ -50,4 +50,39 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<features>
+		<featureIdentifier>1014</featureIdentifier>
+		<name>Overdraft</name>
+
+		<!-- Intent sequence mapping -->
+		<featureAttributeGroup action="overwrite">
+			<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>frontOfficeIntentSequence</attributeName>
+				<value>VerifyIdentity|GenerateOfferVerifyEligibility|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|AppealWithLongForm|ActivateProductsGatherClientDetails|ActivateProductsGatherEvidence|FinalizeFrontOfficeInteraction</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>frontOfficeBackwardTransitionIntentSequence</attributeName>
+				<value>GenerateApplicationOfferProposals|FinancialExtendedDetails|GenerateOfferGatherClientDetails</value>
+			</featureAttributes>
+			<!--featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>RecursiveGNBAIntents</attributeName>
+				<value>NA</value>
+			</featureAttributes-->
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>breadcrumbSteps</attributeName>
+				<value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>GNBAIntentToActivityMapping</attributeName>
+				<value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialDetails=Choose Extras|GenerateApplicationOfferProposals=Choose Extras|GenerateOffer=Choose Extras|AppealWithLongForm=About you|FinancialExtendedDetails=About you|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+			</featureAttributes>
+		</featureAttributeGroup>
+	</features>
+
 </product>
