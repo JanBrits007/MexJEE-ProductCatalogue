@@ -2,6 +2,8 @@ package za.co.nb.productcatalogue.services.rest.resources;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import za.co.nb.common.cache.thread.ThreadCacheManager;
+import za.co.nb.common.cache.thread.ThreadSessionDTO;
 import za.co.nb.productcatalogue.dao.ProductCataloguesDAO;
 import za.co.nb.productcatalogue.dao.dto.CachedCatalogueDetails;
 import za.co.nb.productcatalogue.dto.ProductIdentifiers;
@@ -54,8 +56,43 @@ public class ProductCatalogueResource {
     @Produces( MediaType.APPLICATION_JSON )
     public Response getProductCatalogueByID( @PathParam( "id" ) String id ) {
     	mLog.debug("Trace 1");
-    	
+
     	try {
+            // We want to be able to expose different product catalogues for different tenant IDs.
+            // So we will look for a tenant-specific catalogue first. If it exists then we will use it. If not then we will
+            // get the default one.
+            ThreadSessionDTO sessionDTO = ThreadCacheManager.getInstance().getThreadCacheValue();
+
+            if (sessionDTO != null && sessionDTO.getTenantID() != null) {
+                mLog.debug("Trace 1");
+
+                String tenantEncodedID = id + "_" + sessionDTO.getTenantID();
+
+                Response response = getProductCatalogueByIDImpl(tenantEncodedID);
+
+                if(response.getStatus() == Status.OK.getStatusCode() && !((String)response.getEntity()).contains("Unable to compose hierarchy for catalogue ID")) {
+                    mLog.debug("Trace 2");
+
+                    // We found a catalogue. Return it.
+                    return response;
+                }
+            }
+
+            mLog.debug("Trace 3");
+
+            // Default to normal product catalogue
+            return getProductCatalogueByIDImpl(id);
+    	}
+    	catch(Exception e) {
+            mLog.error("", e);
+            return Response.status(Status.INTERNAL_SERVER_ERROR).build();
+    	}
+    }
+
+    private Response getProductCatalogueByIDImpl(String id ) {
+        mLog.debug("Trace 1");
+
+        try {
 
             CachedCatalogueDetails cachedCatalogue = productCatalogueCache.getCatalogueCache().get(id);
 
@@ -84,13 +121,12 @@ public class ProductCatalogueResource {
                 return Response.ok(cachedCatalogue.getCatalogueContent()).build();
             }
 
-    	}
-    	catch(Exception e) {
+        }
+        catch(Exception e) {
             mLog.error("", e);
             return Response.status(Status.INTERNAL_SERVER_ERROR).build();
-    	}
+        }
     }
-
 
     private boolean isGreaterThan24Hours(Date cacheDate){
         Calendar twentyFourHoursEarlier = Calendar.getInstance();
