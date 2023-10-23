@@ -1,5 +1,6 @@
 package za.co.nb.productcatalogue.rules.handlers;
 
+import java.util.Map;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -51,6 +52,16 @@ public class RuleHandler1013 extends BaseProductSpecificationRuleHandler {
             BusinessCaseManagementDAO dao = new BusinessCaseManagementDAO();
             BusinessCaseHeader businessCase = dao.retrieveBusinessCase(caseID);
             if (businessCase.getClientInContextPartyType().equalsIgnoreCase("O")) {
+                if (businessCase.getProductIDSubstitutionMap() != null) {
+                    Map<String, String> productSubstitutionMap = businessCase.getProductIDSubstitutionMap();
+                    String productSubstitutionID = productSubstitutionMap.get(productIDToSubstitute);
+                    if (productIDToSubstitute.equalsIgnoreCase(productSubstitutionID)) {
+                        productSubstitutionMap.put(productIDToSubstitute, "71013");
+                        businessCase.setProductIDSubstitutionMap(productSubstitutionMap);
+                        // Save back to database.
+                        dao.cacheBusinessCaseDetailInDB(businessCase);
+                    }
+                }
                 return "71013"; // return for juristic
             }
             return productIDToSubstitute;

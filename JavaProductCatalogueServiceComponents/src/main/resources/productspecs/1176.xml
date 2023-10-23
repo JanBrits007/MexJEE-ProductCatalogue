@@ -156,17 +156,28 @@
    </productAttributeGroup>
 
    <!--PROD Substitution Rules-->
-   <!-- <productAttributeGroup>
+   <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
          <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-         <value>${{EDBPhase2dynamicStaffList}}</value>         
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>1176</value>
+         <value>Overdraft_Retail_1176</value>
       </productAttributes>
-   </productAttributeGroup> -->
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>RetailLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Overdraft_Retail_1176</value>
+      </productAttributes>
+   </productAttributeGroup>
 
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
