@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import za.co.nb.productcatalogue.dao.ProductCataloguesDAO;
 import za.co.nb.productcatalogue.dao.dto.CachedCatalogueDetails;
 import za.co.nb.productcatalogue.dto.*;
+import za.co.nb.productcatalogue.ejb.DynamicPropertyBean;
 import za.co.nb.productcatalogue.services.rest.resources.cache.ProductCatalogueCache;
 
 import javax.annotation.PostConstruct;
@@ -28,6 +29,9 @@ public class ProductRecommendationService {
 
     @Inject
     ProductCatalogueCache productCatalogueCache;
+
+    @Inject
+    DynamicPropertyBean dynamicPropertyBean;
 
     @PostConstruct
     public void init(){
@@ -199,4 +203,22 @@ public class ProductRecommendationService {
         }
         return new Question();
     }
+
+    public String getProductFile(String fileKey, String defaultFileName) {
+        try {
+            mLog.debug(String.format("Trace 1 >> Reading %s value >>", fileKey));
+
+            String property = dynamicPropertyBean.getProperty(fileKey);
+            mLog.debug(String.format("Trace 2 >> %s value >> %s", fileKey, property));
+
+            return (property == null || "null".equalsIgnoreCase(property)) ? defaultFileName: property;
+
+        } catch (Exception ex) {
+            mLog.error(String.format("Error occurred reading %s property ", fileKey), ex);
+            mLog.debug(String.format("Trace 3 >> returning default file name >> %s", defaultFileName));
+
+            return defaultFileName;
+        }
+    }
+
 }
