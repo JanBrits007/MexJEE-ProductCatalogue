@@ -22,8 +22,8 @@ import java.io.StringWriter;
 public class ProductRecommendationResource {
     private static final Log mLog = LogFactory.getLog(ProductRecommendationResource.class);
 
-    private static final String PRODUCT_QUESTIONS_FILE_KEY = "ProductCatalogueQuestionsFile";
-    private static final String PRODUCT_RECOMMENDATIONS_FILE_KEY = "ProductCatalogueRecommendationsFile";
+    private static final String PRODUCT_QUESTIONS_FILE_KEY = "{ProductCatalogueQuestionsFile}";
+    private static final String PRODUCT_RECOMMENDATIONS_FILE_KEY = "{ProductCatalogueRecommendationsFile}";
 
     @Inject
     ProductRecommendationService productRecommendationService;
@@ -49,8 +49,8 @@ public class ProductRecommendationResource {
 
         if (answeredQuestionList.getAnsweredQuestion() != null && !answeredQuestionList.getAnsweredQuestion().isEmpty()) {
             try {
-                String productFile = productRecommendationService.getProductFile(PRODUCT_QUESTIONS_FILE_KEY, "SalesBankCATRecommendations");
-                String questionFile = productRecommendationService.getProductFile(PRODUCT_RECOMMENDATIONS_FILE_KEY, "SalesBankCATQuestions");
+                String productFile = productRecommendationService.getProductFile(PRODUCT_RECOMMENDATIONS_FILE_KEY, "SalesBankCATRecommendations");
+                String questionFile = productRecommendationService.getProductFile(PRODUCT_QUESTIONS_FILE_KEY, "SalesBankCATQuestions");
 
                 mLog.debug("Trace 2: Get product recommendations >> Product Set"+
                         productFile + " >> Question Set >> " + questionFile);
