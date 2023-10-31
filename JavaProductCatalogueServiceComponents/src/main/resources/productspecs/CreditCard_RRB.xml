@@ -851,6 +851,11 @@
             <attributeName>RequiredDataFilter_GenerateOfferVerifyEligibility</attributeName>
             <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditAgeDeclineFilter</value>
         </productAttributes>
+        <productAttributes>
+            <attributeType>1099</attributeType>
+            <attributeName>ProductRuleHandler_BalanceProtectionPlan</attributeName>
+            <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
+        </productAttributes>
     </productAttributeGroup>
 
     <productAttributeGroup action="overwrite">
@@ -1104,6 +1109,12 @@
             <attributeName>DontCrossSellOnLimitIncrease</attributeName><!--Multi App Card-->
             <value>true</value>
         </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>VAS_1099</attributeName><!--Credit Card Insurance-->
+            <!--value>classname=za.co.nb.offermanagement.crosssell.CreditCardInsuranceCrossSellHandler</value-->
+            <value>Optionality=Optional~IsTakenUp=false</value>
+        </productAttributes>
     </productAttributeGroup>
 
     <!--Decline Configuration-->
@@ -1265,6 +1276,214 @@
                 <attributeName>CAMSPublicDelocker</attributeName>
                 <valueUnit>string</valueUnit>
                 <value>9132</value>
+            </featureAttributes>
+        </featureAttributeGroup>
+    </features>
+
+    <!--1099 - Credit card insurance-->
+    <features>
+        <featureIdentifier>1099</featureIdentifier>
+        <name>Credit card insurance</name>
+
+        <!--GenerateOfferVerifyEligibility-->
+        <featureAttributeGroup>
+            <attributeGroupName>EligibilityRules</attributeGroupName>
+            <featureAttributes>
+                <attributeType>EligibilityRule</attributeType>
+                <attributeName>Age</attributeName>
+                <minValue>18</minValue>
+                <maxValue>64</maxValue>
+                <valueUnit>year</valueUnit>
+            </featureAttributes>
+        </featureAttributeGroup>
+
+        <!--GenerateOffer-->
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+            <featureAttributes>
+                <attributeType>productInformationRequirement</attributeType>
+                <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=CreditCardInsuranceComponent-1099~ProceduralStepName=Your offer~ZOrder=70</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+
+        <!--Document Configuration-->
+        <featureAttributeGroup>
+            <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+            <featureAttributes>
+                <attributeType>DocumentDescription</attributeType>
+                <attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENTS|APPLICATIONS|APPLICATIONSCREDITCARD|FAIS Client Acknowledgement</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>Download</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>Email</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>WetSign</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>DigitallySign</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>ElectronicallySign</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>DocumentExclusion</attributeType>
+                <attributeName>Your FAIS Record of Advice|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+            <featureAttributes>
+                <attributeType>DocumentDescription</attributeType>
+                <attributeName>Application Form|nedbank-commercial-release/CombinedAppFormStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|Application</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>Download</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>Email</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>WetSign</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>DigitallySign</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>ElectronicallySign</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
+            <featureAttributes>
+                <attributeType>DocumentDescription</attributeType>
+                <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>Download</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>Email</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>WetSign</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>DigitallySign</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>AvailableAction</attributeType>
+                <attributeName>ElectronicallySign</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>DocumentExclusion</attributeType>
+                <attributeName>Contract|excludeForExistingFacilityDetailsInstruction=LimitIncrease</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>subYourApplicationHeader</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>subNedbankLogo</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>subGenericDetails</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>subGenericSignatures</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>subClientAcknowledgementInforHeader|ContractComponentProductType=1099</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>subCardBalanceProtectionPlan|ContractComponentProductType=1099</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>subStandardDisclosures|ContractComponentProductType=1099</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>subYourApplicationHeader</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>subNedbankLogo</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>subGenericInfo</attributeName>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>subGenericSignatures</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1099</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+        <featureAttributeGroup>
+            <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+            <featureAttributes>
+                <attributeType>string</attributeType>
+                <attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1099</attributeName>
+            </featureAttributes>
+        </featureAttributeGroup>
+
+        <!--Provisioning Configuration-->
+        <featureAttributeGroup>
+            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>provisionInBranch</attributeName>
+                <valueUnit>boolean</valueUnit>
+                <value>false</value>
+            </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>legacyProductID</attributeName>
+                <valueUnit>string</valueUnit>
+                <value />
             </featureAttributes>
         </featureAttributeGroup>
     </features>
