@@ -32,6 +32,50 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<productAttributeGroup>
+		<attributeGroupName>EligibilityHandler</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_GenerateOffer</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_PrepareApplicant</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Case and Process Configuration-->
+	<productAttributeGroup>
+		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>frontOfficeIntentSequence</attributeName>
+			<value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>presentLowerOfferFrontOfficeIntentSequence</attributeName>
+			<value>PresentLowerOffer|ActivateProductsGatherProductDetails</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>breadcrumbSteps</attributeName>
+			<value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GNBAIntentToActivityMapping</attributeName>
+			<value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--GenerateOfferVerifyEligibility-->
 	<productAttributeGroup>
 		<attributeGroupName>EligibilityRules</attributeGroupName>
@@ -833,11 +877,11 @@
 			<attributeName>CODHandler_Intent4</attributeName>
 			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.cde.V3Intent4JEECODSimulatorHandler</value>
 		</productAttributes>
-		<!--productAttributes>
+		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent4</attributeName>
 			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.ric.Intent4RICCODHandler</value>
-		</productAttributes-->
+		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>PricingPlanHandler_GenerateOffer</attributeName>
@@ -873,6 +917,18 @@
 			<attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
 			<value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>DataMiningHandler</attributeName>
+			<value>classname=za.co.nb.onboarding.product.datamining.handlers.retail.RetailDataMiningHandler</value>
+		</productAttributes>
+		<!--
+		<productAttributes>
+    		<attributeType>string</attributeType>
+    		<attributeName>CDE_SimulationETE</attributeName>
+    		<value>${{CDE_Simulation}}</value>
+		</productAttributes>
+		-->
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
@@ -1004,7 +1060,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>baseCBOActivityList</attributeName>
-			<value>CreditDecisionDetermineOffer|DeliveryConfirmationandInsurance|ConfigureArrangement|ConfirmVerificationQuality|CBOFinalizeCase</value>
+			<value>CreditDecisionDetermineOffer|DeliveryConfirmationandInsurance|ConfigureArrangement|ConfirmVerificationQuality~9001~9003~9004|CBOFinalizeCase</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
