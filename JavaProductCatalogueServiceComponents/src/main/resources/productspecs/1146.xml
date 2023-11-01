@@ -61,22 +61,6 @@
     </productAttributeGroup>
     
     <productAttributeGroup>
-        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-        <productAttributes>
-            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
-            <value>${{EDBPhase2dynamicStaffList}}</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeName>SubstituteForProductID</attributeName>
-            <value>PersonalLoan_Simulation</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeName>SubstituteRRBForIncomingChannel397</attributeName>
-            <value>PersonalLoan_RRB_1146</value>
-        </productAttributes>
-    </productAttributeGroup>
-    
-    <productAttributeGroup>
         <attributeGroupName>InitialisationMerchantSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
             <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
@@ -97,6 +81,15 @@
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
             <value>PersonalLoan_Simulation</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteRRBForIncomingChannel397</attributeName>
+            <value>PersonalLoan_RRB_1146</value>
         </productAttributes>
     </productAttributeGroup>
 
@@ -143,7 +136,7 @@
         <productAttributes>
             <attributeType>string</attributeType>
             <attributeName>ArrangementBundleCaseHandler</attributeName>
-            <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.loans.InitialiseBusinessCaseHandlerPersonalLoan</value>
+            <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
