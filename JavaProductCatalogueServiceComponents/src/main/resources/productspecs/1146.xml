@@ -51,6 +51,30 @@
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
+            <attributeName>RRBSubstituteForChannelIDs</attributeName>
+            <value>${{PL_RRB_Channel_IDs}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>PersonalLoan_RRB_1146</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForChannelIDs</attributeName>
+            <value>412</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>1146_API_MarketPlace</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
             <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
             <value>${{EDBTestEmailOverideList}}</value>
         </productAttributes>
@@ -59,7 +83,7 @@
             <value>PersonalLoan_Retail_1146</value>
         </productAttributes>
     </productAttributeGroup>
-    
+
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
@@ -71,34 +95,9 @@
             <value>PersonalLoan_Retail_1146</value>
         </productAttributes>
     </productAttributeGroup>
-
-
-    <productAttributeGroup>
-        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-        <productAttributes>
-            <attributeName>RRBSubstituteForChannelIDs</attributeName>
-            <value>397</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeName>SubstituteForProductID</attributeName>
-            <value>PersonalLoan_RRB_1146</value>
-        </productAttributes>
-    </productAttributeGroup>
-
-    <productAttributeGroup>
-        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-        <productAttributes>
-            <attributeName>RRBSubstituteForChannelIDs</attributeName>
-            <value>412</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeName>SubstituteForProductID</attributeName>
-            <value>1146_API_MarketPlace</value>
-        </productAttributes>
-    </productAttributeGroup>
     
     <!--QA Substitution Rules-->
-    <productAttributeGroup>
+   <!-- <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
         <productAttributes>
             <attributeName>SubstituteForIncomingChannel412</attributeName>
@@ -108,10 +107,58 @@
             <attributeName>SubstituteRRBForIncomingChannel397</attributeName>
             <value>PersonalLoan_RRB_1146</value>
         </productAttributes>
-    </productAttributeGroup>
-    
-    <!--PROD Substitution Rules-->
+    </productAttributeGroup> -->
+
     <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>RRBSubstituteForChannelIDs</attributeName>
+            <value>${{PL_RRB_Channel_IDs}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>PersonalLoan_RRB_1146</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForChannelIDs</attributeName>
+            <value>412</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>1146_API_MarketPlace</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>PersonalLoan_Retail_1146</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>PersonalLoan_Retail_1146</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--PROD Substitution Rules-->
+   <!-- <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
         <productAttributes>
             <attributeName>SubstituteForIncomingChannel412</attributeName>
@@ -121,7 +168,32 @@
             <attributeName>SubstituteRRBForIncomingChannel397</attributeName>
             <value>PersonalLoan_RRB_1146</value>
         </productAttributes>
+    </productAttributeGroup>-->
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>RRBSubstituteForChannelIDs</attributeName>
+            <value>${{PL_RRB_Channel_IDs}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>PersonalLoan_RRB_1146</value>
+        </productAttributes>
     </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForChannelIDs</attributeName>
+            <value>412</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>1146_API_MarketPlace</value>
+        </productAttributes>
+    </productAttributeGroup>
+
 
     <productAttributeGroup>
         <attributeGroupName>CaseConfiguration</attributeGroupName>
