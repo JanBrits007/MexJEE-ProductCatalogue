@@ -3,6 +3,34 @@
    <name>MiGoals</name>
    <shortDescription>(Transactional_Retail_TP20_7015) MiGoals Pay-As-You-Use</shortDescription>
 
+   <!--ActivateProductsGatherClientDetails-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=NonSouthAfricanAddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=CustomerVulnerabilitiesComponent~child-ng-components=DigitalActiveCardTrascationalComponent~displaySummary=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture~displaySummary=true</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>loadingScreenConfiguration_ActivateProductsGatherClientDetails</attributeGroupName>
+      <productAttributes>
+         <attributeType>Configuration</attributeType>
+         <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=moneyAppDownloadSpinnerTileComponent</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Configuration</attributeType>
+         <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=someAppApplicableSpinnerTileComponent~applicableChannels=MobileSelfAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--ActivateProductsGatherProductDetails-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
@@ -32,8 +60,6 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!--FinalizeFrontOfficeInteraction-->
-
    <!--Document Configuration-->
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedKeyFactStatements</attributeGroupName>
@@ -42,7 +68,6 @@
          <attributeName>subMiGoals</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
       <productAttributes>
@@ -54,7 +79,6 @@
          <attributeName>subMiGoals|ContractComponentProductType=7015</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
       <productAttributes>
@@ -62,7 +86,6 @@
          <attributeName>subTP|ContractComponentProductType=7015</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
       <productAttributes>
@@ -70,7 +93,6 @@
          <attributeName>subTP|ContractComponentProductType=7015</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
       <productAttributes>
@@ -78,7 +100,6 @@
          <attributeName>subTPTermsAndConditions|ContractComponentProductType=7015</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
    <productAttributeGroup>
       <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
       <productAttributes>
@@ -147,6 +168,13 @@
          <attributeType>string</attributeType>
          <attributeName>FAIS_StaffBranchOverrideList</attributeName>
          <value>${{FAIS_StaffBranchOverideList}}</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>loadingScreenConfiguration_Default</attributeGroupName>
+      <productAttributes>
+         <attributeType>Configuration</attributeType>
+         <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=moneyAppDownloadSpinnerTileComponent</attributeName>
       </productAttributes>
    </productAttributeGroup>
    
