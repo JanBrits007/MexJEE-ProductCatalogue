@@ -1,14 +1,14 @@
 <product inheritFromFiles="Transactional_RRB" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-   <productIdentifier>1019</productIdentifier>
-   <name>Savvy Plus</name>
-   <shortDescription>(Transactional_RRB_1019) RRB version of Savvy Plus</shortDescription>
+   <productIdentifier>1013</productIdentifier>
+   <name>Ordinary current account</name>
+   <shortDescription>(Transactional_RRB_1013) RRB version of Ordinary current account</shortDescription>
 
    <!--GenerateOfferGatherProductDetails-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=100.00~max=250000.00~isMandatory=false</attributeName>
+         <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=500.00~max=250000.00~isMandatory=false</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -88,11 +88,11 @@
    </productAttributeGroup>
 
    <!--Provisioning Configuration-->
-   <productAttributeGroup inheritFromFiles="Transactional_Retail_1019">
+   <productAttributeGroup inheritFromFiles="Transactional_Retail_1389">
       <attributeGroupName>coreProvisioningParameters</attributeGroupName>
    </productAttributeGroup>
 
-   <!-- Intent sequence mapping -->
+    <!-- Intent sequence mapping -->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
       <productAttributes>
@@ -134,38 +134,14 @@
 
    <!--Document Configuration-->
    <productAttributeGroup action="overwrite">
-      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>subTPTermsAndConditions|ContractComponentProductType=1019</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subTP|ContractComponentProductType=1019</attributeName>
+         <attributeName>subTP|ContractComponentProductType=1013</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subSavvyPlus|ContractComponentProductType=1019</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>subFAISRecordOfAdvice|ContractComponentProductType=1019</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>subTP|ContractComponentProductType=1019</attributeName>
+         <attributeName>subSavvyBundle|ContractComponentProductType=1013</attributeName> <!-- Used existing reference as Legacy products reference is not available-->
       </productAttributes>
    </productAttributeGroup>
 
@@ -268,7 +244,7 @@
          <attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=100.00~max=250000.00~isMandatory=false</attributeName>
+            <attributeName>TransactionalProductDetailsV2|ng-component=ProductSetupComponent~ProceduralStepName=Setting up your product~ZOrder=200~child-ng-components=OverdraftDetailsV2Component~min=500.00~max=250000.00~isMandatory=false</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
       <!--DetermineRelatedParties-->
@@ -310,7 +286,7 @@
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=10~child-ng-components=OverdraftDetailsV2Component~min=100.00~max=250000.00~isMandatory=true~child-ng-components=MotivationBoxComponent</attributeName>
+            <attributeName>Offer|ng-component=ArrangementBundleOfferComponent~ProceduralStepName=Credit Summary~ZOrder=10~child-ng-components=OverdraftDetailsV2Component~min=500.00~max=250000.00~isMandatory=true~child-ng-components=MotivationBoxComponent</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -320,20 +296,28 @@
          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~RemoveStatementDelivery=true~displaySummary=true</attributeName>
-         </featureAttributes>
-         <featureAttributes>
+          </featureAttributes>
+          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~RemoveEmployedSince=true~child-ng-components=MainSourceOfIncome~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true</attributeName>
-         </featureAttributes>
-         <featureAttributes>
+          </featureAttributes>
+          <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
             <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~displaySummary=true~child-ng-components=CountryOfResidence~child-ng-components=CountryAssociations~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
-         </featureAttributes>
+          </featureAttributes>
       </featureAttributeGroup>
 
       <!--ActivateProductsGatherProductDetails-->
       <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+          <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>    
+          <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+          </featureAttributes>
+          <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
+          </featureAttributes>
       </featureAttributeGroup>
 
       <!--ActivateProductsGatherEvidence-->
@@ -363,6 +347,10 @@
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Signing the paperwork~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=10~ContractComponentProductType=1013~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
