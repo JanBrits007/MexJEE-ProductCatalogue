@@ -64,6 +64,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
          <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
          <value>NA</value>
       </productAttributes>
@@ -176,6 +187,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
          <attributeName>RRBLimitIncreaseSubstitutionRulesV2</attributeName>
          <value>NA</value>
       </productAttributes>
@@ -275,6 +297,28 @@
             <value>Transactional_RRB_1389</value>
         </productAttributes>
     </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>RetailLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_1389</value>
+      </productAttributes>
+   </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
@@ -1550,7 +1594,7 @@
          <featureAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>EnforceApplicationStatusValidationRules</attributeName>
-            <value>true</value>
+            <value>false</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>

@@ -730,6 +730,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
+         <attributeName>RetailLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_TP20_4802</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+      <productAttributes>
          <attributeName>SubstituteForRRBWhiteListedNBNumbers</attributeName>
          <value>${{MiGoals_RRB_dynamicStaffList}}</value>
       </productAttributes>
@@ -787,12 +798,23 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
+         <attributeName>RetailLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_TP20_4802</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
          <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
          <value>${{TP20EmailAddressWhitelist}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_TP20_4802</value>
+         <value>Transactional_Retail_TP20_4803_MoneyApp</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -836,7 +858,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>4801</value>
+         <value>4802</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -877,6 +899,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
+         <attributeName>RetailLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_TP20_4802</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
          <attributeName>SubstituteForCalculatedSegment</attributeName>
          <value>${{RRB_Segement_list}}</value>
       </productAttributes>
@@ -899,6 +932,17 @@
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
       <productAttributes>
+         <attributeName>LimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>NA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>4802</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
          <attributeName>DefaultSubstitution</attributeName>
          <value>DefaultSubstitution</value>
       </productAttributes>
@@ -908,24 +952,13 @@
       </productAttributes>
    </productAttributeGroup>
 
+
    <!--Prepare Applicant Configuration-->
    <productAttributeGroup>
       <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Evidence</attributeType>
          <attributeName>ProofOfIdentificationClause</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>ProofOfMinorIdentificationClause</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>ProofOfChildBirthIdentificationClause</attributeName>
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
@@ -939,11 +972,7 @@
          <minValue>16</minValue>
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>Child needs to be younger than 16</description>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <description>Overdraft_icon|No minimum income required</description>
+         <description>You need to be 16 years or older</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
@@ -994,10 +1023,6 @@
       <productAttributes>
          <attributeType>Compliance</attributeType>
          <attributeName>BureauCheckConsent</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Compliance</attributeType>
-         <attributeName>LegalGuardianOfMinor</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -1335,7 +1360,7 @@
          <featureAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>EnforceApplicationStatusValidationRules</attributeName>
-            <value>true</value>
+            <value>false</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>

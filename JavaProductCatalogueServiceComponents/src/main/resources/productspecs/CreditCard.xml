@@ -337,7 +337,11 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Signing the paperwork~ZOrder=90~ActiveOnInitialWorkItemExecution=true</attributeName>
+			<attributeName>productDocumentPresentationMobile|ng-component=VisitTheBranchComponent~ProceduralStepName=Signing the paperwork~ZOrder=95~ActiveOnInitialWorkItemExecution=true~HideProceduralStep=true~applicableChannels=MobileSelfAssisted</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Signing the paperwork~ZOrder=90~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted~applicableChannels=MobileSelfAssisted</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -358,6 +362,10 @@
 			<attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
 			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDocumentExclusionFilter</value>
 		</productAttributes>
+		<productAttributes>
+			<attributeName>RequiredDataFilter_PresentDocuments</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementPremiumSignDocumentFilter</value>
+		</productAttributes>
 	</productAttributeGroup>
 
 	<!--FinalizeFrontOfficeInteraction-->
@@ -373,7 +381,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~child-ng-components=MobileCreateYourLoginDetailsNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=MobileAlsoExpectNotificationComponent~HideProceduralStep=true~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+			<attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~child-ng-components=MobileCreateYourLoginDetailsNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=CreditApplicationStatusComponent-1032~child-ng-components=MobileAlsoExpectNotificationComponent~HideProceduralStep=true~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -889,6 +897,11 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
+			<attributeName>CODHandler_Intent4</attributeName>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.ric.Intent4RICCODHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
 			<attributeName>PricingPlanHandler_GenerateOffer</attributeName>
 			<value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
 		</productAttributes>
@@ -1079,7 +1092,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>baseCBOActivityList</attributeName>
-			<value>CreditDecisionDetermineOffer|ConfigureArrangement|ConfirmVerificationQuality|CBOFinalizeCase</value>
+			<value>CreditDecisionDetermineOffer|ConfigureArrangement|ConfirmVerificationQuality~9001|CBOFinalizeCase</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -1361,6 +1374,11 @@
 			<attributeType>string</attributeType>
 			<attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
 			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementLockerFilter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditApplicationComponentFilter</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
