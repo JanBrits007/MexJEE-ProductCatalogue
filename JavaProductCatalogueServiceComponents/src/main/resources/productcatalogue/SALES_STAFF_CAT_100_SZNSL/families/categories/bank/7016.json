@@ -1,24 +1,33 @@
 {
-	"productIdentifier": "7015",
-	"name": "MiGoals (7015)",
-	"shortDescription": "Pay only for what you use and get a range of extra benefits on us.",
+	"productIdentifier": 7016,
+	"name": "MiGoals Plus (7016)",
+	"shortDescription": "Do your banking for a fixed monthly fee and enjoy the flexibility of adding benefits, such as an overdraft facility and Nedbank Greenbacks Rewards membership, when you need them.",
 	"productPricing": [{
 		"type": "AdminFee",
-		"amount": 0,
+		"amount": 115,
 		"frequency": "Monthly",
 		"currency": "SZL",
-		"description": "Zero monthly fee"
+		"description": "E115.00 pm"
 	}],
-	"specialFeature": "ADDITIONAL PER-TRANSACTION-CHARGES APPLY",
-	"salesHighlights": ["Zero monthly account fee",
-	"Free Gold Cheque Card (includes travel insurance)",
-	"Free card swipes",
-	"Free balance enquiries at self-assisted channels (Nedbank ATM, SMS banking, online banking, the Nedbank Money app)",
-	"MyPocket - a free budgeting and savings pocket linked to your bank account. It earns you interest and gives you instant access to your money. For more info click here."],
+	"specialFeature": "",
+	"salesHighlights": ["A gold cheque card",
+	"Unlimited card swipes.",
+	"Fees do apply to Nedbank ATM cash deposits, see the pricing guide.",
+	"Unlimited cash withdrawals at point-of-sale devices at participating retailers.",
+	"Three free monthly withdrawals at Nedbank ATMs (Thereafter pay-as you-use-fees will apply, see pricing guide)",
+	"Unlimited debit orders.",
+	"Unlimited stop orders.",
+	"Free digital banking through online banking, the Nedbank Money app and Cellphone Banking.",
+	"SMS notifications (eNotes).",
+	"eStatements.",
+	"Access to the mobile-based Nedbank MobiMoney Account.",
+	"Access to MyPocket – a free budgeting and savings pocket linked to your account.",
+	"Nedbank Greenbacks Money Management membership.",
+	"The option of an overdraft facility.",
+	"Access to Send-iMail to send money quickly and securely to any South African cellphone."],
 	"startApplicationScreen": {
 		"isRequired": "false"
 	},
-
 	"redirect": {
 		"shouldRedirect": false,
 		"redirectUrl": null
@@ -57,20 +66,20 @@
 			"Description": "Finish the paperwork and activate your product!"
 		}
 	],
-	"valueAddedServices": ["eNotes (SMS) - R0,50c per sms",
+	"valueAddedServices": ["eNotes (SMS) - Free",
 	"No funds alert - R10.00 per sms",
-	"FREE MyPocket",
+	"MyPocket - Available",
 	"Salary Switching - Available",
 	"Debit Order Switching - Available",
+	"Overdraft - Available",
+	"Nedbank Greenbacks Rewards Membership - R24 per month",
+	"Amex Card - Available",
 	"Affinity Programmes - Available",
-	"Amex Card (if cheque card is selected) - Available",
-	"Nedbank Greenbacks Rewards membership (if cheque card is selected) - Available",
 	"Nedbank Insurance Funeral Plan - Available"],
-	"productOnAPageWebURL": "/content/nedbank/desktop/gt/en/personal/loans/personal-loans/personal-loan.html",
 	"productFeatures": [{
 		"name": "fee",
 		"displayName": "Monthly Fee",
-		"description": "R0"
+		"description": "R115.00"
 	},
 	{
 		"name": "Age",
@@ -85,17 +94,17 @@
 	{
 		"name": "Nedbankatmwithdrawals",
 		"displayName": "Nedbank ATM withdrawals",
-		"description": "Pay as you use"
+		"description": "First four Nedbank withdrawals included"
 	},
 	{
 		"name": "Debitordersinternal",
 		"displayName": "Debit orders (Internal)",
-		"description": "Internal Debit orders included"
+		"description": "Unlimited debit orders"
 	},
 	{
 		"name": "Debitordersexternal",
 		"displayName": "Debit orders (External)",
-		"description": "Pay as you use"
+		"description": "Unlimited debit orders"
 	},
 	{
 		"name": "Stoporders",
@@ -110,37 +119,12 @@
 	{
 		"name": "Cashwithdrawalsatparticipatingretailers",
 		"displayName": "Cash withdrawals",
-		"description": "Pay as you use"
+		"description": "Unlimited cash withdrawals at participating retailers point-of-sale included"
 	},
 	{
 		"name": "Digitalbankingwhichallowsyoutopurchasepre-paidelectricityandlotto",
 		"displayName": "Digital banking",
 		"description": "Included"
-	},
-	{
-		"name": "Greenbacks",
-		"displayName": "Greenbacks",
-		"description": "Optional"
-	},
-	{
-		"name": "Electronicchannels",
-		"displayName": "Electronic channels",
-		"description": "Included"
-	},
-	{
-		"name": "eNote",
-		"displayName": "eNote",
-		"description": "Optional"
-	},
-	{
-		"name": "Nofundsalert",
-		"displayName": "No-funds alert",
-		"description": "Optional"
-	},
-	{
-		"name": "Balanceenquiry",
-		"displayName": "Balance enquiry",
-		"description": "Included on Self Service channels"
 	},
 	{
 		"name": "AirtimewithoutAirtime",
@@ -161,14 +145,92 @@
 		"name": "Income",
 		"displayName": "Income",
 		"description": "No minimum income required"
+	},
+	{
+		"name": "RelationshipBanker",
+		"displayName": "Relationship Banker",
+		"description": "n/a"
+	},
+	{
+		"name": "Creditcard",
+		"displayName": "Credit card",
+		"description": "n/a"
+	},
+	{
+		"name": "Greenbacks",
+		"displayName": "Greenbacks",
+		"description": "Optional"
+	},
+	{
+		"name": "Chargecard",
+		"displayName": "Charge card",
+		"description": "n/a"
+	},
+	{
+		"name": "Electronicchannels",
+		"displayName": "Electronic channels",
+		"description": "Included"
+	},
+	{
+		"name": "eNote",
+		"displayName": "eNote",
+		"description": "Included"
+	},
+	{
+		"name": "Nofundsalert",
+		"displayName": "No-funds alert",
+		"description": "Optional"
+	},
+	{
+		"name": "Internationalairportloungeaccess",
+		"displayName": "International airport lounge",
+		"description": "n/a"
+	},
+	{
+		"name": "Balanceenquiry",
+		"displayName": "Balance enquiry",
+		"description": "Included on Self Service channels"
+	},
+	{
+		"name": "Forexdelivery",
+		"displayName": "Forex delivery",
+		"description": "n/a"
+	},
+	{
+		"name": "Overdraft",
+		"displayName": "Overdraft",
+		"description": "n/a"
+	},
+	{
+		"name": "Investment",
+		"displayName": "Investment",
+		"description": "n/a"
+	},
+	{
+		"name": "Insurance",
+		"displayName": "Insurance",
+		"description": "n/a"
+	},
+	{
+		"name": "Tailoredfinancing",
+		"displayName": "Tailored financing",
+		"description": "n/a"
 	}],
 	"eligibilityRules": [{
+		"attributeType": "EligibilityRule",
+		"attributeName": "Age",
+		"minValue": "16",
+		"maxValue": "26",
+		"valueUnit": "year",
+		"description": "16 years and older"
+	},
+	{
 		"attributeType": "EligibilityRule",
 		"attributeName": "Age",
 		"minValue": "27",
 		"maxValue": "29",
 		"valueUnit": "year",
-		"description": "16 years and older"
+		"description": ""
 	},
 	{
 		"attributeType": "EligibilityRule",
@@ -199,14 +261,6 @@
 		"attributeName": "Income",
 		"minValue": "36000",
 		"maxValue": "120000",
-		"valueUnit": "ZAR",
-		"description": ""
-	},
-	{
-		"attributeType": "EligibilityRule",
-		"attributeName": "Income",
-		"minValue": "0",
-		"maxValue": "35988",
 		"valueUnit": "ZAR",
 		"description": ""
 	},
