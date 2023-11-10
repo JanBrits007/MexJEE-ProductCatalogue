@@ -533,7 +533,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 mLog.debug("Trace 4.1");
             } catch (Exception e) {
                 // Schema validator is a mess. It returns no stack trace on the exception. Need to specifically handle it.
-                mLog.error("ProductId >>" +productId+" failure, reason:"+ e.getMessage() + "<<",e);
+                mLog.debug("ProductId >>" +productId+" failure, reason:"+ e.getMessage() + "<<",e);
                 throw new Exception("ProductSpec lookup failure: product: " + productId + ", reason:" + e.getMessage());
             }
 
