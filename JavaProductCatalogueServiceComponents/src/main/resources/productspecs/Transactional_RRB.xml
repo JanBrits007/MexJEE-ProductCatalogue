@@ -91,7 +91,7 @@
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~displaySummary=true~child-ng-components=CustomerVulnerabilitiesComponent~child-ng-components=EmailAddress~child-ng-components=StatementDelivery~child-ng-components=DigitalActiveCardTrascationalComponent</attributeName>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~displaySummary=true~child-ng-components=CustomerVulnerabilitiesComponent~child-ng-components=EmailAddress~child-ng-components=StatementDelivery~child-ng-components=DigitalActiveCardTrascationalComponent~child-ng-components=MarketingConsentComponent</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -750,7 +750,7 @@
       <productAttributes>
          <attributeType>String</attributeType>
          <attributeName>MaxTransactionalProductEligible</attributeName>
-         <value>2</value>
+         <value>${{RRB_Max_TP_Limit}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>String</attributeType>
@@ -1022,7 +1022,7 @@
    <!--RRB TP feature-->
    <features>
       <featureIdentifier>1164</featureIdentifier>
-      <name>Cheque Card</name>
+      <name>Debit card</name>
       <mandatory>false</mandatory>
       <preSelected>false</preSelected>
       <featureAttributeGroup>

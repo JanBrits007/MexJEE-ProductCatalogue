@@ -36,10 +36,10 @@
     <!--GenerateOffer-->
     <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-      <productAttributes>
+      <!-- <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>ValueAddedServicesV2|ng-component=ValueAddedServicesV2Component~ZOrder=85</attributeName>
-      </productAttributes>
+      </productAttributes> -->
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>ProductSetupSummary|ng-component=ProductSetupSummaryComponent~ZOrder=82</attributeName>
@@ -467,6 +467,51 @@
          <attributeName>VAS_4387</attributeName>
          <value>Optionality=Mandatory~IsTakenUp=true</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1008</attributeName><!--No fund alert-->
+         <value>Optionality=Optional~IsTakenUp=false</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--Decisioning control-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>DecisioningControl</attributeGroupName>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>EnforceIntent0FAISAccreditationRule</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>FAISCategoryCode</attributeName>
+         <value>1.18</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>String</attributeType>
+         <attributeName>FAISCategoryCode</attributeName>
+         <value>1.17</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>ComponentSupportsDeclineReasons</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>EnforceAgeValidationRules</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>includeNotTakenUpComponents</attributeName>
+         <value>true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>agreementStatusChangeRequired</attributeName>
+         <value>true</value>
+      </productAttributes>
    </productAttributeGroup>
 
    <features>
@@ -502,7 +547,7 @@
         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>      
         <featureAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=ng-employment-type-approved-loan~showIncomeSource=true~child-ng-components=ng-employment-details~ExecuteMarriedCOPRule=true</attributeName>
+            <attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=ng-country-of-residence~child-ng-components=ng-marital-details~child-ng-components=ng-education-details~child-ng-components=ng-salary-bank-details~child-ng-components=ng-consent-capture~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=ng-employment-type-approved-loan~showIncomeSource=true~child-ng-components=ng-employment-details</attributeName>
         </featureAttributes>
       </featureAttributeGroup>
 
@@ -1096,4 +1141,59 @@
       </featureAttributeGroup>
    </features>
 
+   <features inheritFromFiles="Transactional_RRB">
+      <featureIdentifier>1374</featureIdentifier>
+      <name>eNotes</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=EnotesVASComponent-1374~ProceduralStepName=Optional extras for you~ZOrder=90~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~applicableChannels=MobileSelfAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
+
+   <features inheritFromFiles="Transactional_RRB">
+      <featureIdentifier>1008</featureIdentifier>
+      <name>No Funds Alert</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=NoFundsAlertComponent-1008~ProceduralStepName=Optional extras for you~ZOrder=90~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~applicableChannels=MobileSelfAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
+
+   <features inheritFromFiles="Transactional_RRB">
+      <featureIdentifier>1164</featureIdentifier>
+      <name>Debit card</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=DebitCardComponent-1164~ProceduralStepName=Optional extras for you~ZOrder=90~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~applicableChannels=MobileSelfAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
+
+   <features inheritFromFiles="Transactional_RRB">
+      <featureIdentifier>1454</featureIdentifier>
+      <name>Greenbacks Rewards membership</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup>
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GreenbacksComponent-1454~ProceduralStepName=Optional extras for you~ZOrder=90~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~applicableChannels=MobileSelfAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
 </product>

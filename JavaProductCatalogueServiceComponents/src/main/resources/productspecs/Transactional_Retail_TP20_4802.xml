@@ -331,6 +331,11 @@
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODLimitIncreaseContractDocumentFilter</value>
+      </productAttributes>
       <!--
       <productAttributes>
 		 <attributeType>string</attributeType>
@@ -913,10 +918,10 @@
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
          </featureAttributes>
-         <featureAttributes>
+         <!--featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
             <attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted</attributeName>
-         </featureAttributes>
+         </featureAttributes-->
       </featureAttributeGroup>
 
       <!--ActivateProductsGatherEvidence-->
@@ -1128,7 +1133,7 @@
          <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
          <featureAttributes>
             <attributeType>string</attributeType>
-            <attributeName>subGenericInfo</attributeName>
+            <attributeName>subGenericDetails</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>string</attributeType>
