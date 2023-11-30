@@ -1,9 +1,10 @@
 <product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-   <productIdentifier>7015</productIdentifier>
-   <name>MiGoals</name>
-   <shortDescription>Routing Spec for MiGoals</shortDescription>
+   <productIdentifier>7016</productIdentifier>
+   <name>MiGoals Plus</name>
+   <shortDescription>Routing Spec for MiGoals Plus</shortDescription>
 
-   <!-- Added for OD bolt onto 7015 -->
+   <!-- Added for OD bolt onto 4802 -->
+
    <productAttributeGroup>
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
@@ -363,18 +364,6 @@
          <attributeName>RequiredDataFilter_GatherEvidence</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.PartyLONFilter</value>
       </productAttributes>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>YOUTHBANKING_ProofOfChildIdentificationClause</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>YOUTHBANKING_ProofOfChildIdentificationClause</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
@@ -397,14 +386,6 @@
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>YoureDone</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Compliance</attributeType>
-         <attributeName>YOUTHBANKING_LegalGuardianOfMinor</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Compliance</attributeType>
-         <attributeName>YOUTHBANKING_LegalGuardianOfMinor</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -480,7 +461,7 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>mdmSubProductCode</attributeName>
-         <value>2141</value>
+         <value>2142</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -705,8 +686,7 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!-- End bolt OD onto 7015 -->
-
+   <!-- End bolt OD onto 4802 -->
 
    <!--Initialization Handler-->
    <productAttributeGroup>
@@ -744,18 +724,18 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_TP20_7015</value>
+         <value>Transactional_RRB_TP20_4802</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
       <productAttributes>
-         <attributeName>SubstituteForRequestedSegmentation</attributeName>
-         <value>YOUTH BANKING</value>
+         <attributeName>RetailLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_TP20_Youth_7015</value>
+         <value>Transactional_Retail_TP20_4802</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -766,7 +746,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_TP20_7015</value>
+         <value>Transactional_RRB_TP20_4802</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -777,7 +757,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_TP20_7015</value>
+         <value>Transactional_RRB_TP20_4802</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -788,7 +768,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_TP20_7015_MoneyApp</value>
+         <value>Transactional_Retail_TP20_4802_MoneyApp</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -799,7 +779,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_TP20_7015</value>
+         <value>Transactional_Retail_TP20_4802</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -812,18 +792,29 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_TP20_7015</value>
+         <value>Transactional_RRB_TP20_4802</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
       <productAttributes>
-         <attributeName>SubstituteForRequestedSegmentation</attributeName>
-         <value>YOUTH BANKING</value>
+         <attributeName>RetailLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_TP20_Youth_7015</value>
+         <value>Transactional_Retail_TP20_4802</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+      <productAttributes>
+         <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+         <value>${{TP20EmailAddressWhitelist}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_TP20_4803_MoneyApp</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -834,7 +825,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_TP20_7015</value>
+         <value>Transactional_RRB_TP20_4802</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -845,7 +836,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_TP20_7015</value>
+         <value>Transactional_RRB_TP20_4802</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -856,7 +847,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_TP20_7015_MoneyApp</value>
+         <value>Transactional_Retail_TP20_4802_MoneyApp</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -867,7 +858,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>7015</value>
+         <value>4802</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -878,7 +869,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_TP20_7015</value>
+         <value>Transactional_Retail_TP20_4802</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -891,7 +882,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_TP20_7015</value>
+         <value>Transactional_RRB_TP20_4802</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -902,7 +893,18 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_TP20_7015</value>
+         <value>Transactional_RRB_TP20_4802</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>RetailLimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>${{EDBPhase2ODDynamicStaffList}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>Transactional_Retail_TP20_4802</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -913,7 +915,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_RRB_TP20_7015</value>
+         <value>Transactional_RRB_TP20_4802</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -924,7 +926,18 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_TP20_7015_MoneyApp</value>
+         <value>Transactional_Retail_TP20_4802_MoneyApp</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+      <productAttributes>
+         <attributeName>LimitIncreaseSubstitutionRulesV2</attributeName>
+         <value>NA</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>SubstituteForProductID</attributeName>
+         <value>4802</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -935,7 +948,7 @@
       </productAttributes>
       <productAttributes>
          <attributeName>SubstituteForProductID</attributeName>
-         <value>Transactional_Retail_TP20_7015</value>
+         <value>Transactional_Retail_TP20_4802</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -949,18 +962,6 @@
          <isComparable>false</isComparable>
          <valueUnit>bool</valueUnit>
       </productAttributes>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>ProofOfMinorIdentificationClause</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Evidence</attributeType>
-         <attributeName>ProofOfChildBirthIdentificationClause</attributeName>
-         <isComparable>false</isComparable>
-         <valueUnit>bool</valueUnit>
-      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
       <attributeGroupName>EligibilityRules</attributeGroupName>
@@ -971,11 +972,7 @@
          <minValue>16</minValue>
          <maxValue>999</maxValue>
          <valueUnit>year</valueUnit>
-         <description>Child needs to be younger than 16</description>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>EligibilityRule</attributeType>
-         <description>Overdraft_icon|No minimum income required</description>
+         <description>You need to be 16 years or older</description>
       </productAttributes>
       <productAttributes>
          <attributeType>EligibilityRule</attributeType>
@@ -1021,17 +1018,23 @@
       <attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
       <productAttributes>
          <attributeType>Compliance</attributeType>
-         <attributeName>EswatiniPersonalInformationProcessingConsent</attributeName>
+         <attributeName>PersonalInformationProcessingConsent</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>Compliance</attributeType>
          <attributeName>BureauCheckConsent</attributeName>
       </productAttributes>
-      <productAttributes>
-         <attributeType>Compliance</attributeType>
-         <attributeName>LegalGuardianOfMinor</attributeName>
-      </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>int</attributeType>
+         <attributeName>ApplicationCaptureExecutionTimeMinutes</attributeName>
+         <value>5-10</value>
+      </productAttributes>
+
+   </productAttributeGroup>
+
 
    <features> <!--Including this as BPM references this base file directly-->
       <featureIdentifier>1014</featureIdentifier>
@@ -1357,7 +1360,7 @@
          <featureAttributes>
             <attributeType>boolean</attributeType>
             <attributeName>EnforceApplicationStatusValidationRules</attributeName>
-            <value>true</value>
+            <value>false</value>
          </featureAttributes>
       </featureAttributeGroup>
       <featureAttributeGroup>
@@ -2669,4 +2672,5 @@
          </featureAttributes>
       </featureAttributeGroup>
    </features>
+
 </product>
