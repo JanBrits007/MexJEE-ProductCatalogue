@@ -368,10 +368,10 @@
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
-		<productAttributes>
+		<!--productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent~child-ng-components=MonitorBureauActivityComponent</attributeName>
-		</productAttributes>
+		</productAttributes-->
 	</productAttributeGroup>
 
 	<!--ActivateProductsGatherEvidence-->
@@ -1068,7 +1068,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>baseCBOActivityList</attributeName>
-			<value>CreditDecisionDetermineOffer|DeliveryConfirmationandInsurance|ConfigureArrangement|ConfirmVerificationQuality~9001~9003~9004|ManageMandate|CBOFinalizeCase</value>
+			<value>CreditDecisionDetermineOffer|DeliveryConfirmationandInsurance|ConfigureArrangement|ConfirmVerificationQuality~9001~9003~9004|CBOFinalizeCase</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -1098,16 +1098,6 @@
 		<productAttributes>
 			<attributeType>int</attributeType>
 			<attributeName>CaseActivityPriority_ConfirmVerificationQuality</attributeName>
-			<value>0|Weighting=0</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>CaseActivityTeamName_ManageMandate</attributeName>
-			<value>EDB Mandate Assessor|Weighting=0</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>int</attributeType>
-			<attributeName>CaseActivityPriority_ManageMandate</attributeName>
 			<value>0|Weighting=0</value>
 		</productAttributes>
 		<productAttributes>
@@ -1810,6 +1800,24 @@
 		<description>Detailed description of feature</description>
 		<featureType>BoltOn</featureType>
 		<referenceProductID>-1</referenceProductID>
+		<featureAttributeGroup>
+			<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>baseCBOActivityList</attributeName>
+				<value>ManageMandate</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>CaseActivityTeamName_ManageMandate</attributeName>
+				<value>EDB Mandate Assessor|Weighting=0</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>int</attributeType>
+				<attributeName>CaseActivityPriority_ManageMandate</attributeName>
+				<value>0|Weighting=0</value>
+			</featureAttributes>
+		</featureAttributeGroup>
 	</features>
 
 
