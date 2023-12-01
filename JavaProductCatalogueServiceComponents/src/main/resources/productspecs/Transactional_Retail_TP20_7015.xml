@@ -3,9 +3,43 @@
    <name>MiGoals</name>
    <shortDescription>(Transactional_Retail_TP20_7015) MiGoals Pay-As-You-Use</shortDescription>
 
+   <!--GenerateOfferVerifyEligibility-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>loadingScreenConfiguration_VerifyIdentity</attributeGroupName>
+      <productAttributes>
+         <attributeType>Configuration</attributeType>
+         <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=moneyAppDownloadSpinnerTileComponent</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--VerifyIdentity-->
    <productAttributeGroup action="overwrite">
       <attributeGroupName>clientInformationRequirement_VerifyIdentity</attributeGroupName>
+   </productAttributeGroup>
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>loadingScreenConfiguration_VerifyIdentity</attributeGroupName>
+      <productAttributes>
+         <attributeType>Configuration</attributeType>
+         <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=moneyAppDownloadSpinnerTileComponent</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--GenerateOfferGatherProductDetails-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>loadingScreenConfiguration_GenerateOfferGatherProductDetails</attributeGroupName>
+      <productAttributes>
+         <attributeType>Configuration</attributeType>
+         <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=moneyAppDownloadSpinnerTileComponent</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--GenerateOffer-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>loadingScreenConfiguration_GenerateOffer</attributeGroupName>
+      <productAttributes>
+         <attributeType>Configuration</attributeType>
+         <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=moneyAppDownloadSpinnerTileComponent</attributeName>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--ActivateProductsGatherClientDetails-->
@@ -29,10 +63,6 @@
       <productAttributes>
          <attributeType>Configuration</attributeType>
          <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=moneyAppDownloadSpinnerTileComponent</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>Configuration</attributeType>
-         <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=someAppApplicableSpinnerTileComponent~applicableChannels=MobileSelfAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -58,6 +88,22 @@
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>loadingScreenConfiguration_ActivateProductsGatherProductDetails</attributeGroupName>
+      <productAttributes>
+         <attributeType>Configuration</attributeType>
+         <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=moneyAppDownloadSpinnerTileComponent</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--ActivateProductsGatherEvidence-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>loadingScreenConfiguration_ActivateProductsGatherEvidence</attributeGroupName>
+      <productAttributes>
+         <attributeType>Configuration</attributeType>
+         <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=moneyAppDownloadSpinnerTileComponent</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -99,6 +145,37 @@
       <productAttributes>
          <attributeName>RequiredDataFilter_PresentDocuments</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODLimitIncreaseFaisFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>loadingScreenConfiguration_ActivateProductsPresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeType>Configuration</attributeType>
+         <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=moneyAppDownloadSpinnerTileComponent</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--FinalizeFrontOfficeInteraction-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>LetsGetDigital|ng-component=LetsGetDigitalComponent~ProceduralStepName=Get your Nedbank ID~child-ng-components=NedbankIdRegisterComponent~applicableChannels=WebSelfAssisted~ZOrder=60</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=SSKInstantCardIssuePrimer~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalProductAccountDetails~child-ng-components=DebitOrderSwitching~child-ng-components=SwitchingToNedbank~child-ng-components=ForgotYourCard~child-ng-components=Statements~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~child-ng-components=GettingTheMobileApp~HideProceduralStep=true~ZOrder=50~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~child-ng-components=MobileCreateYourLoginDetailsNotificationComponent~child-ng-components=MobileAlsoExpectNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalProductAccountDetails~HideProceduralStep=true~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>loadingScreenConfiguration_FinalizeFrontOfficeInteraction</attributeGroupName>
+      <productAttributes>
+         <attributeType>Configuration</attributeType>
+         <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=moneyAppDownloadSpinnerTileComponent</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -350,7 +427,7 @@
       <productAttributes>
          <attributeType>int</attributeType>
          <attributeName>mdmSubProductCode</attributeName>
-         <value>2141</value>
+         <value>2180</value>
       </productAttributes>
       <productAttributes>
          <attributeType>int</attributeType>
@@ -401,6 +478,16 @@
          <attributeType>string</attributeType>
          <attributeName>noFundsAlertIndicator</attributeName>
          <value>1</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>boolean</attributeType>
+         <attributeName>bypassPricingPlanLoad</attributeName>
+         <value>false</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>DAMReserveBankCode</attributeName>
+         <value>17</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup action="overwrite">
