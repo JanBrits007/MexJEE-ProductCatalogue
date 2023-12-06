@@ -582,12 +582,18 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             productAttributeGroupType.getProductAttributes().forEach(productAttributesType -> {
                 if(productAttributesType.getValue() != null && !productAttributesType.getValue().contains(DYNAMIC_STAFF_MARKER)) {
                     if (productAttributesType.getValue().contains("${{")) {
-
                         mLog.debug("find [productAttributesType] dynamic value:" + productAttributesType.getValue());
                         String propertyValue = dynamicPropertyBean.getProperty(productAttributesType.getValue());
                         mLog.debug("found [productAttributesType] dynamic value:" + propertyValue);
                         productAttributesType.setValue(propertyValue);
                     }
+                }
+
+                if(productAttributesType.getAttributeName() != null && productAttributesType.getAttributeName().contains("${{")) {
+                    mLog.debug("find [productAttributesType] dynamic attribute Name:" + productAttributesType.getAttributeName());
+                    String propertyName = dynamicPropertyBean.getProperty(productAttributesType.getAttributeName());
+                    mLog.debug("found [productAttributesType] dynamic attribute name:" + propertyName);
+                    productAttributesType.setAttributeName(propertyName);
                 }
             })
         );
@@ -602,6 +608,14 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                             mLog.debug("found [featureAttributesType] dynamic value:" + propertyValue);
                             featureAttributesType.setValue(propertyValue);
                         }
+
+                        if(featureAttributesType.getAttributeName() != null && featureAttributesType.getAttributeName().contains("${{")){
+                            mLog.debug("find [featureAttributesType] dynamic Attribute Name:" + featureAttributesType.getAttributeName());
+                            String propertyName = dynamicPropertyBean.getProperty(featureAttributesType.getAttributeName());
+                            mLog.debug("found [featureAttributesType] dynamic Attribute Name:" + propertyName);
+                            featureAttributesType.setAttributeName(propertyName);
+                        }
+
                     })
                 )
             );
