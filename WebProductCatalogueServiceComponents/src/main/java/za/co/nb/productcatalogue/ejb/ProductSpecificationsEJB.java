@@ -562,7 +562,6 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             multiProductAttributeGroupValues
                     .forEach(productAttributeGroupType -> productAttributeGroupType.getProductAttributes()
                             .forEach(productAttributes -> {
-
                               if(productAttributes.getAttributeName().equals( "SubstituteForWhiteListedNBNumbers") &&
                                       productAttributes.getValue().contains(DYNAMIC_STAFF_MARKER)){
 
@@ -583,7 +582,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                 if(productAttributesType.getValue() != null && !productAttributesType.getValue().contains(DYNAMIC_STAFF_MARKER)) {
                     if (productAttributesType.getValue().contains("${{")) {
                         mLog.debug("find [productAttributesType] dynamic value:" + productAttributesType.getValue());
-                        String propertyValue = dynamicPropertyBean.getProperty(productAttributesType.getValue());
+                        String propertyValue = updateValueDynamically(productAttributesType.getValue());
                         mLog.debug("found [productAttributesType] dynamic value:" + propertyValue);
                         productAttributesType.setValue(propertyValue);
                     }
@@ -604,7 +603,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                     .forEach(featureAttributesType -> {
                         if(featureAttributesType.getValue() != null && featureAttributesType.getValue().contains("${{")){
                             mLog.debug("find [featureAttributesType] dynamic value:" + featureAttributesType.getValue());
-                            String propertyValue = dynamicPropertyBean.getProperty(featureAttributesType.getValue());
+                            String propertyValue = updateValueDynamically(featureAttributesType.getValue());
                             mLog.debug("found [featureAttributesType] dynamic value:" + propertyValue);
                             featureAttributesType.setValue(propertyValue);
                         }
