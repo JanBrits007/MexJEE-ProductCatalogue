@@ -85,6 +85,16 @@ public class ProductSpecificationSubstitutionUtil {
 
             mLog.debug("Trace 4");
             
+            if(ruleHandler!=null){
+                try {
+                    ruleHandler.executeBusinessRules(productSpecificationID, caseID);
+                }
+                catch(Exception e) {
+                    mLog.error("", e);
+                    // Something went wrong. Don't break JO. Fallback to their product ID.
+                }
+            }
+            
             String productIDToSubstitute = substituteBusinessCaseProductIDBasedOnBusinessRules(productSpecificationID, caseID, ruleHandler);
 
             mLog.debug("Trace 5 >>" + productIDToSubstitute + "<<");
