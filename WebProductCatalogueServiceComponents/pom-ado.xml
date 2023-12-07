@@ -119,38 +119,38 @@
         <dependency>
             <groupId>com.fasterxml.jackson.jaxrs</groupId>
             <artifactId>jackson-jaxrs-json-provider</artifactId>
-            <scope>#{supportingJARsScope}#</scope>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.jaxrs</groupId>
             <artifactId>jackson-jaxrs-base</artifactId>
-            <scope>#{supportingJARsScope}#</scope>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-jaxb-annotations</artifactId>
-            <scope>#{supportingJARsScope}#</scope>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <scope>#{supportingJARsScope}#</scope>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <scope>#{supportingJARsScope}#</scope>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <scope>#{supportingJARsScope}#</scope>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-xml</artifactId>
-            <scope>#{supportingJARsScope}#</scope>
+            <scope>provided</scope>
         </dependency>
         <!-- end. jackson dependencies to enable jackson annotations in REST-->
 
@@ -158,6 +158,7 @@
         <dependency>
             <groupId>#{pomGroupId}#</groupId>
             <artifactId>CR1Authorization</artifactId>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>#{pomGroupId}#</groupId>

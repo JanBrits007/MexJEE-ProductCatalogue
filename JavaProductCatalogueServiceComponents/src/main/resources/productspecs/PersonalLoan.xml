@@ -32,6 +32,50 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<productAttributeGroup>
+		<attributeGroupName>EligibilityHandler</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_GenerateOffer</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_PrepareApplicant</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<!--Case and Process Configuration-->
+	<productAttributeGroup>
+		<attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>frontOfficeIntentSequence</attributeName>
+			<value>GenerateOfferVerifyEligibility|VerifyIdentity|GenerateOfferGatherProductDetails|GenerateOfferGatherClientDetails|FinancialDetails|GenerateApplicationOfferProposals|GenerateOffer|ActivateProductsGatherClientDetails|ActivateProductsGatherProductDetails|ActivateProductsGatherEvidence|ActivateProductsPresentDocuments|FinalizeFrontOfficeInteraction</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>presentLowerOfferFrontOfficeIntentSequence</attributeName>
+			<value>PresentLowerOffer|ActivateProductsGatherProductDetails</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>breadcrumbSteps</attributeName>
+			<value>Authenticate|Choose Extras|About you|Customise|Finishing up</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GNBAIntentToActivityMapping</attributeName>
+			<value>VerifyIdentity=Choose Extras|GenerateOfferVerifyEligibility=Choose Extras|GenerateOfferGatherProductDetails=Choose Extras|GenerateOfferGatherClientDetails=Choose Extras|FinancialDetails=Choose Extras|GenerateOffer=Choose Extras|ActivateProductsGatherClientDetails=About you|ActivateProductsGatherProductDetails=Customise|ActivateProductsGatherEvidence=Finishing up|ActivateProductsPresentDocuments=Finishing up|FinalizeFrontOfficeInteraction=Finishing up</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--GenerateOfferVerifyEligibility-->
 	<productAttributeGroup>
 		<attributeGroupName>EligibilityRules</attributeGroupName>
@@ -43,15 +87,6 @@
 			<maxValue>64</maxValue>
 			<valueUnit>year</valueUnit>
 			<description>user-icon|You need to be 18 years or older.</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Income</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>50000</minValue>
-			<maxValue>99999999</maxValue>
-			<valueUnit>ZAR</valueUnit>
-			<description>income|You need to earn more than R60 000 a year</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -89,6 +124,15 @@
 			<valueUnit>bool</valueUnit>
 			<description>resident|You need to be a South African resident.</description>
 		</productAttributes>
+        <productAttributes>
+            <attributeType>EligibilityRule</attributeType>
+            <attributeName>Income</attributeName>
+            <isComparable>false</isComparable>
+            <minValue>5000</minValue>
+            <maxValue>99999999</maxValue>
+            <valueUnit>ZAR</valueUnit>
+            <description>income|You must have a salary that is paid into your bank account electronically and that is at least:#1~&lt;b&gt;R5 000&lt;/b&gt; if you have an active Nedbank transactional account; or#1~&lt;b&gt;R10 000&lt;/b&gt; if you don’t have a transactional account with Nedbank.</description>
+        </productAttributes>
 	</productAttributeGroup>
 
 	<!--VerifyIdentity-->
@@ -435,6 +479,10 @@
 			<attributeType>Compliance</attributeType>
 			<attributeName>FinancialHealthConsent</attributeName>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>Compliance</attributeType>
+			<attributeName>ComplianceAcceptanceConsent</attributeName>
+		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>RequiredCompliance_PrepareApplicant_LimitIncrease</attributeGroupName>
@@ -752,6 +800,9 @@
 	</productAttributeGroup>
 
 	<!--Case and Process Configuration-->
+	<productAttributeGroup inheritFromFiles="BaseProduct">
+		<attributeGroupName>loadingScreenConfiguration_Default</attributeGroupName>
+	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>DocumentConfiguration</attributeGroupName>
 		<productAttributes>
@@ -835,6 +886,11 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
+			<attributeName>CODHandler_Intent4</attributeName>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.ric.Intent4RICCODHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
 			<attributeName>PricingPlanHandler_GenerateOffer</attributeName>
 			<value>classname=za.co.nb.offermanagement.fees.handler.plm.PricingPlanHandler</value>
 		</productAttributes>
@@ -868,6 +924,18 @@
 			<attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
 			<value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>DataMiningHandler</attributeName>
+			<value>classname=za.co.nb.onboarding.product.datamining.handlers.retail.RetailDataMiningHandler</value>
+		</productAttributes>
+		<!--
+		<productAttributes>
+    		<attributeType>string</attributeType>
+    		<attributeName>CDE_SimulationETE</attributeName>
+    		<value>${{CDE_Simulation}}</value>
+		</productAttributes>
+		-->
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
@@ -999,7 +1067,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>baseCBOActivityList</attributeName>
-			<value>CreditDecisionDetermineOffer|DeliveryConfirmationandInsurance|ConfigureArrangement|ConfirmVerificationQuality|CBOFinalizeCase</value>
+			<value>CreditDecisionDetermineOffer|DeliveryConfirmationandInsurance|ConfigureArrangement|ConfirmVerificationQuality~9001~9003~9004|CBOFinalizeCase</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -1454,7 +1522,82 @@
 		<attributeGroupName>DiscriminatorConfiguration</attributeGroupName>
 	</productAttributeGroup>
 
-	<features>
+    <!--MandateConfiguration-->
+    <productAttributeGroup>
+        <attributeGroupName>MandateConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>operationType</attributeName>
+            <value>REQ</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>trackingIndicator</attributeName>
+            <value>T</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>instalmentOccurrence</attributeName>
+            <value>RCUR</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>collectionCurrency</attributeName>
+            <value>ZAR</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>creditorName</attributeName>
+            <value>Nedbank Personal Loans</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>creditorTeleContactDetails</attributeName>
+            <value>+27-116679220</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>creditorEmailContactDetails</attributeName>
+            <value>NbplPaymentsReports@Nedbank.co.za</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>creditorBranchNumber</attributeName>
+            <value>198765</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>creditorAccountNumber</attributeName>
+            <value>1456008315</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>creditorAbbreviatedShortName</attributeName>
+            <value>NEDBPL</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>lobPartyIdentifier</attributeName>
+            <value>PL_CR1</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>nedbankMenberNo</attributeName>
+            <value>210002</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>caseMetricParameter</attributeName>
+            <value>MANDATEREQUESTTANSACTIONID</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>BPMAction</attributeName>
+            <value>checkPaymentMandate</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <features>
 		<featureIdentifier>1105</featureIdentifier>
 		<name>Credit Life</name>
 		<mandatory>false</mandatory>
