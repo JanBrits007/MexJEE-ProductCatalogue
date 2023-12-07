@@ -591,7 +591,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
                 if(productAttributesType.getAttributeName() != null && productAttributesType.getAttributeName().contains("${{")) {
                     mLog.debug("find [productAttributesType] dynamic attribute Name:" + productAttributesType.getAttributeName());
-                    String propertyName = dynamicPropertyBean.getProperty(productAttributesType.getAttributeName());
+                    String propertyName = updateValueDynamically(productAttributesType.getAttributeName());
                     mLog.debug("found [productAttributesType] dynamic attribute name:" + propertyName);
                     productAttributesType.setAttributeName(propertyName);
                 }
@@ -611,7 +611,7 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
                         if(featureAttributesType.getAttributeName() != null && featureAttributesType.getAttributeName().contains("${{")){
                             mLog.debug("find [featureAttributesType] dynamic Attribute Name:" + featureAttributesType.getAttributeName());
-                            String propertyName = dynamicPropertyBean.getProperty(featureAttributesType.getAttributeName());
+                            String propertyName = updateValueDynamically(featureAttributesType.getAttributeName());
                             mLog.debug("found [featureAttributesType] dynamic Attribute Name:" + propertyName);
                             featureAttributesType.setAttributeName(propertyName);
                         }
@@ -622,6 +622,24 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
 
     }
 
+    private String updateValueDynamically(String s){
+        String originalString = s;
+        List<String> inputString = new ArrayList<String>();
+        List<String> outputString = new ArrayList<String>();
+       if(s!=null) {
+           while (s.contains("${{")) {
+               String tempString = s.substring(s.indexOf("${{"), s.indexOf("}}") + 2);
+               inputString.add(tempString);
+               String val = dynamicPropertyBean.getProperty(tempString);
+               outputString.add(val);
+               s = s.substring(s.indexOf("}}") + 2);
+           }
+           for (int i = 0; i < inputString.size(); i++) {
+               originalString = originalString.replace(inputString.get(i), outputString.get(i));
+           }
+       }
+        return originalString;
+    }
 
     private Object lookupObject(String pJNDI) throws NamingException {
         mLog.debug("Trace 1");
