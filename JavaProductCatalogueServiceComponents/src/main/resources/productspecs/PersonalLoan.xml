@@ -1109,7 +1109,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>baseCBOActivityList</attributeName>
-			<value>EstablishCollectionMechanism~StartOfProcess|EstablishCollectionMechanism~EndOfProcess|CreditDecisionDetermineOffer|DeliveryConfirmationandInsurance|ConfigureArrangement|ConfirmVerificationQuality~9001~9003~9004|CBOFinalizeCase</value>
+			<value>CreditDecisionDetermineOffer|DeliveryConfirmationandInsurance|ConfigureArrangement|ConfirmVerificationQuality~9001~9003~9004|CBOFinalizeCase</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -1842,6 +1842,8 @@
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
+
+	<!-- Debicheck -->
 	<features>
 		<featureIdentifier>1332</featureIdentifier>
 		<name>Payments Mandate</name>
@@ -1856,21 +1858,19 @@
 			<featureAttributes>
 				<attributeType>string</attributeType>
 				<attributeName>baseCBOActivityList</attributeName>
-				<value>ManageMandate</value>
+				<value>EstablishCollectionMechanism~StartOfProcess|EstablishCollectionMechanism~EndOfProcess</value>
 			</featureAttributes>
 			<featureAttributes>
 				<attributeType>string</attributeType>
-				<attributeName>CaseActivityTeamName_ManageMandate</attributeName>
-				<value>EDB Mandate Assessor|Weighting=0</value>
+				<attributeName>CaseActivityTeamName_EstablishCollectionMechanism</attributeName>
+				<value>System|Weighting=0</value>
 			</featureAttributes>
 			<featureAttributes>
 				<attributeType>int</attributeType>
-				<attributeName>CaseActivityPriority_ManageMandate</attributeName>
+				<attributeName>CaseActivityPriority_EstablishCollectionMechanism</attributeName>
 				<value>0|Weighting=0</value>
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
-
-
 
 </product>
