@@ -3,114 +3,13 @@
    <name>MiGoals Premium</name>
    <shortDescription>(Transactional_Retail_TP20_4803) MiGoals Premium</shortDescription>
 
-   <!-- ArrangementConfiguration -->
-   <productAttributeGroup action="overwrite">
+   <!--Arrangement configuration-->
+   <productAttributeGroup>
       <attributeGroupName>ArrangementConfiguration</attributeGroupName>
-      <productAttributes>
-         <attributeType>Boolean</attributeType>
-         <attributeName>ProductSupportsCreditCardRepaymentFromNewAccount</attributeName>
-         <value>True</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditRepaymentFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementEmploymentFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementComplianceInformationFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODLimitIncreaseContractDocumentFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDigitallyActiveFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_GatherEvidence</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDigitallyActiveFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_PresentDocuments</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDigitallyActiveFilter</value>
-      </productAttributes>
-
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>CreditContracts</attributeName>
-         <value>9062|9063</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>PricingPlanDiscriminator</attributeName>
-         <value>BRAND</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>PricingPlanDiscriminator</attributeName>
-         <value>CLIENT TYPE GROUPING</value>
-      </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>PricingPlanDiscriminator</attributeName>
          <value>AGEGROUP</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1454</attributeType>
-         <attributeName>ProductRuleHandler_Greenbacks</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.GreenBacksRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1333</attributeType>
-         <attributeName>ProductRuleHandler_ShopCard</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ShopCardRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1334</attributeType>
-         <attributeName>ProductRuleHandler_MembershipReward</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.MembershipRewardRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1465</attributeType>
-         <attributeName>ProductRuleHandler_RedemptionCard</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.RedemptionRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1099</attributeType>
-         <attributeName>ProductRuleHandler_BalanceProtectionPlan</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1100</attributeType>
-         <attributeName>ProductRuleHandler_PaymentProtectionPlan</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_All</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementLockerFilter</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -143,6 +42,31 @@
          <attributeType>string</attributeType>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.TpProductMaxEligibilityHandler</value>
+      </productAttributes>
+   </productAttributeGroup>
+
+   <!--ActivateProductsGatherProductDetails-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>TransactionalProductInformationBroadcast|ng-component=TransactionalProductInformationBroadcastComponent~ZOrder=400</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~restrictOptOut=true~ProceduralStepName=Getting your cards~includeTemporaryCard=true~lockersOption=true~ZOrder=170</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~child-ng-components=FAISAdviceRefused</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
