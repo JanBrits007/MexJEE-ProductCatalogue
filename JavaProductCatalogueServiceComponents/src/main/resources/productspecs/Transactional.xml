@@ -103,10 +103,6 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
-     <!-- <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent~applicableChannels=WebSelfAssisted~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=SelfServiceKiosk~applicableChannels=MerchantAssisted</attributeName>
-      </productAttributes>-->
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
@@ -410,21 +406,6 @@
          <attributeName>DigitallySign</attributeName>
       </productAttributes>
    </productAttributeGroup>
-<!--   <productAttributeGroup>-->
-<!--      <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>-->
-<!--      <productAttributes>-->
-<!--         <attributeType>DocumentDescription</attributeType>-->
-<!--         <attributeName>CombinedKeyFactStatements|nedbank-commercial-release/CombinedKeyFactStatements|N/A|N/A|N/A|N/A</attributeName>-->
-<!--      </productAttributes>-->
-<!--      <productAttributes>-->
-<!--         <attributeType>AvailableAction</attributeType>-->
-<!--         <attributeName>Email</attributeName>-->
-<!--      </productAttributes>-->
-<!--      <productAttributes>-->
-<!--         <attributeType>DocTemplateName</attributeType>-->
-<!--         <attributeName>CombinedKeyFactStatements</attributeName>-->
-<!--      </productAttributes>-->
-<!--   </productAttributeGroup>-->
    <productAttributeGroup>
       <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
       <productAttributes>
@@ -434,6 +415,13 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subNedbankLogo</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subGenericSignatures</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -864,13 +852,6 @@
          <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODLimitIncreaseContractDocumentFilter</value>
       </productAttributes>
-      <!--
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementPostalAddressSummaryDetailsFilter</value>
-      </productAttributes> -->
-
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RequiredDataFilter_ActivateProducts</attributeName> 
@@ -886,7 +867,6 @@
          <attributeName>RequiredDataFilter_PresentDocuments</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDigitallyActiveFilter</value>
       </productAttributes>
-
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>CreditContracts</attributeName>
