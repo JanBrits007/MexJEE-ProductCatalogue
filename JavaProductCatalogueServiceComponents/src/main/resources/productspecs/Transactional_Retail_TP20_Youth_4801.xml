@@ -337,7 +337,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>VAS_1374</attributeName><!--eNotes-->
-         <value>Optionality=Optional~IsTakenUp=false</value>
+         <value>Optionality=Optional~IsTakenUp=true</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -539,5 +539,15 @@
          </featureAttributes>
       </featureAttributeGroup>
    </features>
+   <!--1374 - eNotes-->
+   <features>
+      <featureIdentifier>1374</featureIdentifier>
+      <name>eNotes</name>
 
+      <!--GenerateOffer-->
+      <featureAttributeGroup action="overwrite">
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <!--removing this section so eNotes wont appear but will be taken up-->
+      </featureAttributeGroup>
+   </features>
 </product>
