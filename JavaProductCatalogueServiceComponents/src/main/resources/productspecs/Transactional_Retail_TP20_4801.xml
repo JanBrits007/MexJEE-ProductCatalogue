@@ -3,119 +3,9 @@
    <name>MiGoals</name>
    <shortDescription>(Transactional_Retail_TP20_4801) MiGoals Pay-As-You-Use</shortDescription>
 
-   <!-- ArrangementConfiguration -->
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
-      <productAttributes>
-         <attributeType>Boolean</attributeType>
-         <attributeName>ProductSupportsCreditCardRepaymentFromNewAccount</attributeName>
-         <value>True</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditRepaymentFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementEmploymentFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementComplianceInformationFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODLimitIncreaseContractDocumentFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDigitallyActiveFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_GatherEvidence</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDigitallyActiveFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_PresentDocuments</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDigitallyActiveFilter</value>
-      </productAttributes>
-
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>CreditContracts</attributeName>
-         <value>9062|9063</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>PricingPlanDiscriminator</attributeName>
-         <value>BRAND</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>PricingPlanDiscriminator</attributeName>
-         <value>CLIENT TYPE GROUPING</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>PricingPlanDiscriminator</attributeName>
-         <value>AGEGROUP</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1454</attributeType>
-         <attributeName>ProductRuleHandler_Greenbacks</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.GreenBacksRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1333</attributeType>
-         <attributeName>ProductRuleHandler_ShopCard</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ShopCardRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1334</attributeType>
-         <attributeName>ProductRuleHandler_MembershipReward</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.MembershipRewardRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1465</attributeType>
-         <attributeName>ProductRuleHandler_RedemptionCard</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.RedemptionRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1099</attributeType>
-         <attributeName>ProductRuleHandler_BalanceProtectionPlan</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>1100</attributeType>
-         <attributeName>ProductRuleHandler_PaymentProtectionPlan</attributeName>
-         <value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_All</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementDeclineFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementLockerFilter</value>
-      </productAttributes>
-   </productAttributeGroup>
-
    <!--ActivateProductsGatherProductDetails-->
    <productAttributeGroup action="overwrite">
+      <!--Overwritting to add delivery Charge Will Be Reversed Message-->
       <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -133,27 +23,13 @@
          <attributeType>productInformationRequirement</attributeType>
          <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
-      <!--productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent~applicableChannels=WebSelfAssisted~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=SelfServiceKiosk~applicableChannels=MerchantAssisted</attributeName>
-      </productAttributes-->
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
          <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
-   <!--FinalizeFrontOfficeInteraction-->
-
    <!--Document Configuration-->
-   <productAttributeGroup>
-      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedKeyFactStatements</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>subMiGoals</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
       <productAttributes>
@@ -165,7 +41,6 @@
          <attributeName>subMiGoals|ContractComponentProductType=4801</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
       <productAttributes>
@@ -173,7 +48,6 @@
          <attributeName>subTP|ContractComponentProductType=4801</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
       <productAttributes>
@@ -181,20 +55,11 @@
          <attributeName>subTP|ContractComponentProductType=4801</attributeName>
       </productAttributes>
    </productAttributeGroup>
-
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subTPTermsAndConditions|ContractComponentProductType=4801</attributeName>
-      </productAttributes>
-   </productAttributeGroup>
-
-   <productAttributeGroup>
-      <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>subGenericSignatures</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -260,6 +125,14 @@
          <value>${{FAIS_StaffBranchOverideList}}</value>
       </productAttributes>
    </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>PricingPlanDiscriminator</attributeName>
+         <value>AGEGROUP</value>
+      </productAttributes>
+   </productAttributeGroup>
    
    <!--Offer Configuration-->
    <productAttributeGroup action="overwrite">
@@ -289,7 +162,15 @@
          <attributeName>VAS_1008</attributeName><!--No-funds alert-->
          <value>Optionality=Mandatory~IsTakenUp=true</value>
       </productAttributes>
-   </productAttributeGroup>   
+   </productAttributeGroup>
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>PresentOfferSelection</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>OfferSelectionSummaryDetails</attributeName>
+         <value>TransactionalProductOfferSelectionSubSection|ng-component=OfferSelectionTransactionalProductComponent~ZOrder=100~isBase=Y~ContractComponentProductType=4801</value>
+      </productAttributes>
+   </productAttributeGroup>
 
    <!--Provisioning Configuration-->
    <productAttributeGroup action="overwrite">
@@ -419,28 +300,18 @@
       </productAttributes>
    </productAttributeGroup>
 
-   <!--Offer Configuration-->
-   <productAttributeGroup action="overwrite">
-      <attributeGroupName>PresentOfferSelection</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>OfferSelectionSummaryDetails</attributeName>
-         <value>TransactionalProductOfferSelectionSubSection|ng-component=OfferSelectionTransactionalProductComponent~ZOrder=100~isBase=Y~ContractComponentProductType=4801</value>
-      </productAttributes>
-   </productAttributeGroup>
-
    <!--1376 - Salary Switching-->
-   <features action="overwrite">
+   <features>
       <featureIdentifier>1376</featureIdentifier>
       <name>Salary Switching</name>
 
       <!--GenerateOffer-->
-      <featureAttributeGroup>
+      <featureAttributeGroup action="overwrite">
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
       </featureAttributeGroup>
 
       <!--FinalizeFrontOfficeInteraction-->
-      <featureAttributeGroup>
+      <featureAttributeGroup action="overwrite">
          <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
@@ -452,63 +323,6 @@
          </featureAttributes>
       </featureAttributeGroup>
 
-      <!--Document Configuration-->
-      <featureAttributeGroup>
-         <attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
-         <featureAttributes>
-            <attributeType>DocumentDescription</attributeType>
-            <attributeName>Salary Switching Letter|nedbank-commercial-release/SalarySwitchingUniversal|N/A|N/A|N/A|N/A</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>Download</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>Email</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>AvailableAction</attributeType>
-            <attributeName>Preview</attributeName>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>DocTemplateName</attributeType>
-            <attributeName>SalarySwitchingUniversal</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
-
-      <!-- Case and Process Configuration -->
-      <featureAttributeGroup>
-         <attributeGroupName>SystemRelated</attributeGroupName>
-         <featureAttributes>
-            <attributeType>Flag</attributeType>
-            <attributeName>StraightThroughProcess</attributeName>
-            <value>true</value>
-         </featureAttributes>
-      </featureAttributeGroup>
-
-      <!--Provisioning Configuration-->
-      <featureAttributeGroup>
-         <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>LoanGroupingCode</attributeName>
-            <valueUnit>PER</valueUnit>
-            <value>PER</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>provisionInBranch</attributeName>
-            <valueUnit>boolean</valueUnit>
-            <value>true</value>
-         </featureAttributes>
-         <featureAttributes>
-            <attributeType>coreProvisioningParameter</attributeType>
-            <attributeName>legacyProductID</attributeName>
-            <valueUnit>string</valueUnit>
-            <value />
-         </featureAttributes>
-      </featureAttributeGroup>
    </features>
 
    </product>
