@@ -19,11 +19,11 @@
    <!--GenerateOfferVerifyEligibility-->
    <productAttributeGroup>
       <attributeGroupName>EligibilityHandler</attributeGroupName>
-      <!--productAttributes>
+      <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.LegalStatusEligibility</value>
-      </productAttributes-->
+      </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
@@ -48,6 +48,10 @@
       <productAttributes>
          <attributeName>RequiredDataFilter_GenerateOffer</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODCreditLimitIncreaseFilter</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_GenerateOffer</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODDeclineFilter</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -83,10 +87,6 @@
       <productAttributes>
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODLimitIncreaseYouAreDoneFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>RequiredDataFilter_PresentOffer</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODDeclineFilter</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -759,7 +759,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
-            <attributeName>DigitallySign</attributeName>
+            <attributeName>EnhancedDigitallySign</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -787,6 +787,10 @@
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
             <attributeName>DigitallySign</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>EnhancedDigitallySign</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
