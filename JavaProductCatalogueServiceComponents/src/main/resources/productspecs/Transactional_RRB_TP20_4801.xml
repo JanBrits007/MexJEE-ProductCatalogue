@@ -194,11 +194,19 @@
          <attributeName>VAS_1164</attributeName><!--AMEX-->
          <value>Optionality=Optional~IsTakenUp=false</value>
       </productAttributes>
+
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>VAS_1099</attributeName><!--Credit card insurance -->
          <value>Optionality=Optional~IsTakenUp=false</value>
       </productAttributes>
+
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1376</attributeName><!--1376 - Salary Switching-->
+         <value>Optionality=Optional~IsTakenUp=true</value>
+      </productAttributes>
+
    </productAttributeGroup>
 
    <!--Provisioning Configuration-->
@@ -564,7 +572,7 @@
    </features>
 
    <!--1376 - Salary Switching-->
-   <features inheritFromFiles="Transactional_Retail_TP20_4801">
+   <features inheritFromFiles="Transactional_Retail">
       <featureIdentifier>1376</featureIdentifier>
       <name>Salary Switching</name>
    </features>
