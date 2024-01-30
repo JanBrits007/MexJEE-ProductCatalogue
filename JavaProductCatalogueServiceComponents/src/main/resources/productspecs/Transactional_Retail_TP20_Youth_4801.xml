@@ -40,7 +40,7 @@
       <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
-         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~deduplicateWidget=false~displaySummary=true</attributeName>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~child-ng-components=MarketingConsentComponent~deduplicateWidget=false~displaySummary=true</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>clientInformationRequirement</attributeType>
@@ -159,20 +159,16 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=GettingTheYouthMobileApp~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=SSKInstantCardIssuePrimer~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalYouthProductAccountDetails~child-ng-components=ApplyForCredit~child-ng-components=DebitOrderSwitching~child-ng-components=SwitchingToNedbank~child-ng-components=ForgotYourCard~child-ng-components=EarnAsYouSwipe~child-ng-components=Statements~HideProceduralStep=true~ZOrder=50~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk</attributeName>
+         <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~segment=youth~child-ng-components=GettingTheYouthMobileApp~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=SSKInstantCardIssuePrimer~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalYouthProductAccountDetails~child-ng-components=ApplyForCredit~child-ng-components=DebitOrderSwitching~child-ng-components=SwitchingToNedbank~child-ng-components=ForgotYourCard~child-ng-components=EarnAsYouSwipe~child-ng-components=Statements~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~HideProceduralStep=true~ZOrder=50~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=GettingTheYouthMobileApp~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=SSKInstantCardIssuePrimer~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalYouthProductAccountDetails~child-ng-components=ApplyForCredit~child-ng-components=DebitOrderSwitching~child-ng-components=SwitchingToNedbank~child-ng-components=ForgotYourCard~child-ng-components=EarnAsYouSwipe~child-ng-components=Statements~HideProceduralStep=true~ZOrder=50~applicableChannels=WebSelfAssisted</attributeName>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~child-ng-components=MobileCreateYourLoginDetailsNotificationComponent~child-ng-components=MobileAlsoExpectNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalYouthProductAccountDetails~HideProceduralStep=true~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+         <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~segment=youth~child-ng-components=MobileCreateYourLoginDetailsNotificationComponent~child-ng-components=MobileAlsoExpectNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalYouthProductAccountDetails~HideProceduralStep=true~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
    <!--Document Configuration-->
-   <productAttributeGroup>
+   <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedKeyFactStatements</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -326,8 +322,8 @@
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>VAS_219</attributeName><!--Instant Gold Cheque Card-->
-         <value>Optionality=Optional~IsTakenUp=false</value>
+         <attributeName>VAS_1386</attributeName><!--Green debit Card-->
+         <value>Optionality=Optional~IsTakenUp=true</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -337,7 +333,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>VAS_1374</attributeName><!--eNotes-->
-         <value>Optionality=Optional~IsTakenUp=false</value>
+         <value>Optionality=Optional~IsTakenUp=true</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -454,6 +450,11 @@
          <attributeName>provisioningSegmentation</attributeName>
          <value>YOUTH</value>
       </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>requiresFICARestrict</attributeName>
+         <value>true</value>
+      </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup action="overwrite">
       <attributeGroupName>productCodeMappings</attributeGroupName>
@@ -521,17 +522,14 @@
       <!--GenerateOffer-->
       <featureAttributeGroup action="overwrite">
          <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~applicableChannels=MobileSelfAssisted</attributeName>
-         </featureAttributes>
+         <!--removing this section so Amex Card wont appear and wont be taken up-->
       </featureAttributeGroup>
    </features>
 
-   <!--1386 - Gold Cheque Card-->
+   <!--1386 - Green Cheque Card-->
    <features>
       <featureIdentifier>1386</featureIdentifier>
-      <name>Gold Debit Card</name>
+      <name>Green Debit Card</name>
 
       <!--ActivateProductsGatherProductDetails-->
       <featureAttributeGroup action="overwrite">
@@ -541,6 +539,29 @@
             <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~ProceduralStepName=Getting your child's cards~restrictOptOut=true~includeTemporaryCard=true~ZOrder=170~ContractComponentProductType=1386~segment=youth</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
-   </features>
 
+      <!--FinalizeFrontOfficeInteraction-->
+      <featureAttributeGroup action="overwrite">
+         <attributeGroupName>productInformationRequirement_FinalizeFrontOfficeInteraction</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~HideProceduralStep=true~child-ng-components=LockerCollectCardComponent~child-ng-components=CardCollectionYouthNotificationComponent-1386~ZOrder=50</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~HideProceduralStep=true~child-ng-components=LockerCollectCardComponent~child-ng-components=CardCollectionYouthNotificationComponent-1386~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+   </features>
+   <!--1374 - eNotes-->
+   <features>
+      <featureIdentifier>1374</featureIdentifier>
+      <name>eNotes</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup action="overwrite">
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <!--removing this section so eNotes wont appear but will be taken up-->
+      </featureAttributeGroup>
+   </features>
 </product>
