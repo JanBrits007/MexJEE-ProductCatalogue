@@ -25,6 +25,17 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--GenerateOfferVerifyEligibility-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>EligibilityHandler</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+         <value>classname=za.co.nb.offermanagement.eligibility.handler.LegalStatusEligibility</value>
+      </productAttributes>
+      <!--TpProductMaxEligibilityHandler not used for kids-->
+   </productAttributeGroup>
+
    <!--Determine Related Parties-->
    <!--Removing this old pattern-->
    <!--productAttributeGroup>
@@ -159,11 +170,11 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~segment=youth~child-ng-components=GettingTheYouthMobileApp~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=SSKInstantCardIssuePrimer~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalYouthProductAccountDetails~child-ng-components=ApplyForCredit~child-ng-components=DebitOrderSwitching~child-ng-components=SwitchingToNedbank~child-ng-components=ForgotYourCard~child-ng-components=EarnAsYouSwipe~child-ng-components=Statements~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~HideProceduralStep=true~ZOrder=50~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted</attributeName>
+         <attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~segment=youth~child-ng-components=GettingTheYouthMobileApp~child-ng-components=ActivationMessageYouthNotificationComponent~child-ng-components=SSKInstantCardIssuePrimer~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalYouthProductAccountDetails~child-ng-components=ApplyForCredit~child-ng-components=DebitOrderSwitching~child-ng-components=SwitchingToNedbank~child-ng-components=ForgotYourCard~child-ng-components=EarnAsYouSwipe~child-ng-components=Statements~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~HideProceduralStep=true~ZOrder=50~applicableChannels=BranchStaffAssisted~applicableChannels=MerchantAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=SelfServiceKiosk~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~segment=youth~child-ng-components=MobileCreateYourLoginDetailsNotificationComponent~child-ng-components=MobileAlsoExpectNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalYouthProductAccountDetails~HideProceduralStep=true~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
+         <attributeName>YoureDoneMobile|ng-component=YouAreDoneComponent~ProceduralStepName=You're nearly there~segment=youth~child-ng-components=GettingTheYouthMobileApp~child-ng-components=MobileCreateYourLoginDetailsNotificationComponent~child-ng-components=MobileAlsoExpectNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=TransactionalYouthProductAccountDetails~HideProceduralStep=true~child-ng-components=AccountSetupInProgressNotificationComponent~child-ng-components=WorkInProgressNotificationComponent~child-ng-components=InvalidDataNotificationComponent~ZOrder=50~applicableChannels=MobileSelfAssisted</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -557,5 +568,11 @@
    <features>
       <featureIdentifier>1374</featureIdentifier>
       <name>eNotes</name>
+
+      <!--GenerateOffer-->
+      <featureAttributeGroup action="overwrite">
+         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
+         <!--removing this section so eNotes wont appear but will be taken up-->
+      </featureAttributeGroup>
    </features>
 </product>
