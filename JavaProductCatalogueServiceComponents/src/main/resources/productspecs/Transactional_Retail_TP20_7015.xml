@@ -419,7 +419,7 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>VAS_1376</attributeName><!--1376 - Salary Switching-->
-         <value>Optionality=Optional~IsTakenUp=false</value>
+         <value>Optionality=Optional~IsTakenUp=true</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -529,7 +529,7 @@
       <productAttributes>
          <attributeType>boolean</attributeType>
          <attributeName>bypassPricingPlanLoad</attributeName>
-         <value>false</value>
+         <value>${{NARBypassPricingPlanLoad}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
@@ -540,11 +540,6 @@
          <attributeType>string</attributeType>
          <attributeName>requiresFICARestrict</attributeName>
          <value>true</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>suppressMiRevenueCall</attributeName>
-         <value>${{NARsuppressMiRevenueCall}}</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup action="overwrite">
