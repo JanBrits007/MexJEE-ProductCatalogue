@@ -19,11 +19,11 @@
    <!--GenerateOfferVerifyEligibility-->
    <productAttributeGroup>
       <attributeGroupName>EligibilityHandler</attributeGroupName>
-      <!--productAttributes>
+      <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
          <value>classname=za.co.nb.offermanagement.eligibility.handler.LegalStatusEligibility</value>
-      </productAttributes-->
+      </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
@@ -51,6 +51,15 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--PresentOffer -->
+   <productAttributeGroup>
+      <attributeGroupName>RuleHandlers_PresentOffer</attributeGroupName>
+      <productAttributes>
+         <attributeName>RequiredDataFilter_PresentOffer</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODDeclineFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
    <!--ActivateProductsGatherClientDetails-->
    <productAttributeGroup>
       <attributeGroupName>RuleHandlers_ActivateProducts</attributeGroupName>
@@ -68,6 +77,30 @@
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.InternationalCardDeliveryFilter</value>
       </productAttributes>
    </productAttributeGroup>
+   <!--ActivateProductsGatherProductDetails-->
+   <productAttributeGroup  action="overwrite">
+      <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>TransactionalProductInformationBroadcast|ng-component=TransactionalProductInformationBroadcastComponent~ZOrder=400</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~child-ng-components=ng-card-delivery-available~restrictOptOut=true~ProceduralStepName=Getting your cards~includeTemporaryCard=true~lockersOption=true~ZOrder=170</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisRecordOfAdvice|ng-component=FaisRecordOfDiscussionOrAdviceComponent~ProceduralStepName=FAIS record of advice~ZOrder=150~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~child-ng-components=FAISAdviceRefused</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
 
    <!--FinalizeFrontOfficeInteraction-->
    <productAttributeGroup>
@@ -83,10 +116,6 @@
       <productAttributes>
          <attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODLimitIncreaseYouAreDoneFilter</value>
-      </productAttributes>
-      <productAttributes>
-         <attributeName>RequiredDataFilter_PresentOffer</attributeName>
-         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODDeclineFilter</value>
       </productAttributes>
    </productAttributeGroup>
 
@@ -285,6 +314,39 @@
          <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
          <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementODKeepInTouchFilter</value>
       </productAttributes>-->
+   </productAttributeGroup>
+
+   <!--ActivateProductsPresentDocuments-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_PresentDocuments</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>GatherEvidence|ProceduralStepName=Upload your documents~ZOrder=100~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>SSKScanEvidence|ProceduralStepName=Scan your documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true~applicableChannels=SelfServiceKiosk</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>productDocumentPresentation|ng-component=SignDocumentsComponent~ProceduralStepName=Signing the paperwork~ZOrder=90~ActiveOnInitialWorkItemExecution=true~applicableChannels=WebSelfAssisted~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=SelfServiceKiosk~applicableChannels=MerchantAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>DigitalActivation|ng-component=DigitalActivationComponent~ProceduralStepName=Get activated on the app~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=WebSelfAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>FaisDeclaration|ng-component=FaisDeclarationIndividualComponent~ProceduralStepName=FAIS declaration~ZOrder=60~ContractComponentProductType=1001~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>YourDeclaration|ng-component=YourDeclarationComponent~ProceduralStepName=Your declaration~ZOrder=60~ContractComponentProductType=1001~applicableChannels=WebSelfAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>productInformationRequirement</attributeType>
+         <attributeName>NedbankID|ng-component=StaffAssistedNedbankIdComponent~ProceduralStepName=Nedbank ID~ZOrder=50~applicableChannels=BranchStaffAssisted</attributeName>
+      </productAttributes>
    </productAttributeGroup>
 
    <!--9062 - Additional Transactional Credit-->
@@ -639,7 +701,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>productInformationRequirement</attributeType>
-            <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryOverdraftComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted</attributeName>
+            <attributeName>OfferSummary|ng-component=OfferProductSummaryComponent~child-ng-components=OfferProductSummaryOverdraftComponent~child-ng-components=OfferProductSummaryComparableProductsConsentComponent~child-ng-components=OfferProductSummaryEditOfferComponent~ProceduralStepName=What you'll get~ZOrder=60</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
 
@@ -759,7 +821,7 @@
          </featureAttributes>
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
-            <attributeName>DigitallySign</attributeName>
+            <attributeName>EnhancedDigitallySign</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -787,6 +849,10 @@
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
             <attributeName>DigitallySign</attributeName>
+         </featureAttributes>
+         <featureAttributes>
+            <attributeType>AvailableAction</attributeType>
+            <attributeName>EnhancedDigitallySign</attributeName>
          </featureAttributes>
          <featureAttributes>
             <attributeType>AvailableAction</attributeType>
@@ -1900,15 +1966,6 @@
    <features>
       <featureIdentifier>1386</featureIdentifier>
       <name>Gold Debit Card</name>
-
-      <!--GenerateOffer-->
-      <featureAttributeGroup>
-         <attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-         <featureAttributes>
-            <attributeType>productInformationRequirement</attributeType>
-            <attributeName>ValueAddedServiceConfiguration|ng-component=ValueAddedServicesForYourOfferComponent~child-ng-components=GoldChequeCardVASComponent-1386~ProceduralStepName=Optional extras for you~ZOrder=70~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~applicableChannels=BranchStaffAssisted~applicableChannels=MobileSelfAssisted</attributeName>
-         </featureAttributes>
-      </featureAttributeGroup>
 
       <!--ActivateProductsGatherProductDetails-->
       <featureAttributeGroup>

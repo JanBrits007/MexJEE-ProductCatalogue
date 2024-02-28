@@ -82,7 +82,7 @@
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
-         <attributeName>DigitalActivation|ng-component=DigitalActivationComponent~ProceduralStepName=Get activated on the app~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+         <attributeName>DigitalActivation|ng-component=DigitalActivationComponent~ProceduralStepName=Get activated on the app~ZOrder=80~ActiveOnInitialWorkItemExecution=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=WebSelfAssisted</attributeName>
       </productAttributes>
       <productAttributes>
          <attributeType>productInformationRequirement</attributeType>
@@ -129,6 +129,13 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subTPTermsAndConditions|ContractComponentProductType=4803</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedKeyFactStatements</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subMiGoalsPremium</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -230,6 +237,11 @@
          <attributeType>string</attributeType>
          <attributeName>VAS_1008</attributeName><!--No-funds alert-->
          <value>Optionality=Mandatory~IsTakenUp=true</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>VAS_1376</attributeName><!--1376 - Salary Switching-->
+         <value>Optionality=Optional~IsTakenUp=true</value>
       </productAttributes>
    </productAttributeGroup>
 

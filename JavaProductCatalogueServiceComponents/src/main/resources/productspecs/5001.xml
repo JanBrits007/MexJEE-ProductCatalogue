@@ -2,9 +2,6 @@
     <productIdentifier>5001</productIdentifier>
     <name>Share Trading</name>
     <shortDescription>Share Trading Account</shortDescription>
-    <productOnAPageWebURL></productOnAPageWebURL>
-
-
 
     <productAttributeGroup>
         <attributeGroupName>CaseConfiguration</attributeGroupName>
@@ -28,52 +25,35 @@
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
         <productAttributes>
-            <attributeName>SubstituteForChannelIDs</attributeName>
-            <value>${{ShareTrading_IDList}}</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeName>SubstituteForProductID</attributeName>
-            <value>ShareTrading_5001</value>
-        </productAttributes>
-    </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-        <productAttributes>
-            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
-            <value>${{ShareTradingClientEmailAddresses}}</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeName>SubstituteForProductID</attributeName>
-            <value>ShareTrading_5001</value>
-        </productAttributes>
-    </productAttributeGroup>
-
-    <productAttributeGroup>
-        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
-        <productAttributes>
             <attributeName>DefaultSubstitution</attributeName>
             <value>DefaultSubstitution</value>
         </productAttributes>
         <productAttributes>
             <attributeName>SubstituteForProductID</attributeName>
-            <value>5001</value>
+            <value>ShareTrading_5001</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForChannelIDs</attributeName>
+            <value>${{ShareTradingChannelIDList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{ShareTradingClientEmailAddresses}}</value>
         </productAttributes>
     </productAttributeGroup>
 
     <!--QA Substitution Rules-->
+    <!--
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
         <productAttributes>
             <attributeName>SubstituteForChannelIDs</attributeName>
-            <value>${{ShareTrading_IDList}}</value>
+            <value>${{ShareTradingChannelIDList}}</value>
         </productAttributes>
         <productAttributes>
-            <attributeName>SubstituteForProductID</attributeName>
-            <value>ShareTrading_5001</value>
+            <attributeName>DefaultSubstitution</attributeName>
+            <value>DefaultSubstitution</value>
         </productAttributes>
-    </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
         <productAttributes>
             <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
             <value>${{ShareTradingClientEmailAddresses}}</value>
@@ -84,19 +64,7 @@
         </productAttributes>
     </productAttributeGroup>
 
-    <productAttributeGroup>
-        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
-        <productAttributes>
-            <attributeName>DefaultSubstitution</attributeName>
-            <value>DefaultSubstitution</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeName>SubstituteForProductID</attributeName>
-            <value>5001</value>
-        </productAttributes>
-    </productAttributeGroup>
 
-    <!--PROD Substitution Rules-->
     <productAttributeGroup>
         <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
         <productAttributes>
@@ -104,12 +72,9 @@
             <value>${{ShareTradingChannelIDList}}</value>
         </productAttributes>
         <productAttributes>
-            <attributeName>SubstituteForProductID</attributeName>
-            <value>ShareTrading_5001</value>
+            <attributeName>DefaultSubstitution</attributeName>
+            <value>DefaultSubstitution</value>
         </productAttributes>
-    </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
         <productAttributes>
             <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
             <value>${{ShareTradingClientEmailAddresses}}</value>
@@ -120,19 +85,8 @@
         </productAttributes>
     </productAttributeGroup>
 
-    <productAttributeGroup>
-        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
-        <productAttributes>
-            <attributeName>DefaultSubstitution</attributeName>
-            <value>DefaultSubstitution</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeName>SubstituteForProductID</attributeName>
-            <value>5001</value>
-        </productAttributes>
-    </productAttributeGroup>
 
-    <!--RedirectUI-->
+
     <productAttributeGroup>
         <attributeGroupName>productInformationRequirement_RedirectUI</attributeGroupName>
         <productAttributes>
@@ -141,7 +95,7 @@
         </productAttributes>
     </productAttributeGroup>
 
-    <!--Evidence And Compliance Requirements-->
+
     <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
         <productAttributes>
@@ -194,7 +148,7 @@
         </productAttributes>
     </productAttributeGroup>
 
-    <!-- Case and Process Configuration -->
+
     <productAttributeGroup>
         <attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
         <productAttributes>
@@ -208,23 +162,5 @@
             <value>2.0</value>
         </productAttributes>
     </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>frontOfficeIntentSequence</attributeName>
-            <value>RedirectUI</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>breadcrumbSteps</attributeName>
-            <value>Redirect</value>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>GNBAIntentToActivityMapping</attributeName>
-            <value>RedirectUI=Redirect</value>
-        </productAttributes>
-    </productAttributeGroup>
-
+-->
 </product>

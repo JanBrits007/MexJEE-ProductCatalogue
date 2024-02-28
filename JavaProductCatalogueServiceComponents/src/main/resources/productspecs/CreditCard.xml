@@ -40,7 +40,7 @@
 			<minValue>5000</minValue>
 			<maxValue>99999999</maxValue>
 			<valueUnit>ZAR</valueUnit>
-			<description>You need to earn R5000 or more per month.</description>
+			<description>income|You need to earn R5000 or more per month.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -272,7 +272,7 @@
 		<attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~child-ng-components=CustomerVulnerabilitiesComponent~child-ng-components=DigitalActiveCardCreditComponent~child-ng-components=MarketingConsentComponent~child-ng-components=VISADetailsComponent</attributeName>
+			<attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~child-ng-components=CustomerVulnerabilitiesComponent~child-ng-components=DigitalActiveCardCreditComponent~child-ng-components=MarketingConsentComponent</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -280,15 +280,15 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~child-ng-components=CountryAssociations~child-ng-components=CountryOfResidence~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
+			<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~child-ng-components=CountryAssociations~child-ng-components=CountryOfResidence~child-ng-components=VISADetailsComponent~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
-		<attributeGroupName>RuleHandlers_ActivateProduct</attributeGroupName>
-		<!--productAttributes>
+		<attributeGroupName>ArrangementConfiguration</attributeGroupName>
+		<productAttributes>
            <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
            <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.VISADetailsFilter</value>
-        </productAttributes-->
+        </productAttributes>
 	</productAttributeGroup>
 
 	<!--ActivateProductsGatherProductDetails-->
@@ -501,6 +501,10 @@
 			<attributeType>AvailableAction</attributeType>
 			<attributeName>DigitallySign</attributeName>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>EnhancedDigitallySign</attributeName>
+		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
@@ -528,6 +532,10 @@
 			<attributeType>AvailableAction</attributeType>
 			<attributeName>DigitallySign</attributeName>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>EnhancedDigitallySign</attributeName>
+		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
 		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
@@ -550,6 +558,10 @@
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
 			<attributeName>DigitallySign</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>EnhancedDigitallySign</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
@@ -581,6 +593,10 @@
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
 			<attributeName>DigitallySign</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>AvailableAction</attributeType>
+			<attributeName>EnhancedDigitallySign</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
@@ -1103,6 +1119,16 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_EstablishCollectionMechanism</attributeName>
+			<value>System|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_EstablishCollectionMechanism</attributeName>
+			<value>0|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
 			<attributeName>CaseActivityTeamName_CreditDecisionDetermineOffer</attributeName>
 			<value>CreditDecisionDetermineOfferTeam|Weighting=0</value>
 		</productAttributes>
@@ -1347,6 +1373,15 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
+			<attributeName>RequiredDataFilter_GatherEvidence</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditLimitIncreaseFilter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>RequiredDataFilter_PresentDocuments</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditLimitIncreaseFilter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
 			<attributeName>DocumentsToPresentFilter_PresentDocuments</attributeName>
 			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditLimitIncreaseContractDocumentFilter</value>
 		</productAttributes>
@@ -1389,6 +1424,10 @@
 			<attributeType>string</attributeType>
 			<attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
 			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementCreditApplicationComponentFilter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.VISADetailsFilter</value>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
