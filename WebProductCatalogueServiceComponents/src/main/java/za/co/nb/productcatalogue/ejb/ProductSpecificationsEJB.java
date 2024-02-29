@@ -562,7 +562,6 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             multiProductAttributeGroupValues
                     .forEach(productAttributeGroupType -> productAttributeGroupType.getProductAttributes()
                             .forEach(productAttributes -> {
-
                               if(productAttributes.getAttributeName().equals( "SubstituteForWhiteListedNBNumbers") &&
                                       productAttributes.getValue().contains(DYNAMIC_STAFF_MARKER)){
 
@@ -582,12 +581,18 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
             productAttributeGroupType.getProductAttributes().forEach(productAttributesType -> {
                 if(productAttributesType.getValue() != null && !productAttributesType.getValue().contains(DYNAMIC_STAFF_MARKER)) {
                     if (productAttributesType.getValue().contains("${{")) {
-
                         mLog.debug("find [productAttributesType] dynamic value:" + productAttributesType.getValue());
-                        String propertyValue = dynamicPropertyBean.getProperty(productAttributesType.getValue());
+                        String propertyValue = updateValueDynamically(productAttributesType.getValue());
                         mLog.debug("found [productAttributesType] dynamic value:" + propertyValue);
                         productAttributesType.setValue(propertyValue);
                     }
+                }
+
+                if(productAttributesType.getAttributeName() != null && productAttributesType.getAttributeName().contains("${{")) {
+                    mLog.debug("find [productAttributesType] dynamic attribute Name:" + productAttributesType.getAttributeName());
+                    String propertyName = updateValueDynamically(productAttributesType.getAttributeName());
+                    mLog.debug("found [productAttributesType] dynamic attribute name:" + propertyName);
+                    productAttributesType.setAttributeName(propertyName);
                 }
             })
         );
@@ -598,16 +603,42 @@ public class ProductSpecificationsEJB implements ProductSpecificationsServiceRem
                     .forEach(featureAttributesType -> {
                         if(featureAttributesType.getValue() != null && featureAttributesType.getValue().contains("${{")){
                             mLog.debug("find [featureAttributesType] dynamic value:" + featureAttributesType.getValue());
-                            String propertyValue = dynamicPropertyBean.getProperty(featureAttributesType.getValue());
+                            String propertyValue = updateValueDynamically(featureAttributesType.getValue());
                             mLog.debug("found [featureAttributesType] dynamic value:" + propertyValue);
                             featureAttributesType.setValue(propertyValue);
                         }
+
+                        if(featureAttributesType.getAttributeName() != null && featureAttributesType.getAttributeName().contains("${{")){
+                            mLog.debug("find [featureAttributesType] dynamic Attribute Name:" + featureAttributesType.getAttributeName());
+                            String propertyName = updateValueDynamically(featureAttributesType.getAttributeName());
+                            mLog.debug("found [featureAttributesType] dynamic Attribute Name:" + propertyName);
+                            featureAttributesType.setAttributeName(propertyName);
+                        }
+
                     })
                 )
             );
 
     }
 
+    private String updateValueDynamically(String s){
+        String originalString = s;
+        List<String> inputString = new ArrayList<String>();
+        List<String> outputString = new ArrayList<String>();
+       if(s!=null) {
+           while (s.contains("${{")) {
+               String tempString = s.substring(s.indexOf("${{"), s.indexOf("}}") + 2);
+               inputString.add(tempString);
+               String val = dynamicPropertyBean.getProperty(tempString);
+               outputString.add(val);
+               s = s.substring(s.indexOf("}}") + 2);
+           }
+           for (int i = 0; i < inputString.size(); i++) {
+               originalString = originalString.replace(inputString.get(i), outputString.get(i));
+           }
+       }
+        return originalString;
+    }
 
     private Object lookupObject(String pJNDI) throws NamingException {
         mLog.debug("Trace 1");

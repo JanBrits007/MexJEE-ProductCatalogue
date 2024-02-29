@@ -4,33 +4,33 @@
 	<shortDescription>Base Personal Loan Specification</shortDescription>
 
 	<!--Evidence And Compliance Requirements-->
-	<productAttributeGroup>
-		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>Proof of your identity.</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>Latest Payslip.</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>3 months of bank statements.</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>Evidence</attributeType>
-			<attributeName>A letter from your accountant or financial manager (if you are sef-employed).</attributeName>
-			<isComparable>false</isComparable>
-			<valueUnit>string</valueUnit>
-		</productAttributes>
-	</productAttributeGroup>
+		<productAttributeGroup>
+            <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
+            <productAttributes>
+                <attributeType>Evidence</attributeType>
+                <attributeName>Proof of your identity</attributeName>
+                <isComparable>false</isComparable>
+                <valueUnit>string</valueUnit>
+            </productAttributes>
+            <productAttributes>
+                <attributeType>Evidence</attributeType>
+                <attributeName>Latest Payslip</attributeName>
+                <isComparable>false</isComparable>
+                <valueUnit>string</valueUnit>
+            </productAttributes>
+            <productAttributes>
+                <attributeType>Evidence</attributeType>
+                <attributeName>3 months of bank statements</attributeName>
+                <isComparable>false</isComparable>
+                <valueUnit>string</valueUnit>
+            </productAttributes>
+            <productAttributes>
+                <attributeType>Evidence</attributeType>
+                <attributeName>A letter from your accountant or financial manager (if you are sef-employed)</attributeName>
+                <isComparable>false</isComparable>
+                <valueUnit>string</valueUnit>
+            </productAttributes>
+        </productAttributeGroup>
 
 	<productAttributeGroup>
 		<attributeGroupName>EligibilityHandler</attributeGroupName>
@@ -86,7 +86,7 @@
 			<minValue>18</minValue>
 			<maxValue>64</maxValue>
 			<valueUnit>year</valueUnit>
-			<description>user-icon|You need to be 18 years or older.</description>
+			<description>user-icon|You need to be between the age of 18 and 65.</description>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>EligibilityRule</attributeType>
@@ -146,10 +146,10 @@
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ClientVerificationInformation|ng-component=PartyAuthenticationWidgetComponent~ProceduralStepName=Verify your identity~ZOrder=200~applicableChannels=WebSelfAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=NCCMerchant~HideProceduralStep=true</attributeName>
 		</productAttributes>
-		<productAttributes>
+		<!--productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
+		</productAttributes-->
 	</productAttributeGroup>
 
 	<!--GenerateOfferGatherProductDetails-->
@@ -157,16 +157,17 @@
 		<attributeGroupName>productInformationRequirement_GenerateOffer</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>NeedForYourLoan|ng-component=NeedForYourLoanComponent~ProceduralStepName=Need for your loan~ZOrder=100~ActiveOnInitialWorkItemExecution=true~vatRate=0.15~initiationFeeMaxNCA=1050~initiationFeeBaseNCA=1000~initiationFeeFixedPartNCA=165~initiationFeePercent1NCA=0.1~initiationFeePercent2NCA=0.15~monthlyServiceFeeInclVAT=69~minTerm=6~maxTerm=72~minAmount=2000.00~maxAmount=300000.00~minAmountAfford=109.00~maxAmountAfford=50000.00~minRatePercentage=7.0~maxRatePercentage=24.5</attributeName>
+			<!--<attributeName>NeedForYourLoan|ng-component=NeedForYourLoanComponent~ProceduralStepName=Need for your loan~ZOrder=100~ActiveOnInitialWorkItemExecution=true~vatRate=0.15~initiationFeeMaxNCA=1050~initiationFeeBaseNCA=1000~initiationFeeFixedPartNCA=165~initiationFeePercent1NCA=0.1~initiationFeePercent2NCA=0.15~monthlyServiceFeeInclVAT=69~minTerm=6~maxTerm=72~minAmount=2000.00~maxAmount=300000.00~minAmountAfford=109.00~maxAmountAfford=50000.00~minRatePercentage=11.75~maxRatePercentage=29.25</attributeName> -->
+			<attributeName>${{NeedForYourLoanPLValues}}</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>SalesMilestone|ng-component=SalesMilestoneComponent~child-ng-components=ArrangementCapture</attributeName>
 		</productAttributes>
-		<productAttributes>
+		<!--productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
+		</productAttributes-->
 	</productAttributeGroup>
 
 	<!--DetermineRelatedParties-->
@@ -180,7 +181,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Let's get a few details~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=SalaryBankDetails~child-ng-components=ConsentCapture~ZOrder=100</attributeName>
+			<attributeName>ApplicationDetails|ng-component=ApplicationDetailsComponent~ProceduralStepName=Lets get a few details~child-ng-components=CountryOfResidence~child-ng-components=MaritalDetails~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=SalaryBankDetails~child-ng-components=ConsentCapture~ZOrder=100</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -190,10 +191,10 @@
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
 		</productAttributes>
-		<productAttributes>
+		<!--productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
+		</productAttributes-->
 	</productAttributeGroup>
 
 	<!--FinancialDetails-->
@@ -205,7 +206,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ApplicationDetails|ProceduralStepName=Let's get a few details~ZOrder=100</attributeName>
+			<attributeName>ApplicationDetails|ProceduralStepName=Lets get a few details~ZOrder=100</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -215,10 +216,10 @@
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
 		</productAttributes>
-		<productAttributes>
+		<!--productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
+		</productAttributes-->
 	</productAttributeGroup>
 
 	<!--FinancialExtendedDetails-->
@@ -260,10 +261,10 @@
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>Offer|ProceduralStepName=Your offer~ZOrder=80</attributeName>
 		</productAttributes>
-		<productAttributes>
+		<!--productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
+		</productAttributes-->
 	</productAttributeGroup>
 
 	<!--GenerateApplicationOfferProposals-->
@@ -283,12 +284,12 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true~ContractComponentProductType=1146</attributeName>
+			<attributeName>GenericCapabilitySelection|ng-component=GenericCapabilitySelectionComponent~ProceduralStepName=Your offer~ZOrder=80~ActiveOnInitialWorkItemExecution=true~HappyWithPLOffer=true~ContractComponentProductType=1146</attributeName>
 		</productAttributes>
-		<productAttributes>
+		<!--productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
+		</productAttributes-->
 	</productAttributeGroup>
 
 	<!--GenerateOffer-->
@@ -339,10 +340,10 @@
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Compliance details~ZOrder=80~child-ng-components=CountryAssociations~child-ng-components=VISADetailsComponent~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
 		</productAttributes>
-		<productAttributes>
+		<!--productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
 			<attributeName>ConversationScreen|ng-component=ConversationScreenComponent~isFloating=true~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
+		</productAttributes-->
 	</productAttributeGroup>
 
 	<!--ActivateProductsGatherProductDetails-->
@@ -358,7 +359,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>LoanRepayment|ng-component=DebiCheckWidgetComponent~ProceduralStepName=DebiCheck debit order setup~ZOrder=300</attributeName>
+			<attributeName>LoanRepayment|ng-component=DebiCheckSetupComponent~ProceduralStepName=DebiCheck debit order setup~ZOrder=300</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
@@ -368,10 +369,10 @@
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
 		</productAttributes>
-		<productAttributes>
+		<!--productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent~child-ng-components=MonitorBureauActivityComponent</attributeName>
-		</productAttributes>
+		</productAttributes-->
 	</productAttributeGroup>
 
 	<!--ActivateProductsGatherEvidence-->
@@ -441,8 +442,9 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+
 	<!--Evidence And Compliance Requirements-->
-	<productAttributeGroup>
+	<!-- <productAttributeGroup>
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
 		<productAttributes>
 			<attributeType>Evidence</attributeType>
@@ -468,7 +470,7 @@
 			<isComparable>false</isComparable>
 			<valueUnit>string</valueUnit>
 		</productAttributes>
-	</productAttributeGroup>
+	</productAttributeGroup>-->
 	<productAttributeGroup>
 		<attributeGroupName>RequiredCompliance_PrepareApplicant</attributeGroupName>
 		<productAttributes>
@@ -716,7 +718,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subConsolidations|ContractComponentProductType=1146</attributeName>
+			<attributeName>subSPOA|ContractComponentProductType=1146</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -882,27 +884,32 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent1</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.PersonalLoanSimulationIntent1CODHandler</value>
+			<value>${{CODHandler_Intent1}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CODHandler_CreditLead</attributeName>
+			<value>${{CODHandler_CreditLead}}</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_CreditOffer</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.PersonalLoanSimulationCreditOfferCODHandler</value>
+			<value>classname=za.co.nb.offermanagement.cod.handler.cde.v3.PLGenerateOfferProposalCODHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_ProductOffer</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.PersonalLoanSimulationProductOfferCODHandler</value>
+			<value>${{CODHandler_ProductOffer}}</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent3</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.CreditCardSimulationIntent3CODHandler</value>
+			<value>${{CODHandler_Intent3}}</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent4</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.COD.cde.V3Intent4JEECODSimulatorHandler</value>
+			<value>${{CODHandler_Intent4}}</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -917,7 +924,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Recalculate</attributeName>
-			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.PersonalLoanSimulationRecalcCODHandler</value>
+			<value>${{CODHandler_Recalculate}}</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -938,6 +945,41 @@
 			<attributeType>string</attributeType>
 			<attributeName>GenericHandler_GenerateOfferTryAgain</attributeName>
 			<value>classname=za.co.nb.offermanagement.cod.handler.internal.GenerateOfferTryAgainHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GenericHandler_AppealWithoutLongForm</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GenericHandler_DeclineAppealWithoutLongForm</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GenericHandler_DeclineAppealWithLongForm</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GenericHandler_LimitAppealWithoutLongForm</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GenericHandler_LimitAppealWithLongForm</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GenericHandler_PricingAppealWithoutLongForm</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithoutLongFormHandler</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>GenericHandler_PricingAppealWithLongForm</attributeName>
+			<value>classname=za.co.nb.offermanagement.cod.handler.internal.AppealWithLongFormHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>PersonalLoan</attributeType>
@@ -1087,7 +1129,17 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>baseCBOActivityList</attributeName>
-			<value>CreditDecisionDetermineOffer|DeliveryConfirmationandInsurance|ConfigureArrangement|ConfirmVerificationQuality~9001~9003~9004|CBOFinalizeCase</value>
+			<value>CreditDecisionDetermineOffer|ConfigureArrangement|ConfirmVerificationQuality~9001~9003~9004|CBOFinalizeCase</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>CaseActivityTeamName_EstablishCollectionMechanism</attributeName>
+			<value>System|Weighting=0</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>int</attributeType>
+			<attributeName>CaseActivityPriority_EstablishCollectionMechanism</attributeName>
+			<value>0|Weighting=0</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -1818,6 +1870,8 @@
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>
+
+	<!-- Debicheck -->
 	<features>
 		<featureIdentifier>1332</featureIdentifier>
 		<name>Payments Mandate</name>
@@ -1827,8 +1881,24 @@
 		<description>Detailed description of feature</description>
 		<featureType>BoltOn</featureType>
 		<referenceProductID>-1</referenceProductID>
+		<featureAttributeGroup>
+			<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>baseCBOActivityList</attributeName>
+				<value>EstablishCollectionMechanism~StartOfProcess|EstablishCollectionMechanism~EndOfProcess</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>CaseActivityTeamName_EstablishCollectionMechanism</attributeName>
+				<value>System|Weighting=0</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>int</attributeType>
+				<attributeName>CaseActivityPriority_EstablishCollectionMechanism</attributeName>
+				<value>0|Weighting=0</value>
+			</featureAttributes>
+		</featureAttributeGroup>
 	</features>
-
-
 
 </product>
