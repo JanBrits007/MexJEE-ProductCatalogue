@@ -187,11 +187,11 @@
          <attributeName>subEswatiniFooter</attributeName>
       </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
+   <productAttributeGroup action="overwrite">
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedKeyFactStatements</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subMiGoals</attributeName>
+         <attributeName>subEswatini</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -210,6 +210,10 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subMiGoals|ContractComponentProductType=7015</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subEswatiniMiGoals|ContractComponentProductType=7015</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -244,7 +248,7 @@
       <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
       <productAttributes>
          <attributeType>string</attributeType>
-         <attributeName>subTPTermsAndConditions|ContractComponentProductType=7015</attributeName>
+         <attributeName>subEswatiniTPTermsAndConditions|ContractComponentProductType=7015</attributeName>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup>
@@ -259,6 +263,13 @@
       <productAttributes>
          <attributeType>string</attributeType>
          <attributeName>subEswatiniFooter</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedFAISStaffAssisted</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>subEswatini</attributeName>
       </productAttributes>
    </productAttributeGroup>
 
@@ -482,7 +493,7 @@
       <productAttributes>
          <attributeType>boolean</attributeType>
          <attributeName>bypassPricingPlanLoad</attributeName>
-         <value>false</value>
+         <value>${{NARBypassPricingPlanLoad}}</value>
       </productAttributes>
       <productAttributes>
          <attributeType>string</attributeType>
