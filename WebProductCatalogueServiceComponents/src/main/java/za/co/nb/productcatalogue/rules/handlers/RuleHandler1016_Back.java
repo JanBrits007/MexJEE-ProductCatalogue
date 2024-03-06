@@ -11,9 +11,9 @@ import za.co.nb.onboarding.casemanagement.dto.BusinessCaseHeader;
 
 import za.co.nb.productcatalogue.exceptions.BusinessRuleExecutionException;
 
-public class RuleHandler1016 extends BaseProductSpecificationRuleHandler {
+public class RuleHandler1016_Back extends BaseProductSpecificationRuleHandler {
 
-    private static final Log mLog = LogFactory.getLog(RuleHandler1016.class);
+    private static final Log mLog = LogFactory.getLog(RuleHandler1016_Back.class);
 
     private Object lookupObject(String pJNDI) throws NamingException {
         mLog.debug("Trace 1");
