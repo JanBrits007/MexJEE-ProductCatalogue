@@ -8,25 +8,31 @@
             <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
             <productAttributes>
                 <attributeType>Evidence</attributeType>
-                <attributeName>Proof of your identity</attributeName>
+                <attributeName>Your valid South African ID.</attributeName>
                 <isComparable>false</isComparable>
                 <valueUnit>string</valueUnit>
             </productAttributes>
             <productAttributes>
                 <attributeType>Evidence</attributeType>
-                <attributeName>Latest Payslip</attributeName>
+                <attributeName>Your most recent payslip.</attributeName>
                 <isComparable>false</isComparable>
                 <valueUnit>string</valueUnit>
             </productAttributes>
+			<productAttributes>
+				<attributeType>Evidence</attributeType>
+				<attributeName>If you're a contractor or pensioner, a letter from your employer.</attributeName>
+				<isComparable>false</isComparable>
+				<valueUnit>string</valueUnit>
+			</productAttributes>
+			<productAttributes>
+				<attributeType>Evidence</attributeType>
+				<attributeName>If you're self-employed, a letter from your accountant or financial manager.</attributeName>
+				<isComparable>false</isComparable>
+				<valueUnit>string</valueUnit>
+			</productAttributes>
             <productAttributes>
                 <attributeType>Evidence</attributeType>
-                <attributeName>3 months of bank statements</attributeName>
-                <isComparable>false</isComparable>
-                <valueUnit>string</valueUnit>
-            </productAttributes>
-            <productAttributes>
-                <attributeType>Evidence</attributeType>
-                <attributeName>A letter from your accountant or financial manager (if you are sef-employed)</attributeName>
+                <attributeName>3 months' stamped bank statements, (we can help you get your statements digitally).</attributeName>
                 <isComparable>false</isComparable>
                 <valueUnit>string</valueUnit>
             </productAttributes>
@@ -48,6 +54,11 @@
 			<attributeType>string</attributeType>
 			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
 			<value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+			<value>classname=za.co.nb.offermanagement.eligibility.handler.PLDuplicateEligibilityHandler</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -438,7 +449,7 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=PersonalLoanApplicationComponent-1146~child-ng-components=CreditAccountDetails~HideProceduralStep=true~ZOrder=50</attributeName>
+			<attributeName>YoureDone|ng-component=YouAreDoneComponent~ProceduralStepName=You're all set~child-ng-components=ActivationMessageNotificationComponent~child-ng-components=VisitTheBranchNotificationComponent~child-ng-components=DebtConsolidationApplicationComponent~child-ng-components=InitiationFeeNotificationComponent~child-ng-components=PersonalLoanApplicationComponent-1146~child-ng-components=CreditAccountDetails~HideProceduralStep=true~ZOrder=50</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -669,6 +680,24 @@
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
+		<attributeGroupName>RuleHandlers_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+		<productAttributes>
+			<attributeName>RequiredDataFilter_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.WaiverInsuranceFilter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeName>RequiredDataFilter_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementSPOAFilter</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
+	<attributeGroupName>RuleHandlers_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
+		<productAttributes>
+			<attributeName>RequiredDataFilter_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.WaiverInsuranceFilter</value>
+		</productAttributes>
+	</productAttributeGroup>
+	<productAttributeGroup>
 		<attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -719,6 +748,10 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subSPOA|ContractComponentProductType=1146</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subWaiverInsurance|ContractComponentProductType=1146</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -781,6 +814,10 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>subPersonalLoan</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>subWaiverInsurance|ContractComponentProductType=1146</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup>
@@ -1123,6 +1160,11 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
+			<attributeName>RunJEEDebiCheck</attributeName>
+			<value>true</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
 			<attributeName>consumerFrameworkVersion</attributeName>
 			<value>2.0</value>
 		</productAttributes>
@@ -1359,6 +1401,16 @@
 			<attributeType>string</attributeType>
 			<attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
 			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementNotificationFilter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.DebtConsolidationFilter</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredDataFilter_FinalizeFrontOfficeInteraction</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.InitiationFeeNotificationFilter</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
