@@ -165,4 +165,30 @@
       </productAttributes>
    </productAttributeGroup>
 
+   <!--Overwriting here for all TP products, to include RaceComponent and Filter that will be used for Foreignnationals flow -->
+   <!--ActivateProductsGatherClientDetails-->
+   <productAttributeGroup action="overwrite">
+      <attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=CustomerVulnerabilitiesComponent~child-ng-components=DigitalActiveCardTrascationalComponent~displaySummary=true~child-ng-components=MarketingConsentComponent</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentOcupationAndIndustry~ProceduralStepName=Tell us what you do~ZOrder=90~displaySummary=true</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>clientInformationRequirement</attributeType>
+         <attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~child-ng-components=CountryOfResidence~child-ng-components=PrimaryNationality~child-ng-components=CountryAssociations~child-ng-components=VISADetailsComponent~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture~displaySummary=true</attributeName>
+      </productAttributes>
+   </productAttributeGroup>
+   <productAttributeGroup>
+      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+         <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementForeignNationalsGenderFilter</value>
+      </productAttributes>
+   </productAttributeGroup>
+
 </product>
