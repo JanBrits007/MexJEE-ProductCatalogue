@@ -62,6 +62,10 @@
       <attributeGroupName>loadingScreenConfiguration_ActivateProductsGatherClientDetails</attributeGroupName>
       <productAttributes>
          <attributeType>Configuration</attributeType>
+         <attributeName>Spinner|ng-component=WorkItemSpinnerComponent~child-ng-components=IncludingExtrasComponent~usage=nextbestaction~applicableChannels=WebSelfAssisted</attributeName>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>Configuration</attributeType>
          <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=moneyAppDownloadSpinnerTileComponent</attributeName>
       </productAttributes>
    </productAttributeGroup>
@@ -124,6 +128,10 @@
    </productAttributeGroup>
    <productAttributeGroup action="overwrite">
       <attributeGroupName>loadingScreenConfiguration_ActivateProductsGatherEvidence</attributeGroupName>
+      <productAttributes>
+         <attributeType>Configuration</attributeType>
+         <attributeName>Spinner|ng-component=WorkItemSpinnerComponent~child-ng-components=NearlyThereComponent~usage=nextbestaction~applicableChannels=WebSelfAssisted</attributeName>
+      </productAttributes>
       <productAttributes>
          <attributeType>Configuration</attributeType>
          <attributeName>Spinner|ng-component=defaultSpinnerComponent~child-ng-components=moneyAppDownloadSpinnerTileComponent</attributeName>
@@ -396,14 +404,6 @@
          <attributeName>NonSouthAfricanComplianceAcceptanceConsent</attributeName>
       </productAttributes>
    </productAttributeGroup>
-   <productAttributeGroup>
-      <attributeGroupName>ArrangementConfiguration</attributeGroupName>
-      <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>PricingPlanDiscriminator</attributeName>
-         <value>AGEGROUP</value>
-      </productAttributes>
-   </productAttributeGroup>
    
    <!--Offer Configuration-->
    <productAttributeGroup action="overwrite">
@@ -544,14 +544,19 @@
          <value>1</value>
       </productAttributes>
       <productAttributes>
-         <attributeType>string</attributeType>
-         <attributeName>requiresFICARestrict</attributeName>
-         <value>true</value>
-      </productAttributes>
-      <productAttributes>
          <attributeType>boolean</attributeType>
          <attributeName>bypassPricingPlanLoad</attributeName>
          <value>${{NARBypassPricingPlanLoad}}</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>DAMReserveBankCode</attributeName>
+         <value>17</value>
+      </productAttributes>
+      <productAttributes>
+         <attributeType>string</attributeType>
+         <attributeName>requiresFICARestrict</attributeName>
+         <value>true</value>
       </productAttributes>
    </productAttributeGroup>
    <productAttributeGroup action="overwrite">
@@ -654,6 +659,13 @@
             <attributeName>SalarySwitchingUniversal</attributeName>
          </featureAttributes>
       </featureAttributeGroup>
+      <featureAttributeGroup action="overwrite">
+         <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/SalarySwitchingUniversal</attributeGroupName>
+         <featureAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subEswatini</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
 
       <!-- Case and Process Configuration -->
       <featureAttributeGroup>
@@ -687,6 +699,22 @@
             <value />
          </featureAttributes>
       </featureAttributeGroup>
+   </features>
+
+   <!--1386 - Gold Cheque Card-->
+   <features>
+      <featureIdentifier>1386</featureIdentifier>
+      <name>Gold Debit Card</name>
+
+      <!--ActivateProductsGatherProductDetails-->
+      <featureAttributeGroup action="overwrite">
+         <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+         <featureAttributes>
+            <attributeType>productInformationRequirement</attributeType>
+            <attributeName>CardDelivery|ng-component=DeliveryOfCardsComponent~child-ng-components=ng-card-collection-available~ProceduralStepName=Getting your cards~restrictOptOut=true~includeTemporaryCard=true~ZOrder=170~ContractComponentProductType=1386</attributeName>
+         </featureAttributes>
+      </featureAttributeGroup>
+
    </features>
 
    </product>
