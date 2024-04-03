@@ -1,7 +1,194 @@
-<product 
-    xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
+<product xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
     <productIdentifier>1025</productIdentifier>
     <name>Amex Platinum Credit</name>
+
+
+    <productAttributeGroup>
+        <attributeGroupName>CaseConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>ArrangementBundleCaseHandler</attributeName>
+            <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>EligibilityHandler</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOffer</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_PrepareApplicant</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>SubstitutionRulesETE</attributeGroupName>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>SubstitutionRulesQA</attributeGroupName>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
+    </productAttributeGroup>
+
+    <!--ETE Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1025</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1025</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>LimitIncreaseSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1025</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationMerchantSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1025</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>LimitIncreaseMerchantSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1025</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForChannelIDs</attributeName>
+            <value>${{EDBPhase2ChannelIDList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1025</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--QA Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1025</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1025</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForChannelIDs</attributeName>
+            <value>${{EDBPhase2ChannelIDList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1025</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--Case and Process Configuration-->
+    <productAttributeGroup>
+        <attributeGroupName>OverrideSegmentation</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>OverrideSegmentation</attributeName>
+            <value></value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--PROD Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1025</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1025</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForChannelIDs</attributeName>
+            <value>${{EDBPhase2ChannelIDList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1025</value>
+        </productAttributes>
+    </productAttributeGroup>
+
     <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
         <productAttributes>
@@ -90,6 +277,16 @@
             <valueUnit>bool</valueUnit>
             <description> be a South African resident.</description>
         </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+            <value>${{FAIS_OnBehalfOfBranchList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>FAIS_StaffBranchOverrideList</attributeName>
+            <value>${{FAIS_StaffBranchOverideList}}</value>
+        </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>clientInformationRequirement_GenerateOffer</attributeGroupName>
@@ -119,7 +316,7 @@
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
-            <attributeName>ExpensesBasicCard</attributeName>
+            <attributeName>ExpensesBasicCard|HideDEAButton</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>clientInformationRequirement</attributeType>
@@ -216,7 +413,7 @@
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
             <attributeType>DocumentDescription</attributeType>
-            <attributeName>Contract|nedbank-commercial-release/CreditCardProductContract|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
+            <attributeName>Contract|nedbank-commercial-release/CombinedProductContractUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Agreement Contract</attributeName>
         </productAttributes>
         <productAttributes>
             <attributeType>DocumentExclusion</attributeType>
@@ -346,20 +543,20 @@
             <value>CreditCardFinalAssessmentVerificationTeam</value>
         </productAttributes>
         <productAttributes>
-			<attributeType>int</attributeType>
-			<attributeName>CardExposureContractType</attributeName>
-			<value>1001;1347</value>
-		</productAttributes>
+            <attributeType>int</attributeType>
+            <attributeName>CardExposureContractType</attributeName>
+            <value>1001;1347</value>
+        </productAttributes>
         <productAttributes>
-         	<attributeType>String</attributeType>
-         	<attributeName>HandleProvisioningFailureTeamName</attributeName>
-         	<value>BPM Admin</value>
-      	</productAttributes>
-      	<productAttributes>
-         	<attributeType>String</attributeType>
-         	<attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
-         	<value>30</value>
-      	</productAttributes>
+            <attributeType>String</attributeType>
+            <attributeName>HandleProvisioningFailureTeamName</attributeName>
+            <value>BPM Admin</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>String</attributeType>
+            <attributeName>HandleProvisioningFailureEscalationSLA</attributeName>
+            <value>30</value>
+        </productAttributes>
         <productAttributes>
             <attributeType>String</attributeType>
             <attributeName>HandleProvisioningFailureEscalationTestingEmailAddress</attributeName>
@@ -371,9 +568,24 @@
             <value>EclipseBPMExceptionssupport@Nedbank.co.za</value>
         </productAttributes>
         <productAttributes>
-         	<attributeType>string</attributeType>
-         	<attributeName>ArrangementMandatoryAPO</attributeName>
-         	<value>T2|T3</value>
+            <attributeType>string</attributeType>
+            <attributeName>ArrangementMandatoryAPO</attributeName>
+            <value>T2|T3</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>balanceTransferAllowedSupplier</attributeName>
+            <value>ABSA - CREDIT CARD|ABSA CREDIT CARD|CAPITEC BANK CREDIT CARD|FNB CREDIT CARD|FNB CREDIT CARD DATA|SBSA - MASTERCARD|STANDARD BANK MASTERCARD|STD BANK - MASTER CARD</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>balanceTransferInterestRate</attributeName>
+            <value>9.90</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>balanceTransferPeriod</attributeName>
+            <value>6</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -471,46 +683,61 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
-		<attributeGroupName>DecisioningControl</attributeGroupName>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>enhanceActivitiesWithTeamAllocations</attributeName>
-			<value>true</value>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>checkStaffOnMDM</attributeName>
-			<value>true</value>
-		</productAttributes>
+        <attributeGroupName>DecisioningControl</attributeGroupName>
         <productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>executeCardBusinessRuleToPresentDocuments</attributeName>
-			<value>true</value>
-		</productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>enhanceActivitiesWithTeamAllocations</attributeName>
+            <value>true</value>
+        </productAttributes>
         <productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>statusSetting</attributeName>
-			<value>true</value>
-		</productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>checkStaffOnMDM</attributeName>
+            <value>true</value>
+        </productAttributes>
         <productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>creditRepaymentScreenBypassCheck</attributeName>
-			<value>true</value>
-		</productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>executeCardBusinessRuleToPresentDocuments</attributeName>
+            <value>true</value>
+        </productAttributes>
         <productAttributes>
-			<attributeType>boolean</attributeType>
-			<attributeName>ArrangementMandatoryAPOCheck</attributeName>
-			<value>true</value>
-		</productAttributes>
-	</productAttributeGroup>
+            <attributeType>boolean</attributeType>
+            <attributeName>statusSetting</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>executeArrangementCrossSellRules</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>performFICACheck</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>creditRepaymentScreenBypassCheck</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>ArrangementMandatoryAPOCheck</attributeName>
+            <value>true</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>boolean</attributeType>
+            <attributeName>balanceTransferAllowed</attributeName>
+            <value>true</value>
+        </productAttributes>
+    </productAttributeGroup>
     <productAttributeGroup>
-		<attributeGroupName>ArrangementConfiguration</attributeGroupName>
-		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>RequiredDataFilter_ActivateProducts</attributeName>
-			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementMandatoryAPOFilter</value>
-		</productAttributes>
-	</productAttributeGroup>
+        <attributeGroupName>ArrangementConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+            <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementMandatoryAPOFilter</value>
+        </productAttributes>
+    </productAttributeGroup>
     <productAttributeGroup>
         <attributeGroupName>DocumentConfiguration</attributeGroupName>
         <productAttributes>
@@ -527,6 +754,102 @@
             <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.PartyLONFilter</value>
         </productAttributes>
     </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subAmexLogo</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericDetails</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subClientsRightsAndObligations</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericTCForCreditProducts</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericImpConfirmation</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subGenericSignatures</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subCreditCard|ContractComponentProductType=1025</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subCreditCardTC|ContractComponentProductType=1025</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <!-- Process Audit Report CreditCard Start-->
+    <productAttributeGroup>
+        <attributeGroupName>caseInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subYourApplicationHeader</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subNedbankLogo</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subCaseAuditData</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subFinancialDetailsAuditData</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subEvidenceAuditData</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>clientInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subClientAuditData</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subAdditionalClientInfo</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subCreditCardIncomeAndExpense</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subCreditCard|ContractComponentProductType=1025</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1099</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <!-- Process Audit Report CreditCard End-->
     <features>
         <featureIdentifier>1028</featureIdentifier>
         <name>Plastic Card</name>
@@ -619,11 +942,11 @@
                 <value>Y</value>
             </featureAttributes>
             <featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>CAMSCashLimitPercentage</attributeName>
-				<valueUnit>PER</valueUnit>
-				<value>100</value>
-			</featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>CAMSCashLimitPercentage</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>100</value>
+            </featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>
             <attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
@@ -697,11 +1020,11 @@
     </features>
     <features>
         <featureIdentifier>1334</featureIdentifier>
-        <name>Membership Rewards™</name>
-        <mandatory>false</mandatory>
+        <name>Membership Rewards</name>
+        <mandatory>true</mandatory>
         <preSelected>true</preSelected>
         <shortDescription>Earn points on virtually all the spend on your card and enjoy a range of fantastic rewards.</shortDescription>
-        <description>Please note you will receive a Membership Rewards™ Redemption card in order to spend you rewards.</description>
+        <description>Please note you will receive a Membership Rewards Redemption card in order to spend you rewards.</description>
         <featureGrouping>
             <featureGroupName>Loyalty</featureGroupName>
             <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
@@ -711,9 +1034,9 @@
         <featurePricing>
             <fee>
                 <type>AdminFee</type>
-                <description>R24 per month</description>
+                <description>R60 per month</description>
                 <currency>ZAR</currency>
-                <amount>24</amount>
+                <amount>60</amount>
                 <frequency>Monthly</frequency>
             </fee>
         </featurePricing>
@@ -761,11 +1084,11 @@
                 <value />
             </featureAttributes>
             <featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>ProvisioningPhase</attributeName>
-				<valueUnit>PER</valueUnit>
-				<value>preFICAProvisioning</value>
-			</featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>ProvisioningPhase</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>preFICAProvisioning</value>
+            </featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>
             <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
@@ -926,11 +1249,11 @@
                 <value>8079</value>
             </featureAttributes>
             <featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>ProvisioningPhase</attributeName>
-				<valueUnit>PER</valueUnit>
-				<value>preFICAProvisioning</value>
-			</featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>ProvisioningPhase</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>preFICAProvisioning</value>
+            </featureAttributes>
         </featureAttributeGroup>
     </features>
     <features>
@@ -999,11 +1322,11 @@
                 <value />
             </featureAttributes>
             <featureAttributes>
-				<attributeType>coreProvisioningParameter</attributeType>
-				<attributeName>ProvisioningPhase</attributeName>
-				<valueUnit>PER</valueUnit>
-				<value>preFICAProvisioning</value>
-			</featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>ProvisioningPhase</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>preFICAProvisioning</value>
+            </featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>
             <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
