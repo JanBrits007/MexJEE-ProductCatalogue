@@ -63,19 +63,25 @@ public class ProductCatalogueResource {
             // get the default one.
             ThreadSessionDTO sessionDTO = ThreadCacheManager.getInstance().getThreadCacheValue();
 
-            if (sessionDTO != null && sessionDTO.getTenantID() != null) {
-                mLog.debug("Trace 1");
+            try {
+                if (sessionDTO != null && sessionDTO.getTenantID() != null) {
+                    mLog.debug("Trace 1");
 
-                String tenantEncodedID = id + "_" + sessionDTO.getTenantID();
+                    String tenantEncodedID = id + "_" + sessionDTO.getTenantID();
 
-                Response response = getProductCatalogueByIDImpl(tenantEncodedID);
+                    Response response = getProductCatalogueByIDImpl(tenantEncodedID);
 
-                if(response.getStatus() == Status.OK.getStatusCode() && !((String)response.getEntity()).contains("Unable to compose hierarchy for catalogue ID")) {
-                    mLog.debug("Trace 2");
+                    if (response.getStatus() == Status.OK.getStatusCode() && !((String) response.getEntity()).contains("Unable to compose hierarchy for catalogue ID")) {
+                        mLog.debug("Trace 2");
 
-                    // We found a catalogue. Return it.
-                    return response;
+                        // We found a catalogue. Return it.
+                        return response;
+                    }
                 }
+            }
+            catch(Exception e) {
+                // We couldn't find a catalogue suffixed with the tenant ID. Just return what is being asked for.
+                e.printStackTrace();
             }
 
             mLog.debug("Trace 3");
@@ -107,7 +113,7 @@ public class ProductCatalogueResource {
                     mLog.debug("Trace 4");
                     String catalogueString = productCataloguesDAO.retrieveRatesInjectedProductCatalog(id);
 
-                    if(catalogueString != null) {
+                    if(catalogueString != null && !catalogueString.contains("Unable to compose hierarchy for catalogue ID")) {
                         productCatalogueCache.putToCache(id, catalogueString);
                         mLog.debug("added to cache:"+id);
                         return Response.ok(catalogueString).build();
