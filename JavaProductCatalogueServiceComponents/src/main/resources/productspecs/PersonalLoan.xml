@@ -221,7 +221,15 @@
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=90~child-ng-components=IncomeFrequencyComponent~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~FinancialInformationStatusCallbackID</attributeName>
+			<attributeName>Yodlee|ng-component=YodleeIntroductionComponent~ProceduralStepName=Yodlee~ZOrder=90~YodleePortalURL~HideProceduralStep=true~applicableChannels=WebSelfAssisted</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>Finch|ng-component=StaffFinancialDataMiningComponent~ProceduralStepName=Finch~ZOrder=89~ClientPermissionPortalURL~applicableChannels=NCCStaffAssisted~applicableChannels=BranchStaffAssisted</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>FinancialDetails|ng-component=AppFinancialDetailsComponent~ProceduralStepName=Financial details~ZOrder=80~child-ng-components=IncomeFrequencyComponent~child-ng-components=ng-individual-income-details~child-ng-components=ng-individual-debt-obligations~child-ng-components=ng-individual-household-expenses~ActiveOnInitialWorkItemExecution=true~CheckYodlee=false~FinancialInformationStatusCallbackID</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>clientInformationRequirement</attributeType>
@@ -652,7 +660,7 @@
 		<attributeGroupName>productDocumentPresentation_PresentDocuments</attributeGroupName>
 		<productAttributes>
 			<attributeType>DocumentDescription</attributeType>
-			<attributeName>Your FAIS Record of Advice|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
+			<attributeName>FAIS Client Acknowledgement|nedbank-commercial-release/CombinedFAISStaffAssisted|ARRANGEMENT|APPLICATIONS|APPLICATIONSCREDITFACILITY|FAIS Client Acknowledgement</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>AvailableAction</attributeType>
@@ -1401,6 +1409,11 @@
 			<attributeType>1100</attributeType>
 			<attributeName>ProductRuleHandler_PaymentProtectionPlan</attributeName>
 			<value>classname=za.co.nb.offermanagement.product.rules.handler.rewards.ProtectionPlanRule</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>RequiredDataFilter_ActivateProducts</attributeName>
+			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementEmploymentFilter</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>

@@ -127,6 +127,29 @@
 		</productAttributes>
 	</productAttributeGroup>
 
+	<!--ActivateProductsGatherProductDetails-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+		<!--
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
+		</productAttributes>
+		 -->
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>CreditRepayment|ng-component=CreditRepaymentAndSetupWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=210</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>LoanRepayment|ng-component=DebiCheckSetupComponent~ProceduralStepName=DebiCheck debit order setup~ZOrder=200</attributeName>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
 		<attributeGroupName>VASCrossSellControl</attributeGroupName>
 		<productAttributes>
@@ -263,6 +286,11 @@
 				<attributeType>int</attributeType>
 				<attributeName>CaseActivityPriority_EstablishCollectionMechanism</attributeName>
 				<value>0|Weighting=0</value>
+			</featureAttributes>
+			<featureAttributes>
+				<attributeType>string</attributeType>
+				<attributeName>RunJEEDebiCheck</attributeName>
+				<value>true</value>
 			</featureAttributes>
 		</featureAttributeGroup>
 	</features>

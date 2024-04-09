@@ -1,0 +1,189 @@
+{
+	"productIdentifier": 7201,
+	"name": "Just Save",
+	"shortDescription": "A secure, attractive method of saving funds.",
+	"productPricing": [
+		{
+			"type": "InterestRate",
+			"value": "%upperRateDec-1391%",
+			"description": "%upperRate-1391%% pa",
+			"frequency": "M",
+			"period": ""
+		}
+	],
+	"specialFeature": "Short Term",
+	"salesHighlights": [
+		"Minimum investment amount - R250",
+		"Minimum investment period - 32 days",
+		"No monthly fees or commissions",
+		"Initial capital fully guaranteed",
+		"Any deposits and withdrawals may impact your interest rate",
+		"Any early withdrawals before the 32 day notice period will incur a penalty fee"
+	],
+	"redirect": {
+		"shouldRedirect": false,
+		"redirectUrl": null
+	},
+	"actions": [
+		{
+			"type": "SELECT",
+			"text": "Select"
+		},
+		{
+			"type": "DETAIL",
+			"text": "Details"
+		},
+		{
+			"type": "COMPARE",
+			"text": "Compare"
+		}
+	],
+	"applicationSteps": [
+		{
+			"index": 1,
+			"name": "Authenticate",
+			"Description": "Let's begin by confirming your identity."
+		},
+		{
+			"index": 2,
+			"name": "Choose extras",
+			"Description": "Select optional extras for your account."
+		},
+		{
+			"index": 3,
+			"name": "About you",
+			"Description": "We need personal details and other information to open this account."
+		},
+		{
+			"index": 4,
+			"name": "Customise",
+			"Description": "Choose your preferences, including card delivery and staying in touch."
+		},
+		{
+			"index": 5,
+			"name": "Finishing up",
+			"Description": "Finish the paperwork and activate your product."
+		}
+	],
+	"productFeatures": [{
+		"name": "Maximuminterestrate",
+		"displayName": "Maximum interest rate",
+		"description": "up to %upperRate-1391%%"
+	},
+		{
+			"name": "Investmentterm",
+			"displayName": "Investment term",
+			"description": "32 Days"
+		},
+		{
+			"name": "MinimumInvestmentAmount",
+			"displayName": "Minimum Investment Amount",
+			"description": "R 250"
+		},
+		{
+			"name": "MinimumInvestmentPeriod",
+			"displayName": "Minimum Investment Period",
+			"description": "32 Days"
+		},
+		{
+			"name": "TermvsNotice",
+			"displayName": "Term vs Notice",
+			"description": "Notice"
+		},
+		{
+			"name": "Freeaccesspriortoterm",
+			"displayName": "Free access prior to term",
+			"description": "Yes"
+		},
+		{
+			"name": "AgeRestriction",
+			"displayName": "Age Restriction",
+			"description": "N/A"
+		},
+		{
+			"name": "Interestpaymentfrequency",
+			"displayName": "Interest payment frequency",
+			"description": "Monthly capitalised"
+		},
+		{
+			"name": "ElectronicAcces",
+			"displayName": "Electronic Access",
+			"description": "Yes"
+		},
+		{
+			"name": "Stoporders",
+			"displayName": "Stop orders",
+			"description": "Yes"
+		},
+		{
+			"name": "Statements",
+			"displayName": "Statements",
+			"description": "Yes"
+		},
+		{
+			"name": "Fees",
+			"displayName": "Fees",
+			"description": "Cash deposit fees"
+		},
+		{
+			"name": "Withdrawals",
+			"displayName": "Withdrawals",
+			"description": "Minimum R100"
+		},
+		{
+			"name": "Additionaldeposits",
+			"displayName": "Additional deposits",
+			"description": "Minimum R100"
+		},
+		{
+			"name": "Fixedrate",
+			"displayName": "Fixed rate?",
+			"description": "No"
+		}],
+	"eligibilityRules": [{
+		"attributeType": "EligibilityRule",
+		"attributeName": "Age",
+		"minValue": "0",
+		"maxValue": "54",
+		"valueUnit": "year",
+		"description": ""
+	},
+		{
+			"attributeType": "EligibilityRule",
+			"attributeName": "Age",
+			"minValue": "55",
+			"maxValue": "999",
+			"valueUnit": "year",
+			"description": "No age restrictions"
+		},
+		{
+			"attributeType": "EligibilityRule",
+			"attributeName": "InvestStart",
+			"minValue": "250",
+			"maxValue": "99999999.99",
+			"valueUnit": "ZAR",
+			"description": ""
+		},
+		{
+			"attributeType": "EligibilityRule",
+			"attributeName": "Additional deposit",
+			"minValue": "100",
+			"maxValue": "99999999",
+			"valueUnit": "ZAR",
+			"description": ""
+		},
+		{
+			"attributeName": "Access",
+			"attributeType": "EligibilityRule",
+			"description": "",
+			"maxValue": "2",
+			"minValue": "2",
+			"valueUnit": "months"
+		}],
+	"lifeCycleStatus": "AVAILABLE",
+	"calculator": {
+		"term": 0,
+		"notice": 32,
+		"productType": 50
+	}
+}
