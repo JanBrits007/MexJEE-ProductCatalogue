@@ -2,16 +2,6 @@
     <productIdentifier>1042</productIdentifier>
     <name>SAA Voyager Gold Credit Card</name>
 
-
-    <productAttributeGroup>
-        <attributeGroupName>CaseConfiguration</attributeGroupName>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>ArrangementBundleCaseHandler</attributeName>
-            <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
-        </productAttributes>
-    </productAttributeGroup>
-
     <productAttributeGroup>
         <attributeGroupName>EligibilityHandler</attributeGroupName>
         <productAttributes>
@@ -26,8 +16,30 @@
         </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
+            <attributeName>RequiredRule_PrepareApplicant</attributeName>
+            <value>classname=za.co.nb.offermanagement.eligibility.handler.ClientIdNameEligibilityRules</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>string</attributeType>
             <attributeName>RequiredRule_GenerateOfferVerifyEligibility</attributeName>
             <value>classname=za.co.nb.offermanagement.eligibility.handler.FAISEligibilityRules</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup>
+        <attributeGroupName>CaseConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>ArrangementBundleCaseHandler</attributeName>
+            <value>classname=za.co.nb.onboarding.product.initialisebusinesscase.handlers.retail.InitialiseBusinessCaseHandlerRetailTP</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>DocumentConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>ComplianceDocumentFilter_ActivateProducts</attributeName>
+            <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFatcaComplianceFilter</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -39,6 +51,177 @@
     <productAttributeGroup>
         <attributeGroupName>SubstitutionRulesPROD</attributeGroupName>
     </productAttributeGroup>
+
+    <!--ETE Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1042</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1042</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForMerchantID</attributeName>
+            <value>1898548</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1042</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForExternalMerchantUserID</attributeName>
+            <value>864205257</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1042</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForChannelIDs</attributeName>
+            <value>${{EDBPhase2ChannelIDList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1042</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>BundleSubstitutionRulesETE</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForCalculatedSegment</attributeName>
+            <value>${{RRB_Segement_list}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_RRB_1042</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--QA Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1042</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1042</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForChannelIDs</attributeName>
+            <value>${{EDBPhase2ChannelIDList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1042</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>BundleSubstitutionRulesQA</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForCalculatedSegment</attributeName>
+            <value>${{RRB_Segement_list}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_RRB_1042</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--PROD Substitution Rules-->
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedClientEmailAddresses</attributeName>
+            <value>${{EDBTestEmailOverideList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1042</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForWhiteListedNBNumbers</attributeName>
+            <value>${{EDBPhase2dynamicStaffList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1042</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>InitialisationSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForChannelIDs</attributeName>
+            <value>${{EDBPhase2ChannelIDList}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_Retail_1042</value>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
+        <attributeGroupName>BundleSubstitutionRulesPROD</attributeGroupName>
+        <productAttributes>
+            <attributeName>SubstituteForCalculatedSegment</attributeName>
+            <value>${{RRB_Segement_list}}</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeName>SubstituteForProductID</attributeName>
+            <value>CreditCard_RRB_1042</value>
+        </productAttributes>
+    </productAttributeGroup>
+
+    <!--Case and Process Configuration-->
+    <productAttributeGroup>
+        <attributeGroupName>OverrideSegmentation</attributeGroupName>
+        <productAttributes>
+            <attributeType>string</attributeType>
+            <attributeName>OverrideSegmentation</attributeName>
+            <value></value>
+        </productAttributes>
+    </productAttributeGroup>
+
     <productAttributeGroup>
         <attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
         <productAttributes>
@@ -72,6 +255,17 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
+        <attributeGroupName>RequiredCompliance_PrepareApplicant_LimitIncrease</attributeGroupName>
+        <productAttributes>
+            <attributeType>Compliance</attributeType>
+            <attributeName>NotUnderCreditAdministrationLimitIncrease</attributeName>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>Compliance</attributeType>
+            <attributeName>BureauCheckConsent</attributeName>
+        </productAttributes>
+    </productAttributeGroup>
+    <productAttributeGroup>
         <attributeGroupName>EligibilityRules</attributeGroupName>
         <productAttributes>
             <attributeType>EligibilityRule</attributeType>
@@ -86,10 +280,10 @@
             <attributeType>EligibilityRule</attributeType>
             <attributeName>Income</attributeName>
             <isComparable>false</isComparable>
-            <minValue>60000</minValue>
+            <minValue>5000</minValue>
             <maxValue>99999999</maxValue>
             <valueUnit>ZAR</valueUnit>
-            <description>earn more than R80 000 annually; and</description>
+            <description>earn R5 000 or more per month.</description>
         </productAttributes>
         <productAttributes>
             <attributeType>EligibilityRule</attributeType>
@@ -118,14 +312,6 @@
             <isComparable>false</isComparable>
             <value>true</value>
             <valueUnit>bool</valueUnit>
-        </productAttributes>
-        <productAttributes>
-            <attributeType>EligibilityRule</attributeType>
-            <attributeName>SouthAfricanResident</attributeName>
-            <isComparable>false</isComparable>
-            <value>true</value>
-            <valueUnit>bool</valueUnit>
-            <description> be a South African resident.</description>
         </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
@@ -203,7 +389,6 @@
             <valueUnit>bool</valueUnit>
         </productAttributes>
     </productAttributeGroup>
-
     <productAttributeGroup>
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
@@ -258,7 +443,6 @@
             <attributeName>DigitallySign</attributeName>
         </productAttributes>
     </productAttributeGroup>
-
     <productAttributeGroup>
         <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
         <productAttributes>
@@ -394,6 +578,11 @@
         </productAttributes>
         <productAttributes>
             <attributeType>int</attributeType>
+            <attributeName>BPMCARDOFFER</attributeName>
+            <value>BPMCARDROLE</value>
+        </productAttributes>
+        <productAttributes>
+            <attributeType>int</attributeType>
             <attributeName>CardExposureContractType</attributeName>
             <value>1001;1347</value>
         </productAttributes>
@@ -430,12 +619,12 @@
         <productAttributes>
             <attributeType>string</attributeType>
             <attributeName>balanceTransferInterestRate</attributeName>
-            <value>9.90</value>
+            <value>11.90</value>
         </productAttributes>
         <productAttributes>
             <attributeType>string</attributeType>
             <attributeName>balanceTransferPeriod</attributeName>
-            <value>6</value>
+            <value>12</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -454,8 +643,7 @@
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
-        <attributeGroupName>productCodeMappings</attributeGroupName>
-        <!-- Are these required -->
+        <attributeGroupName>productCodeMappings</attributeGroupName><!-- Are these required -->
         <productAttributes>
             <attributeType>productCodeMapping</attributeType>
             <attributeName>MDM_ProductCode</attributeName>
@@ -586,14 +774,6 @@
             <attributeType>string</attributeType>
             <attributeName>RequiredDataFilter_ActivateProducts</attributeName>
             <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementMandatoryAPOFilter</value>
-        </productAttributes>
-    </productAttributeGroup>
-    <productAttributeGroup>
-        <attributeGroupName>DocumentConfiguration</attributeGroupName>
-        <productAttributes>
-            <attributeType>string</attributeType>
-            <attributeName>ComplianceDocumentFilter_ActivateProducts</attributeName>
-            <value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.ArrangementFatcaComplianceFilter</value>
         </productAttributes>
     </productAttributeGroup>
     <productAttributeGroup>
@@ -869,12 +1049,12 @@
         </featureAttributeGroup>
     </features>
     <features>
-        <featureIdentifier>9991</featureIdentifier>
-        <name>Voyager Rewards</name>
+        <featureIdentifier>1454</featureIdentifier>
+        <name>Nedbank Greenback Rewards</name>
         <mandatory>false</mandatory>
         <preSelected>true</preSelected>
-        <shortDescription>Earn points on virtually all the spend on your card and enjoy a range of fantastic rewards.</shortDescription>
-        <description> </description>
+        <shortDescription>By joining our Greenbacks Rewards Programme you will earn rewards when you use your credit card or one of our other transactional accounts.</shortDescription>
+        <description>Detailed description of feature</description>
         <featureGrouping>
             <featureGroupName>Loyalty</featureGroupName>
             <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
@@ -884,9 +1064,9 @@
         <featurePricing>
             <fee>
                 <type>AdminFee</type>
-                <description />
+                <description>R20 per month</description>
                 <currency>ZAR</currency>
-                <amount>0</amount>
+                <amount>20</amount>
                 <frequency>Monthly</frequency>
             </fee>
         </featurePricing>
@@ -933,6 +1113,12 @@
                 <valueUnit>string</valueUnit>
                 <value />
             </featureAttributes>
+            <featureAttributes>
+                <attributeType>coreProvisioningParameter</attributeType>
+                <attributeName>ProvisioningPhase</attributeName>
+                <valueUnit>PER</valueUnit>
+                <value>preFICAProvisioning</value>
+            </featureAttributes>
         </featureAttributeGroup>
         <featureAttributeGroup>
             <attributeGroupName>placeholder-Fullstructure</attributeGroupName>
@@ -949,7 +1135,7 @@
             <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
             <featureAttributes>
                 <attributeType>DocumentDescription</attributeType>
-                <attributeName>Rewards Terms and Conditions|nedbank-commercial-release/CreditCardAmexRewardsTermsAndConditionsUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Terms and Conditions</attributeName>
+                <attributeName>Rewards Terms and Conditions|nedbank-commercial-release/CreditCardRewardsTermsAndConditionsUniversal|ARRANGEMENTS|AGREEMENTS|AGREEMENTSCREDITCARD|Terms and Conditions</attributeName>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>AvailableAction</attributeType>
@@ -961,17 +1147,17 @@
             </featureAttributes>
             <featureAttributes>
                 <attributeType>DocTemplateName</attributeType>
-                <attributeName>CreditCardAmexRewardsTermsAndConditionsUniversal</attributeName>
+                <attributeName>CreditCardRewardsTermsAndConditionsUniversal</attributeName>
             </featureAttributes>
         </featureAttributeGroup>
     </features>
     <features>
-        <featureIdentifier>1465</featureIdentifier>
-        <name>Redemption Card</name>
+        <featureIdentifier>1333</featureIdentifier>
+        <name>Nedbank Greenbacks Shop Card</name>
         <mandatory>false</mandatory>
         <preSelected>true</preSelected>
-        <shortDescription>What is the Redemption card?</shortDescription>
-        <description>We' have made it quick and easy to redeem and spend all the rewards you've earned using the Redemption card.</description>
+        <shortDescription>SHOP card</shortDescription>
+        <description>Great news! We've made it quick and easy to redeem all the Greenbacks you've earned with your very own SHOP card</description>
         <featureGrouping>
             <featureGroupName>Loyalty</featureGroupName>
             <featureGroupRuleForProduct>Optional</featureGroupRuleForProduct>
@@ -1054,13 +1240,13 @@
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSPlasticType</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>AR1</value>
+                <value>AG6</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSCrdStock</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>AR2</value>
+                <value>AG6</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
@@ -1072,7 +1258,7 @@
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSATrRegistrationNbr</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>194905</value>
+                <value>190105</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
@@ -1090,7 +1276,7 @@
                 <attributeType>coreProvisioningParameter</attributeType>
                 <attributeName>CAMSSolicitationCode</attributeName>
                 <valueUnit>PER</valueUnit>
-                <value>8079</value>
+                <value>7016</value>
             </featureAttributes>
             <featureAttributes>
                 <attributeType>coreProvisioningParameter</attributeType>
@@ -1187,62 +1373,6 @@
     <features>
         <featureIdentifier>1099</featureIdentifier>
         <name>Credit card insurance</name>
-        <featureAttributeGroup>
-            <attributeGroupName>coreProvisioningParameters</attributeGroupName>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>provisionInBranch</attributeName>
-                <valueUnit>boolean</valueUnit>
-                <value>false</value>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>coreProvisioningParameter</attributeType>
-                <attributeName>legacyProductID</attributeName>
-                <valueUnit>string</valueUnit>
-                <value />
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>productDocumentPresentation_ActivateProducts</attributeGroupName>
-            <featureAttributes>
-                <attributeType>DocumentDescription</attributeType>
-                <attributeName>FAIS Client Acknowledgement|nedbank-commercial-release/CCFAISClientAcknowledgementStaffAssisted|ARRANGEMENTS|APPLICATIONS|APPLICATIONSCREDITCARD|FAIS Client Acknowledgement</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>Download</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>Email</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>WetSign</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>AvailableAction</attributeType>
-                <attributeName>ElectronicallySign</attributeName>
-            </featureAttributes>
-            <featureAttributes>
-                <attributeType>DocTemplateName</attributeType>
-                <attributeName>CCFAISClientAcknowledgementStaffAssisted</attributeName>
-            </featureAttributes>
-        </featureAttributeGroup>
-        <featureAttributeGroup>
-            <attributeGroupName>EligibilityRules</attributeGroupName>
-            <featureAttributes>
-                <attributeType>EligibilityRule</attributeType>
-                <attributeName>Age</attributeName>
-                <minValue>18</minValue>
-                <maxValue>64</maxValue>
-                <valueUnit>year</valueUnit>
-            </featureAttributes>
-        </featureAttributeGroup>
-    </features>
-    <features>
-        <featureIdentifier>1100</featureIdentifier>
-        <name>Payment protection plan</name>
         <featureAttributeGroup>
             <attributeGroupName>coreProvisioningParameters</attributeGroupName>
             <featureAttributes>
