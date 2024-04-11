@@ -3,6 +3,95 @@
 	<name>Gold Credit Card</name>
 	<shortDescription>(CreditCard_Retail_1032) This is the Gold Credit Card For NAR</shortDescription>
 
+	<!--Evidence And Compliance Requirements-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
+		<productAttributes>
+			<attributeType>Evidence</attributeType>
+			<attributeName>We need proof of your identity.</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>string</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>Evidence</attributeType>
+			<attributeName>Payslips for the last 3 months</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>string</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>Evidence</attributeType>
+			<attributeName>3 months bank statements</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>string</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>Evidence</attributeType>
+			<attributeName>A letter from your accountant or financial manager (if  you're self employed)</attributeName>
+			<isComparable>false</isComparable>
+			<valueUnit>string</valueUnit>
+		</productAttributes>
+	</productAttributeGroup>
+
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>EligibilityRules</attributeGroupName>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Age</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>18</minValue>
+			<maxValue>999</maxValue>
+			<valueUnit>year</valueUnit>
+			<description>user-icon|You need to be 18 years or older.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>Income</attributeName>
+			<isComparable>false</isComparable>
+			<minValue>5000</minValue>
+			<maxValue>99999999</maxValue>
+			<valueUnit>E</valueUnit>
+			<description>You need to earn E7000 or more per month.</description>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NaturalPerson</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>DebitOrderRepaymentRequired</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>CreditApproval</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>EligibilityRule</attributeType>
+			<attributeName>NotUnderCreditAdministration</attributeName>
+			<isComparable>false</isComparable>
+			<value>true</value>
+			<valueUnit>bool</valueUnit>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>FAIS_OnBehalfOfBranchList</attributeName>
+			<value>${{FAIS_OnBehalfOfBranchList}}</value>
+		</productAttributes>
+		<productAttributes>
+			<attributeType>string</attributeType>
+			<attributeName>FAIS_StaffBranchOverrideList</attributeName>
+			<value>${{FAIS_StaffBranchOverideList}}</value>
+		</productAttributes>
+	</productAttributeGroup>
+
 	<!--Document Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
