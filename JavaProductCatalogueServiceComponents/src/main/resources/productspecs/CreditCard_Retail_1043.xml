@@ -1,45 +1,22 @@
 <product inheritFromFiles="CreditCard_Retail" xmlns="http://contracts.it.nednet.co.za/services/ent/productandservicedevelopment/ChannelProductCatalogue/v1">
-	<productIdentifier>1034</productIdentifier>
-	<name>Platinum Credit Card</name>
-	<shortDescription>(CreditCard_Retail_1034)</shortDescription>
-
-	<!--Case and Process Configuration-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>EligibilityRules</attributeGroupName>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Age</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>18</minValue>
-			<maxValue>999</maxValue>
-			<valueUnit>year</valueUnit>
-			<description>user-icon|You need to be 18 years or older.</description>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>EligibilityRule</attributeType>
-			<attributeName>Income</attributeName>
-			<isComparable>false</isComparable>
-			<minValue>29000</minValue>
-			<maxValue>999999</maxValue>
-			<valueUnit>ZAR</valueUnit>
-			<description>income|You need to earn R29000 or more per month.</description>
-		</productAttributes>
-	</productAttributeGroup>
+<productIdentifier>1043</productIdentifier>
+	<name>SAA Voyager Premium Credit Card</name>
+	<shortDescription>(CreditCard_Retail_1043) This is the Gold Credit Card</shortDescription>
 
 	<!--Document Configuration-->
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedProductContractUniversal</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCard|ContractComponentProductType=1034</attributeName>
+			<attributeName>subCreditCard|ContractComponentProductType=1043</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1034</attributeName>
+			<attributeName>subCreditCardRatesAndFees|ContractComponentProductType=1043</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCardTC|ContractComponentProductType=1034</attributeName>
+			<attributeName>subCreditCardTC|ContractComponentProductType=1043</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -50,21 +27,20 @@
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedWelcomeLetter</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCredit|ContractComponentProductType=1034</attributeName>
+			<attributeName>subCredit|ContractComponentProductType=1043</attributeName>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subNedbankPlatinum|ContractComponentProductType=1034</attributeName>
+			<attributeName>subNedbankGold|ContractComponentProductType=1043</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
 	<productAttributeGroup action="overwrite">
 		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/CombinedAppFormStaffAssisted</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
-			<attributeName>subCreditCard|ContractComponentProductType=1034</attributeName>
+			<attributeName>subCreditCard|ContractComponentProductType=1043</attributeName>
 		</productAttributes>
 	</productAttributeGroup>
-
 
 	<!--GenerateOffer-->
 	<productAttributeGroup action="overwrite">
@@ -106,50 +82,9 @@
 		 <productAttributes>
 			 <attributeType>string</attributeType>
 			 <attributeName>OfferSelectionSummaryDetails</attributeName>
-			 <value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1034</value>
+			 <value>CreditCardOfferSelectionSubSection|ng-component=OfferSelectionCreditCardComponent~ZOrder=80~ContractComponentProductType=1043</value>
 		 </productAttributes>
 	</productAttributeGroup>
-
-	<!--ActivateProductsGatherClientDetails-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~child-ng-components=CustomerVulnerabilitiesComponent~child-ng-components=DigitalActiveCardCreditComponent~child-ng-components=MarketingConsentComponent</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>clientInformationRequirement</attributeType>
-			<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~child-ng-components=CountryAssociations~child-ng-components=CountryOfResidence~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
-	<!--ActivateProductsGatherProductDetails-->
-	<productAttributeGroup action="overwrite">
-		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
-		<!--
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
-		</productAttributes>
-		 -->
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>CreditRepayment|ng-component=CreditRepaymentAndSetupWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=210</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>LoanRepayment|ng-component=DebiCheckSetupComponent~ProceduralStepName=DebiCheck debit order setup~ZOrder=200</attributeName>
-		</productAttributes>
-		<productAttributes>
-			<attributeType>productInformationRequirement</attributeType>
-			<attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
-		</productAttributes>
-	</productAttributeGroup>
-
 	<productAttributeGroup action="overwrite"> <!--overwriting this to remove plastic and move it to CDE-->
 		<attributeGroupName>VASCrossSellControl</attributeGroupName>
 		<productAttributes>
@@ -208,7 +143,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>spikeProductID</attributeName>
-			<value>1034</value>
+			<value>1043</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>int</attributeType>
@@ -246,18 +181,45 @@
 			<value>nedbank-commercial-release/Locked_CombinedWelcomeLetter</value>
 		</productAttributes>
 	</productAttributeGroup>
-	
-	<!-- Process Audit Report-->
+	<!--ActivateProductsGatherClientDetails-->
 	<productAttributeGroup action="overwrite">
-		<attributeGroupName>productInformationRequirement_GenerateDocumentProvision_nedbank-commercial-release/ProcessAuditReport</attributeGroupName>
+		<attributeGroupName>clientInformationRequirement_ActivateProducts</attributeGroupName>
 		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>subCreditCard|ContractComponentProductType=1034</attributeName>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>AdditionalPersonalInformation|ng-component=YourPersonalInformationComponent~ProceduralStepName=Lets get to know you~ZOrder=100~ActiveOnInitialWorkItemExecution=true~child-ng-components=AddressDetails~child-ng-components=StatementDelivery~child-ng-components=EmailAddress~child-ng-components=PreferredLanguage~child-ng-components=CustomerVulnerabilitiesComponent~child-ng-components=DigitalActiveCardCreditComponent~child-ng-components=MarketingConsentComponent</attributeName>
 		</productAttributes>
 		<productAttributes>
-			<attributeType>string</attributeType>
-			<attributeName>subCreditCardLifeInsurance|ContractComponentProductType=1099</attributeName>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>EmploymentBasic|ng-component=EmploymentDetailsComponent~child-ng-components=EmploymentType~child-ng-components=EmployerDetails~child-ng-components=EmploymentOcupationAndIndustry~child-ng-components=EmploymentContact~ProceduralStepName=Tell us what you do~ZOrder=90</attributeName>
 		</productAttributes>
+		<productAttributes>
+			<attributeType>clientInformationRequirement</attributeType>
+			<attributeName>ComplianceInformation|ng-component=YourComplianceInformationComponent~ProceduralStepName=Some last personal details~ZOrder=80~child-ng-components=CountryAssociations~child-ng-components=CountryOfResidence~child-ng-components=SourceOfFunds~child-ng-components=Race~child-ng-components=ForeignTaxObligations~child-ng-components=ConsentCapture</attributeName>
+		</productAttributes>
+	</productAttributeGroup>
+	<!--ActivateProductsGatherProductDetails-->
+	<productAttributeGroup action="overwrite">
+		<attributeGroupName>productInformationRequirement_ActivateProducts</attributeGroupName>
+		<!-- 
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>GoingDigital|ng-component=GoingDigitalComponent~ProceduralStepName=Getting the app~ZOrder=160~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted~applicableChannels=MerchantAssisted</attributeName>
+		</productAttributes>
+		 -->
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>CreditRepayment|ng-component=CreditRepaymentAndSetupWidgetComponent~ProceduralStepName=Repaying your credit card~ZOrder=210</attributeName>
+		</productAttributes>
+		<productAttributes>
+			 <attributeType>productInformationRequirement</attributeType>
+			 <attributeName>SalesMilestone|ng-component=CmsDetailComponent~child-ng-components=ArrangementSubmission~ProceduralStepName=CMS details~ZOrder=130~applicableChannels=BranchStaffAssisted~applicableChannels=NCCStaffAssisted</attributeName>
+		</productAttributes>
+		<!-- 
+		<productAttributes>
+			<attributeType>productInformationRequirement</attributeType>
+			<attributeName>KeepingInTouch|ng-component=KeepInTouchComponent~ProceduralStepName=Keep in touch~ZOrder=120~child-ng-components=OffersAndInformationCommunicationComponent</attributeName>
+		</productAttributes>
+		 -->
 	</productAttributeGroup>
 
 	<!-- Debicheck -->
@@ -287,35 +249,7 @@
 				<attributeName>CaseActivityPriority_EstablishCollectionMechanism</attributeName>
 				<value>0|Weighting=0</value>
 			</featureAttributes>
-			<featureAttributes>
-				<attributeType>string</attributeType>
-				<attributeName>RunJEEDebiCheck</attributeName>
-				<value>true</value>
-			</featureAttributes>
 		</featureAttributeGroup>
-	</features>
-
-	<features>
-		<featureIdentifier>1454</featureIdentifier>
-		<name>Greenbacks Rewards Membership</name>
-
-		<!--GenerateOffer-->
-		<featureAttributeGroup action="overwrite">
-			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-		</featureAttributeGroup>
-
-	</features>
-
-	<!--1333 - Nedbank Greenbacks Shop Card-->
-	<features>
-		<featureIdentifier>1333</featureIdentifier>
-		<name>Nedbank Greenbacks Shop Card</name>
-
-		<!--GenerateOffer-->
-		<featureAttributeGroup action="overwrite">
-			<attributeGroupName>productInformationRequirement_PresentOffer</attributeGroupName>
-		</featureAttributeGroup>
-
 	</features>
 
 </product>
