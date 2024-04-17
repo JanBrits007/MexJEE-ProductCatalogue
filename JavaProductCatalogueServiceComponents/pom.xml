@@ -1,23 +1,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<artifactId>JavaProductCatalogueServiceComponents</artifactId>
 	<packaging>jar</packaging>
 
 	<parent>
 		<groupId>BPMX</groupId>
-		<artifactId>ProductCatalogueCache</artifactId>
-		<version>2.121.0-SNAPSHOT</version>
+		<artifactId>cfo-productcatalogue</artifactId>
+		<version>2024.04.16-SNAPSHOT</version>
 	</parent>
 	
 	<dependencies>
 		<dependency>
 			<groupId>BPMX</groupId>
 			<artifactId>JavaProductCatalogueClient</artifactId>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>BPMX</groupId>
-			<artifactId>JavaProductDevelopmentServiceClient</artifactId>
+			<artifactId>JavaCommon</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>BPMX</groupId>
+			<artifactId>JavaWebServiceClients</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -35,11 +40,11 @@
 			<artifactId>jackson-annotations</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
+		<!--dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
 			<scope>provided</scope>
-		</dependency>
+		</dependency-->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -55,7 +60,4 @@
 	<build>
 		<finalName>JavaProductCatalogueServiceComponents</finalName>
 	</build>
-
-	<!-- There should be no dependencies here, all dependencies should be defined in the root pom -->
-
 </project>

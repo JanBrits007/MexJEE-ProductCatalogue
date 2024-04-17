@@ -1,13 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
 	<artifactId>SysProductCatalogueServiceComponents</artifactId>
 	<packaging>ear</packaging>
 
 	<parent>
 		<groupId>BPMX</groupId>
-		<artifactId>ProductCatalogueCache</artifactId>
-		<version>2.121.0-SNAPSHOT</version>
+		<artifactId>cfo-productcatalogue</artifactId>
+		<version>2024.04.16-SNAPSHOT</version>
 	</parent>
 
 	<build>
@@ -39,41 +38,61 @@
 		<dependency>
 			<groupId>BPMX</groupId>
 			<artifactId>JavaProductCatalogueServiceComponents</artifactId>
-			<version>${project.parent.version}</version>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>BPMX</groupId>
 			<artifactId>WebProductCatalogueServiceComponents</artifactId>
 			<type>war</type>
-			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>BPMX</groupId>
 			<artifactId>JavaProductCatalogueClient</artifactId>
+			<scope>compile</scope>
 		</dependency>
 	    <dependency>
 	        <groupId>BPMX</groupId>
 	        <artifactId>JavaClient360InformationServiceClient</artifactId>
+			<scope>compile</scope>
 	    </dependency>
 		<dependency>
 			<groupId>BPMX</groupId>
-			<artifactId>CR1Common</artifactId>
+			<artifactId>JavaCommon</artifactId>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>BPMX</groupId>
-			<artifactId>JavaSystemConfigurator</artifactId>
+			<artifactId>JavaCommonDAO</artifactId>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>BPMX</groupId>
 			<artifactId>JavaArrangementInformationServiceClient</artifactId>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>BPMX</groupId>
-			<artifactId>JavaProductDevelopmentServiceClient</artifactId>
+			<artifactId>JavaCommonDTO</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>BPMX</groupId>
+			<artifactId>JavaWebServiceClients</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>BPMX</groupId>
+			<artifactId>CR1Authorization</artifactId>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka-clients</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-json-provider</artifactId>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
@@ -82,9 +101,14 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<!--dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
-		</dependency>
+		</dependency-->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
@@ -112,10 +136,38 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.kafka</groupId>
-			<artifactId>kafka-clients</artifactId>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<!-- for collapsing the clusters -->
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-xml</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>5.3.17</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>5.3.17</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.ibm.websphere.appserver.api</groupId>
+			<artifactId>com.ibm.websphere.appserver.api.ssl</artifactId>
+			<version>1.5.66</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongodb-driver-sync</artifactId>
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
-
 </project>
