@@ -386,6 +386,14 @@
 
     <!--Case and Process Configuration-->
     <productAttributeGroup action="overwrite">
+        <attributeGroupName>businessProcessTimerConfiguration</attributeGroupName>
+        <productAttributes>
+            <attributeType>WatchdogWaitToTerminate</attributeType>
+            <attributeName>20160</attributeName> <!--14 days in minutes-->
+        </productAttributes>
+    </productAttributeGroup>
+
+    <productAttributeGroup action="overwrite">
         <attributeGroupName>IntentSequenceConfiguration</attributeGroupName>
         <productAttributes>
             <attributeType>string</attributeType>
