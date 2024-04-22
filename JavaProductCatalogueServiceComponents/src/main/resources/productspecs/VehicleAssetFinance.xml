@@ -8,14 +8,14 @@
 		<attributeGroupName>clientEvidenceRequirement_PrepareApplicant</attributeGroupName>
 	</productAttributeGroup>
 
-	<!--WaitForSupportingDocuments-->
+	<!--WaitForSupportingDocuments
 	<productAttributeGroup>
 		<attributeGroupName>productInformationRequirement_WaitForSupportingDocuments</attributeGroupName>
 		<productAttributes>
 			<attributeType>productInformationRequirement</attributeType>
 			<attributeName>WaitForSupportingDocuments|ng-component=WaitForSupportingDocumentsComponent~ProceduralStepName=Wait For Supporting Documents~ZOrder=100~ActiveOnInitialWorkItemExecution=true~applicableChannels=Headless</attributeName>
 		</productAttributes>
-	</productAttributeGroup>
+	</productAttributeGroup>-->
 
 	<!--GenerateQuote-->
 	<productAttributeGroup>
@@ -29,11 +29,11 @@
 		<attributeGroupName>RuleHandlers_GenerateQuote</attributeGroupName>
 		<productAttributes>
 			<attributeName>GNBAHandler_GenerateQuote</attributeName>
-			<value>classname=HLFIDSIntegrationHandler</value>
-		</productAttributes>
+			<value>classname=VAFFIDSIntegrationHandler</value>
+		</productAttributes> <!-- FOR LATER -->
 		<productAttributes>
 			<attributeName>GNBAHandler_GenerateQuote</attributeName>
-			<value>classname=HLGenerateQuote</value>
+			<value>classname=VAFGenerateQuote</value>
 		</productAttributes>
 	</productAttributeGroup>
 
@@ -363,7 +363,7 @@
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>frontOfficeIntentSequence</attributeName>
-			<value>WaitForSupportingDocuments|GenerateQuote|ActivateProductsGatherEvidence</value>
+			<value>GenerateQuote|ActivateProductsGatherEvidence|ReserveFacilityNumber|PresentDocuments</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
@@ -405,35 +405,35 @@
 			<value>classname=za.co.nb.arrangementmanagement.analysis.handler.arrangement.PartyLONFilter</value>
 		</productAttributes>
 	</productAttributeGroup>
-	<productAttributeGroup>
+<!--	<productAttributeGroup>
 		<attributeGroupName>CaseConfiguration</attributeGroupName>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>EvaluateCaseRuleHandlers_ActivateProductsGatherEvidence</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.VAF.ActivateProductsGatherEvidenceGNBAIntentHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>EvaluateCaseRuleHandlers_AssessVerificationRequirements</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.VAF.ActivateProductsGatherEvidenceGNBAIntentHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>EvaluateCaseRuleHandlers_AssessQualityAssuranceRequirements</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.VAF.ActivateProductsGatherEvidenceGNBAIntentHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>EvaluateCaseRuleHandlers_AssessCaseFinalizationRequirements</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.VAF.ActivateProductsGatherEvidenceGNBAIntentHandler</value>
 		</productAttributes>
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>EvaluateCaseRuleHandlers_EvaluateCase</attributeName>
-			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.retail.ROActivateProductsGatherEvidenceGNBAIntentHandler</value>
+			<value>classname=za.co.nb.onboarding.casemanagement.evaluatecase.handlers.VAF.ActivateProductsGatherEvidenceGNBAIntentHandler</value>
 		</productAttributes>
-		<!--Still To implement-->
-		<!--productAttributes>
+		&lt;!&ndash;Still To implement&ndash;&gt;
+		&lt;!&ndash;productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_WebDecisionEngine</attributeName>
 			<value></value>
@@ -442,7 +442,7 @@
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_Intent1</attributeName>
 			<value></value>
-		</productAttributes-->
+		</productAttributes&ndash;&gt;
 		<productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_CreditOffer</attributeName>
@@ -473,7 +473,7 @@
 			<attributeName>CODHandler_Recalculate</attributeName>
 			<value>classname=za.co.nb.offermanagement.cod.handler.cde.simulation.v3.PersonalLoanSimulationRecalcCODHandler</value>
 		</productAttributes>
-		<!--productAttributes>
+		&lt;!&ndash;productAttributes>
 			<attributeType>string</attributeType>
 			<attributeName>CODHandler_FinancialExtendedDetails</attributeName>
 			<value>XXX</value>
@@ -492,13 +492,13 @@
 			<attributeType>string</attributeType>
 			<attributeName>GenericHandler_GenerateOfferTryAgain</attributeName>
 			<value>classname=za.co.nb.offermanagement.cod.handler.internal.GenerateOfferTryAgainHandler</value>
-		</productAttributes-->
+		</productAttributes&ndash;&gt;
 		<productAttributes>
 			<attributeType>HomeLoan</attributeType>
 			<attributeName>GenericHandler_ActivateProductsGatherProductDetails</attributeName>
 			<value>classname=za.co.nb.offermanagement.cod.handler.internal.FacilityHandler</value>
 		</productAttributes>
-	</productAttributeGroup>
+	</productAttributeGroup>-->
 	<productAttributeGroup>
 		<attributeGroupName>BusinessProcessExecutionConfiguration</attributeGroupName>
 		<productAttributes>
